@@ -9,38 +9,79 @@ import empire from '../../../public/assets/b5835944bbebc7ec70998e5aeb02a371f1395
 const heroslider = () => {
     const boxref=useRef()
     const box_Two=useRef()
+    const box_three=useRef()
+    const im=useRef()
     useEffect(() => {
         gsap.fromTo(
             boxref.current,
             { x: -430, opacity: 0 },   // start from translateX(-430px)
             { x: -260, opacity: 1, duration: 2, delay: 1, ease: "power2.out" } // animate to final position
-        ),    gsap.fromTo(
+        ),   
+
+        // Then animate it after a delay
+        gsap.fromTo(
             box_Two.current,
-            { x: 1300, opacity: 0 },   // start from x = +430 (right side)
-            { x: 1200, opacity: 1, duration: 2, delay: 1, ease: "power2.out" } // animate to center (x = 0)
-        )
+            { x: 980, opacity: 0 },
+            {
+              x: 970, // Change this to control how much moves to the right
+              opacity: 1,
+              duration: 2,
+              delay: 1,
+              ease: 'power2.out',
+            }),
+            gsap.fromTo(
+              box_three.current,
+              { y: 400, opacity: 0 },   // 👈 Start 400px below
+              {
+                y: 220,                   // 👈 Animate to original position
+                opacity: 1,
+                duration: 2,
+                delay: 1,
+                ease: 'power2.out',
+              }),  gsap.fromTo(
+                im.current,
+                {y:400, opacity: 0 },   // 👈 Start 400px below
+                {y:0,
+                               // 👈 Animate to original position
+                  opacity: 1,
+                  duration: 2,
+                  delay: 1,
+                  ease: 'power2.out',
+                }
+            )
       }, []);
    
     return(
-<div className="relative z-20" >
+<div className="relative z-20 overflow-hidden" >
 <div className='relative'>
-<span className='absolute top-8.5 left-50 text-[50px]  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Empire </span></div>
+<span className='absolute top-11 left-56 text-[45px]  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Empire </span></div>
 <div className='relative'>
 <h1 className='text-[190px] w-full absolute z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold '>Lakeviews</h1></div>
 
 <div className='relative'>
 <span  className=' right-34 absolute top-52 text-[50px]  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Liwan</span></div>
-<div className='relative ' ref={box_Two}><Image src={cloud} className='absolute top-20 transform-none'/></div>
+    <div className="">
+        <div ref={box_Two} className="absolute top-0 z-50 "> {/* <<< starts offscreen */}
+          <Image src={cloud} alt="Cloud" objectFit='cover' />
+        </div>
+      </div>
 
 
-<div className='relative  w-full h-[300px]'>
-<Image src={empire}height={421} width={782} className='absolute left-[18%] z-40'/></div>
+      
+
+<div className='relative h-[500px] z-50' ref={im}>
+<Image src={empire}height={421} width={782} className='absolute left-[18%] z-40' objectFit='cover'/></div>
 <div className='w-full '><span  className='left-50  absolute text-[26px] w-[270px] flex items-center justify-start bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-light z-20 '>a striking tower in Liwan, 
 designed for lifestyle
  and luxury.</span></div>
- <div ref={boxref} className='transform-none h-[] relative z-40'>
- <Image  src={cloud}  id="#"className='!px-0' layout='intrinsic' objectFit='cover'/></div>
-   </div>
+  <div ref={boxref} className='absolute bottom-0 w-full'> 
+ <Image  src={cloud}  id="#"className='!px-0' layout='intrinsic' objectFit='cover'/>
+
+   
+ </div>
+ <div ref={box_three} className='absolute bottom-0 z-50 left-[10%] ' >
+ <Image  src={cloud} width={799} height={80}  id="#"className='!px-0' layout='intrinsic' objectFit='cover'/></div>
+</div>
     )
 
 }
