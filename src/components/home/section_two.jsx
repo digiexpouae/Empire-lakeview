@@ -1,17 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 // import { OutdoorCinemaIcon } from "./icons/OutdoorCinemaIcon";
 // import { SteamSaunaIcon } from "./icons/SteamSaunaIcon";
 // import { GamingArcadeIcon } from "./icons/GamingArcadeIcon";
 // import { MiniGolfIcon } from "./icons/MiniGolfIcon";
 // import { OtherFeaturesIcon } from "./icons/OtherFeaturesIcon";
-import video from '../../../public/assets/video ame.png';
-import joy from '../../../public/assets/joy.png';
-import puzzle from '../../../public/assets/puzzle.png';
-import layer from '../../../public/assets/Layer_1 (8).png';
-import golf from '../../../public/assets/golf.png';
+import {gsap} from "gsap";
+
 import Image from "next/image";
-
-
 
 const section_two = () => {
   const amenities = [
@@ -36,22 +31,40 @@ const section_two = () => {
       title: "And Other Features",
     },
   ];
-
-  return (
+const ref1=useRef()
+const ref2=useRef()
+const ref3=useRef()
+useEffect(()=>{
+   gsap.fromTo(
+            ref1.current,
+            { x:-200, opacity: 0 },   // start from translateX(-430px)
+            { x: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" } // animate to final position
+        )   
+,   gsap.fromTo(
+  ref2.current,
+  { y:200, opacity: 0 },   // start from translateX(-430px)
+  { y: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" } // animate to final position
+) ,   gsap.fromTo(
+  ref3.current,
+  { y:200, opacity: 0, },   // start from translateX(-430px)
+  { y: 0, opacity: 1, duration: 2, delay: 2, ease: "power2.out" } // animate to final position
+)     
+},[])
+return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="overflow-hidden">
+      <div >
         <div className="flex flex-col xl:flex-row">
           {/* Left side - Project title */}
           <div 
             className="w-full xl:w-2/5  text-black p-x-8 flex items-start justify-center xl:h-[280px] animate-slide-left"
-          >
+         ref={ref1} >
             <h2 className="text-4xl lg:text-[70px] sm:text-5xl font-bold">
               Project Overview
             </h2>
           </div>
           
           {/* Right side - Project description and amenities */}
-          <div className="w-full xl:w-3/5 p-6 sm:p-8 flex flex-col justify-between xl:h-[280px]">
+          <div className="w-full xl:w-3/5 p-6 sm:p-8 flex flex-col justify-between xl:h-[280px]" ref={ref2}>
             <p 
               className="text-sm sm:text-base animate-fade-up"
             >
@@ -64,7 +77,7 @@ const section_two = () => {
           
           </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-8 xl:mt-0">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-8 xl:mt-0" ref={ref3}>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
@@ -73,7 +86,7 @@ const section_two = () => {
                 >
           <Image src={amenity.icon}  width={50} height={50}/>
                
-                  <p className="text-xs sm:text-sm font-medium text-center">
+                  <p className="text-xs sm:text-sm font-medium text-center my-heading">
                     {amenity.title}
                   </p>
                 </div>
