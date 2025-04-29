@@ -21,6 +21,7 @@ const SectionThree = ({onAllVisible}) => {
   const fourthImageRef = useRef(null);
   const fiveImageRef = useRef(null);
   const imaes=[Mask,Mask2,Mask3]
+  const ima1=useRef(null)
   const arrayOfElements = [
     {
       image: "/assets/4c43da9db2ab4e1a685ad4e0fe8bf4d7420cb786 (3).jpg",
@@ -68,26 +69,30 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
 
 
   useEffect(() => {
-  
-    
-    
-    // Register the plugin
 
-    // Set a timeout to trigger image visibility after a few seconds
     const timer = setTimeout(() => {
       setImageVisible(true); // Show the second image after 3 seconds
-    }, 3000); // Delay for 3 seconds (3000ms)
+    }, 5000); // Delay for 3 seconds (3000ms)
 
     return () => clearTimeout(timer); // Clean up timeout on component unmount
   }, []);
+  
+  
+useEffect(() => {
 
-  useEffect(() => {
 
+if(!imageVisible){
+  gsap.fromTo(ima1.current,{scale:0.8,delay:1},{scale:0.9,duration:7}
+
+
+
+  )
+}
     if (imageVisible) {
-      gsap.fromTo(
-        secondImageRef.current,
-        { scale: 0.9, delay:3 }, // Initial state: image starts small
-        { scale: 1, duration: 5 ,scrollTrigger: {
+      gsap.to(ima1.current, { opacity: 0.7, duration: 1 }),
+      gsap.fromTo(secondImageRef.current,
+        { scale: 0.9,delay:2,opacity:0.6 }, // Initial state: image starts small
+        { scale: 1, duration:5,opacity:1,scrollTrigger: {
           trigger:   secondImageRef.current,
           start: 'top 80%',
           toggleActions: 'play none none none',
@@ -97,7 +102,7 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
       // Set a timeout to show the third image after 2 seconds (after second image animation)
       const timerForThirdImage = setTimeout(() => {
         setThirdImageVisible(false); // Show third image after 2 seconds
-      }, 5000);
+      }, 7000);
 
       return () => clearTimeout(timerForThirdImage); // Clean up timeout for third image
     }
@@ -168,10 +173,10 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
         </span>
       </div>
 
-      <div>
+      <div ref={ima1}>
         {/* First Image - Initially visible */}
         {!imageVisible && (
-          <Image src={Mask} alt="Mask"  className='scale-[0.9]'/>
+          <Image src={Mask} alt="Mask"  />
         )}
       </div>
 
@@ -187,7 +192,7 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
         <div ref={thirdImageRef} className="relative w-full">
           <Image src={currentImage.im} alt="Mask3" objectFit="cover" width={1000} height={1000} className='!h-full !w-full'/>
         {console.log(currentImage)}
-          <div className="overlay absolute top-0 left-0 right-0 bottom-0 flex w-full  bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10">
+          <div className={`${thirdImageVisible?'opacity-0':'opacity-1'}overlay absolute top-0 left-0 right-0 bottom-0 flex w-full  bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10`}>
             <div className="absolute left-20 z-10 flex flex-col justify-center h-full gap-3 w-[600px]">
             
               <h2 className=" lg:text-[50px] xl:text-[80px]  text-white my-heading font-bold">{currentImage.tex1}</h2>
