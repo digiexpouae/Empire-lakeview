@@ -86,8 +86,8 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
     if (imageVisible) {
       gsap.fromTo(
         secondImageRef.current,
-        { scale: 0.9, delay: 1 }, // Initial state: image starts small
-        { scale: 1, duration: 2 ,scrollTrigger: {
+        { scale: 0.9, delay:3 }, // Initial state: image starts small
+        { scale: 1, duration: 5 ,scrollTrigger: {
           trigger:   secondImageRef.current,
           start: 'top 80%',
           toggleActions: 'play none none none',
@@ -97,7 +97,7 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
       // Set a timeout to show the third image after 2 seconds (after second image animation)
       const timerForThirdImage = setTimeout(() => {
         setThirdImageVisible(false); // Show third image after 2 seconds
-      }, 2000);
+      }, 5000);
 
       return () => clearTimeout(timerForThirdImage); // Clean up timeout for third image
     }
@@ -118,7 +118,7 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
       
       const timerForFourthImage = setTimeout(() => {
         setFourthImageVisible(true);
-      }, 3000); // Show fourth image 
+      }, 15000); // Show fourth image 
     }
   }, [thirdImageVisible]); // Run this when thirdImageVisible changes
 
@@ -127,7 +127,7 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
       gsap.fromTo(
         fourthImageRef.current,
         { opacity: 0,delay:5, y: 50 },
-        { opacity: 1, y: 0, duration: 5,    scrollTrigger: {
+        { opacity: 1, y: 0, duration: 15,    scrollTrigger: {
           trigger:  fourthImageRef.current,
           start: 'top 80%',
           toggleActions: 'play none none none',
@@ -171,7 +171,7 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
       <div>
         {/* First Image - Initially visible */}
         {!imageVisible && (
-          <Image src={Mask} alt="Mask" />
+          <Image src={Mask} alt="Mask"  className='scale-[0.9]'/>
         )}
       </div>
 
