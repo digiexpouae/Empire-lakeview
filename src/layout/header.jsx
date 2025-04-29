@@ -44,7 +44,7 @@
 
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-
+import Image from 'next/image'
 const header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const nav = [
@@ -84,10 +84,12 @@ const header = () => {
         {/* Center Logo */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <a href="/" className="block transform hover:scale-105 transition-transform duration-300">
-            <img
+            <Image
               src="/assets/logo (2).png"
               alt="Empire Developments"
               className="h-[40px] w-auto md:h-[45px] lg:h-[50px] object-contain"
+              width={200}
+              height={200}
             />
           </a>
         </div>

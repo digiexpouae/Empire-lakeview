@@ -6,6 +6,7 @@ import React, { useEffect, useRef } from "react";
 // import { OtherFeaturesIcon } from "./icons/OtherFeaturesIcon";
 import {gsap} from "gsap";
 
+
 import Image from "next/image";
 
 const section_two = () => {
@@ -35,19 +36,26 @@ const ref1=useRef()
 const ref2=useRef()
 const ref3=useRef()
 useEffect(()=>{
+  
+  // if (typeof window !== "undefined") {
+  //   const { ScrollTrigger } = require('gsap/ScrollTrigger');
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  // }
+  
    gsap.fromTo(
             ref1.current,
             { x:-200, opacity: 0 },   // start from translateX(-430px)
-            { x: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" } // animate to final position
+            { x: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" }
         )   
 ,   gsap.fromTo(
   ref2.current,
   { y:200, opacity: 0 },   // start from translateX(-430px)
-  { y: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" } // animate to final position
+  { y: 0, opacity: 1, duration: 1, delay: 1, ease: "power2.out" } // animate to final position
 ) ,   gsap.fromTo(
   ref3.current,
   { y:200, opacity: 0, },   // start from translateX(-430px)
-  { y: 0, opacity: 1, duration: 2, delay: 2, ease: "power2.out" } // animate to final position
+  { y: 0, opacity: 1, duration: 2, delay: 2 } // animate to final position
 )     
 },[])
 return (

@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Slider from '../slider';
+
 import Mask from '../../../public/assets/Mask group.png'
 import Mask2 from '../../../public/assets/Mask2.png';
 import Mask3 from '../../../public/assets/4c43da9db2ab4e1a685ad4e0fe8bf4d7420cb786 (3).jpg';
 import gsap from 'gsap';
 import map from '../../../public/assets/map.png';
+
+
 const SectionThree = ({onAllVisible}) => {
   const [imageVisible, setImageVisible] = useState(false);
   const [thirdImageVisible, setThirdImageVisible] = useState(true); // State for third image
@@ -14,6 +18,7 @@ const SectionThree = ({onAllVisible}) => {
   const thirdImageRef = useRef(null);
   const fourthImageRef = useRef(null);
   const fiveImageRef = useRef(null);
+  const imaes=[Mask,Mask2,Mask3]
   const arrayOfElements = [
     {
       image: "/assets/4c43da9db2ab4e1a685ad4e0fe8bf4d7420cb786 (3).jpg",
@@ -50,7 +55,7 @@ const SectionThree = ({onAllVisible}) => {
       text2: "12 minutes"
     }
   ]
-  const images=['/assets/ima1.jpg','/assets/ima2.jpg','/assets/ima3.jpg','/assets/ima4.jpg','/assets/ima6.jpg']
+const images=['/assets/ima1.jpg','/assets/ima2.jpg','/assets/ima3.jpg','/assets/ima4.jpg','/assets/ima6.jpg']
 
 
   useEffect(() => {
@@ -61,6 +66,11 @@ const SectionThree = ({onAllVisible}) => {
 
 
   useEffect(() => {
+  
+    
+    
+    // Register the plugin
+
     // Set a timeout to trigger image visibility after a few seconds
     const timer = setTimeout(() => {
       setImageVisible(true); // Show the second image after 3 seconds
@@ -70,12 +80,16 @@ const SectionThree = ({onAllVisible}) => {
   }, []);
 
   useEffect(() => {
+
     if (imageVisible) {
-      // GSAP animation for the second image when it becomes visible
       gsap.fromTo(
         secondImageRef.current,
         { scale: 0.9, delay: 1 }, // Initial state: image starts small
-        { scale: 1, duration: 2 } // Animate to zoom in
+        { scale: 1, duration: 2 ,scrollTrigger: {
+          trigger:   secondImageRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        }} // Animate to zoom in
       );
 
       // Set a timeout to show the third image after 2 seconds (after second image animation)
@@ -93,7 +107,11 @@ const SectionThree = ({onAllVisible}) => {
       gsap.fromTo(
         thirdImageRef.current,
         { scale: 1, x: 0 }, // Initial state: image starts small
-        { scale: 1, opacity: 1, duration: 1 } // Animate to full scale
+        { scale: 1, opacity: 1, duration: 1 ,    scrollTrigger: {
+          trigger:    thirdImageRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        }} // Animate to full scale
       )
       
       const timerForFourthImage = setTimeout(() => {
@@ -107,7 +125,11 @@ const SectionThree = ({onAllVisible}) => {
       gsap.fromTo(
         fourthImageRef.current,
         { opacity: 0,delay:5, y: 50 },
-        { opacity: 1, y: 0, duration: 1 }
+        { opacity: 1, y: 0, duration: 5,    scrollTrigger: {
+          trigger:  fourthImageRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        } }
       );
     
     const timerForfiveImage = setTimeout(() => {
@@ -121,7 +143,11 @@ const SectionThree = ({onAllVisible}) => {
       gsap.fromTo(
         fiveImageRef.current,
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1 }
+        { opacity: 1, y: 0, duration: 1, scrollTrigger: {
+          trigger: fiveImageRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        } }
       );
     
     }
@@ -176,12 +202,14 @@ const SectionThree = ({onAllVisible}) => {
             </div >
      {/* <div className='overflow-x-auto flex justify-between absolute gap-8 right-0 bottom-20 w-[50%]'><div className='w-52 flex-shrink-0"'><Image src={Mask2} width={200} height={200} objectFit='cover'/></div>
    
-          </div> }
+          </div> } 
 
 
 
 
           {/* swiper slider */}
+      {/* <Slider images={images} /> */}
+
  
           </div>
         </div>
