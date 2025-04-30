@@ -11,3 +11,10 @@
 .my-heading {
   font-family: var(--font-inter);
 }
+.button {
+  @apply bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
+    hover:from-[#E5C98C] hover:to-[#FFF3DC] 
+    text-gray-800 w-[220px] lg:px-6 py-2 rounded-full 
+    transition-colors duration-300 transform 
+    text-sm lg:text-base whitespace-nowrap;
+}

@@ -98,13 +98,15 @@ const header = () => {
         <div className="hidden md:flex items-center gap-x-3 lg:gap-x-4">
           <a
             href="#contact"
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-4 lg:px-6 py-2 rounded-full transition-colors duration-300 transform hover:scale-105 text-sm lg:text-base whitespace-nowrap"
-          >
+            className="
+  bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
+    hover:from-[#E5C98C] hover:to-[#FFF3DC] text-gray-800 px-4 lg:px-6 py-2 rounded-full transition-colors duration-300 transform text-sm lg:text-base whitespace-nowrap"
+      >
             Contact Us
           </a>
           <a
             href="#login"
-            className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 lg:px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 text-sm lg:text-base whitespace-nowrap"
+            className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 lg:px-6 py-2 rounded-full transition-all duration-300 transform text-sm lg:text-base whitespace-nowrap"
           >
             Login / Register
           </a>
