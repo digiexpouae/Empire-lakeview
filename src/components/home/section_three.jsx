@@ -68,48 +68,12 @@ const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. T
   }, [fiveImageVisible]);
 
 
-  useEffect(() => {
 
-    const timer = setTimeout(() => {
-      setImageVisible(true); // Show the second image after 3 seconds
-    }, 5000); // Delay for 3 seconds (3000ms)
-
-    return () => clearTimeout(timer); // Clean up timeout on component unmount
-  }, []);
   
-  
-useEffect(() => {
 
-
-if(!imageVisible){
-  gsap.fromTo(ima1.current,{scale:0.8,delay:1},{scale:0.9,duration:7}
-
-
-
-  )
-}
-    if (imageVisible) {
-      gsap.to(ima1.current, { opacity: 0.7, duration: 1 }),
-      gsap.fromTo(secondImageRef.current,
-        { scale: 0.9,delay:2,opacity:0.6 }, // Initial state: image starts small
-        { scale: 1, duration:5,opacity:1,scrollTrigger: {
-          trigger:   secondImageRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        }} // Animate to zoom in
-      );
-
-      // Set a timeout to show the third image after 2 seconds (after second image animation)
-      const timerForThirdImage = setTimeout(() => {
-        setThirdImageVisible(false); // Show third image after 2 seconds
-      }, 7000);
-
-      return () => clearTimeout(timerForThirdImage); // Clean up timeout for third image
-    }
-  }, [imageVisible]);
 
   useEffect(() => {
-    if (!thirdImageVisible) {
+    if (thirdImageVisible) {
       // GSAP animation for the third image when it becomes visible
       gsap.fromTo(
         thirdImageRef.current,
@@ -150,7 +114,7 @@ if(!imageVisible){
       gsap.fromTo(
         fiveImageRef.current,
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1, scrollTrigger: {
+        { opacity: 1, y: 0, duration: 4, scrollTrigger: {
           trigger: fiveImageRef.current,
           start: 'top 80%',
           toggleActions: 'play none none none',
@@ -173,22 +137,11 @@ if(!imageVisible){
         </span>
       </div>
 
-      <div ref={ima1}>
-        {/* First Image - Initially visible */}
-        {!imageVisible && (
-          <Image src={Mask} alt="Mask"  />
-        )}
-      </div>
-
+     
       {/* Second Image - Appears after a few seconds */}
-      {imageVisible && thirdImageVisible && (
-        <div ref={secondImageRef}>
-          <Image src={Mask2} alt="Mask2" />
-        </div>
-      )}
-
+    
       {/* Third Image - Appears after the second image finishes zooming */}
-      {!thirdImageVisible && !fourthImageVisible && (
+      {thirdImageVisible && !fourthImageVisible && (
         <div ref={thirdImageRef} className="relative w-full">
           <Image src={currentImage.im} alt="Mask3" objectFit="cover" width={1000} height={1000} className='!h-full !w-full'/>
         {console.log(currentImage)}

@@ -11,3 +11,11 @@
 .my-heading {
   font-family: var(--font-inter);
 }
+.container {
+  overflow-x: auto;      /* allow horizontal scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.container::-webkit-scrollbar {
+  display: none;         /* Chrome, Safari, Opera */
+}
