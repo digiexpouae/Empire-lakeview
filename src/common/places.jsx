@@ -3,6 +3,12 @@ import map from '../../public/assets/map.png';
 import Image from 'next/image';
 import Slider from '.././components/slider_Two'
 import car from '../../public/assets/car.png'
+import map1 from '../../public/assets/map1.png'
+import map2 from '../../public/assets/map2.png'
+
+import map3 from '../../public/assets/map3.png'
+
+import map4 from '../../public/assets/map4.png'
 const places = () => {
 
 const movingRef=useRef()
@@ -27,7 +33,7 @@ const handleSlideChange = (swiper) => {
       }
     }
   };
-    const im=['/assets/map1.png','/assets/map2.png','/assets/map3.png','/assets/map4.png']
+    const im=[map1,map2,map3,map4]
  return(
     <div>
       <div className=' bg-[#002E3C] w-full text-white' >
