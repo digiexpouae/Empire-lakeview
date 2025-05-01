@@ -39,7 +39,7 @@ const Footer = () => {
   return (
     <div id="webcrumbs"> 
       <div className="bg-white w-full py-10">
-        <div className="container mx-auto px-4 mt-[250px]">
+        <div className="container mx-auto px-4 mt-[50px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 xl:gap-8 lg:gap-0 place-items-center">
             
             {/* Quick Links */}
