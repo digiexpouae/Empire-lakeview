@@ -20,11 +20,11 @@ const index = () => {
            <Heroslider />
            <div className='bg-[#002E3C]'>
 
-           {/* <Section_two /> */}
-           {/* <Introducing /> */}
-           {/* <Section /> */}
+           <Section_two />
+           <Introducing />
+           <Section />
            <Section_three onAllVisible={handleAllVisible}/>
-           {/* <Place /> */}
+           <Place />
            </div>
           
            <Footer />
