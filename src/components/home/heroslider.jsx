@@ -91,7 +91,7 @@ const heroslider = () => {
 <div className='relative opacity-0' ref={text1}>
 <span className='absolute top-11 xl:left-56 lg:left-24 text-[45px]  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Empire </span></div>
 <div className='relative opacity-0' ref={text2}>
-<h1 className='text-[190px] w-full absolute z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>Lakeviews</h1></div>
+<h1 className='xl:text-[190px]  md:text-[100px] w-full absolute z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>Lakeviews</h1></div>
 
 <div className='relative opacity-0' ref={text3}>
 <span  className=' right-34 absolute top-52 text-[50px]  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Liwan</span></div>

@@ -15,16 +15,16 @@ const index = () => {
   };
 
   return (
-    <div className={`bg-[url('/assets/b.png')] bg-cover bg-center relative h-[1100px]`} > 
+    <div className={`bg-[url('/assets/b.png')] bg-cover bg-center relative h-[1100px] `} > 
         <Header/>
            <Heroslider />
            <div className='bg-[#002E3C]'>
 
-           <Section_two />
-           <Introducing />
-           <Section />
+           {/* <Section_two /> */}
+           {/* <Introducing /> */}
+           {/* <Section /> */}
            <Section_three onAllVisible={handleAllVisible}/>
-           <Place />
+           {/* <Place /> */}
            </div>
           
            <Footer />
