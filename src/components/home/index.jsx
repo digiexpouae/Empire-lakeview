@@ -7,6 +7,7 @@ import Section from '../../common/section'
 import Footer from '@/layout/footer'
 import Place from '../../common/places'
 import Introducing from './introducing'
+import Icon from '../icon'
 const index = () => {
   const [showFooter, setShowFooter] = useState(false);
 
@@ -25,6 +26,7 @@ const index = () => {
            <Section />
            <Section_three onAllVisible={handleAllVisible}/>
            <Place />
+          <Icon />
            </div>
           
            <Footer />
