@@ -3,7 +3,9 @@ import Heroslider from './heroslider'
 import Header from '@/layout/header'
 import Section_two from './section_two'
 import Section_three from './section_three'
+import Section from '../../common/section'
 import Footer from '@/layout/footer'
+import Place from '../../common/places'
 import Introducing from './introducing'
 const index = () => {
   const [showFooter, setShowFooter] = useState(false);
@@ -20,10 +22,12 @@ const index = () => {
 
            <Section_two />
            <Introducing />
+           <Section />
            <Section_three onAllVisible={handleAllVisible}/>
+           <Place />
            </div>
-           {showFooter &&
-           <Footer style={{zIndex:'50',position:'absolute'}} />}
+          
+           <Footer />
     </div>
   )
 }
