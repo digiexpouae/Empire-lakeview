@@ -37,7 +37,7 @@ const handleSlideChange = (swiper) => {
  return(
     <div>
       <div className=' bg-[#002E3C] w-full text-white' >
-      <div className='flex flex-col items-center justify-center gap-[100px]'>
+      <div className='flex flex-col items-center justify-center gap-[100px] mt-[20px]'>
         <div className='flex flex-col items-center justify-center'>
         <h2 className='my-heading text-[80px]  font-bold'>In The Heart Of It All</h2>
         <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  <div className="flex items-center justify-center w-full">
