@@ -57,7 +57,7 @@ const heroslider = () => {
               {y:0,
                              // 👈 Animate to original position
                 opacity: 1,
-                duration: 5,
+                duration: 4,
                 delay: 2,
                 ease: 'power2.out',
               }
@@ -68,7 +68,7 @@ const heroslider = () => {
             {y:0,
                            // 👈 Animate to original position
               opacity: 1,
-              duration: 5,
+              duration: 4,
               delay: 2,
               ease: 'power2.out',
             }
@@ -79,7 +79,7 @@ const heroslider = () => {
           {y:0,
                          // 👈 Animate to original position
             opacity: 1,
-            duration: 5,
+            duration: 4,
             delay: 2,
             ease: 'power2.out',
           }
@@ -88,15 +88,15 @@ const heroslider = () => {
    
     return(
 <div className="relative z-20 overflow-hidden" >
-<div className='relative opacity-0' ref={text1}>
-<span className='absolute top-11 xl:left-56 lg:left-24 text-[45px]  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Empire </span></div>
-<div className='relative opacity-0' ref={text2}>
-<h1 className='xl:text-[190px]  md:text-[100px] w-full absolute z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>Lakeviews</h1></div>
+<div className='absolute lg:top-11 md:top-[5%]  lg:left-[16%] left-[14%] opacity-0 'ref={text1} >
+<span className=' xl:text-[45px] lg:text-[35px] md:text-[30px] text-[20px] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Empire </span></div>
+<div className=' absolute w-full opacity-0 'ref={text2} >
+<h1 className='xl:text-[190px]  lg:text-[160px] md:text-[130px] text-[60px] w-[100%] z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>Lakeviews</h1></div>
 
-<div className='relative opacity-0' ref={text3}>
-<span  className=' right-34 absolute top-52 text-[50px]  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Liwan</span></div>
+<div className='right-34 absolute xl:top-[38%] lg:top-[34%] md:top-[29%]opacity-0 'ref={text3} >
+<span  className='lg:text-[35px] md:text-[30px] xl:text-[50px]  text-[20px] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Liwan</span></div>
     <div className="">
-        <div ref={box_Two} className="absolute top-0 z-50 opacity-0 "> {/* <<< starts offscreen */}
+        <div ref={box_Two} className="absolute top-0 z-50  "> {/* <<< starts offscreen */}
           <Image src={cloud} alt="Cloud" objectFit='cover' />
         </div>
       </div>
@@ -104,17 +104,17 @@ const heroslider = () => {
 
       
 
-<div className='relative h-[500px] z-50 opacity-0' ref={im}>
+<div className='relative h-[500px] z-50 ' ref={im}>
 <Image src={empire}height={421} width={782} className='absolute lg:left-[9%] xl:left-[18%] bottom-[-200px] z-40' objectFit='cover'/></div>
 <div className='w-full '><span  className='left-50  absolute text-[26px] w-[270px] flex items-center justify-start bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-light z-20 '>a striking tower in Liwan, 
 designed for lifestyle
  and luxury.</span></div>
-  <div ref={boxref} className='absolute bottom-0 w-full opacity-0'> 
+  <div  className='absolute bottom-0 w-full ' ref={boxref}> 
  <Image  src={cloud}  id="#"className='!px-0' layout='intrinsic' objectFit='cover'/>
 
    
  </div>
- <div ref={box_three} className='absolute bottom-0 z-50 left-[10%] opacity-0' >
+ <div className='absolute bottom-0 z-50 left-[10%] ' ref={box_three}>
  <Image  src={cloud} width={799} height={80}  id="#"className='!px-0' layout='intrinsic' objectFit='cover'/></div>
 </div>
     )

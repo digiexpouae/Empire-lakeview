@@ -16,7 +16,7 @@ const icons=[{img:swan,name:'Ras al Khor Wild Life Sanctuary',distance:' 5 minut
     {img:plane,name:'Dubai International Airport',distance:' 12 minutes'},{img:mall,name:'The Dubai Mall',distance:' 15 minutes'},{img:opera,name:'Dubai Opera',distance:' 15 minutes'},{img:dubaiframe,name:'Dubai Frame',distance:' 15 minutes'},{img:palm,name:'Palm Jumeirah',distance:'25 minutes'}]
 
   return (
-    <div className='w-full flex flex-col items-center justify-center h-[400px]'>
+    <div className='w-full flex flex-col items-center justify-center xl:h-[400px] lg:h-[540px]'>
     <div className='grid xl:grid-cols-5 place-content-center lg:grid-cols-4 grid-rows-2 place-items-center w-[80%] '>
 {      icons.map((elem,index)=>{
     return <div className='flex flex-col items-center justify-center text-white gap-[20px] h-[170px] '>
