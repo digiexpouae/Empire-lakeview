@@ -26,7 +26,7 @@ const index = () => {
            <Section />
            <Section_three onAllVisible={handleAllVisible}/>
            <Place />
-           <Icon />
+           <Icon /> 
            </div>
           
            <Footer />
