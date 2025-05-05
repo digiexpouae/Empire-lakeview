@@ -87,10 +87,10 @@ const heroslider = () => {
       }, []);
    
     return(
-<div className="relative z-20 overflow-hidden" >
+<div className="relative z-20 overflow-hidden " >
 <div className='absolute lg:top-11 md:top-[2%] top-0 lg:left-[16%] md:left-[15vw] left-[12%]  opacity-0 'ref={text1} >
 <span className=' xl:text-[45px] lg:text-[35px] md:text-[30px] text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-bold z-20'>Empire </span></div>
-<div className=' absolute w-full opacity-0  'ref={text2} >
+<div className=' absolute w-full opacity-0 'ref={text2} >
 <h1 className='xl:text-[190px]  lg:text-[160px] md:text-[130px] text-[16vw] w-[100%] z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>Lakeviews</h1></div>
 
 <div className='md:right-34 right-[5%]  absolute xl:top-[38%] lg:top-[34%] md:top-[29%] top-[18vw] opacity-0 'ref={text3} >
@@ -104,8 +104,8 @@ const heroslider = () => {
 
       
 
-<div className='relative h-[500px]   z-50 opacity-0' ref={im}>
-<Image src={empire} height={421} width={782} className=' absolute lg:left-[9%] xl:left-[18%] bottom-[-200px] z-40' /></div>
+<div className='relative h-[500px] z-50 opacity-0 ' ref={im}>
+<Image src={empire}  height={421} width={782} className='absolute lg:left-[9%] xl:left-[18%] bottom-[-120px] md:bottom-[-200px] z-40 ' /></div>
 <div className='w-full '><span  className='left-50  absolute text-[26px] w-[270px] flex items-center justify-start bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-light z-20 '>a striking tower in Liwan, 
 designed for lifestyle
  and luxury.</span></div>

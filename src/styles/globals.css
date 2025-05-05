@@ -7,10 +7,31 @@
 :root {
   --font-inter: 'Inter', sans-serif;
 }
+body{
+cursor: none;
+} 
 
 .my-heading {
   font-family: var(--font-inter);
 }
+
+/* @media (max-width:500px){
+  .empire img{
+    bottom:-50px;
+  }
+  .text-1{
+    top:80px
+  }
+  .text-2{
+top: 80px;
+  }
+  .text-3{
+    top: 150px;
+
+  }
+
+} */
+
 .button {
   @apply bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
     hover:from-[#E5C98C] hover:to-[#FFF3DC] 

@@ -45,7 +45,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image'
-const header = () => {
+const header = ({className}) => {
   const [isOpen, setIsOpen] = useState(false);
   const nav = [
     { name: 'Home', link: '/' },
@@ -55,11 +55,12 @@ const header = () => {
   ];
 
   return (
-    <header className="relative z-10">
+    <header className={`relative z-50 ${className}`}>
       {/* Desktop Navigation */}
       <div className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-3">
         {/* Left Nav Links - Hidden on Mobile */}
-        <nav className="hidden md:flex items-center gap-x-3 lg:gap-x-6">
+        <nav className={`hidden md:flex items-center gap-x-3 lg:gap-x-6 `}>
+          {console.log(className)}
           {nav.map((elem, index) => (
             <a
               key={index}
@@ -115,8 +116,8 @@ const header = () => {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`md:hidden absolute w-full bg-cyan-800/95 backdrop-blur-sm transition-all duration-300 ${
-          isOpen ? 'max-h-[400px] opacity-100 !z-[100]' : 'max-h-0 opacity-0 overflow-hidden'
+        className={`md:hidden absolute w-full bg-[#002E3C]/95 backdrop-blur-sm transition-all duration-300 ${
+          isOpen ? 'max-h-[400px] opacity-100 ' : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
         <div className="flex flex-col space-y-3 px-4 py-4">
@@ -132,7 +133,7 @@ const header = () => {
           <div className="flex flex-col gap-y-2 pt-3 border-t border-white/20">
             <a
               href="#contact"
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-4 py-2 rounded-full transition-colors duration-300 text-center text-base"
+              className="bg-[#CCAB64] hover:bg-[#CCAB64] text-gray-800 px-4 py-2 rounded-full transition-colors duration-300 text-center text-base"
             >
               Contact Us
             </a>

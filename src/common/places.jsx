@@ -39,7 +39,7 @@ const handleSlideChange = (swiper) => {
       <div className=' bg-[#002E3C] w-full text-white' >
       <div className='flex flex-col items-center justify-center gap-[100px] mt-[20px]'>
         <div className='flex flex-col items-center justify-center'>
-        <h2 className='my-heading text-[80px]  font-bold'>In The Heart Of It All</h2>
+        <h2 className='my-heading lg:text-[80px] md:text-[50px] text-[34px]  font-bold'>In The Heart Of It All</h2>
         <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  <div className="flex items-center justify-center w-full">
         <hr className="border border-white w-[80vw] relative " />
         
@@ -51,7 +51,7 @@ const handleSlideChange = (swiper) => {
           </div> </div>
        
         <div className='w-[80vw] h-[500px]'>
-            <Slider images={im} delay={4000} slidesize={'!h-[600px] !w-[800px]'} handleSlideChange={handleSlideChange} slide={'w-[800px] !h-[400px]'} num={1}/>
+            <Slider images={im} delay={4000} slidesize={'md:!h-[600px] md:!w-[800px] !h-[400px] !w-[300px] '} handleSlideChange={handleSlideChange} slide={'md:!w-[800px] md:!h-[400px] !w-[400px] !h-[200px]'} num={1}/>
         </div>
       </div>
     </div>
