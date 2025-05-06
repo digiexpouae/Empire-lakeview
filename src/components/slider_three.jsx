@@ -38,7 +38,9 @@ const slider_three = ({images,slidesize,slide,num,delay,handleSlideChange,active
               src={img}
               alt={`Slide ${index}`}
               width={539}
-              height={604}              className="object-cover !w-full !h-full rounded-lg"
+              height={604}      
+              priority
+              className="object-cover !w-full !h-full rounded-lg"
             />
           </SwiperSlide>
         ))}
