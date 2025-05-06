@@ -29,7 +29,7 @@ gsap.to(movingRef.current, {
  return(
     <div>
       <div className=' bg-[#002E3C] w-full text-white' >
-      <div className='flex flex-col items-center justify-center gap-[100px] mt-[20px]'>
+      <div className='flex flex-col items-center justify-center gap-[100px] lg:mt-[20px] mt-[50px]'>
         <div className='flex flex-col items-center justify-center'>
         <h2 className='my-heading lg:text-[80px] md:text-[50px] text-[34px]  font-bold'>In The Heart Of It All</h2>
         <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  <div className="flex items-center justify-center w-full">
@@ -47,11 +47,11 @@ gsap.to(movingRef.current, {
 
 
 
-          <div className='!w-[127px] !h-[72px] absolute left-[20%] rotate-90 z-30'><Image src={car} objectFit='cover' ref={movingRef} className='transition-transform duration-700 ease-in-out'/></div>
+          <div className='md:!w-[127px] !w-[62px] !h-[50px] md:!h-[72px] absolute left-[20%] rotate-90 z-30'><Image src={car} objectFit='cover' ref={movingRef} className='transition-transform duration-700 ease-in-out'/></div>
           </div> </div>
        
-        <div className='w-[80vw] h-[500px]'>
-            <Slider images={im} delay={4000} slidesize={'md:!h-[600px] md:!w-[800px] !h-[400px] !w-[300px] '}  activeIndex={activeIndex} slide={'md:!w-[800px] md:!h-[400px] !w-[400px] !h-[200px]'} num={1} />
+        <div className='w-[80vw] md:h-[500px] h-[300px]'>
+            <Slider images={im} delay={4000} slidesize={'lg:!h-[400px] md:!h-[300px] lg:!w-[800px] md:!w-[500px] !W-[70vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} />
         </div>
       </div>
     </div>

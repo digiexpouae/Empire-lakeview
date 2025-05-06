@@ -40,7 +40,7 @@ const Footer = () => {
     <div id="webcrumbs"> 
       <div className="bg-white w-full py-10">
         <div className="container mx-auto px-4 mt-[50px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 xl:gap-8 lg:gap-0 place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 xl:gap-8 lg:gap-0 gap-5 place-items-left md:place-items-center ">
             
             {/* Quick Links */}
             <div className="space-y-3">
@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
 
             {/* Logo */}
-            <div className="flex justify-center items-start h-full">
+            <div className="flex  items-start h-full">
               <div >
                 <a href="#" className="inline-block">
                   <Image
