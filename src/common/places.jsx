@@ -1,38 +1,30 @@
-import React, { use, useRef } from 'react'
+import React, { use, useRef, useState } from 'react'
 import map from '../../public/assets/map.png';
 import Image from 'next/image';
-import Slider from '.././components/slider_Two'
+import Slider from '../components/slider_three'
 import car from '../../public/assets/car.png'
 import map1 from '../../public/assets/map1.png'
 import map2 from '../../public/assets/map2.png'
-
+import gsap from 'gsap';
 import map3 from '../../public/assets/map3.png'
 
 import map4 from '../../public/assets/map4.png'
 const places = () => {
+  const swipperRef=useRef(null)
+const [activeIndex, setactiveIndex] = useState(0)
+const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl','w-[15px] h-[15px] absolute left-[40%] z-20 bg-white rounded-2xl',
+  'w-[15px] h-[15px] absolute left-[60%]  z-20 bg-white rounded-2xl',
+  'w-[15px] h-[15px] absolute left-[80%] z-20 bg-white rounded-2xl'
+]
+  const movingRef=useRef()
 
-const movingRef=useRef()
-const resetTimeoutRef = useRef(); // Put this at the top of your component
-const handleSlideChange = (swiper) => {
-    const index = swiper.realIndex; // Use realIndex for loop-safe index
-    console.log('Slide changed to:', index +index * 180);
+
+
+
+gsap.to(movingRef.current, {
+  y: `-${activeIndex * 20}vw`, 
   
-    if (movingRef.current) {
-      // Clear any existing timeout to avoid stacking
-      clearTimeout(resetTimeoutRef.current);
-  
-    //   if (index === 3) {
-    //     // Delay reset by 4 seconds if on last slide
-    //     resetTimeoutRef.current = setTimeout(() => {
-    //       movingRef.current.style.transform = 'translateY(0)';
-    //     }, 4000);
-    //   }
-       if(movingRef) {
-        // Move immediately on all other slides
-        movingRef.current.style.transform = `translateY(-${index * 20}vw)`;
-      }
-    }
-  };
+});
     const im=[map1,map2,map3,map4]
  return(
     <div>
@@ -42,16 +34,24 @@ const handleSlideChange = (swiper) => {
         <h2 className='my-heading lg:text-[80px] md:text-[50px] text-[34px]  font-bold'>In The Heart Of It All</h2>
         <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  <div className="flex items-center justify-center w-full">
         <hr className="border border-white w-[80vw] relative " />
+        {styles.map((elem,index)=>{
+          return(
+          <span key={index} onClick={()=>setactiveIndex(index)} className={`${elem} cursor-pointer`}></span>
         
-        <span className='w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl'></span>
-         <span className='w-[15px] h-[15px] absolute left-[40%] z-20 bg-white rounded-2xl'></span>
-          <span className='w-[15px] h-[15px] absolute left-[60%]  z-20 bg-white rounded-2xl'></span>
-          <span className='w-[15px] h-[15px] absolute left-[80%] z-20 bg-white rounded-2xl'></span>
+        )
+  
+      })
+        }
+    {console.log(activeIndex)}
+
+
+
+
           <div className='!w-[127px] !h-[72px] absolute left-[20%] rotate-90 z-30'><Image src={car} objectFit='cover' ref={movingRef} className='transition-transform duration-700 ease-in-out'/></div>
           </div> </div>
        
         <div className='w-[80vw] h-[500px]'>
-            <Slider images={im} delay={4000} slidesize={'md:!h-[600px] md:!w-[800px] !h-[400px] !w-[300px] '} handleSlideChange={handleSlideChange} slide={'md:!w-[800px] md:!h-[400px] !w-[400px] !h-[200px]'} num={1}/>
+            <Slider images={im} delay={4000} slidesize={'md:!h-[600px] md:!w-[800px] !h-[400px] !w-[300px] '}  activeIndex={activeIndex} slide={'md:!w-[800px] md:!h-[400px] !w-[400px] !h-[200px]'} num={1} />
         </div>
       </div>
     </div>

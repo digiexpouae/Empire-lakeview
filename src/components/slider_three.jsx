@@ -1,12 +1,13 @@
 'use client';
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'; // ✅ Import Swiper and SwiperSlide
 import { Autoplay } from 'swiper/modules'; // ✅ Import Autoplay module
 import { Mousewheel } from 'swiper/modules';
 
 import 'swiper/css'; // Swiper CSS for proper styling
 import Image from 'next/image'; // Import Image for Next.js optimization
-const slider_Two = ({images,slidesize,slide,num,delay,handleSlideChange,swiperref}) => {
+const slider_three = ({images,slidesize,slide,num,delay,handleSlideChange,activeIndex}) => {
+  const filteredImages = images.filter((_, index) => index === activeIndex);
 
   return (
     <div className="relative  mb-20">
@@ -30,7 +31,7 @@ const slider_Two = ({images,slidesize,slide,num,delay,handleSlideChange,swiperre
         // onSlideChange={handleSlideChange} // Show 2.5 slides at once
         className={`${slidesize}`}
       > 
-          {images.map((img, index) => (
+          {filteredImages.map((img, index) => (
           <SwiperSlide key={index} className={`${slide}`} style={{border:'2px solid white',borderRadius:'10px'}}>
         
                        <Image 
@@ -46,4 +47,4 @@ const slider_Two = ({images,slidesize,slide,num,delay,handleSlideChange,swiperre
   );
 };
 
-export default slider_Two
+export default slider_three;

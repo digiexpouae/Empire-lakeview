@@ -7,9 +7,7 @@
 :root {
   --font-inter: 'Inter', sans-serif;
 }
-body{
-cursor: none;
-} 
+
 
 .my-heading {
   font-family: var(--font-inter);
