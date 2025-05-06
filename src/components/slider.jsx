@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'; // ✅ Import Swiper and Swi
 import { Autoplay } from 'swiper/modules'; // ✅ Import Autoplay module
 import 'swiper/css'; // Swiper CSS for proper styling
 import Image from 'next/image'; // Import Image for Next.js optimization
+import { Mousewheel } from 'swiper/modules';
 
 const Slider = ({ images, onSlideChange }) => {
   
@@ -14,7 +15,8 @@ const Slider = ({ images, onSlideChange }) => {
   return (
     <div className="relative ">
       <Swiper
-        modules={[Autoplay]} // Use Autoplay for automatic image transition
+        mousewheel={true}
+        modules={[Mousewheel]}// Use Autoplay for automatic image transition
         autoplay={{
             delay: 2000,
             disableOnInteraction: false, // Keeps autoplay after swipe

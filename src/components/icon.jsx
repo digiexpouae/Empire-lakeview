@@ -17,7 +17,7 @@ const icons=[{img:swan,name:'Ras al Khor Wild Life Sanctuary',distance:' 5 minut
 
   return (
     <div className='w-full flex flex-col items-center justify-center xl:h-[400px] lg:h-[540px]'>
-    <div className='grid xl:grid-cols-5 place-content-center lg:grid-cols-4 grid-rows-2 place-items-center w-[80%] '>
+    <div className='grid xl:grid-cols-5 place-content-center lg:grid-cols-4 md:grid-cols-2 mt-[20px] grid-rows-2 place-items-center w-[80%] '>
 {      icons.map((elem,index)=>{
     return <div className='flex flex-col items-center justify-center text-white gap-[20px] h-[170px] '>
         <div ><Image src={elem.img} className='object-cover w-full h-full' width={70} height={70}  /></div>

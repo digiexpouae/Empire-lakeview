@@ -59,9 +59,9 @@ useEffect(()=>{
 )     
 },[])
 return (<>
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 h-[554px] flex items-center justify-center w-[80vw] ">
-      <div className=" w-full flex">
-        <div className="flex flex-col w-[50%] ">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:h-[554px] flex items-center justify-center w-[80vw] ">
+      <div className=" w-full md:flex">
+        <div className="flex flex-col md:w-[50%] ">
           {/* Left side - Project title */}
           <div 
             className="w-full  text-black p-x-8 flex items-start justify-center xl:h-[280px] animate-slide-left"
@@ -89,7 +89,7 @@ return (<>
           {/* Right side - Project description and amenities */}
          
         </div>
-        <div className="w-[50%]"> <div className="p-6 sm:p-8 flex flex-col justify-between xl:h-[280px]  gap-10" ref={ref2}>
+        <div className="md:w-[50%]"> <div className="p-6 sm:p-8 flex flex-col justify-between xl:h-[280px]  gap-10" ref={ref2}>
             
             <p 
               className="text-sm sm:text-base animate-fade-up text-white"
