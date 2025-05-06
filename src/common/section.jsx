@@ -50,29 +50,29 @@ const Section = () => {
           objectFit="cover"
           width={1000}
           height={1000}
-          className="!h-full !w-full"
+          className="!h-[300px]  md:!h-full !w-full"
         />
 
-        <div className="overlay absolute top-0 left-0 right-0 bottom-0 flex w-full bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10">
-          <div className="absolute left-20 z-10 flex flex-col justify-center h-full gap-3 md:w-[600px]">
-            <h2 className="lg:text-[50px] xl:text-[80px] text-white my-heading font-bold">
+<div className="overlay absolute top-0 left-0 right-0 bottom-0 flex w-full bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10">
+     <div className="absolute md:left-20 left-5 z-10 flex flex-col justify-center h-full gap-3 md:w-[600px]">
+            <h2 className="lg:text-[50px] xl:text-[80px] text-[40px] text-white my-heading font-bold">
               {currentImage.tex1}
-            </h2>
-            <span className="text-white my-heading">{currentImage.tex2}</span>
-            <div className="flex gap-3">
-              <button className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 py-2 rounded-full transition-all duration-300 text-base">
+            </h2> 
+             <span className="text-white my-heading md:text-[25px] text-[10px]">{currentImage.tex2}</span>
+            <div className="flex md:gap-3 gap-2">
+              <button className="text-white border  border-white hover:bg-white hover:text-cyan-800 md:text-[15px] text-[10px]  md:px-4 md:py-2 px-2 py-1 rounded-full transition-all duration-300 text-base">
                 360 view
-              </button>
-              <button
-                className="text-gray-800 px-4 py-2 rounded-full transition-colors duration-300 text-base"
+              </button> 
+               <button
+                className="text-gray-800 md:px-4 px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"
                 style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)' }}
               >
                 Contact us
               </button>
-            </div>
+             </div>
           </div>
 
-          <div className="absolute bottom-10 right-5">
+          <div className="absolute lg:bottom-10 md:bottom-2 bottom-0 right-5">
             <Slider images={images} onSlideChange={setCurrentImage}/>
           </div>
         </div>
