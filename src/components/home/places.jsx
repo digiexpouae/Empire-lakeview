@@ -1,14 +1,14 @@
 import React, { use, useRef, useState } from 'react'
-import map from '../../public/assets/map.png';
+import map from '../../../public/assets/map.png';
 import Image from 'next/image';
-import Slider from '../components/slider_three'
-import car from '../../public/assets/car.png'
-import map1 from '../../public/assets/map1.png'
-import map2 from '../../public/assets/map2.png'
+import Slider from  '../../components/slider_three'     
+import car from '../../../public/assets/car.png'
+import map1 from '../../../public/assets/map1.png'
+import map2 from '../../../public/assets/map2.png'
 import gsap from 'gsap';
-import map3 from '../../public/assets/map3.png'
+import map3 from '../../../public/assets/map3.png'
 
-import map4 from '../../public/assets/map4.png'
+import map4 from '../../../public/assets/map4.png'
 const places = () => {
   const swipperRef=useRef(null)
 const [activeIndex, setactiveIndex] = useState(0)
