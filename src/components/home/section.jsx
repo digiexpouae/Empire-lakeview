@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image'; // Assuming you're using Next.js
-import Slider from '.././components/slider'; // Adjust path as needed
+import Slider from '../../components/slider'; // Adjust path as needed
 const Section = () => {
 
       const [currentImage, setCurrentImage] = useState(0);
@@ -53,8 +53,8 @@ const Section = () => {
           className="!h-[300px]  md:!h-full !w-full"
         />
 
-<div className="overlay absolute top-0 left-0 right-0 bottom-0 flex w-full bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10">
-     <div className="absolute md:left-20 left-5 z-10 flex flex-col justify-center h-full gap-3 md:w-[600px]">
+<div className="overlay absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center w-full bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10">
+     <div className="absolute md:left-20 left-5 z-10 flex flex-col justify-center gap-3 md:w-[600px]">
             <h2 className="lg:text-[50px] xl:text-[80px] text-[40px] text-white my-heading font-bold">
               {currentImage.tex1}
             </h2> 
