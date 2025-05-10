@@ -60,10 +60,14 @@ const index = () => {
 
 
   return (
-    <div className={`bg-[url('/assets/b.png')] bg-cover bg-center relative h-[1100px] z-50`} > 
+    <div className={`bg-[url('/assets/background2.png')] h-[800px]  bg-contain  relative md:h-[1100px] z-50`} > 
+                  
+
         <Header className='nav-menu'/>
             <Heroslider />
+          
            <div className='bg-[#002E3C]'>
+
 
            <Section_two /> 
            <Introducing />

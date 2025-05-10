@@ -1,17 +1,16 @@
-import React, { use, useRef, useState } from 'react'
-import map from '../../../public/assets/map.png';
+import React, { use, useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
 import Slider from  '../../components/slider_three'     
 import car from '../../../public/assets/car.png'
-import map1 from '../../../public/assets/map1.png'
-import map2 from '../../../public/assets/map2.png'
+import map1 from '../../../public/assets/map1 (2).png'
+import map2 from '../../../public/assets/mapzoom.png'
 import gsap from 'gsap';
-import map3 from '../../../public/assets/map3.png'
+import map3 from '../../../public/assets/map3 (2).png'
 
-import map4 from '../../../public/assets/map4.png'
+import map4 from '../../../public/assets/map4 (2).png'
 const places = () => {
   const swipperRef=useRef(null)
-const [activeIndex, setactiveIndex] = useState(0)
+const [ActiveIndex, setActiveIndex] = useState(0)
 const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl','w-[15px] h-[15px] absolute left-[40%] z-20 bg-white rounded-2xl',
   'w-[15px] h-[15px] absolute left-[60%]  z-20 bg-white rounded-2xl',
   'w-[15px] h-[15px] absolute left-[80%] z-20 bg-white rounded-2xl'
@@ -22,7 +21,7 @@ const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl',
 
 
 gsap.to(movingRef.current, {
-  y: `-${activeIndex * 20}vw`, 
+  y: `-${ActiveIndex * 20}vw`, 
   
 });
     const im=[map1,map2,map3,map4]
@@ -36,13 +35,13 @@ gsap.to(movingRef.current, {
         <hr className="border border-white w-[80vw] relative " />
         {styles.map((elem,index)=>{
           return(
-          <span key={index} onClick={()=>setactiveIndex(index)} className={`${elem} cursor-pointer`}></span>
+          <span key={index}  className={`${elem} cursor-pointer`}></span>
         
         )
   
       })
         }
-    {console.log(activeIndex)}
+    {console.log(ActiveIndex)}
 
 
 
@@ -50,9 +49,10 @@ gsap.to(movingRef.current, {
           <div className='md:!w-[127px] !w-[62px] !h-[50px] md:!h-[72px] absolute left-[20%] rotate-90 z-30'><Image src={car} objectFit='cover' ref={movingRef} className='transition-transform duration-700 ease-in-out'/></div>
           </div> </div>
        
-        <div className='w-[80vw] md:h-[500px] h-[300px]'>
-            <Slider images={im} delay={4000} slidesize={'lg:!h-[400px] md:!h-[300px] lg:!w-[800px] md:!w-[500px] !W-[70vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} />
-        </div>
+        <div className='w-[80vw] md:h-[600px] '>
+            <Slider  images={im}  slidesize={'lg:!h-[530px] md:!h-[300px] lg:!w-[950px] md:!w-[80%] !w-[380px]  !h-[200px]  '}  slide={'md:!w-full md:!h-full !w-full !h-full ' }  handleSlideChange={(index) => setActiveIndex(index)} // <-- This gets called with realIndex
+ />
+        </div>   
       </div>
     </div>
 
