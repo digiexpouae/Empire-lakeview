@@ -1,35 +1,50 @@
 import React, { useEffect, useRef } from "react";
-// import { OutdoorCinemaIcon } from "./icons/OutdoorCinemaIcon";
-// import { SteamSaunaIcon } from "./icons/SteamSaunaIcon";
-// import { GamingArcadeIcon } from "./icons/GamingArcadeIcon";
-// import { MiniGolfIcon } from "./icons/MiniGolfIcon";
-// import { OtherFeaturesIcon } from "./icons/OtherFeaturesIcon";
 import {gsap} from "gsap";
-
-
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import golf from '../../../public/assets/animation/Golf Club.json'
+import joy from '../../../public/assets/animation/Joystick (1).json'
+import other from '../../../public/assets/animation/Other (1).json'
+import spa from '../../../public/assets/animation/Spa Relaxation.json'
+import video from '../../../public/assets/animation/Video Camera.json'
+
+
+const Lottie = dynamic(()=> import ('lottie-react'),{ssr:false} );
+
+
+
 
 const section_two = () => {
   const amenities = [
     {
-      icon:'/assets/Mask group (4).png' ,
+      icon:spa,
       title: "Steam & Sauna",
+      h:50,
+      w:50
     },
     {
-      icon:'/assets/Mask group (5).png',
+      icon:video,
       title: "Outdoor Cinema ",
+      h:50,
+w:50
     },
     {
-        icon:'/assets/Mask group (3).png',
+        icon:joy,
       title: "Gaming Arcade",
+      h:50,
+w:50
     },
     {
-      icon: '/assets/Mask group (2).png',
+      icon: golf,
       title: "Mini Golf Course",
+      h:50,
+w:50
     },
     {
-        icon: '/assets/Mask group (6).png',
+        icon:other,
       title: "And Other Features",
+      h:20,
+w:20
     },
   ];
 const ref1=useRef()
@@ -59,27 +74,26 @@ useEffect(()=>{
 )     
 },[])
 return (<>
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:h-[554px] flex items-center justify-center w-[80vw] ">
-      <div className=" w-full md:flex">
-        <div className="flex flex-col md:w-[50%] ">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[554px] flex items-center justify-center w-[80vw] ">
+      <div className=" w-full md:flex md:flex-row flex flex-col gap-[40px] lg:gap-[80px]">
+        <div className="flex flex-col md:w-[50%] lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
           {/* Left side - Project title */}
           <div 
-            className="w-full  text-black p-x-8 flex items-start justify-center xl:h-[280px] animate-slide-left"
+            className="w-full  text-black p-x-8 flex  md:items-start items-center justify-center xl:h-[280px] animate-slide-left"
          ref={ref1} >
-            <h2 className="text-4xl lg:text-[70px] sm:text-5xl font-bold text-white">
+            <h2 className="text-[30px] lg:text-[100px] sm:text-5xl my-heading font-bold tracking-tighter text-white">
               Project Overview
             </h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-8 xl:mt-0" ref={ref3}>
+          <div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36  mt-8 lg:mt-20" ref={ref3}>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
                   className="text-center flex flex-col items-center justify-center animate-fade-up-delayed h-[100px] gap-[10px] "
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
-          <Image src={amenity.icon}  width={50} height={50}/>
-               
-                  <p className="text-xs sm:text-sm font-medium text-center text-white my-heading">
+<Lottie animationData={amenity.icon} loop={true}  className= 'lg:h-[60px] lg:w-[60px] w-[50px] h-[50px]'/>               
+                  <p className=" text-[20px] font-light text-center text-white my-heading md:w-[120px]">
                     {amenity.title}
                   </p>
                  
@@ -89,10 +103,10 @@ return (<>
           {/* Right side - Project description and amenities */}
          
         </div>
-        <div className="md:w-[50%]"> <div className="p-6 sm:p-8 flex flex-col justify-between xl:h-[280px]  gap-10" ref={ref2}>
+        <div className=" md:w-[50%] lg:w-[60%]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start justify-between lg:h-[280px]  gap-5" ref={ref2}>
             
             <p 
-              className="text-sm sm:text-base animate-fade-up text-white"
+              className="text-[18px] lg:text-[22px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light"
             >
               Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 
               Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom 
@@ -100,7 +114,7 @@ return (<>
             </p>
             <button className="
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#FFF3DC] text-gray-800 w-[220px] lg:px-6 py-2 rounded-full transition-colors duration-300 transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
+    hover:from-[#E5C98C] hover:to-[#000000] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
             
             {/* Amenities section */}
           
