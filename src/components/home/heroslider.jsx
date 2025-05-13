@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { useRef } from 'react';
 import empire from '../../../public/assets/empire2.png'
 import Stickyicon from '@/common/stickyicon';
-const heroslider = () => {
+const heroslider = ({className}) => {
     const boxref=useRef()
     const mm = gsap.matchMedia()
     const box_Two=useRef()
@@ -126,16 +126,21 @@ const heroslider = () => {
    
     return(
 
-<div className="relative z-20 overflow-hidden " >
+<div className={`relative z-20 overflow-hidden w-full `}>
   <Stickyicon  />
-<div className='absolute lg:top-28 md:top-[2%] top-9 lg:left-[17%] md:left-[15vw] left-[12%]  opacity-0 'ref={text1} >
-<span className=' xl:text-[45px] lg:text-[35px] md:text-[30px] text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>Empire </span></div>
-<div className=' absolute w-full  md:top-auto !top-15 opacity-0' ref={text2}> 
-<h1 className='xl:text-[200px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw] w-[100%] z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>Lakeviews</h1></div>
 
-<div className='md:right-34 right-[5%]  absolute xl:top-[46%] lg:top-[34%] md:top-[29%] top-[29vw] lg:mt-[25px] xl:mt-0 opacity-0' ref={text3}>
+<div className=' absolute w-full  md:top-auto flex items-center justify-center !top-15 opacity-0' ref={text2}> 
+<div className='w-fit relative'>
+<h1 className='xl:text-[200px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>Lakeviews</h1>
+<div className=' absolute right-0 bottom-0 lg:mt-[25px] xl:mt-0 opacity-0' ref={text3}>
 <span  className='lg:text-[35px] md:text-[30px] xl:text-[50px]  text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>Liwan</span></div>
-    
+
+<div className='absolute left-[5%] top-[15%] opacity-0 'ref={text1} >
+
+<span className=' xl:text-[45px] lg:text-[35px] md:text-[30px] text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>Empire </span></div>
+</div>
+
+</div>
 <div className='  lg:!right-42 right-0 absolute top-40 md:top-auto  md:bottom-20 z-[1000] w-[150px] md:w-[320px] flex items-center justify-center' ref={box_three}><span  className=' my-heading text-[10px] leading-4 md:leading-9 md:text-[26px]   tracking-tighter flex flex-col items-start justify-start  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-light z-20 ' ><p>a striking tower in Liwan, </p>
 <p>designed for lifestyle</p>
  <p>and luxury.</p></span></div>
@@ -153,7 +158,7 @@ const heroslider = () => {
  <div  className="absolute top-20 z-50 md:right-[-230px] right-[-100px] opacity-0 " ref={box_Two}> {/* <<< starts offscreen */}
           <Image src={cloud} alt="Cloud" objectFit='cover' className='w-[280px] h-[180px] md:!w-[580px] md:!h-[320px]' />
         </div>
-        <div className='bg-[linear-gradient(180deg,rgba(0,44,58,0)_0%,#002E3C_100%)] h-[100 px] left-0 right-0 z-50 absolute bottom-0 w-full'> </div>
+        <div className='bg-[linear-gradient(180deg,rgba(0,44,58,0)_0%,#002E3C_100%)] h-[100px] left-0 right-0 z-[999] absolute bottom-0 w-full'> </div>
 
 </div>
     )

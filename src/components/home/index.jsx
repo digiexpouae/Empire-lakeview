@@ -7,6 +7,9 @@ import Footer from '@/layout/footer'
 import Place from '../../components/home/places'
 import Introducing from './introducing'
 import Icon from '../icon'
+import SectionFour from '../home/section_four'
+import Image from 'next/image'
+import back from '../../../public/assets/background2.png'
 const index = () => {
   const [showFooter, setShowFooter] = useState(false);
 
@@ -60,10 +63,9 @@ const index = () => {
 
 
   return (
-    <div className={`bg-[url('/assets/background2.png')] h-[800px]  bg-contain  relative md:h-[1100px] z-50`} > 
-                  
+<div className="bg-[url('/assets/background2.png')] min-h-screen  bg-cover bg-center bg-no-repeat bg-fixed relative z-50">
 
-        <Header className='nav-menu'/>
+        <Header className='nav-menu absolute z-50'/>
             <Heroslider />
           
            <div className='bg-[#002E3C]'>
@@ -76,7 +78,8 @@ const index = () => {
            <Place />
            <Icon /> 
            </div>
-          
+          <SectionFour/>
+        
            <Footer />
     </div>
   )
