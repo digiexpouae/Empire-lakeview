@@ -103,7 +103,7 @@ return (<>
           {/* Right side - Project description and amenities */}
          
         </div>
-        <div className=" md:w-[50%] lg:w-[60%]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start justify-between lg:h-[280px]  gap-5" ref={ref2}>
+        <div className=" md:w-[50%] lg:w-[60%]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start lg:h-[280px] gap-4" ref={ref2}>
             
             <p 
               className="text-[18px] lg:text-[22px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light"
@@ -114,7 +114,7 @@ return (<>
             </p>
             <button className="
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#000000] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
+    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
             
             {/* Amenities section */}
           

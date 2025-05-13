@@ -2,51 +2,45 @@
 import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'; // ✅ Import Swiper and SwiperSlide
 import { Autoplay } from 'swiper/modules'; // ✅ Import Autoplay module
-import { Mousewheel ,EffectFade} from 'swiper/modules';
+import { Mousewheel } from 'swiper/modules';
 
 import 'swiper/css'; // Swiper CSS for proper styling
 import Image from 'next/image'; // Import Image for Next.js optimization
-const slider_three = ({images,slidesize,slide,num,delay,handleSlideChange}) => {
-  // const filteredImages = images.filter((_, index) => index === activeIndex);
+const slider_three = ({images,slidesize,slide,num,delay,handleSlideChange,activeIndex}) => {
+  const filteredImages = images.filter((_, index) => index === activeIndex);
 
   return (
-    <div className="relative  mb-20 flex items-center justify-center">
+    <div className="relative  mb-20">
       <Swiper
-      
-         effect="fade"
-        slidesPerView={1}   
-        fadeEffect={{ crossFade: true }}
-
-        loop={false}     
-          mousewheel={{
-          forceToAxis: true,
-          sensitivity: 1,
-          releaseOnEdges: true,
-          thresholdDelta: 30,
-          thresholdTime: 500,
-        }}
-      
-          modules={[Mousewheel, EffectFade]}
-        onTransitionEnd={(swiper) => {
+// Use Autoplay for automatic image transition
+        autoplay={{
+            delay: delay,
+            disableOnInteraction: false, // Keeps autoplay after swipe
+          }}// Change image every 3 seconds
+        loop // Infinite loop for the slider
+        spaceBetween={10} // Space between slides
+        slidesPerView={num}
+        mousewheel={true}
+        modules={[Mousewheel]}
+        onSlideChangeTransitionEnd={(swiper) => {
           if (handleSlideChange) {
-            console.log('Current index:', swiper.realIndex); // Debugging
-            handleSlideChange(swiper.realIndex);
+            handleSlideChange(swiper);
           }
         }}
       
         // onSlideChange={handleSlideChange} // Show 2.5 slides at once
         className={`${slidesize}`}
       > 
-          {images.map((img, index) => (
-          <SwiperSlide key={index} className={`${slide} `}>
-
+          {filteredImages.map((img, index) => (
+          <SwiperSlide key={index} className={`${slide}`} >
+        
                        <Image 
               src={img}
               alt={`Slide ${index}`}
-                
-              
+              width={539}
+              height={604}      
               priority
-              className='!w-full !h-full object-cover object-bottom-left rounded-3xl'
+              className="object-cover !w-full !h-full rounded-2xl "
             />
           </SwiperSlide>
         ))}
