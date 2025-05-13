@@ -129,7 +129,7 @@ useEffect(() => {
       )}
 
       {count === 2 && (
-        <div className="absolute inset-0  z-10 xl:flex h-[100%]  sm:bg-[#002E3C80] xl:flex-row flex flex-col  gap-[5px]  justify-center  items-center xl:bg-[#00000066] w-full">
+        <div className="absolute inset-0  z-10 xl:flex h-[100%]  sm:bg-[#002E3C80] xl:flex-row flex flex-col  gap-[15px]  justify-center  items-center xl:bg-[#00000066] w-full">
           <div className='xl:bg-[#002E3C]    z-20  h-[25%] xl:h-auto absolute top-0 xl:bottom-0 left-0   flex  items-center justify-center w-[100%] xl:w-[50%] ' ref={ref1}>
             <div className='flex items-center  justify-center flex-col text-white px-6 md:p-0  xl:mb-0'>
               <span className='font-semibold  my-heading flex xl:flex-col flex-row items-center justify-center xl:items-start text-[45px] md:text-[80px]'>
@@ -142,7 +142,7 @@ useEffect(() => {
             </div>
 
           </div>
-          <Form  className=' xl:w-[50%] w-[100%] xl:h-[100%] h-[90%] md:h-[75%]  absolute xl:top-0 bottom-0 right-0' ref={ref2}/>
+          <Form  className=' xl:w-[50%] w-[100%] xl:h-[100%] h-[90%] md:h-[75%]  absolute xl:top-0 bottom-0 lg:bottom-3 right-0' ref={ref2}/>
         </div>
       )}
     </div>

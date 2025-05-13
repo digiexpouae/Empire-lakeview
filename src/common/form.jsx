@@ -130,16 +130,16 @@ import React from "react"
              
 
                 <div className="absolute inset-0 md:z-20  flex flex-col h-[100%]  items-center justify-center ">
-                    <h2 className="text-[25px] lg:text-[65px]  xl:flex flex-col lg:flex lg:items-center lg:justify-center  lg:h-[30%] h-auto  md:text-5xl my-heading font-bold text-white mb-8">Fill the Form</h2>
+                    <h2 className="text-[25px] hidden md:flex lg:items-center lg:justify-center  lg:h-[30%] h-auto  md:text-5xl my-heading font-bold text-white mb-8">Fill the Form</h2>
 
-                    <div className="xl:grid flex flex-col lg:h-[70%]   xl:grid-cols-2  gap-2  md:gap-4 relative">
+                    <div className="lg:grid flex flex-col lg:h-[70%] xl:h-auto  xl:grid-cols-2  gap-2  md:gap-3 relative">
        
 
-                        <div className="relative w-[70vw] xl:w-auto ">
+                        <div className="relative md:w-[70vw] lg:w-auto ">
                             <input
                                 type="text"
                                 placeholder="First Name"
-                                className="w-full py-1 px-2 md:py-2 md:px-4 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
+                                className="w-full py-1 px-2 lg:py-1 md:py-2 md:px-4 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
                             />
                         </div>
 
@@ -147,7 +147,7 @@ import React from "react"
                             <input
                                 type="text"
                                 placeholder="Last Name"
-                                className="w-full md:py-2 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
+                                className="w-full md:py-2 lg:py-1 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
                             />
                         </div>
 
@@ -155,7 +155,7 @@ import React from "react"
                             <input
                                 type="email"
                                 placeholder="Email"
-                                className="w-full md:py-2 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
+                                className="w-full md:py-2 md:px-4 lg:py-1  py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
                             />
                         </div>
 
@@ -163,12 +163,12 @@ import React from "react"
                             <input
                                 type="tel"
                                 placeholder="Phone"
-                                className="w-full md:py-2 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
+                                className="w-full md:py-2 md:px-4 py-1 lg:py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all"
                             />
                         </div>
 
                         <div className="relative">
-                            <select className="w-full md:py-2 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all appearance-none">
+                            <select className="w-full md:py-2 md:px-4 py-1 lg:py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all appearance-none">
                                 <option value="" disabled selected className="text-slate-700">
                                     Property Type
                                 </option>
@@ -188,7 +188,7 @@ import React from "react"
                         </div>
 
                         <div className="relative">
-                            <select className="w-full md:py-2 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all appearance-none">
+                            <select className="w-full md:py-2 md:px-4 lg:py-1 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-full border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all appearance-none">
                                 <option value="" disabled selected className="text-slate-700">
                                     Budget
                                 </option>
@@ -211,14 +211,14 @@ import React from "react"
                             <textarea
                                 placeholder="Write your message"
                                 rows="4"
-                                className="w-full md:py-2 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all resize-none"
+                                className="w-full md:py-2 lg:py-1 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all resize-none"
                             ></textarea>
                         </div>
  
-                        <div className="col-span-1 md:col-span-2 flex justify-center md:mt-2">
+                        <div className="col-span-1 md:col-span-2 flex justify-center ">
                             <button
                                 type="submit"
-  className="py-2 px-6  bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] rounded-4xl"
+  className="py-2 px-6  bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] lg:py-1 rounded-4xl"
 
                             >
                                 Submit
