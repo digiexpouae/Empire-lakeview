@@ -55,7 +55,7 @@ const header = ({className}) => {
   ];
 
   return (
-    
+    <div className='absolute z-20 w-full'>
     <header className={`relative z-50 `}>
       {/* Desktop Navigation */}
       <div className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-3">
@@ -147,7 +147,7 @@ const header = ({className}) => {
           </div>
         </div>
       </div>
-    </header>
+    </header></div>
   );
 };
 

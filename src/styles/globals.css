@@ -7,7 +7,10 @@
 :root {
   --font-inter: 'Inter', sans-serif;
 }
-
+body {
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+}
 
 .my-heading {
   font-family: var(--font-inter);
@@ -43,4 +46,9 @@ top: 80px;
     text-gray-800 w-[220px] lg:px-6 py-2 rounded-full 
     transition-colors duration-300 transform 
     text-sm lg:text-base whitespace-nowrap;
+}
+.dot::after{
+  content:'5 min';
+  position:absolute;
+  top:5%;
 }

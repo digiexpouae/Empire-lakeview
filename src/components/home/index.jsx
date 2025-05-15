@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Heroslider from './heroslider'
+import Heroslider from '../../common/heroslider'
 import Header from '@/layout/header'
 import Section_two from './section_two'
 import Section from '../home/section'
@@ -10,9 +10,11 @@ import Icon from '../icon'
 import SectionFour from '../home/section_four'
 import Image from 'next/image'
 import back from '../../../public/assets/background2.png'
+import empire from '../../../public/assets/empire2.png'
+import cloud from '../../../public/assets/cloud_one.png'
 const index = () => {
   const [showFooter, setShowFooter] = useState(false);
-
+const [overlay, setoverlay] = useState(true)
   const handleAllVisible = () => {
     setShowFooter(true); // ✅ When SectionThree is done, show footer
   };
@@ -63,11 +65,12 @@ const index = () => {
 
 
   return (
-<div className="bg-[url('/assets/background2.png')] min-h-screen  bg-cover bg-center bg-no-repeat bg-fixed relative z-50">
-
+<>
+<div className='w-full relative md:h-[600px] h-[400px]'>
         <Header className='nav-menu absolute z-50'/>
-            <Heroslider />
-          
+            <Heroslider main_im={empire} im1={cloud} im2={cloud} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true}/>
+         <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
+          </div>
            <div className='bg-[#002E3C]'>
 
 
@@ -81,7 +84,7 @@ const index = () => {
           <SectionFour/>
         
            <Footer />
-    </div>
+    </>
   )
 }
 

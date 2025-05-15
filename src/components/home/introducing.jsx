@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useRef, useState } from 'react'
 import Slidertwo from '../slider_Two'
 import Image from 'next/image'
 import im from '../../../public/assets/30d78149086356db6714cb255feffcc79821e24e.jpg'
@@ -7,13 +8,53 @@ import im3 from '../../../public/assets/739ea3c773a46619eba42628089123900ecd20c4
 import im4 from '../../../public/assets/387749bd9ca4fbe4dd353d42b78a6dfab9958888.jpg'
 import im5 from '../../../public/assets/af7d67e8d77d1990d76ddfd4236ee64f67f80553.jpg'
 import im6 from '../../../public/assets/e628b29ba03a5d3c87b167691336aaaa56e062cb.jpg'
-
+import { motion, useScroll, useTransform } from 'framer-motion';
 const introducing = () => {
     const ima=[im3,im,im6,im4,im2,im5]
+      const containerRef = useRef(null)
+  const sliderRef = useRef(null)
+  useEffect(() => {
+    const runGsap = async () => {
+      const gsap = (await import('gsap')).default
+      const ScrollTrigger = (await import('gsap/ScrollTrigger')).default
 
+      gsap.registerPlugin(ScrollTrigger)
+
+      const totalScrollWidth = sliderRef.current.scrollWidth
+      const viewportWidth = window.innerWidth
+      const scrollDistance = totalScrollWidth - viewportWidth
+
+      gsap.to(sliderRef.current, {
+        x: `-${scrollDistance}px`,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: () => `+=${totalScrollWidth}`,
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+        },
+      })
+    }
+
+    runGsap()
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        const { ScrollTrigger } = require('gsap/ScrollTrigger')
+        ScrollTrigger.getAll().forEach(t => t.kill())
+      }
+    }
+  }, [])
+
+
+
+
+   
 return (
-  <div className='w-full overflow-x-auto whitespace-nowrap px-4 h-[700px]  scrollbar-hide flex items-center '>
-    <div className='inline-flex gap-[30px] items-center'>
+  <div className='w-full overflow-hidden whitespace-nowrap px-4 h-[700px]  flex items-center' ref={containerRef}>
+    <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}
       <div className='shrink-0 flex flex-col items-center justify-center gap-[20px] mb-[20px] md:w-[380px]'>
@@ -39,8 +80,12 @@ return (
       ))}
     </div>
   </div>
+
 );
 
 }
 
 export default introducing
+
+
+
