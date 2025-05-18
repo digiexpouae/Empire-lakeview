@@ -49,13 +49,13 @@ const header = ({className}) => {
   const [isOpen, setIsOpen] = useState(false);
   const nav = [
     { name: 'Home', link: '/' },
-    { name: 'About', link: '/' },
+    { name: 'About', link: '/about' },
     { name: 'Project', link: '/' },
     { name: 'Broker Registration', link: '/' }
   ];
 
   return (
-    <div className='absolute z-20 w-full'>
+    <div className='absolute z-50 w-full'>
     <header className={`relative z-50 `}>
       {/* Desktop Navigation */}
       <div className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-3">
@@ -74,7 +74,7 @@ const header = ({className}) => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden ">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white hover:text-yellow-300 transition-colors duration-300"

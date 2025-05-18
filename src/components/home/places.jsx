@@ -56,9 +56,9 @@ gsap.to(movingRef.current, {
           </div> </div>
        
         <div className='w-[80vw] md:h-[500px] h-[300px] mb-10'>
-           <Map />
+           {/* <Map /> */}
            
-            {/* <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} /> */}
+            <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} />
         </div>
       </div>
     </div>

@@ -11,8 +11,6 @@ import video from '../../../public/assets/animation/Video Camera.json'
 const Lottie = dynamic(()=> import ('lottie-react'),{ssr:false} );
 
 
-
-
 const section_two = () => {
   const amenities = [
     {
