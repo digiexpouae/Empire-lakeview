@@ -9,15 +9,15 @@ const sectiontwo = () => {
 
 
   return (
-    <div className='flex flex-col w-full h-[500px] md:h-[800px]  items-center gap-[30px] justify-center'>
-        <div className='flex w-full justify-between '>
-            <div className='h-[150px] md:h-[300px] w-[45%]'><Image src={im1} className='!w-full !h-full' /> </div>
-            <div className='h-[150px] md:h-[300px] w-[45%]'><Image src={im2} className='!w-full !h-full' /> </div>
+    <div className='flex flex-col w-full h-[500px] md:h-[800px]  items-center gap-[20px] justify-center'>
+        <div className='flex w-full justify-between  '>
+            <div className='h-[150px] md:h-[300px] w-[49%]'><Image src={im1} className='!w-full !h-full' /> </div>
+            <div className='h-[150px] md:h-[300px] w-[49%]'><Image src={im2} className='!w-full !h-full' /> </div>
         </div>
-        <div className='flex  items-center w-full justify-center overflow-hidden relative'>
-            <div className=' md:h-[300px] w-[30%] h-[150px] absolute  left-[-10px] md:left-[-100px]'><Image src={im3} className='!w-full !h-full  !object-cover object-left' /> </div>
-            <div className='md:h-[300px] w-[40%] h-[150px] '><Image src={im4} className='!w-full !h-full  !object-cover' /> </div>
-            <div className='  md:h-[300px] w-[30%] h-[150px] absolute right-[-10px] md:right-[-100px]'><Image src={im5} className='!w-full !h-full  !object-cover object-left' /> </div>
+        <div className='flex  items-center w-full justify-center overflow-hidden relative '>
+            <div className=' md:h-[300px] w-[30%] h-[150px] absolute  left-[-10px] md:left-[-80px]'><Image src={im3} className='!w-full !h-full  !object-cover object-left' /> </div>
+            <div className='md:h-[300px] w-[48%] h-[150px] '><Image src={im4} className='!w-full !h-full  !object-cover' /> </div>
+            <div className='  md:h-[300px] w-[30%] h-[150px] absolute right-[-10px] md:right-[-80px]'><Image src={im5} className='!w-full !h-full  !object-cover object-left' /> </div>
         </div>
       
     </div>
