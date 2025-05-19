@@ -8,10 +8,7 @@ import other from '../../../public/assets/animation/Other (1).json'
 import spa from '../../../public/assets/animation/Spa Relaxation.json'
 import video from '../../../public/assets/animation/Video Camera.json'
 
-
 const Lottie = dynamic(()=> import ('lottie-react'),{ssr:false} );
-
-
 
 
 const section_two = () => {
@@ -52,7 +49,7 @@ const ref2=useRef()
 const ref3=useRef()
 useEffect(()=>{
   
-  // if (typeof window !== "undefined") {
+  // if (typeof  !== "undefined") {
   //   const { ScrollTrigger } = require('gsap/ScrollTrigger');
   //   gsap.registerPlugin(ScrollTrigger);
 
@@ -74,7 +71,7 @@ useEffect(()=>{
 )     
 },[])
 return (<>
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[554px] flex items-center justify-center w-[80vw] ">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[554px] flex items-center justify-center w-[80vw] scrollbar-hide ">
       <div className=" w-full md:flex md:flex-row flex flex-col gap-[40px] lg:gap-[80px]">
         <div className="flex flex-col md:w-[50%] lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
           {/* Left side - Project title */}

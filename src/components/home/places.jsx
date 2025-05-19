@@ -9,6 +9,11 @@ import gsap from 'gsap';
 import map3 from '../../../public/assets/image (3).png'
 
 import map4 from '../../../public/assets/image (4).png'
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('@/common/map'), {
+  ssr: false,
+});
 const places = () => {
   const swipperRef=useRef(null)
 const [activeIndex, setactiveIndex] = useState(0)
@@ -36,7 +41,7 @@ gsap.to(movingRef.current, {
         <hr className="border border-white w-[100%] relative " />
         {styles.map((elem,index)=>{
           return(
-          <span key={index} onClick={()=>setactiveIndex(index)} className={`${elem} cursor-pointer`}></span>
+          <span key={index} onClick={()=>setactiveIndex(index)} className={`${elem} dot cursor-pointer`}></span>
         
         )
   
@@ -51,6 +56,8 @@ gsap.to(movingRef.current, {
           </div> </div>
        
         <div className='w-[80vw] md:h-[500px] h-[300px] mb-10'>
+           {/* <Map /> */}
+           
             <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} />
         </div>
       </div>
