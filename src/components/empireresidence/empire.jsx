@@ -61,9 +61,9 @@ const [main, setmain] = useState(true)
       <SectionTwo amenities={amenities} textpara={textpara} className={'!w-[100%] !h-[60px]'}/>
       <Sectionthree />
       <Map title={'View Plazzo Heights'} map={map2}/>
-      
+              <Testimonials />
       <SectionFour className='absolute bottom-[-190px]' images={images} background={background} im={Field} bottom={'object-bottom'}/>
-        <Testimonials />
+
       </div>
       <Footer />
       </>
