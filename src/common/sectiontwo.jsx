@@ -58,7 +58,7 @@ return (<>
     {amenity.title}
   </p>
 ) : (
-    <div className='w-full'>
+<div className='w-full'>
   <Image width={100} height={100} src={amenity.im} alt="Amenity image" className={`${className}} object-cover bg-no-repeat`}/></div>
 )}
                   

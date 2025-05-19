@@ -1,10 +1,9 @@
 import React from 'react'
-
+import EMP from '../components/EMPEstates/empestates'
 const EMPEstates = () => {
   return (
-    <div>
-      
-    </div>
+ 
+    <EMP />
   )
 }
 
