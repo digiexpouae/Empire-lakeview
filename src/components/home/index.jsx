@@ -27,9 +27,6 @@ const index = () => {
     src: '/assets/CTA.png',
        title: '',
     subtitle: '',
-  },
-  {
-    src: '/assets/section4.jpg',
   }
 ];
     const content=[im3,im,im6,im4,im2,im5]
