@@ -58,8 +58,9 @@ im:'/assets/cmpc.png'
    < Sectiontwo images={images} amenities={amenities} textpara={text} className={'w-[80px] h-[80px]'}/>
 
    <Sectionthree />
+      <Map  map={map} title={'View Plazzo Residence'}/>
    <Testimonials />
-   <Map  map={map} title={'View Plazzo Residence'}/>
+
    <SectionFour className='absolute '  images={images}/>
 </div>
      <Footer />

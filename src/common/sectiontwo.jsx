@@ -34,7 +34,7 @@ useEffect(()=>{
 )     
 },[])
 return (<>
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[554px] flex items-center justify-center w-[80vw] scrollbar-hide ">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[654px] flex items-center justify-center w-[80vw] scrollbar-hide ">
       <div className=" w-full md:flex md:flex-row flex flex-col gap-[40px] lg:gap-[80px]">
         <div className="flex flex-col md:w-[50%] lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
           {/* Left side - Project title */}
