@@ -74,7 +74,7 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
                    <Introducing ima={ima} overlay={true} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[180px] md:!h-[250px]  !w-[400px]   relative'}/>
 <Brand text1={'The Advantages'}  img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'}/>
 <Section  />
-<Section_Two  text={text} head={'24/7 Access'} btn={false} amenities={amenities} back_image={true}/> 
+<Section_Two  text={text} head={'24/7 Access'} btn={false} amenities={amenities} back_image={true} className={'hidden'}/> 
 
 
                 <SectionFour images={imag} />

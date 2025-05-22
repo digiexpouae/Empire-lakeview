@@ -9,7 +9,7 @@ import back from '../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.p
 const Lottie = dynamic(()=> import ('lottie-react'),{ssr:false} );
 
 
-const section_two = ({text,head,amenities,btn,back_image}) => {
+const section_two = ({text,head,amenities,btn,back_image,className}) => {
 
 const ref1=useRef()
 const ref2=useRef()
@@ -93,7 +93,7 @@ return (<>
 
 
     </div>
-    <div className="flex items-center justify-center w-full">
+    <div className={`flex items-center justify-center w-full ${className}`}>
           <hr className="border border-white mt-8 w-[80vw] " /></div></>
 
   );
