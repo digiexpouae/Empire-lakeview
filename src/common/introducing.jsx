@@ -4,7 +4,7 @@ import Slidertwo from '../components/slider_Two'
 import Image from 'next/image'
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-const introducing = ({Logo,ima,logo,text1,text2,className,btntext,viewprojects,overlay}) => {
+const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,viewprojects,overlay}) => {
       const containerRef = useRef(null)
   const sliderRef = useRef(null)
   useEffect(() => {
@@ -17,16 +17,19 @@ const introducing = ({Logo,ima,logo,text1,text2,className,btntext,viewprojects,o
       const totalScrollWidth = sliderRef.current.scrollWidth
       const viewportWidth = window.innerWidth
       const scrollDistance = totalScrollWidth - viewportWidth
+      const distance=scrollDistance + 100
 
       gsap.to(sliderRef.current, {
-        x: `-${scrollDistance}px`,
+        x: `-${distance}px`,
         ease: 'none',
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top top',
-          end: () => `+=${totalScrollWidth}`,
+    end: () => `+=${distance}`, // ✅ Match scroll distance exactly
           scrub: true,
           pin: true,
+          
+          invalidateOnRefresh: true,
           anticipatePin: 1,
         },
       })
@@ -47,7 +50,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,btntext,viewprojects,o
 
    
 return (
-  <div className='w-full overflow-hidden whitespace-nowrap px-4 h-[700px]  flex items-center' ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap px-4 h-[700px] ${className1}  flex items-center`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}

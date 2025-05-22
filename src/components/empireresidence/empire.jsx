@@ -54,7 +54,7 @@ const [main, setmain] = useState(true)
    <div className='relative w-full md:!h-[600px] !h-[400px] z-20'>
                 
       <Header />
-      <Heroslider className1={'top-[3%]'} main={main} className1={'top-0'} textone={'Empire'} texttwo={'Residence'} bottom={'md:bottom-[-350px] bottom-[-300px]'} main_im={Main} overlay={overlay}/>
+      <Heroslider className1={'top-[3%]'} main={main} textone={'Empire'} texttwo={'Residence'} bottom={'md:bottom-[-350px] bottom-[-300px] md:!w-full'} main_im={Main} overlay={overlay}/>
       <Image  src={Field} className='left-0 right-0 bottom-0 top-0 w-full h-[100%] z-[-10] !object-cover object-top-left'/>
       </div>
        <div className='bg-[#002E3C]'>

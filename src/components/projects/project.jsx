@@ -9,9 +9,18 @@ import Introducing from '@/common/introducing';
 import ima1 from '../../../public/assets/d3cffac39c025499b5d643c23941091538a28358.png';
 import ima2 from '../../../public/assets/896f9f592b964d92926d050a82ffdf7c0cc52923.jpg';
 import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390a.jpg';
+import Sectionthree from '../../common/sectionthree'
+import SectionFour from '@/common/section_four';
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 const ima=[ima1,ima2,ima3]
+ const imag = [
+  {
+    src: '/assets/ee70d663c4a8db7d05f72f368ee23dc4874fe3d5.png',
+       title: '',
+    subtitle: '',
+  }
+];
   return (
     <>
       <div className="w-full relative md:h-[600px] h-[400px]">
@@ -40,9 +49,13 @@ const ima=[ima1,ima2,ima3]
           )}
         </div>
       </div>
-           <div className='bg-[#002E3C]'>
-            <Introducing ima={ima} overlay={true} text1={'Projects'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'md:!h-[250px] md:!w-[400px]   relative'}/>
-           </div>
+     <div className='bg-[#002E3C]'>
+      <Sectionthree />
+   <Introducing ima={ima} overlay={true} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[180px] md:!h-[250px]  !w-[400px]   relative'}/>
+
+<SectionFour images={imag} />
+
+</div>
       <Footer />
     </>
   );

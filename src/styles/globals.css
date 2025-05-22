@@ -23,23 +23,7 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;             /* Chrome, Safari, Opera */
 }
-/* @media (max-width:500px){
-  .empire img{
-    bottom:-50px;
-  }
-  .text-1{
-    top:80px
-  }
-  .text-2{
-top: 80px;
-  }
-  .text-3{
-    top: 150px;
-
-  }
-
-} */
-
+.heading{ @apply  leading-17 md:leading-none text-[45px] text-center md:text-[90px] font-extrabold text-white}
 .button {
   @apply bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
     hover:from-[#E5C98C] hover:to-[#FFF3DC] 
@@ -47,8 +31,54 @@ top: 80px;
     transition-colors duration-300 transform 
     text-sm lg:text-base whitespace-nowrap;
 }
-.dot::after{
-  content:'5 min';
-  position:absolute;
-  top:5%;
+
+
+.dot:nth-child(2)::after {
+  content: 'Empire Lakeviews';
+  position: absolute;
+  text-align: center;
+  top: 130%;
+left: -150%;
+
+}
+
+.dot:nth-child(3)::after {
+  content: '10 min';
+  position: absolute;
+  left: 0;
+  top: 300%;
+    white-space: nowrap;
+    left: -100%;
+
+}
+
+.dot:nth-child(4)::after {
+  content: '15 min';
+  position: absolute;
+  top: 300%;
+  white-space: nowrap;
+  left: -100%;
+}
+
+
+.dot:nth-child(5)::after {
+  content: '20 min';
+  position: absolute;
+  top: 300%;
+    white-space: nowrap;
+    left: -100%;
+
+}
+.leaflet-grab {
+  cursor: default !important;
+}
+svg{
+  color: #CCAB64;
+}
+
+  @media (max-width:768px) {
+    .pin-spacer{ 
+    overflow:hidden  !important ;
+  }
+
 }
