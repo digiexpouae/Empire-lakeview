@@ -63,7 +63,7 @@ const img=[{im:'/assets/home1.png',className:'w-[40%] md:w-[20%] h-[160px] w-[50
 const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
   return (
   <>
-  {/* home added */}
+  {/* index home added */}
 <div className='w-full relative md:h-[600px] h-[400px]'>
         <Header className='nav-menu absolute z-50'/>
             <Heroslider className={'top-[15%]'} main={false} cloud={true} Home={true}  img={img} className2={'z-[999]'} textone={'Begin your'}  bottom={'bottom-[-60px]'} im1={im1} im2={im1} className1={' left-[40%] top-2 md:top-10'} texttwo={'Journey'}  overlay={true}/>
