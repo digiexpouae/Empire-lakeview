@@ -3,7 +3,9 @@ import Header from '@/layout/header'
 import Footer from '@/layout/footer'
 import Image from 'next/image'
 import Heroslider from '@/common/heroslider'
-import back from '../../../public/assets/heroestates.png'
+import back from '../../../public/assets/Rectangle 13772.png'
+import Hero from '../../../public/assets/cc.png'
+
 import Sectiontext from '../../common/section_text'
 import SectionThree from './sectionthree'
 import Sectionfour from './sectionfour'
@@ -34,7 +36,7 @@ const images=[{im:'/assets/1a5f1869b5bf5ea58896fa4d32bb37b4af630f96.jpg',tex1:'1
       
       <div className='w-full relative md:h-[600px] h-[400px]'>
               <Header className='nav-menu absolute z-50'/>
-                  <Heroslider className={'top-[15%]'} textthree={'Empire'} className3={'top-2 lg:top-5 md:top-9 xl:top-12'} texttwo={'Estates'} main={main} bottom={'bottom-0 !h-[240px]  md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%]'} cloud={cloud} />
+                  <Heroslider className={'top-[15%]'} className2={'md:!top-12 xl:!top-8'} textthree={'Empire'} main_im={Hero} className3={'top-2 lg:top-5 md:top-9 xl:top-7'} texttwo={'Estates'} main={true} bottom={'bottom-0  !h-[300px]  md:!h-[700px] !w-[100%]'} cloud={cloud} />
                <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
                 </div>
               <div className='bg-[#002E3C]'>

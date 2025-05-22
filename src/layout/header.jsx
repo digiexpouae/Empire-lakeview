@@ -17,7 +17,7 @@ const Header = ({ className }) => {
       name: 'Project',
       link: '/projects',
       children: [
-           { name: 'Lakeviews', link: '/' },
+           { name: 'Lakeviews', link: '/lakeviews' },
         { name: 'Empire Residence', link: '/Empireresidence' },
         { name: 'Plazzo Residence', link: '/plazoresidence' },
         { name: 'Plazzo Heights', link: '/plazoheights' },

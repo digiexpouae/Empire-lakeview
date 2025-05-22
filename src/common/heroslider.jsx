@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useRef } from 'react';
 import Stickyicon from '@/common/stickyicon';
 import Hero from '../../public/assets/heroim2.jpg'
-const heroslider = ({p1,p2,p3,textone,texttwo,textthree,main_im,main,im1,im2,overlay,className1,className2,className3,bottom,cloud}) => {
+const heroslider = ({p1,p2,p3,textone,texttwo,textthree,main_im,main,im1,im2,overlay,className1,className2,className,className3,bottom,cloud,img,Home}) => {
     const boxref=useRef()
     const mm = gsap.matchMedia()
     const box_Two=useRef()
@@ -65,9 +65,20 @@ const heroslider = ({p1,p2,p3,textone,texttwo,textthree,main_im,main,im1,im2,ove
           );
         });
       
-      
-      
-            gsap.fromTo(
+
+    const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power2.out' } });
+const child=document.querySelectorAll('.home')
+    child.forEach((img, index) => {
+      tl.fromTo(
+        img,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0 },
+        index === 0 ? 0 : '+=0.5' // delay between images
+      );
+    });
+          
+    
+    gsap.fromTo(
               box_three.current,
               { y: 0, opacity: 0 },   // 👈 Start 400px below
               {
@@ -129,7 +140,7 @@ const heroslider = ({p1,p2,p3,textone,texttwo,textthree,main_im,main,im1,im2,ove
  
   <Stickyicon  />
 
-<div className= {`absolute w-full  md:top-auto flex items-center justify-center !top-15 opacity-0 ${className2}`} ref={text2}> 
+<div className= {`absolute w-full md:top-auto  flex items-center justify-center !top-15 opacity-0 ${className2}`} ref={text2}> 
 <div className='w-fit relative'>
 <h1 className='xl:text-[200px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>{texttwo}</h1>
 <div className={`absolute right-0 bottom-0 lg:mt-[25px] xl:mt-0 opacity-0 ${className3}`} ref={text3}>
@@ -146,12 +157,24 @@ const heroslider = ({p1,p2,p3,textone,texttwo,textthree,main_im,main,im1,im2,ove
  <p>{p3}</p></span></div>
 
       
-
-<div className={`relative flex items-center justify-center h-[400px] md:h-[600px] w-full opacity-0 z-50 `} ref={im}>
   {main &&
-<Image src={main_im}  height={121} width={882} className={`absolute ${bottom} z-40  h-[580px] w-[240px] md:h-[782px] md:w-[370px] !object-cover`} />
-}
+<div className={`relative flex items-center justify-center h-[400px] md:h-[600px] w-full opacity-0 z-50 ${className}`} ref={im}>
+
+<Image src={main_im}  height={441} width={882} className={`absolute  z-40  h-[580px] w-[240px] md:h-[782px] md:w-[370px] ${bottom} `} />
+
+
 </div>
+  }
+
+{Home && 
+<div className='flex h-[400px] md:h-[600px] w-full items-end  justify-center'>
+{img.map((elem,index)=>{
+return <div key={index} className={` flex items-end justify-end relative opacity-0 z-50 home ${elem.className}`} ><Image src={elem.im} width={600} height={400} className={` ${bottom} z-40  !h-full !w-full object-cover `} />
+</div>
+})}</div>
+
+}
+
 {cloud &&
   <div  className='absolute bottom-0 opacity-0 md:left-[-380px] left-[-180px] 'ref={boxref}  > 
 <Image  src={im1}  id="#"className='!px-0 w-[300px] h-[200px]  md:!h-[300px] md:!w-[600px]' layout='intrinsic' objectFit='cover'/>

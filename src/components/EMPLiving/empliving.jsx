@@ -35,7 +35,7 @@ const [main, setmain] = useState(true)
           </div>
         <div className='bg-[#002E3C]'>
           <Sectiontwo />
-        
+        <SectionThree />
           <Luxury />
             <Sectionfour images={images}/>
           <Section images={ima} background={false}/>
