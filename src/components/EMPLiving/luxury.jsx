@@ -39,7 +39,7 @@ export default function FeaturesSection() {
             
             }}
           >
-              <Image src={feature.icon} alt={feature.title} className='md:!w-[40px] md:!h-[40px] !w-[20px] !h-[20px] ' width={40} height={400} />
+              <Image src={feature.icon} alt={feature.title} priority className='md:!w-[40px] md:!h-[40px] !w-[20px] !h-[20px] ' width={40} height={400} />
             <p style={{ marginTop: '5px'}} className='text-[10px] md:text-[14px] text-center w-[60px] md:w-[90px]'>{feature.title}</p>
           </div>
         ))}

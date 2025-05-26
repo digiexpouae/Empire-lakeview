@@ -11,7 +11,7 @@ const SectionFour = ({images,background,im,bottom,className}) => {
 
   const { ref, inView } = useInView({
     triggerOnce: true,  // Triggers only once
-    threshold: 0.5,     // 50% of the element should be in view
+    threshold: 0.2,     // 50% of the element should be in view
   });
 
 
@@ -71,11 +71,11 @@ useEffect(() => {
 if(count ==2){
   
     gsap.fromTo(ref1.current, 
-      { left: '-20%',delay:3 },
+      { left: '-20%',delay:1 },
       { left: 0, opacity: 1, duration: 2, ease: 'power3.out' }
     );
      gsap.fromTo(ref2.current, 
-      {right:'-50%', delay:3},
+      {right:'-50%'},
       {right:0, opacity: 1,duration: 2, ease: 'power3.out' }
     );
     }
@@ -93,7 +93,7 @@ if(count ==2){
         key={images[index].src + '-prev'}
              initial={{ opacity: 1 }}
   animate={{ opacity: 0.9, scale: [1.6,1] }}
-            transition={{duration: 2, ease: 'easeInOut' }}
+            transition={{duration: 1, ease: 'easeInOut' }}
         className="absolute inset-0 z-0 "
       >
         

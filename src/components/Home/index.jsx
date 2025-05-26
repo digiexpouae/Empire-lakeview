@@ -15,7 +15,7 @@ import Brand from '@/common/brand';
 import Section from './sectiontwo'
 import Section_Two from '../../common/section_two'
 import Voice from '../../../public/assets/animation/Voice (1).json'
-import Card from '../../../public/assets/animation/card-payment.json'
+import Card from '../../../public/assets/animation/card_payment[1].json'
 import Process from '../../../public/assets/animation/Process (1).json'
 import Special from '../../../public/assets/animation/Special Request.json'
 
@@ -72,7 +72,7 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
            <div className='bg-[#002E3C]'>
                 <Sectiontwo text={'Empire Developments is a Dubai-based real estate company known for delivering innovative, high-quality residential projects. With a focus on design excellence, smart features, and lifestyle amenities, Empire is redefining urban living across prime Dubai locations.'} />
                 <Sectionthree />
-                   <Introducing ima={ima} overlay={true} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[180px] md:!h-[250px]  !w-[400px]   relative'}/>
+                   <Introducing ima={ima} overlay={true} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
 <Brand text1={'The Advantages'}  img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'}/>
 <Section  />
 <Section_Two  text={text} head={'24/7 Access'} btn={false} amenities={amenities} back_image={true} className={'hidden'}/> 

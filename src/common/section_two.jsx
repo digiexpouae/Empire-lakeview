@@ -22,25 +22,35 @@ useEffect(()=>{
 
   // }
   
-   gsap.fromTo(
-            ref1.current,
-            { x:-200, opacity: 0 },   // start from translateX(-430px)
-            { x: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" }
-        )   
-,   gsap.fromTo(
-  ref2.current,
-  { y:200, opacity: 0 },   // start from translateX(-430px)
-  { y: 0, opacity: 1, duration: 1, delay: 1, ease: "power2.out" } // animate to final position
-) ,   gsap.fromTo(
-  ref3.current,
-  { y:200, opacity: 0, },   // start from translateX(-430px)
-  { y: 0, opacity: 1, duration: 2, delay: 2 } // animate to final position
-)     
+//    gsap.fromTo(
+//             ref1.current,
+//             { x:-200, opacity: 0 },   // start from translateX(-430px)
+//             { x: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" }
+//         )   
+// ,   gsap.fromTo(
+//   ref2.current,
+//   { y:200, opacity: 0 },   // start from translateX(-430px)
+//   { y: 0, opacity: 1, duration: 1, delay: 1, ease: "power2.out" } // animate to final position
+// ) ,   gsap.fromTo(
+//   ref3.current,
+//   { y:200, opacity: 0, },   // start from translateX(-430px)
+//   { y: 0, opacity: 1, duration: 2, delay: 2 }
+// )     
+
+const tl = gsap.timeline({ defaults: { duration: 1 } });
+
+tl.fromTo(".element", { opacity: 0, y: 200 ,duration:1 },{opacity:1, y:0, stagger: 1})
+  .fromTo(".element", { opacity: 0, y: 200 ,duration:1 },{opacity:1, y:0, stagger: 1})
+  .fromTo(".element", { opacity: 0, y: 200 ,duration:1 },{opacity:1, y:0, stagger: 1})
+  .fromTo(".element", { opacity: 0, y: 200 ,duration:1 },{opacity:1, y:0, stagger: 1})
+
+
+
 },[])
 return (<>
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[554px] relative flex items-center justify-center w-[80vw] scrollbar-hide ">
  {back_image &&
-  <div className='h-[500px] w-[500px] absolute right-[-14%] bottom-[-15%] '>
+  <div className='h-[500px] w-[500px] absolute right-[-9%] md:right-[-14%] bottom-[-15%] '>
   <Image  src={back}  width={500} height={500} className='!h-full !w-full'/>
 </div>}
 <div className=" w-full md:flex md:flex-row flex flex-col gap-[40px] lg:gap-[80px]">
@@ -57,7 +67,7 @@ return (<>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
-                  className="text-center flex flex-col items-center justify-center animate-fade-up-delayed h-[100px] gap-[10px] "
+                  className="text-center flex flex-col items-center justify-center animate-fade-up-delayed opacity-0 h-[100px] gap-[10px] element"
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
 <Lottie animationData={amenity.icon} loop={true}  className= 'lg:h-[60px] lg:w-[60px] w-[50px] h-[50px]'/>               

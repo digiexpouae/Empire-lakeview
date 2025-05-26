@@ -19,7 +19,6 @@ useEffect(() => {
       pin: true,
       scrub: true,
       start:'top top',
-      markers:true,
     end: "+=3000",
       trigger: wrapper.current, 
     } 

@@ -28,8 +28,8 @@ const ima=[ima1,ima2,ima3]
         <Heroslider
           className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
           texttwo={'Projects'}
-          main={false}
-          bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%]'}
+          main={true}
+          bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
           cloud={false}
         />
 

@@ -11,8 +11,46 @@ import SectionThree from './sectionthree'
 import Sectionfour from './sectionfour'
 import Section from '@/common/section'
 import SectionFive from '../../common/section_four'
+import Places from '../../common/places'
+import Icons from '../../components/icon'
+import DubaiMiracleGarden from '../../../public/miracle.svg';
+import DubaiButterflyGarden from '../../../public/butterfly.svg';
+import DubaiHillsMall from '../../../public/dubai hill mall.svg';
+import GlobalVillage from '../../../public/villae.svg';
+import MallOfTheEmirates from '../../../public/mall of emirates.svg';
+import DubaiAutodrome from '../../../public/dubai autodrome.svg';
+import BurjKhalifa from '../../../public/burj.svg';
+import DubaiMarinaMall from '../../../public/dubai marina mall.svg';
+
+
+
+
+
+
+
 
 const empestates = () => {
+
+const icons = [
+  { img: DubaiMiracleGarden, name: 'Dubai Miracle Garden', distance: '05 minutes' },
+  { img: DubaiButterflyGarden, name: 'Dubai Butterfly Garden', distance: '07 minutes' },
+  { img: DubaiHillsMall, name: 'Dubai Hills Mall', distance: '15 minutes' },
+  { img: GlobalVillage, name: 'Global Village', distance: '15 minutes' },
+  { img: MallOfTheEmirates, name: 'Mall of the Emirates', distance: '20 minutes' },
+  { img: DubaiAutodrome, name: 'Dubai Autodrome', distance: '20 minutes' },
+  { img: BurjKhalifa, name: 'Burj Khalifa', distance: '20–25 minutes' },
+  { img: DubaiMarinaMall, name: 'Dubai Marina Mall', distance: '25 minutes' },
+]
+const markers = [
+  { name: 'Dubai Miracle Garden', coordinates: [25.0631, 55.2471],  icon: '/assets/miracle.svg'  },
+  { name: 'Dubai Butterfly Garden', coordinates: [25.0615, 55.2468], icon: '/assets/butterfly.svg' },
+  { name: 'Dubai Global Village	', coordinates: [25.0672, 55.3047], icon: '/assets/villae.svg' },
+    { name: 'Burj Khalifa	', coordinates: [25.1972, 55.2744], icon: '/assets/burj.svg' },
+
+];
+
+
+
   const image=[{im:'/assets/ima2.jpg',tex1:'Studio',tex2:'SIZE:443.55 SQ.FT'},
 {im:'/assets/bed1.jpg',tex1:'1 Bed',tex2:'SIZE: 898.42 SQ.FT.'},
 {im:'/assets/bed2.jpg',tex1:'2 Bed',tex2:'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.'},
@@ -44,6 +82,8 @@ const images=[{im:'/assets/1a5f1869b5bf5ea58896fa4d32bb37b4af630f96.jpg',tex1:'1
               <SectionThree />
               <Sectionfour />
                  <Section images={image} />
+                 <Places Name={'Empire Estates'}  markers={markers} center_position={[25.0631, 55.2471]} Main_marker={'Empire Estates'} />
+                <Icons icons={icons}/>
                  <SectionFive  images={ima} background={false} />
                 </div>
                 <Footer />
