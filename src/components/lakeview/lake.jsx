@@ -4,7 +4,7 @@ import Header from '@/layout/header'
 import Section_two from '../../common/section_two'
 // import Section from '../home/section'
 import Footer from '@/layout/footer'
-import Place from '../../components/lakeview/places'
+import Place from '../../common/places'
 import Icon from '../icon'
 import im from '../../../public/assets/30d78149086356db6714cb255feffcc79821e24e.jpg'
 import im2 from '../../../public/assets/177a627b91d6de16e29ba8660fcd169ba1f9a4c5.jpg'
@@ -21,8 +21,18 @@ import im1 from '../../../public/assets/cloud_one.png'
 import spa from '../../../public/assets/animation/Spa Relaxation.json'
 import video from '../../../public/assets/animation/Video Camera.json'
 import joy from '../../../public/assets/animation/Joystick (1).json'
-import golf from '../../../public/assets/animation/golf-club.json'
+import golf from '../../../public/assets/animation/Golf Club[1].json'
 import other from '../../../public/assets/animation/Other (1).json'
+import Liwan from '../../../public/liwanlake.svg';
+import AmayaMall from '../../../public/assets/amayamall.svg';
+import IndianInternationalSchool from '../../../public/international school.svg';
+import GEMSWellington from '../../../public/universtiy.svg';
+import IMGWorlds from '../../../public/adventure.svg';
+import DowntownDubai from '../../../public/assets/g2589.svg';
+import DubaiAirport from '../../../public/assets/international (2).svg';
+
+
+
 
 
 import Introducing from '@/common/introducing'
@@ -30,6 +40,21 @@ import { Heading } from 'lucide-react'
 const index = () => {
   const [main, setmain] = useState(true)
   const [cloud, setcloud] = useState(true)
+
+const markers = [
+  { name: 'Liwan Lakes', coordinates: [25.1151433, 55.3648375],  icon: '/assets/amayamall.svg'  },
+  { name: 'Downtown Dubai', coordinates: [25.1950, 55.2784], icon: '/assets/g2589.svg' },
+  { name: 'Dubai International Airport', coordinates: [25.2567, 55.3643], icon: '/assets/international (2).svg' },
+];
+  const icons = [
+    { img: Liwan, name: 'Liwan Lake', distance: '2 minutes' },
+    { img: AmayaMall, name: 'Amaya Mall', distance: '2 minutes' },
+    { img: IndianInternationalSchool, name: 'The Indian International School', distance: '8 minutes' },
+    { img: GEMSWellington, name: 'GEMS Wellington Academy', distance: '10 minutes' },
+    { img: IMGWorlds, name: 'IMG Worlds of Adventure', distance: '8 minutes' },
+    { img: DowntownDubai, name: 'Downtown Dubai & Dubai Mall', distance: '15 minutes' },
+    { img: DubaiAirport, name: 'Dubai International Airport', distance: '20 minutes' },
+  ];
    const amenities = [
     {
       icon:spa,
@@ -101,8 +126,8 @@ const [background, setbackground] = useState(false)
            {/* <Section /> */}
           <Sectionthree images={images} onAllVisible={handleAllVisible} /> 
        
-   <Place />
-           <Icon /> 
+   <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews'/>
+           <Icon icons={icons}/> 
           <SectionFour images={imag} background={false}/>
                    </div>
 

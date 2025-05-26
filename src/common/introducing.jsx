@@ -4,6 +4,7 @@ import Slidertwo from '../components/slider_Two'
 import Image from 'next/image'
 
 import { motion, useScroll, useTransform } from 'framer-motion';
+import section from '@/components/about/section';
 const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,viewprojects,overlay}) => {
       const containerRef = useRef(null)
   const sliderRef = useRef(null)
@@ -25,12 +26,15 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top top',
-    end: () => `+=${distance}`, // ✅ Match scroll distance exactly
+  end: () => `+=${distance}`,
+// ✅ Match scroll distance exactly
           scrub: true,
           pin: true,
-          
           invalidateOnRefresh: true,
           anticipatePin: 1,
+            pinSpacing: true, 
+       
+
         },
       })
     }
@@ -50,7 +54,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
 
    
 return (
-  <div className={`w-full overflow-hidden whitespace-nowrap px-4 h-[700px] ${className1}  flex items-center`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}
@@ -74,10 +78,10 @@ return (
           <Image
             src={elem}
             alt={`Slide ${index}`}
-            className='!h-full !w-full object-cover rounded-4xl relative'
+            className={`!h-full !w-full  ${overlay && 'md:object-cover'}  rounded-4xl relative `}
           />
 {overlay &&
-     <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[350px] 
+     <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[150px] 
 'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 75%, #002E3C 97%)'
 }}></div>
          }         {viewprojects &&
@@ -90,7 +94,6 @@ return (
       ))}
     </div>
   </div>
-
 );
 
 }

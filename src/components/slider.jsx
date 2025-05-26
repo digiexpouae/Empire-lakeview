@@ -5,16 +5,40 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import Image from 'next/image'; 
 import { Mousewheel } from 'swiper/modules';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
-const Slider = ({ images, onSlideChange,slide,slideSize }) => {
-  
+const Slider = ({ images, onSlideChange,slide,slideSize,wrapper }) => {
+
+ const next= useRef()
+useEffect(() => {
+  if (!next.current || !wrapper?.current) return;
+
+  gsap.fromTo(
+    next.current,
+    {},
+    {
+      scrollTrigger: {
+        trigger: wrapper.current, // Now this will work
+        start: 'top top',
+        end: '+=4000',
+        pin: true,
+        scrub: true,
+        pinSpacing: true,
+      },
+    }
+  );
+}, []);
+
   const handleSlideChange = (swiper) => {
     const current = swiper.realIndex; // realIndex avoids loop offset
+      
     if (onSlideChange) onSlideChange(images[current]); // notify parent
   };
   return (
-    <div className="relative ">
+    <div className="relative " ref={next}>
       <Swiper
+
         mousewheel={true}
         modules={[Mousewheel]}// Use Autoplay for automatic image transition
         autoplay={{
@@ -27,8 +51,9 @@ const Slider = ({ images, onSlideChange,slide,slideSize }) => {
         onSlideChange={handleSlideChange} // Show 2.5 slides at once
         className={`xl:w-[500px] md:w-[400px] w-[200px] md:h-[180px]  `}
       > 
+  
           {images.map((img, index) => (
-          <SwiperSlide key={index} className={`xl:!w-[250px] md:!w-[200px] !w-[130px] !h-[80px] md:!h-full `} style={{border:'2px solid white',borderRadius:'10px'}}>
+          <SwiperSlide key={index} className={`xl:!w-[250px] md:!w-[200px] !w-[130px] !h-[80px] md:!h-full `} style={{border:'2px solid white',borderRadius:'10px'}} >
             <Image
               src={img.im}
               alt={`Slide ${index}`}
@@ -36,6 +61,7 @@ const Slider = ({ images, onSlideChange,slide,slideSize }) => {
               height={150}
               className="object-cover rounded-lg !h-full !w-full"
             />
+            
           </SwiperSlide>
         ))}
       </Swiper>

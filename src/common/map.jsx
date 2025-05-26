@@ -1,32 +1,33 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap, } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L, { icon } from 'leaflet';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 // 🔁 Component that gets the map instance safely
-function ZoomOnScroll({ containerRef ,carref}) {
+function ZoomOnScroll({ containerRef ,carref,center_position}) {
   const map = useMap(); 
     const container = containerRef.current;
 
 useEffect(() => {
   // if (!map || !containerRef?.current || !carref?.current) return;
 
-  const empireCoords = [25.114806, 55.364444];
+  const empireCoords = center_position;
 
   // ScrollTrigger for map zoom
-  const st = ScrollTrigger.create({
+ const st = ScrollTrigger.create({
     trigger: container,
     start: 'top top',
     end: '+=3000',
     pin:true,
     scrub: true,  anticipatePin: 1,          // ← tells ScrollTrigger to “pre-pin” 1px early
-  pinType: 'fixed',          // ← forces position:fixed which is more stable
+  pinSpacing:true,       // ← forces position:fixed which is more stable
  onEnter: () => {
       // if your map/slider needs to finish loading first:
       ScrollTrigger.refresh();
@@ -61,31 +62,51 @@ useEffect(() => {
     st.kill();
     cs.kill();
   };
-}, [map, containerRef, carref]);
+}, []);
 
 
   return null;
 }
 
-const Map = ({ className, containerRef,sectionref }) => {
+const Map = ({ className, containerRef,sectionref,Name,center_position,markers,Main_marker}) => {
  
 
-const markers = [
-  { name: 'Liwan Lakes', coordinates: [25.1151433, 55.3648375],  icon: '/assets/amaya.svg'  },
-  { name: 'Downtown Dubai', coordinates: [25.1950, 55.2784], icon: '/assets/g2589.svg' },
-  { name: 'Dubai International Airport', coordinates: [25.2567, 55.3643], icon: '/assets/international.svg' },
-];
+
 
 const bounds = L.latLngBounds(markers.coordinates);
   return ( <MapContainer
-      center={[25.114806, 55.364444]}
+      center={center_position}
       zoom={25}
       maxZoom={41}
   whenCreated={(map) => {
     map.fitBounds(bounds, { padding: [100, 100] }); // padding adds space around markers
-  }}
+   // Wait until tiles are ready
+  map.eachLayer(layer => {
+    if (layer instanceof L.TileLayer) {
+      layer.on('tileloadstart', () => {
+        totalTiles++;
+      });
 
-      scrollWheelZoom={false}
+      layer.on('tileload', () => {
+        loadedTiles++;
+        if (loadedTiles === totalTiles) {
+          // ✅ All tiles have loaded, now refresh ScrollTrigger
+          setTimeout(() => {
+            ScrollTrigger.refresh();
+            console.log('ScrollTrigger refreshed after tiles loaded.');
+          }, 100); // slight delay ensures layout settles
+        }
+      });
+    }
+  });
+}}
+
+   zoomControl={false}
+  scrollWheelZoom={false}
+  touchZoom={false}
+  doubleClickZoom={false}
+  boxZoom={false}
+  dragging={false} // 
       style={{ height: '70vh', width: '100%' }}
       className={className}
     >{console.log()}
@@ -95,17 +116,17 @@ const bounds = L.latLngBounds(markers.coordinates);
       />
 
       {/* Main marker */}
-      <Marker position={[25.114806, 55.364444]}   zIndexOffset={1000}// 👈 makes it stay on top
+      <Marker position={center_position}   zIndexOffset={1000}// 👈 makes it stay on top
  icon={L.divIcon({
         className: '',
         html: `
           <div style="display: flex; align-items: center; gap: 6px;">
-            <img src="/leaflet/marker-icon.png" width="25" height="41" />
-            <span style="font-size: 14px;color:#CCAB64; background: white; padding: 2px 6px; border-radius: 4px;">Empire Lakes</span>
+            <img src="/leaflet/marker-icon.png" width="5" height="5" />
+            <span style="font-size: 14px;color:#CCAB64; background: white; padding: 2px 6px; border-radius: 4px;">${Main_marker}</span>
           </div>
         `,
       })}>
-        <Popup>Empire Lakeviews</Popup>
+        <Popup>{Name}</Popup>
       </Marker>
 
       {/* Other markers */}
@@ -114,7 +135,7 @@ const bounds = L.latLngBounds(markers.coordinates);
           className: '',
           html: `
             <div style="display: flex; align-items: center; gap: 6px;">
-            <img src="${marker.icon}" width="5" height="5" />
+            <img src="${marker.icon}" width="5" height="5"  style="height:36px; width:36px"/>
             <span style="font-size: 14px;color:#CCAB64; background: white; padding: 2px 6px; border-radius: 4px;">${marker.name}</span>
             </div>
           `,
@@ -125,7 +146,7 @@ const bounds = L.latLngBounds(markers.coordinates);
       ))}
 
       {/* 📌 Scroll-based zoom animation */}
-      <ZoomOnScroll containerRef={containerRef}  carref={sectionref}/>
+      <ZoomOnScroll containerRef={containerRef}  carref={sectionref} center_position={center_position}/>
     </MapContainer>
 )}
 export default Map;

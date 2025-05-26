@@ -53,17 +53,17 @@ const SectionThree = () => {
       linear-gradient(180deg, rgba(0, 46, 60, 0) 68.55%, #002E3C 100%)
     `}}></div>
 
-      <div className='absolute inset-0 flex justify-center items-end w-full bottom-0 z-30'>
-        <div className='flex w-[80%] gap-8 md:flex-row flex-col text-white items-center justify-center'>
-          <div className='relative flex items-center justify-center md:h-[500px] h-[250px] w-[60%] lg:w-[45%]'>
+      <div className='absolute inset-0 flex justify-center items-end md:h-[600px] w-full md:bottom-0 z-30 leading-2 overflow-hidden'>
+        <div className='flex w-[80%] md:gap-8 md:flex-row flex-col  text-white h-full items-center justify-center leading-[12px]'>
+          <div className='relative flex items-end justify-end md:h-[95%] h-[250px] w-[70%] lg:w-[55%] md:overflow-hidden'>
             <Image
               src={person}
               alt='Kamran Ghani'
-              className='!h-full !w-full object-cover rounded-xl'
+              className='!h-[100%] !w-[100%] object-contain object-bottom  rounded-xl'
             />
           </div>
-          <div className='flex flex-col justify-center w-full md:w-[40%] lg:w-[] text-center md:!text-start '>
-            <span className='mb-4  text-[10px] md:text-[23px] lg:text-[30px] my-heading lg:leading-9'>
+          <div className='flex flex-col justify-center w-full md:w-[50%]  text-center md:!text-start '>
+            <span className='mb-4  text-[10px] lg:text-[11px] xl:text-[23px] my-heading xl:leading-9'>
               Empowering the entrepreneurial odyssey with an unyielding vision, my mission is to transcend limits, scoff at the word 'NO,' and carve a legacy of relentless innovation and triumph.
             </span>
 

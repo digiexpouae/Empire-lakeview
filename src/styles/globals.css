@@ -33,27 +33,21 @@ body {
 }
 
 
-.dot:nth-child(2)::after {
-  content: 'Empire Lakeviews';
-  position: absolute;
-  text-align: center;
-  top: 130%;
-left: -150%;
 
-}
 
 .dot:nth-child(3)::after {
-  content: '10 min';
+  content: '5-10 minutes';
   position: absolute;
   left: 0;
   top: 300%;
-    white-space: nowrap;
+  white-space: nowrap;
     left: -100%;
+  
 
 }
 
 .dot:nth-child(4)::after {
-  content: '15 min';
+  content: '15 minutes';
   position: absolute;
   top: 300%;
   white-space: nowrap;
@@ -62,13 +56,21 @@ left: -150%;
 
 
 .dot:nth-child(5)::after {
-  content: '20 min';
+  content: '20 minutes';
   position: absolute;
   top: 300%;
     white-space: nowrap;
     left: -100%;
 
 }
+@media (max-width: 640px) {
+  .dot:nth-child(3)::after,
+  .dot:nth-child(4)::after,
+  .dot:nth-child(5)::after {
+    font-size: 10px; /* or smaller if needed */
+  }
+}
+
 .leaflet-grab {
   cursor: default !important;
 }
