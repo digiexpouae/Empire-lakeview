@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image'; // Assuming you're using Next.js
 import Slider from '../components/slider'; // Adjust path as needed
+
 const Section = ({images}) => {
 
       const [currentImage, setCurrentImage] = useState(0);
-      const wrapper=useRef(null)
+
+const wrapper=useRef()
     const arrayOfElements = [
         {
           image: "/assets/4c43da9db2ab4e1a685ad4e0fe8bf4d7420cb786 (3).jpg",
@@ -41,18 +43,16 @@ const Section = ({images}) => {
           text2: "12 minutes"
         }
       ]
-    return (
-  <div  className='h-[120vh] mt-[20px] relative'>
-    <div>
-      <div className="relative  w-full  ">
+    return ( 
+  <div  className='h-[550px]  mt-[20px] w-full relative' ref={wrapper}  >
+    <div className='h-full  w-full' >
+      <div className="relative h-full  w-full  "    >
         <Image
           src={currentImage.im}
           alt="Mask3"
-          objectFit="cover"
-          width={1000}
-          height={1000}
+        fill
          priority
-          className="object-cover !w-full"
+          className="object-cover " 
         />
 
 <div className="overlay absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center w-full bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10">

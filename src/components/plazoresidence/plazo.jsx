@@ -56,7 +56,7 @@ im:'/assets/cmpc.png'
       <Image  src={Back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
      </div>
       <div className='bg-[#002E3C]'>
-   < Sectiontwo images={images} amenities={amenities} textpara={text} className={'w-[80px] h-[80px]'}/>
+   < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[120px]'}/>
 
    <Sectionthree />
       <Map  map={map} title={'View Plazzo Residence'}/>

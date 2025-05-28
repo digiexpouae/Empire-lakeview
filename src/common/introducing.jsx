@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import section from '@/components/about/section';
-const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,viewprojects,overlay}) => {
+const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,viewprojects,overlay,intro }) => {
       const containerRef = useRef(null)
   const sliderRef = useRef(null)
   useEffect(() => {
@@ -18,7 +18,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
       const totalScrollWidth = sliderRef.current.scrollWidth
       const viewportWidth = window.innerWidth
       const scrollDistance = totalScrollWidth - viewportWidth
-      const distance=scrollDistance + 100
+      const distance=scrollDistance
 
       gsap.to(sliderRef.current, {
         x: `-${distance}px`,
@@ -54,7 +54,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
 
    
 return (
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center  my-16`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}
@@ -77,8 +77,9 @@ return (
         >
           <Image
             src={elem}
+            priority
             alt={`Slide ${index}`}
-            className={`!h-full !w-full  ${overlay && 'md:object-cover'}  rounded-4xl relative `}
+            className={`!h-full !w-full  ${overlay && 'md:object-cover'} ${intro && 'object-cover'} rounded-4xl relative  `}
           />
 {overlay &&
      <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[150px] 

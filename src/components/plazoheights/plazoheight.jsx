@@ -42,12 +42,12 @@ im:'/assets/cmpc.png'
     <>
 <div className='w-full relative md:h-[600px] h-[400px]'>
         <Header className='nav-menu absolute z-50'/>
-            <Heroslider bottom={' object-cover md:!h-[550px]   !bottom-0 !h-[350px] !w-[100%] '}  className2={'md:!top-6'} className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  main={true}  texttwo={'Plazzo'} textthree={'Heights'}/>
+            <Heroslider bottom={' object-cover md:!h-[550px]   !bottom-[-15%] !h-[350px] !w-[100%] '}  className2={'md:!top-9% lg:!top-4'} className1={'right-0 left-[unset] top-[13%]  lg:top-[13%] text-[10px]  '} main_im={Hero}  main={true} className3={'lg:bottom-[5%]'} texttwo={'Plazzo'} textthree={'Heights'}/>
       <Image  src={back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
           </div>
                      <div className='bg-[#002E3C]'>
-          <Sectiontwo  amenities={amenities} textpara={textpara} className={'w-[80px] h-[80px]'}/>
-       
+          <Sectiontwo  amenities={amenities} textpara={textpara} btn={false}/>
+        
           <Sectionthree />
              <Map  map={map} title={'View Plazzo Residence'}/>
                 <Testimonials/>
