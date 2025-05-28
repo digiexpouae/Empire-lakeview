@@ -71,7 +71,7 @@ const [main, setmain] = useState(true)
           <Sectiontwo />
         <SectionThree />
           <Luxury />
-      <Sectionfour images={images}/>
+      <Sectionfour images={images} slide={4}/>
 
       <Places center_position={[25.114806, 55.364444]} Name={'Empire Livings'} markers={markers} Main_marker='Empire Living' />
         <Icon icons={icons}/>

@@ -15,7 +15,7 @@ import Brand from '@/common/brand';
 import Section from './sectiontwo'
 import Section_Two from '../../common/section_two'
 import Voice from '../../../public/assets/animation/Voice (1).json'
-import Card from '../../../public/assets/animation/card_payment[1].json'
+import Card from '../../../public/assets/animation/card payment[1].json'
 import Process from '../../../public/assets/animation/Process (1).json'
 import Special from '../../../public/assets/animation/Special Request.json'
 

@@ -5,30 +5,63 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import Image from 'next/image'; 
 import { Mousewheel } from 'swiper/modules';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { useEffect, useRef ,useState} from 'react';
 
 const Slider = ({ images, onSlideChange,slide,slideSize,wrapper }) => {
-
- const next= useRef()
+  const swiperRef = useRef(null);
 useEffect(() => {
-  if (!next.current || !wrapper?.current) return;
+  if (typeof window === 'undefined') return;
 
-  gsap.fromTo(
-    next.current,
-    {},
-    {
-      scrollTrigger: {
-        trigger: wrapper.current, // Now this will work
-        start: 'top top',
-        end: '+=4000',
-        pin: true,
-        scrub: true,
-        pinSpacing: true,
+  (async () => {
+    const gsap = (await import('gsap')).default;
+    const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+    gsap.registerPlugin(ScrollTrigger);
+
+    const swiperInstance = swiperRef.current?.swiper;
+    if (!swiperInstance || !wrapper?.current) return;
+
+    const totalSlides = images.length;
+    const scrollLength = window.innerHeight * totalSlides;
+    let lastIndex = -1;
+
+    // Force Swiper to show slide 0 on init
+    swiperInstance.slideTo(0, 0);
+
+    ScrollTrigger.create({
+      trigger: wrapper.current,
+      start: 'top top',
+      end: `+=${scrollLength}`,
+      scrub: true,
+      pin: true,
+      pinSpacing: true,
+      anticipatePin: 1,
+      fastScrollEnd: true,
+      markers: true,
+      onUpdate: self => {
+        let slideIndex = Math.round(self.progress * (totalSlides - 1));
+            {console.log(slideIndex)}
+
+      if (
+          swiperInstance &&
+          swiperInstance.initialized &&
+          slideIndex !== lastIndex
+        ) {
+          swiperInstance.slideTo(slideIndex);
+          lastIndex = slideIndex;
+        }
       },
+    });
+  })();
+
+  return () => {
+    if (typeof window !== 'undefined') {
+      const ScrollTrigger = require('gsap/ScrollTrigger').ScrollTrigger;
+      ScrollTrigger.getAll().forEach(t => t.kill());
     }
-  );
-}, []);
+  };
+}, [images.length, wrapper]);
+
+
 
   const handleSlideChange = (swiper) => {
     const current = swiper.realIndex; // realIndex avoids loop offset
@@ -36,16 +69,12 @@ useEffect(() => {
     if (onSlideChange) onSlideChange(images[current]); // notify parent
   };
   return (
-    <div className="relative " ref={next}>
+    <div className="relative w-full "  >
       <Swiper
+      ref={swiperRef}
+      initialSlide={0}  // <--- ensures Swiper starts at 0
 
-        mousewheel={true}
-        modules={[Mousewheel]}// Use Autoplay for automatic image transition
-        autoplay={{
-            delay: 2000,
-            disableOnInteraction: false, // Keeps autoplay after swipe
-          }}// Change image every 3 seconds
-        loop // Infinite loop for the slider
+      
         spaceBetween={10} // Space between slides
         slidesPerView={2}
         onSlideChange={handleSlideChange} // Show 2.5 slides at once
@@ -53,13 +82,15 @@ useEffect(() => {
       > 
   
           {images.map((img, index) => (
-          <SwiperSlide key={index} className={`xl:!w-[250px] md:!w-[200px] !w-[130px] !h-[80px] md:!h-full `} style={{border:'2px solid white',borderRadius:'10px'}} >
+          <SwiperSlide key={index} className={`xl:!w-[250px] md:!w-[200px] !w-[130px] !h-[80px] md:!h-full `} style={{border:'2px solid white',borderRadius:'10px'}}  >
             <Image
               src={img.im}
               alt={`Slide ${index}`}
               width={150}
               height={150}
               className="object-cover rounded-lg !h-full !w-full"
+            
+
             />
             
           </SwiperSlide>

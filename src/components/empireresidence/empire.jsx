@@ -58,7 +58,7 @@ const [main, setmain] = useState(true)
       <Image  src={Field} className='left-0 right-0 bottom-0 top-0 w-full h-[100%] z-[-10] !object-cover object-top-left'/>
       </div>
        <div className='bg-[#002E3C]'>
-      <SectionTwo amenities={amenities} textpara={textpara} className={'!w-[100%] !h-[60px]'}/>
+      <SectionTwo amenities={amenities} textpara={textpara}/>
       <Sectionthree />
       <Map title={'View Plazzo Heights'} map={map2}/>
               <Testimonials />

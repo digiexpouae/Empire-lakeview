@@ -30,11 +30,6 @@ import GEMSWellington from '../../../public/universtiy.svg';
 import IMGWorlds from '../../../public/adventure.svg';
 import DowntownDubai from '../../../public/assets/g2589.svg';
 import DubaiAirport from '../../../public/assets/international (2).svg';
-
-
-
-
-
 import Introducing from '@/common/introducing'
 import { Heading } from 'lucide-react'
 const index = () => {
@@ -121,9 +116,7 @@ const [background, setbackground] = useState(false)
            <Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 
               Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom 
               apartments, & 3-bedroom duplexes, with many units featuring private pools.`}   /> 
-
-           <Introducing ima={content} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />
-           {/* <Section /> */}
+           <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />
           <Sectionthree images={images} onAllVisible={handleAllVisible} /> 
        
    <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews'/>
