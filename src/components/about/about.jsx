@@ -13,6 +13,9 @@ import BackImage from  '../../../public/assets/heroim2.jpg'
 import gsap from 'gsap'
 import { useInView } from 'react-intersection-observer';
 import {AnimatePresence, motion } from 'framer-motion';
+import craft from '../../../public/assets/animation/reload-arrow.json'
+import land from '../../../public/assets/animation/landmark-tower.json'
+import star from '../../../public/assets/animation/star.json'
 
 
 
@@ -23,6 +26,28 @@ import {AnimatePresence, motion } from 'framer-motion';
 const about = () => {
   const [main, setmain] = useState(false)
   const [cloud, setcloud] = useState(false)
+
+
+   const amenities = [
+    {
+      icon:craft,
+      title: "Craftsmanship",
+      h:50,
+      w:50
+    },
+    {
+      icon:land,
+      title: "Thoughtful Design ",
+      h:50,
+w:50
+    },
+    {
+      icon:star,
+      title: "Signature Quality",
+      h:50,
+w:50
+    }
+  ];
   const images = [
   {
     src: '/assets/about cta.jpg',
@@ -88,8 +113,6 @@ useEffect(() => {
 
 
 
-
-
   return (
     <>
     <div className={`relative w-full md:!h-[600px] !h-[400px] z-20 ${count ===1 && 'bg-[#002E3C]'}` }  ref={ref}>
@@ -147,7 +170,7 @@ useEffect(() => {
  <div className='bg-[#002E3C]'>
 <Sectiontext  text={'Empire Developments is a Dubai-based real estate company known for delivering innovative, high-quality residential projects. With a focus on design excellence, smart features, and lifestyle amenities, Empire is redefining urban living across prime Dubai locations.'}/>
 <Section />
-<Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} img={'/assets/chess.jpg'}/>
+<Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} img={'/assets/chess.jpg'} amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[50px] h-[50px]'}/>
 <Sectionthree />
 <Sectionfour images={images}/>
 </div>

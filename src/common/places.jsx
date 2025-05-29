@@ -57,7 +57,7 @@ const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl',
     </div>
           </div> 
           </div>
-        <div className='w-[100%]  h-[300px] mb-10 relative'>
+        <div className='w-[100%]  h-[500px] mb-10 relative'>
            <Map  className={'z-50'} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
            
             {/* <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} /> */}

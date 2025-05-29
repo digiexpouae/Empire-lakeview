@@ -50,7 +50,7 @@ useEffect(() => {
           
 
         start: 'top top',
-        end: '+=3000',
+        end: '+=3500',
         scrub: true,
         // Do NOT pin here to avoid conflicts
       },

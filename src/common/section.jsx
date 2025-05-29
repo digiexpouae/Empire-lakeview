@@ -44,7 +44,7 @@ const wrapper=useRef()
         }
       ]
     return ( 
-  <div  className='h-[550px]  mt-[20px] w-full relative' ref={wrapper}  >
+  <div  className='h-[350px] md:h-[550px]  mt-[20px] w-full relative' ref={wrapper}  >
     <div className='h-full  w-full' >
       <div className="relative h-full  w-full  "    >
         <Image
@@ -74,7 +74,7 @@ const wrapper=useRef()
              </div>
           </div>
 
-          <div className="absolute lg:bottom-10 md:bottom-2 bottom-0 right-5">
+          <div className="absolute lg:bottom-10 md:bottom-2  bottom-[30%] right-5">
             <Slider images={images} onSlideChange={setCurrentImage} wrapper={wrapper}/>
           </div>
         </div>

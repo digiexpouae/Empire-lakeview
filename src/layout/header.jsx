@@ -96,7 +96,7 @@ const Header = ({ className }) => {
           {/* Right CTA Buttons - Hidden on Mobile */}
           <div className="hidden md:flex items-center gap-x-3 lg:gap-x-4">
             <a
-              href="#contact"
+              href="/contact"
               className="bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#FFF3DC] text-gray-800 px-4 lg:px-6 py-2 rounded-full transition-colors duration-300 transform text-sm lg:text-base whitespace-nowrap"
             >
               Contact Us
@@ -149,7 +149,7 @@ const Header = ({ className }) => {
             ))}
             <div className="flex flex-col gap-y-2 pt-3 border-t border-white/20">
               <a
-                href="#contact"
+                href="/contact"
                 className="bg-[#CCAB64] hover:bg-[#CCAB64] text-gray-800 px-4 py-2 rounded-full transition-colors duration-300 text-center text-base"
               >
                 Contact Us
