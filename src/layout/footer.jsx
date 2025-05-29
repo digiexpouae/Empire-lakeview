@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import Image from 'next/image';
-import Logo from '../../public/assets/2bd86ef67a61a0f225c845d4d3d8ad35a3777436.png';
+import Logo from '../../public/assets/logo2.png';
 
 // Links data
 const quickLinks = [
@@ -38,7 +38,7 @@ const communities = [
 const Footer = () => {
   return (
     <div id="webcrumbs"> 
-      <div className="bg-white w-full py-10">
+      <div className="bg-black w-full py-10 text-white"  >
         <div className="container mx-auto px-4 mt-[50px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 xl:gap-8 lg:gap-0 gap-5 place-items-left md:place-items-center ">
             

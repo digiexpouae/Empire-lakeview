@@ -2,12 +2,20 @@ import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import About1 from '../../../public/assets/about1.jpg'
 import About2 from '../../../public/assets/about2.jpg'
+import { useInView } from 'react-intersection-observer'
 import {gsap} from 'gsap'
 const section = () => {
 const ref1=useRef(null);
 const ref2=useRef(null);
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,  // Triggers only once
+    threshold: 0.2,     // 50% of the element should be in view
+  });
+
+
 useEffect(()=>{
- if (ref1.current && ref2.current) {
+ if (inView && ref1.current && ref2.current) {
       gsap.fromTo(
         ref1.current,
         { x: '-80%', opacity: 0.4,zIndex:10 },
@@ -20,10 +28,10 @@ useEffect(()=>{
         { x: '0%', opacity: 1, duration: 3 }
       )
     }
-  }, [])
+  }, [inView])
 
   return (
-    <div className='flex flex-col items-center justify-center h-[800px] w-full overflow-hidden'>
+    <div className='flex flex-col items-center justify-center h-[800px] w-full overflow-hidden' ref={ref}>
         <div className='flex  md:flex-row flex-col items-center justify-evenly w-[80%] gap-16 '>
             <div className='relative md:h-[300px] w-full md:w-[40%] z-20'>
                 <Image  src={About1} className='!h-full !w-full !object-cover rounded-2xl'/>

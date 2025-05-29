@@ -18,12 +18,54 @@ import Voice from '../../../public/assets/animation/Voice (1).json'
 import Card from '../../../public/assets/animation/card payment[1].json'
 import Process from '../../../public/assets/animation/Process (1).json'
 import Special from '../../../public/assets/animation/Special Request.json'
-
+import craft from '../../../public/assets/animation/reload-arrow.json'
+import land from '../../../public/assets/animation/landmark-tower.json'
+import star from '../../../public/assets/animation/star.json'
+import Demand from '../../../public/assets/animation/high-demand (1).json'
+import fraud from '../../../public/assets/animation/online-banking-fraud-prevention (1).json'
+import Growth from '../../../public/assets/animation/Growth (1).json'
 const index = () => {
     const ima=[ima1,ima2,ima3]
 
+ 
 
-  const amenities = [
+const amenities = [
+    {
+      icon:craft,
+      title: "High-Yield Returns",
+      h:50,
+      w:50
+    },
+    {
+      icon:land,
+      title: "Iconic Landmarks ",
+      h:50,
+w:50
+    },
+    {
+      icon:star,
+      title: "Unmatched Luxury & Style",
+      h:50,
+w:50
+    },{
+icon:Demand,
+      title: "Strong Dental Demand",
+      h:50,
+w:50
+    },{icon:fraud,
+      title: "Proven Track Record",
+      h:50,
+w:50
+
+    },
+  {
+    icon:Growth,
+      title: "Future Growth Potential",
+      h:50,
+w:50
+  }
+  ]
+  const icons = [
     {
       icon:Voice,
       title: "Voice service request",
@@ -59,7 +101,7 @@ w:50
     subtitle: '',
   }
 ];
-const img=[{im:'/assets/home1.png',className:'w-[40%] md:w-[20%] h-[160px] w-[50%] md:h-[400px] left-[5%]'},{im:'/assets/c4e34d8ba7285ffa418e53d34d03e6d2cc4e4c9ee.png',className:' h-[170px] w-[100%]  md:w-[40%] md:h-[450px]'},{im:'/assets/d7fac30352dfae4c1c87aff3ad6d3e311658833a.png',className:'w-[100%] right-[5%] md:w-[34%] h-[150px] md:h-[300px] z-[999] md:right-[10%]'}]
+const img=[{im:'/assets/home1.png',className:'w-[40%] md:w-[20%] h-[160px] w-[50%] md:h-[400px] left-[5%]'},{im:'/assets/c4e34d8ba7285ffa418e53d34d03e6d2cc4e4c9ee.png',className:' h-[170px] w-[100%]  md:w-[40%] md:h-[450px]'},{im:'/assets/d7fac30352dfae4c1c87aff3ad6d3e311658833a.png',className:'w-[100%] right-[5%] md:w-[34%] h-[130px] md:h-[300px] z-[999] md:right-[10%]'}]
 const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
   return (
   <>
@@ -73,9 +115,9 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
                 <Sectiontwo text={'Empire Developments is a Dubai-based real estate company known for delivering innovative, high-quality residential projects. With a focus on design excellence, smart features, and lifestyle amenities, Empire is redefining urban living across prime Dubai locations.'} />
                 <Sectionthree />
                    <Introducing ima={ima} overlay={true} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
-<Brand text1={'The Advantages'}  img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'}/>
+<Brand text1={'The Advantages'} amenities={amenities} img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px]'} className2={'!text-black'} className3={' h-[60px]'}/>
 <Section  />
-<Section_Two  text={text} head={'24/7 Access'} btn={false} amenities={amenities} back_image={true} className={'hidden'}/> 
+<Section_Two  text={text} head={'24/7 Access'} btn={false} amenities={icons} back_image={true} className={'hidden'}/> 
 
 
                 <SectionFour images={imag} />

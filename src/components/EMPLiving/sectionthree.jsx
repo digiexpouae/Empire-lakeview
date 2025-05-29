@@ -56,13 +56,12 @@ useEffect(() => {
           ease: "none",
           scrollTrigger: {
             trigger: container.current,
-            start: "top top",
+            start: "center center",
             end: `+=${scrollDistance}`,
             scrub:true,
             pin: true,
             pinSpacing: true,
-            markers: true,
-            anticipatePin:1, onEnter: () => {
+            anticipatePin:3, onEnter: () => {
       // if your map/slider needs to finish loading first:
       ScrollTrigger.refresh();
     },

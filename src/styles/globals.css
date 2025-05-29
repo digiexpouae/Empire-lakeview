@@ -84,3 +84,10 @@ svg{
   }
 
 }
+.rounded-button:nth-child(1){
+  border-top-left-radius:50px ;
+}
+.rounded-button:nth-child(2){
+  border-top-right-radius: 50px;
+
+}

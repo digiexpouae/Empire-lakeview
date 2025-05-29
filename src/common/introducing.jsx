@@ -31,7 +31,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
           scrub: true,
           pin: true,
           invalidateOnRefresh: true,
-          anticipatePin: 1,
+          anticipatePin: 3,
             pinSpacing: true, 
        
 
@@ -54,6 +54,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
 
    
 return (
+  
   <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center  my-16`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
