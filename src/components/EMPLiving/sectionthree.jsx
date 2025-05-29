@@ -51,17 +51,17 @@ useEffect(() => {
         scrollEl.scrollTop = 0;
 
         // Create the scroll animation
-  const ct=      gsap.to(scrollRef.current, {
+  const ct= gsap.to(scrollRef.current, {
           scrollTop: scrollDistance,
           ease: "none",
           scrollTrigger: {
             trigger: container.current,
-            start: "center center",
+            start: "top top",
             end: `+=${scrollDistance}`,
             scrub:true,
             pin: true,
             pinSpacing: true,
-            anticipatePin:3, onEnter: () => {
+            anticipatePin:1, onEnter: () => {
       // if your map/slider needs to finish loading first:
       ScrollTrigger.refresh();
     },
@@ -78,7 +78,7 @@ useEffect(() => {
 
 
   return (           
-<div className='flex flex-col  items-center justify-center w-full text-center leading-12 md:leading-none min-h-[100vh] m-11' ref={container}>      
+<div className='flex flex-col  items-center justify-center w-full text-center leading-12 md:leading-none min-h-[100vh] ' ref={container}>      
     <h1 className='text-[45px] lg:text-[100px] my-heading  text-white font-bold'>Picture Your Future</h1>
 
     <div className='w-full h-screen overflow-y-scroll scrollbar-hide flex flex-col  items-center justify-center'    ref={scrollRef}  >
