@@ -24,7 +24,7 @@ useEffect(() => {
  const st = ScrollTrigger.create({
     trigger: container,
     start: 'top top',
-    end: '+=3000',
+    end: '+=2000',
     pin:true,
     scrub: true,  anticipatePin: 1,          // ← tells ScrollTrigger to “pre-pin” 1px early
   pinSpacing:true,       // ← forces position:fixed which is more stable
@@ -107,8 +107,7 @@ const bounds = L.latLngBounds(markers.coordinates);
   doubleClickZoom={false}
   boxZoom={false}
   dragging={false} // 
-      style={{ height: '70vh', width: '100%' }}
-      className={className}
+      className={`${className}  h-[100%] lg:h-[70vh] w-[100%]`}
     >{console.log()}
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"

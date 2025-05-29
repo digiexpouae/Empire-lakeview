@@ -36,6 +36,7 @@ const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl',
         <h2 className='my-heading lg:text-[80px] md:text-[50px] text-[34px]  font-bold' >In The Heart Of It All</h2>
         <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  <div className="flex items-center justify-center w-full">
         <hr className="border border-white w-[100%] relative  " />
+       
         {styles.map((elem,index)=>{
           return( 
           <span key={index} onClick={()=>setactiveIndex(index)} className={`${elem} dot cursor-pointer`}>
@@ -61,9 +62,8 @@ const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl',
            <Map  className={'z-50'} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
            
             {/* <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} /> */}
-        </div>
+        </div></div>
       </div>
-    </div>
 
   )
 }

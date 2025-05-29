@@ -74,7 +74,7 @@ const wrapper=useRef()
              </div>
           </div>
 
-          <div className="absolute lg:bottom-10 md:bottom-2  bottom-[30%] right-5">
+          <div className="absolute lg:bottom-10 md:bottom-2  bottom-[10%] right-5">
             <Slider images={images} onSlideChange={setCurrentImage} wrapper={wrapper}/>
           </div>
         </div>
