@@ -23,24 +23,12 @@ useEffect(()=>{
     gsap.registerPlugin(ScrollTrigger);
 
   }
-  if (inView){
-   gsap.fromTo(
-            ref1.current,
-            { x:-200, opacity: 0 },   // start from translateX(-430px)
-            { x: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" }
-        )   
-,   gsap.fromTo(
-  ref2.current,
-  { y:200, opacity: 0 },   // start from translateX(-430px)
-  { y: 0, opacity: 1, duration: 2, delay: 2, ease: "power2.out" } // animate to final position
-) ,   gsap.fromTo(
-  ref3.current,
-  { y:200, opacity: 0, },   // start from translateX(-430px)
-  { y: 0, opacity: 1, duration:2,delay:2}
-)     
-
-const tl = gsap.timeline({ defaults: { duration: 1 } });
-
+  if  (inView && ref1.current && ref2.current && ref3.current) {  
+    const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 2 } });
+ setTimeout(() => {
+    tl.fromTo(ref1.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1 })
+      .fromTo(ref2.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=1.5") // starts 1.5s before previous ends
+      .fromTo(ref3.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=1.5");
 tl.fromTo(
   ".element",
   { opacity: 0, y: 200 },
@@ -53,16 +41,16 @@ tl.fromTo(
       ease: "power1.out"
     }
   }
-);
- 
+)
+   }, 0)
 
 }
 
 },[inView])
 return (<>
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[554px] relative flex items-center justify-center w-[80vw] scrollbar-hide" ref={ref}>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[600px] relative flex items-center justify-center w-[80vw] scrollbar-hide" ref={ref}>
  {back_image &&
-  <div className='h-[500px] w-[500px] absolute right-[-9%] md:right-[-14%] bottom-[-15%] '>
+  <div className='h-[500px] w-[500px] absolute right-[-9%] md:right-[-14%] bottom-[-15%] overflow-hidden '>
   <Image  src={back}  width={500} height={500} className='!h-full !w-full'/>
 </div>}
 <div className=" w-full md:flex md:flex-row flex flex-col gap-[40px] lg:gap-[80px]">
@@ -77,7 +65,7 @@ return (<>
           </div>
           
        
-              <LottieIcons className={'element opacity-0'} className2={'text-center md:w-[120px] !text-[10px] '} ref={ref3} amenities={amenities} iconsize={'h-[70px] w-[70px] md:w-[50px] md:h-[50px]'}  className1={'grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36  mt-8 lg:mt-20 opacity-0'}/></div>
+              <LottieIcons className={'element opacity-0'} className2={'text-center md:w-[120px] !text-[10px] md:!text-[20px]'} ref={ref3} amenities={amenities} iconsize={'h-[70px] w-[70px] md:w-[50px] md:h-[50px]'}  className1={'grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36  mt-8 lg:mt-20 opacity-0'}/></div>
           {/* Right side - Project description and amenities */}
          
         <div className=" md:w-[50%] lg:w-[60%]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start lg:h-[280px] gap-4 opacity-0" ref={ref2}>

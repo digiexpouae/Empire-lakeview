@@ -91,3 +91,6 @@ svg{
   border-top-right-radius: 50px;
 
 }
+.pin-spacer{
+  overflow: hidden!important;
+}
