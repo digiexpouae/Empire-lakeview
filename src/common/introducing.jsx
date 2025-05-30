@@ -30,8 +30,11 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
 // ✅ Match scroll distance exactly
           scrub: true,
           pin: true,
+            onLeave: () => {
+    document.querySelector('.container').style.position = 'relative';
+  },
           invalidateOnRefresh: true,
-          anticipatePin: 3,
+          anticipatePin: 1,
             pinSpacing: true, 
        
 
@@ -55,7 +58,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
    
 return (
   
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center  my-16`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center  my-16 container`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}

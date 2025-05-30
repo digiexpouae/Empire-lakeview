@@ -111,14 +111,16 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
             <Heroslider className={'top-[15%]'} main={false} cloud={true} Home={true}  img={img} className2={'z-[999]'} textone={'Begin your'}  bottom={'bottom-[-60px]'} im1={im1} im2={im1} className1={' left-[40%] top-2 md:top-10'} texttwo={'Journey'}  overlay={true}/>
          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' width={1200} height={1000} />
           </div>
+
            <div className='bg-[#002E3C]'>
+
                 <Sectiontwo text={'Empire Developments is a Dubai-based real estate company known for delivering innovative, high-quality residential projects. With a focus on design excellence, smart features, and lifestyle amenities, Empire is redefining urban living across prime Dubai locations.'} />
                 <Sectionthree />
                    <Introducing ima={ima} overlay={true} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
 <Brand text1={'The Advantages'} amenities={amenities} img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px]'} className3={' h-[40px]'}/>
 <Section  />
-<Section_Two  text={text} head={'24/7 Access'} className2={'!text-[10px]'} btn={false} amenities={icons} back_image={true} className={'hidden'}/> 
 
+          <Section_Two  text={text} head={'24/7 Access'} className2={'!text-[10px]'} btn={false} amenities={icons} back_image={true} className={'hidden'}/> 
 
                 <SectionFour images={imag} />
 

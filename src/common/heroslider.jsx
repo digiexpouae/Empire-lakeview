@@ -169,7 +169,7 @@ const child=document.querySelectorAll('.home')
 {Home && 
 <div className='flex h-[400px] md:h-[600px] w-full items-end  justify-center'>
 {img.map((elem,index)=>{
-return <div key={index} className={` flex items-end justify-end relative opacity-0 z-50 home ${elem.className}`} ><Image src={elem.im} width={600} height={400} className={` ${bottom} z-40  !h-full !w-full object-cover `} />
+return <div key={index} className={` flex items-end justify-end relative opacity-0 z-50 home ${elem.className}`} ><Image src={elem.im} width={600} height={400} className={` ${bottom} z-40 h-[25vh] w-auto  md:!h-full md:!w-full object-cover  `} />
 </div>
 })}</div>
 

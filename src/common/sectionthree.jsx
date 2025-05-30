@@ -52,20 +52,20 @@ timeline.from(child,{
     return (<div ref={wrapper}>
                <h2 className='my-heading heading py-5'>Latest Projects</h2>
 
-    <section className=' w-full flex  flex-col items-center justify-start py-20 card-wrapper relative h-[550px]'  >
+    <section className=' w-full flex  flex-col items-center justify-center card-wrapper relative h-[450px] md:mt-8' >
 
 
   {ima.map((elem, index) => {
   return (
     <div
       key={index}
-      className={`cards flex items-center justify-center h-[50%] md:h-[80%] absolute w-[90%] md:w-[80%] gap-3 lg:w-[70%] bg-white rounded-3xl duration-150` }   
+      className={`cards flex items-center justify-center h-[50%] md:h-[100%] absolute w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-3xl duration-150` }   
     >
-      <div className='flex flex-col w-[60%]'>
+      <div className='flex flex-col w-[55%]'>
         <div className='h-[60px] w-[120px] md:w-[210px] md:h-[120px]'>
           <Image width={280} height={280} className='!h-full !w-full object-cover' src={elem.logo} alt='' />
         </div>
-        <div className='leading-4 md:leading-10'>
+        <div className='leading-4 md:leading-7'>
           <span className='text-[9px] leading-0 md:text-[15px] lg:text-[20px] my-heading'>{elem.text}</span>
         </div>
         <div>
@@ -74,7 +74,7 @@ timeline.from(child,{
           </button>
         </div>
       </div>
-      <div className='h-[120px] md:h-[230px] lg:h-[320px] w-[30%]'>
+      <div className='h-[120px] md:h-[230px] lg:h-[320px] w-[35%]'>
         <Image src={elem.im} width={250} height={400} alt='' className='!h-full !w-full object-cover rounded-2xl' />
       </div>
     </div>

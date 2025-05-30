@@ -31,16 +31,16 @@ useEffect(()=>{
   }, [inView])
 
   return (
-    <div className='flex flex-col items-center justify-center h-[800px] w-full overflow-hidden' ref={ref}>
+    <div className='flex flex-col items-center justify-center h-[800px] gap-[20px] w-full overflow-hidden' ref={ref}>
         <div className='flex  md:flex-row flex-col items-center justify-evenly w-[80%] gap-16 '>
-            <div className='relative md:h-[300px] w-full md:w-[40%] z-20'>
+            <div className='relative md:h-[300px] w-full md:w-[50%] lg:w-[40%] z-20'>
                 <Image  src={About1} className='!h-full !w-full !object-cover rounded-2xl'/>
             </div>
-            <div className='text-white w-full md:w-[40%]' ref={ref1}><h2 className='md:text-[80px] text-[25px]'>Vision</h2><span className='md:text-[20px] leading-6'>To be a leading force in redefining real estate excellence by creating iconic, sustainable communities that inspire modern living.</span></div>
+            <div className='text-white w-full md:w-[40%] lg:w-[40%]' ref={ref1}><h2 className='lg:text-[80px] text-[35px]'>Vision</h2><span className='lg:text-[20px] text-[15px] leading-6'>To be a leading force in redefining real estate excellence by creating iconic, sustainable communities that inspire modern living.</span></div>
         </div>
-        <div className='flex md:flex-row flex-col items-center justify-evenly w-[80%]'>
-                     <div className='md:w-[40%] w-full text-white' ref={ref2}>< h2 className='md:text-[80px] text-[25px]'>Mision</h2><span className='md:text-[20px] leading-6'>To deliver innovative, high-quality developments that exceed expectations, enrich lifestyles, and build long-term value for our clients, partners, and communities.</span></div>
-               <div className='relative md:h-[300px] md:w-[40%] w-full  z-20'>
+        <div className='flex md:flex-row flex-col  gap-[20px] items-center justify-evenly w-[80%]'>
+                     <div className='md:w-[40%] lg:w-[40%] w-full text-white' ref={ref2}>< h2 className='lg:text-[80px] text-[35px]'>Mision</h2><span className='lg:text-[20px] text-[15px] leading-6'>To deliver innovative, high-quality developments that exceed expectations, enrich lifestyles, and build long-term value for our clients, partners, and communities.</span></div>
+               <div className='relative md:h-[300px] md:w-[50%] lg:w-[40%] w-full  z-20'>
                 <Image src={About2} className='!h-full !w-full !object-cover rounded-2xl'/>
 
             </div>
