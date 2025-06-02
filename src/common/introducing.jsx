@@ -26,7 +26,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,bt
         scrollTrigger: {
           trigger: overlay?introRef.current:containerRef.current,
           start: 'top top',
-  end: () => overlay?`+=1000`:`+=${distance}`,
+  end: () => overlay?`+=600`:`+=${distance}`,
 // ✅ Match scroll distance exactly
           scrub: true,
           pin: true,

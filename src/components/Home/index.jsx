@@ -115,17 +115,17 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
           </div>
 
            <div className='bg-[#002E3C] relative' ref={main}>
-                                    <Sectiontwo classNamemain={' !h-[500px]'} classNameH={'!text-[45px] '} className={'!text-[20px] !leading-8'}heading={true} text1={'Discover a New Era of Living'} text={'Welcome to Empire Development, a forward-looking real estate developer in Dubai. Empire Lakeview is not only a place to live, but it is a transformative vision brought to life by Empire development. Empire Development reshapes urban life and offers apartments and homes built with modern technology.'}/>
+                                    <Sectiontwo classNamemain={'  !h-[700px] md:!h-[300px]'} classNameH={'!text-[40px] '} className={'!text-[20px] !leading-8'}heading={true} text1={'Discover a New Era of Living'} text={'Welcome to Empire Development, a forward-looking real estate developer in Dubai. Empire Lakeview is not only a place to live, but it is a transformative vision brought to life by Empire development. Empire Development reshapes urban life and offers apartments and homes built with modern technology.'}/>
 
-              <div ref={wrapper} className='h-[120vh] md:h-[150vh]'>           
+              <div ref={wrapper} className='h-[150vh]'>           
                 <Sectionthree main={main} wrapper={wrapper}/>
-                                             <Sectiontwo classNamemain={'!items-start !h-[300px]'} classNameH={'!text-[45px] '} className={'!text-[20px] !leading-8'} heading={true} text1={'Built with vision. Backed by integrity.'} text={"Empire Development's goal is to guide the change of modern living in the UAE. We focus on creating experiences that enhance every part of your life.  Empire Development offers premium quality in real estate development. If you want to buy a luxury home or property in Dubai, Empire Development is your ideal partner."} />
+                                             <Sectiontwo classNamemain={'!h-[350px] '} classNameH={'!text-[45px] '} className={'!text-[20px] !leading-8'} heading={true} text1={'Built with vision. Backed by integrity.'} text={"Empire Development's goal is to guide the change of modern living in the UAE. We focus on creating experiences that enhance every part of your life.  Empire Development offers premium quality in real estate development. If you want to buy a luxury home or property in Dubai, Empire Development is your ideal partner."} />
 
 
 </div> 
-<div ref={introRef} className='h-[150vh]'>
+<div ref={introRef} className='h-[180vh] md:h-[150vh]'>
                  <Introducing  ima={ima}  overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
-                                                       <Sectiontwo classNamemain={'!items-start'} classNameH={'!text-[45px] '} className={'!text-[20px] !leading-8'} heading={true} text1={'Built with vision. Backed by integrity.'} text={"Empire Development's goal is to guide the change of modern living in the UAE. We focus on creating experiences that enhance every part of your life.  Empire Development offers premium quality in real estate development. If you want to buy a luxury home or property in Dubai, Empire Development is your ideal partner."} />
+                                                       <Sectiontwo classNamemain={'!items-start !h-[700px] md:!h-[300px]'} classNameH={'!text-[45px] '} className={'!text-[20px] !leading-8'} heading={true} text1={'Top UAE Real Estate Developer'} text={"Empire Development provides creative, eco-friendly projects. That reflects awareness of the needs of our clients. Empire Development is one of the best real estate investments in the UAE. Whether you want to grow your portfolio or start your real estate journey, Empire Development is the right choice for you."} />
   </div>     
 
 <Brand text1={'The Advantages'} amenities={amenities} img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px]'} className3={' h-[40px]'}/>
