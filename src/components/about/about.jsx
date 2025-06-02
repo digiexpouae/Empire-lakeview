@@ -170,13 +170,13 @@ useEffect(() => {
  <div className='bg-[#002E3C]'>
 <Sectiontext  text={'Empire Developments is a Dubai-based real estate company known for delivering innovative, high-quality residential projects. With a focus on design excellence, smart features, and lifestyle amenities, Empire is redefining urban living across prime Dubai locations.'}/>
 <Section />
-<Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} img={'/assets/chess.jpg'} amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[50px] h-[50px]'}/>
+<Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'}   amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'}/>
 <Sectionthree />
 <Sectionfour images={images}/>
 </div>
         <Footer /> 
 </>
   )
-}
+} 
 
 export default about

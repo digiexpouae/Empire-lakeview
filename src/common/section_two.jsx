@@ -28,8 +28,10 @@ useEffect(()=>{
  setTimeout(() => {
     tl.fromTo(ref1.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1 })
       .fromTo(ref2.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=1.5") // starts 1.5s before previous ends
-      .fromTo(ref3.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=1.5");
-tl.fromTo(
+      .fromTo(ref3.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=2");
+
+  
+  tl.fromTo(
   ".element",
   { opacity: 0, y: 200 },
   {
@@ -41,8 +43,8 @@ tl.fromTo(
       ease: "power1.out"
     }
   }
-)
-   }, 0)
+)}
+  , 0)
 
 }
 
