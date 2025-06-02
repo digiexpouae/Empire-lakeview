@@ -3,8 +3,8 @@ import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import {gsap} from 'gsap';
 import { easeInOut } from 'framer-motion';
-const sectionthree = () => {
- const wrapper=useRef()
+import Section_text from './section_text';
+const sectionthree = ({wrapper}) => {
     const ima=[{logo:'/assets/45b89b0587f5c1c86e87d388ef5194978323e6db.png',text:'Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom apartments, & 3-bedroom duplexes, with many units featuring private pools.',btn:'View Project',im:'/assets/lakeview.jpg',className:'z-[40]'},{logo:'/assets/45b89b0587f5c1c86e87d388ef5194978323e6db.png',text:'Empire Livings is a 15-storey residential tower in Dubai Science Park, offering 202 units including studios, 1-bedroom apartments, and duplexes. Select homes feature private pools, with premium amenities such as a rooftop solar park, yoga deck, gym, and outdoor cinema.',btn:'View Project',im:'/assets/aca90d068f6adc319f0ca21c6af07538d9cb4322.png',className:'z-[30]'}
         ,{logo:'/assets/f8853b075a30feff95b8afa0ca7fcc4f979c8c1d.png',text:'Empire Estates is an 11-storey luxury development in Arjan, Dubai, featuring 325 units comprising studios, 1-, 2-, & 3-bedroom apartments. With private pool options,the project offers lagoon-style pool, sky gym, paddle court, rooftop lounge, & smart home.',btn:'View Project',im:'/assets/cbc303860f704bb9c770f6d5dc83b533c324b9f5.png',className:'z-[20]'}]
  
@@ -49,7 +49,7 @@ timeline.from(child,{
 )  
   }, []);
 
-    return (<div ref={wrapper}>
+    return (<div  >
                <h2 className='my-heading heading py-5'>Latest Projects</h2>
 
     <section className=' w-full flex  flex-col items-center justify-center card-wrapper relative h-[450px] md:mt-8' >
@@ -80,7 +80,8 @@ timeline.from(child,{
     </div>
   );
 })}
-    </section></div>
+    </section>
+    </div>
   )
 }
 

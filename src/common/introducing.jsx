@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import section from '@/components/about/section';
-const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,viewprojects,overlay,intro }) => {
+const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,btntext,viewprojects,overlay,intro,wrapper }) => {
       const containerRef = useRef(null)
   const sliderRef = useRef(null)
   useEffect(() => {
@@ -20,19 +20,22 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,btntext,vie
       const scrollDistance = totalScrollWidth - viewportWidth
       const distance=scrollDistance
 
-      gsap.to(sliderRef.current, {
+      gsap.fromTo(sliderRef.current, {},{
         x: `-${distance}px`,
         ease: 'none',
         scrollTrigger: {
-          trigger: containerRef.current,
+          trigger: overlay?introRef.current:containerRef.current,
           start: 'top top',
-  end: () => `+=${distance}`,
+  end: () => overlay?`+=1000`:`+=${distance}`,
 // ✅ Match scroll distance exactly
           scrub: true,
           pin: true,
             onLeave: () => {
-    document.querySelector('.container').style.position = 'relative';
-  },
+  if (containerRef.current) {
+    containerRef.current.style.position = 'relative';
+  }
+}
+,
           invalidateOnRefresh: true,
           anticipatePin: 1,
             pinSpacing: true, 
