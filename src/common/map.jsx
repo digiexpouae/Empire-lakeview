@@ -11,7 +11,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 // 🔁 Component that gets the map instance safely
-function ZoomOnScroll({ containerRef ,carref,center_position}) {
+function ZoomOnScroll({ containerRef ,carref,center_position,carcontainer}) {
   const map = useMap(); 
     const container = containerRef.current;
 
@@ -28,10 +28,7 @@ useEffect(() => {
     pin:true,
     scrub: true,  anticipatePin: 1,          // ← tells ScrollTrigger to “pre-pin” 1px early
   pinSpacing:true,       // ← forces position:fixed which is more stable
- onEnter: () => {
-      // if your map/slider needs to finish loading first:
-      ScrollTrigger.refresh();
-    },
+
     onUpdate: (self) => {
       const progress = self.progress;
       const zoomLevel = 13 - (3 * progress);
@@ -39,28 +36,10 @@ useEffect(() => {
    },
   });
 
-  // GSAP animation for moving the object left to right on scroll
-  const cs = gsap.fromTo(
-    carref.current,
-    { left: '20%' },
-    {
-      left: '80%',
-      scrollTrigger: {
-        trigger: container,
-          
-
-        start: 'top top',
-        end: '+=3500',
-        scrub: true,
-        // Do NOT pin here to avoid conflicts
-      },
-    }
-  );
      return () => {
      
     
     st.kill();
-    cs.kill();
   };
 }, []);
 
@@ -68,7 +47,7 @@ useEffect(() => {
   return null;
 }
 
-const Map = ({ className, containerRef,sectionref,Name,center_position,markers,Main_marker}) => {
+const Map = ({ className, containerRef,sectionref,Name,center_position,markers,Main_marker,carcontainer}) => {
  
 
 
@@ -107,7 +86,7 @@ const bounds = L.latLngBounds(markers.coordinates);
   doubleClickZoom={false}
   boxZoom={false}
   dragging={false} // 
-      className={`${className}  h-[100%] lg:h-[70vh] w-[100%]`}
+      className={`${className}  h-[70vh] w-[100%]`}
     >{console.log()}
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"

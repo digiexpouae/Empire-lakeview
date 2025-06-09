@@ -1,5 +1,5 @@
 // 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Header from '@/layout/header';
 import Footer from '@/layout/footer';
@@ -11,9 +11,12 @@ import ima2 from '../../../public/assets/896f9f592b964d92926d050a82ffdf7c0cc5292
 import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390a.jpg';
 import Sectionthree from '../../common/sectionthree'
 import SectionFour from '@/common/section_four';
+import Sectiontext from '@/common/section_text';
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 const ima=[ima1,ima2,ima3]
+const wrapper=useRef()
+const introRef=useRef()
  const imag = [
   {
     src: '/assets/ee70d663c4a8db7d05f72f368ee23dc4874fe3d5.png',
@@ -21,7 +24,18 @@ const ima=[ima1,ima2,ima3]
     subtitle: '',
   }
 ];
-  return (
+const head='EXPERIENCE MODERN LIVING IN DUBAI'
+const para="JVC is one of the top neighborhoods in Dubai. This is where the new residential property, Empire Lakeview. It is the ideal choice for you if you want to book an apartment in Dubai that offers comfortable, stylish apartments with smart designs. Empire Development's project features modern architecture residences Dubai that buyers want today."
+const head2='Home Design For Your Comfort'
+const para2="Every apartment in the Empire Lakeview development by Empire Development is spacious. They feature high-quality finishes, made with premium materials. The residences have smart conveniences. Empire Development included sophisticated security systems, climate control, and automatic lighting. These features simplify your life and help you save energy. Its modern design and smart living concepts make it a top choice."
+const head3='Modern Amenities for Everyday Comfort'
+const para3="Residents of Empire Lakeview by Empire Development can have several outstanding amenities. You may lounge and take in city views from a rooftop swimming pool. For those who enjoy exercise, the project boasts a fully furnished gym. Safe play areas for children, and your convenience, the community boasts retail stores. Empire Development also provides 24/7 security and covered parking to help you feel comfortable and safe."
+const head4='Prime Location, Premium Value'
+const para4="Empire Lakeview by Empire Development is close to shopping centers, colleges, and offices. It makes daily life easier and more convenient. It also ensures that the project is among the high ROI properties in Dubai, which makes it a wise investment decision."
+const head5='Book an Apartment Today at Empire Lakeview '
+const para5="Empire Lakeview by Empire Development offers both a great investment and a stylish residence. Don't miss the opportunity to live in one of the finest modern architecture residences Dubai. Book an apartment in Dubai now and savor a future-ready way of life."
+
+return (
     <>
       <div className="w-full relative md:h-[600px] h-[400px]">
         <Header />
@@ -50,13 +64,25 @@ const ima=[ima1,ima2,ima3]
         </div>
       </div>
      <div className='bg-[#002E3C]'>
-      <Sectionthree />
-   <Introducing ima={ima} overlay={true} text1={'Projects'} className1={'!h-[500px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[180px] md:!h-[250px]  !w-[400px]   relative'}/>
+<div className='h-[800px] md:h-[500px] flex flex-col items-center justify-center'>
+                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[350px]'} classNameH={'!text-[35px] '} className={'!text-[18px] !leading-5'} heading={true} text1={head} text={para}/>
+</div>
+              <div ref={wrapper} className='h-[170vh]'>   
+
+                <Sectionthree  wrapper={wrapper}/>
+                            <Sectiontext classNamemain={'!items-start !h-[800px] !h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[18px] !leading-5'} heading={true} text1={head2} text={para2} />
+</div>
+<div ref={introRef} className='h-[180vh] md:h-[150vh]'>
+                 <Introducing  ima={ima}  overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[350px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
+                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[300px] py-6'} classNameH={'!text-[35px] '} className={'!text-[18px] !leading-5'} heading={true} text1={head3} text={para3}/>
+  </div>     
+
+
 
 <SectionFour images={imag} />
 
 </div>
-      <Footer />
+      <Footer  footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>
     </>
   );
 };

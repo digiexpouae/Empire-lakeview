@@ -109,8 +109,14 @@ useEffect(() => {
   }
 }, [inView, count]);
 
-
-
+const head='Who We Are'
+const para="Empire Development stands out among the new-age real estate developers in UAE. We create modern, smart, long-lasting spaces. Based in Dubai, we not only build apartments, we shape modern living. Empire Development's every project is for those who value comfort, design, and long-term living."
+const head2='Our Purpose'
+const para2="Empire Development believes that houses should reflect the fast-paced world around you. We create smart, sustainable, futuristic, and reasonably priced homes. We aim to provide investors and residents with a place that feels like home from day one."
+const head3='Our Approach'
+const para3="Empire Development strategically situated each project in rapidly growing communities. We focus on smart layouts and luxury finishes. Empire Development offers built-in smart technology like lighting, temperature control, and safe access. We create living spaces that feature rooftop pools, gyms, green areas, and shops."
+const head4='A Name You Can Trust on'
+const para4="Empire Development is the leading UAE property developer. We guide clients through each step and every step. From selecting the right investment to post-handover help. Whether it's a new launch studio apartment or a personal residence, Empire Development is here to help you."
 
 
   return (
@@ -168,13 +174,15 @@ useEffect(() => {
      
     </div>
  <div className='bg-[#002E3C]'>
-<Sectiontext  text={'Empire Developments is a Dubai-based real estate company known for delivering innovative, high-quality residential projects. With a focus on design excellence, smart features, and lifestyle amenities, Empire is redefining urban living across prime Dubai locations.'}/>
+      <Sectiontext classNamemain={'!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={head} text={para}/>
 <Section />
+      <Sectiontext classNamemain={'!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={head2} text={para2}/>
+
 <Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'}   amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'}/>
 <Sectionthree />
 <Sectionfour images={images}/>
 </div>
-        <Footer /> 
+        <Footer footertext={true} text1={head3} text={para3} text2={head4} textpara={para4}/> 
 </>
   )
 } 

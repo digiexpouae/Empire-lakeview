@@ -70,7 +70,18 @@ const [cloud, setcloud] = useState(false)
 const [main, setmain] = useState(false)
 const images=[{im:'/assets/1a5f1869b5bf5ea58896fa4d32bb37b4af630f96.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.'},{im:'/assets/d86834808dd262a4f9acfccc932de56679469de9.jpg',tex1:"2 Bed",tex2:'SIZE: 1319 SQ.FT. TO 1328 SQ.FT.'},{im:'/assets/f23ea6b86b2d8f5b9095c62dd771d8000ce47043.jpg',tex1:'Duplex',tex2:'SIZE: 753 SQ.FT. TO 867 SQ.FT'},{im:'/assets/3bf3a024dffe0b0ca1e910dcb38db4fba83970a8.jpg',tex1:'Studio',tex2:'SIZE: 432.42 SQ.FT'},{im:'',tex1:'',tex2:''}]
       
-        return (<>
+const head = "Empire Estates: Elevate Your Lifestyle" 
+const head2= 'Where Convenience Meets Lifestyle'     
+const head3= 'Homes Designed for Next-Gen'     
+const head4= 'Amenities for Comfort and Leisure'     
+const head5= 'Sustainable Luxury, Smart Investment '     
+const para =  "Empire Estate by Empire Development sets a new standard for modern living. It is located in the heart of Jumeirah Village. This project of Empire Development features high-end apartments. These residences are designed with luxurious features, modern home automation, and spacious layouts. They provide a combination of comfort, modern intelligence, and sophisticated design."
+const para2="Empire State is ideally located in one of Dubai’s fastest-growing areas. Its residents can easily access schools, retail outlets, dining, and business hubs. This improves amenities. It also boosts value and may lead to higher rental returns. Empire Development's project is ideal for buyers looking to invest in luxury residential projects in Dubai." 
+const para3= "Every apartment in Empire Estate by Empire Developments features modern home technology. It offers the highest level of amenities. These features include smart home control, automated lighting, and advanced security. You can use voice commands for all of them. This smart automation makes daily life easier. It also saves energy and enhances security."
+const para4= "Empire State by Empire Developments provides many high-quality amenities. These features enhance the sophistication of your lifestyle. Empire Developments has created a rooftop pool for the residences. You can also work on your fitness at the gym. Meanwhile, the kids can play safely at the playground. The project also provides covered parking and 24/7 security, which is a symbol of peace in every aspect."
+const para5= "The Empire development team has committed to sustainability. This Empire development project uses eco-friendly materials and modern technology. It saves energy. It also offers flexible and secure payment plans. This is perfect for those people looking to invest in luxury Dubai properties for sale."
+      
+      return (<>
       
       <div className='w-full relative md:h-[600px] h-[400px]'>
               <Header className='nav-menu absolute z-50'/>
@@ -78,15 +89,23 @@ const images=[{im:'/assets/1a5f1869b5bf5ea58896fa4d32bb37b4af630f96.jpg',tex1:'1
                <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
                 </div>
               <div className='bg-[#002E3C]'>
-                <Sectiontext className={'md:!h-[600px]'} text={"Empire Estates is a luxury 11-storey project in Arjan, Dubai, offering studios to 3-bedroom apartments, some with private pools. It features premium amenities like a lagoon pool, sky gym, and rooftop lounge." }/>
-              <SectionThree />
+                <div className='md:h-[400px] flex flex-col items-center justify-center h-[800px]'>
+ <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[200px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para}/>
+</div>
+<SectionThree />
+
               <Sectionfour />
+               <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[320px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head2} text={para2}/>
+
                  <Section images={image} />
+
                  <Places Name={'Empire Estates'}  markers={markers} center_position={[25.0631, 55.2471]} Main_marker={'Empire Estates'} />
                 <Icons icons={icons}/>
+                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head3} text={para3}/>
+
                  <SectionFive  images={ima} background={false} />
                 </div>
-                <Footer />
+                <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>
       </>
         )
       }
