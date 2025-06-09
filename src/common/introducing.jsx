@@ -35,7 +35,6 @@ gsap.fromTo(sliderRef.current, {}, {
     pinSpacing: true,
     anticipatePin: intro && 1,
     invalidateOnRefresh: true,
-    preventOverlaps: true,
        
        
 
@@ -59,7 +58,7 @@ gsap.fromTo(sliderRef.current, {}, {
    
 return (
   
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[100vh]'} ${className1}  flex items-center  my-16 container relative`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[100vh]'} ${className1}  flex items-center  container relative`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}

@@ -36,7 +36,7 @@ im:'/assets/cmpc.png'
 
 
   ]
-  const images=[{src:'/assets/plazoheihts.png'}]
+  const images=[{src:'/assets/260780ea8e7c2393724d8e1ec8066a2b09f5a17f.jpg'}]
   const textpara='Plazzo Heights is a six-storey residential building located in Jumeirah Village Circle (JVC), Dubai. Developed by Plazzo Development Real Estate, it offers studios, 1, and 2-bedroom apartments with modern amenities.'
   const head='Elevate Your Living Experience.'
   const para="Palazzo Heights by Empire Development in JVC redefines modern urban life. It features smart design and innovative technology. Empire Development JVC residential apartments blend luxury with comfort. Plazzo Heights guarantees a unique way of life, whether you are searching for a home or an investment."
@@ -57,7 +57,7 @@ im:'/assets/cmpc.png'
           </div>
                      <div className='bg-[#002E3C]'>
           <Sectiontwo  amenities={amenities} textpara={textpara} btn={false}/>
-                                <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para} />
+                                <Sectiontext classNamemain={'!items-center !h-[700px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para} />
 
           <Sectionthree />
              <Map  map={map} title={'View Plazzo Residence'}/>
