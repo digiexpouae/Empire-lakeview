@@ -64,17 +64,17 @@ return (
         </div>
       </div>
      <div className='bg-[#002E3C]'>
-<div className='h-[800px] md:h-[500px] flex flex-col items-center justify-center'>
-                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[350px]'} classNameH={'!text-[35px] '} className={'!text-[18px] !leading-5'} heading={true} text1={head} text={para}/>
+<div className='h-[800px] md:h-[400px] flex flex-col items-center justify-center'>
+                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[250px]'} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head} text={para}/>
 </div>
-              <div ref={wrapper} className='h-[170vh]'>   
+              <div ref={wrapper} className='h-[120vh] md:h-[100vh] lg:h-[180vh]'>   
 
                 <Sectionthree  wrapper={wrapper}/>
-                            <Sectiontext classNamemain={'!items-start !h-[800px] !h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[18px] !leading-5'} heading={true} text1={head2} text={para2} />
+                            <Sectiontext classNamemain={'md:!items-center !h-[500px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[18px] !leading-5'} heading={true} text1={head2} text={para2} />
 </div>
-<div ref={introRef} className='h-[180vh] md:h-[150vh]'>
-                 <Introducing  ima={ima}  overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[350px] overflow-hidden'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
-                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[300px] py-6'} classNameH={'!text-[35px] '} className={'!text-[18px] !leading-5'} heading={true} text1={head3} text={para3}/>
+<div ref={introRef} className='h-[120vh] md:h-[100vh] flex flex-col justify-evenly'>
+                 <Introducing  ima={ima}  overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
+                                                       <Sectiontext classNamemain={'!items-start !h-[500px] md:!h-[300px] py-6'} classNameH={'  !text-[35px] '} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head3} text={para3}/>
   </div>     
 
 

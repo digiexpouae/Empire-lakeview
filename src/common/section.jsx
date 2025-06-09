@@ -44,8 +44,8 @@ const wrapper=useRef()
         }
       ]
     return ( 
-  <div  className='h-[350px] md:h-[550px]  mt-[20px] w-full relative' ref={wrapper}  >
-    <div className='h-full  w-full' >
+  <div  className='h-[100vh]  flex items-center justify-center w-full relative' ref={wrapper}  >
+    <div className='h-[350px] md:h-[550px]  w-full' >
       <div className="relative h-full  w-full  "    >
         <Image
           src={currentImage.im}

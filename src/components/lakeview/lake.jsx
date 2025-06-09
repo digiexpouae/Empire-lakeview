@@ -128,12 +128,12 @@ const para5="Empire Lakeview in Liwan by Empire Development is one of the best c
      <Sectiontwo classNamemain={'!items-start !h-[500px] md:!h-[300px]'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />
 
           <Sectionthree images={images} onAllVisible={handleAllVisible} /> 
-      <Sectiontwo classNamemain={'!items-start !h-[700px] md:!h-[300px] py-6'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-8'} heading={true} text1={head}  text={para2} />
+      <Sectiontwo classNamemain={' !h-[700px] md:!h-[500px] py-6 flex !items-center justify-center'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-8'} heading={true} text1={head}  text={para2} />
 
        
    <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews'/>
            <Icon icons={icons}/> 
-                 <Sectiontwo classNamemain={'!items-start !h-[750px] md:!h-[300px]'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-8'} heading={true} text1={head2}  text={para3} />
+                 <Sectiontwo classNamemain={'!items-center !h-[750px] md:!h-[400px]'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-8'} heading={true} text1={head2}  text={para3} />
 
           <SectionFour images={imag} background={false}/>
                    </div>

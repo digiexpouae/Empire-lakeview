@@ -15,38 +15,27 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,bt
 
       gsap.registerPlugin(ScrollTrigger)
 
-      const totalScrollWidth = sliderRef.current.scrollWidth
-      const viewportWidth = window.innerWidth
-      const scrollDistance = totalScrollWidth - viewportWidth
-      const distance=scrollDistance
+    
+    const totalScrollWidth = sliderRef.current.scrollWidth;
+    const viewportWidth = window.innerWidth;
+    const scrollDistance = totalScrollWidth - viewportWidth;
+const isMobile = window.innerWidth <= 970;
+const extraDistance = isMobile ? 500 : 0;
+const distance = scrollDistance;
 
-      gsap.fromTo(sliderRef.current, {},{
-        x: `-${distance}px`,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: overlay?introRef.current:containerRef.current,
-          start: 'top top',
-          preventOverlaps:true,
-
-          anticipatePin:1,    
-          pinSpacing:true,
-  end: () => overlay?`+=1000`:`+=${distance}`,
-// ✅ Match scroll distance exactly
-          scrub: true,
-          pin: true,
-            onEnter: () => ScrollTrigger.refresh(),
-            onLeave: () => {
-  if (containerRef.current) {
-    containerRef.current.style.position = 'relative';
-  }
-}
-,
-onLeaveBack: () => {
-  if (containerRef.current) {
-    containerRef.current.style.position = 'relative';
-  }
-}
-
+gsap.fromTo(sliderRef.current, {}, {
+  x: `-${distance}px`,
+  ease: 'none',
+  scrollTrigger: {
+    trigger: overlay ? introRef.current : containerRef.current,
+    start: 'top top',
+    end: () => overlay ? '+=1000' : `+=${distance + extraDistance}`,
+    scrub: true,
+    pin: true,
+    pinSpacing: true,
+    anticipatePin: intro && 1,
+    invalidateOnRefresh: true,
+    preventOverlaps: true,
        
        
 
@@ -70,7 +59,7 @@ onLeaveBack: () => {
    
 return (
   
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center  my-16 container relative`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[100vh]'} ${className1}  flex items-center  my-16 container relative`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}
@@ -89,7 +78,7 @@ return (
       {ima.map((elem, index) => (
         <div
           key={index}
-          className={`shrink-0 inline-block xl:w-[340px] lg:w-[450px] md:w-[350px] w-[270px] h-[404px] lg:h-[550px] ${className}`}
+          className={`shrink-0 inline-block xl:w-[340px] lg:w-[450px] md:w-[350px] w-[270px] h-[404px] md:h-[550px] ${className}`}
         >
           <Image
             src={elem}
