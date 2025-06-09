@@ -60,7 +60,7 @@ timeline.from(child,{
   return (
     <div
       key={index}
-      className={`cards flex items-center justify-center h-[50%] md:h-[100%] absolute w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-3xl duration-150` }   
+      className={`cards flex items-center justify-center h-[60%] md:h-[100%] absolute w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-3xl duration-150` }   
     >
       <div className='flex flex-col w-[55%]'>
         <div className='h-[60px] w-[120px] md:w-[210px] md:h-[120px]'>

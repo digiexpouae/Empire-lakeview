@@ -30,10 +30,11 @@ useEffect(() => {
     ScrollTrigger.create({
       trigger: wrapper.current,
       start: 'center center',
-      end: `+=${scrollLength}`,
+      end: `+=2000`,
       scrub: true,
       pin: true,
       pinSpacing: true,
+      anticipatePin:2,
       preventOverlaps:true,
   onUpdate: self => {
   let slideIndex;
