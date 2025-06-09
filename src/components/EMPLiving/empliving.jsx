@@ -21,7 +21,7 @@ import PalmJumeirah from '../../../public/palm jumairah.svg';
 import DubaiInternationalAirport from '../../../public/assets/international (2).svg';
 import DubaiMarina from '../../../public/marine.svg';
 import Icon from '../../components/icon'
-
+import Sectiontext from '@/common/section_text'
 
 
 
@@ -58,8 +58,18 @@ const markers = [
 const [cloud, setcloud] = useState(true)
 const [main, setmain] = useState(true)
     const images=[{im:'/assets/1a5f1869b5bf5ea58896fa4d32bb37b4af630f96.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.'},{im:'/assets/d86834808dd262a4f9acfccc932de56679469de9.jpg',tex1:"2 Bed",tex2:'SIZE: 1319 SQ.FT. TO 1328 SQ.FT.'},{im:'/assets/f23ea6b86b2d8f5b9095c62dd771d8000ce47043.jpg',tex1:'Duplex',tex2:'SIZE: 753 SQ.FT. TO 867 SQ.FT'},{im:'/assets/3bf3a024dffe0b0ca1e910dcb38db4fba83970a8.jpg',tex1:'Studio',tex2:'SIZE: 432.42 SQ.FT'},{im:'',tex1:'',tex2:''}]
+const head='Empire Living: Where Luxury Meets Smart Innovation '
+const para= "Empire Development presents Empire Lakeview. It offers apartments for sale in Dubai in Jumeirah Village. These apartments are ideal for anyone seeking a spacious and stylish home. They also come with modern tech automation. Empire Development's project features new construction styles, beautiful finishes, and smart residential solutions. Creates a lifestyle that is a blend of ease, refinement and convenience."
+const head2='Strategic Location, Comfortable Living'  
+const para2="Empire Living by Empire Development puts you close to everything that matters. You are just minutes away from top schools, shopping centers, and a business hub. This prime location makes your life easier and also provides great opportunities for  real estate investment in Dubai."
+const head3='Live Smart, Live Better'
+const para3= "Each apartment developed by Empire Development has advanced technology systems. These technologies include electricity, heating, security, and voice commands. Empire Development focuses on modern automation. This makes homes efficient and ready for the future. They are designed to simplify your lifestyle and save you energy."
+const head4='Modern Amenities for Daily Life'
+const para4="Empire Living by Empire Development offers a wide range of high-end amenities. This includes a rooftop swimming pool with breathtaking views. Empire Development offers a gym, a children's playground, 24/7 security, and shaded parking. These amenities provide a vibrant and safe community."
+const head5=' Sustainable and Smart Investment '
+const para5="Empire Development has built Empire Lakeview with high-quality materials and energy-efficient technologies. We offer luxury without sacrificing comfort. This project has flexible payment plans. It’s a great chance to buy luxury homes. Empire Development broadens the real estate investment portfolio in Dubai’s vibrant market."
 
-    
+
   return (<>
 
 <div className='w-full relative md:h-[600px] h-[400px]'>
@@ -70,14 +80,21 @@ const [main, setmain] = useState(true)
         <div className='bg-[#002E3C]'>
           <Sectiontwo />
         <SectionThree />
+          <Sectiontext classNamemain={'  !h-[800px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para} />
           <Luxury />
+          <Sectiontext classNamemain={'  !h-[700px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head2} text={para2} />
+
+
+
       <Sectionfour images={images} slide={4}/>
 
       <Places center_position={[25.114806, 55.364444]} Name={'Empire Livings'} markers={markers} Main_marker='Empire Living' />
         <Icon icons={icons}/>
+                  <Sectiontext classNamemain={'  !h-[700px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head3} text={para3} />
+
           <Section images={ima} background={false}/>
           </div>
-          <Footer />
+          <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>
 </>
   )
 }

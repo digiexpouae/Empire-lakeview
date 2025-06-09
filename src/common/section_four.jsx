@@ -58,12 +58,12 @@ useEffect(() => {
       handleClick();
            setTimeout(() => {
           setIsTransitioning(true)
-        }, 1000);
+        }, 500);
       setTimeout(() => {
             handleClick();
    
-      }, 5000); 
-    }, 2000); 
+      },3500); 
+    }, 1000); 
   }
 }, [inView]);
 
@@ -71,12 +71,12 @@ useEffect(() => {
 if(count ==2){
   
     gsap.fromTo(ref1.current, 
-      { left: '-20%',delay:1 },
-      { left: 0, opacity: 1, duration: 2, ease: 'power3.out' }
+      { left: '-20%',delay:0.5 },
+      { left: 0, opacity: 1, duration: 1, ease: 'power3.out' }
     );
      gsap.fromTo(ref2.current, 
       {right:'-50%'},
-      {right:0, opacity: 1,duration: 2, ease: 'power3.out' }
+      {right:0, opacity: 1,duration: 1, ease: 'power3.out' }
     );
     }
   }
@@ -93,7 +93,7 @@ if(count ==2){
         key={images[index].src + '-prev'}
              initial={{ opacity: 1 }}
   animate={{ opacity: 0.9, scale: [1.6,1] }}
-            transition={{duration: 1, ease: 'easeInOut' }}
+            transition={{duration: 0.5, ease: 'easeInOut' }}
         className="absolute inset-0 z-0 "
       >
         

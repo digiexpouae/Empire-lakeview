@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 const sectionthree = () => {
   return (
-    <div className='flex  md:h-[700px] h-[400px] w-full items-center justify-center'>
+    <div className='flex  md:h-[500px] h-[400px] w-full items-center justify-center'>
       <div className=' flex items-center justify-center gap-[10px] h-[600px] w-[80%] lg:w-[65%]'>
         <div className='w-[50px] h-[50px] md:w-[90px] md:h-[90px] lg:w-[130px] lg:h-[130px]'><Image src={im1} alt="image 1" className='object-cover !h-full !w-full'/>
 </div>

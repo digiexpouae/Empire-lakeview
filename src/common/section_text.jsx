@@ -1,9 +1,9 @@
 import React from 'react'
 
-const section_text = ({text,className,heading,text1,classNameH,classNamemain}) => {
+const section_text = ({text,className,heading,text1,classNameH,classNamemain,footer}) => {
   return (
     <div className={`w-full flex items-center justify-center md:h-[560px] h-[400px] ${classNamemain}`}>
-        <div className={`w-[80%] text-center `}>
+        <div className={`w-[80%] text-center ${footer}`}>
           {heading && 
           
           <h2 className={`my-heading heading py-5 ${classNameH}`}>{text1}</h2>

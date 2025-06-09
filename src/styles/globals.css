@@ -7,6 +7,7 @@
 :root {
   --font-inter: 'Inter', sans-serif;
 }
+
 body {
   overflow-x: hidden;
   scrollbar-width: none; /* Firefox */
@@ -94,3 +95,4 @@ svg{
 .pin-spacer{
   overflow: hidden!important;
 }
+

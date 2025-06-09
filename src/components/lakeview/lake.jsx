@@ -32,6 +32,7 @@ import DowntownDubai from '../../../public/assets/g2589.svg';
 import DubaiAirport from '../../../public/assets/international (2).svg';
 import Introducing from '@/common/introducing'
 import { Heading } from 'lucide-react'
+import Sectiontwo from '../../common/section_text'
 const index = () => {
   const [main, setmain] = useState(true)
   const [cloud, setcloud] = useState(true)
@@ -100,10 +101,17 @@ const [background, setbackground] = useState(false)
   const handleAllVisible = () => {
     setShowFooter(true); // ✅ When SectionThree is done, show footer
   };
-
-
-
-  return (
+const text1='Premium Residences in Liwan, Dubai'
+const para="Liwan homes by Empire Development presents a unique opportunity. Residents can enjoy modern living in a peaceful, family-friendly setting. This project features smart layouts, premium finishers, and essential conveniences. It is perfect for you if you are looking for a new home or exploring Dubai real estate investments."
+const head='Elevated Living in a Modern Community '
+const para2="Empire Development offers Spacious 1 and 2-bedroom flats for modern living. Liwan homes have smart home features, open layouts, and premium finishes. These homes by Empire Development  are a perfect fit for families, young professionals, and investors looking for long-term growth.  "
+const head2='Perfect Location with Simple Access' 
+const para3 ="Liwan is close to the main highways and is very convenient. People can easily go to Downtown Dubai, Business Bay, and the International Airport. The area is also close to parks, shopping malls, hospitals and schools. It is a great place to invest and live a strong life. Empire Lakeview by Empire Development is ideal for Liwan Dubai property investment. It combines location, design, and price perfectly. It's a wise approach to own in a fast growing area of the city."
+const head3='Amenities for Modern Living' 
+const para4="There are many best facilities available for residents provided by Empire Development. They can have a swimming pool, gym, kids' play area, and well-maintained gardens. If you're seeking quality waterfront homes in Dubai without the high price, this is a great option." 
+const head4='Smart Investment in Dubai'
+const para5="Empire Lakeview in Liwan by Empire Development is one of the best choices for Dubai real estate investment. With an easy and flexible payment schedule It's a great chance for both end users and investors."
+ return (
 <>
 <div className='w-full relative md:h-[600px] h-[400px]'>
         <Header className='nav-menu absolute z-50'/>
@@ -117,14 +125,20 @@ const [background, setbackground] = useState(false)
               Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom 
               apartments, & 3-bedroom duplexes, with many units featuring private pools.`}   /> 
            <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />
+     <Sectiontwo classNamemain={'!items-start !h-[500px] md:!h-[300px]'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />
+
           <Sectionthree images={images} onAllVisible={handleAllVisible} /> 
+      <Sectiontwo classNamemain={'!items-start !h-[700px] md:!h-[300px] py-6'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-8'} heading={true} text1={head}  text={para2} />
+
        
    <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews'/>
            <Icon icons={icons}/> 
+                 <Sectiontwo classNamemain={'!items-start !h-[750px] md:!h-[300px]'}  classNameH={'!text-[35px] '} className={'!text-[16px] !leading-8'} heading={true} text1={head2}  text={para3} />
+
           <SectionFour images={imag} background={false}/>
                    </div>
 
-           <Footer />
+           <Footer footertext={true} text1={head3} text2={head4} text={para4} textpara={para5} />
     </>
   )
 }

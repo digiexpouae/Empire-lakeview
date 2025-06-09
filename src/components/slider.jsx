@@ -22,7 +22,7 @@ useEffect(() => {
 
     const totalSlides = images.length;
     const scrollLength = window.innerHeight * totalSlides;
-    const scroll =scrollLength +1000
+    const scroll =scrollLength
 
     // Force Swiper to show slide 0 on init
     swiperInstance.slideTo(1, 0);
@@ -34,8 +34,7 @@ useEffect(() => {
       scrub: true,
       pin: true,
       pinSpacing: true,
-      anticipatePin: 1,
-      fastScrollEnd: true,
+      preventOverlaps:true,
   onUpdate: self => {
   let slideIndex;
 

@@ -76,7 +76,7 @@ useEffect(() => {
     });
   });
 
-  return () => ct.kill()
+  return () => ctx.kill()
 }, [container]);
 
 
@@ -86,7 +86,7 @@ useEffect(() => {
 <div className='flex flex-col  items-center justify-center w-full text-center leading-12 md:leading-none min-h-[150vh] container overflow-hidden my-10' >      
     <h1 className='text-[45px] lg:text-[100px] my-heading  text-white font-bold'>Picture Your Future</h1>
 <div className=' flex flex-col  items-center justify-center w-full text-center h-[100vh ]' ref={container}>
-    <div className='w-full h-screen overflow-y-scroll scrollbar-hide flex flex-col  items-center justify-center'    ref={scrollRef}  >
+    <div className='w-full h-screen overflow-hidden scrollbar-hide flex flex-col  items-center justify-center'    ref={scrollRef}  >
 
       <div className='w-[90%] md:w-[80%] h-full flex items-center justify-center'>
     
@@ -115,10 +115,10 @@ useEffect(() => {
 
      <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] -mt-8 md:-mt-24'}><Image priority  src={empire13}  className='!h-full !w-full   rounded-3xl object-cover'/></div> 
      <div className={'w-[22%] h-[120px] md:h-[200px] lg:h-[290px] '}><Image src={empire} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-         <div className='flex flex-col items-center w-[45%]'>
-          <div className={'w-[90%] h-[80px] md:h-[150px] -mt-8 '}><Image src={empirelivin} priority  className='!h-full !w-full   rounded-3xl object-cover'/>
+         <div className='flex flex-col items-center  w-[45%]'>
+          <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8 '}><Image src={empirelivin} priority  className='!h-full !w-full   rounded-3xl object-cover'/>
           </div>
-                   <button className="
+                   <button className=" h-[30px] md:h-auto flex items-center justify-center
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
     hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-[9px] md:text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
           </div>

@@ -9,6 +9,7 @@ import Sectiontwo from '@/common/sectiontwo'
 import Testimonials from '@/common/testimonials'
 import map from '../../../public/assets/plazzoimage.png'
 import Map from '@/common/maptwo'
+import Sectiontext from '@/common/section_text'
 import SectionFour from '@/common/section_four'
 import Sectionthree from './sectiontwo'
 const plazo = () => {
@@ -49,7 +50,15 @@ const text=
 im:'/assets/cmpc.png'
     }
   ]
-    return (
+  const text1='Modern Living Meets Elegance.'
+  const para="Empire Lakeview's Plazzo Residence (JVT) offers a mix of comfort and elegance. These homes meet the demand of modern homes. Empire Development is among the top real estate developers in UAE and has developed these luxury apartments JVT Dubai, to enhance your daily life. At Empire Development's Palazzo Residence, you enjoy a life of elegance and quality."
+  const texthead='Smart Homes, Smart Choices' 
+  const para2="Empire Development's homes include smart features for convenience, exceeding the basic requirements. You can manage temperature, lighting, and home security all from your phone. Today's fast-paced life calls for this tech-savvy approach. Empire Development has added sustainable features like energy-efficient systems for your convenience."
+ const texthead2='Modern Amenities for  Modern Living '
+ const para3="At Plazzo residence, you can relax at the rooftop pool. Empire Development has provided a gym center and beautiful gardens. Play areas for kids and 24/7 security ensures peace of mind. c Covered parking, retail stores and public lounges are also available. Each facility brings ease."
+ const head3='Luxury with a legacy '
+ const para4="Empire Development offers long-term value. From premium materials to expert workmanship, we include everything. Many people rely on Empire Development for luxury real estate in JVT, Dubai. Where history blends innovation."
+ return (
     <>  <div className='relative w-full md:!h-[600px] !h-[400px] z-20'>
         <Header />
       <Heroslider texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-140px] object-cover md:!h-[620px] !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'md:!top-8'} className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={overlay} main={true} cloud={cloud}/>
@@ -57,10 +66,15 @@ im:'/assets/cmpc.png'
      </div>
       <div className='bg-[#002E3C]'>
    < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[120px]'}/>
+ <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={text1} text={para}/>
 
    <Sectionthree />
+         <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={texthead2} text={para3}/>
+
       <Map  map={map} title={'View Plazzo Residence'}/>
+      <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={texthead} text={para2}/>
    <Testimonials />
+      <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={head3} text={para4}/>
 
    <SectionFour className='absolute '  images={images}/>
 </div>

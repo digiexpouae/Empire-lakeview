@@ -26,19 +26,28 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,bt
         scrollTrigger: {
           trigger: overlay?introRef.current:containerRef.current,
           start: 'top top',
-  end: () => overlay?`+=600`:`+=${distance}`,
+          preventOverlaps:true,
+
+          anticipatePin:1,    
+          pinSpacing:true,
+  end: () => overlay?`+=1000`:`+=${distance}`,
 // ✅ Match scroll distance exactly
           scrub: true,
           pin: true,
+            onEnter: () => ScrollTrigger.refresh(),
             onLeave: () => {
   if (containerRef.current) {
     containerRef.current.style.position = 'relative';
   }
 }
 ,
-          invalidateOnRefresh: true,
-          anticipatePin: 1,
-            pinSpacing: true, 
+onLeaveBack: () => {
+  if (containerRef.current) {
+    containerRef.current.style.position = 'relative';
+  }
+}
+
+       
        
 
         },
@@ -61,7 +70,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,bt
    
 return (
   
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center  my-16 container`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[700px]'} ${className1}  flex items-center  my-16 container relative`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}

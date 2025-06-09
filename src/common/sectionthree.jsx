@@ -9,6 +9,7 @@ const sectionthree = ({wrapper}) => {
         ,{logo:'/assets/f8853b075a30feff95b8afa0ca7fcc4f979c8c1d.png',text:'Empire Estates is an 11-storey luxury development in Arjan, Dubai, featuring 325 units comprising studios, 1-, 2-, & 3-bedroom apartments. With private pool options,the project offers lagoon-style pool, sky gym, paddle court, rooftop lounge, & smart home.',btn:'View Project',im:'/assets/cbc303860f704bb9c770f6d5dc83b533c324b9f5.png',className:'z-[20]'}]
  
 useEffect(() => {
+      if (!wrapper?.current) return; // ✅ Safety check
     const child = document.querySelectorAll('.card-wrapper .cards');
   import('gsap/ScrollTrigger').then((module) => {
     const ScrollTrigger = module.ScrollTrigger;

@@ -48,7 +48,7 @@ tl.fromTo(
         </div>
         <div className='bg-[linear-gradient(90deg,_#CCAB64_0%,_#FAECC9_100%)] flex items-center justify-center h-[20%] w-full'>
       <div className='w-[90%] flex  items-center justify-between gap-[10px]'>
-        <div className='flex flex-col'><h4 className='md:text-[30px] text-[15px] font-bold '>{text1}</h4> <span className='text-[15px]'>{text2}</span></div>
+        <div className='flex flex-col'><h4 className='md:text-[30px] text-[13px] font-bold '>{text1}</h4> <span className=' text-[10px] md:text-[15px]'>{text2}</span></div>
         <div className='flex items-center justify-center'>
           <LottieIcons  className={` element ${className3}`} amenities={amenities} ref={ref3} className2={className2} className1={className} iconsize={iconsize}/>
         </div>
