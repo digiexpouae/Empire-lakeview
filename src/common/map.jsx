@@ -9,6 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.normalizeScroll(true);
 
 // 🔁 Component that gets the map instance safely
 function ZoomOnScroll({ containerRef ,carref,center_position,carcontainer}) {
@@ -86,7 +87,7 @@ const bounds = L.latLngBounds(markers.coordinates);
   doubleClickZoom={false}
   boxZoom={false}
   dragging={false} // 
-      className={`${className}  h-[50vh] w-[100%]`}
+      className={`${className}  h-[50vh] xl:h-[70vh] w-[100%]`}
     >{console.log()}
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"

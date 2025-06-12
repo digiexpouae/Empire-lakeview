@@ -16,6 +16,8 @@ useEffect(() => {
     const gsap = (await import('gsap')).default;
     const { ScrollTrigger } = await import('gsap/ScrollTrigger');
     gsap.registerPlugin(ScrollTrigger);
+          ScrollTrigger.normalizeScroll(true);
+
 
     const swiperInstance = swiperRef.current?.swiper;
     if (!swiperInstance || !wrapper?.current) return;
@@ -34,7 +36,7 @@ useEffect(() => {
       scrub: true,
       pin: true,
       pinSpacing: true,
-      anticipatePin:2,
+      anticipatePin:1,
       preventOverlaps:true,
   onUpdate: self => {
   let slideIndex;

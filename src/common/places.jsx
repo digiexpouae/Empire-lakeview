@@ -19,6 +19,8 @@ useEffect(() => {
     const gsapModule = await import('gsap');
     const ScrollTrigger = (await import('gsap/ScrollTrigger')).ScrollTrigger;
     gsapModule.gsap.registerPlugin(ScrollTrigger);
+          ScrollTrigger.normalizeScroll(true);
+
 
     if (!movingRef.current || !carWrapperRef.current) return;
 
@@ -34,9 +36,17 @@ useEffect(() => {
   start: 'top top',
   end: '+=2000',
   scrub: true,
-  onEnter: () => ScrollTrigger.refresh(),
-  onEnterBack: () => ScrollTrigger.refresh(),
+  onUpdate: (self) => {
+          if (!movingRef.current) return;
+
+          if (self.progress <= 0) {
+            // Stay at 20% until ScrollTrigger starts
+            movingRef.current.style.left = '20%';
+          } 
+
   
+}
+
 }
 ,
         }
