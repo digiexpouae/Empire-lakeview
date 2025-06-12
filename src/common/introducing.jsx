@@ -14,6 +14,7 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,bt
       const ScrollTrigger = (await import('gsap/ScrollTrigger')).default
 
       gsap.registerPlugin(ScrollTrigger)
+      ScrollTrigger.normalizeScroll(true);
 
     
     const totalScrollWidth = sliderRef.current.scrollWidth;
@@ -28,18 +29,16 @@ gsap.fromTo(sliderRef.current, {}, {
   ease: 'none',
   scrollTrigger: {
     trigger: overlay ? introRef.current : containerRef.current,
-    start: 'top top',
+    start: 'top top' ,
     end: () => overlay ? '+=1000' : `+=${distance + extraDistance}`,
     scrub: true,
     pin: true,
     pinSpacing: true,
-    anticipatePin: intro && 1,
-    invalidateOnRefresh: true,
-       
-       
-
         },
-      })
+        
+      }
+    
+    )
     }
 
     runGsap()
@@ -57,8 +56,8 @@ gsap.fromTo(sliderRef.current, {}, {
 
    
 return (
-  
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[300px]':'h-[100vh]'} ${className1}  flex items-center  container relative`} ref={containerRef}>
+
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[500px]':'!h-[100vh]'} ${className1}  flex items-center  container relative`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}
@@ -99,6 +98,7 @@ return (
       ))}
     </div>
   </div>
+
 );
 
 }

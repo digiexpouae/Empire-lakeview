@@ -20,7 +20,7 @@ useEffect(() => {
       pin: true,
       scrub: true,
       start:'top top',
-    end: "+=3000",
+    end: "+=1500",
       trigger: wrapper.current, 
     } 
   });
@@ -50,7 +50,7 @@ timeline.from(child,{
 )  
   }, []);
 
-    return (<div  >
+    return (<div className='w-full' >
                <h2 className='my-heading heading py-5'>Latest Projects</h2>
 
     <section className=' w-full flex  flex-col items-center justify-center card-wrapper relative h-[450px] md:mt-8' >
