@@ -85,7 +85,7 @@ const carWrapperRef=useRef(null)
 
 
  return(
-      <div className=' bg-[#002E3C] w-full   text-white h-[120vh]  pb-[60px]'  ref={sectionref}>
+      <div className=' bg-[#002E3C] w-full   text-white h-[100vh]  pb-[60px]'  ref={sectionref}>
       <div className='flex flex-col items-center justify-center gap-[100px]  w-full lg:mt-[20px] mt-[50px] ' >
         <div className='flex flex-col items-center justify-center w-full h-[30%]' >
         <h2 className='my-heading lg:text-[80px] md:text-[50px] text-[34px]  font-bold' >In The Heart Of It All</h2>

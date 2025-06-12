@@ -65,16 +65,16 @@ return (
       </div>
      <div className='bg-[#002E3C]'>
 <div className='h-[800px] md:h-[400px] flex flex-col items-center justify-center'>
-                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[250px]'} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head} text={para}/>
+                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[250px] leading-7'} classNameH={'!text-[35px] !leading-15'} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head} text={para}/>
 </div>
-              <div ref={wrapper} className='h-[120vh] md:h-[100vh] lg:h-[180vh]'>   
+              <div ref={wrapper} className='h-[1200px] lg:h-[150vh] md:h-[90vh] xl:h-[1000px] w-full flex items-center justify-evenly flex-col'>   
 
                 <Sectionthree  wrapper={wrapper}/>
                             <Sectiontext classNamemain={'md:!items-center !h-[500px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[18px] !leading-5'} heading={true} text1={head2} text={para2} />
 </div>
-<div ref={introRef} className='h-[120vh] md:h-[100vh] flex flex-col justify-evenly'>
+<div ref={introRef} className='h-[130vh] md:h-[70vh] xl:h-[100vh] flex flex-col items-start'>
                  <Introducing  ima={ima}  overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
-                                                       <Sectiontext classNamemain={'!items-start !h-[500px] md:!h-[300px] py-6'} classNameH={'  !text-[35px] '} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head3} text={para3}/>
+                                                       <Sectiontext classNamemain={'!items-start !h-[500px] md:!h-[300px] py-6'} classNameH={'  !text-[35px] leading-7'} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head3} text={para3}/>
   </div>     
 
 

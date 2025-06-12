@@ -17,12 +17,16 @@ const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,bt
       ScrollTrigger.normalizeScroll(true);
 
     
-    const totalScrollWidth = sliderRef.current.scrollWidth;
-    const viewportWidth = window.innerWidth;
-    const scrollDistance = totalScrollWidth - viewportWidth;
-const isMobile = window.innerWidth <= 970;
-const extraDistance = isMobile ? 500 : 0;
-const distance = scrollDistance;
+  const totalScrollWidth = sliderRef.current.offsetWidth;
+const containerWidth = containerRef.current.offsetWidth;
+console.log(sliderRef.current.offsetWidth)
+console.log(containerRef.current.offsetWidth)
+
+// Optional: add extra buffer to ensure last image is fully revealed
+const scrollDistance = totalScrollWidth - containerWidth ;
+
+const isMobile = window.innerWidth >= 590 && window.innerWidth <= 1024;
+const distance = scrollDistance ;
 
 gsap.fromTo(sliderRef.current, {}, {
   x: `-${distance}px`,
@@ -30,7 +34,7 @@ gsap.fromTo(sliderRef.current, {}, {
   scrollTrigger: {
     trigger: overlay ? introRef.current : containerRef.current,
     start: 'top top' ,
-    end: () => overlay ? '+=1000' : `+=${distance + extraDistance}`,
+    end: () =>  overlay?'+=1000' :`+=${ distance }`,
     scrub: true,
     pin: true,
     pinSpacing: true,
@@ -57,7 +61,7 @@ gsap.fromTo(sliderRef.current, {}, {
    
 return (
 
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'!h-[500px]':'!h-[100vh]'} ${className1}  flex items-center  container relative`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?' !h-[300px]':'!h-[100vh]'} ${className1}  flex items-center  container relative`} ref={containerRef}>
     <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
       
       {/* Text + Logo Block */}
@@ -76,7 +80,7 @@ return (
       {ima.map((elem, index) => (
         <div
           key={index}
-          className={`shrink-0 inline-block xl:w-[340px] lg:w-[450px] md:w-[350px] w-[270px] h-[404px] md:h-[550px] ${className}`}
+          className={`shrink-0 inline-block xl:w-[340px] md:w-[350px] w-[270px] h-[404px] md:h-[550px] ${className}`}
         >
           <Image
             src={elem}

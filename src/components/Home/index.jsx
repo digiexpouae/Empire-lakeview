@@ -117,13 +117,13 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
            <div className='bg-[#002E3C] relative' ref={main}>
                                     <Sectiontwo classNamemain={'  !h-[700px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'}heading={true} text1={'Discover a New Era of Living'} text={'Welcome to Empire Development, a forward-looking real estate developer in Dubai. Empire Lakeview is not only a place to live, but it is a transformative vision brought to life by Empire development. Empire Development reshapes urban life and offers apartments and homes built with modern technology.'}/>
 
-              <div ref={wrapper} className='h-[130vh] lg:h-[150vh] md:h-[100vh] xl:h-[1000px] w-full flex items-center justify-center flex-col'>           
+              <div ref={wrapper} className='h-[1100px] lg:h-[150vh] md:h-[80vh] xl:h-[1000px] w-full flex items-start md:items-center md:justify-evenly flex-col'>           
                 <Sectionthree main={main} wrapper={wrapper}/>
                                              <Sectiontwo classNamemain={'!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true} text1={'Built with vision. Backed by integrity.'} text={"Empire Development's goal is to guide the change of modern living in the UAE. We focus on creating experiences that enhance every part of your life.  Empire Development offers premium quality in real estate development. If you want to buy a luxury home or property in Dubai, Empire Development is your ideal partner."} />
 
 
 </div> 
-<div ref={introRef} className='h-[130vh] md:h-[70vh] lg:h-[100vh] flex flex-col items-start justify-evenly'>
+<div ref={introRef} className='h-[1000px] py-10 md:h-[100vh] lg:h-[120vh] flex flex-col   items-start justify-evenly  lg:justify-evenly  lg:gap-[50px]'>
                  <Introducing  ima={ima}  overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
                                                        <Sectiontwo classNamemain={'!items-start !h-[700px] md:!h-[260px]'} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true} text1={'Top UAE Real Estate Developer'} text={"Empire Development provides creative, eco-friendly projects. That reflects awareness of the needs of our clients. Empire Development is one of the best real estate investments in the UAE. Whether you want to grow your portfolio or start your real estate journey, Empire Development is the right choice for you."} />
   </div>     
@@ -131,7 +131,7 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
 <Brand text1={'The Advantages'} amenities={amenities} img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px]'} className3={' h-[40px]'}/>
 
 <Section  />
-          <Section_Two icontext={'md:!text-[12px] xl:!text-[20px]'} classNamep={'!text-[10px] md:!text-[15px] xl:text-[18px]!'} home={true} text={text} head={'24/7 Access'} className2={'!text-[10px]'} btn={false} amenities={icons} back_image={true} className={'hidden'}/> 
+          <Section_Two  icontext={'!text-[20px] md:!text-[12px] xl:!text-[20px]'} classNamep={'!text-[15px] md:!text-[15px] xl:text-[18px]!'}  home={true} text={text} head={'24/7 Access'} className2={'!text-[10px]'} btn={false} amenities={icons} back_image={true} className={'hidden'}/> 
 
 
                 <SectionFour images={imag} />
