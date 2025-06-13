@@ -129,7 +129,7 @@ if(count ==2){
       {count === 1 &&(
         <div className="overlay  bg-[#00000066]  md:h-auto absolute bottom-0 top-0 inset-0 z-10 flex flex-col justify-center items-center leading-15">
          <div className={` flex flex-col justify-center items-center leading-12 ${isTransitioning ? 'opacity-100':'hidden'}`}>
-          <span className=" text-[25px] md:text-[60px] text-white">Where Luxury Meets</span>
+          <span className=" text-[25px] md:text-[60px] text-white md:mb-5">Where Luxury Meets</span>
           <span className=" text-[20px] md:text-[63px] font-extrabold text-white">Unparalleled Value</span>
           </div>
         </div>

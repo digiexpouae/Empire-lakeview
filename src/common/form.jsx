@@ -10,7 +10,7 @@ import React from "react"
                 <div className="absolute inset-0 md:z-20  flex flex-col h-[100%]  items-center justify-center ">
                     <h2 className="text-[25px] hidden md:flex lg:items-center lg:justify-center  lg:h-[30%] h-auto  md:text-5xl my-heading font-bold text-white mb-8">Fill the Form</h2>
 
-                    <div className="lg:grid flex flex-col lg:h-[70%] xl:h-auto  xl:grid-cols-2  gap-2  md:gap-3 relative">
+                    <div className="lg:grid flex flex-col lg:h-[70%] xl:h-auto  xl:grid-cols-2  gap-2  md:gap-3 relative form-container">
        
 
                         <div className="relative md:w-[70vw] lg:w-auto ">
