@@ -124,7 +124,8 @@ const para4="Empire Development is the leading UAE property developer. We guide 
     <div className={`relative w-full md:!h-[600px] !h-[400px] z-20 ${count ===1 && 'bg-[#002E3C]'}` }  ref={ref}>
                 
       <Header />
-      <Heroslider texttwo={'About'} overlay={overlay} main={count ===1 ?false:true} cloud={cloud}  bottom={'hidden '}/>
+      <Heroslider texttwo={'About'}            className2={'!top-[23%] '}
+ overlay={overlay} main={count ===1 ?false:true} cloud={cloud}  bottom={'hidden '}/>
       {/* Previous image */}
         <AnimatePresence  mode="wait">
       <motion.div
@@ -174,9 +175,9 @@ const para4="Empire Development is the leading UAE property developer. We guide 
      
     </div>
  <div className='bg-[#002E3C]'>
-      <Sectiontext classNamemain={'!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true}  text1={head} text={para}/>
+      <Sectiontext classNamemain={ 'h-[500px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true}  text1={head} text={para}/>
 <Section />
-      <Sectiontext classNamemain={'!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true}  text1={head2} text={para2}/>
+      <Sectiontext classNamemain={'h-[500px] md:!h-[350px]'} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true}  text1={head2} text={para2}/>
 
 <Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'}   amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'}/>
 <Sectionthree />

@@ -119,7 +119,7 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
 
               <div ref={wrapper} className='h-[1100px] lg:h-[150vh] container-1 md:h-[80vh] xl:h-[1000px] w-full flex items-start md:items-center md:justify-evenly flex-col'>           
                 <Sectionthree main={main} wrapper={wrapper}/>
-                                             <Sectiontwo classNamemain={'!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true} text1={'Built with vision. Backed by integrity.'} text={"Empire Development's goal is to guide the change of modern living in the UAE. We focus on creating experiences that enhance every part of your life.  Empire Development offers premium quality in real estate development. If you want to buy a luxury home or property in Dubai, Empire Development is your ideal partner."} />
+                                             <Sectiontwo classNamemain={'!h-[350px] '}  classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true} text1={'Built with vision. Backed by integrity.'} text={"Empire Development's goal is to guide the change of modern living in the UAE. We focus on creating experiences that enhance every part of your life.  Empire Development offers premium quality in real estate development. If you want to buy a luxury home or property in Dubai, Empire Development is your ideal partner."} />
 
 
 </div> 

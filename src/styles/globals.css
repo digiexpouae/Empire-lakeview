@@ -96,10 +96,17 @@ svg{
   overflow: hidden!important;
 }
 @media screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-  .form-container {
-    height: 42%;
-  }
 
+.form-section{
+  display: flex!important;
+  height: auto!important;
+}
+.form-field{
+  width: 60vw;
+}
+.form-heading{
+  font-size: 80px!important;
+}
   .container-1,
   .container-2 {
     height: 100vh;

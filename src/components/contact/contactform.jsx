@@ -14,7 +14,8 @@ const index = () => {
     <>
   <div className='w-full relative md:h-[600px] h-[400px]'>
         <Header className='nav-menu absolute z-50'/>
-            <Heroslider className={'top-[15%]'} main={true} cloud={false} Home={false}   className2={'z-[999]'} bottom={'bottom-[-60px] hidden'}  className1={' left-[40%] top-2 md:top-10'} texttwo={'Contact'}  overlay={true}/>
+            <Heroslider className={'top-[15%]'} main={true} cloud={false} Home={false}   className2={'z-[999]'} bottom={'bottom-[-60px] hidden'}  className1={' left-[40%] top-2 md:top-10'}            className2={'!top-[23%] '}
+ texttwo={'Contact'}  overlay={true}/>
          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' width={1200} height={1000} />
          <div className="absolute inset-0 bg-[#002E3C80] z-10 transition-opacity duration-500 opacity-100"></div>
           </div>
