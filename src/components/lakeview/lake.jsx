@@ -126,15 +126,15 @@ const para5="Empire Lakeview in Liwan by Empire Development is one of the best c
          
            <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />
             
-     <Sectiontwo classNamemain={'!items-start !h-[500px] md:!h-[200px]'}  classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />
+     <Sectiontwo classNamemain={'!items-center h-[500px] section-1 '}  classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />
 
           <Sectionthree images={images} onAllVisible={handleAllVisible} /> 
-      <Sectiontwo classNamemain={' !h-[700px] md:!h-[500px] py-6 flex !items-start justify-center'}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head}  text={para2} />
+      <Sectiontwo classNamemain={' !h-[700px] md:!h-[500px] py-6 flex items-center  lg:items-center md:items-start  justify-center section-2'}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head}  text={para2} />
 
        
    <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews'/>
            <Icon icons={icons}/> 
-                 <Sectiontwo classNamemain={'!items-center !h-[900px] md:!h-[750px] lg:!h-[400px]'}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head2}  text={para3} />
+                 <Sectiontwo classNamemain={'!items-center !h-[900px] md:!h-[750px] lg:!h-[400px] '}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head2}  text={para3} />
 
           <SectionFour images={imag} background={false}/>
                    </div>
