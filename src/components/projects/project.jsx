@@ -41,7 +41,7 @@ return (
         <Header />
         <Heroslider
           className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
-          texttwo={'Projects'}
+className2={'!top-[23%] md:!top-12 xl:!top-8'}          texttwo={'Projects'}
           main={true}
           bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
           cloud={false}
@@ -64,7 +64,7 @@ return (
         </div>
       </div>
      <div className='bg-[#002E3C]'>
-<div className='h-[800px] md:h-[400px] flex flex-col items-center justify-center'>
+<div className='h-[500px] md:h-[400px] flex flex-col items-center justify-center'>
                                                        <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[250px] leading-7'} classNameH={'!text-[35px] !leading-15'} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head} text={para}/>
 </div>
               <div ref={wrapper} className='h-[1200px] lg:h-[150vh] md:h-[90vh] xl:h-[1000px] w-full flex items-center justify-evenly flex-col'>   
