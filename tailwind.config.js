@@ -11,6 +11,9 @@ module.exports = {
         'white': '0px 4px 6px rgba(255, 255, 255, 0.4)', // Custom white shadow
       },
     },
+    screens:{
+            ipadportrait: { raw: '(width: 1024px) and (orientation: portrait)' },
+    }
   },
   plugins: [],
 }

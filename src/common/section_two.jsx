@@ -7,7 +7,7 @@ import back from '../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.p
 import { useInView } from "react-intersection-observer";
 import LottieIcons from "./lottie";
 
-const section_two = ({text,head,amenities,btn,back_image,className,home}) => {
+const section_two = ({text,head,amenities,btn,back_image,className,home,icontext,classNamep}) => {
 
 const ref1=useRef()
 const ref2=useRef()
@@ -46,7 +46,7 @@ useEffect(() => {
 return (<>
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[600px] relative flex items-center justify-center w-[80vw] scrollbar-hide" ref={ref}>
  {back_image &&
-  <div className='h-[500px] w-[500px] absolute right-[-9%] md:right-[-14%] bottom-[-15%] overflow-hidden '>
+  <div className='h-[500px] w-[500px] absolute right-[-9%] md:right-0 bottom-[-15%] overflow-hidden '>
   <Image  src={back}  width={500} height={500} className='!h-full !w-full'/>
 </div>}
 <div className=" w-full md:flex md:flex-row flex flex-col gap-[40px] lg:gap-[80px]">
@@ -61,13 +61,13 @@ return (<>
           </div>
           
        
-              <LottieIcons className={`element ${home ?'opacity-100':'opacity-0'}`} className2={'text-center md:w-[120px] !text-[10px] md:!text-[20px]'} ref={ref3} amenities={amenities} iconsize={'h-[70px] w-[70px] md:w-[50px] md:h-[50px]'}  className1={`grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36  mt-8 lg:mt-20 ${home ?'opacity-100':'opacity-0'}`}/></div>
+              <LottieIcons className={`element ${home ?'opacity-100':'opacity-0'}`} className2={`text-center md:w-[120px] !text-[10px]  ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[70px] w-[70px] md:w-[50px] md:h-[50px]'}  className1={`grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36  mt-8 lg:mt-20 ${home ?'opacity-100':'opacity-0'}`}/></div>
           {/* Right side - Project description and amenities */}
          
         <div className=" md:w-[50%] lg:w-[60%]"> <div className={`md:p-6 sm:p-8 lg:p-0 flex flex-col items-start lg:h-[280px] gap-4 ${home ?'opacity-100':'opacity-0'}`} ref={ref2}>
             
             <p 
-              className="text-[18px] lg:text-[22px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light"
+              className={`text-[18px] lg:text-[22px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light ${classNamep}`}
             >
              {text}
             </p>

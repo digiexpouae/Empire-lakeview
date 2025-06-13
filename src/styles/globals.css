@@ -96,3 +96,16 @@ svg{
   overflow: hidden!important;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) {
+.form-container{
+  height: 42%;
+}
+.container-1{
+  height: 100vh;
+}
+.container-2 {
+    height: 100vh;
+
+}
+}
+
