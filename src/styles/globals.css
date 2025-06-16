@@ -8,6 +8,10 @@
   --font-inter: 'Inter', sans-serif;
 }
 
+.html{
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   scrollbar-width: none; /* Firefox */
