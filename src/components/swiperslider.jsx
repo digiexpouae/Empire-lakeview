@@ -20,7 +20,7 @@ const SwiperSlider = ({ testimonial }) => {
             <div className="flex flex-col gap-2">
               <div className="text-[8px] md:text-[12px] lg:text-lg italic ">"{elem.text}"</div>
               <div className="flex items-center gap-4 mt-4 w-full">
-                <div className="flex justify-between w-[40%]">
+                <div className="flex gap-[20px] w-[40%]">
                     <div className='w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]'>
                   <Image width={60} height={60} className='rounded-4xl !h-full w-full !object-cover' src={elem.image}/>
                 </div>  <div className='flex flex-col'>

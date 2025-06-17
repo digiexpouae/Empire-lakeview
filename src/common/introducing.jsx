@@ -27,14 +27,15 @@ const scrollDistance = totalScrollWidth - containerWidth ;
 
 const isMobile = window.innerWidth >= 590 && window.innerWidth <= 1024;
 const distance = scrollDistance ;
+const ending=distance + 50
 
 gsap.fromTo(sliderRef.current, {}, {
-  x: `-${distance}px`,
+  x: `-${ending}px`,
   ease: 'none',
   scrollTrigger: {
     trigger: overlay ? introRef.current : containerRef.current,
     start: 'top top' ,
-    end: () =>  overlay?'+=1000' :`+=${ distance }`,
+    end: () => `+=${ distance }`,
     scrub: true,
     pin: true,
     pinSpacing: true,

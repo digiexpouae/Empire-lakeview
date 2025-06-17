@@ -95,19 +95,19 @@ return (<>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
-                  className=" flex flex-col  justify-center p-2 bg-white  rounded-[13px] animate-fade-up-delayed h-[130px] w-[130px] md:h-[150px] md:w-[140px] lg:h-[180px] lg:w-[180px] gap-[5px] md:gap-[10px] element"
+                  className=" flex flex-col items-start  justify-center p-2 bg-white  rounded-[13px] animate-fade-up-delayed h-[130px] w-[130px] md:h-[150px] md:w-[140px] lg:h-[180px] lg:w-[180px] gap-[5px] md:gap-[10px] element"
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
                     <p className="text-[14px] md:text-[18px]">{amenity.text}</p>
 {index === 0 || index === 1 ? (
-  <p className=" text-[23px] md:text-[28px] my-heading text-center leading-9 text-black font-bold my-heading md:w-[120px]">
+  <p className=" text-[23px] md:text-[28px] my-heading  leading-9 text-black font-bold my-heading md:w-[120px]">
     {amenity.title}
   </p>
 ) : (
   <div
     className={`relative w-full aspect-[4/3] overflow-hidden ${className}`}
   >
-  <Image fill src={amenity.im} alt="Amenity image" className={` object-contain`}/></div>
+  <Image fill src={amenity.im} alt="Amenity image" className={` object-contain !w-[75%]`}/></div>
 )}
                   
                     <span className="text-[10px] text-black">{amenity.text2}</span>

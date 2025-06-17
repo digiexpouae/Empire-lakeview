@@ -128,7 +128,7 @@ const back='/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
                                                        <Sectiontwo classNamemain={'!items-start !h-[700px] md:!h-[260px]'} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true} text1={'Top UAE Real Estate Developer'} text={"Empire Development provides creative, eco-friendly projects. That reflects awareness of the needs of our clients. Empire Development is one of the best real estate investments in the UAE. Whether you want to grow your portfolio or start your real estate journey, Empire Development is the right choice for you."} />
   </div>     
 
-<Brand text1={'The Advantages'} amenities={amenities} img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px]'} className3={' h-[40px]'}/>
+<Brand text1={'The Advantages'} amenities={amenities} img={'/assets/08ebc927c2bb827adaee55f9f4bc028fa05248c3.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px] lg:!text-[17px]'} className3={' h-[40px]'}/>
 
 <Section  />
           <Section_Two  icontext={'!text-[20px] md:!text-[12px] xl:!text-[20px]'} classNamep={'!text-[15px] md:!text-[15px] xl:text-[18px]!'}  home={true} text={text} head={'24/7 Access'} className2={'!text-[10px]'} btn={false} amenities={icons} back_image={true} className={'hidden'}/> 

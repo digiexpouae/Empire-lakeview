@@ -17,7 +17,7 @@ const mapcontact = () => {
         return (
           <div className='h-[500px] lg:h-[800px] w-full  flex items-center justiy-center flex-col'>
               <h1 className='text-[45px] text-center lg:text-[100px] my-heading  text-white font-bold'>Address</h1>
-            <div className='flex items-center justify-center w-[65%]'>
+            <div className='flex items-center justify-center w-[70%]'>
               {features.map((feature) => (
                 <div
                   key={feature.id}
@@ -52,9 +52,9 @@ const mapcontact = () => {
                     src={feature.image}
                     alt={feature.title}
                     width={470} height={470}
-                    className='!w-full !h-full !object-cover rounded-2xl'
+                    className='!w-full !h-full !object-cover '
       
-                    style={{ width: '100%', height: '400px', objectFit: 'cover'}}
+                    style={{ width: '100%', height: '400px', objectFit: 'cover',borderBottomLeftRadius:'20px',borderBottomRightRadius:'20px'}}
                   />
                 ) : null
               )}

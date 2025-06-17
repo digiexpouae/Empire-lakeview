@@ -1,4 +1,3 @@
-// 
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import Header from '@/layout/header';
@@ -9,21 +8,29 @@ import Introducing from '@/common/introducing';
 import ima1 from '../../../public/assets/d3cffac39c025499b5d643c23941091538a28358.png';
 import ima2 from '../../../public/assets/896f9f592b964d92926d050a82ffdf7c0cc52923.jpg';
 import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390a.jpg';
-import Sectionthree from '../../common/sectionthree'
+import Sectionthree from '../../common/sectionthree';
 import SectionFour from '@/common/section_four';
 import Sectiontext from '@/common/section_text';
+import Fadein from '@/common/fadein'; // ✅ Make sure to import this
+
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
-const ima=[ima1,ima2,ima3]
-const wrapper=useRef()
-const introRef=useRef()
- const imag = [
-  {
-    src: '/assets/ee70d663c4a8db7d05f72f368ee23dc4874fe3d5.png',
-       title: '',
-    subtitle: '',
-  }
-];
+  const ima = [ima1, ima2, ima3];
+  const wrapper = useRef();
+  const introRef = useRef();
+
+  const imag = [
+    {
+      src: '/assets/ee70d663c4a8db7d05f72f368ee23dc4874fe3d5.png',
+      title: '',
+      subtitle: '',
+    },
+  ];
+
+
+
+
+
 const head='EXPERIENCE MODERN LIVING IN DUBAI'
 const para="JVC is one of the top neighborhoods in Dubai. This is where the new residential property, Empire Lakeview. It is the ideal choice for you if you want to book an apartment in Dubai that offers comfortable, stylish apartments with smart designs. Empire Development's project features modern architecture residences Dubai that buyers want today."
 const head2='Home Design For Your Comfort'
@@ -35,13 +42,15 @@ const para4="Empire Lakeview by Empire Development is close to shopping centers,
 const head5='Book an Apartment Today at Empire Lakeview '
 const para5="Empire Lakeview by Empire Development offers both a great investment and a stylish residence. Don't miss the opportunity to live in one of the finest modern architecture residences Dubai. Book an apartment in Dubai now and savor a future-ready way of life."
 
-return (
+
+  return (
     <>
       <div className="w-full relative md:h-[600px] h-[400px]">
         <Header />
         <Heroslider
           className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
-className2={'!top-[23%] md:!top-12 xl:!top-8'}          texttwo={'Projects'}
+          className2={'!top-[23%] md:!top-12 xl:!top-8'}
+          texttwo={'Projects'}
           main={true}
           bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
           cloud={false}
@@ -53,9 +62,7 @@ className2={'!top-[23%] md:!top-12 xl:!top-8'}          texttwo={'Projects'}
             fill
             priority
             alt="Background"
-            className={`object-cover transition-opacity duration-700 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`object-cover transition-opacity duration-700 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setImageLoaded(true)}
           />
           {imageLoaded && (
@@ -63,26 +70,70 @@ className2={'!top-[23%] md:!top-12 xl:!top-8'}          texttwo={'Projects'}
           )}
         </div>
       </div>
-     <div className='bg-[#002E3C]'>
-<div className='h-[500px] md:h-[400px] flex flex-col items-center justify-center'>
-                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[250px] leading-7'} classNameH={'!text-[35px] !leading-15'} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head} text={para}/>
-</div>
-              <div ref={wrapper} className='h-[1200px] lg:h-[150vh] md:h-[90vh] xl:h-[1000px] w-full flex items-center justify-evenly flex-col'>   
 
-                <Sectionthree  wrapper={wrapper}/>
-                            <Sectiontext classNamemain={'md:!items-center !h-[500px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[18px] !leading-5'} heading={true} text1={head2} text={para2} />
-</div>
-<div ref={introRef} className='h-[130vh] md:h-[70vh] xl:h-[100vh] flex flex-col items-start'>
-                 <Introducing  ima={ima}  overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'}  logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'}/>
-                                                       <Sectiontext classNamemain={'!items-start !h-[500px] md:!h-[300px] py-6'} classNameH={'  !text-[35px] leading-7'} className={'md:!text-[20px] !text-[18px] !leading-5'} heading={true} text1={head3} text={para3}/>
-  </div>     
+      <div className="bg-[#002E3C]">
+        <Fadein>
+          <div className="h-[700px] md:h-[400px] flex flex-col items-center justify-center">
+            <Sectiontext
+              classNamemain={'!items-start !h-[700px] md:!h-[250px] leading-7 w-full'}
+              classNameH={'!text-[30px] !leading-12 md:!leading-15]'}
+              className={'md:!text-[20px] !text-[17px] !leading-3 md:!leading-5'}
+              heading={true}
+              text1={head}
+              text={para}
+            />
+          </div>
+        </Fadein>
 
+        <div ref={wrapper} className="h-[1200px] lg:h-[150vh] md:h-[90vh] xl:h-[1000px] w-full flex items-center justify-evenly flex-col">
+            <Sectionthree wrapper={wrapper} />
 
+          <Fadein>
+            
+            <Sectiontext
+               classNamemain={'!items-start !h-[700px] md:!h-[250px] leading-7 w-full'}
+              classNameH={'!text-[30px] !leading-10 md:!leading-15]'}
+              className={'md:!text-[20px] !text-[17px] !leading-3 md:!leading-5'}
+              heading={true}
+              text1={head2}
+              text={para2}
+            />
+          </Fadein>
+        </div>
 
-<SectionFour images={imag} />
+        <div ref={introRef} className="h-[140vh] md:h-[90vh] xl:h-[120vh] flex flex-col items-center justify-center">
+          <Fadein>
+            <Introducing
+              ima={ima}
+              overlay={true}
+              introRef={introRef}
+              text1={'Projects'}
+              className1={'!h-[200px] !my-6 overflow-hidden flex items-center'}
+              btntext={'View All Projects'}
+              logo={false}
+              viewprojects={true}
+              className={'!h-[250px] md:!h-[270px]  !w-[400px] relative'}
+            />
+          </Fadein>
 
-</div>
-      <Footer  footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>
+          <Fadein>
+            <Sectiontext
+             classNamemain={'!items-start !h-[700px] md:!h-[300px] leading-7 w-full'}
+              classNameH={'!text-[30px] !leading-12 md:!leading-15]'}
+              className={'md:!text-[20px] !text-[17px] !leading-3 md:!leading-5'}
+              heading={true}
+              text1={head3}
+              text={para3}
+            />
+          </Fadein>
+        </div>
+
+        <Fadein>
+          <SectionFour images={imag} />
+        </Fadein>
+      </div>
+
+      <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5} />
     </>
   );
 };
