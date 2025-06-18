@@ -34,7 +34,7 @@ useEffect(() => {
          scrollTrigger: {
   trigger: carWrapperRef.current,
   start: 'top top',
-  end: '+=2000',
+  end: '+=1500',
   scrub: true,
   onUpdate: (self) => {
           if (!movingRef.current) return;
@@ -85,9 +85,9 @@ const carWrapperRef=useRef(null)
 
 
  return(
-      <div className=' bg-[#002E3C] w-full   text-white h-[100vh]  pb-[60px]'  ref={sectionref}>
+ <div className=' bg-[#002E3C] w-full   text-white !h-[100vh]'  ref={sectionref}>
       <div className='flex flex-col items-center justify-center gap-[100px]  w-full lg:mt-[20px] mt-[50px] ' >
-        <div className='flex flex-col items-center justify-center w-full h-[30%]' >
+        <div className='flex flex-col items-center justify-center w-full ' >
         <h2 className='my-heading lg:text-[80px] md:text-[50px] text-[34px]  font-bold' >In The Heart Of It All</h2>
         <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  
          <div ref={carWrapperRef} className=" relative w-full">
@@ -115,7 +115,7 @@ const carWrapperRef=useRef(null)
     </div></div>
           </div> 
           </div>
-        <div className='w-[100%]  h-[70%] mb-10 relative'>
+        <div className='w-[100%]   mb-10 relative'>
            <Map  className={'z-50'} carcontainer={carWrapperRef} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
            
             {/* <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} /> */}

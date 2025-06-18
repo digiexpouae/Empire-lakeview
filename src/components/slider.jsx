@@ -16,7 +16,6 @@ useEffect(() => {
     const gsap = (await import('gsap')).default;
     const { ScrollTrigger } = await import('gsap/ScrollTrigger');
     gsap.registerPlugin(ScrollTrigger);
-          ScrollTrigger.normalizeScroll(true);
 
 
     const swiperInstance = swiperRef.current?.swiper;
@@ -32,9 +31,10 @@ useEffect(() => {
     ScrollTrigger.create({
       trigger: wrapper.current,
       start: 'center center',
-      end: `+=2000`,
+      end: `+=1500`,
       scrub: true,
       pin: true,
+      pinType:'transform',
       pinSpacing: true,
       anticipatePin:1,
       preventOverlaps:true,

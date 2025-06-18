@@ -1,37 +1,37 @@
-import React, { useEffect, useRef } from 'react'
-import empire from '../../../public/assets/empirelivin (6).jpg'
-import empireliv from '../../../public/assets/empirelivin.jpg'
-import empire1 from '../../../public/assets/empirelivin (1).jpg'
-import empire2 from '../../../public/assets/empirelivin (2).jpg'
-import empire3 from '../../../public/assets/empirelivin (17).jpg'
-import empire4 from '../../../public/assets/empirelivin (2).png'
-import empire5 from '../../../public/assets/empirelivin (9).jpg'
-import empire6 from '../../../public/assets/empirelivin (10).jpg'
-import empire7 from '../../../public/assets/empirelivin (16).jpg'
-import empire8 from '../../../public/assets/empirelivin (8).jpg'
-import empire9 from '../../../public/assets/empirelivin.jpg'
-import empirelivin from '../../../public/assets/empireliving.png'
-
-import empire10 from '../../../public/assets/empirelivin (15).jpg'
-import empire11 from '../../../public/assets/empirelivin (11).jpg'
-import empire12 from '../../../public/assets/empirelivin (12).jpg'
-import empire13 from '../../../public/assets/empirelivin (13).jpg'
-import empire14 from '../../../public/assets/empirelivin (5).jpg'
-import empire15 from '../../../public/assets/empirelivin (3).jpg'
-import empire16 from '../../../public/assets/empirelivin (16).jpg'
-import empire17 from '../../../public/assets/empirelivin (17).jpg'
-import empire18 from '../../../public/assets/empirelivin (18).jpg'
-import empire19 from '../../../public/assets/ep.jpg'
+'use client'
+import React, { useLayoutEffect, useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 
+import empire from '../../../public/assets/living12.webp'
+import empireliv from '../../../public/assets/living2.webp'
+import empire1 from '../../../public/assets/living1.webp'
+import empire2 from '../../../public/assets/living17.webp'
+import empire3 from '../../../public/assets/living4.webp'
+import empire4 from '../../../public/assets/living5.webp'
+import empire5 from '../../../public/assets/living6.webp'
+import empire6 from '../../../public/assets/living7.webp'
+import empire7 from '../../../public/assets/living9.webp'
+import empire8 from '../../../public/assets/living10.webp'
+import empire9 from '../../../public/assets/living11.webp'
+import empirelivin from '../../../public/assets/027c45cd5e3cbdca981eddff217b55b3ddc776c2.webp'
+import empire10 from '../../../public/assets/living13.webp'
+import empire11 from '../../../public/assets/living14.webp'
+import empire12 from '../../../public/assets/living15.webp'
+import empire13 from '../../../public/assets/living16.webp'
+import empire14 from '../../../public/assets/livng3.webp'
+import empire15 from '../../../public/assets/living.jpg'
+import empire16 from '../../../public/assets/empirelivin (16).jpg'
+import empire17 from '../../../public/assets/empirelivin (17).jpg'
+import empire18 from '../../../public/assets/living16.webp'
+import empire19 from '../../../public/assets/ep.jpg'
 
-const sectionthree = () => {
-const container=useRef()
-const scrollRef=useRef()
+const SectionThree = () => {
+  const container = useRef()
+  const scrollRef = useRef()
 
-useEffect(() => {
-  let ctx;
+  useLayoutEffect(() => {
+    let ctx;
 
   import('gsap').then(gsapModule => {
     import('gsap/ScrollTrigger').then(scrollTriggerModule => {
@@ -56,20 +56,22 @@ useEffect(() => {
           ease: "none",
           scrollTrigger: {
             trigger: container.current,
-            start: "bottom bottom",
+            start: "center center",
             end: `+=${scrollDistance}`,
             scrub:true,
             pin: true,
             pinType:'transform',
             pinSpacing: true,
-                        onLeave: () => {
+            anticipatePin: 1,
+            onEnter: () => ScrollTrigger.refresh(),
+            onLeave: () => {
     document.querySelector('.container').style.position = 'relative';
   },
       
             anticipatePin:1, onEnter: () => {
       // if your map/slider needs to finish loading first:
       ScrollTrigger.refresh();
-    },
+            },
           }
         });
       }, container);
@@ -82,16 +84,16 @@ useEffect(() => {
 
 
 
-  return (           
-<div className='flex flex-col  items-center justify-center w-full text-center leading-12 md:leading-none min-h-[150vh] container overflow-hidden my-10' >      
+  return (
+  <div className=' flex flex-col  items-center justify-center w-full text-center h-[100vh] relative' ref={container}>
+  
     <h1 className='text-[45px] lg:text-[100px] my-heading  text-white font-bold'>Picture Your Future</h1>
-<div className=' flex flex-col  items-center justify-center w-full text-center h-[100vh ]' ref={container}>
     <div className='w-full h-screen overflow-hidden scrollbar-hide flex flex-col  items-center justify-center'    ref={scrollRef}  >
 
-      <div className='w-[90%] md:w-[80%] h-full flex items-center justify-center'>
+          <div className='w-[90%] md:w-[80%] h-full flex items-center justify-center'>
     
 
-<div className='columns-4 flex flex-wrap h-full m-auto items-center justify-center gap-3'>
+            <div className='columns-4 flex flex-wrap h-full m-auto items-center justify-center gap-3'>
     
     <div className={' mt-20 w-[22%] h-[110px] md:h-[190px] lg:h-[290px]'}><Image src={empire1} priority className='!h-full !w-full   rounded-3xl object-cover object-center'/></div>
     <div className={'   w-[22%] h-[120px] md:h-[200px] lg:h-[280px] '}><Image src={empire18}  priority  className='!h-full !w-full  rounded-3xl object-cover '/></div>
@@ -117,7 +119,7 @@ useEffect(() => {
      <div className={'w-[22%] h-[120px] md:h-[200px] lg:h-[290px] '}><Image src={empire} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
          <div className='flex flex-col items-center  w-[45%]'>
           <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8 '}><Image src={empirelivin} priority  className='!h-full !w-full   rounded-3xl object-cover'/>
-          </div>
+            </div>
                    <button className=" h-[30px] md:h-auto flex items-center justify-center
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
     hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-[9px] md:text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
@@ -126,16 +128,15 @@ useEffect(() => {
     <div className={'w-[22%] h-[120px] md:h-[180px] lg:h-[260px] '}><Image src={empire19} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
     {/* <div><Image src={empire}  className='!h-full !w-full   rounded-3xl object-cover'/></div> */}
     
-</div>
-</div>
+          </div>
+        </div>
 
     </div>
         <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[350px] 
 'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #002E3C 97%)'
 }}></div>
-</div>
-    </div>
+      </div>
   )
 }
 
-export default sectionthree
+export default SectionThree

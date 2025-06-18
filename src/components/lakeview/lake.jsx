@@ -6,16 +6,16 @@ import Section_two from '../../common/section_two'
 import Footer from '@/layout/footer'
 import Place from '../../common/places'
 import Icon from '../icon'
-import im from '../../../public/assets/30d78149086356db6714cb255feffcc79821e24e.jpg'
-import im2 from '../../../public/assets/177a627b91d6de16e29ba8660fcd169ba1f9a4c5.jpg'
-import im3 from '../../../public/assets/739ea3c773a46619eba42628089123900ecd20c4 (1).jpg'
-import im4 from '../../../public/assets/387749bd9ca4fbe4dd353d42b78a6dfab9958888.jpg'
-import im5 from '../../../public/assets/af7d67e8d77d1990d76ddfd4236ee64f67f80553.jpg'
-import im6 from '../../../public/assets/e628b29ba03a5d3c87b167691336aaaa56e062cb.jpg'
+import im from '../../../public/assets/sliderlake1.webp'
+import im2 from '../../../public/assets/sliderlake2.webp'
+import im3 from '../../../public/assets/sliderlake3.webp'
+import im4 from '../../../public/assets/sliderlake4.webp'
+import im5 from '../../../public/assets/sliderlake5.webp'
+import im6 from '../../../public/assets/sliderlake6.webp'
 import SectionFour from '../../common/section_four'
 import Image from 'next/image'
 import Sectionthree from '../../common/section'
-import back from '../../../public/assets/background2.png'
+import back from '../../../public/assets/LAKEBACK.webp'
 import empire from '../../../public/assets/empire2.png'
 import im1 from '../../../public/assets/cloud_one.png'
 import spa from '../../../public/assets/animation/Spa Relaxation.json'
@@ -33,6 +33,7 @@ import DubaiAirport from '../../../public/assets/international (2).svg';
 import Introducing from '@/common/introducing'
 import { Heading } from 'lucide-react'
 import Sectiontwo from '../../common/section_text'
+import Fadein from '@/common/fadein'
 const index = () => {
   const [main, setmain] = useState(true)
   const [cloud, setcloud] = useState(true)
@@ -90,9 +91,9 @@ w:20
     subtitle: '',
   }
 ];
-    const content=[im3,im,im6,im4,im2,im5]
+    const content=[im,im2,im3,im4,im5,im6]
 
-    const images=[{im:'/assets/ima1.jpg',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.'},{im:'/assets/ima2.jpg',tex1:'1 Bed With Pool',tex2:'Size: 1319 SQ.FT.To 1328 SQ.FT.'},{im:'/assets/ima3.jpg',tex1:"2 Bed",tex2:'Size: 753 SQ.FT.To 867 SQ.FT'},{im:'/assets/ima4.jpg',tex1:'Duplex',tex2:'Size: 830 SQ.FT'},{im:'/assets/ima6.jpg',tex1:'Studio',tex2:'Size: 425.55 SQ.FT.'},{im:'/assets/pool studio.jpg',tex1:'Studio with Pool',tex2:'Size: 432.42 SQ.FT'},{im:'',tex1:'',tex2:''}]
+    const images=[{im:'/assets/slider1.webp',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.'},{im:'/assets/slider2.webp',tex1:'1 Bed With Pool',tex2:'Size: 1319 SQ.FT.To 1328 SQ.FT.'},{im:'/assets/slider3.webp',tex1:"2 Bed",tex2:'Size: 753 SQ.FT.To 867 SQ.FT'},{im:'/assets/slider4.webp',tex1:'Duplex',tex2:'Size: 830 SQ.FT'},{im:'/assets/slider5.webp',tex1:'Studio',tex2:'Size: 425.55 SQ.FT.'},{im:'/assets/slider6.webp',tex1:'Studio with Pool',tex2:'Size: 432.42 SQ.FT'},{im:'',tex1:'',tex2:''}]
 
 
   const [showFooter, setShowFooter] = useState(false);
@@ -114,29 +115,30 @@ const para5="Empire Lakeview in Liwan by Empire Development is one of the best c
  return (
 <>
 <div className='w-full relative md:h-[600px] h-[400px]'>
-        <Header className='nav-menu absolute z-50'/>
-            <Heroslider className={'top-[15%]'} main={main} bottom={'bottom-[-250px]'} cloud={cloud} Home={false} main_im={empire} im1={im1} im2={im1} className1={' top-2 md:top-10'} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true} />
+    <Header className='nav-menu absolute z-50'/>
+       <Heroslider className={'top-[15%]'} main={main} bottom={'bottom-[-250px]'} cloud={cloud} Home={false} main_im={empire} im1={im1} im2={im1} className1={' top-2 md:top-10'} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true} />
          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
-          </div>
+           </div>
 <div className='bg-[#002E3C]'>
 
-           <Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 
+           <Fadein><Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 
               Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom 
-              apartments, & 3-bedroom duplexes, with many units featuring private pools.`}   /> 
+              apartments, & 3-bedroom duplexes, with many units featuring private pools.`}  icontext={'md:!text-[20px]'} /> </Fadein>
          
-           <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />
+          <Fadein> <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} /></Fadein>
             
-     <Sectiontwo classNamemain={'!items-center h-[500px] section-1 '}  classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />
+  <Fadein>   <Sectiontwo classNamemain={'!items-center !h-[750px] md:!h-[200px] section-1 '}  classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />
+  </Fadein>
 
-          <Sectionthree images={images} onAllVisible={handleAllVisible} /> 
-      <Sectiontwo classNamemain={' !h-[700px] md:!h-[500px] py-6 flex items-center  lg:items-center md:items-start  justify-center section-2'}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head}  text={para2} />
+          <Fadein><Sectionthree images={images} onAllVisible={handleAllVisible} /> </Fadein>
+    <Fadein>  <Sectiontwo classNamemain={' !h-[700px] md:!h-[350px] py-6 flex items-center  lg:items-center md:items-start  justify-center section-2'}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head}  text={para2} /></Fadein>
 
        
-   <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews'/>
-           <Icon icons={icons}/> 
-                 <Sectiontwo classNamemain={'!items-center !h-[900px] md:!h-[750px] lg:!h-[400px] '}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head2}  text={para3} />
+ <Fadein>  <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews'/></Fadein>
+      <Fadein>     <Icon icons={icons}/> </Fadein> 
+             <Fadein>    <Sectiontwo classNamemain={'!items-start !items-center !h-[750px] lg:!h-[400px] '}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head2}  text={para3} /></Fadein>
 
-          <SectionFour images={imag} background={false}/>
+       <Fadein>   <SectionFour images={imag} background={false}/></Fadein>
                    </div>
 
            <Footer footertext={true} text1={head3} text2={head4} text={para4} textpara={para5} />

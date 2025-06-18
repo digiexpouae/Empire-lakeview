@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -6,7 +5,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
-const Header = ({ className }) => {
+import { motion } from 'framer-motion';
+
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' },
+  },
+};
+
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -17,13 +37,12 @@ const Header = ({ className }) => {
       name: 'Project',
       link: '/projects',
       children: [
-           { name: 'Lakeviews', link: '/lakeviews' },
+        { name: 'Lakeviews', link: '/lakeviews' },
         { name: 'Empire Residence', link: '/Empireresidence' },
         { name: 'Plazzo Residence', link: '/plazoresidence' },
         { name: 'Plazzo Heights', link: '/plazoheights' },
-       
-             { name: 'EMP(Estates)', link: '/EMPEstates' },
-                { name: 'EMP(living)', link: '/EMPliving' },
+        { name: 'EMP(Estates)', link: '/EMPEstates' },
+        { name: 'EMP(living)', link: '/EMPliving' },
       ],
     },
     { name: 'Broker Registration', link: '/broker-registration' },
@@ -32,45 +51,55 @@ const Header = ({ className }) => {
   return (
     <div className="absolute z-50 w-full">
       <header className="relative z-50">
-        {/* Desktop Navigation */}
+        {/* Top bar */}
         <div className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-3">
-          {/* Left Nav Links - Hidden on Mobile */}
-       <nav className="hidden md:flex items-center gap-x-3 lg:gap-x-6 relative">
-  {nav.map((elem, index) => (
-    <div key={index} className="relative group flex items-center justify-center">
-      
-      <a
-        href={elem.link}
-        className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base"
-      >
-        {elem.name}
-      </a>
-      
-      {index ==2 && <div className="inline-flex items-center justify-center w-5 h-5">
-  <FontAwesomeIcon icon={faCaretDown} className="w-full h-full text-xl text-white cursor-pointer" />
-</div>
-}
+          {/* Desktop Nav */}
+          <motion.nav
+            className="hidden md:flex items-center gap-x-3 lg:gap-x-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {nav.map((elem, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="relative group flex items-center justify-center"
+              >
+                <a
+                  href={elem.link}
+                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base"
+                >
+                  {elem.name}
+                </a>
 
-      {/* Keep dropdown visible when hovered */}
-      {elem.children && (
-        <div className="absolute left-0 top-full mt-1 w-44 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50">
-          {elem.children.map((child, idx) => (
-            <a
-              key={idx}
-              href={child.link}
-              className="block px-4 py-2 hover:bg-yellow-100"
-            >
-              {child.name}
-            </a>
-          ))}
-        </div>
-      )}
-    </div>
-  ))}
-</nav>
+                {index === 2 && (
+                  <div className="inline-flex items-center justify-center w-5 h-5">
+                    <FontAwesomeIcon
+                      icon={faCaretDown}
+                      className="w-full h-full text-xl text-white cursor-pointer"
+                    />
+                  </div>
+                )}
 
+                {elem.children && (
+                  <div className="absolute left-0 top-full mt-1 w-44 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50">
+                    {elem.children.map((child, idx) => (
+                      <a
+                        key={idx}
+                        href={child.link}
+                        className="block px-4 py-2 hover:bg-yellow-100"
+                      >
+                        {child.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </motion.nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -80,9 +109,12 @@ const Header = ({ className }) => {
             </button>
           </div>
 
-          {/* Center Logo */}
+          {/* Logo */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <a href="/" className="block transform hover:scale-105 transition-transform duration-300">
+            <a
+              href="/"
+              className="block transform hover:scale-105 transition-transform duration-300"
+            >
               <Image
                 src="/assets/logo (2).png"
                 alt="Empire Developments"
@@ -93,39 +125,54 @@ const Header = ({ className }) => {
             </a>
           </div>
 
-          {/* Right CTA Buttons - Hidden on Mobile */}
-          <div className="hidden md:flex items-center gap-x-3 lg:gap-x-4">
-            <a
+          {/* Desktop CTA Buttons */}
+          <motion.div
+            className="hidden md:flex items-center gap-x-3 lg:gap-x-4"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.a
               href="/contact"
+              variants={fadeUp}
               className="bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#FFF3DC] text-gray-800 px-4 lg:px-6 py-2 rounded-full transition-colors duration-300 transform text-sm lg:text-base whitespace-nowrap"
             >
               Contact Us
-            </a>
-            <a
+            </motion.a>
+
+            <motion.a
               href="#login"
+              variants={fadeUp}
               className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 lg:px-6 py-2 rounded-full transition-all duration-300 transform text-sm lg:text-base whitespace-nowrap"
             >
               Login / Register
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Navigation */}
         <div
           className={`md:hidden absolute w-full bg-[#002E3C]/95 backdrop-blur-sm transition-all duration-300 ${
-            isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+            isOpen
+              ? 'max-h-[500px] opacity-100'
+              : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
-          <div className="flex flex-col space-y-3 px-4 py-4">
+          <motion.div
+            className="flex flex-col space-y-3 px-4 py-4"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isOpen ? 'visible' : 'hidden'}
+          >
             {nav.map((elem, index) => (
-              <div key={index}>
+              <motion.div key={index} variants={fadeUp}>
                 <button
                   onClick={() =>
                     setOpenDropdown(openDropdown === index ? null : index)
                   }
                   className="w-full text-left text-white hover:text-yellow-300 transition-colors duration-300 text-base py-1 flex justify-between items-center"
                 >
-              <Link href={elem.link}>  {elem.name}</Link>
+                  <Link href={elem.link}>{elem.name}</Link>
                   {elem.children && (
                     <span className="ml-2">
                       {openDropdown === index ? '▲' : '▼'}
@@ -145,23 +192,30 @@ const Header = ({ className }) => {
                     ))}
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
-            <div className="flex flex-col gap-y-2 pt-3 border-t border-white/20">
-              <a
+
+            {/* Mobile CTA Buttons */}
+            <motion.div
+              className="flex flex-col gap-y-2 pt-3 border-t border-white/20"
+              variants={containerVariants}
+            >
+              <motion.a
                 href="/contact"
+                variants={fadeUp}
                 className="bg-[#CCAB64] hover:bg-[#CCAB64] text-gray-800 px-4 py-2 rounded-full transition-colors duration-300 text-center text-base"
               >
                 Contact Us
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#login"
+                variants={fadeUp}
                 className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 py-2 rounded-full transition-all duration-300 text-center text-base"
               >
                 Login / Register
-              </a>
-            </div>
-          </div>
+              </motion.a>
+            </motion.div>
+          </motion.div>
         </div>
       </header>
     </div>

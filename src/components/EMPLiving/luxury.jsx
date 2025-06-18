@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 
 const features = [
-{     id: 'pools', title: 'POOLS', icon: '/assets/Group 71603.png', image: '/assets/476ac42e55311fb8b6ea8d69746a2845def39c6e.jpg' },
-  {   id: 'solar', title: 'Rooftop Solar Park', icon: '/assets/Layer_2.png', image: '/assets/f728f3fb6ca226457675b16456cb8c91b3f91f28.jpg' },
-  {   id: 'cinema',title: 'Outdoor Cinema', icon: '/assets/Vector2.png', image: '/assets/74647f5fdab1444c45a43b79c6cfe361326e20bc.jpg' },
-  {   id: 'tennis', title: 'Padel Tennis Court', icon: '/assets/Layer_3.png', image: '/assets/dc177a16c5fd1c465980e60d1564ccd017052027.jpg' },
-  {  id:'more', title: 'And Much More', icon: '/assets/Layer_4.png', image: '/assets/112c8134bf3e48ddf70731a70f55e975ae22e502.jpg' },
+{     id: 'pools', title: 'POOLS', icon: '/assets/Group 71603.png', image: '/assets/LUXURY1.webp' },
+  {   id: 'solar', title: 'Rooftop Solar Park', icon: '/assets/Layer_2.png', image: '/assets/LUXURY2.webp' },
+  {   id: 'cinema',title: 'Outdoor Cinema', icon: '/assets/Vector2.png', image: '/assets/LUXURY3.webp' },
+  {   id: 'tennis', title: 'Padel Tennis Court', icon: '/assets/Layer_3.png', image: '/assets/LUXURY4.webp' },
+  {  id:'more', title: 'And Much More', icon: '/assets/Layer_4.png', image: '/assets/LUXURY5.webp' },
 ];
 
 export default function FeaturesSection() {

@@ -4,7 +4,7 @@ import Image from 'next/image'
 const sectiontwo = () => {
     const textpara="Empire Livings by Empire Developments is a 15-storey residential tower in Dubai Science Park, featuring 202 units comprising studios, 1-bedroom apartments, and duplexes, with select units offering private pools. Residents enjoy amenities such as a swimming pool, gym, sauna, steam room, yoga space, outdoor cinema, co-working areas, and a children's play area. The development also includes a rooftop solar park, Zen garden, walking track, and BBQ area. Empire Livings is scheduled for completion in Q2 2027."
   return (
-    <div className=' h-[900px] md:h-[700px] w-full flex   justify-center'>
+    <div className=' mb-10 h-[900px] md:h-[700px] w-full flex   justify-center'>
         <div className='flex md:flex-row flex-col w-[90%] md:w-[70%]   items-center justify-center  md:gap-[20px]' >
          <div className=" w-[90%] md:w-[60%] h-[450px]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start h-[300px] lg:h-[400px] gap-4" >
                <div 

@@ -138,7 +138,7 @@ const child=document.querySelectorAll('.home')
 <div className='absolute z-20 w-full'>
 <div className={`relative z-20 overflow-hidden w-full `}>
  
-  <Stickyicon  />
+
 
 <div className= {`absolute w-full md:top-auto  flex items-center justify-center !top-15 opacity-0 ${className2}`} ref={text2}> 
 <div className='w-fit relative'>

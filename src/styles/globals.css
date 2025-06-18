@@ -14,7 +14,7 @@
 
 body {
   overflow-x: hidden;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
 
 .my-heading {
@@ -22,8 +22,8 @@ body {
 }
 
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;     
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;             /* Chrome, Safari, Opera */

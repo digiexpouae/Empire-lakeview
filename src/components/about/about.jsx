@@ -16,6 +16,7 @@ import {AnimatePresence, motion } from 'framer-motion';
 import craft from '../../../public/assets/animation/reload-arrow.json'
 import land from '../../../public/assets/animation/landmark-tower.json'
 import star from '../../../public/assets/animation/star.json'
+import Fadein from '../../common/fadein'
 
 
 
@@ -122,9 +123,11 @@ const para4="Empire Development is the leading UAE property developer. We guide 
   return (
     <>
     <div className={`relative w-full md:!h-[600px] !h-[400px] z-20 ${count ===1 && 'bg-[#002E3C]'}` }  ref={ref}>
-                
+
       <Header />
-      <Heroslider texttwo={'About'}            className2={'!top-[23%] '}
+      
+
+    <Heroslider texttwo={'About'}            className2={'!top-[23%] '}
  overlay={overlay} main={count ===1 ?false:true} cloud={cloud}  bottom={'hidden '}/>
       {/* Previous image */}
         <AnimatePresence  mode="wait">
@@ -149,15 +152,15 @@ const para4="Empire Development is the leading UAE property developer. We guide 
 </AnimatePresence>
    {console.log(count)}
 
- 
+
         <div className={` absolute left-0 right-0 bottom-0 top-0 flex  items-center justify-evenly h-full  w-full px-2 md:px-4 z-0 '`}  >
         <div className='flex flex-col justify-end w-[20%] h-[400px] text-white '><span className='text-[35px] font-bold md:text-[85px] my-heading'>25+</span><span className=' text-[10px] md:text-[20px]'>Years of Unwavering Excellence</span></div>
-     <div className="h-[400px] w-[40%] md:w-[25%] relative flex">
+      
+<div className="h-[400px] w-[40%] md:w-[25%] relative flex">
   <motion.div
-    initial={false}
     animate={{ opacity: count === 1 ? 1 : 0 }}
     transition={{ duration: 1.5, ease: 'easeInOut' }}
-    className="absolute inset-0 h-[400px]  flex items-end justify-end mx-4"
+    className="absolute inset-0 h-[400px] opacity-0 flex items-end justify-end mx-4"
   >
     <Image
       src={BackImage}
@@ -167,23 +170,36 @@ const para4="Empire Development is the leading UAE property developer. We guide 
     />
   </motion.div>
 </div>
+ 
 
          <div className= 'w-[30%] flex items-start justify-start text-white'><span className='my-heading text-[10px] md:text-[20px]'>Empire Developments is redefining urban living with innovative, high-quality projects across Dubai. Trusted, visionary, and committed to building vibrant communities</span></div>
         </div>
 
 
-     
     </div>
- <div className='bg-[#002E3C]'>
-      <Sectiontext classNamemain={ 'h-[500px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true}  text1={head} text={para}/>
-<Section />
-      <Sectiontext classNamemain={'h-[500px] md:!h-[350px]'} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true}  text1={head2} text={para2}/>
 
-<Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'}   amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'}/>
-<Sectionthree />
-<Sectionfour images={images}/>
+   
+
+<div className='bg-[#002E3C]'>
+         
+ 
+
+     <Fadein>    <Sectiontext classNamemain={ 'h-[500px] md:!h-[350px]'} classNameH={'!text-[65px] '} className={'md:!text-[20px] !text-[13px] !leading-5'} heading={true}  text1={head} text={para}/>  
+     
+
+  </Fadein>   
+
+
+
+
+    <Fadein>   <Section />    </Fadein>   
+        <Fadein>     <Sectiontext className main={'h-[500px] md:!h-[350px]'} classNameH={'!text-[65px] '} className={'md:!text-[20px] !text-[17px] !leading-8'} heading={true}  text1={head2} text={para2}/>    </Fadein>   
+
+    <Fadein>   <Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'}   amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'}/>    </Fadein>   
+     <Sectionthree /> 
+    <Fadein>   <Sectionfour images={images}/>    </Fadein>   
 </div>
-        <Footer footertext={true} text1={head3} text={para3} text2={head4} textpara={para4}/> 
+          <Footer footertext={true} text1={head3} text={para3} text2={head4} textpara={para4}/>  
 </>
   )
 } 
