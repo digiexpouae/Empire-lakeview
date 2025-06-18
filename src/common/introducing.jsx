@@ -63,7 +63,7 @@ gsap.fromTo(sliderRef.current, {}, {
 return (
 
   <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?' !h-[300px]':'!h-[100vh]'} ${className1}  flex items-center  container relative`} ref={containerRef}>
-    <div className='inline-flex gap-[30px] items-center'ref={sliderRef}>
+    <div className={`inline-flex ${viewprojects ? 'gap-[20px]' :'gap-[30px]'} items-center`}ref={sliderRef}>
       
       {/* Text + Logo Block */}
       <div className='shrink-0 flex flex-col items-center justify-center gap-[20px] mb-[20px] md:w-[380px]'>
@@ -81,20 +81,21 @@ return (
       {ima.map((elem, index) => (
         <div
           key={index}
-          className={`shrink-0 inline-block xl:w-[340px] md:w-[350px] w-[270px] h-[404px] md:h-[550px] ${className}`}
+          className={`shrink-0 inline-block xl:w-[340px] md:w-[350px] w-[270px] relative h-[404px] md:h-[550px] ${className}`}
         >
           <Image
             src={elem}
             priority
             alt={`Slide ${index}`}
-            className={`!h-full !w-full  ${overlay && 'md:object-cover'} ${intro && 'object-cover'} rounded-4xl relative  `}
+            className={`!h-full !w-full  ${overlay && 'md:object-cover'} ${intro && 'object-cover'} rounded-2xl relative  `}
           />
+{viewprojects && <div className='absolute left-0 right-0 top-0 bottom-0 bg-black/40 z-10 rounded-2xl'></div>}
 {overlay &&
      <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[150px] 
 'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 75%, #002E3C 97%)'
 }}></div>
          }         {viewprojects &&
-          <div className='absolute left-3 bottom-6'>
+          <div className='absolute left-3 bottom-6 z-40'>
             <h2 className='text-white text-[23px] font-bold my-heading'>Plazzo heights</h2>
             <button className='button flex items-center justify-center !py-[3px] !w-[120px] !text-[15px]'>View projects</button>
           </div>} 
