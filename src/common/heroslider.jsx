@@ -140,9 +140,9 @@ const child=document.querySelectorAll('.home')
  
 
 
-<div className= {`absolute w-full md:top-auto  flex items-center justify-center !top-15 opacity-0 ${className2}`} ref={text2}> 
+<div className= {`absolute w-full md:top-auto  flex items-center justify-center top-20 md:!top-30  opacity-0 ${className2}`} ref={text2}> 
 <div className='w-fit relative'>
-<h1 className='xl:text-[200px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>{texttwo}</h1>
+<h1 className='xl:text-[200px] lg:text-[160px] md:text-[130px] tracking-tight text-[16vw] z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>{texttwo}</h1>
 <div className={`absolute right-0 bottom-0 lg:mt-[25px] xl:mt-0 opacity-0 ${className3}`} ref={text3}>
 <span  className='lg:text-[35px] md:text-[30px] xl:text-[50px]  text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>{textthree}</span></div>
 
@@ -158,7 +158,7 @@ const child=document.querySelectorAll('.home')
 
       
   {main &&
-<div className={`relative flex items-center justify-center h-[400px] md:h-[600px] w-full opacity-0 z-50 ${className}`} ref={im}>
+<div className={`relative flex items-center justify-center h-[500px] md:h-screen w-full opacity-0 z-50 ${className}`} ref={im}>
 
 <Image src={main_im}  height={441} width={882} className={`absolute  z-40  h-[580px] w-[240px] md:h-[782px] md:w-[370px] ${bottom} `} />
 
@@ -167,7 +167,7 @@ const child=document.querySelectorAll('.home')
   }
 
 {Home && 
-<div className='flex h-[400px] md:h-[600px] w-full items-end  justify-center'>
+<div className='flex h-[400px] md:h-screen w-full items-end  justify-center'>
 {img.map((elem,index)=>{
 return <div key={index} className={` flex items-end justify-end relative opacity-0 z-50 home ${elem.className}`} ><Image src={elem.im} width={600} height={400} className={` ${bottom} z-40  w-auto  !h-full md:!w-full object-fit  `} />
 </div>

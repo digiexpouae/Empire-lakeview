@@ -69,33 +69,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
       animate={inView ? 'visible' : 'hidden'}
     >
       <div className="bg-black w-full py-10 text-white">
-        {footertext && (
-          <>
-            <motion.div variants={fadeUp}>
-              <Sectiontext
-                footer={'!text-start'}
-                classNamemain={'!h-[200px] md:!h-[100px] !text-start'}
-                classNameH={'!text-[12px] !py-0 md:!py-2 !text-start'}
-                className={'!text-[9px] leading-0 md:!leading-3 !text-start'}
-                heading={true}
-                text1={text1}
-                text={text}
-              />
-            </motion.div>
-
-            <motion.div variants={fadeUp}>
-              <Sectiontext
-                footer={'!text-start'}
-                classNamemain={'!h-[200px] md:!h-[100px] !text-start'}
-                classNameH={'!text-[12px] !py-0 md:!py-2 !text-start'}
-                className={'!text-[9px] leading-0 md:!leading-3 !text-start'}
-                heading={true}
-                text1={text2}
-                text={textpara}
-              />
-            </motion.div>
-          </>
-        )}
+   
 
         <div className="container mx-auto px-4 mt-[50px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 xl:gap-8 lg:gap-0 gap-5 place-items-left md:place-items-center">

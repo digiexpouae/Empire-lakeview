@@ -44,52 +44,34 @@ useEffect(() => {
 }, [inView]);
 
 return (<>
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[600px] relative flex items-center justify-center w-[80vw] scrollbar-hide" ref={ref}>
- {back_image &&
-  <div className='h-[500px] w-[500px] absolute right-[-9%] md:right-0 bottom-[-15%] overflow-hidden '>
-  <Image  src={back}  width={500} height={500} className='!h-full !w-full'/>
-</div>}
-<div className=" w-full md:flex md:flex-row flex flex-col gap-[40px] lg:gap-[80px]">
-        <div className="flex flex-col md:w-[50%] lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
-          {/* Left side - Project title */}
-          <div 
-            className={`w-full  text-black p-x-8 flex  md:items-start items-center justify-center xl:h-[280px] animate-slide-left ${home ?'opacity-100':'opacity-0'}`}
-         ref={ref1} >
-            <h2 className="text-[30px] lg:text-[100px] sm:text-5xl my-heading font-bold tracking-tighter text-white">
-            {head}
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-screen relative flex items-center justify-center w-[80vw] scrollbar-hide" ref={ref}>
+      <div className="w-full md:flex md:flex-row flex-col">
+        {/* Left grid: Heading, Description, Lottie */}
+        <div className="flex flex-col md:w-[3/4] w-full xl:gap-0 gap-4 lg:gap-6 justify-center h-full">
+          <div className={`w-full text-black flex md:items-start items-start justify-start xl:h-[auto] animate-slide-left ${home ? 'opacity-100' : 'opacity-0'}`} ref={ref1}>
+            <h2 className="text-[30px] lg:text-[60px] sm:text-5xl my-heading font-bold tracking-tighter text-white text-left mb-3">
+              {head}
             </h2>
           </div>
-          
-       
-              <LottieIcons className={`element ${home ?'opacity-100':'opacity-0'}`} className2={`text-center md:w-[120px] !text-[10px]   ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[70px] w-[70px] md:w-[50px] md:h-[50px]'}  className1={`grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36  mt-8 lg:mt-20 ${home ?'opacity-100':'opacity-0'}`}/></div>
-          {/* Right side - Project description and amenities */}
-         
-        <div className=" md:w-[50%] lg:w-[60%]"> <div className={`md:p-6 sm:p-8 lg:p-0 flex flex-col items-start lg:h-[280px] gap-4 ${home ?'opacity-100':'opacity-0'}`} ref={ref2}>
-            
-            <p 
-              className={`text-[18px] lg:text-[22px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light ${classNamep}`}
-            >
-             {text}
-            </p>
-            {btn &&
-            <button className="
-  bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
-            }
-            {/* Amenities section */}
-          
+          <div className={`w-full flex md:items-start items-start justify-start xl:h-auto animate-slide-left ${home ? 'opacity-100' : 'opacity-0'}`}> 
+            <p className={`text-[18px] lg:text-[22px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light text-left ${classNamep}`}>{text}</p>
           </div>
-
-       </div>
-
+          <div className="mt-4 md:mt-8 flex md:items-start items-start justify-start">
+            <LottieIcons className={`element ${home ? 'opacity-100' : 'opacity-0'}`} className2={`text-center md:w-[120px] !text-[10px]   ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[70px] w-[70px] md:w-[50px] md:h-[50px]'} className1={`grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36 mt-4 lg:mt-8 ${home ? 'opacity-100' : 'opacity-0'}`} />
+          </div>
+        </div>
+        {/* Right grid: Single Image */}
+        <div className="md:w-[1/4] w-full flex items-center justify-center h-full relative min-h-[400px]">
+          <div className="relative w-full h-full min-h-[400px]">
+            <Image src={back} layout="fill" objectFit="contain" className="rounded-2xl" alt="Section image" />
+          </div>
+        </div>
       </div>
-
-
-    </div>
+     </div>
     <div className={`flex items-center justify-center w-full ${className}`}>
-          <hr className="border border-white mt-8 w-[80vw] " /></div></>
-
-  );
+      <hr className="border border-white mt-8 w-[80vw] " />
+    </div>
+  </>);
 };
 
 export default section_two;

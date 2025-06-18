@@ -60,7 +60,7 @@ export default function FeaturesSection() {
           ) : null
         )}
         <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[350px] 
-'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #002E3C 97%)'
+'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #0E1527 97%)'
 }}></div>
       </div>
     </div>
