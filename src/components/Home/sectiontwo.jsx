@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import Image from 'next/image'
 import img from '../../../public/assets/f396e1a86a31329925ebe09220cf24698faf6a35.jpg'
