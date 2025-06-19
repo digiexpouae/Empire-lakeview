@@ -52,7 +52,7 @@ const index = () => {
       w: 50
     }, {
       icon: Demand,
-      title: "Strong Dental Demand",
+      title: "Strong Rental Demand",
       h: 50,
       w: 50
     }, {
@@ -145,7 +145,7 @@ const index = () => {
         </div>
 
 
-        <div ref={introRef} className=' py-10 container-2  flex flex-col items-start justify-evenly  lg:justify-evenly md:py-10 py-5 lg:gap-[50px]'>
+        <div ref={introRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly md:py-10 py-5 lg:gap-[50px]'>
         <Introducing ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
         </div>
 
