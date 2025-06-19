@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap&subset=latin');
 
 :root {
-  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 .html{
@@ -17,8 +16,10 @@ body {
   scrollbar-width: none; 
 }
 
+
+
 .my-heading {
-  font-family: var(--font-inter);
+  font-family: var(--font-poppins);
 }
 
 .scrollbar-hide {

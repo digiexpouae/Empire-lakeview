@@ -252,7 +252,7 @@ import React from "react"
     return (
         <div id="webcrumbs" className={`${className}`} ref={ref}>
             <div className="relative h-[100%]   w-full xl:min-w-[50vw] overflow-hidden rounded-lg">
-                <div className="absolute inset-0 w-full h-[100%] xl:bg-[#002E3C80] md:z-10 backdrop-blur-xs" ></div>
+                <div className="absolute inset-0 w-full h-[100%]  md:z-10 backdrop-blur-xs" ></div>
              
 
                 <div className="absolute inset-0 md:z-20  flex flex-col h-[100%]  items-center justify-center ">
@@ -339,7 +339,7 @@ import React from "react"
                             <textarea
                                 placeholder="Write your message"
                                 rows="4"
-                                className="w-full md:py-2 lg:py-1 md:px-4 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all resize-none"
+                                className="w-full md:py-2 lg:py-1 md:px-1 py-1 px-2 bg-slate-200/20 backdrop-blur-sm text-white placeholder-white/60 rounded-xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-teal-400/50 transition-all resize-none"
                             ></textarea>
                         </div>
  

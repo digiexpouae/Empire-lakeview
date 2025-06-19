@@ -142,7 +142,7 @@ const child=document.querySelectorAll('.home')
 
 <div className= {`absolute w-full md:top-auto  flex items-center justify-center !top-15 opacity-0 ${className2}`} ref={text2}> 
 <div className='w-fit relative'>
-<h1 className='xl:text-[200px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>{texttwo}</h1>
+<h1 className='xl:text-[180px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>{texttwo}</h1>
 <div className={`absolute right-0 bottom-0 lg:mt-[25px] xl:mt-0 opacity-0 ${className3}`} ref={text3}>
 <span  className='lg:text-[35px] md:text-[30px] xl:text-[50px]  text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>{textthree}</span></div>
 
@@ -186,7 +186,7 @@ return <div key={index} className={` flex items-end justify-end relative opacity
           <Image src={im2} alt="Cloud" objectFit='cover' className='w-[280px] h-[180px] md:!w-[580px] md:!h-[320px]' />
         </div>
         }{overlay &&
-        <div className='bg-[linear-gradient(180deg,rgba(0,44,58,0)_0%,#002E3C_100%)] h-[100px] left-0 right-0 z-[999] absolute bottom-0 w-full'> </div>
+        <div className='bg-[linear-gradient(180deg,rgba(14,21,39,0)_71.68%,#0E1527_100%)] h-[300px] left-0 right-0 z-[999] absolute bottom-0 w-full'> </div>
         }
 </div></div>
     )

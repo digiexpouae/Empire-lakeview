@@ -45,7 +45,7 @@ const wrapper=useRef()
       ]
     return ( 
   <div  className='!h-[100vh]  flex items-center justify-center w-full relative' ref={wrapper}  >
-    <div className='h-[550px]  w-full' >
+    <div className='h-[550px] flex items-center justify-center w-full' >
       <div className="relative h-full  w-full  "    >
         <Image
           src={currentImage.im}
@@ -55,7 +55,7 @@ const wrapper=useRef()
           className="object-cover " 
         />
 
-<div className="overlay absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center w-full bg-[linear-gradient(270deg,rgba(0,46,60,0)52.53%,rgba(0,46,60,0.9)80.55%),linear-gradient(0deg,rgba(0,46,60,0.3),rgba(0,46,60,0.3))] z-10">
+<div className="overlay absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center w-full bg-[linear-gradient(270deg,rgba(14,21,39,0)_52.53%,rgba(14,21,39,0.9)_80.55%),linear-gradient(0deg,rgba(14,21,39,0.3),rgba(14,21,39,0.3))] z-10" >
      <div className="absolute md:left-20 left-5 z-10 flex flex-col justify-center gap-3 md:w-[600px]">
             <h2 className="lg:text-[50px] xl:text-[80px] text-[40px] text-white my-heading font-bold">
               {currentImage.tex1}
@@ -67,7 +67,11 @@ const wrapper=useRef()
               </button> 
                <button
                 className="text-gray-800 md:px-4 px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"
-                style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)' }}
+                style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)'
+
+
+
+                 }}
               >
                 Contact us
               </button>

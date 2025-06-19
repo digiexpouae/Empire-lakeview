@@ -42,7 +42,7 @@ const text=
     },
     {
         text:'Developer',
-    im:'/assets/plazoo.jpg'
+    im:'/assets/plazoo (3).jpg'
 
     },
     {
@@ -64,8 +64,8 @@ im:'/assets/cmpc.png'
       <Heroslider texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-140px] object-cover md:!h-[620px] !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={overlay} main={true} cloud={cloud}/>
       <Image  src={Back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
      </div>
-      <div className='bg-[#002E3C]'>
-   < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[120px]'}/>
+      <div className='bg-[#0E1527]'>
+   < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[100px]'} className1={'lg:!h-[220px] md:h-[450px]'} classNamemain={'lg:!h-[600px] md:!h-[800px]'}/>
  <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={text1} text={para}/>
 
    <Sectionthree />

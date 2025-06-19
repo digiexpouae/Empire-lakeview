@@ -71,7 +71,7 @@ const [main, setmain] = useState(true)
       <Heroslider className1={'top-[3%]'} main={main} textone={'Empire'} texttwo={'Residence'} bottom={'md:bottom-[-350px] bottom-[-300px] md:!w-full'} main_im={Main} overlay={overlay}/>
       <Image  src={Field} className='left-0 right-0 bottom-0 top-0 w-full h-[100%] z-[-10] !object-cover object-top-left'/>
       </div>
-       <div className='bg-[#002E3C]'>
+       <div className='bg-[#0E1527]'>
       <SectionTwo amenities={amenities} textpara={textpara}/>
     <Sectiontext classNamemain={'h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para} />
 
