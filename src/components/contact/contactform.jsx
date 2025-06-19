@@ -19,15 +19,15 @@ const index = () => {
          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' width={1200} height={1000} />
          <div className="absolute inset-0 bg-[#002E3C80] z-10 transition-opacity duration-500 opacity-100"></div>
           </div>
-        <div className='bg-[#002E3C]'>
-        <div className='flex  items-center justify-center w-full lg:h-[800px] '>
+        <div className='bg-[#0E1527]'>
+        <div className='flex  items-center justify-center w-full py-[40px] md:py-[60px] lg:h-[800px] '>
           <div className='flex justify-center w-[90%] items-center lg:flex-row flex-col  lg:gap-[60px]'>
             <div className='flex flex-col gap-[20px] md:w-[80%] lg:w-[45%]'>
-              <div><h1 className='text-[45px] md:text-[95px] text-white font-bold leading-19  my-heading '>
+              <div><h1 className='text-[45px] md:text-[75px] text-white font-bold leading-19  my-heading '>
                 Get in 
                 Touch</h1></div>
 
-            <div><p className='text-white my-heading text-[15px] md:text-[25px] text-start'>Are you ready to embark on a journey of unparalleled luxury and innovation? Whether you're interested in exploring our exceptional portfolio, 
+            <div><p className='text-white my-heading text-[15px] md:text-[20px] text-start'>Are you ready to embark on a journey of unparalleled luxury and innovation? Whether you're interested in exploring our exceptional portfolio, 
               discussing investment opportunities, or seeking expert advice, the Empire Development team is here for you.</p></div>
               <div className=' flex w-full mitems-center  gap-[10px]'> 
               <div className='w-[30px] h-[30px]'><Image src={Phone}  className=' !h-full !w-full'/>              </div>
@@ -43,7 +43,7 @@ const index = () => {
             </div>
               </div>
 
-    <div className='flex w-[90%] lg:w-[45%] h-[550px] md:h-[800px] lg:h-[500px] items-end justify-end'><Form className={'lg:w-full bg-black/45 rounded-3xl flex  flex-col items-center justify-center    w-[100%] xl:h-[100%] h-[90%] md:h-[75%]  ' } /></div>
+    <div className='flex w-[90%] lg:w-[55%] xl:w-[45%] h-[550px] md:h-[800px] lg:h-[500px] items-end justify-end'><Form className={'lg:w-full bg-black/45 rounded-3xl flex  flex-col items-center justify-center    w-[100%] xl:h-[100%] h-[90%] md:h-[75%]  ' } /></div>
 
 
           </div>

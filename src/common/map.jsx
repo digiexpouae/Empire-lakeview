@@ -24,7 +24,7 @@ useEffect(() => {
   // ScrollTrigger for map zoom
  const st = ScrollTrigger.create({
     trigger: container,
-    start: 'top top',
+    start: 'bottom bottom',
     end: '+=1500',
     pin:true,
     pinType:'transform',

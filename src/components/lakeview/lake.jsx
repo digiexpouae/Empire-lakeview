@@ -15,7 +15,7 @@ import im6 from '../../../public/assets/sliderlake6.webp'
 import SectionFour from '../../common/section_four'
 import Image from 'next/image'
 import Sectionthree from '../../common/section'
-import back from '../../../public/assets/LAKEBACK.webp'
+import back from '../../../public/assets/lake background.webp'
 import empire from '../../../public/assets/empire2.png'
 import im1 from '../../../public/assets/cloud_one.png'
 import spa from '../../../public/assets/animation/Spa Relaxation.json'
@@ -116,21 +116,20 @@ const para5="Empire Lakeview in Liwan by Empire Development is one of the best c
 <>
 <div className='w-full relative md:h-[600px] h-[400px]'>
     <Header className='nav-menu absolute z-50'/>
-       <Heroslider className={'top-[15%]'} main={main} bottom={'bottom-[-250px]'} cloud={cloud} Home={false} main_im={empire} im1={im1} im2={im1} className1={' top-2 md:top-10'} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true} />
+       <Heroslider className={'top-[15%]'}  main={main} bottom={'bottom-[-250px]'} cloud={cloud} Home={false} main_im={empire} im1={im1} im2={im1} className1={' top-2 md:top-5 lg:top-10'} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true} />
          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
            </div>
-<div className='bg-[#002E3C]'>
+<div className='bg-[#0E1527]'>
 
            <Fadein><Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 
               Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom 
               apartments, & 3-bedroom duplexes, with many units featuring private pools.`}  icontext={'md:!text-[20px]'} /> </Fadein>
-         
-          <Fadein> <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} /></Fadein>
+    <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />
             
-  <Fadein>   <Sectiontwo classNamemain={'!items-center !h-[750px] md:!h-[200px] section-1 '}  classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />
-  </Fadein>
+   <Fadein> <Sectiontwo classNamemain={'!items-center !h-[750px] md:!h-[200px] section-1 '}  classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[16px] !leading-6'} heading={true} text1={text1}  text={para} />  </Fadein>
 
-          <Fadein><Sectionthree images={images} onAllVisible={handleAllVisible} /> </Fadein>
+
+        <Sectionthree images={images} onAllVisible={handleAllVisible} />
     <Fadein>  <Sectiontwo classNamemain={' !h-[700px] md:!h-[350px] py-6 flex items-center  lg:items-center md:items-start  justify-center section-2'}  classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head}  text={para2} /></Fadein>
 
        

@@ -55,7 +55,7 @@ im:'/assets/cmpc.png'
             <Heroslider bottom={' object-cover md:!h-[550px]   !bottom-[-15%] !h-[350px] !w-[100%] '}  className2={' !top-[23%] md:!top-9% lg:!top-9 xl:!top-4'} className1={'right-0 left-[unset] top-[13%]  lg:top-[13%] text-[10px]  '} main_im={Hero}  main={true} className3={'lg:bottom-[5%]'} texttwo={'Plazzo'} textthree={'Heights'}/>
       <Image  src={back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
           </div>
-                     <div className='bg-[#002E3C]'>
+                     <div className='bg-[#0E1527]'>
           <Sectiontwo  amenities={amenities} textpara={textpara} btn={false}/>
                                 <Sectiontext classNamemain={'!items-end md:!items-center !h-[600px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para} />
 

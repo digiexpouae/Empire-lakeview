@@ -16,7 +16,7 @@ const icon = ({ icons }) => {
 
   const renderRow = (row) =>
     row.map((elem, index) => (
-      <div
+   <div
         key={index}
         className="flex flex-col items-center justify-center text-white h-[150px] md:h-[200px]"
       >
@@ -39,8 +39,8 @@ const icon = ({ icons }) => {
     ));
 
   return (
-    <div className="flex items-center justify-center h-[400px] md:h-[650px]">
-      <div className="w-[90%] max-w-7xl space-y-4 md:space-y-8">
+    <div className="flex items-center justify-center  h-[400px] md:h-[650px]">
+      <div className="w-[70%] max-w-7xl space-y-4 md:space-y-8">
         {/* First row: full grid */}
         <div className="grid grid-cols-5 gap-x-4">{renderRow(firstRow)}</div>
 
