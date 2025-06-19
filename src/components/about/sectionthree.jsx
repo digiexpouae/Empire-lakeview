@@ -36,7 +36,7 @@ const SectionThree = () => {
         style={{
           background: `
             linear-gradient(0deg, rgba(0, 46, 60, 0.8), rgba(0, 46, 60, 0.8)),
-            linear-gradient(180deg, rgba(0, 46, 60, 0) 68.55%, #002E3C 100%)`,
+            linear-gradient(180deg, rgba(0, 46, 60, 0) 68.55%, #0E1527 100%)`,
         }}
       ></div>
 

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import {AnimatePresence, motion } from 'framer-motion';
+import ContactForm from '@/common/form';
 import Form from '@/common/form';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
@@ -89,12 +90,19 @@ if(count ==2){
 
   return (
     <div  className="relative w-full h-[100vh]  overflow-hidden "   ref={ref}>
-      {background &&
-     <Image src={im} className='scale-[1.4] !h-full !w-full !object-cover object-top-left'/>
-      }{/* Previous image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/assets/contact.png"
+          alt="Background"
+          fill
+          className="object-cover scale-[1.4] object-top-left"
+          priority
+        />
+      </div>
+      {/* Previous image */}
         <AnimatePresence  mode="wait">
       <motion.div
-        key={images[index].src + '-prev'}
+        key={images[index]?.src + '-prev'}
              initial={{scale: 1.6 , opacity: 1 }}
   animate={{opacity: 0.9 ,  scale: !scaledBack ? 1.3 : 1 }}
             transition={{duration: 0.5, ease: 'easeInOut' }}
@@ -102,7 +110,7 @@ if(count ==2){
       >
         
         <Image
-          src={images[index].src}
+          src={images[index]?.src}
           alt="Previous"
           height={700}
           width={1200}
@@ -111,23 +119,7 @@ if(count ==2){
         />
       </motion.div>
 </AnimatePresence>
-      {/* Current image */}
-      {/* <motion.div      */}
-        {/* key={images[index].src + '-current'}
-    initial={{ opacity: 0.4}}
-        animate={{ opacity: 1,scale:1 }}
-        transition={{ duration: 1, ease: 'easeInOut'}}
-        className="absolute inset-0"
-      >
-        <Image
-          src={images[index].src}
-          alt="Current"
-             height={700}
-          width={1200}
-          className={`object-cover !h-[100%] object-center  !w-[100%] ${className}`}
-          priority
-        /> */}
-      {/* </motion.div> */}
+
 
       {/* Overlay content changes by count */}
       {count === 1 &&(
@@ -139,23 +131,17 @@ if(count ==2){
         </div>
       )}
 
-      {count == 2 &&  (
-        <div className="absolute inset-0  z-10 xl:flex h-[100%]  sm:bg-[#002E3C80] backdrop-blur-xs xl:flex-row flex flex-col  gap-[15px]  justify-center  items-center xl:bg-[#00000066] w-full opacity-0"   ref={ref1}>
-          <div className='xl:bg-[#002E3C]    z-20  h-[20%] xl:h-auto absolute top-0 xl:bottom-0 left-0   flex items-end md:items-end xl:items-center justify-center w-[100%] xl:w-[50%] ' >
-            <div className={`flex items-center  justify-center flex-col text-white px-6 md:p-0 xl:mb-0`}>
-              <span className='font-semibold  my-heading flex xl:flex-col flex-row items-center justify-center xl:items-start text-[45px] lg:text-[45px] md:text-[80px] xl:text-[80px]  form-heading '>
-               <span className=' md:leading-15'>Keep in</span> 
-               <span>Touch</span>
-              </span>
-                <p className='text-[15px]  md:text-[20px] tracking-tight text-center md:text-start md:leading-6 w-[80%] md:w-[50%] xl:w-[45%]'>
-                  Are you ready to embark on a journey of unparalleled luxury and innovation?
-                </p>
-            </div>
-
-          </div>
-          <Form     ref={ref2} className=' xl:w-[50%] w-[100%] xl:h-[100%] h-[90%] md:h-[75%]  absolute xl:top-0 bottom-0 right-[-50%] lg:bottom-3 opacity-0'/>
-        </div>
-      )}
+{count == 2 && (
+  <div
+    className="absolute inset-0 z-10 flex items-center justify-center w-full h-full sm:bg-[#002E3C80] xl:bg-[#00000066] backdrop-blur-xs"
+    ref={ref1}
+  >
+    <Form
+      ref={ref2}
+      className="w-full max-w-4xl h-auto xl:h-[90%] p-4 md:p-8 xl:p-10 opacity-0"
+    />
+  </div>
+)}
     </div>
   );
 };

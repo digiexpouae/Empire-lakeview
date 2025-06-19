@@ -79,17 +79,22 @@ return (<>
             {/* Amenities section */}
           
           </div>
-
-       </div>
-
+          <div className="mt-4 md:mt-8 flex md:items-start items-start justify-start">
+            <LottieIcons className={`element ${home ? 'opacity-100' : 'opacity-0'}`} className2={`text-center md:w-[120px] !text-[10px]   ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[70px] w-[70px] md:w-[50px] md:h-[50px]'} className1={`grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 gap-8 lg:gap-36 mt-4 lg:mt-8 ${home ? 'opacity-100' : 'opacity-0'}`} />
+          </div>
+        </div>
+        {/* Right grid: Single Image */}
+        <div className="md:w-[1/4] w-full flex items-center justify-center h-full relative min-h-[400px]">
+          <div className="relative w-full h-full min-h-[400px]">
+            <Image src={back} layout="fill" objectFit="contain" className="rounded-2xl" alt="Section image" />
+          </div>
+        </div>
       </div>
-
-
-    </div>
+     </div>
     <div className={`flex items-center justify-center w-full ${className}`}>
-          <hr className="border border-white mt-8 w-[80vw] " /></div></>
-
-  );
+      <hr className="border border-white mt-8 w-[80vw] " />
+    </div>
+  </>);
 };
 
 export default section_two;

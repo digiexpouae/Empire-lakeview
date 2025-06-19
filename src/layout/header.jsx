@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
@@ -29,6 +29,16 @@ const fadeUp = {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const nav = [
     { name: 'Home', link: '/' },
@@ -49,7 +59,11 @@ const Header = () => {
   ];
 
   return (
-    <div className="absolute z-50 w-full">
+    <div
+      className={`fixed z-50 w-full transition-all duration-300 ${
+        scrolled ? 'bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-md'
+      }`}
+    >
       <header className="relative z-50">
         {/* Top bar */}
         <div className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-3">

@@ -1,71 +1,44 @@
 'use client';
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3, // 👈 control delay between elements
-    },
-  },
-};
-
-const childVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: 'easeOut',
-    },
-  },
-};
+import text_bg from "../../public/assets/two_bg.png"
+import { easeInOut } from 'framer-motion';
 
 const SectionText = ({
-  text,
-  className,
-  heading,
-  text1,
-  classNameH,
-  classNamemain,
-  footer,
 }) => {
+
+
   const ref = useRef(null);
-  const inView = useInView(ref, {
-    once: true,
-    margin: '0px 0px -100px 0px',
-  });
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <motion.div
-      ref={ref}
-      className={`w-full flex items-center justify-center md:h-[560px] h-[400px] ${classNamemain}`}
-      variants={containerVariants}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
+    <div
+      className="relative  h-[80vh] md:h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-6"
+      style={{ backgroundImage: `url(${text_bg.src})` }}
     >
-      <motion.div
-        className={`w-[80%] text-center ${footer}`}
-        variants={containerVariants}
-      >
-        {heading && (
-          <motion.h2
-            className={`my-heading heading py-5 ${classNameH}`}
-            variants={childVariants}
-          >
-            {text1}
-          </motion.h2>
-        )}
-        <motion.span
-          className={`text-white my-heading lg:text-[25px] md:text-[20px] text-[15px] md:leading-5 ${className}`}
-          variants={childVariants}
+      <div className="max-w-3xl" ref={ref}>
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="text-4xl md:text-7xl font-extrabold mb-4"
         >
-          {text}
-        </motion.span>
-      </motion.div>
-    </motion.div>
+          Discover a New <br /> Era of Living
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }}
+          className="text-lg md:text-xl font-medium leading-relaxed"
+        >
+          Welcome to Empire Development, a forward-looking real estate developer in Dubai.
+          Empire Lakeview is not only a place to live, but it is a transformative vision
+          brought to life by Empire Development. Empire Development reshapes urban life and
+          offers apartments and homes built with modern technology.
+        </motion.p>
+      </div>
+    </div>
   );
 };
 
