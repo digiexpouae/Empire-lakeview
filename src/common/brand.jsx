@@ -73,10 +73,14 @@ const brand = ({img,text1,text2,amenities,className,iconsize,className2,classNam
             </SwiperSlide>
           ))}
           <div className="swiper-button-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full p-2 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" strokeWidth={2} stroke="black" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#CCAB64" viewBox="0 0 24 24" strokeWidth={2} stroke="#CCAB64" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
           </div>
           <div className="swiper-button-next absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full p-2 cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" strokeWidth={2} stroke="black" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#CCAB64" viewBox="0 0 24 24" strokeWidth={2} stroke="#CCAB64" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
           </div>
         </Swiper>
       </div>
