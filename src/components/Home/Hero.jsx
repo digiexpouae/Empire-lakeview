@@ -8,7 +8,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 const LAND_VIDEO_PATH = "/assets/video.mp4";
 const PORT_VIDEO_PATH = "/assets/video.mp4";
-const POSTER_IMAGE_PATH = "/assets/homebg.png";
+const POSTER_IMAGE_PATH = "/assets/fallback.png";
 const LOGO_PATH = "/assets/logo2.png";
 
 export default function Section1() {
