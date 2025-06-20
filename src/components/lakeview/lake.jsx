@@ -123,14 +123,14 @@ const [overlay, setoverlay] = useState(true)
     const para5 = "Empire Lakeview in Liwan by Empire Development is one of the best choices for Dubai real estate investment. With an easy and flexible payment schedule It's a great chance for both end users and investors.";
     return (
       <div>
-        <div className='w-full relative h-[400px] md:h-screen'>
+        <div className='w-full relative h-[500px] md:h-screen'>
           <Header className='nav-menu absolute z-50' />
           <Heroslider className={'top-[15%]'} main={main} bottom={'bottom-[-250px]'} cloud={cloud} Home={false} main_im={empire} im1={im1} im2={im1} className1={' top-2 md:top-5 lg:top-10'} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true} />
           <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-full md:h-screen absolute z-0' />
         </div>  
         <div className='bg-[#0E1527]'>
           <Fadein>
-            <div className='mt-[400px] md:mt-0'>
+            <div className='md:mt-0'>
               <Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 
               Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom 
               apartments, & 3-bedroom duplexes, with many units featuring private pools.`} icontext={'md:!text-[20px]'} />
@@ -141,13 +141,11 @@ const [overlay, setoverlay] = useState(true)
             <Sectiontwo classNamemain={'!items-center !h-[750px] md:!h-[200px] section-1 '} classNameH={'!text-[35px] '} className={'md:!text-[20px] !text-[16px] !leading-6'} heading={true} text1={text1} text={para} />
           </Fadein>
           <Sectionthree images={images} onAllVisible={handleAllVisible} />
-          <Fadein>
-            <Sectiontwo classNamemain={' !h-[700px] md:!h-[350px] py-6 flex items-center  lg:items-center md:items-start  justify-center section-2'} classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head} text={para2} />
-          </Fadein>
-          <Fadein>  <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' /></Fadein>
+           <Fadein>  <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' /></Fadein>
           <Fadein>     <Icon icons={icons} /> </Fadein>
-          <Fadein>    <Sectiontwo classNamemain={'!items-start !items-center !h-[750px] lg:!h-[400px] '} classNameH={'!text-[35px] '} className={'md:!text-[20px]  !text-[16px] !leading-8'} heading={true} text1={head2} text={para3} /></Fadein>
-          <Fadein>  <SectionFour images={contactbg} /> </Fadein>
+     \     <Fadein> 
+             <SectionFour images={contactbg} />
+              </Fadein>
         </div>
         <Footer footertext={true} text1={head3} text2={head4} text={para4} textpara={para5} />
       </div>

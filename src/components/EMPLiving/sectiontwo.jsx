@@ -29,7 +29,13 @@ const sectiontwo = () => {
 
 
        </div>
-       <div className='w-[80%] md:w-[40%] h-[300px] xl:h-[500px]'><Image  src={empire} className='rounded-2xl h-full w-full object-cover'/></div>
+       <div className="w-[80%] md:w-[25%] h-[300px] md:h-[40px] xl:h-[400px]">
+  <Image
+    src={empire}
+    alt="Empire Building"
+    className="rounded-2xl w-full h-full object-cover"
+  />
+</div>
 </div>
     </div>
   )

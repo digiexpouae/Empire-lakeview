@@ -72,12 +72,12 @@ return (<>
           {/* Right side - Project description and amenities */}
          
         </div>
-        <div className=" md:w-[50%] lg:w-[60%]"> <div className={`md:p-6 sm:p-8 lg:p-0 flex flex-col items-start lg:h-[100px] gap-4  opacity-0 ${className1}`} ref={ref2}>
-            
+        <div className=" md:w-[50%] lg:w-[60%]">
+          <div className={`md:p-6 sm:p-8 lg:p-0 flex flex-col items-center lg:h-[100px] gap-4 opacity-0 ${className1}`} ref={ref2}>
             <p 
-              className= "text-[18px] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light"
+              className="text-[18px] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light text-center w-full"
             >
-            {textpara}
+              {textpara}
             </p>
           { btn && <button className="
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
@@ -95,24 +95,25 @@ return (<>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
-                  className=" flex flex-col items-start  justify-center p-2 bg-white  rounded-[13px] animate-fade-up-delayed h-[130px] w-[130px] md:h-[160px] md:w-[160px] lg:h-[200px] lg:w-[200px] gap-[5px] md:gap-[10px] element"
+                  className="flex flex-col items-center justify-between p-2 bg-white rounded-[13px] animate-fade-up-delayed h-[110px] w-[110px] sm:h-[130px] sm:w-[130px] md:h-[160px] md:w-[160px] lg:h-[200px] lg:w-[200px] element text-center gap-1 sm:gap-2"
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
-                    <p className="text-[14px] md:text-[18px] my-heading">{amenity.text}</p>
-{index === 0 || index === 1 ? (
-  <p className=" text-[23px] md:text-[23px] lg:text-[32px] my-heading  leading-9 text-black font-bold my-heading md:w-[150px]">
-    {amenity.title}
-  </p>
-) : (
-  <div
-    className={`relative w-full aspect-[4/2] overflow-hidden flex items-end  ${className}`}
-  >
-  <Image fill src={amenity.im} alt="Amenity image" className={` object-contain  !w-[75%]`}/></div>
-)}
-                  
-                    <span className="text-[14px] my-heading md:text-[18px] text-black">{amenity.text2}</span>
-               
-                 
+                  {/* Heading */}
+                  <p className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-center mb-1 sm:mb-2 font-medium w-full flex justify-center items-center">{amenity.text}</p>
+                  {/* Logo or Title */}
+                  <div className="flex-1 flex items-center justify-center w-full">
+                    {index === 0 || index === 1 ? (
+                      <p className="text-[15px] sm:text-[23px] lg:text-[32px] my-heading leading-5 sm:leading-9 text-black font-bold my-heading text-center w-full flex justify-center items-center">
+                        {amenity.title}
+                      </p>
+                    ) : (
+                      <div className="relative w-full aspect-[4/2] overflow-hidden flex items-center justify-center">
+                        <Image fill src={amenity.im} alt="Amenity image" className="object-contain m-auto !w-[60%] sm:!w-[75%]" />
+                      </div>
+                    )}
+                  </div>
+                  {/* Optional text below */}
+                  <span className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-black text-center mt-1 sm:mt-2 w-full flex justify-center items-center">{amenity.text2}</span>
                 </div>
               ))}
             </div>

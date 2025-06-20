@@ -6,6 +6,7 @@ import { Heading } from "lucide-react";
 import back from '../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.png'
 import { useInView } from "react-intersection-observer";
 import LottieIcons from "./lottie";
+import { motion } from "framer-motion";
 
 const section_two = ({text,head,amenities,btn,back_image,className,home,icontext,classNamep}) => {
 
@@ -61,10 +62,32 @@ return (<>
           </div>
           
        
-              <LottieIcons className={`element ${home ?'opacity-100':'opacity-0'}`} className2={`text-center md:w-[120px] !text-[10px]   ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[50px] w-[50px] md:w-[50px] md:h-[50px]'}  className1={`grid grid-cols-2 lg:flex  md:grid-cols-3 gap-4 md:gap-8 lg:gap-2  mt-4 md:mt-8 lg:mt-40 xl:mt-30 ${home ?'opacity-100':'opacity-0'}`}/></div>
+              {/* Hide grid on mobile, show on md+ */}
+              <div className="hidden md:block">
+                <LottieIcons className={`element ${home ?'opacity-100':'opacity-0'}`} className2={`text-center md:w-[120px] !text-[10px]   ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[50px] w-[50px] md:w-[50px] md:h-[50px]'}  className1={`grid grid-cols-2 lg:flex  md:grid-cols-3 gap-4 md:gap-8 lg:gap-2  mt-4 md:mt-8 lg:mt-40 xl:mt-30 ${home ?'opacity-100':'opacity-0'}`}/>
+              </div>
+              {/* Mobile: fade-in icons with upward movement, staggered */}
+              <div className="flex md:hidden gap-4 mt-4">
+                {amenities.map((amenity, idx) => (
+                  <motion.div
+                    key={amenity.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: idx * 0.15 }}
+                    className="flex flex-col items-center justify-center"
+                  >
+                    <div className="h-[50px] w-[50px] mb-1">
+                      <LottieIcons amenities={[amenity]} iconsize={'h-[50px] w-[50px]'} className1="" className2="" />
+                    </div>
+                    <span className="text-white text-[10px] mt-1 text-center">{amenity.title}</span>
+                  </motion.div>
+                ))}
+              </div>
+          </div>
           {/* Right side - Project description and amenities */}
          
-        <div className="w-full md:w-[50%] lg:w-[60%] mt-6 md:mt-0"> <div className={`p-0 md:p-6 sm:p-8 lg:p-0 flex flex-col items-start lg:h-[280px] gap-4 ${home ?'opacity-100':'opacity-0'}`} ref={ref2}>
+        <div className="w-full md:w-[50%] lg:w-[60%] mt-6 md:mt-0"> 
+          <div className={`p-0 md:p-6 sm:p-8 lg:p-0 flex flex-col items-center md:items-start text-center md:text-left lg:h-[280px] gap-4 ${home ?'opacity-100':'opacity-0'}`} ref={ref2}>
             
             <p 
               className={`text-[15px] md:text-[18px] lg:text-[20px] animate-fade-up text-[#fff] leading-5 my-heading md:leading-7 font-light ${classNamep}`}
@@ -74,13 +97,13 @@ return (<>
             {btn &&
             <button className="
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
+    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap mx-auto md:mx-0 block">Download Floor Plan</button>
             }
             {/* Amenities section */}
           
           </div>
-          <div className="mt-4 md:mt-8 flex items-start justify-start w-full">
-            <LottieIcons className={`element ${home ? 'opacity-100' : 'opacity-0'}`} className2={`text-center md:w-[120px] !text-[10px]   ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[50px] w-[50px] md:w-[50px] md:h-[50px]'} className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 lg:gap-36 mt-4 lg:mt-8 w-full ${home ? 'opacity-100' : 'opacity-0'}`} />
+          <div className="mt-4 hidden md:block md:mt-8 flex items-start justify-start w-full">
+            <LottieIcons className={`element ${home ? 'opacity-100' : 'opacity-0'}`} className2={`text-center text-[#fff] md:w-[120px] !text-[10px]   ${icontext}`} ref={ref3} amenities={amenities} iconsize={'h-[50px] w-[50px] md:w-[50px] md:h-[50px]'} className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 lg:gap-36 mt-4 lg:mt-8 w-full ${home ? 'opacity-100' : 'opacity-0'}`} />
           </div>
         </div>
       </div>

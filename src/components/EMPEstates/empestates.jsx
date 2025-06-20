@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Heroslider from '@/common/heroslider'
 import back from '../../../public/assets/Rectangle 13772.png'
 import Hero from '../../../public/assets/cc.png'
-
+import contactbg from "../../../public/assets/contact.png"
+import SectionFour from '@/common/section4';
 import Sectiontext from '../../common/section_text'
 import SectionThree from './sectionthree'
 import Sectionfour from './sectionfour'
@@ -76,41 +77,37 @@ const head3= 'Homes Designed for Next-Gen'
 const head4= 'Amenities for Comfort and Leisure'     
 const head5= 'Sustainable Luxury, Smart Investment '     
 const para =  "Empire Estate by Empire Development sets a new standard for modern living. It is located in the heart of Jumeirah Village. This project of Empire Development features high-end apartments. These residences are designed with luxurious features, modern home automation, and spacious layouts. They provide a combination of comfort, modern intelligence, and sophisticated design."
-const para2="Empire State is ideally located in one of Dubai’s fastest-growing areas. Its residents can easily access schools, retail outlets, dining, and business hubs. This improves amenities. It also boosts value and may lead to higher rental returns. Empire Development's project is ideal for buyers looking to invest in luxury residential projects in Dubai." 
+const para2= "Empire State is ideally located in one of Dubai's fastest-growing areas. Its residents can easily access schools, retail outlets, dining, and business hubs. This improves amenities. It also boosts value and may lead to higher rental returns. Empire Development's project is ideal for buyers looking to invest in luxury residential projects in Dubai.";
 const para3= "Every apartment in Empire Estate by Empire Developments features modern home technology. It offers the highest level of amenities. These features include smart home control, automated lighting, and advanced security. You can use voice commands for all of them. This smart automation makes daily life easier. It also saves energy and enhances security."
 const para4= "Empire State by Empire Developments provides many high-quality amenities. These features enhance the sophistication of your lifestyle. Empire Developments has created a rooftop pool for the residences. You can also work on your fitness at the gym. Meanwhile, the kids can play safely at the playground. The project also provides covered parking and 24/7 security, which is a symbol of peace in every aspect."
 const para5= "The Empire development team has committed to sustainability. This Empire development project uses eco-friendly materials and modern technology. It saves energy. It also offers flexible and secure payment plans. This is perfect for those people looking to invest in luxury Dubai properties for sale."
       
-      return (<>
+      return (
+        <div>
+          <div className='w-full relative md:h-screen h-[500px]'>
+            <Header className='nav-menu absolute z-50'/>
+            <Heroslider className={'top-[15%]'} className2={'!top-[23%] md:!top-12 xl:!top-8'} textthree={'Empire'} main_im={Hero} className3={'top-2 lg:top-5 md:top-9 xl:top-7'} texttwo={'Estates'} main={true} bottom={'bottom-0  !h-[300px]  md:!h-[700px] !w-[100%]'} cloud={cloud} />
+            <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
+          </div>
+          <div className='bg-[#0E1527]'>
       
-      <div className='w-full relative md:h-[600px] h-[400px]'>
-              <Header className='nav-menu absolute z-50'/>
-                  <Heroslider className={'top-[15%]'} className2={'!top-[23%] md:!top-12 xl:!top-8'} textthree={'Empire'} main_im={Hero} className3={'top-2 lg:top-5 md:top-9 xl:top-7'} texttwo={'Estates'} main={true} bottom={'bottom-0  !h-[300px]  md:!h-[700px] !w-[100%]'} cloud={cloud} />
-               <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
-                </div>
-              <div className='bg-[#0E1527]'>
-                <div className='md:h-[400px] flex flex-col items-center justify-center h-[800px]'>
- <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[200px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para}/>
-</div>
-<SectionThree />
+            <SectionThree />
+            <Sectionfour />
+            <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[320px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head2} text={para2}/>
+            <Section images={image} />
+            <Places Name={'Empire Estates'}  markers={markers} center_position={[25.0631, 55.2471]} Main_marker={'Empire Estates'} />
+            <Icons icons={icons}/>      
+             
+             <SectionFour images={contactbg} />
+              
 
-              <Sectionfour />
-               <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[320px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head2} text={para2}/>
-
-                 <Section images={image} />
-
-                 <Places Name={'Empire Estates'}  markers={markers} center_position={[25.0631, 55.2471]} Main_marker={'Empire Estates'} />
-                <Icons icons={icons}/>
-                                                       <Sectiontext classNamemain={'!items-start !h-[700px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head3} text={para3}/>
-
-                 <SectionFive  images={ima} background={false} />
-                </div>
-                <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>
-      </>
-        )
-      }
+          </div>
+          <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>
+        </div>
+      );
+    }
       
       
    
 
-export default empestates
+export default empestates;

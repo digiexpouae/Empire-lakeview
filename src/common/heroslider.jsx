@@ -160,7 +160,7 @@ const child=document.querySelectorAll('.home')
   {main &&
 <div className={`relative flex items-center justify-center h-[500px] md:h-screen w-full opacity-0 z-50 ${className}`} ref={im}>
 
-<Image src={main_im}  height={441} width={882} className={`absolute  z-40  h-[580px] w-[240px] md:h-[782px] md:w-[370px] ${bottom} `} />
+<Image src={main_im}  height={441} width={882} className={`absolute  z-40  h-[500px] w-[240px] md:h-[782px] md:w-[370px] ${bottom} `} />
 
 
 </div>

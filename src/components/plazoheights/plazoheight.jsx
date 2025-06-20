@@ -11,7 +11,8 @@ import Testimonials from '@/common/testimonials'
 import Map from '../../common/maptwo'
 import map from '../../../public/assets/image.png'
 import Sectionthree from './sectionthree'
-import SectionFour from '../../common/section_four'
+import SectionFour from '@/common/section4';
+import contactbg from "../../../public/assets/contact.png"
 const plazoheights = () => {
    const amenities = [
     {
@@ -50,7 +51,7 @@ im:'/assets/cmpc.png'
   const para5="Empire Development is proud to be among the top real estate companies near me. We deliver cutting-edge innovation, professionalism, and transparency. Empire Development's secure payments plan makes buying apartments in JVC Dubai easier. We also combine user and investor-friendly terms with unparalleled design and quality."
   return (
     <>
-<div className='w-full relative md:h-[600px] h-[400px]'>
+<div className='w-full relative md:h-screen h-[500px]'>
         <Header className='nav-menu absolute z-50'/>
             <Heroslider bottom={' object-cover md:!h-[550px]   !bottom-[-15%] !h-[350px] !w-[100%] '}  className2={' !top-[23%] md:!top-9% lg:!top-9 xl:!top-4'} className1={'right-0 left-[unset] top-[13%]  lg:top-[13%] text-[10px]  '} main_im={Hero}  main={true} className3={'lg:bottom-[5%]'} texttwo={'Plazzo'} textthree={'Heights'}/>
       <Image  src={back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
@@ -61,12 +62,11 @@ im:'/assets/cmpc.png'
 
           <Sectionthree />
              <Map  map={map} title={'View Plazzo Heights'}/>
-     <Sectiontext classNamemain={'!items-start !h-[600px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head2} text={para2} />
-
+    
                 <Testimonials/>
-                     <Sectiontext classNamemain={'!items-start !h-[600px] md:!h-[300px]'}classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head3} text={para3} />
-
-   <SectionFour className='absolute '  images={images}/>
+              
+             <SectionFour images={contactbg} />
+              
           
           </div>
 <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>  

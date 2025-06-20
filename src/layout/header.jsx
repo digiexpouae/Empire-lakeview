@@ -166,7 +166,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden absolute w-full bg-[#002E3C]/95 backdrop-blur-sm transition-all duration-300 ${
+          className={`md:hidden absolute w-full bg-[#0E1527]/95 backdrop-blur-sm transition-all duration-300 ${
             isOpen
               ? 'max-h-[500px] opacity-100'
               : 'max-h-0 opacity-0 overflow-hidden'

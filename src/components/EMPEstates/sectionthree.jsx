@@ -24,7 +24,7 @@ const tiltClasses = [
    const InView = useInView(ref, { once: true });
 
   return (
-    <div className='w-full flex justify-center items-center overflow-hidden relative z-50'>
+    <div className='w-full flex justify-center md:pb-20 py-5 md:pt-36 items-center overflow-hidden relative z-50'>
 <div className='absolute z-20 -left-160 '><h2 className=' text-[70px] md:text-[120px] my-heading whitespace-nowrap font-bold  'style={{color: '#00546E'
 
 

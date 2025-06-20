@@ -10,7 +10,8 @@ import Testimonials from '@/common/testimonials'
 import map from '../../../public/assets/plazzoimage.png'
 import Map from '@/common/maptwo'
 import Sectiontext from '@/common/section_text'
-import SectionFour from '@/common/section_four'
+import SectionFour from '@/common/section4';
+import contactbg from "../../../public/assets/contact.png"
 import Sectionthree from './sectiontwo'
 const plazo = () => {
 const [main, setfirst] = useState(false)
@@ -59,24 +60,23 @@ im:'/assets/cmpc.png'
  const head3='Luxury with a legacy '
  const para4="Empire Development offers long-term value. From premium materials to expert workmanship, we include everything. Many people rely on Empire Development for luxury real estate in JVT, Dubai. Where history blends innovation."
  return (
-    <>  <div className='relative w-full md:!h-[600px] !h-[400px] z-20'>
+    <>  <div className='relative w-full md:h-screen h-[500px] z-20'>
         <Header />
-      <Heroslider texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-140px] object-cover md:!h-[620px] !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={overlay} main={true} cloud={cloud}/>
+      <Heroslider texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-140px] object-cover md:!h-screen !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={overlay} main={true} cloud={cloud}/>
       <Image  src={Back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
      </div>
       <div className='bg-[#0E1527]'>
    < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[100px]'} className1={'lg:!h-[220px] md:h-[450px]'} classNamemain={'lg:!h-[600px] md:!h-[800px]'}/>
- <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={text1} text={para}/>
-
+ 
    <Sectionthree />
          <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={texthead2} text={para3}/>
 
       <Map  map={map} title={'View Plazzo Residence'}/>
-      <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={texthead} text={para2}/>
-   <Testimonials />
-      <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={head3} text={para4}/>
-
-   <SectionFour className='absolute '  images={images}/>
+  <Testimonials />
+    
+    
+             <SectionFour images={contactbg} />
+             
 </div>
      <Footer />
     </>

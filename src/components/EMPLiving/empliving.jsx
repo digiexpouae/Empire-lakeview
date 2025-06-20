@@ -9,10 +9,11 @@ import im from '../../../public/assets/cloud_one.png'
 import Sectiontwo from './sectiontwo'
 import SectionThree from './sectionthree'
 import Luxury from './luxury'
+import Section from '@/common/section4';
+import contactbg from "../../../public/assets/contact.png"
 import SectionFour from '../../common/section_four'
 
 import Sectionfour from '../../common/section'
-import Section from '../../common/section_four'
 import Places from '@/common/places'
 import BusinessBay from '../../../public/assets/g2589.svg';
 import MallOfTheEmirates from '../../../public/mall of emirates.svg';
@@ -72,12 +73,13 @@ const para5="Empire Development has built Empire Lakeview with high-quality mate
 
   return (<>
 
-<div className='w-full relative md:h-[600px] h-[400px] '>
+<div className='w-full relative md:h-screen h-[500px] '>
         <Header className='nav-menu absolute z-50'/>
             <Heroslider className={'top-[15%]'} textthree={'Empire'} className3={'top-2 lg:top-5 md:top-9 xl:top-12'} texttwo={'Livings'} main={main} bottom={'bottom-0 !h-[240px]  md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%]'} main_im={Hero} cloud={cloud} im1={im} im2={im}/>
          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
           </div>
-<div className='bg-[#002E3C]'>
+<div className='bg-[#0E1527]'>
+  
   <Fadein>
     <Sectiontwo />
   </Fadein>
@@ -101,16 +103,7 @@ const para5="Empire Development has built Empire Lakeview with high-quality mate
     <Luxury />
   </Fadein>
 
-  <Fadein>
-    <Sectiontext
-      classNamemain={'!h-[700px] md:!h-[500px] md:!flex md:!items-center md:!justify-center '}
-      classNameH={'!text-[35px] '}
-      className={'!text-[17px] !leading-8'}
-      heading={true}
-      text1={head2}
-      text={para2}
-    />
-  </Fadein>
+  
 
   <Fadein>
     <Sectionfour images={images} slide={4} />
@@ -124,20 +117,11 @@ const para5="Empire Development has built Empire Lakeview with high-quality mate
     <Icon icons={icons} />
   </Fadein>
 
-  <Fadein>
-    <Sectiontext
-      classNamemain={'mt-10 flex items-center !justify-center !h-[700px] md:!h-[300px]'}
-      classNameH={'!text-[35px] '}
-      className={'!text-[17px] !leading-8'}
-      heading={true}
-      text1={head3}
-      text={para3}
-    />
-  </Fadein>
 
-  <Fadein>
-    <Section images={ima} background={false} />
-  </Fadein>
+
+  <Fadein> 
+             <Section images={contactbg} />
+              </Fadein>
 </div>
 
           <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5}/>

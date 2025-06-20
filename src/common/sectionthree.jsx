@@ -78,11 +78,11 @@ const sectionthree = ({ wrapper }) => {
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="my-heading heading py-5 mt-20 mb-5"
+        className="my-heading heading py-2 md:py-5 mt-4 md:mt-20 mb-2 md:mb-5"
       >
         Latest Projects
       </motion.h2>
-      <section className='w-full flex flex-col items-center justify-center relative h-[500px] md:mt-10'>
+      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[500px] md:mt-10'>
         <div
           className={`flex items-center justify-evenly h-[50%] md:h-[80%] xl:h-[100%] w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
         >

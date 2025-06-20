@@ -6,7 +6,8 @@ import Field from '../../../public/assets/field.jpg'
 import Main from '../../../public/assets/mainproject1.png'
 import Footer from '../../layout/footer'
 import SectionTwo from '../../common/sectiontwo'
-import SectionFour from '@/common/section_four'
+import SectionFour from '@/common/section4';
+import contactbg from "../../../public/assets/contact.png"
 import Sectionthree from '../empireresidence/sectionthree'
 import map2 from '../../../public/assets/empireimage.png'
 import Map from '../../common/maptwo'
@@ -65,23 +66,28 @@ const empire = () => {
   const [main, setmain] = useState(true)
   return (
     <>
-      <div className='relative w-full md:!h-[600px] !h-[400px] z-20'>
+      <div className='w-full relative h-[500px] md:h-screen'>
 
         <Header />
         <Heroslider className1={'top-[3%]'} main={main} textone={'Empire'} texttwo={'Residence'} bottom={'md:bottom-[-350px] bottom-[-300px] md:!w-full'} main_im={Main} overlay={overlay} />
+        
         <Image src={Field} className='left-0 right-0 bottom-0 top-0 w-full h-[100%] z-[-10] !object-cover object-top-left' />
       </div>
+
+
+
        <div className='bg-[#0E1527]'>
       <SectionTwo amenities={amenities} textpara={textpara}/>
-    <Sectiontext classNamemain={'h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para} />
-
+ 
         <Sectionthree />
+
         <Map title={'View Plazzo Heights'} map={map2} />
    
         <Testimonials />
    
-        <SectionFour className='absolute bottom-[-190px]' images={images} background={background} im={Field} bottom={'object-bottom'} />
-
+         
+             <SectionFour images={images} />
+               
       </div>
       <Footer footertext={true} text1={head4} text={para4} text2={head5} textpara={para5} />
     </>
