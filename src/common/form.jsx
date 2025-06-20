@@ -4,7 +4,7 @@ import React from "react"
  const form = ( {className,ref}) => {
     return (
         <div
-        className="min-h-screen bg-cover bg-center flex items-center justify-center px-4 py-12"
+        className=" xl:h-[450px] md:h-screen  bg-cover bg-top flex items-center justify-center px-4 py-12"
         style={{
           background : 'transparent', // 🔁 place your background image in public/bg.jpg
         }}
