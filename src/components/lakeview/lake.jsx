@@ -5,6 +5,7 @@ import Section_two from '../../common/section_two'
 // import Section from '../home/section'
 import Footer from '@/layout/footer'
 import Place from '../../common/places'
+import mob from "../../../public/assets/Lakeviews_mobile.png"
 import Icon from '../icon'
 import im from '../../../public/assets/sliderlake1.webp'
 import im2 from '../../../public/assets/sliderlake2.webp'
@@ -123,11 +124,35 @@ const [overlay, setoverlay] = useState(true)
     const para5 = "Empire Lakeview in Liwan by Empire Development is one of the best choices for Dubai real estate investment. With an easy and flexible payment schedule It's a great chance for both end users and investors.";
     return (
       <div>
-        <div className='w-full relative h-[500px] md:h-screen'>
-          <Header className='nav-menu absolute z-50' />
-          <Heroslider className={'top-[15%]'} main={main} bottom={'bottom-[-250px]'} cloud={cloud} Home={false} main_im={empire} im1={im1} im2={im1} className1={' top-2 md:top-5 lg:top-10'} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true} />
-          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-full md:h-screen absolute z-0' />
-        </div>  
+        {/* Desktop only: Heroslider and background image, covers full screen */}
+        <div className="hidden md:block w-full h-screen relative">
+          <Header className="nav-menu absolute z-50" />
+          <Heroslider
+            className={"top-[15%]"}
+            main={main}
+            bottom={"bottom-[-250px]"}
+            cloud={cloud}
+            Home={false}
+            main_im={empire}
+            im1={im1}
+            im2={im1}
+            className1={" top-2 md:top-5 lg:top-10"}
+            textone={"Empire"}
+            texttwo={"Lakeviews"}
+            textthree={"Liwan"}
+            p1={"a striking tower in Liwan,"}
+            p2={"designed for lifestyle"}
+            p3={"and luxury."}
+            overlay={true}
+          />
+          <Image src={back} className="!left-0 !right-0 !top-0 !bottom-0 w-full h-full md:h-screen absolute z-0" />
+        </div>
+
+        {/* Mobile only: plain div with header and mobile image, covers full screen */}
+        <div className="block md:hidden w-full h-screen relative">
+          <Header className="nav-menu absolute z-50" />
+          <Image src={mob} className="object-cover w-full h-full" alt="Lakeviews Mobile" fill />
+        </div>
 
         
         <div className='bg-[#0E1527]'>

@@ -22,6 +22,7 @@ import MallOfTheEmirates from '../../../public/mall of emirates.svg';
 import DubaiAutodrome from '../../../public/dubai autodrome.svg';
 import BurjKhalifa from '../../../public/burj.svg';
 import DubaiMarinaMall from '../../../public/dubai marina mall.svg';
+import mob from "../../../public/assets/empireestate_mobile.png"
 
 
 
@@ -84,11 +85,18 @@ const para5= "The Empire development team has committed to sustainability. This 
       
       return (
         <div>
-          <div className='w-full relative md:h-screen h-[500px]'>
+          <div className='w-full md:block hidden relative md:h-screen h-[500px]'>
             <Header className='nav-menu absolute z-50'/>
             <Heroslider className={'top-[15%]'} className2={'!top-[23%] md:!top-12 xl:!top-8'} textthree={'Empire'} main_im={Hero} className3={'top-2 lg:top-5 md:top-9 xl:top-7'} texttwo={'Estates'} main={true} bottom={'bottom-0  !h-[300px]  md:!h-[700px] !w-[100%]'} cloud={cloud} />
             <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
           </div>
+
+   {/* Mobile only: plain div with header and mobile image, covers full screen */}
+   <div className="block md:hidden w-full h-screen relative">
+          <Header className="nav-menu absolute z-50" />
+          <Image src={mob} className="object-cover w-full h-full" alt="Lakeviews Mobile" fill />
+        </div>
+
           <div className='bg-[#0E1527]'>
       
             <SectionThree />

@@ -12,6 +12,7 @@ import Map from '@/common/maptwo'
 import Sectiontext from '@/common/section_text'
 import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
+import mob from "../../../public/assets/Plazzo residence_mobile.png"
 import Sectionthree from './sectiontwo'
 const plazo = () => {
 const [main, setfirst] = useState(false)
@@ -60,11 +61,19 @@ im:'/assets/cmpc.png'
  const head3='Luxury with a legacy '
  const para4="Empire Development offers long-term value. From premium materials to expert workmanship, we include everything. Many people rely on Empire Development for luxury real estate in JVT, Dubai. Where history blends innovation."
  return (
-    <>  <div className='relative w-full md:h-screen h-[500px] z-20'>
+    <>  <div className='hidden md:block relative w-full md:h-screen h-[500px] z-20'>
         <Header />
       <Heroslider texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-140px] object-cover md:!h-screen !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={overlay} main={true} cloud={cloud}/>
       <Image  src={Back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
      </div>
+
+   {/* Mobile only: plain div with header and mobile image, covers full screen */}
+      <div className="block md:hidden w-full h-screen relative">
+          <Header className="nav-menu absolute z-50" />
+          <Image src={mob} className="object-cover w-full h-full" alt="Lakeviews Mobile" fill />
+        </div>
+
+
       <div className='bg-[#0E1527]'>
    < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[100px]'} className1={'lg:!h-[220px] md:h-[450px]'} classNamemain={'lg:!h-[600px] md:!h-[800px]'}/>
  

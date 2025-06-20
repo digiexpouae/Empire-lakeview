@@ -23,6 +23,7 @@ import DubaiInternationalAirport from '../../../public/assets/international (2).
 import DubaiMarina from '../../../public/marine.svg';
 import Icon from '../../components/icon'
 import Sectiontext from '@/common/section_text'
+import mob from "../../../public/assets/Empire Livings_mobile.png"
 import Fadein from '@/common/fadein'
 
 
@@ -73,11 +74,17 @@ const para5="Empire Development has built Empire Lakeview with high-quality mate
 
   return (<>
 
-<div className='w-full relative md:h-screen h-[500px] '>
+<div className='w-full relative md:block hidden md:h-screen h-[500px] '>
         <Header className='nav-menu absolute z-50'/>
             <Heroslider className={'top-[15%]'} textthree={'Empire'} className3={'top-2 lg:top-5 md:top-9 xl:top-12'} texttwo={'Livings'} main={main} bottom={'bottom-0 !h-[240px]  md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%]'} main_im={Hero} cloud={cloud} im1={im} im2={im}/>
          <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
           </div>
+
+      <div className="block md:hidden w-full h-screen relative">
+          <Header className="nav-menu absolute z-50" />
+          <Image src={mob} className="object-cover w-full h-full" alt="Lakeviews Mobile" fill />
+        </div>
+
 <div className='bg-[#0E1527]'>
   
   <Fadein>

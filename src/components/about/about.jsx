@@ -126,11 +126,11 @@ const about = () => {
 
   return (
     <>
-      <div className="w-full relative md:h-[600px] h-[400px]">
+      <div className="w-full relative md:h-screen h-screen">
         <Header />
         <Heroslider
           className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
-          className2={'!top-[23%] md:!top-12 xl:!top-8'}
+          className2={'!top-[70%] md:!top-[40%] xl:!top-[35%]'}
           texttwo={'About Us'}
           main={true}
           bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
