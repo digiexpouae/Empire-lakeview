@@ -9,9 +9,11 @@ import ima1 from '../../../public/assets/d3cffac39c025499b5d643c23941091538a2835
 import ima2 from '../../../public/assets/896f9f592b964d92926d050a82ffdf7c0cc52923.jpg';
 import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390a.jpg';
 import Sectionthree from '../../common/sectionthree';
-import SectionFour from '@/common/section_four';
 import Sectiontext from '@/common/section_text';
+import SectionFour from '@/common/section4';
+import contactbg from "../../../public/assets/contact.png"
 import Fadein from '@/common/fadein'; // ✅ Make sure to import this
+import { HeroDemo1 } from '../hero-gallery-demos';
 
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -31,21 +33,21 @@ const Project = () => {
 
 
 
-const head='EXPERIENCE MODERN LIVING IN DUBAI'
-const para="JVC is one of the top neighborhoods in Dubai. This is where the new residential property, Empire Lakeview. It is the ideal choice for you if you want to book an apartment in Dubai that offers comfortable, stylish apartments with smart designs. Empire Development's project features modern architecture residences Dubai that buyers want today."
-const head2='Home Design For Your Comfort'
-const para2="Every apartment in the Empire Lakeview development by Empire Development is spacious. They feature high-quality finishes, made with premium materials. The residences have smart conveniences. Empire Development included sophisticated security systems, climate control, and automatic lighting. These features simplify your life and help you save energy. Its modern design and smart living concepts make it a top choice."
-const head3='Modern Amenities for Everyday Comfort'
-const para3="Residents of Empire Lakeview by Empire Development can have several outstanding amenities. You may lounge and take in city views from a rooftop swimming pool. For those who enjoy exercise, the project boasts a fully furnished gym. Safe play areas for children, and your convenience, the community boasts retail stores. Empire Development also provides 24/7 security and covered parking to help you feel comfortable and safe."
-const head4='Prime Location, Premium Value'
-const para4="Empire Lakeview by Empire Development is close to shopping centers, colleges, and offices. It makes daily life easier and more convenient. It also ensures that the project is among the high ROI properties in Dubai, which makes it a wise investment decision."
-const head5='Book an Apartment Today at Empire Lakeview '
-const para5="Empire Lakeview by Empire Development offers both a great investment and a stylish residence. Don't miss the opportunity to live in one of the finest modern architecture residences Dubai. Book an apartment in Dubai now and savor a future-ready way of life."
+  const head = 'EXPERIENCE MODERN LIVING IN DUBAI'
+  const para = "JVC is one of the top neighborhoods in Dubai. This is where the new residential property, Empire Lakeview. It is the ideal choice for you if you want to book an apartment in Dubai that offers comfortable, stylish apartments with smart designs. Empire Development's project features modern architecture residences Dubai that buyers want today."
+  const head2 = 'Home Design For Your Comfort'
+  const para2 = "Every apartment in the Empire Lakeview development by Empire Development is spacious. They feature high-quality finishes, made with premium materials. The residences have smart conveniences. Empire Development included sophisticated security systems, climate control, and automatic lighting. These features simplify your life and help you save energy. Its modern design and smart living concepts make it a top choice."
+  const head3 = 'Modern Amenities for Everyday Comfort'
+  const para3 = "Residents of Empire Lakeview by Empire Development can have several outstanding amenities. You may lounge and take in city views from a rooftop swimming pool. For those who enjoy exercise, the project boasts a fully furnished gym. Safe play areas for children, and your convenience, the community boasts retail stores. Empire Development also provides 24/7 security and covered parking to help you feel comfortable and safe."
+  const head4 = 'Prime Location, Premium Value'
+  const para4 = "Empire Lakeview by Empire Development is close to shopping centers, colleges, and offices. It makes daily life easier and more convenient. It also ensures that the project is among the high ROI properties in Dubai, which makes it a wise investment decision."
+  const head5 = 'Book an Apartment Today at Empire Lakeview '
+  const para5 = "Empire Lakeview by Empire Development offers both a great investment and a stylish residence. Don't miss the opportunity to live in one of the finest modern architecture residences Dubai. Book an apartment in Dubai now and savor a future-ready way of life."
 
 
   return (
     <>
-      <div className="w-full relative md:h-[600px] h-[400px]">
+      <div className="w-full relative h-[400px] md:h-screen">
         <Header />
         <Heroslider
           className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
@@ -71,65 +73,48 @@ const para5="Empire Lakeview by Empire Development offers both a great investmen
         </div>
       </div>
 
-      <div className="bg-[#002E3C]">
+      <div className="bg-[#0E1527]">
         <Fadein>
-          <div className="h-[700px] md:h-[400px] flex flex-col items-center justify-center">
-            <Sectiontext
-              classNamemain={'!items-start !h-[700px] md:!h-[250px] leading-7 w-full'}
-              classNameH={'!text-[30px] !leading-12 md:!leading-15]'}
-              className={'md:!text-[20px] !text-[17px] !leading-3 md:!leading-5'}
-              heading={true}
-              text1={head}
-              text={para}
-            />
-          </div>
+          <Sectiontext classNamemain={'h-[500px] md:!h-[350px]'} classNameH={'!text-[65px] '} className={'md:!text-[20px] !text-[13px] !leading-5'} heading={true} text1={head} text={para} />
+
         </Fadein>
 
-        <div ref={wrapper} className="h-[1200px] lg:h-[150vh] md:h-[90vh] xl:h-[1000px] w-full flex items-center justify-evenly flex-col">
+        
+        <Fadein>
+          <div ref={wrapper} className='h-[50vh] container-1 md:h-screen xl:h-screen w-full flex items-start md:items-center md:justify-center flex-col'>
             <Sectionthree wrapper={wrapper} />
 
-          <Fadein>
-            
-            <Sectiontext
-               classNamemain={'!items-start !h-[700px] md:!h-[250px] leading-7 w-full'}
-              classNameH={'!text-[30px] !leading-10 md:!leading-15]'}
-              className={'md:!text-[20px] !text-[17px] !leading-3 md:!leading-5'}
-              heading={true}
-              text1={head2}
-              text={para2}
-            />
-          </Fadein>
-        </div>
+          </div>
+
+
+        </Fadein>
+
+
+        <div
+        style={{
+          backgroundColor: '#0E1527',
+          backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          backgroundBlendMode: 'overlay',
+          backgroundOpacity: '0.5',
+          backgroundBlendMode: 'overlay',
+        }}
+        className=' bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
+        <HeroDemo1 />
+      </div>
 
         <div ref={introRef} className="h-[140vh] md:h-[90vh] xl:h-[120vh] flex flex-col items-center justify-center">
           <Fadein>
-            <Introducing
-              ima={ima}
-              overlay={true}
-              introRef={introRef}
-              text1={'Projects'}
-              className1={'!h-[200px] !my-6 overflow-hidden flex items-center'}
-              btntext={'View All Projects'}
-              logo={false}
-              viewprojects={true}
-              className={'!h-[250px] md:!h-[270px]  !w-[400px] relative'}
-            />
+          <Introducing ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
+  
           </Fadein>
 
-          <Fadein>
-            <Sectiontext
-             classNamemain={'!items-start !h-[700px] md:!h-[300px] leading-7 w-full'}
-              classNameH={'!text-[30px] !leading-12 md:!leading-15]'}
-              className={'md:!text-[20px] !text-[17px] !leading-3 md:!leading-5'}
-              heading={true}
-              text1={head3}
-              text={para3}
-            />
-          </Fadein>
         </div>
 
         <Fadein>
-          <SectionFour images={imag} />
+        <SectionFour images={contactbg} />
         </Fadein>
       </div>
 

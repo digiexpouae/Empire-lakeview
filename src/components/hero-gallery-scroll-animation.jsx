@@ -56,11 +56,12 @@ const ContainerScroll = ({
   const { scrollYProgress } = useScroll({
     target: scrollRef,
   })
+
   return (
     <ContainerScrollContext.Provider value={{ scrollYProgress }}>
       <div
         ref={scrollRef}
-        className={cn("relative min-h-screen w-full", className)}
+        className={cn("relative w-full", className)}
         {...props}>
         {children}
       </div>
@@ -95,8 +96,8 @@ BentoCell.displayName = "BentoCell"
 
 const ContainerScale = React.forwardRef(({ className, style, ...props }, ref) => {
   const { scrollYProgress } = useContainerScrollContext()
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.15], [1, 0])
 
   const position = useTransform(scrollYProgress, (pos) =>
     pos >= 0.6 ? "absolute" : "fixed")

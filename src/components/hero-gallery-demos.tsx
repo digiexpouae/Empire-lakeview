@@ -1,4 +1,4 @@
-import { BentoCell, BentoGrid, ContainerScale, ContainerScroll } from "@/components/blocks/hero-gallery-scroll-animation";
+import { BentoCell, BentoGrid, ContainerScale, ContainerScroll } from "@/components/hero-gallery-scroll-animation";
 import { Button } from "@/components/ui/button";
 
 const IMAGES = [
@@ -18,7 +18,7 @@ const HeroDemo1 = () => {
             className="overflow-hidden rounded-xl shadow-xl"
           >
             <img
-              className="size-full object-cover object-center"
+              className="size-full md:object-cover  object-center"
               src={imageUrl}
               alt=""
             />
@@ -50,12 +50,12 @@ const HeroDemo2 = () => {
             key={index}
             className="overflow-hidden rounded-xl shadow-xl"
           >
-            <img
-              className="size-full object-cover object-center"
-              width="100%"
-              height="100%"
-              src={imageUrl}
-            />
+              <img
+                className="size-full object-cover object-center"
+                width="100%"
+                height="100%"
+                src={imageUrl}
+              />
           </BentoCell>
         ))}
       </BentoGrid>

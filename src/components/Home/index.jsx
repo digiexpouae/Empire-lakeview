@@ -8,7 +8,7 @@ import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390
 import Sectiontwo from '../../common/section_text'
 import Introducing from '@/common/introducing'
 import Footer from '@/layout/footer'
-import SectionFour from '@/common/section_four';
+import SectionFour from '@/common/section4';
 import im1 from '../../../public/assets/cloud_one.png'
 import Image from 'next/image';
 import Brand from '@/common/brand';
@@ -26,6 +26,9 @@ import fraud from '../../../public/assets/animation/online-banking-fraud-prevent
 import Growth from '../../../public/assets/animation/Growth (1).json'
 import { HeroDemo1 } from "@/components/blocks/hero-gallery-scroll-demo"
 import contactbg from "../../../public/assets/contact.png"
+import Vision from "../../common/vision"
+import Hero from './Hero'
+
 
 const index = () => {
   const ima = [ima1, ima2, ima3]
@@ -98,6 +101,7 @@ const index = () => {
   ]
 
   const introRef = useRef(null)
+  const brandRef = useRef(null)
   const text = 'Empower your property ownership experience with our seamless and efficient 24/7 property management services. At Empire Estate, we understand the importance of convenience and peace of mind. Our dedicated team ensures that your property is managed around the clock, providing you with the assurance and support you deserve. Welcome to a new era of property management tailored to your lifestyle.'
   const imag = [
     {
@@ -111,29 +115,31 @@ const index = () => {
   const back = '/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
   return (
     <>
- 
-      {/* index.. home added next */}      
+
+      {/* index.. home added next
       <div className='w-full relative md:h-screen h-[400px]'>
 
-        <Header className='nav-menu absolute z-50' />
+     
         <Heroslider className={'top-[15%]'} main={false} cloud={true} Home={true} img={img} className2={'z-[999]'} textone={'Begin your'} bottom={'bottom-[-60px]'} im1={im1} im2={im1} className1={' left-[40%] top-2 md:top-10'} texttwo={'Journey'} overlay={true} />
         <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] md:h-full' width={1200} height={1000} />
-      </div>
+      </div> */}
 
+      <Header className='nav-menu absolute z-50' />
+
+      <Hero/>
 
       <div
-      style={{
-        backgroundColor: '#0E1527',
-        backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
-        backgroundBlendMode: 'overlay',
-        backgroundOpacity: '0.5',
-        backgroundBlendMode: 'overlay',
-      }}
-      className=''>
+        style={{
+          backgroundColor: '#0E1527',
+          backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          backgroundBlendMode: 'overlay',
+          backgroundOpacity: '0.5',
+          backgroundBlendMode: 'overlay',
+        }}
+        className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div>
 
@@ -142,22 +148,47 @@ const index = () => {
 
         <div ref={wrapper} className='h-[50vh] container-1 md:h-screen xl:h-screen w-full flex items-start md:items-center md:justify-center flex-col'>
           <Sectionthree main={main} wrapper={wrapper} />
+
         </div>
 
+        <div
+        style={{
+          backgroundColor: '#0E1527',
+          backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
+          backgroundBlendMode: 'overlay',
+          backgroundOpacity: '0.5',
+          backgroundBlendMode: 'overlay',
+        }}
+        className='block md:hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
+        <HeroDemo1 />
+      </div>
 
-        <div ref={introRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly md:py-10 py-5 lg:gap-[50px]'>
-        <Introducing ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
-        </div>
-
-        <Brand text1={'The Advantages'} amenities={amenities} img={'/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px] lg:!text-[17px]'} className3={' h-[40px]'}/>
-
-        <Section />
-        <Section_Two icontext={'!text-[20px] md:!text-[12px] xl:!text-[20px]'} classNamep={'!text-[15px] md:!text-[15px] xl:text-[18px]!'} home={true} text={text} head={'24/7 Access'} className2={'!text-[10px]'} btn={false} amenities={icons} back_image={true} className={'hidden'} />
+        <div ref={introRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly md:pt-20 py-5 lg:gap-[50px]'>
          
+        
+          <Introducing ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
+  
+        </div>  
+        
+        <Vision/>
 
-        <SectionFour images={contactbg}  />
+         <div ref={brandRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
+         
+        
+          <Brand text1={'The Advantages'} amenities={amenities} img={'/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px] lg:!text-[17px]'} className3={' h-[40px]'} />
+
+        </div>  
+        
+        <Section />
+
+
+        <SectionFour images={contactbg} />
 
       </div>
+      
       <Footer />
     </>
   )
