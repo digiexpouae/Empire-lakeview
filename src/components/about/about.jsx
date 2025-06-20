@@ -152,9 +152,12 @@ const about = () => {
           <Sectiontext classNamemain={'h-[500px] md:!h-[350px]'} classNameH={'!text-[65px] '} className={'md:!text-[20px] !text-[13px] !leading-5'} heading={true} text1={head} text={para} />
         </Fadein>
         
-        <Fadein>
+        <div>
+           <Fadein>
           <Section />
         </Fadein>
+        </div>
+       
 
         <Fadein>
 

@@ -128,6 +128,8 @@ const [overlay, setoverlay] = useState(true)
           <Heroslider className={'top-[15%]'} main={main} bottom={'bottom-[-250px]'} cloud={cloud} Home={false} main_im={empire} im1={im1} im2={im1} className1={' top-2 md:top-5 lg:top-10'} textone={'Empire'} texttwo={'Lakeviews'} textthree={'Liwan'} p1={'a striking tower in Liwan,'} p2={'designed for lifestyle'} p3={'and luxury.'} overlay={true} />
           <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-full md:h-screen absolute z-0' />
         </div>  
+
+        
         <div className='bg-[#0E1527]'>
           <Fadein>
             <div className='md:mt-0'>
@@ -143,7 +145,7 @@ const [overlay, setoverlay] = useState(true)
           <Sectionthree images={images} onAllVisible={handleAllVisible} />
            <Fadein>  <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' /></Fadein>
           <Fadein>     <Icon icons={icons} /> </Fadein>
-     \     <Fadein> 
+          <Fadein> 
              <SectionFour images={contactbg} />
               </Fadein>
         </div>

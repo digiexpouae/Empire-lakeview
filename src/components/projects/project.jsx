@@ -99,7 +99,7 @@ const Project = () => {
           backgroundOpacity: '0.5',
           backgroundBlendMode: 'overlay',
         }}
-        className='block md:hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
+        className='block md:hidden   bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div>
 

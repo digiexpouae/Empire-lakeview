@@ -8,7 +8,6 @@ import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390
 import Sectiontwo from '../../common/section_text'
 import Introducing from '@/common/introducing'
 import Footer from '@/layout/footer'
-import SectionFour from '@/common/section4';
 import im1 from '../../../public/assets/cloud_one.png'
 import Image from 'next/image';
 import Brand from '@/common/brand';
@@ -25,6 +24,7 @@ import Demand from '../../../public/assets/animation/high-demand (1).json'
 import fraud from '../../../public/assets/animation/online-banking-fraud-prevention (1).json'
 import Growth from '../../../public/assets/animation/Growth (1).json'
 import { HeroDemo1 } from "@/components/blocks/hero-gallery-scroll-demo"
+import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
 import Vision from "../../common/vision"
 import Hero from './Hero'
@@ -188,7 +188,7 @@ const index = () => {
         <SectionFour images={contactbg} />
 
       </div>
-      
+
       <Footer />
     </>
   )

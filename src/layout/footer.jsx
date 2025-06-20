@@ -11,7 +11,7 @@ const quickLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Projects', href: '/projects' },
   { name: 'Contact Us', href: '/contact' },
-  { name: 'Log in / Register', href: '#' },
+  { name: 'Log in / Register', href: 'https://empiredevelopments.ae/login', external: true },
 ];
 
 const latestProjects = [
@@ -78,12 +78,23 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
               <ul className="space-y-2">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <a
-                      href={link.href}
-                      className="hover:text-primary-600 transition-colors duration-300"
-                    >
-                      {link.name}
-                    </a>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary-600 transition-colors duration-300"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="hover:text-primary-600 transition-colors duration-300"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

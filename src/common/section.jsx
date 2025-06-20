@@ -69,8 +69,6 @@ const wrapper=useRef()
                 className="text-gray-800 md:px-4 px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"
                 style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)'
 
-
-
                  }}
               >
                 Contact us
