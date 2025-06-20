@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import LottieIcons from './lottie'
-const brand = ({img,text1,text2,amenities,className,iconsize,className2,className3}) => {
+const brand = ({img,text1,text2,amenities,className,iconsize,className2,className3,brand}) => {
 
 // const {ref,inView}=useInView({
 //   triggerOnce:true,
@@ -46,11 +46,22 @@ const brand = ({img,text1,text2,amenities,className,iconsize,className2,classNam
 // },[inView])
 
   return (
-    <div className='w-full py-10 bg-[linear-gradient(90deg,_#CCAB64_0%,_#FAECC9_100%)] flex flex-col items-center justify-center'>
+    <div className='w-full  flex flex-col items-center  justify-center'>
+         <div className='relative w-full '>
+          
+       <Image
+  src={img || chess} // fallback to chess.jpg if img is undefined/null
+  height={700}
+  width={600}
+  className='!h-full !w-full object-cover'
+  alt="Brand Image"
+/>
+        </div>
+      <div className=' w-full py-10  flex flex-col items-center justify-center bg-[linear-gradient(90deg,_#CCAB64_0%,_#FAECC9_100%)]'>
       <h4 className='md:text-[48px] text-[28px] font-bold text-center text-black mb-8'>{text1}</h4>
       {/* Desktop: row of icons */}
       <div className='hidden md:flex flex-row items-end justify-center gap-6 w-full max-w-5xl'>
-        <LottieIcons amenities={amenities} className1='flex flex-row items-end justify-center w-full' className2='text-black md:text-[18px] text-[12px] font-medium' iconsize='w-[60px] h-[60px] md:w-[80px] md:h-[80px]' />
+        <LottieIcons amenities={amenities} className1={`flex flex-row items-end justify-center w-full ${brand && 'md:gap-[32px]'}`} className2='text-black md:text-[18px] text-[12px] font-medium' iconsize='w-[60px] h-[60px] md:w-[80px] md:h-[80px]' />
       </div>
       {/* Mobile: Swiper slider for icons */}
       <div className='block md:hidden w-full relative'>
@@ -58,16 +69,17 @@ const brand = ({img,text1,text2,amenities,className,iconsize,className2,classNam
           spaceBetween={10}
           slidesPerView={1}
           centeredSlides={true}
-          className='w-full px-4'
+          className={`w-full px-4 `}
           modules={[Navigation]}
           navigation={{
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+            
           }}
         >
           {amenities.map((amenity, idx) => (
             <SwiperSlide key={idx}>
-              <div className='flex flex-col items-center justify-center w-full'>
+              <div className={`flex flex-col items-center justify-center  w-full`}>
                 <LottieIcons amenities={[amenity]} className1='flex flex-col items-center justify-center w-full' className2='text-black text-[14px] font-medium' iconsize='w-[60px] h-[60px]' />
               </div>
             </SwiperSlide>
@@ -83,6 +95,7 @@ const brand = ({img,text1,text2,amenities,className,iconsize,className2,classNam
             </svg>
           </div>
         </Swiper>
+      </div>
       </div>
     </div>
   )

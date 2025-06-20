@@ -175,8 +175,9 @@ const about = () => {
 
         </Fadein>
 
-        <Fadein>   <Brand text1={'The Brand Pillars'} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'} amenities={amenities} className={'grid grid-cols-3 gap-8 '} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'} />    </Fadein>
+        <Fadein>   <Brand text1={'The Brand Pillars'} brand={true} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'} amenities={amenities} className={'grid grid-cols-3 gap-8 '} about={true} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'} />    </Fadein>
         <Sectionthree />
+        
         <Fadein>    <SectionFour images={contactbg} />   </Fadein>
       </div>
       <Footer />

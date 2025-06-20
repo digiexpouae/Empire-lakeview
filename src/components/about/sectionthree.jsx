@@ -34,11 +34,9 @@ const SectionThree = () => {
       <div
         className='absolute inset-0 overlay z-20 flex items-center justify-center'
         style={{
-          background: `
-            linear-gradient(0deg, rgba(0, 46, 60, 0.8), rgba(0, 46, 60, 0.8)),
-            linear-gradient(180deg, rgba(0, 46, 60, 0) 68.55%, #0E1527 100%)`,
-        }}
-      ></div>
+        background:`
+  linear-gradient(0deg, rgba(14, 21, 39, 0.8), rgba(14, 21, 39, 0.8)),
+  linear-gradient(180deg, rgba(14, 21, 39, 0) 68.55%, #0E1527 100%);`}}></div>
 
       {/* Content */}
       <div className='absolute inset-0 flex justify-center items-end md:h-[600px] w-full z-30 leading-2 overflow-hidden'>
