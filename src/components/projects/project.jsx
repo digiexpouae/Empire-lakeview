@@ -80,14 +80,12 @@ const Project = () => {
         </Fadein>
 
         
-        <Fadein>
           <div ref={wrapper} className='h-[50vh] container-1 md:h-screen xl:h-screen w-full flex items-start md:items-center md:justify-center flex-col'>
             <Sectionthree wrapper={wrapper} />
 
           </div>
 
 
-        </Fadein>
 
 
         <div

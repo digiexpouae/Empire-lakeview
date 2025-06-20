@@ -55,7 +55,7 @@ const Header = () => {
         { name: 'EMP(living)', link: '/EMPliving' },
       ],
     },
-    { name: 'Broker Registration', link: '/broker-registration' },
+    { name: 'Channel Partners', link: '/channel partners' },
   ];
 
   return (
