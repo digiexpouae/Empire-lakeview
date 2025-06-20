@@ -1,13 +1,38 @@
 'use client'
 import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { gsap } from 'gsap';
 import { easeInOut } from 'framer-motion';
 import { motion, useInView } from 'framer-motion';
 import Section_text from './section_text';
 const sectionthree = ({ wrapper }) => {
-  const ima = [{ logo: '/assets/cardlogo.jpg', text: 'Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom apartments, & 3-bedroom duplexes, with many units featuring private pools.', btn: 'View Project', im: '/assets/lakeview.jpg', className: 'z-[40]' }, { logo: '/assets/cardlogo3.png', text: 'Empire Livings is a 15-storey residential tower in Dubai Science Park, offering 202 units including studios, 1-bedroom apartments, and duplexes. Select homes feature private pools, with premium amenities such as a rooftop solar park, yoga deck, gym, and outdoor cinema.', btn: 'View Project', im: '/assets/aca90d068f6adc319f0ca21c6af07538d9cb4322.png', className: 'z-[30]' }
-    , { logo: '/assets/cardlogo2.jpg', text: 'Empire Estates is an 11-storey luxury development in Arjan, Dubai, featuring 325 units comprising studios, 1-, 2-, & 3-bedroom apartments. With private pool options,the project offers lagoon-style pool, sky gym, paddle court, rooftop lounge, & smart home.', btn: 'View Project', im: '/assets/cbc303860f704bb9c770f6d5dc83b533c324b9f5.png', className: 'z-[20]' }]
+  const projects = [
+  {
+    logo: '/assets/cardlogo.jpg',
+    text: 'Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom apartments, & 3-bedroom duplexes, with many units featuring private pools.',
+    btn: 'View Project',
+    im: '/assets/lakeview.jpg',
+    className: 'z-[40]',
+    href: '/lakeviews',
+  },
+  {
+    logo: '/assets/cardlogo3.png',
+    text: 'Empire Livings is a 15-storey residential tower in Dubai Science Park, offering 202 units including studios, 1-bedroom apartments, and duplexes. Select homes feature private pools, with premium amenities such as a rooftop solar park, yoga deck, gym, and outdoor cinema.',
+    btn: 'View Project',
+    im: '/assets/aca90d068f6adc319f0ca21c6af07538d9cb4322.png',
+    className: 'z-[30]',
+    href: '/EMPliving',
+  },
+  {
+    logo: '/assets/cardlogo2.jpg',
+    text: 'Empire Estates is an 11-storey luxury development in Arjan, Dubai, featuring 325 units comprising studios, 1-, 2-, & 3-bedroom apartments. With private pool options,the project offers lagoon-style pool, sky gym, paddle court, rooftop lounge, & smart home.',
+    btn: 'View Project',
+    im: '/assets/cbc303860f704bb9c770f6d5dc83b533c324b9f5.png',
+    className: 'z-[20]',
+    href: '/EMPEstates',
+  },
+];
 
   useEffect(() => {
     if (!wrapper?.current) return; // ✅ Safety check
@@ -88,23 +113,25 @@ const sectionthree = ({ wrapper }) => {
         >
           <div className='flex flex-col pl-2 pr-2 md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
             <div className='h-[50px]  md:h-[90px] lg:h-[130px]'>
-              <Image width={190} height={90} className='!h-full !w-full object-cover' src={ima[0].logo} alt='' />
+              <Image width={190} height={90} className='!h-full !w-full object-cover' src={projects[0].logo} alt='' />
             </div>
             <div className='leading-2 md:leading-6 xl:leading-7'>
-              <span className='text-[9px]  md:text-[18px] lg:text-[20px] xl:text-[24px] my-heading text-[#2A2A2A]'>{ima[0].text}</span>
+              <span className='text-[9px]  md:text-[18px] lg:text-[20px] xl:text-[24px] my-heading text-[#2A2A2A]'>{projects[0].text}</span>
             </div>
             <div>
-              <button className='  mt-3 bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[7px] md:text-sm lg:text-base whitespace-nowrap'>
-                {ima[0].btn}
-              </button>
+              <Link href={projects[0].href} legacyBehavior>
+                <a className='mt-3 bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[7px] md:text-sm lg:text-base whitespace-nowrap block text-center'>
+                  {projects[0].btn}
+                </a>
+              </Link>
             </div>
           </div>
           <div className='h-[160px]  md:h-[320px]  xl:h-[360px] w-[35%]'>
-            <Image src={ima[0].im} width={250} height={400} alt='' className='!h-full !w-full object-cover rounded-2xl' />
+            <Image src={projects[0].im} width={250} height={400} alt='' className='!h-full !w-full object-cover rounded-2xl' />
           </div>
         </div>
         <div className='card-wrapper w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center pointer-events-none'>
-          {ima.slice(1).map((elem, index) => {
+          {projects.slice(1).map((elem, index) => {
             return (
               <div
                 key={index}
@@ -118,9 +145,21 @@ const sectionthree = ({ wrapper }) => {
                     <span className='text-[9px]  md:text-[18px] lg:text-[20px] xl:text-[24px] my-heading text-[#2A2A2A]'>{elem.text}</span>
                   </div>
                   <div>
-                    <button className='  mt-3 bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[7px] md:text-sm lg:text-base whitespace-nowrap'>
-                      {elem.btn}
-                    </button>
+                    {
+  index === 0 ? (
+    <Link href={elem.href} legacyBehavior>
+      <a className='mt-3 bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[7px] md:text-sm lg:text-base whitespace-nowrap block text-center'>
+        {elem.btn}
+      </a>
+    </Link>
+  ) : (
+    <Link href={elem.href} legacyBehavior>
+      <a className='mt-3 bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[7px] md:text-sm lg:text-base whitespace-nowrap block text-center'>
+        {elem.btn}
+      </a>
+    </Link>
+  )
+}
                   </div>
                 </div>
                 <div className='h-[160px]  md:h-[320px]  xl:h-[360px] w-[35%]'>
