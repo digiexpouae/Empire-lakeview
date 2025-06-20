@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Slidertwo from '../components/slider_Two'
 import Image from 'next/image'
 
+
 import { motion, useScroll, useTransform } from 'framer-motion';
 import section from '@/components/about/section';
 const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,btntext,viewprojects,overlay,intro,wrapper }) => {

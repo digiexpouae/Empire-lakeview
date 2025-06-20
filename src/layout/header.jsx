@@ -155,7 +155,9 @@ const Header = () => {
             </motion.a>
 
             <motion.a
-              href="#login"
+              href="https://empiredevelopments.ae/login"
+              target="_blank"
+              rel="noopener noreferrer"
               variants={fadeUp}
               className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 lg:px-6 py-2 rounded-full transition-all duration-300 transform text-sm lg:text-base whitespace-nowrap"
             >
@@ -222,7 +224,7 @@ const Header = () => {
                 Contact Us
               </motion.a>
               <motion.a
-                href="#login"
+                href="https://empiredevelopments.ae/login" target="_blank" rel="noopener noreferrer"
                 variants={fadeUp}
                 className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 py-2 rounded-full transition-all duration-300 text-center text-base"
               >
