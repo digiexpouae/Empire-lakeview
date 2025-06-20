@@ -55,7 +55,7 @@ const Header = () => {
         { name: 'EMP(living)', link: '/EMPliving' },
       ],
     },
-    { name: 'Broker Registration', link: '/broker-registration' },
+    { name: 'Channel Partners', link: '/channel partners' },
   ];
 
   return (
@@ -82,7 +82,7 @@ const Header = () => {
               >
                 <a
                   href={elem.link}
-                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm lg:text-base"
+                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-xs lg:text-base"
                 >
                   {elem.name}
                 </a>

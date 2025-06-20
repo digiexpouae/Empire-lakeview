@@ -41,23 +41,23 @@ const sectionthree = ({ wrapper }) => {
           duration: duration,
           rotationX: 20,
           stagger: stagger,
-          y: -50, ease: "power2.inOut"
+          y: 0, ease: "power2.inOut"
         });
       });
 
       mm.add('(max-width: 767px)', () => {
         // Mobile animation: fade/slide up each card, no pinning
-        gsap.set(child, { opacity: 0, y: 40 });
+        gsap.set(child, { opacity: 0, y: 0 });
         gsap.to(child, {
           opacity: 1,
           y: 0,
-          stagger: 0.5,
+          stagger: 1,
           duration: 0.7,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: wrapper.current,
-            start: 'top 80%',
-            end: 'bottom top',
+            start: 'top 15%',
+            end: 'bottom center',
             scrub: true,
             // No pinning on mobile
           }
@@ -78,11 +78,11 @@ const sectionthree = ({ wrapper }) => {
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="my-heading heading py-2 md:py-5 mt-4 md:mt-20 mb-2 md:mb-5"
+        className="my-heading heading "
       >
         Latest Projects
       </motion.h2>
-      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[500px] md:mt-10'>
+      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[500px] '>
         <div
           className={`flex items-center justify-evenly h-[50%] md:h-[80%] xl:h-[100%] w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
         >
