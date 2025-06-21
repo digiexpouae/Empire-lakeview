@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import section from '@/components/about/section';
-const introducing = ({Logo,ima,logo,text1,text2,className,className1,introRef,btntext,viewprojects,overlay,intro,wrapper }) => {
+const introducing = ({Logo,ima,logo,text1,text2,links,className,className1,introRef,btntext,viewprojects,overlay,intro,wrapper }) => {
       const containerRef = useRef(null)
   const sliderRef = useRef(null)
   useEffect(() => {
@@ -75,7 +75,16 @@ return (
         </div>):(<div className=''><h3 className=' text-[25px] text-center my-heading leading-6  text-white font-medium'>Successfully <br /> Delivered</h3></div>)
 
 }
-        <button className='button !py-[5px] !w-[150px] !text-[15px] flex items-center justify-center'>{btntext}</button>
+      {logo?  <a 
+       
+          href="/files/03 - Fact Sheet - Empire LakeViews (4).pdf"
+                   download
+        className='button  !py-[5px] !w-[170px] !text-[15px] flex items-center justify-center'>{btntext}</a>:
+        <a 
+          href={links}
+
+        className='button   !py-[5px] !w-[170px] !text-[15px] cursor-pointer flex items-center justify-center'>{btntext}</a>
+        }
       </div>
 
       {/* Image Blocks */}
@@ -85,20 +94,16 @@ return (
           className={`shrink-0 inline-block xl:w-[340px] md:w-[350px] w-[300px] relative h-[404px] md:h-[450px] ${className}`}
         >
           <Image
-            src={elem}
+            src={elem.im}
             priority
             alt={`Slide ${index}`}
             className={`!h-full !w-full  ${overlay && 'md:object-cover'} ${intro && 'object-cover'} rounded-2xl relative  `}
           />
 {viewprojects && <div className='absolute left-0 right-0 top-0 bottom-0 bg-black/40 z-10 rounded-2xl'></div>}
-{overlay &&
-     <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[150px] 
-'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 75%, #002E3C 97%)'
-}}></div>
-         }         {viewprojects &&
+       {viewprojects &&
           <div className='absolute left-3 bottom-6 z-40'>
-            <h2 className='text-white text-[23px] font-bold my-heading'>Plazzo heights</h2>
-            <button className='button flex items-center justify-center !py-[3px] !w-[120px] !text-[15px]'>View projects</button>
+            <h2 className='text-white text-[23px] font-bold my-heading'>{elem.text}</h2>
+            <a className='button flex items-center justify-center !py-[3px] !w-[120px] !text-[15px]' href={elem.link}>View projects</a>
           </div>} 
         </div>
 

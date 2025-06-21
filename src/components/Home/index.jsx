@@ -28,10 +28,11 @@ import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
 import Vision from "../../common/vision"
 import Hero from './Hero'
+import Section_two from '../../common/section_two';
 
 
 const index = () => {
-  const ima = [ima1, ima2, ima3]
+  const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/Empireresidence',text:'Empire Residence'}]
 
   const main = useRef(null)
 
@@ -169,7 +170,7 @@ const index = () => {
         <div ref={introRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly md:pt-20 py-5 lg:gap-[50px]'>
          
         
-          <Introducing ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
   
         </div>  
         
@@ -184,7 +185,7 @@ const index = () => {
         
         <Section />
 
-
+        <Section_two home={true} head={'24/7 Access'} text={text} amenities={icons} back_image={true} icontext={'md:!text-[20px]'}/>
         <SectionFour images={contactbg} />
 
       </div>

@@ -6,8 +6,8 @@ import React, { useEffect, useState, useRef } from "react";
 // import posterImage from "../../../public/assets/homebg.png";
 // import Logo from "../../../public/assets/logo2.png"; 
 
-const LAND_VIDEO_PATH = "/assets/video.mp4";
-const PORT_VIDEO_PATH = "/assets/video.mp4";
+const LAND_VIDEO_PATH = "/assets/Corporate Slideshow.mp4";
+const PORT_VIDEO_PATH = "/assets/Corporate Slideshow.mp4";
 const POSTER_IMAGE_PATH = "/assets/fallback.png";
 const LOGO_PATH = "/assets/logo2.png";
 

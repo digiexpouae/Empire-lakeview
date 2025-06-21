@@ -1,8 +1,8 @@
 import React from 'react'
-import Project from '.././components/projects/project'
+import Home from '.././components/projects/project'
 const projects = () => {
   return (
-<Project />
+<Home />
   )
 }
 

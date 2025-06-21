@@ -17,7 +17,7 @@ import { HeroDemo1 } from '../hero-gallery-demos';
 
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const ima = [ima1, ima2, ima3];
+ const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/Empireresidence',text:'Empire Residence'}]
   const wrapper = useRef();
   const introRef = useRef();
 
@@ -105,7 +105,7 @@ const Project = () => {
 
         <div ref={introRef} className="h-[140vh] md:h-[90vh] xl:h-[120vh] flex flex-col items-center justify-center">
           <Fadein>
-          <Introducing ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
   
           </Fadein>
 

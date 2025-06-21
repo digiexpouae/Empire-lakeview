@@ -16,8 +16,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 const icon = ({ icons }) => {
-  const firstRow = icons.slice(0, 5);
-  const secondRow = icons.slice(5);
+  const firstRow = icons.slice(0, 4);
+  const secondRow = icons.slice(4);
 
   const renderRow = (row) =>
     row.map((elem, index) => (
@@ -91,9 +91,9 @@ const icon = ({ icons }) => {
           </Swiper>
         </div>
         {/* Desktop: grid */}
-        <div className="hidden md:block">
-          <div className="grid grid-cols-5 gap-x-4 w-full">{renderRow(firstRow)}</div>
-          <div className="flex justify-center gap-x-4">{renderRow(secondRow)}</div>
+        <div className="hidden md:flex items-center justify-center flex-col">
+          <div className="grid grid-cols-4 gap-x-4 w-[80%]">{renderRow(firstRow)}</div>
+          <div className="flex justify-center w-[80%] gap-x-4">{renderRow(secondRow)}</div>
         </div>
       </div>
     </div>

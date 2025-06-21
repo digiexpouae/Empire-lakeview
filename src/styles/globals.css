@@ -18,7 +18,8 @@ html, body {
 
 body {
   overflow-x: hidden;
-  scrollbar-width: none; 
+  scrollbar-width: none;
+  cursor: url('/assets/EMPIRE Cursor-01.png') 16 16, auto;
 }
 
 
