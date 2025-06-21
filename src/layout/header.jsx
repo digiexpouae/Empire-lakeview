@@ -60,13 +60,13 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed z-50 w-full transition-all duration-300 ${
+      className={`fixed z-50 w-full transition-all duration-300  ${
         scrolled ? 'bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-md'
       }`}
     >
       <header className="relative z-50">
         {/* Top bar */}
-        <div className="flex justify-between items-center px-4 sm:px-6 lg:px-12 py-3">
+        <div className="flex justify-between items-center h-[100px] px-4 sm:px-6 lg:px-20 md:py-10 py-3">
           {/* Desktop Nav */}
           <motion.nav
             className="hidden md:flex items-center gap-x-3 lg:gap-x-6"
