@@ -53,14 +53,51 @@ const markers = [
 
 
 
-  const image=[{im:'/assets/ima2.jpg',tex1:'Studio',tex2:'SIZE:443.55 SQ.FT'},
-{im:'/assets/bed1.jpg',tex1:'1 Bed',tex2:'SIZE: 898.42 SQ.FT.'},
-{im:'/assets/bed2.jpg',tex1:'2 Bed',tex2:'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.'},
-{im:'/assets/bed3.jpg',tex1:'2 Bed Duplex',tex2:'SIZE: 1,757.74 SQ.FT. TO 2,137.48 SQ.FT.'},
-{im:'/assets/bed4.jpg',tex1:'2 Bedroom Triplex',tex2:'SIZE: 2,137.48 SQ.FT.'},
-{im:'/assets/bed5.jpg',tex1:"3 Bed",tex2:"SIZE: 1,771.01 SQ.FT. To 1,771.01 SQ.FT"},
+const image = [
+  {
+    im: '/assets/ima2.jpg',
+    tex1: 'Studio',
+    tex2: 'SIZE: 443.55 SQ.FT',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/studio',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/bed1.jpg',
+    tex1: '1 Bed',
+    tex2: 'SIZE: 898.42 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/1bed',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/bed2.jpg',
+    tex1: '2 Bed',
+    tex2: 'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/2bed',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/bed3.jpg',
+    tex1: '2 Bed Duplex',
+    tex2: 'SIZE: 1,757.74 SQ.FT. TO 2,137.48 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/2-bed-duplex',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/bed4.jpg',
+    tex1: '2 Bedroom Triplex',
+    tex2: 'SIZE: 2,137.48 SQ.FT.',
+    link1: '/', // No 360° view link provided for Triplex, so keeping placeholder
+    link2: '/contact',
+  },
+  {
+    im: '/assets/bed5.jpg',
+    tex1: '3 Bed',
+    tex2: 'SIZE: 1,771.01 SQ.FT. To 1,771.01 SQ.FT',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/3bed',
+    link2: '/contact',
+  },
+];
 
-  ]
 const ima = [
         {
           src: '/assets/797a6fc4ccd08d8da1139bbd3c8a9255b9ac682d (1).jpg',
