@@ -94,7 +94,7 @@ const index = () => {
       subtitle: '',
     }
   ];
-  const content = [im, im2, im3, im4, im5, im6];
+  const content = [{im:im},{im:im2},{im:im3},{im:im4},{im:im5},{im:im6}];
 
   const images = [
     { im: '/assets/slider1.webp', tex1: '1 Bed', tex2: 'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.' },
