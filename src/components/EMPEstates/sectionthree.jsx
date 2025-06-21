@@ -24,7 +24,7 @@ const tiltClasses = [
    const InView = useInView(ref, { once: true });
 
   return (
-    <div className='w-full flex justify-center md:pb-20 py-5 md:pt-36 items-center overflow-hidden relative z-50'>
+    <div className='w-full flex justify-center flex-col gap-10 md:pb-20 py-5 md:pt-36 items-center overflow-hidden relative z-50'>
 <div className='absolute z-20 -left-160 '><h2 className=' text-[70px] md:text-[120px] my-heading whitespace-nowrap font-bold  'style={{color: '#00546E'
 
 
@@ -50,7 +50,14 @@ const tiltClasses = [
           />
         </motion.div>
       ))}
+    
     </div>
+        <a
+          href="/files/Floor Plans- Empire Estates.pdf"
+          download
+        className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[200px] py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
+                    Download Floor Plan
+                  </a>
     </div>
   );
 }

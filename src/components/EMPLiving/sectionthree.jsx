@@ -45,14 +45,14 @@ const SectionThree = () => {
         const scrollEl = scrollRef.current;
         const scrollHeight = scrollEl.scrollHeight ;
         const containerHeight = container.current.offsetHeight;
-        const scrollDistance = (scrollHeight+100) - containerHeight;
-
+        const scrollDistance = (scrollHeight + 100) - containerHeight;
+      const ending=scrollDistance + 500
         // Set scrollTop to 0 zinitially
         scrollEl.scrollTop = 0;
 
         // Create the scroll animation
   const ct= gsap.to(scrollRef.current, {
-          scrollTop: scrollDistance,
+          scrollTop: ending,
           ease: "none",
           scrollTrigger: {
             trigger: container.current,
@@ -85,7 +85,7 @@ const SectionThree = () => {
 
 
   return (
-  <div className=' flex flex-col  items-center justify-center w-full text-center h-[100vh] relative' ref={container}>
+  <div className=' flex flex-col  items-center justify-center w-full text-center h-[100vh] z-[10] relative' ref={container}>
   
     <h1 className='text-[45px] lg:text-[100px] my-heading  text-white font-bold'>Picture Your Future</h1>
     <div className='w-full h-screen overflow-hidden scrollbar-hide flex flex-col  items-center justify-center'    ref={scrollRef}  >
@@ -120,9 +120,12 @@ const SectionThree = () => {
          <div className='flex flex-col items-center  w-[45%]'>
           <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8 '}><Image src={empirelivin} priority  className='!h-full !w-full   rounded-3xl object-cover'/>
             </div>
-                   <button className=" h-[30px] md:h-auto flex items-center justify-center
+                   <a 
+                  href="/files/02 - Individual Floor Plans Book - Empire Livings.pdf"
+                  download
+                   className=" h-[30px] md:h-auto cursor-pointer flex items-center justify-center
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-[9px] md:text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
+    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-[9px] md:text-sm lg:text-base whitespace-nowrap">Download Floor Plan</a>
           </div>
 
     <div className={'w-[22%] h-[120px] md:h-[180px] lg:h-[260px] '}><Image src={empire19} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
@@ -132,8 +135,7 @@ const SectionThree = () => {
         </div>
 
     </div>
-        <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[350px] 
-'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #0E1527 97%)'
+        <div className='absolute left-0 right-0 bottom-0 w-full md:h-[50px] lg:h-[50px]'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #0E1527 97%)'
 }}></div>
       </div>
   )

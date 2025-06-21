@@ -160,7 +160,7 @@ const [overlay, setoverlay] = useState(true)
             <div className='md:mt-0'>
               <Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 
               Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom 
-              apartments, & 3-bedroom duplexes, with many units featuring private pools.`} icontext={'md:!text-[20px]'} />
+              apartments, & 3-bedroom duplexes, with many units featuring private pools.`} home={false} icontext={'md:!text-[20px]'} />
             </div>
           </Fadein>
           <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />

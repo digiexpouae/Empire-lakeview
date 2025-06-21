@@ -19,9 +19,13 @@ const sectiontwo = () => {
             >
             {textpara}
             </p>
-            <button className="
+            <a 
+              href="/files/04 - Typial Floor Plans Book - Empire Livings (1).pdf"
+              download
+          
+            className="
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</button>
+    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap">Download Floor Plan</a>
             
             {/* Amenities section */}
           
@@ -29,7 +33,7 @@ const sectiontwo = () => {
 
 
        </div>
-       <div className="w-[80%] md:w-[25%] h-[300px] md:h-[40px] xl:h-[400px]">
+       <div className="w-[80%] md:w-[40%] h-[300px] md:h-[400px] xl:h-[400px]">
   <Image
     src={empire}
     alt="Empire Building"
