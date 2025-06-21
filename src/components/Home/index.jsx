@@ -1,5 +1,7 @@
 import React, { useRef } from 'react'
 import Heroslider from '../../common/heroslider'
+import EmailPop from '../../common/emailpop'
+import { useState, useEffect } from 'react'
 import Header from '@/layout/header'
 import Sectionthree from '../../common/sectionthree'
 import ima1 from '../../../public/assets/d3cffac39c025499b5d643c23941091538a28358.png';
@@ -32,6 +34,30 @@ import Section_two from '../../common/section_two';
 
 
 const index = () => {
+  const [showEmailPop, setShowEmailPop] = useState(true);
+
+  useEffect(() => {
+    const lockScroll = () => {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      document.documentElement.style.overflow = 'hidden';
+      document.documentElement.style.touchAction = 'none';
+    };
+    const unlockScroll = () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+      document.documentElement.style.overflow = '';
+      document.documentElement.style.touchAction = '';
+    };
+    if (showEmailPop) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+    return () => {
+      unlockScroll();
+    };
+  }, [showEmailPop]);
   const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/Empireresidence',text:'Empire Residence'}]
 
   const main = useRef(null)
@@ -117,6 +143,21 @@ const index = () => {
   return (
     <>
 
+      {/* EMAIL POPUP MODAL */}
+      {showEmailPop && (
+        <div style={{zIndex: 99999}} className="fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center">
+          <div className="relative">
+            <button
+              onClick={() => setShowEmailPop(false)}
+              className="absolute top-2 right-2 text-white hover:text-black bg-red-500 rounded-full w-7 h-7 flex items-center justify-center z-10"
+              aria-label="Close popup"
+            >
+              &times;
+            </button>
+            <EmailPop />
+          </div>
+        </div>
+      )}
       {/* index.. home added next
       <div className='w-full relative md:h-screen h-[400px]'>
 
