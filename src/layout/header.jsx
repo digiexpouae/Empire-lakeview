@@ -66,7 +66,7 @@ const Header = () => {
     >
       <header className="relative z-50">
         {/* Top bar */}
-        <div className="flex justify-between items-center h-[100px] px-4 sm:px-6 lg:px-20 md:py-10 py-3">
+        <div className="flex justify-between items-center h-[100px] px-4 sm:px-6 xl:px-20 lg:px-10 md:py-10 py-3">
           {/* Desktop Nav */}
           <motion.nav
             className="hidden md:flex items-center gap-x-3 lg:gap-x-6"
