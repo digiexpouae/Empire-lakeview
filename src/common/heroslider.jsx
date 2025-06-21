@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useRef } from 'react';
 import Stickyicon from '@/common/stickyicon';
 import Hero from '../../public/assets/heroim2.jpg'
-const heroslider = ({p1,p2,p3,textone,texttwo,textthree,main_im,main,im1,im2,overlay,className1,className2,className,className3,bottom,cloud,img,Home}) => {
+const heroslider = ({p1,p2,p3,textone,lakeview,texttwo,textthree,main_im,main,im1,im2,overlay,className1,className2,className,className3,bottom,cloud,img,Home}) => {
     const boxref=useRef()
     const mm = gsap.matchMedia()
     const box_Two=useRef()
@@ -186,7 +186,7 @@ return <div key={index} className={` flex items-end justify-end relative opacity
           <Image src={im2} alt="Cloud" objectFit='cover' className='w-[280px] h-[180px] md:!w-[580px] md:!h-[320px]' />
         </div>
         }{overlay &&
-        <div className='bg-[linear-gradient(180deg,rgba(14,21,39,0)_71.68%,#0E1527_100%)] h-[300px] left-0 right-0 z-[999] absolute bottom-0 w-full'> </div>
+        <div className={`bg-[linear-gradient(180deg,rgba(14,21,39,0)_71.68%,#0E1527_100%)] ${lakeview ? 'h-[300px] ':''} left-0 right-0 z-[999] absolute bottom-0 w-full`}> </div>
         }
 </div></div>
     )

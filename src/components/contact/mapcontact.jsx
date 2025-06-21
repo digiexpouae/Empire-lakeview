@@ -17,19 +17,19 @@ const mapcontact = () => {
         return (
           <div className='h-[500px] lg:h-[800px] w-full  flex items-center justiy-center flex-col'>
               <h1 className='text-[45px] text-center lg:text-[100px] my-heading  text-white font-bold'>Address</h1>
-            <div className='flex items-center justify-center w-[70%]'>
+            <div className='flex items-center justify-center w-[90%] md:w-[70%]'>
               {features.map((feature) => (
                 <div
                   key={feature.id}
                   onClick={() => setActiveFeature(feature.id)}  
-                  className='py-2  relative h-[30px] md:h-[50px] flex flex-col  items-center  justify-center rounded-button w-full'
+                  className='md:py-8 relative h-[30px] md:h-[50px] flex flex-col  items-center  justify-center rounded-button w-full'
                   style={{
                     cursor: 'pointer',
              
                   
                   borderRight:'1px solid white',
                   borderLeft:'1px solid white',
-                    background: activeFeature === feature.id ? 'white' : '#00546E',
+background: activeFeature === feature.id ? 'white' : 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)',
                     color: activeFeature === feature.id ? 'black' : 'white',
                     display: 'flex',
                     flexDirection: 'column',
@@ -44,7 +44,7 @@ const mapcontact = () => {
               ))}
             </div>
       <div className='flex items-center justify-center w-full relative'>
-            <div className='h-[250px] md:h-[350px] lg:h-[500px]  w-[70%] relative'>
+            <div className='h-[200px] md:h-[350px] lg:h-[500px] w-[90%] md:w-[70%] relative'>
               {features.map((feature) =>
                 feature.id === activeFeature ? (
                   <Image

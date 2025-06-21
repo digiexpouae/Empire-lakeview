@@ -85,10 +85,10 @@ const carWrapperRef=useRef(null)
 
 
  return(
- <div className=' bg-[#0E1527] w-full   text-white !h-[110vh]'  ref={sectionref}>
+ <div className=' bg-[#0E1527] w-full   text-white !h-[95vh]'  ref={sectionref}>
       <div className='flex flex-col items-center justify-center gap-[100px]  w-full lg:mt-[20px] mt-[50px] ' >
         <div className='flex flex-col items-center justify-center w-full ' >
-        <h2 className='my-heading lg:text-[70px] md:text-[40px] text-[34px]  font-bold' >In The Heart Of It All</h2>
+        <h2 className='my-heading lg:text-[60px] md:text-[40px] text-[34px]  font-bold' >In The Heart Of It All</h2>
         <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  
          <div ref={carWrapperRef} className=" relative w-full">
 

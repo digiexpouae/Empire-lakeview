@@ -95,25 +95,25 @@ return (<>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
-                  className="flex flex-col items-center justify-between p-2 bg-white rounded-[13px] animate-fade-up-delayed h-[110px] w-[110px] sm:h-[130px] sm:w-[130px] md:h-[160px] md:w-[160px] lg:h-[200px] lg:w-[200px] element text-center gap-1 sm:gap-2"
+                  className="flex flex-col items-center justify-between px-3 py-2 bg-white rounded-[13px] animate-fade-up-delayed h-[110px] w-[110px] sm:h-[130px] sm:w-[130px] md:h-[160px] md:w-[160px] lg:h-[200px] lg:w-[200px] element text-center gap-1 sm:gap-2"
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
                   {/* Heading */}
-                  <p className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-center mb-1 sm:mb-2 font-medium w-full flex justify-center items-center">{amenity.text}</p>
+                  <p className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-center mb-1 sm:mb-2 font-medium w-full flex justify-start items-center">{amenity.text}</p>
                   {/* Logo or Title */}
-                  <div className="flex-1 flex items-center justify-center w-full">
+                  <div className="flex-1 flex items-center justify-start w-full">
                     {index === 0 || index === 1 ? (
-                      <p className="text-[15px] sm:text-[23px] lg:text-[32px] my-heading leading-5 sm:leading-9 text-black font-bold my-heading text-center w-full flex justify-center items-center">
+                      <p className="text-[15px] sm:text-[23px] lg:text-[32px] my-heading leading-5 sm:leading-9 text-black font-bold my-heading text-start w-[80%] flex justify-start items-center">
                         {amenity.title}
                       </p>
                     ) : (
-                      <div className="relative w-full aspect-[4/2] overflow-hidden flex items-center justify-center">
-                        <Image fill src={amenity.im} alt="Amenity image" className="object-contain m-auto !w-[60%] sm:!w-[75%]" />
+                      <div className="relative w-[80%] aspect-[4/2] overflow-hidden flex items-center justify-start">
+                        <Image fill src={amenity.im} alt="Amenity image" className="object-contain m-auto !w-[100%] " />
                       </div>
                     )}
                   </div>
                   {/* Optional text below */}
-                  <span className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-black text-center mt-1 sm:mt-2 w-full flex justify-center items-center">{amenity.text2}</span>
+                  <span className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-black text-center mt-1 sm:mt-2 w-full flex justify-start items-center">{amenity.text2}</span>
                 </div>
               ))}
             </div>
