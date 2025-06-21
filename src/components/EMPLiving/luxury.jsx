@@ -16,7 +16,7 @@ export default function FeaturesSection() {
   const [activeFeature, setActiveFeature] = useState('pools');
 
   return (
-    <div className='h-[400px] w-full mb-48'>
+    <div className='h-[400px] md:h-[800px] w-full'>
         <h1 className='text-[45px] text-center lg:text-[100px] my-heading  text-white font-bold'>Luxury Aminites</h1>
       <div className='flex items-center justify-center' style={{ overflowX: 'auto',borderTop:'1px solid white' }}>
         {features.map((feature) => (

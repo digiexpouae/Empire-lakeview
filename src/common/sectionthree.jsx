@@ -47,6 +47,7 @@ const sectionthree = ({ wrapper }) => {
         const timeline = gsap.timeline({
           scrollTrigger: {
             pin: true,
+            pinspacing:true,
             scrub: true,
             start: 'top top',
             end: "+=1500",

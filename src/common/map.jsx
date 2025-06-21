@@ -88,7 +88,7 @@ const bounds = L.latLngBounds(markers.coordinates);
   doubleClickZoom={false}
   boxZoom={false}
   dragging={false} // 
-      className={`${className}  h-[50vh]  w-[100%]`}
+      className={`${className}  h-[70vh]  w-[100%]`}
     >{console.log()}
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
