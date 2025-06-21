@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image'; // Assuming you're using Next.js
 import Slider from '../components/slider'; // Adjust path as needed
+import Link from 'next/link';
+
 
 const Section = ({images}) => {
 
@@ -62,17 +64,18 @@ const wrapper=useRef()
             </h2> 
              <span className="text-white my-heading md:text-[25px] text-[10px]">{currentImage.tex2}</span>
             <div className="flex md:gap-3 gap-2">
-              <button className="text-white border  border-white hover:bg-white hover:text-cyan-800 md:text-[15px] text-[10px]  md:px-4 md:py-2 px-2 py-1 rounded-full transition-all duration-300 text-base">
+              <Link href={currentImage.link1 || '#'} className="text-white border cursor-pointer border-white hover:bg-white hover:text-cyan-800 md:text-[15px] text-[10px]  md:px-4 md:py-2 px-2 py-1 rounded-full transition-all duration-300 text-base">
                 360 view
-              </button> 
-               <button
-                className="text-gray-800 md:px-4 px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"
+              </Link> 
+               <Link
+                  href={currentImage.link2 || '#'}
+                className="text-gray-800 md:px-4 cursor-pointer px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"
                 style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)'
 
                  }}
               >
                 Contact us
-              </button>
+              </Link>
              </div>
           </div>
 

@@ -59,7 +59,44 @@ const markers = [
 ];
 const [cloud, setcloud] = useState(true)
 const [main, setmain] = useState(true)
-    const images=[{im:'/assets/EMPIRESLIDER1.webp',tex1:'1 Bed',tex2:'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.'},{im:'/assets/EMPIRESLIDER2.webp',tex1:"2 Bed",tex2:'SIZE: 1319 SQ.FT. TO 1328 SQ.FT.'},{im:'/assets/EMPIRESLIDER3.webp',tex1:'Duplex',tex2:'SIZE: 753 SQ.FT. TO 867 SQ.FT'},{im:'/assets/EMPIRESLIDER4.webp',tex1:'Studio',tex2:'SIZE: 432.42 SQ.FT'},{im:'',tex1:'',tex2:''}]
+const images = [
+  {
+    im: '/assets/EMPIRESLIDER1.webp',
+    tex1: '1 Bed',
+    tex2: 'SIZE: 2633.68 SQ.FT. TO 2682.94 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-livings/360views/1bed',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/EMPIRESLIDER2.webp',
+    tex1: '2 Bed',
+    tex2: 'SIZE: 1319 SQ.FT. TO 1328 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-livings/360views/2bed',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/EMPIRESLIDER3.webp',
+    tex1: 'Duplex',
+    tex2: 'SIZE: 753 SQ.FT. TO 867 SQ.FT',
+    link1: 'https://empiredevelopments.ae/empire-livings/360views/duplex',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/EMPIRESLIDER4.webp',
+    tex1: 'Studio',
+    tex2: 'SIZE: 432.42 SQ.FT',
+    link1: 'https://empiredevelopments.ae/empire-livings/360views/emplivstudio',
+    link2: '/contact',
+  },
+  {
+    im: '',
+    tex1: '',
+    tex2: '',
+    link1: '/',
+    link2: '/',
+  },
+];
+
 const head='Empire Living: Where Luxury Meets Smart Innovation '
 const para= "Empire Development presents Empire Lakeview. It offers apartments for sale in Dubai in Jumeirah Village. These apartments are ideal for anyone seeking a spacious and stylish home. They also come with modern tech automation. Empire Development's project features new construction styles, beautiful finishes, and smart residential solutions. Creates a lifestyle that is a blend of ease, refinement and convenience."
 const head2='Strategic Location, Comfortable Living'  

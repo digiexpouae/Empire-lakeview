@@ -97,14 +97,56 @@ const index = () => {
   const content = [{im:im},{im:im2},{im:im3},{im:im4},{im:im5},{im:im6}];
 
   const images = [
-    { im: '/assets/slider1.webp', tex1: '1 Bed', tex2: 'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.' },
-    { im: '/assets/slider2.webp', tex1: '1 Bed With Pool', tex2: 'Size: 1319 SQ.FT.To 1328 SQ.FT.' },
-    { im: '/assets/slider3.webp', tex1: '2 Bed', tex2: 'Size: 753 SQ.FT.To 867 SQ.FT' },
-    { im: '/assets/slider4.webp', tex1: 'Duplex', tex2: 'Size: 830 SQ.FT' },
-    { im: '/assets/slider5.webp', tex1: 'Studio', tex2: 'Size: 425.55 SQ.FT.' },
-    { im: '/assets/slider6.webp', tex1: 'Studio with Pool', tex2: 'Size: 432.42 SQ.FT' },
-    { im: '', tex1: '', tex2: '' }
-  ];
+  {
+    im: '/assets/slider1.webp',
+    tex1: '1 Bed',
+    tex2: 'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/1bed',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/slider2.webp',
+    tex1: '1 Bed With Pool',
+    tex2: 'Size: 1319 SQ.FT. To 1328 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/1bed_pool',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/slider3.webp',
+    tex1: '2 Bed',
+    tex2: 'Size: 753 SQ.FT. To 867 SQ.FT',
+    link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/2bed',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/slider4.webp',
+    tex1: 'Duplex',
+    tex2: 'Size: 830 SQ.FT',
+    link1: '/', // No working link provided (error in original)
+    link2: '/contact',
+  },
+  {
+    im: '/assets/slider5.webp',
+    tex1: 'Studio',
+    tex2: 'Size: 425.55 SQ.FT.',
+    link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/studio',
+    link2: '/contact',
+  },
+  {
+    im: '/assets/slider6.webp',
+    tex1: 'Studio with Pool',
+    tex2: 'Size: 432.42 SQ.FT',
+    link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/studio_pool',
+    link2: '/contact',
+  },
+  {
+    im: '',
+    tex1: '',
+    tex2: '',
+    link1: '/',
+    link2: '/',
+  }
+];
 
   const [showFooter, setShowFooter] = useState(false);
 const [overlay, setoverlay] = useState(true)
