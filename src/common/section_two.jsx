@@ -28,7 +28,8 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
         tl.fromTo(ref1.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1 })
           .fromTo(ref2.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.7")
           .fromTo(ref3.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.8")
-          .fromTo(".element", { opacity: 0, y: 200 }, {
+          .fromTo(".element", { opacity: 0, y: 200 }, 
+            {
             opacity: 1,
             y: 0,
             duration: 0.5,
@@ -52,12 +53,12 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
         )}
 
         {/* MAIN CONTENT WITH PADDING */}
-        <div className="max-w-6xl mx-auto px-2 sm:px-4 py-8 md:py-16 md:h-[600px] flex items-center justify-center w-full md:w-[80vw] z-20 relative">
-          <div className={`w-full flex ${home ? 'flex-col gap-8 justify-center' : 'flex-col lg:flex-row gap-8 md:gap-[20px] lg:gap-[80px]'}`}>
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 py-8 md:py-16 md:h-[600px] flex items-center justify-center md:justify-start  w-full md:w-[80vw] z-20 relative">
+          <div className={`w-full flex ${home ? 'flex-col gap-8 justify-center md:justify-start' : 'flex-col lg:flex-row gap-8 md:gap-[20px] lg:gap-[80px]'}`}>
             {/* LEFT SECTION */}
             <div className={`flex flex-col lg:w-[40%] ${home ? 'gap-8' : 'xl:gap-0 lg:gap-[45px]'}`}>
-              <div className={`w-full text-black flex md:items-start items-center justify-center ${home ? '' : 'xl:h-[280px]'}`} ref={ref1}>
-                <h2 className="text-[24px] md:text-[30px] lg:text-[70px] sm:text-5xl font-bold tracking-tighter text-white">
+              <div className={`w-full text-black flex md:items-start items-center justify-center md:justify-start ${home ? '' : 'xl:h-[280px]'}`} ref={ref1}>
+                <h2 className="text-[40px] md:text-[30px] lg:text-[70px] sm:text-5xl font-bold tracking-tighter text-white">
                   {head}
                 </h2>
               </div>
@@ -70,7 +71,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: idx * 0.15 }}
-                    className="flex flex-col items-center justify-center"
+                    className="flex flex-col items-center md:justify-start"
                   >
                     <div className="h-[50px] w-[50px] mb-1">
                       <LottieIcons amenities={[amenity]} iconsize="h-[50px] w-[50px]" />
@@ -97,10 +98,10 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                 )}
               </div>
 
-              <div className="mt-4 hidden md:block md:mt-8 flex items-start justify-start w-full">
+              <div className="mt-4 hidden md:block md:mt-8 flex items-start md:justify-start w-full">
                 <LottieIcons
                   className="element"
-                  className2={`text-center text-white md:w-[120px] !text-[10px] ${icontext}`}
+                  className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
                   amenities={amenities}
                   iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
                   className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8 lg:gap-36'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
@@ -114,7 +115,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
 
       {/* Optional divider */}
       {!home && (
-        <div className={`flex items-center justify-center w-full ${className}`}>
+        <div className={`flex items-center md:justify-start w-full ${className}`}>
           <hr className="border border-white mt-8 w-[80vw]" />
         </div>
       )}

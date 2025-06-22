@@ -69,7 +69,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
       animate={inView ? 'visible' : 'hidden'}
     >
       <div className="bg-black w-full py-10 text-white">
-   
+
 
         <div className="container mx-auto px-4 mt-[50px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 xl:gap-8 lg:gap-0 gap-5 place-items-left md:place-items-center">
@@ -160,43 +160,71 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
           </div>
 
           <motion.div
-            className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+            className="border-t border-white/30 mt-10 pt-6 flex flex-col md:flex-row md:items-center justify-between gap-4"
             variants={fadeUp}
           >
-            <p className="text-sm mb-4 md:mb-0">© 2023 Empire Developments</p>
+            {/* Left: Copyright */}
+            <p className="text-sm text-white">© 2025 Empire Developments</p>
 
-            <div className="flex items-center space-x-6">
-              <a
-                href="#"
-                className="text-sm hover:text-primary-600 transition-colors duration-300"
-              >
-                Terms of Use
-              </a>
-              <a
-                href="#"
-                className="text-sm hover:text-primary-600 transition-colors duration-300"
-              >
-                Privacy Policy
-              </a>
+            {/* Middle: Links */}
+            <div className="flex flex-wrap items-center gap-6 text-sm">
+              <a href="#" className="hover:text-primary-600 transition-colors duration-300">Terms of Use</a>
+              <a href="#" className="hover:text-primary-600 transition-colors duration-300">Privacy Policy</a>
             </div>
 
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              {['instagram', 'x-twitter', 'linkedin', 'facebook'].map(
-                (icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="hover:scale-110 transition-transform duration-300"
-                  >
-                    <i className={`fa-brands fa-${icon} text-lg`}></i>
-                  </a>
-                )
-              )}
+            {/* Right: Social Icons */}
+            <div className="flex space-x-5 items-center mt-4 md:mt-0">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/assets/fb.png"
+                  alt="Facebook"
+                  width={24}
+                  height={24}
+                  className="hover:scale-110 transition-transform duration-300"
+                />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/assets/insta.png"
+                  alt="Instagram"
+                  width={24}
+                  height={24}
+                  className="hover:scale-110 transition-transform duration-300"
+                />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/assets/linkedin.png"
+                  alt="LinkedIn"
+                  width={24}
+                  height={24}
+                  className="hover:scale-110 transition-transform duration-300"
+                />
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/assets/x.png"
+                  alt="X"
+                  width={24}
+                  height={24}
+                  className="hover:scale-110 transition-transform duration-300"
+                />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/assets/youtube.png"
+                  alt="YouTube"
+                  width={24}
+                  height={24}
+                  className="hover:scale-110 transition-transform duration-300"
+                />
+              </a>
             </div>
           </motion.div>
+
         </div>
       </div>
-        <Stickyicon  />
+      <Stickyicon />
     </motion.div>
   );
 };

@@ -65,7 +65,7 @@ const textVariants = {
   }, [inView]);
 
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden" ref={ref}>
+    <div className="relative w-full h-[100vh] overflow-hidden py-8 md:py-0" ref={ref}>
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/contact.png"
@@ -135,21 +135,15 @@ const textVariants = {
       {count === 2 && (
         <AnimatePresence>
           <motion.div
-            className="absolute inset-0 z-10 flex items-center justify-center w-full h-full sm:bg-[#002E3C80] xl:bg-[#00000066] backdrop-blur-xs"
+            className="absolute inset-0 z-10 flex items-center justify-center w-full h-full bg-[#0E1527]/40 backdrop-blur-xs py-8 md:py-0"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-              className="w-full max-w-4xl h-auto xl:h-[90%] p-4 md:p-8 xl:p-10"
-            >
-              <Form />
-            </motion.div>
+            <div className="flex items-center justify-center w-full py-5 md:py-10 h-full">
+              <Form className="w-full h-full flex items-center py-5 md:py-10 justify-center" />
+            </div>
           </motion.div>
         </AnimatePresence>
       )}

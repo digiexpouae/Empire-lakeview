@@ -14,7 +14,6 @@ import im1 from '../../../public/assets/cloud_one.png'
 import Image from 'next/image';
 import Brand from '@/common/brand';
 import Section from './sectiontwo'
-import Section_Two from '../../common/section_two'
 import Voice from '../../../public/assets/animation/Voice (1).json'
 import Card from '../../../public/assets/animation/Payment (1)[1].json'
 import Process from '../../../public/assets/animation/Process (1).json'
@@ -193,22 +192,8 @@ const index = () => {
 
         </div>
 
-        <div
-        style={{
-          backgroundColor: '#0E1527',
-          backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          backgroundBlendMode: 'overlay',
-          backgroundOpacity: '0.5',
-          backgroundBlendMode: 'overlay',
-        }}
-        className='block md:hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
-        <HeroDemo1 />
-      </div>
 
-        <div ref={introRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly md:pt-20 py-5 lg:gap-[50px]'>
+        <div ref={introRef} className=' container-2  flex flex-col items-start md:pt-20 pt-20 lg:gap-[50px]'>
          
         
           <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
@@ -227,9 +212,12 @@ const index = () => {
         <Section />
 
         <Section_two home={true} head={'24/7 Access'} text={text} amenities={icons} back_image={true} icontext={'md:!text-[20px]'}/>
-        <SectionFour images={contactbg} />
+        
+       
 
       </div>
+      
+      <SectionFour images={contactbg} />
 
       <Footer />
     </>
