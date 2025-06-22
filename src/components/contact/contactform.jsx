@@ -12,7 +12,7 @@ import Mapcontact from '../../components/contact/mapcontact'
 const index = () => {
   return (
     <>
-  <div className='w-full relative md:h-[600px] h-[400px]'>
+  <div className='w-full relative md:h-screen h-[400px]'>
         <Header className='nav-menu absolute z-50'/>
             <Heroslider className={'top-[15%]'} main={true} cloud={false} Home={false}   className2={'z-[999]'} bottom={'bottom-[-60px] hidden'}  className1={' left-[40%] top-2 md:top-10'}            className2={'!top-[23%] '}
  texttwo={'Contact'}  overlay={true}/>

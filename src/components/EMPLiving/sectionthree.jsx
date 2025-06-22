@@ -118,7 +118,7 @@ const SectionThree = () => {
      <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] -mt-8 md:-mt-24'}><Image priority  src={empire13}  className='!h-full !w-full   rounded-3xl object-cover'/></div> 
      <div className={'w-[22%] h-[120px] md:h-[200px] lg:h-[290px] '}><Image src={empire} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
          <div className='flex flex-col items-center  w-[45%]'>
-          <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8 '}><Image src={empirelivin} priority  className='!h-full !w-full   rounded-3xl object-cover'/>
+          <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8 '}><Image src={empirelivin} priority  className='!h-full !w-full   rounded-3xl object-contain'/>
             </div>
                    <a 
                   href="/files/02 - Individual Floor Plans Book - Empire Livings.pdf"

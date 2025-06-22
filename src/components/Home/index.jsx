@@ -185,7 +185,7 @@ const index = () => {
       </div>
 
       <div className='bg-[#0E1527] relative' ref={main}>
-        <Sectiontwo />
+        <Sectiontwo amenities={amenities} />
 
         <div ref={wrapper} className='h-[50vh] container-1 md:h-screen xl:h-screen w-full flex items-start md:items-center md:justify-center flex-col'>
           <Sectionthree main={main} wrapper={wrapper} />

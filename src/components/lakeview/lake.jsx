@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Heroslider from '../../common/heroslider'
 import Header from '@/layout/header'
-import Section_two from '../../common/section_two'
+import Section_two from './section_two'
 // import Section from '../home/section'
 import Footer from '@/layout/footer'
 import Place from '../../common/places'
