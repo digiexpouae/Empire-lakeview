@@ -67,8 +67,7 @@ im:'/assets/cmpc.png'
 
                      <div className='bg-[#0E1527]'>
           <Sectiontwo  amenities={amenities} textpara={textpara} btn={false}/>
-                                <Sectiontext classNamemain={'!items-end md:!items-center !h-[600px] md:!h-[300px]'} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true} text1={head} text={para} />
-
+       
           <Sectionthree />
              <Map  map={map} title={'View Plazzo Heights'}/>
     

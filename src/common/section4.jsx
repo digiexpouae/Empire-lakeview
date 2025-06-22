@@ -85,14 +85,7 @@ const textVariants = {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           className="absolute inset-0 z-0"
         >
-          <Image
-            src={images[index]?.src}
-            alt="Previous"
-            height={700}
-            width={1200}
-            className={`object-cover !h-full object-center !w-full ${className}`}
-            priority
-          />
+         
         </motion.div>
       </AnimatePresence>
 

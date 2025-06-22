@@ -62,7 +62,7 @@ const icon = ({ icons }) => {
             {icons.map((elem, index) => (
               <SwiperSlide key={index}>
                 <div className="flex flex-col items-center justify-center">
-                  <div className="w-[80px] h-[80px] flex items-center justify-center mx-auto">
+                  <div className="w-[80px] h-[100px] flex items-center justify-center mx-auto">
                     <Image
                       src={elem.img}
                       width={100}
@@ -92,8 +92,8 @@ const icon = ({ icons }) => {
         </div>
         {/* Desktop: grid */}
         <div className="hidden md:flex items-center justify-center flex-col">
-          <div className="grid grid-cols-4 gap-x-4 w-[80%]">{renderRow(firstRow)}</div>
-          <div className="flex justify-center w-[80%] gap-x-4">{renderRow(secondRow)}</div>
+          <div className="grid grid-cols-4 gap-x-4 w-[60%]">{renderRow(firstRow)}</div>
+          <div className="flex justify-center w-[60%] gap-x-4">{renderRow(secondRow)}</div>
         </div>
       </div>
     </div>

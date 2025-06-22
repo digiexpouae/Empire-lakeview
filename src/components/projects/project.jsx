@@ -74,10 +74,6 @@ const Project = () => {
       </div>
 
       <div className="bg-[#0E1527]">
-        <Fadein>
-          <Sectiontext classNamemain={'h-[500px] md:!h-[350px]'} classNameH={'!text-[65px] '} className={'md:!text-[20px] !text-[13px] !leading-5'} heading={true} text1={head} text={para} />
-
-        </Fadein>
 
         
           <div ref={wrapper} className='h-[50vh] container-1 md:h-screen xl:h-screen w-full flex items-start md:items-center md:justify-center flex-col'>
@@ -85,23 +81,6 @@ const Project = () => {
 
           </div>
 
-
-
-
-        <div
-        style={{
-          backgroundColor: '#0E1527',
-          backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          backgroundBlendMode: 'overlay',
-          backgroundOpacity: '0.5',
-          backgroundBlendMode: 'overlay',
-        }}
-        className='block md:hidden   bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
-        <HeroDemo1 />
-      </div>
 
         <div ref={introRef} className="h-[140vh] md:h-[90vh] xl:h-[120vh] flex flex-col items-center justify-center">
           <Fadein>

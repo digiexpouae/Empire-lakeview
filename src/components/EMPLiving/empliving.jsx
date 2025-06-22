@@ -132,16 +132,7 @@ const para5="Empire Development has built Empire Lakeview with high-quality mate
     <SectionThree />
   </Fadein>
 
-  <Fadein>
-    <Sectiontext
-      classNamemain={'  !h-[800px] md:!h-[300px]'}
-      classNameH={'!text-[35px] '}
-      className={'!text-[17px] !leading-8'}
-      heading={true}
-      text1={head}
-      text={para}
-    />
-  </Fadein>
+ 
 
   <Fadein>
     <Luxury />

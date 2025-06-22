@@ -78,8 +78,7 @@ im:'/assets/cmpc.png'
    < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[100px]'} className1={'lg:!h-[220px] md:h-[450px]'} classNamemain={'lg:!h-[600px] md:!h-[800px]'}/>
  
    <Sectionthree />
-         <Sectiontext classNamemain={'!h-[700px] md:!h-[350px] '} classNameH={'!text-[35px] '} className={'!text-[17px] !leading-8'} heading={true}  text1={texthead2} text={para3}/>
-
+   
       <Map  map={map} title={'View Plazzo Residence'}/>
   <Testimonials />
     
