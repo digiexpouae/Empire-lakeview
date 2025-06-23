@@ -108,7 +108,7 @@ const sectionthree = ({ wrapper }) => {
       >
         Latest Projects
       </motion.h2>
-      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[480px] ' >
+      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[500px] ' >
         <div
           className={`flex items-center justify-center h-[50%] md:h-[80%] xl:h-[90%] w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
         style={{ background: 'linear-gradient(115.56deg, #FFFFFF 63.61%, #DDF7FF 108.05%)' }}   >
