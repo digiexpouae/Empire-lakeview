@@ -138,7 +138,7 @@ const sectionthree = ({ wrapper }) => {
                 key={index}
                 className={`cards flex items-center justify-evenly h-[50%] md:h-[80%] xl:h-[100%] absolute w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
               >
-                <div className='flex flex-col pl-2 pr-2 md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
+                <div className='flex flex-col pl-2 pr-20 md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
                   <div className='h-[50px]  md:h-[90px] lg:h-[130px]'>
                     <Image width={190} height={90} className='!h-full !w-full object-cover' src={elem.logo} alt='' />
                   </div>
