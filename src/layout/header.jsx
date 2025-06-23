@@ -48,10 +48,10 @@ const Header = () => {
   }, []);
 
   const nav = [
-    { name: 'Properties', link: '/' },
+    { name: 'Home', link: '/' },
     { name: 'About EMPIRE', link: '/about' },
     {
-      name: 'Project',
+      name: 'Properties',
       link: '/projects',
       children: [
         { name: 'Lakeviews', link: '/lakeviews' },

@@ -1,12 +1,38 @@
 import React from 'react'
 import Image from 'next/image'
-import img from '../../../public/assets/award.png'
-const sectiontwo = () => {
+import desktopImg from '../../../public/assets/award.png'
+import mobileImg from '../../../public/assets/mobimg.png'
+
+const SectionTwo = () => {
   return (
-   <div className='relative w-full h-[220px] md:h-[100%]'>
-                  <Image src={img} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' width={1200} height={1000} />
-         </div>
+    <div className="relative w-full">
+      {/* Desktop Image - hidden on mobile */}
+      <div className="hidden md:block relative w-full h-[500px]">
+        <Image
+          src={desktopImg}
+          alt="Desktop Award"
+          fill
+          className="object-cover" // changed from object-contain
+          quality={100}
+          priority
+          sizes="100vw"
+        />
+      </div>
+
+      {/* Mobile Image - hidden on desktop */}
+      <div className="md:hidden relative w-full aspect-[14/16]">
+        <Image
+          src={mobileImg}
+          alt="Mobile Award"
+          fill
+          className="object-contain" // fixed typo from object-conatin
+          quality={100}
+          priority
+          sizes="100vw"
+        />
+      </div>
+    </div>
   )
 }
 
-export default sectiontwo
+export default SectionTwo
