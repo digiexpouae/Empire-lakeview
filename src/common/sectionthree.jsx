@@ -98,19 +98,19 @@ const sectionthree = ({ wrapper }) => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className='w-full' >
+    <div className='w-full relative flex flex-col gap-2  '       ref={ref} >
  <motion.h2
-        ref={ref}
+  
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="my-heading mt-15 mb-10 heading "
+        className="my-heading heading mt-2"
       >
         Latest Projects
       </motion.h2>
-      <section className='w-full flex flex-col items-center relative h-[400px] md:h-[500px] '>
+      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[500px] '>
         <div
-          className={`flex items-center  h-[50%] md:h-[80%] xl:h-[100%] w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
+          className={`flex items-center justify-center h-[50%] md:h-[80%] xl:h-[90%] w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
         >
           <div className='flex flex-col pl-2 pr-2 md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
             <div className='h-[50px]  md:h-[90px] lg:h-[130px]'>
@@ -131,12 +131,12 @@ const sectionthree = ({ wrapper }) => {
             <Image src={projects[0].im} width={250} height={400} alt='' className='!h-full !w-full object-cover rounded-2xl' />
           </div>
         </div>
-        <div className='card-wrapper w-full h-full absolute top-0 left-0 flex flex-col items-center  pointer-events-none'>
+        <div className='card-wrapper w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center pointer-events-none'>
           {projects.slice(1).map((elem, index) => {
             return (
               <div
                 key={index}
-                className={`cards flex items-center h-[50%] md:h-[80%] xl:h-[100%] absolute w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
+                className={`cards flex items-center justify-evenly h-[50%] md:h-[80%] xl:h-[100%] absolute w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
               >
                 <div className='flex flex-col pl-2 pr-2 md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
                   <div className='h-[50px]  md:h-[90px] lg:h-[130px]'>
