@@ -32,7 +32,7 @@ useEffect(()=>{
   }, [inView])
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen md:h-[800px] gap-8 md:gap-[20px] w-full overflow-hidden px-2' ref={ref}>
+    <div className='flex flex-col items-center justify-center h-[800px] gap-8 md:gap-[20px] w-full overflow-hidden px-2' ref={ref}>
       {/* Vision Section */}
       <motion.div
         className='flex flex-col md:flex-row items-center justify-evenly w-full md:w-[80%] md:gap-16 gap-6'
