@@ -5,7 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+// Dynamically import ProjectsNavigation with SSR disabled
+const ProjectsNavigation = dynamic(
+  () => import('@/components/ProjectsNavigation'),
+  { ssr: false }
+);
 
 // Animation variants
 const containerVariants = {
@@ -62,19 +69,19 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed z-50 w-full transition-all duration-300  ${
-        scrolled ? 'bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-md'
-      }`}
-    >
+      className={`fixed z-50 w-full transition-all duration-300 ${
+      scrolled ? 'bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-md'
+}`}>
       <header className="relative z-50">
         {/* Top bar */}
         <div className="flex justify-between items-center h-[100px] px-4 sm:px-6 xl:px-20 lg:px-10 md:py-10 py-3">
           {/* Desktop Nav */}
           <motion.nav
-            className="hidden md:flex items-center gap-x-3 lg:gap-x-6"
+            className="hidden md:flex items-center gap-x-3 lg:gap-x-6 ml-10 pl-4"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
+            style={{ marginLeft: '-10px' }}
           >
             {nav.map((elem, index) => (
               <motion.div
@@ -99,16 +106,8 @@ const Header = () => {
                 )}
 
                 {elem.children && (
-                  <div className="absolute left-0 top-full mt-1 w-44 bg-white text-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50">
-                    {elem.children.map((child, idx) => (
-                      <a
-                        key={idx}
-                        href={child.link}
-                        className="block px-4 py-2 hover:bg-yellow-100"
-                      >
-                        {child.name}
-                      </a>
-                    ))}
+                  <div className="fixed rounded-2xl left-10 top-20 mt-1 w-[80vw] bg-white text-gray-800 rounded-r-2xl shadow-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50 overflow-hidden">
+                    <ProjectsNavigation />
                   </div>
                 )}
               </motion.div>
@@ -198,7 +197,7 @@ const Header = () => {
                   )}
                 </button>
                 {elem.children && openDropdown === index && (
-                  <div className="ml-4 mt-1 space-y-1">
+                  <div className="ml-4 mt-1 rounded space-y-1">
                     {elem.children.map((child, idx) => (
                       <a
                         key={idx}
