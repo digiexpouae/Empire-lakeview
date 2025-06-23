@@ -21,7 +21,7 @@ const SectionText = ({
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-4xl md:text-7xl font-extrabold mb-4"
+          className="text-3xl md:text-[80px] font-extrabold mb-4"
         >
           Discover a New <br /> Era of Living
         </motion.h1>
@@ -30,7 +30,7 @@ const SectionText = ({
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }}
-          className="text-lg md:text-xl font-medium leading-relaxed"
+          className="text-[lg] md:text-[20px] font-medium leading-relaxed"
         >
           Welcome to Empire Development, a forward-looking real estate developer in Dubai.
           Empire Lakeview is not only a place to live, but it is a transformative vision

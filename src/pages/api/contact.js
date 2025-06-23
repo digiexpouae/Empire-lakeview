@@ -29,12 +29,21 @@ export default async function handler(req, res) {
       subject: `Contact Form Submission from ${name || email}`,
       text: `Name: ${name || ''}\nEmail: ${email}\nPhone: ${phone || ''}\nProperty Type: ${propertyType || ''}\nBudget: ${budget || ''}\nMessage: ${message || ''}`,
       html: `
-        <p><strong>Name:</strong> ${name || ''}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || ''}</p>
-        <p><strong>Property Type:</strong> ${propertyType || ''}</p>
-        <p><strong>Budget:</strong> ${budget || ''}</p>
-        <p><strong>Message:</strong> ${message || ''}</p>
+        <div style="max-width:520px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:32px 24px 24px 24px;font-family:sans-serif;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <img src="/assets/logo2.png" alt="Empire Logo" style="height:60px;margin-bottom:8px;" />
+            <h2 style="margin:0;color:#CCAB64;font-size:24px;">New Contact Form Submission</h2>
+          </div>
+          <table style="width:100%;border-collapse:collapse;font-size:16px;">
+            <tr><td style="padding:8px 0;font-weight:bold;width:140px;">Name:</td><td>${name || ''}</td></tr>
+            <tr><td style="padding:8px 0;font-weight:bold;">Email:</td><td>${email}</td></tr>
+            <tr><td style="padding:8px 0;font-weight:bold;">Phone:</td><td>${phone || ''}</td></tr>
+            <tr><td style="padding:8px 0;font-weight:bold;">Property Type:</td><td>${propertyType || ''}</td></tr>
+            <tr><td style="padding:8px 0;font-weight:bold;">Budget:</td><td>${budget || ''}</td></tr>
+            <tr><td style="padding:8px 0;font-weight:bold;vertical-align:top;">Message:</td><td>${message || ''}</td></tr>
+          </table>
+          <div style="margin-top:32px;text-align:center;color:#888;font-size:13px;">Empire Lakeview &copy; ${new Date().getFullYear()}</div>
+        </div>
       `
     });
     return res.status(200).json({ message: 'Email sent successfully' });

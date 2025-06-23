@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import LottieIcons from "./lottie";
+import LottieIcons from "../../common/lottie";
 import { motion } from "framer-motion";
-import back from '../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.png';
+import back from '../../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.png';
 
 const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, icontext, classNamep }) => {
   const ref1 = useRef();
@@ -63,6 +63,18 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                 </h2>
               </div>
 
+              {/* Lottie Icons Desktop (moved here) */}
+              <div className=" mt-5 md:mt-0 ml-10 hidden md:block md:mt-8 w-full">
+                <LottieIcons
+                  className="element"
+                  className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
+                  amenities={amenities}
+                  iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
+                  className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8 lg:gap-36'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
+                  ref={ref3}
+                />
+              </div>
+
               {/* Mobile Amenities */}
               <div className="flex md:hidden gap-4 mt-4">
                 {amenities.map((amenity, idx) => (
@@ -97,17 +109,6 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                   </a>
                 )}
               </div>
-
-              <div className="mt-4 hidden md:block md:mt-8 flex items-start md:justify-start w-full">
-                <LottieIcons
-                  className="element"
-                  className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
-                  amenities={amenities}
-                  iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
-                  className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8 lg:gap-36'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
-                  ref={ref3}
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -115,12 +116,12 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
 
       {/* Optional divider */}
       {!home && (
-        <div className={`flex items-center md:justify-start w-full ${className}`}>
-          <hr className="border border-white mt-8 w-[80vw]" />
+        <div className={`flex justify-center w-full ${className}`}>
+          <hr className="border border-white mt-8 w-4/5 mx-auto" />
         </div>
       )}
     </>
   );
 };
 
-export default SectionTwo;  
+export default SectionTwo;

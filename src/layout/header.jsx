@@ -62,7 +62,9 @@ const Header = () => {
         { name: 'EMP(living)', link: '/EMPliving' },
       ],
     },
-    { name: 'Channel Partners', link: '/channel partners' },
+    {   name: 'Channel Partners',
+      link: 'https://empiredevelopments.ae/agency-register',
+      external: true },
   ];
 
   return (

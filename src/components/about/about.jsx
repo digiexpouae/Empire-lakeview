@@ -172,7 +172,7 @@ const about = () => {
           backgroundOpacity: '0.5',
           backgroundBlendMode: 'overlay',
         }}
-        className=' bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
+        className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div>
 
