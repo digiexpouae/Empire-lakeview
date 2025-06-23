@@ -49,7 +49,7 @@ const Header = () => {
 
   const nav = [
     { name: 'Home', link: '/' },
-    { name: 'About', link: '/about' },
+    { name: 'About EMPIRE', link: '/about' },
     {
       name: 'Project',
       link: '/projects',
@@ -65,6 +65,7 @@ const Header = () => {
     {   name: 'Channel Partners',
       link: 'https://empiredevelopments.ae/agency-register',
       external: true },
+      { name: 'Blogs', link: '/'}
   ];
 
   return (
