@@ -33,7 +33,12 @@ import Section_two from '../../common/section_two';
 
 
 const index = () => {
-  const [showEmailPop, setShowEmailPop] = useState(true);
+  const [showEmailPop, setShowEmailPop] = useState(false);
+
+    useEffect(() => {
+    const timer = setTimeout(() => setShowEmailPop(true), 10_000); // 10 000 ms = 10 s
+    return () => clearTimeout(timer); // clean-up if the component unmounts early
+  }, []);
 
   useEffect(() => {
     const lockScroll = () => {
