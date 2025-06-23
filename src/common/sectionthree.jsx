@@ -98,20 +98,20 @@ const sectionthree = ({ wrapper }) => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className='w-full relative flex flex-col gap-2  '       ref={ref} >
+    <div className='w-full  relative flex flex-col items-center justify-center gap-2  '     ref={ref} >
  <motion.h2
   
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="my-heading heading mt-2"
+        className="my-heading heading mt-6"
       >
         Latest Projects
       </motion.h2>
-      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[500px] '>
+      <section className='w-full flex flex-col items-center justify-center relative h-[400px] md:h-[480px] ' >
         <div
           className={`flex items-center justify-center h-[50%] md:h-[80%] xl:h-[90%] w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
-        >
+        style={{ background: 'linear-gradient(115.56deg, #FFFFFF 63.61%, #DDF7FF 108.05%)' }}   >
           <div className='flex flex-col pl-2 pr-2 md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
             <div className='h-[50px]  md:h-[90px] lg:h-[130px]'>
               <Image width={190} height={90} className='!h-full !w-full object-cover' src={projects[0].logo} alt='' />
@@ -137,8 +137,8 @@ const sectionthree = ({ wrapper }) => {
               <div
                 key={index}
                 className={`cards flex items-center justify-evenly h-[50%] md:h-[80%] xl:h-[100%] absolute w-[90%] md:w-[85%] gap-3 lg:w-[75%] bg-white rounded-2xl md:rounded-3xl duration-150`}
-              >
-                <div className='flex flex-col pl-2 pr-20 md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
+                         style={{ background: 'linear-gradient(115.56deg, #FFFFFF 63.61%, #DDF7FF 108.05%)' }}   >
+                <div className='flex flex-col pl-2  md:px-2 lg:gap-3 w-[55%] h-[160px]  md:h-[320px] xl:h-[360px] items-start justify-between'>
                   <div className='h-[50px]  md:h-[90px] lg:h-[130px]'>
                     <Image width={190} height={90} className='!h-full !w-full object-cover' src={elem.logo} alt='' />
                   </div>
