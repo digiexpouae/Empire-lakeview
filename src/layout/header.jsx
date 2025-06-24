@@ -49,7 +49,7 @@ const Header = () => {
 
   const nav = [
     { name: 'Home', link: '/' },
-    { name: 'About EMPIRE', link: '/about' },
+    { name: 'About', link: '/about' },
     {
       name: 'Properties',
       link: '/projects',
