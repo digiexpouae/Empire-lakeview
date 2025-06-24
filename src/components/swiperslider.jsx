@@ -15,17 +15,17 @@ const SwiperSlider = ({ testimonial }) => {
     >
       {testimonial.map((elem, index) => (
         <SwiperSlide key={index}>
-          <div className="p-6 ">
+          <div className=" p-3 md:p-6 ">
             <h3 className="font-bold  text-[20px] md:text-[45px] mb-4 my-heading">Testimonials</h3>
             <div className="flex flex-col gap-2">
-              <div className="text-[8px] md:text-[12px] lg:text-lg italic ">"{elem.text}"</div>
+              <div className="text-[7px] md:text-[12px] lg:text-lg italic ">"{elem.text}"</div>
               <div className="flex items-center gap-4 mt-4 w-full">
-                <div className="flex gap-[20px] w-[40%]">
+                <div className="flex gap-[20px] w-full h-[60px]">
                     <div className='w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]'>
                   <Image width={60} height={60} className='rounded-4xl !h-full w-full !object-cover' src={elem.image}/>
-                </div>  <div className='flex flex-col'>
-                    <div className="font-bold text-[10px] lg:text-[24px]">{elem.name}</div>
-                  <p className="text-[8px] lg:text-sm text-gray-500">{elem.role}</p>
+                </div>  <div className='flex flex-col w-full'>
+                    <div className="font-bold text-[10px] lg:text-[24px] w-full">{elem.name}</div>
+                  <p className="text-[8px] lg:text-sm text-gray-500 w-full">{elem.role}</p>
                          
 </div>
                 </div>
