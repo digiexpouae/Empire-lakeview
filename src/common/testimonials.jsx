@@ -13,7 +13,7 @@ const testimonials = () => {
       <div className='flex items-center justify-center md:gap-24 w-[90%] h-[70%] md:w-[75%] lg:w-[70%] relative bg-white rounded-2xl'>
        
        <div className='absolute w-[30%] md:w-[35%] h-[150px] md:h-[500px] -top-5 md:-top-20 left-0'>
-         <div className='h-[230px] md:h-[430px] lg:h-[500px]  relative overflow-hidden '><Image src={burj}  className='!h-[100%] !w-full object-cover   rounded-bl-2xl ' style={{objectPosition:'70% center'}}
+         <div className='h-[230px] md:h-[430px] lg:h-[500px]  relative overflow-hidden testi'><Image src={burj}  className='!h-[100%] !w-full object-cover   rounded-bl-2xl [object-position:80%_center] xl:[object-position:95%_center]' 
          />
          </div>
          </div>
