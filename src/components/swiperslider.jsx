@@ -24,7 +24,7 @@ const SwiperSlider = ({ testimonial }) => {
                     <div className='w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]'>
                   <Image width={60} height={60} className='rounded-4xl !h-full w-full !object-cover' src={elem.image}/>
                 </div>  <div className='flex flex-col w-full'>
-                    <div className="font-bold text-[10px] lg:text-[24px] w-full">{elem.name}</div>
+                    <div className="font-bold text-[10px] lg:text-[20px] w-full">{elem.name}</div>
                   <p className="text-[8px] lg:text-sm text-gray-500 w-full">{elem.role}</p>
                          
 </div>
