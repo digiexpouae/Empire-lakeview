@@ -65,7 +65,7 @@ const Header = () => {
     {   name: 'Channel Partners',
       link: 'https://empiredevelopments.ae/agency-register',
       external: true },
-      { name: 'Blogs', link: '/'}
+      { name: 'Blogs', link: '/blogs'}
   ];
 
   return (
