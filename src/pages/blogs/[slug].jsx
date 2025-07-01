@@ -55,7 +55,7 @@ export async function getServerSideProps(context) {
   }
   
   
-
+// Blog Post Component
 
 const BlogPost = ({ blog, error }) => {
   if (error) {
