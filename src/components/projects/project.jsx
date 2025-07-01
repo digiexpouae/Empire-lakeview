@@ -14,6 +14,7 @@ import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
 import Fadein from '@/common/fadein'; // ✅ Make sure to import this
 import { HeroDemo1 } from '../hero-gallery-demos';
+import LatestProjects from '@/common/latestProjectsCarousel';
 
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -76,10 +77,7 @@ const Project = () => {
       <div className="bg-[#0E1527]">
 
         
-          <div ref={wrapper} className='h-[50vh] container-1 md:h-screen xl:h-screen w-full flex items-start md:items-center md:justify-center flex-col'>
-            <Sectionthree wrapper={wrapper} />
-
-          </div>
+        <LatestProjects/>
 
 
         <div ref={introRef} className="h-[140vh] md:h-[90vh] xl:h-[120vh] flex flex-col items-center justify-center">

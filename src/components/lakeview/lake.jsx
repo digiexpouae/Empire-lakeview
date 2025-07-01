@@ -98,6 +98,20 @@ const index = () => {
 
   const images = [
     {
+      im: '/assets/slider5.webp',
+      tex1: 'Studio',
+      tex2: 'Size: 425.55 SQ.FT.',
+      link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/studio',
+      link2: '/contact',
+    },
+    {
+      im: '/assets/slider6.webp',
+      tex1: 'Studio with Pool',
+      tex2: 'Size: 432.42 SQ.FT',
+      link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/studio_pool',
+      link2: '/contact',
+    },
+    {
       im: '/assets/slider1.webp',
       tex1: '1 Bed',
       tex2: 'Size: 2633.68 SQ.FT. To 2682.94 SQ.FT.',
@@ -122,21 +136,7 @@ const index = () => {
       im: '/assets/slider4.webp',
       tex1: 'Duplex',
       tex2: 'Size: 830 SQ.FT',
-      link1: '/', // No working link provided (error in original)
-      link2: '/contact',
-    },
-    {
-      im: '/assets/slider5.webp',
-      tex1: 'Studio',
-      tex2: 'Size: 425.55 SQ.FT.',
-      link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/studio',
-      link2: '/contact',
-    },
-    {
-      im: '/assets/slider6.webp',
-      tex1: 'Studio with Pool',
-      tex2: 'Size: 432.42 SQ.FT',
-      link1: 'https://empiredevelopments.ae/empire-lakeviews/360views/studio_pool',
+      link1: '/',
       link2: '/contact',
     },
     {
@@ -147,6 +147,7 @@ const index = () => {
       link2: '/',
     }
   ];
+  
 
   const [showFooter, setShowFooter] = useState(false);
   const [overlay, setoverlay] = useState(true)
@@ -173,7 +174,7 @@ const index = () => {
           className={"top-[15%]"}
           main={main}
           bottom={"bottom-[-250px]"}
-          cloud={cloud}
+         
           Home={false}
           main_im={empire}
           im1={im1}

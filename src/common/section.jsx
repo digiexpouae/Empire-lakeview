@@ -4,7 +4,7 @@ import Slider from '../components/slider'; // Adjust path as needed
 import Link from 'next/link';
 
 
-const Section = ({images}) => {
+const   Section = ({images}) => {
 
       const [currentImage, setCurrentImage] = useState(0);
 

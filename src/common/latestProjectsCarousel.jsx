@@ -63,7 +63,7 @@ const LatestProjects = () => {
         ref={stickyRef}
         className="sticky top-0 h-screen flex flex-col items-center justify-center px-4 pt-20 overflow-hidden"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
           Latest Projects
         </h2>
 

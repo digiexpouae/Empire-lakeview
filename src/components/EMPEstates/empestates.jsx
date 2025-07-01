@@ -53,14 +53,39 @@ const markers = [
 
 
 
-  const image=[{im:'/assets/ima2.jpg',tex1:'Studio',tex2:'SIZE:443.55 SQ.FT'},
-{im:'/assets/bed1.jpg',tex1:'1 Bed',tex2:'SIZE: 898.42 SQ.FT.'},
-{im:'/assets/bed2.jpg',tex1:'2 Bed',tex2:'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.'},
-{im:'/assets/bed3.jpg',tex1:'2 Bed Duplex',tex2:'SIZE: 1,757.74 SQ.FT. TO 2,137.48 SQ.FT.'},
-{im:'/assets/bed4.jpg',tex1:'2 Bedroom Triplex',tex2:'SIZE: 2,137.48 SQ.FT.'},
-{im:'/assets/bed5.jpg',tex1:"3 Bed",tex2:"SIZE: 1,771.01 SQ.FT. To 1,771.01 SQ.FT"},
+const image = [
+  {
+    im: '/assets/ima2.jpg',
+    tex1: 'Studio',
+    tex2: 'SIZE: 443.55 SQ.FT',
+  },
+  {
+    im: '/assets/bed1.jpg',
+    tex1: '1 Bed',
+    tex2: 'SIZE: 898.42 SQ.FT.',
+  },
+  {
+    im: '/assets/bed2.jpg',
+    tex1: '2 Bed',
+    tex2: 'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.',
+  },
+  {
+    im: '/assets/bed3.jpg',
+    tex1: '2 Bed Duplex',
+    tex2: 'SIZE: 1,757.74 SQ.FT. TO 2,137.48 SQ.FT.',
+  },
+  {
+    im: '/assets/bed4.jpg',
+    tex1: '2 Bedroom Triplex',
+    tex2: 'SIZE: 2,137.48 SQ.FT.',
+  },
+  {
+    im: '/assets/bed5.jpg',
+    tex1: '3 Bed',
+    tex2: 'SIZE: 1,771.01 SQ.FT. TO 1,771.01 SQ.FT.',
+  },
+];
 
-  ]
 
 const [cloud, setcloud] = useState(false)
 const [main, setmain] = useState(false)
