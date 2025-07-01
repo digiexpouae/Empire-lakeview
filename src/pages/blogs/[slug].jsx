@@ -6,42 +6,65 @@ import Link from 'next/link';
 import Header from '../../layout/header';
 import Footer from '../../layout/footer';
 
-const blogs = [
-  {
-    slug: 'first-blog-post',
-    title: "UAE's Trusted Android Mobile App Development Company",
-    content: "This is the full content of the first blog post. Built for minimalism and clarity, this post demonstrates the strength of content-first design.",
-    date: '2024-06-01',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    slug: 'second-blog-post',
-    title: "The Role of High-Quality Content in Boosting Website Traffic",
-    content: "Quality content is more than just keywords. Learn how compelling writing boosts rankings and engages users organically.",
-    date: '2024-06-02',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    slug: 'third-blog-post',
-    title: "Web Development Trends Dubai Startups Should Know in 2025",
-    content: "2025 will shape the way startups design and deploy. Explore the emerging frameworks and UI patterns defining the next generation.",
-    date: '2024-06-03',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-  },
-];
 
-const BlogPost = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-  const blog = blogs.find((b) => b.slug === slug);
+import { client } from "../../../sanity/lib/client"
+import { urlFor } from "../../../sanity/lib/image"
+import { PortableText } from '@portabletext/react';
 
-  if (!blog) {
+export async function getServerSideProps(context) {
+  const { slug } = context.params;
+  
+  try {
+    // Define the query to fetch a single blog post by slug
+    const query = `*[_type == "post" && slug.current == $slug][0] {
+      _id,
+      title,
+      slug,
+      Image,
+      publishedAt,
+      content,
+      excerpt,
+      "slug": slug.current
+    }`;
+    
+    const blog = await client.fetch(query, { slug });
+    
+    if (!blog) {
+      return { 
+        notFound: true 
+      };
+    }
+
+    // Return the blog post as props
+    return {
+      props: {
+        blog
+      }
+    };
+  } catch (error) {
+    console.error("Error fetching blog post from Sanity:", error);
+    
+    // Return an empty props object with a 500 status
+    return {
+      props: {
+        error: 'Failed to load blog post',
+        blog: null
+      }
+    };
+  }
+  }
+  
+  
+
+
+const BlogPost = ({ blog, error }) => {
+  if (error) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
         <div className="max-w-xl text-center">
-          <h1 className="text-2xl font-semibold mb-2">404 — Blog Not Found</h1>
+          <h1 className="text-2xl font-semibold mb-2">Error Loading Post</h1>
           <p className="text-sm text-gray-400 mb-4">
-            The blog post you're looking for doesn't exist.
+            {error}
           </p>
           <Link href="/blogs" className="text-blue-400 text-sm underline underline-offset-4 hover:text-blue-300">
             ← Back to all posts
@@ -51,29 +74,61 @@ const BlogPost = () => {
     );
   }
 
+  if (!blog) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
+        <div className="max-w-xl text-center">
+          <h1 className="text-2xl font-semibold mb-2">Blog Post Not Found</h1>
+          <p className="text-sm text-gray-400 mb-4">
+            The post you're looking for doesn't exist or may have been removed.
+          </p>
+          <Link href="/blogs" className="text-blue-400 text-sm underline underline-offset-4 hover:text-blue-300">
+            ← Back to all posts
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const { title, content, publishedAt, Image } = blog;
+
   return (
     <>
       <Header />
       <div className="bg-black md:pt-20 pt-12 text-white min-h-screen">
         {/* Hero Section */}
         <div
-          className="w-full h-[300px] md:h-[400px] bg-cover bg-center flex items-center justify-center"
+          className="w-full h-[300px] md:h-[500px] bg-cover bg-center flex items-center justify-center relative"
           style={{
-            backgroundImage: `url('${blog.image}')`,
+            backgroundImage: Image
+              ? `url('${urlFor(Image).width(1920).height(1080).fit('max').auto('format').url()}')` 
+              : 'linear-gradient(135deg, #1f2937 0%, #111827 100%)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
-        <div className="bg-black/60 w-full h-full flex items-center justify-center px-6">
-          <h1 className="text-3xl md:text-5xl font-bold text-center max-w-4xl">
-            {blog.title}
-          </h1>
+          <div className="absolute inset-0 bg-black/60 flex items-center justify-center px-6">
+            <div className="max-w-4xl text-center">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                {title}
+              </h1>
+            </div>
+          </div>
         </div>
-      </div>
 
       {/* Content */}
-      <div className="max-w-3xl mx-auto px-6 py-12">
-        <p className="text-xs md:text-sm text-gray-500 font-mono mb-6">{blog.date}</p>
-        <div className="text-gray-300 text-base md:text-lg leading-relaxed">
-          {blog.content}
+      <div className="max-w-4xl mx-auto px-6 py-12">
+        {publishedAt && (
+          <p className="text-xs md:text-sm text-gray-500 font-mono mb-6">
+            {new Date(publishedAt).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
+        )}
+        <div className="prose prose-invert max-w-none">
+          {content && <PortableText value={content} />}
         </div>
         <Link
           href="/blogs"
