@@ -1,13 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
-import desktopImg from '../../../public/assets/award.png'
+import desktopImg from '../../../public/assets/award1.png'
 import mobileImg from '../../../public/assets/mobimg.png'
 
 const SectionTwo = () => {
   return (
     <div className="relative w-full">
       {/* Desktop Image - hidden on mobile */}
-      <div className="hidden md:block relative w-full h-[500px]">
+      <div className="hidden md:block relative w-full h-[600px]">
         <Image
           src={desktopImg}
           alt="Desktop Award"

@@ -161,24 +161,10 @@ const about = () => {
 
         <Fadein>
 
-        <div
-        style={{
-          backgroundColor: '#0E1527',
-          backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          backgroundBlendMode: 'overlay',
-          backgroundOpacity: '0.5',
-          backgroundBlendMode: 'overlay',
-        }}
-        className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
-        <HeroDemo1 />
-      </div>
 
         </Fadein>
 
-        <Fadein>   <Brand text1={'The Brand Pillars'} brand={true} text2={'Built on 3 Key Pillars'} className2={'!text-black'} img={'/assets/chess.jpg'} amenities={amenities} className={'grid grid-cols-3 gap-8 '} about={true} iconsize={'w-[30px] h-[30px] md:w-[50px] md:h-[50px]'} />    </Fadein>
+        <Fadein>   <Brand />    </Fadein>
         <Sectionthree />
         
         <Fadein>    <SectionFour images={contactbg} />   </Fadein>

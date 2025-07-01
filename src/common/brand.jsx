@@ -1,91 +1,93 @@
-import React, { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import chess from '../../public/assets/chess.jpg'
-import { useInView } from 'framer-motion'
-import {gsap} from 'gsap'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
-import LottieIcons from './lottie'
-const brand = ({img,text1,text2,amenities,className,iconsize,className2,className3,brand}) => {
+const BrandPillars = () => {
+  const icons = [
+    {
+      src: "/assets/craftsmanship.png",
+      alt: "Craftsmanship",
+      label: "Craftsmanship",
+      width: 50,
+      height: 50,
+    },
+    {
+      src: "/assets/design.png",
+      alt: "Thoughtful Design",
+      label: "Thoughtful Design",
+      width: 60,
+      height: 60,
+    },
+    {
+      src: "/assets/quality.png",
+      alt: "Signature Quality",
+      label: "Signature Quality",
+      width: 50,
+      height: 50,
+    },
+  ];
 
-// const {ref,inView}=useInView({
-//   triggerOnce:true,
-//   threshold:0.5
-// })
-// const ref3=useRef()
-// useEffect(()=>{
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % icons.length);
+    }, 1000); // 1 second interval
 
-// if(inView){
-
-//  gsap.fromTo(
-//   ref3.current,
-//   { y:200, opacity: 0, },   // start from translateX(-430px)
-//   { y: 0, opacity: 1, duration: 2, delay: 2 }
-// )     
-
-
-
-// tl.fromTo(
-//   ".element",
-//   { opacity: 0, y: 200 },
-//   {
-//     opacity: 1,
-//     y: 0,
-//     duration: 1,
-//     stagger: {
-//       each: 1,
-//       ease: "power1.out"
-//     }
-//   }
-// );
-// }
-// },[inView])
+    return () => clearInterval(interval);
+  }, [icons.length]);
 
   return (
-    <div className='w-full  flex flex-col items-center  justify-center'>
-         <div className='relative w-full '>
-          
-       <Image
-  src={img || chess} // fallback to chess.jpg if img is undefined/null
-  height={700}
-  width={600}
-  className='!h-full !w-full object-cover'
-  alt="Brand Image"
-/>
+    <section
+      className="py-12 px-6 md:px-16"
+      style={{
+        background: "linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)",
+      }}
+    >
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-center gap-6">
+        {/* Left Text */}
+        <div className="md:w-1/3 text-center md:text-left">
+          <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-1">
+            The Brand Pillars
+          </h2>
+          <p className="text-md text-gray-800">Built on 3 Key Pillars</p>
         </div>
-      <div className=' w-full py-10  flex flex-col items-center justify-center bg-[linear-gradient(90deg,_#CCAB64_0%,_#FAECC9_100%)]'>
-      <h4 className='md:text-[48px] text-[28px] font-bold text-center text-black mb-8'>{text1}</h4>
-      {/* Desktop: row of icons */}
-      <div className='hidden md:flex flex-row items-end justify-center gap-6 w-full max-w-5xl'>
-        <LottieIcons amenities={amenities} className1={`flex flex-row items-end justify-center w-full ${brand && 'md:gap-[32px]'}`} className2='text-black md:text-[18px] text-[12px] font-medium' iconsize='w-[60px] h-[60px] md:w-[80px] md:h-[80px]' />
-      </div>
-      {/* Mobile: Swiper slider for icons */}
-      <div className='block md:hidden w-full relative'>
-        <Swiper
-          spaceBetween={10}
-          slidesPerView={1}
-          centeredSlides={true}
-          className={`w-full px-4`}
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
-          loop={true}
-          modules={[Autoplay]}
-        >
-          {amenities.map((amenity, idx) => (
-            <SwiperSlide key={idx}>
-              <div className={`flex flex-col items-center justify-center  w-full`}>
-                <LottieIcons amenities={[amenity]} className1='flex flex-col items-center justify-center w-full' className2='text-black text-[14px] font-medium' iconsize='w-[60px] h-[60px]' />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      </div>
-    </div>
-  )
-}
 
-export default brand
+        {/* Desktop View */}
+        <div className="hidden md:flex gap-10 md:gap-8 flex-wrap md:flex-nowrap">
+          {icons.map((icon, i) => (
+            <div key={i} className="flex flex-col items-center text-center">
+              <Image
+                src={icon.src}
+                alt={icon.alt}
+                width={icon.width}
+                height={icon.height}
+                className="mb-2"
+              />
+              <p className="text-base font-medium text-gray-900">
+                {icon.label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Slider */}
+        <div className="flex md:hidden justify-center">
+          <div className="flex flex-col items-center text-center transition-all duration-500 ease-in-out">
+            <Image
+              src={icons[currentIndex].src}
+              alt={icons[currentIndex].alt}
+              width={icons[currentIndex].width}
+              height={icons[currentIndex].height}
+              className="mb-2"
+            />
+            <p className="text-base font-medium text-gray-900">
+              {icons[currentIndex].label}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BrandPillars;

@@ -30,6 +30,8 @@ import contactbg from "../../../public/assets/contact.png"
 import Vision from "../../common/vision"
 import Hero from './Hero'
 import Section_two from '../../common/section_two';
+import LatestProjectsCarousel from '@/common/latestProjectsCarousel';
+import AdvantagesSection from '@/common/advantage_home'
 
 
 const index = () => {
@@ -188,30 +190,25 @@ const index = () => {
         className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div>
-
+  <LatestProjectsCarousel />
       <div className='bg-[#0E1527] relative' ref={main}>
-        <Sectiontwo amenities={amenities} />
+        {/* <Sectiontwo amenities={amenities} /> */}
 
-        <div ref={wrapper} className='h-[50vh] container-1 md:h-screen xl:h-screen w-full flex items-start md:items-center md:justify-center flex-col'>
-          <Sectionthree main={main} wrapper={wrapper} />
-
-        </div>
-
+      
 
         <div ref={introRef} className=' container-2  flex flex-col items-start md:pt-20 pt-20 lg:gap-[50px]'>
          
         
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]   relative'} />
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]  relative'} />
   
         </div>  
         
-        <Vision/>
+        <Vision backgroundImage="/assets/visionbg.png" />
 
          <div ref={brandRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
          
         
-          <Brand text1={'The Advantages'} amenities={amenities} img={'/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg'} className={'grid grid-cols-6 gap-1 '} iconsize={'w-[20px] h-[20px] lg:w-[20px] lg:h-[20px] md:w-[50px] md:w-[50px]'} className2={'!text-black text-[7px] md:!text-[12px] lg:!text-[17px]'} className3={' h-[40px]'} />
-
+         <AdvantagesSection />
         </div>  
         
         <Section />

@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '@/layout/header';
 import Footer from '@/layout/footer';
 import Heroslider from '../../common/heroslider'
-import back from '../../../public/assets/45d913f12993a0bc7cad58f1beecea86157f951b.jpg' 
+import back from '../../../public/assets/Contactbg.png' 
 import Image from 'next/image';
 import Phone from '../../../public/phone.svg'
 import email from '../../../public/mail.svg'
