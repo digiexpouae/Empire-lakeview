@@ -47,12 +47,12 @@ const LatestProjects = () => {
 
   // Set scroll distance and width based on screen size
   const scrollOffset = isMobile
-    ? `-${(projects.length - 1) * 50}%`
-    : `-${(projects.length - 1) * 45}%`;
+    ? `-${(projects.length - 1) * 100}%`
+    : `-${(projects.length - 1) * 40}%`;
 
   const totalWidth = isMobile
-    ? `${projects.length * 90}vw`
-    : `${projects.length * 30}vw`;
+    ? `${projects.length * 100}vw`
+    : `${projects.length * 100}vw`;
 
   const x = useTransform(scrollYProgress, [0, 1], ['0%', scrollOffset]);
   const smoothX = useSpring(x, { damping: 30, stiffness: 100 });
@@ -61,9 +61,9 @@ const LatestProjects = () => {
     <section ref={containerRef} className="relative h-[300vh] bg-[#0D1028]">
       <div
         ref={stickyRef}
-        className="sticky top-0 h-screen flex flex-col items-center justify-center px-4 pt-20 overflow-hidden"
+        className="sticky -top-5 md:-top-20  flex flex-col items-center justify-center px-4 md:pt-0 pt-20  pb-20 overflow-hidden"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mt-20  text-center mb-16">
           Latest Projects
         </h2>
 

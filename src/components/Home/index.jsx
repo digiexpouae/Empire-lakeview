@@ -190,11 +190,13 @@ const index = () => {
         className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div>
-  <LatestProjectsCarousel />
+      <div className='w-full '>
+        <LatestProjectsCarousel />
+      </div>
+       
       <div className='bg-[#0E1527] relative' ref={main}>
         {/* <Sectiontwo amenities={amenities} /> */}
 
-      
 
         <div ref={introRef} className=' container-2  flex flex-col items-start md:pt-20 pt-20 lg:gap-[50px]'>
          
