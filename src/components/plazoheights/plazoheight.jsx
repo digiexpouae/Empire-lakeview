@@ -15,26 +15,23 @@ import SectionFour from '@/common/section4';
 import mob from "../../../public/assets/Height_mobile.png"
 import contactbg from "../../../public/assets/contact.png"
 const plazoheights = () => {
-   const amenities = [   {
+   const amenities = [  
+    {
+      text:"Projects Delivered",
+      title: "2015-2019",
+    
+    },
+  {
      text:'Unit Types',
       title: "Studios, 1 & 2 Bed",
       text2:'Apartments'
     },
     {
-      text:"Completion Year",
-      title: "2015-2019",
-    
-    },
- 
-    {
         text:'Developer',
-    im:'/assets/plazoo.jpg'
+    im:'/assets/plazoo.png'
 
     },
-    {
-      text: "Architect",
-im:'/assets/cmpc.png'
-    }
+
 
 
   ]

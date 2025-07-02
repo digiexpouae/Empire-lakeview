@@ -75,10 +75,10 @@ const Header = () => {
 }`}>
       <header className="relative z-50">
         {/* Top bar */}
-        <div className="flex justify-between items-center h-[100px] px-4 sm:px-6 xl:px-20 lg:px-10 md:py-10 py-3">
+        <div className="flex justify-between items-center h-[100px] px-4 sm:px-6 xl:px-20 lg:px-10 lg:py-10 py-3">
           {/* Desktop Nav */}
           <motion.nav
-            className="hidden md:flex items-center gap-x-3 lg:gap-x-6 ml-10 pl-4"
+            className="hidden lg:flex items-center gap-x-3 lg:gap-x-6 ml-10 pl-4"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -116,7 +116,7 @@ const Header = () => {
           </motion.nav>
 
           {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-yellow-300 transition-colors duration-300"
@@ -134,7 +134,7 @@ const Header = () => {
               <Image
                 src="/assets/logo (2).png"
                 alt="Empire Developments"
-                className="h-[40px] w-auto md:h-[45px] lg:h-[50px] object-contain"
+                className="h-[40px] w-auto lg:h-[45px] lg:h-[50px] object-contain"
                 width={200}
                 height={200}
               />
@@ -143,7 +143,7 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <motion.div
-            className="hidden md:flex items-center gap-x-3 lg:gap-x-4"
+            className="hidden lg:flex items-center gap-x-3 lg:gap-x-4"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -170,7 +170,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden absolute w-full bg-[#0E1527]/95 backdrop-blur-sm transition-all duration-300 ${
+          className={`lg:hidden absolute w-full bg-[#0E1527]/95 backdrop-blur-sm transition-all duration-300 ${
             isOpen
               ? 'max-h-[500px] opacity-100'
               : 'max-h-0 opacity-0 overflow-hidden'

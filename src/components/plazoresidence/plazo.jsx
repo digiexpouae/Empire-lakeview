@@ -31,27 +31,26 @@ const [cloud, setcloud] = useState(false)
 const text=
 "Plazzo Residence is a five-storey residential development located in Jumeirah Village Triangle, Dubai. Completed in 2016, the project offers studios, 1-, and 2-bedroom apartments with sizes ranging from 412 to 2,422 sq. ft. Amenities include rooftop swimming pools for adults and children, a gym, sauna, steam room, jacuzzi, children's play area, 24-hour concierge services, and covered parking."
 
-  const amenities = [
-    {
-      text:"Completion Year",
-      title: "2012-2016",
-    
-    },
-    {
-     text:'Unit Types',
-      title: "Studios, 1 & 2 Bed",
-      text2:'Apartments'
-    },
-    {
-        text:'Developer',
-    im:'/assets/plazoo (3).jpg'
+const amenities = [  
+  {
+    text:"Projects Delivered",
+    title: "2015-2019",
+  
+  },
+{
+   text:'Unit Types',
+    title: "Studios, 1 & 2 Bed",
+    text2:'Apartments'
+  },
+  {
+      text:'Developer',
+  im:'/assets/plazoo.png'
 
-    },
-    {
-      text: "Architect",
-im:'/assets/cmpc.png'
-    }
-  ]
+  },
+
+
+
+]
   const text1='Modern Living Meets Elegance.'
   const para="Empire Lakeview's Plazzo Residence (JVT) offers a mix of comfort and elegance. These homes meet the demand of modern homes. Empire Development is among the top real estate developers in UAE and has developed these luxury apartments JVT Dubai, to enhance your daily life. At Empire Development's Palazzo Residence, you enjoy a life of elegance and quality."
   const texthead='Smart Homes, Smart Choices' 

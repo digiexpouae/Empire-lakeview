@@ -45,6 +45,10 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
     <>
       {/* OUTER WRAPPER */}
       <div className="relative w-full overflow-hidden" ref={ref}>
+        {/* Watermark Logo at Bottom Right */}
+        <div style={{position: 'absolute', right: 0, bottom: -40, zIndex: 0, opacity: 1, pointerEvents: 'none'}}>
+          <Image src={require('../../../public/assets/gridlogo.png')} alt="Grid Logo" width={400} height={400} />
+        </div>
         {/* BACKGROUND IMAGE OUTSIDE PADDING */}
         {back_image && (
           <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] z-0 pointer-events-none">

@@ -25,26 +25,25 @@ const empire = () => {
     }
   ];
 
-  const amenities = [
+  const amenities = [  
     {
-      text: "Completion Year",
-      title: "2020-2023",
-
+      text:"Projects Delivered",
+      title: "2015-2019",
+    
     },
-    {
-      text: 'Unit Types',
+  {
+     text:'Unit Types',
       title: "Studios, 1 & 2 Bed",
-      text2: 'Apartments'
+      text2:'Apartments'
     },
     {
-      text: 'Developer',
-      im: '/assets/4d003aa6793278b9d25275d5fb3afbedab9f1ff7.png'
+        text:'Developer',
+    im:'/assets/plazoo.png'
 
     },
-    {
-      text: "Architect",
-      im: '/assets/a6105c3f70c22b3bca36e60564ff487ffd4b6013.png'
-    }
+
+
+
   ]
 
   const textpara = 'Plazzo Heights is a six-storey residential building located in Jumeirah Village Circle (JVC), Dubai. Developed by Plazzo Development Real Estate, it offers studios, 1, and 2-bedroom apartments with modern amenities.'

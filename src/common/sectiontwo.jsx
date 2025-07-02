@@ -108,7 +108,7 @@ return (<>
                       </p>
                     ) : (
                       <div className="relative w-[80%] aspect-[4/2] overflow-hidden flex items-center justify-start">
-                        <Image fill src={amenity.im} alt="Amenity image" className="object-contain m-auto !w-[100%] " />
+                        <Image fill src={amenity.im} alt="Amenity image" className="object-contain !w-[100%] " />
                       </div>
                     )}
                   </div>

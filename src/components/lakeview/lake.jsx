@@ -212,10 +212,11 @@ const index = () => {
         <Sectionthree images={images} onAllVisible={handleAllVisible} />
        
         <Fadein> 
-           <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' /></Fadein>
+           <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' />
+          <Icon icons={icons} /> </Fadein>
 
         <Fadein>
-          <Icon icons={icons} />
+          
         </Fadein>
 
         <Fadein>
