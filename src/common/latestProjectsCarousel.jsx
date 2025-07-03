@@ -30,34 +30,31 @@ const projects = [
 const LatestProjects = () => {
   const containerRef = useRef(null);
   const stickyRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [scrollOffset, setScrollOffset] = useState('0px');
-  const [totalWidth, setTotalWidth] = useState('100vw');
+  const [isMobile, setIsMobile] = useState(false); 
 
   // Check mobile status and update offset/width dynamically
   useEffect(() => {
-    const updateDimensions = () => {
-      const isMobileNow = window.innerWidth < 768;
-      setIsMobile(isMobileNow);
-
-      if (isMobileNow) {
-        setScrollOffset(`-${(projects.length - 1) * 80}vw`);
-        setTotalWidth(`${projects.length * 80}vw`);
-      } else {
-        setScrollOffset(`-${(projects.length - 1) * 620}px`);
-        setTotalWidth(`${projects.length * 620}px`);
-      }
-    };
-
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    return () => window.removeEventListener('resize', updateDimensions);
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start'],
   });
+
+  
+   // Set scroll distance and width based on screen size
+   const scrollOffset = isMobile
+   ? `-${(projects.length - 1) * 40}%`
+   : `-${(projects.length - 1) * 10}%`;
+
+ const totalWidth = isMobile
+   ? `${projects.length * 100}vw`
+   : `${projects.length * 100}vw`;
+
 
   const x = useTransform(scrollYProgress, [0, 1], ['0%', scrollOffset]);
   const smoothX = useSpring(x, { damping: 30, stiffness: 100 });
