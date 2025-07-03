@@ -133,6 +133,7 @@ const about = () => {
           className2={'!top-[50%] md:!top-[40%] xl:!top-[35%]'}
           texttwo={'About Us'}
           main={true}
+          overlay={true}
           bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
           cloud={false}
         />
@@ -156,11 +157,11 @@ const about = () => {
             <Sectionthree /></Fadein>
         
         <div>
-           <Fadein>
-          <Section />
-        </Fadein>
+          <Fadein>
+            <Section />
+          </Fadein>
         </div>
-       
+
 
         <Fadein>
 

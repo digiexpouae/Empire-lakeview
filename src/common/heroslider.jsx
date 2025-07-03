@@ -185,9 +185,10 @@ return <div key={index} className={` flex items-end justify-end relative opacity
  <div  className="absolute top-20 z-50 md:right-[-230px] right-[-100px] opacity-0 " ref={box_Two}> {/* <<< starts offscreen */}
           <Image src={im2} alt="Cloud" objectFit='cover' className='w-[280px] h-[180px] md:!w-[580px] md:!h-[320px]' />
         </div>
-        }{overlay &&
-        <div className={`bg-[linear-gradient(180deg,rgba(14,21,39,0)_71.68%,#0E1527_100%)] ${lakeview ? 'h-[300px] ':''} left-0 right-0 z-[999] absolute bottom-0 w-full`}> </div>
-        }
+        }{overlay && (
+          <div className="bg-[linear-gradient(180deg,rgba(14,21,39,0)_71.68%,#0E1527_100%)] h-[300px] left-0 right-0 z-[999] absolute bottom-0 w-full" />
+        )}
+        
 </div></div>
     )
 

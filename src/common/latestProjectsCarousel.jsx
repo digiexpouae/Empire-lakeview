@@ -31,28 +31,33 @@ const LatestProjects = () => {
   const containerRef = useRef(null);
   const stickyRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [scrollOffset, setScrollOffset] = useState('0px');
+  const [totalWidth, setTotalWidth] = useState('100vw');
 
-  // Detect screen size
+  // Check mobile status and update offset/width dynamically
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    const updateDimensions = () => {
+      const isMobileNow = window.innerWidth < 768;
+      setIsMobile(isMobileNow);
+
+      if (isMobileNow) {
+        setScrollOffset(`-${(projects.length - 1) * 80}vw`);
+        setTotalWidth(`${projects.length * 80}vw`);
+      } else {
+        setScrollOffset(`-${(projects.length - 1) * 620}px`);
+        setTotalWidth(`${projects.length * 620}px`);
+      }
+    };
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start'],
   });
-
-  // Set scroll distance and width based on screen size
-  const scrollOffset = isMobile
-    ? `-${(projects.length - 1) * 50}%`
-    : `-${(projects.length - 1) * 45}%`;
-
-  const totalWidth = isMobile
-    ? `${projects.length * 90}vw`
-    : `${projects.length * 30}vw`;
 
   const x = useTransform(scrollYProgress, [0, 1], ['0%', scrollOffset]);
   const smoothX = useSpring(x, { damping: 30, stiffness: 100 });
@@ -61,18 +66,15 @@ const LatestProjects = () => {
     <section ref={containerRef} className="relative h-[300vh] bg-[#0D1028]">
       <div
         ref={stickyRef}
-        className="sticky top-0 h-screen flex flex-col items-center justify-center px-4 pt-20 overflow-hidden"
+        className="sticky -top-5 md:-top-20 flex flex-col items-center justify-center px-4 md:pt-0 pt-20 pb-20 overflow-hidden"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mt-20 text-center mb-16">
           Latest Projects
         </h2>
 
         <div className="relative w-full overflow-hidden">
           <motion.div
-            style={{
-              x: smoothX,
-              width: totalWidth,
-            }}
+            style={{ x: smoothX, width: totalWidth }}
             className="flex gap-6 md:gap-10 flex-nowrap"
           >
             {projects.map((project, index) => (
@@ -80,7 +82,6 @@ const LatestProjects = () => {
                 key={index}
                 className="bg-white rounded-2xl p-4 md:p-6 w-[80vw] md:w-[620px] shrink-0 shadow-xl flex flex-col justify-between"
               >
-                {/* Top Row: Logo and Button */}
                 <div className="flex justify-between items-center mb-4">
                   <div className="relative w-24 h-24 md:w-32 md:h-32">
                     <Image
@@ -95,12 +96,10 @@ const LatestProjects = () => {
                   </button>
                 </div>
 
-                {/* Description */}
                 <p className="text-sm text-gray-700 leading-relaxed mb-5">
                   {project.description}
                 </p>
 
-                {/* Bottom Image */}
                 <div className="w-full h-[200px] md:h-[220px] relative rounded-xl overflow-hidden">
                   <Image
                     src={project.image}

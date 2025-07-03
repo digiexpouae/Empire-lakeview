@@ -25,26 +25,25 @@ const empire = () => {
     }
   ];
 
-  const amenities = [
+  const amenities = [  
     {
-      text: "Completion Year",
-      title: "2020-2023",
-
+      text:"Projects Delivered",
+      title: "2015-2019",
+    
     },
-    {
-      text: 'Unit Types',
+  {
+     text:'Unit Types',
       title: "Studios, 1 & 2 Bed",
-      text2: 'Apartments'
+      text2:'Apartments'
     },
     {
-      text: 'Developer',
-      im: '/assets/4d003aa6793278b9d25275d5fb3afbedab9f1ff7.png'
+        text:'Developer',
+    im:'/assets/plazoo.png'
 
     },
-    {
-      text: "Architect",
-      im: '/assets/a6105c3f70c22b3bca36e60564ff487ffd4b6013.png'
-    }
+
+
+
   ]
 
   const textpara = 'Plazzo Heights is a six-storey residential building located in Jumeirah Village Circle (JVC), Dubai. Developed by Plazzo Development Real Estate, it offers studios, 1, and 2-bedroom apartments with modern amenities.'
@@ -70,7 +69,7 @@ const empire = () => {
       <div className='w-full hidden md:block relative h-[500px] md:h-screen'>
 
         <Header />
-        <Heroslider className1={'top-[3%]'} main={main} textone={'Empire'} texttwo={'Residence'} bottom={'md:bottom-[-350px] bottom-[-300px] md:!w-full w-[500px]'} main_im={Main} overlay={overlay} />
+        <Heroslider  className1={'top-[3%]'} main={main} textone={'Empire'} texttwo={'Residence'} bottom={'md:bottom-[-350px] bottom-[-300px] md:!w-full w-[500px]'} main_im={Main} overlay={true} />
         
         <Image src={Field} className='left-0 right-0 bottom-0 top-0 w-full h-[100%] z-[-10] !object-cover object-top-left' />
       </div>

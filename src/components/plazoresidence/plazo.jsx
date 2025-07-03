@@ -31,27 +31,26 @@ const [cloud, setcloud] = useState(false)
 const text=
 "Plazzo Residence is a five-storey residential development located in Jumeirah Village Triangle, Dubai. Completed in 2016, the project offers studios, 1-, and 2-bedroom apartments with sizes ranging from 412 to 2,422 sq. ft. Amenities include rooftop swimming pools for adults and children, a gym, sauna, steam room, jacuzzi, children's play area, 24-hour concierge services, and covered parking."
 
-  const amenities = [
-    {
-      text:"Completion Year",
-      title: "2012-2016",
-    
-    },
-    {
-     text:'Unit Types',
-      title: "Studios, 1 & 2 Bed",
-      text2:'Apartments'
-    },
-    {
-        text:'Developer',
-    im:'/assets/plazoo (3).jpg'
+const amenities = [  
+  {
+    text:"Projects Delivered",
+    title: "2015-2019",
+  
+  },
+{
+   text:'Unit Types',
+    title: "Studios, 1 & 2 Bed",
+    text2:'Apartments'
+  },
+  {
+      text:'Developer',
+  im:'/assets/plazoo.png'
 
-    },
-    {
-      text: "Architect",
-im:'/assets/cmpc.png'
-    }
-  ]
+  },
+
+
+
+]
   const text1='Modern Living Meets Elegance.'
   const para="Empire Lakeview's Plazzo Residence (JVT) offers a mix of comfort and elegance. These homes meet the demand of modern homes. Empire Development is among the top real estate developers in UAE and has developed these luxury apartments JVT Dubai, to enhance your daily life. At Empire Development's Palazzo Residence, you enjoy a life of elegance and quality."
   const texthead='Smart Homes, Smart Choices' 
@@ -63,7 +62,7 @@ im:'/assets/cmpc.png'
  return (
     <>  <div className='hidden md:block relative w-full md:h-screen h-[500px] z-20'>
         <Header />
-      <Heroslider texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-250px] object-cover md:!h-screen !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={overlay} main={true} cloud={cloud}/>
+      <Heroslider  texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-250px] object-cover md:!h-screen !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={true} main={true} cloud={cloud}/>
       <Image  src={Back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
      </div>
 

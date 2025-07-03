@@ -212,14 +212,11 @@ const index = () => {
         <Sectionthree images={images} onAllVisible={handleAllVisible} />
        
         <Fadein> 
-    <div className='flex flex-col items-center justify-end gap-[100px]  w-full lg:mt-[20px] mt-[80px] ' >
-        <div className='flex flex-col items-center justify-end w-full ' >
-        <h2 className='my-heading lg:text-[60px] md:text-[40px] text-[34px]  font-bold text-white' >In The Heart Of It All</h2>
-        <p className=' text-white'>Perfectly Positioned in Liwan, Dubailand</p>  </div> </div>
-           <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' /></Fadein>
+           <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' />
+          <Icon icons={icons} /> </Fadein>
 
         <Fadein>
-          <Icon icons={icons} />
+          
         </Fadein>
 
         <Fadein>

@@ -196,12 +196,11 @@ const index = () => {
       <div className='bg-[#0E1527] relative' ref={main}>
         {/* <Sectiontwo amenities={amenities} /> */}
 
-      
 
-        <div ref={introRef} className=' container-2  flex flex-col items-start md:pt-20 pt-20 lg:gap-[50px]'>
+        <div ref={introRef} className='container-2 flex flex-col items-start pt-0 gap-0'>
          
         
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] !my-6 overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px]  !w-[400px]  relative'} />
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[250px] md:!h-[270px] !w-[400px] relative'} />
   
         </div>  
         

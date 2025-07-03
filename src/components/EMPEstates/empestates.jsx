@@ -105,8 +105,8 @@ const para5= "The Empire development team has committed to sustainability. This 
       return (
         <div>
           <div className='w-full md:block hidden relative md:h-screen h-[500px]'>
-            <Header className='nav-menu absolute z-50'/>
-            <Heroslider className={'top-[40%]'} className2={'!top-[23%] md:!top-12 '} textthree={'Empire'} main_im={Hero} className3={'top-2   md:top-9  '} texttwo={'Estates'} main={true} bottom={'bottom-0  !h-[300px]  md:!h-[700px] !w-[100%]'} cloud={cloud} />
+            <Header  className='nav-menu absolute z-50'/>
+            <Heroslider overlay={true} className={'top-[40%]'} className2={'!top-[23%] md:!top-12 '} textthree={'Empire'} main_im={Hero} className3={'top-2   md:top-9  '} texttwo={'Estates'} main={true} bottom={'bottom-0  !h-[300px]  md:!h-[700px] !w-[100%]'} cloud={cloud} />
             <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
           </div>
 
