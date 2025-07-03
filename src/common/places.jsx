@@ -22,30 +22,39 @@ useEffect(() => {
           ScrollTrigger.normalizeScroll(true);
 
 
-    if (!movingRef.current || !carWrapperRef.current) return;
+    if (!movingRef.current || !sectionref.current) return;
 
+    // Set initial position immediately
+    movingRef.current.style.left = '20%';
+    
     ctx = gsapModule.gsap.context(() => {
+      // Animate from left to right
       gsapModule.gsap.fromTo(
         movingRef.current,
         { left: '20%' },
         {
           left: '80%',
           ease: 'none',
+          immediateRender: false,
          scrollTrigger: {
-  trigger: carWrapperRef.current,
-  start: 'top top',
-  end: '+=1500',
-  scrub: true,
-  onUpdate: (self) => {
-          if (!movingRef.current) return;
+          trigger: sectionref.current,
+          start: 'top 80%',  // Start when top of section is 80% down the viewport
+          end: 'bottom 20%',  // End when bottom of section is 20% down the viewport
+          scrub: true,
+          onEnter: () => {
+            // Ensure car is at starting position when entering view
+            gsapModule.gsap.set(movingRef.current, { left: '20%' });
+          },
+//   onUpdate: (self) => {
+//           if (!movingRef.current) return;
 
-          if (self.progress <= 0) {
-            // Stay at 20% until ScrollTrigger starts
-            movingRef.current.style.left = '20%';
-          } 
+//           if (self.progress <= 0) {
+//             // Stay at 20% until ScrollTrigger starts
+//             movingRef.current.style.left = '20%';
+//           } 
 
   
-}
+// }
 
 }
 ,
@@ -88,9 +97,9 @@ const carWrapperRef=useRef(null)
  <div className=' bg-[#0E1527] w-full md:pt-24 pt-20  text-white !h-[95vh]'  ref={sectionref}>
       <div className='flex flex-col items-center justify-center gap-[100px]  w-full lg:mt-[20px] mt-[50px] ' >
         <div className='flex flex-col items-center justify-center w-full ' >
-        <h2 className='my-heading lg:text-[60px] md:text-[40px] text-[34px]  font-bold' >In The Heart Of It All</h2>
-        <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>  
-         <div ref={carWrapperRef} className=" relative w-full">
+        {/* <h2 className='my-heading lg:text-[60px] md:text-[40px] text-[34px]  font-bold' >In The Heart Of It All</h2>
+        <p className='mb-[50px]'>Perfectly Positioned in Liwan, Dubailand</p>   */}
+         <div  className=" relative w-full">
 
         <div className="flex items-center justify-center w-full">
         <hr className="border border-white w-[100%] relative  " />
@@ -111,12 +120,12 @@ const carWrapperRef=useRef(null)
 
 
 
-    <div ref={movingRef} className='md:!w-[127px] !w-[62px] !h-[50px] md:!h-[72px] absolute left-[20%] rotate-180 z-30'><Image src={car} objectFit='cover' fill  className='transition-transform duration-700 ease-in-out'/>
+    <div ref={movingRef} className='md:!w-[127px]  !w-[62px] !h-[50px] md:!h-[72px] absolute left-[20%] rotate-180 z-30'><Image src={car} objectFit='cover' fill  className='transition-transform duration-700 ease-in-out'/>
     </div></div>
           </div> 
           </div>
         <div className='w-[100%]   mb-10 relative'>
-           <Map  className={'z-50'} carcontainer={carWrapperRef} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
+           <Map  className={'z-50'} carcontainer={sectionref} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
            
             {/* <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} /> */}
         </div></div>

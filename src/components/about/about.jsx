@@ -22,7 +22,7 @@ import Fadein from '../../common/fadein'
 import { HeroDemo1 } from '../hero-gallery-demos'
 import { BentoCell, BentoGrid, ContainerScale, ContainerScroll } from "@/components/hero-gallery-scroll-animation";
 
-
+import Textsection from '../../common/hometext'
 
 
 
@@ -149,8 +149,11 @@ const about = () => {
 
       <div className='bg-[#0E1527]'>
         <Fadein>
-          <Sectiontext classNamemain={'h-[500px] md:!h-[350px]'} classNameH={'!text-[65px] '} className={'md:!text-[20px] !text-[13px] !leading-5'} heading={true} text1={head} text={para} />
+                  <Textsection  head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a forward-looking real estate developer in Dubai. Empire Lakeview is not only a place to live, but it is a transformative vision brought to life by Empire development. Empire Development reshapes urban life and offers apartments and homes built with modern technology.'} />
+
         </Fadein>
+            <Fadein>
+            <Sectionthree /></Fadein>
         
         <div>
            <Fadein>
@@ -165,7 +168,7 @@ const about = () => {
         </Fadein>
 
         <Fadein>   <Brand />    </Fadein>
-        <Sectionthree />
+    
         
         <Fadein>    <SectionFour images={contactbg} />   </Fadein>
       </div>
