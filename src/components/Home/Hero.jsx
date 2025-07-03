@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
-const LAND_VIDEO_PATH = "/assets/Corporate Slideshow.mp4";
+const LAND_VIDEO_PATH = "/assets/desktop_video.mp4";
 const PORT_VIDEO_PATH = "/assets/mob_video.mp4";
 const POSTER_IMAGE_PATH = "/assets/fallback.png";
 const LOGO_PATH = "/assets/logo2.png";
@@ -49,7 +49,7 @@ export default function Section1() {
   return (
     <section className="w-full h-screen relative overflow-hidden">
       {/* Fallback image - shows immediately and fades out when video loads */}
-      <div className={`absolute inset-0 transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`absolute  inset-0 transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}>
         <Image
           src={POSTER_IMAGE_PATH}
           alt="Background"

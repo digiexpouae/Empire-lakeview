@@ -62,7 +62,7 @@ const amenities = [
  return (
     <>  <div className='hidden md:block relative w-full md:h-screen h-[500px] z-20'>
         <Header />
-      <Heroslider texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-250px] object-cover md:!h-screen !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={overlay} main={true} cloud={cloud}/>
+      <Heroslider  texttwo={'Residence'} textone={'Plazzo'} bottom={'bottom-[-100px] md:!bottom-[-250px] object-cover md:!h-screen !h-[350px] !w-[100%]  xl:!w-[70%] '}  className2={'!top-[23%] md:!top-8'}   className1={'right-0 left-[unset] top-[13%]  lg:top-[15%]   '} main_im={Hero}  overlay={true} main={true} cloud={cloud}/>
       <Image  src={Back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
      </div>
 

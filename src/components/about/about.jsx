@@ -133,6 +133,7 @@ const about = () => {
           className2={'!top-[50%] md:!top-[40%] xl:!top-[35%]'}
           texttwo={'About Us'}
           main={true}
+          overlay={true}
           bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
           cloud={false}
         />
@@ -151,22 +152,25 @@ const about = () => {
         <Fadein>
           <Sectiontext classNamemain={'h-[500px] md:!h-[350px]'} classNameH={'!text-[65px] '} className={'md:!text-[20px] !text-[13px] !leading-5'} heading={true} text1={head} text={para} />
         </Fadein>
-        
+
         <div>
-           <Fadein>
-          <Section />
-        </Fadein>
+          <Fadein>
+            <Section />
+          </Fadein>
         </div>
-       
+
 
         <Fadein>
 
 
         </Fadein>
 
-        <Fadein>   <Brand />    </Fadein>
-        <Sectionthree />
+        <Fadein>
+          <Brand />
+        </Fadein>
         
+        <Sectionthree />
+
         <Fadein>    <SectionFour images={contactbg} />   </Fadein>
       </div>
       <Footer />

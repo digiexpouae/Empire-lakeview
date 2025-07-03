@@ -35,7 +35,7 @@ gsap.fromTo(sliderRef.current, {}, {
   ease: 'none',
   scrollTrigger: {
     trigger: overlay ? introRef.current : containerRef.current,
-  start: 'top top',
+  start: '-=80 top',
     end: () => `+=${ distance }`,
     scrub: true,
     pin: true,
