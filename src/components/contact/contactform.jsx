@@ -19,10 +19,11 @@ const index = () => {
           main={true} 
           cloud={false} 
           Home={false}  
-          className2='z-[999]' 
+          className2='z-[999] md:!top-50' 
           bottom='bottom-[-60px] hidden'  
           className1='left-[40%] top-2 md:top-10' 
-          texttwo='Contact'  
+          texttwoclass={'xl:!text-[160px] !font-bold !font-poppins'}
+          texttwo='Contact us'  
           overlay={true}
         />
         <Image 

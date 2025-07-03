@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.normalizeScroll(true);
 
 // 🔁 Component that gets the map instance safely
-function ZoomOnScroll({ containerRef ,carref,center_position,carcontainer}) {
+function ZoomOnScroll({ containerRef ,carref,center_position}) {
   const map = useMap(); 
     const container = containerRef.current;
 
