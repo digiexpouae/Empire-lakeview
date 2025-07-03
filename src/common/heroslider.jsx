@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useRef } from 'react';
 import Stickyicon from '@/common/stickyicon';
 import Hero from '../../public/assets/heroim2.jpg'
-const heroslider = ({p1,p2,p3,textone,lakeview,texttwo,textthree,main_im,main,im1,im2,overlay,className1,className2,className,className3,bottom,cloud,img,Home}) => {
+const heroslider = ({p1,p2,p3,textone,lakeview,texttwo,textthree,main_im,main,im1,im2,overlay,className1,className2,className,className3,bottom,cloud,img,Home,texttwoclass}) => {
     const boxref=useRef()
     const mm = gsap.matchMedia()
     const box_Two=useRef()
@@ -140,9 +140,9 @@ const child=document.querySelectorAll('.home')
  
 
 
-<div className= {`absolute w-full md:top-auto  flex items-center justify-center top-20 md:!top-30  opacity-0 ${className2}`} ref={text2}> 
+<div className= {`absolute w-full  flex items-center justify-center top-20 md:top-30  opacity-0 ${className2}`} ref={text2}> 
 <div className='w-fit relative'>
-<h1 className='xl:text-[180px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading'>{texttwo}</h1>
+<h1 className={` ${texttwoclass}xl:text-[180px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold my-heading`}>{texttwo}</h1>
 <div className={`absolute right-0 bottom-0 lg:mt-[25px] xl:mt-0 opacity-0 ${className3}`} ref={text3}>
 <span  className='lg:text-[35px] md:text-[30px] xl:text-[50px]  text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>{textthree}</span></div>
 

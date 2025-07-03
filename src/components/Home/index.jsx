@@ -32,7 +32,7 @@ import Hero from './Hero'
 import Section_two from '../../common/section_two';
 import LatestProjectsCarousel from '@/common/latestProjectsCarousel';
 import AdvantagesSection from '@/common/advantage_home'
-
+import Textsection from '../../common/hometext'
 
 const index = () => {
   const [showEmailPop, setShowEmailPop] = useState(false);
@@ -172,13 +172,11 @@ const index = () => {
         <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] md:h-full' width={1200} height={1000} />
       </div> */}
 
-      <Header className='nav-menu absolute z-50 ' />
+      <Header className='nav-menu absolute z-50' />
 
-  
-         <Hero className=""/> 
-      
+      <Hero/>
 
-      <div
+      {/* <div
         style={{
           backgroundColor: '#0E1527',
           backgroundImage: 'url(/assets/b04ad572115c3ef55b1422dbcbd8ed244b4024b6.jpg)',
@@ -191,12 +189,11 @@ const index = () => {
         }}
         className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
-      </div>
-      <div className='w-full '>
-        <LatestProjectsCarousel />
-      </div>
-       
-      <div className='bg-[#0D1028] relative' ref={main}>
+      </div> */}
+        <Textsection  head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a forward-looking real estate developer in Dubai. Empire Lakeview is not only a place to live, but it is a transformative vision brought to life by Empire development. Empire Development reshapes urban life and offers apartments and homes built with modern technology.'} />
+
+  <LatestProjectsCarousel />
+      <div className='bg-[#0E1527] relative' ref={main}>
         {/* <Sectiontwo amenities={amenities} /> */}
 
 
