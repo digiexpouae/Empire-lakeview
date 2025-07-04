@@ -1,14 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image'; // Assuming you're using Next.js
 import Slider from '../components/slider'; // Adjust path as needed
 import Link from 'next/link';
 
 
-const   Section = ({images}) => {
+const Section = ({ images }) => {
+      // Initialize with the first image if available
+      const [currentImage, setCurrentImage] = useState(images?.[0] || {});
+      
+      // Update currentImage when images prop changes
+      useEffect(() => {
+        if (images?.length > 0 && !currentImage?.im) {
+          setCurrentImage(images[0]);
+        }
+      }, [images]);
 
-      const [currentImage, setCurrentImage] = useState(0);
-
-const wrapper=useRef()
+    const wrapper=useRef()
     const arrayOfElements = [
         {
           image: "/assets/4c43da9db2ab4e1a685ad4e0fe8bf4d7420cb786 (3).jpg",
@@ -49,13 +56,16 @@ const wrapper=useRef()
   <div  className='!h-[100vh]  flex items-center justify-center w-full relative' ref={wrapper}  >
     <div className='h-[550px] flex items-center justify-center w-full' >
       <div className="relative h-screen  w-full  "    >
-        <Image
-          src={currentImage.im}
-          alt="Mask3"
-        fill
-         priority
-          className="object-cover " 
-        />
+          {currentImage?.im && (
+            <Image
+              src={currentImage.im}
+              alt={currentImage.tex1 || 'Property Image'}
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+          )}
 
 <div className="overlay absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center w-full bg-[linear-gradient(270deg,rgba(14,21,39,0)_52.53%,rgba(14,21,39,0.9)_80.55%),linear-gradient(0deg,rgba(14,21,39,0.3),rgba(14,21,39,0.3))] z-10" >
      <div className="absolute md:left-20 left-5 z-10 flex flex-col justify-center gap-3 md:w-[600px]">

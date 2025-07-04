@@ -4,7 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-  <meta charSet="utf-8" />
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap&subset=latin" rel="stylesheet" />
+<meta charSet="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="author" content="Empire Development" />
   <meta name="keywords" content="Property for Sale in Dubai, Real Estate Developers in Dubai, Buy Luxury Home in Dubai, Leading Real Estate Developer in UAE" />
@@ -32,7 +35,10 @@ export default function Document() {
   <meta name="twitter:title" content="Property for Sale in Dubai | Real Estate Developers UAE" />
   <meta name="twitter:description" content="Buy luxury homes in Dubai with Empire Development — a leading real estate developer in the UAE offering premium residences and investment properties." />
   <meta name="twitter:image" content="https://empiredevelopments.ae/assets/front_assets/img/logo-white-v2.png" />
-</Head>
+
+
+
+ </Head>
       <body className="antialiased">
         <Main />
         <NextScript />

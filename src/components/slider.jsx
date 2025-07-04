@@ -26,7 +26,7 @@ useEffect(() => {
     const scroll =scrollLength
 
     // Force Swiper to show slide 0 on init
-    swiperInstance.slideTo(1, 0);
+    swiperInstance.slideTo(0, 0);
 
     ScrollTrigger.create({
       trigger: wrapper.current,
@@ -40,17 +40,10 @@ useEffect(() => {
       preventOverlaps:true,
   onUpdate: self => {
   let slideIndex;
-
-  if (self.progress === 0) {
-    // 👇 Default to slide index 1 when no scroll progress
-    slideIndex = 0;
-        swiperInstance.slideTo(slideIndex);
-
-  } else {
+ 
     // Normal behavior
     slideIndex = Math.round(self.progress * (totalSlides - 1));
     {console.log('rounded'+ Math.round(self.progress * (totalSlides - 1)))}
-  }
 
   // Only trigger if index changed
   if (
@@ -93,19 +86,26 @@ useEffect(() => {
       > 
   
           {images.map((img, index) => (
-          <SwiperSlide key={index}   className={`xl:!w-[250px] md:!w-[200px] !w-[130px] !h-[80px] md:!h-full ${index === images.length - 1 ? 'opacity-0 pointer-events-none' : ''}`}
- style={{border:'2px solid white',borderRadius:'10px'}}  >
-            <Image
-              src={img.im}
-              alt={`Slide ${index}`}
-              width={150}
-              height={150}
-              className="object-cover rounded-lg !h-full !w-full"
-            
+            <SwiperSlide
+  key={index}
+  className={`${
+    img.im
+      ? 'xl:!w-[250px] md:!w-[200px] !w-[130px] !h-[80px] md:!h-full'
+      : 'opacity-0 pointer-events-none'
+  }`}
+  style={{ border: '2px solid white', borderRadius: '10px' }}
+>
+  <div className="w-full h-full relative">
+    <Image
+      src={img.im}
+      alt={`Slide ${index}`}
+      fill
+      className="object-cover rounded-lg !h-full !w-full"
+      priority={index === 0}
+    />
+  </div>
+</SwiperSlide>
 
-            />
-            
-          </SwiperSlide>
         ))}
       </Swiper>
     </div>
