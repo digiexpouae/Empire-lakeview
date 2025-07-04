@@ -12,7 +12,7 @@ import SectionThree from './sectionthree'
 import Sectionfour from './sectionfour'
 import Section from '@/common/section'
 import SectionFive from '../../common/section_four'
-import Places from '../../common/places'
+import Places from '../../common/mainplace'
 import Icons from '../../components/icon'
 import DubaiMiracleGarden from '../../../public/miracle.svg';
 import DubaiButterflyGarden from '../../../public/butterfly.svg';
@@ -83,7 +83,12 @@ const image = [
     im: '/assets/bed5.jpg',
     tex1: '3 Bed',
     tex2: 'SIZE: 1,771.01 SQ.FT. TO 1,771.01 SQ.FT.',
-  },
+  },{
+    im: '',
+    tex1:'',
+    tex2:''
+
+  }
 ];
 
 

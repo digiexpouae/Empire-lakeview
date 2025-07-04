@@ -14,7 +14,7 @@ import contactbg from "../../../public/assets/contact.png"
 import SectionFour from '../../common/section_four'
 
 import Sectionfour from '../../common/section'
-import Places from '@/common/places'
+import Places from '@/common/mainplace'
 import BusinessBay from '../../../public/assets/g2589.svg';
 import MallOfTheEmirates from '../../../public/mall of emirates.svg';
 import DubaiHillMall from '../../../public/dubai hill mall.svg';

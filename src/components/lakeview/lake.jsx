@@ -4,7 +4,7 @@ import Header from '@/layout/header'
 import Section_two from './section_two'
 // import Section from '../home/section'
 import Footer from '@/layout/footer'
-import Place from '../../common/places'
+import Mainplace from '../../common/mainplace'
 import mob from "../../../public/assets/Lakeviews_mobile.png"
 import Icon from '../icon'
 import im from '../../../public/assets/sliderlake1.webp'
@@ -137,15 +137,13 @@ const index = () => {
       tex1: 'Duplex',
       tex2: 'Size: 830 SQ.FT',
       link1: '/',
-      link2: '/contact',
+      link2: '/contact'
     },
-    {
-      im: '',
-      tex1: '',
-      tex2: '',
-      link1: '/',
-      link2: '/',
-    }
+   { im: '',
+    tex1:'',
+    tex2:'',
+    link1:'',
+    link2:''}
   ];
   
 
@@ -212,7 +210,7 @@ const index = () => {
         <Sectionthree images={images} onAllVisible={handleAllVisible} />
        
         <Fadein> 
-           <Place markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' />
+           <Mainplace markers={markers} Name={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Main_marker='Empire Lakeviews' />
           <Icon icons={icons} /> </Fadein>
 
         <Fadein>
