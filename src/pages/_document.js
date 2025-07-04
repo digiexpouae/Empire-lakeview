@@ -35,14 +35,10 @@ export default function Document() {
   <meta name="twitter:title" content="Property for Sale in Dubai | Real Estate Developers UAE" />
   <meta name="twitter:description" content="Buy luxury homes in Dubai with Empire Development — a leading real estate developer in the UAE offering premium residences and investment properties." />
   <meta name="twitter:image" content="https://empiredevelopments.ae/assets/front_assets/img/logo-white-v2.png" />
-<<<<<<< HEAD
 
 
 
  </Head>
-=======
-</Head>
->>>>>>> 9b8cdde48dc390493983f67762a61f1ba8c30b8d
       <body className="antialiased">
         <Main />
         <NextScript />
