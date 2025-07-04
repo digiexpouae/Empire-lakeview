@@ -84,7 +84,7 @@ return (
         <a 
           href={links}
 
-        className='button   !py-[5px] !w-[120px] md:!w-[170px] !text-[9px] md:!text-[15px] cursor-pointer flex items-center justify-center'>{btntext}</a>
+        className='button   !py-[5px] !w-[90px] md:!w-[170px] !text-[9px] md:!text-[15px] cursor-pointer flex items-center justify-center'>{btntext}</a>
         }
       </div>
 
@@ -104,7 +104,7 @@ className={`shrink-0 inline-block xl:w-[340px] md:w-[300px] w-[220px] md:h-[400p
        {viewprojects &&
           <div className='absolute left-3 bottom-6 z-40'>
             <h2 className='text-white  text-sm md:text-[23px] font-bold my-heading'>{elem.text}</h2>
-          <a className='button flex items-center justify-center !py-[3px] !w-[120px] !text-[8px] md:!text-[15px]' href={elem.link}>View projects</a>
+          <a className='button flex items-center justify-center !py-[3px] !w-[90px] !text-[8px] md:!text-[15px]' href={elem.link}>View projects</a>
           </div>} 
         </div>
 
