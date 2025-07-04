@@ -84,7 +84,7 @@ return (
         <a 
           href={links}
 
-        className='button   !py-[5px] !w-[120px] md:!w-[170px] !text-[9px] cursor-pointer flex items-center justify-center'>{btntext}</a>
+        className='button   !py-[5px] !w-[120px] md:!w-[170px] !text-[9px] md:!text-[15px] cursor-pointer flex items-center justify-center'>{btntext}</a>
         }
       </div>
 
