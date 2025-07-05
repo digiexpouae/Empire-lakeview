@@ -80,7 +80,7 @@ const Project = () => {
         <LatestProjects/>
 
 
-        <div ref={introRef} className="h-[140vh] md:h-[90vh] xl:h-[120vh] flex flex-col items-center justify-center">
+        <div ref={introRef} className="flex flex-col items-center justify-center">
           <Fadein>
           <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[400px] relative'} />
   
