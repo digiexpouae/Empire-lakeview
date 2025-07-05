@@ -136,6 +136,8 @@ const about = () => {
           overlay={false}
           bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
           cloud={false}
+        texttwoclass={'xl:!text-[120px] lg:!text-[120px]'}
+
         />
         <div className="absolute inset-0 -z-10">
           <Image

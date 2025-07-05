@@ -22,21 +22,29 @@ const SectionThree = () => {
   return (
     <div className='relative md:h-[600px] h-[400px] w-full z-40'>
       {/* Background Image */}
-      <Image
+      
+      <div className='relative z-10 !h-full !w-full object-cover '><Image
         src={Hero}
         alt='Hero Background'
         height={300}
         width={300}
-        className='!h-full !w-full object-cover relative z-10'
+        className='!h-full !w-full object-cover '
       />
-
+</div>
       {/* Overlay */}
-      <div
-        className='absolute inset-0 overlay z-20 flex items-center justify-center'
+      <div 
+        className='absolute inset-0 z-20 flex items-center justify-center pointer-events-none'
         style={{
-        background:`
-  linear-gradient(0deg, rgba(14, 21, 39, 0.8), rgba(14, 21, 39, 0.8)),
-  linear-gradient(180deg, rgba(14, 21, 39, 0) 68.55%, #0E1527 100%);`}}></div>
+          background: `
+            linear-gradient(0deg, rgba(14, 21, 39, 0.8), rgba(14, 21, 39, 0.8)),
+            linear-gradient(180deg, rgba(14, 21, 39, 0) 68.55%, #0E1527 100%)
+          `,
+          WebkitBackground: `
+            -webkit-linear-gradient(0deg, rgba(14, 21, 39, 0.8), rgba(14, 21, 39, 0.8)),
+            -webkit-linear-gradient(180deg, rgba(14, 21, 39, 0) 68.55%, #0E1527 100%)
+          `
+        }}>
+      </div>
 
       {/* Content */}
       <div className='absolute inset-0 flex justify-center items-end md:h-[600px] w-full z-30 leading-2 overflow-hidden'>
