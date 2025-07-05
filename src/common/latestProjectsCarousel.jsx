@@ -63,9 +63,9 @@ const LatestProjects = () => {
     <section ref={containerRef} className="relative h-[300vh] bg-[#0D1028]">
       <div
         ref={stickyRef}
-        className="sticky -top-5 md:-top-20 flex flex-col items-center justify-center px-4 md:pt-0 pt-5 pb-5 overflow-hidden"
+        className="sticky top-0 md:-top-20 flex flex-col items-center justify-center px-4 md:pt-0 pt-5 pb-5 overflow-hidden"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white mt-20 text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mt-20 text-center md:mb-16 mb-5">
           Latest Projects
         </h2>
 
@@ -77,7 +77,7 @@ const LatestProjects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-4 md:p-6 w-[80vw] md:w-[620px] shrink-0 shadow-xl flex flex-col justify-between"
+                className="bg-white rounded-2xl p-4 md:p-6 w-[80vw] md:h-[550px] h-[500px] md:w-[620px] shrink-0 shadow-xl flex flex-col justify-between"
               >
                 <div className="flex justify-between items-center mb-4">
                   <div className="relative w-24 h-24 md:w-32 md:h-32">

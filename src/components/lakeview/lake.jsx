@@ -197,7 +197,7 @@ const index = () => {
       </div>
 
 
-      <div className='bg-[#0E1527]'>
+      <div className='bg-[#0d1028]'>
         <Fadein>
           <div className='md:mt-0'>
             <Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, 

@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import section from '@/components/about/section';
-const introducing = ({Logo,ima,logo,text1,text2,links,className,className1,introRef,btntext,viewprojects,overlay,intro,wrapper }) => {
+const   introducing = ({Logo,ima,logo,text1,text2,links,className,className1,introRef,btntext,viewprojects,overlay,intro,wrapper }) => {
       const containerRef = useRef(null)
   const sliderRef = useRef(null)
   useEffect(() => {
@@ -64,7 +64,7 @@ gsap.fromTo(sliderRef.current, {}, {
    
 return (
 
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'h-[200px] md:!h-[300px]':'!h-[80vh]'} ${className1}  flex items-center  container relative bg-[#0D1028]`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'h-[200px] md:!h-[300px]':'h-[60vh] md:!h-[80vh]'} ${className1}  flex items-center  container relative bg-[#0D1028]`} ref={containerRef}>
     <div className={`inline-flex ${viewprojects ? 'gap-[20px]' :'gap-[30px]'} items-center`}ref={sliderRef}>
       
       {/* Text + Logo Block */}
@@ -92,7 +92,7 @@ return (
       {ima.map((elem, index) => (
         <div
           key={index}
-className={`shrink-0 inline-block xl:w-[340px] md:w-[300px] w-[220px] md:h-[400px] h-[280px] relative ${className}`}
+className={`shrink-0 inline-block xl:w-[380px] md:w-[340px] w-[220px] md:h-[440px] h-[360px] relative ${className}`}
         >
           <Image
             src={elem.im}
