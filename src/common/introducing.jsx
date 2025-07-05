@@ -64,7 +64,7 @@ gsap.fromTo(sliderRef.current, {}, {
    
 return (
 
-  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'h-[200px] md:!h-[300px]':'!h-[100vh]'} ${className1}  flex items-center  container relative`} ref={containerRef}>
+  <div className={`w-full overflow-hidden whitespace-nowrap  px-4 ${overlay?'h-[200px] md:!h-[300px]':'!h-[100vh]'} ${className1}  flex items-center  container relative bg-[#0D1028]`} ref={containerRef}>
     <div className={`inline-flex ${viewprojects ? 'gap-[20px]' :'gap-[30px]'} items-center`}ref={sliderRef}>
       
       {/* Text + Logo Block */}
