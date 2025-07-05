@@ -98,7 +98,7 @@ const BlogPost = ({ blog, error }) => {
       <div className="bg-black md:pt-20 pt-12 text-white min-h-screen">
         {/* Hero Section */}
         <div
-          className="w-full h-[300px] md:h-[500px] bg-cover bg-center flex items-center justify-center relative"
+          className="w-full h-[300px] md:h-[500px] bg-cover bg-center flex items-center justify-center relative "
           style={{
             backgroundImage: Image
               ? `url('${urlFor(Image).width(1920).height(1080).fit('max').auto('format').url()}')` 
@@ -108,16 +108,17 @@ const BlogPost = ({ blog, error }) => {
           }}
         >
           <div className="absolute inset-0 bg-black/60 flex items-center justify-center px-6">
-            <div className="max-w-4xl text-center">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                {title}
-              </h1>
-            </div>
+          
           </div>
         </div>
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-4xl text-center">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                {title}
+              </h1>
+            </div>
         {publishedAt && (
           <p className="text-xs md:text-sm text-gray-500 font-mono mb-6">
             {new Date(publishedAt).toLocaleDateString('en-US', {
