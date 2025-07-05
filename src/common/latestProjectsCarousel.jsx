@@ -63,7 +63,7 @@ const LatestProjects = () => {
     <section ref={containerRef} className="relative h-[300vh] bg-[#0D1028]">
       <div
         ref={stickyRef}
-        className="sticky -top-5 md:-top-20 flex flex-col items-center justify-center px-4 md:pt-0 pt-20 pb-20 overflow-hidden"
+        className="sticky -top-5 md:-top-20 flex flex-col items-center justify-center px-4 md:pt-0 pt-5 pb-5 overflow-hidden"
       >
         <h2 className="text-4xl md:text-6xl font-bold text-white mt-20 text-center mb-16">
           Latest Projects
