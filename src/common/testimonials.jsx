@@ -28,7 +28,7 @@ const testimonials = () => {
   return (
     <div className="w-full py-16 px-4 flex items-center justify-center">
       <div
-        className="rounded-2xl w-full max-w-5xl px-6 py-10 flex items-center justify-center shadow-lg bg-cover bg-center bg-no-repeat"
+        className="rounded-2xl w-full  max-w-5xl px-6 md:px-0 md:py-10 flex items-center justify-center shadow-lg bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/assets/testbg.png')", // replace with your image
         }}
