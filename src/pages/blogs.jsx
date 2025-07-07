@@ -38,7 +38,7 @@ const Blogs = () => {
   return (
     <>
       <Header />
-      <div className="w-full pt-40 mx-auto py-16 px-7 bg-black min-h-screen">
+      <div className="w-full md:pt-40 pt-24 mx-auto py-16 md:py-16 px-7 bg-black min-h-screen">
         <h1 className="text-3xl md:text-5xl font-extrabold text-center text-white md:mb-10 mb-5">BLOGS/NEWS ARTICLES</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {isLoading ? (
