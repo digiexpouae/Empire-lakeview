@@ -19,7 +19,7 @@ const projects = [
     description:
       'Empire Livings is a high-rise project offering elegant studio to 3-bedroom units in the heart of Dubai. A blend of smart tech and premium materials defines modern living here.',
     image: '/assets/slider/living.png',
-    href: '/livings',
+    href: '/EMPliving',
   },
   {
     logo: '/assets/cardlogo2.jpg',
@@ -67,7 +67,7 @@ const LatestProjects = () => {
     <section ref={containerRef} className="relative h-[300vh] bg-[#0D1028]">
       <div
         ref={stickyRef}
-        className="sticky top-0 md:top-5 mb-10 flex flex-col items-center justify-center px-4 md:pt-0 pt-5 pb-5 overflow-hidden"
+        className="sticky top-0 md:top-5 mb-10 md:mb-16 flex flex-col items-center justify-center px-4 md:pt-0 pt-5 pb-5 overflow-hidden"
       >
         <h2 className="text-4xl md:text-6xl font-bold text-white mt-20 text-center md:mb-5 mb-5">
           Latest Projects
