@@ -214,7 +214,7 @@ const index = () => {
         
         <Section />
 
-        <Section_two home={true} head={'24/7 Access'} text={text} amenities={icons} back_image={true} icontext={'md:!text-[20px]'}/>
+        <Section_two home={true} head={'24/7 Access'} text={text} amenities={icons} back_image={true} icontext={'md:!text-[15px]'}/>
         
        
 

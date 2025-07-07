@@ -45,7 +45,7 @@ useEffect(()=>{
           <Image src={About1} className='!h-full !w-full !object-cover rounded-2xl' />
         </div>
         <div className='text-white w-full md:w-[40%] lg:w-[40%] mt-2 mb-4 md:mb-5 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left' ref={ref1}>
-          <h2 className='lg:text-[80px] text-[26px] xs:text-[28px] sm:text-[30px] md:text-[35px] font-bold'>Vision</h2>
+          <h2 className='text-2xl md:text-6xl mb-5 font-bold'>Vision</h2>
           <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-6'>To be a leading force in redefining real estate excellence by creating iconic, sustainable communities that inspire modern living.</span>
         </div>
       </motion.div>
@@ -58,7 +58,7 @@ useEffect(()=>{
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className='w-full md:w-[40%] lg:w-[40%] text-white order-2 md:order-1 mt-2 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left' ref={ref2}>
-          <h2 className='lg:text-[80px] text-[26px] xs:text-[28px] sm:text-[30px] md:text-[35px] font-bold'>Mision</h2>
+          <h2 className='text-2xl md:text-6xl mb-5 font-bold'>Mision</h2>
           <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-6'>To deliver innovative, high-quality developments that exceed expectations, enrich lifestyles, and build long-term value for our clients, partners, and communities.</span>
         </div>
         <div className='relative h-[180px] xs:h-[200px] sm:h-[220px] md:h-[300px] md:w-[50%] lg:w-[40%] w-full z-20 order-1 md:order-2'>

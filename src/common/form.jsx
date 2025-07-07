@@ -67,7 +67,7 @@ const form = ({ className, ref }) => {
       style={{ background: "transparent" }}
     >
       <div className="bg-[#0E1527CC]/50 backdrop-blur-sm rounded-xl p-4 sm:p-8 md:p-12 w-full max-w-4xl text-white flex flex-col justify-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">Fill the Form</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">Talk to our Experts</h2>
         <form
           className="grid grid-cols-2 md:grid-cols-1 gap-4"
           onSubmit={handleSubmit}
