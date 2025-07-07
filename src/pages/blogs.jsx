@@ -39,8 +39,7 @@ const Blogs = () => {
     <>
       <Header />
       <div className="w-full pt-40 mx-auto py-16 px-7 bg-black min-h-screen">
-        <h1 className="text-5xl font-extrabold text-center text-white mb-4">Accomplish more, Together</h1>
-        <p className="text-center text-gray-300 text-lg mb-12">Softuch blog is your knowledge center for everything remote.</p>
+        <h1 className="text-3xl md:text-5xl font-extrabold text-center text-white md:mb-10 mb-5">BLOGS/NEWS ARTICLES</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {isLoading ? (
             <div className="col-span-3 text-center text-white">Loading blogs...</div>
@@ -50,7 +49,7 @@ const Blogs = () => {
             blogs.map((blog) => (
               <Link key={blog.slug} href={`/blogs/${blog.slug}`} className="group">
                 <div className="bg-[#23262F] rounded-3xl shadow-md overflow-hidden flex flex-col h-full transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl border border-[#23262F] hover:border-[#CCAB64]">
-                  <div className="h-56 w-full overflow-hidden bg-gray-800 flex items-center justify-center">
+                  <div className="md:h-full h-full w-full overflow-hidden bg-gray-800 flex items-center justify-center">
                     {blog.Image ? (
                       <img 
                         src={urlFor(blog.Image).url()} 

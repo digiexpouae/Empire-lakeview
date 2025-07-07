@@ -105,7 +105,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                   amenities={amenities}
                   iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
                   className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8 lg:gap-36'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
-                  ref={ref3}
+                  
                 />
               </div>
             </div>
