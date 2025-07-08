@@ -99,7 +99,7 @@ const carWrapperRef=useRef(null)
               >
                 <div className="w-[15px] h-[15px] bg-white rounded-full"></div>
                 {index ==0 ?    <div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
-                  {Main_marker}
+                  {Name}
                 </div>
                 :<div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
                   {elem.name}

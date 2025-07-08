@@ -145,7 +145,7 @@ const para5="Empire Development has built Empire Lakeview with high-quality mate
     <Sectionfour images={images} slide={4} />
   </Fadein>
 
-    <Places center_position={[25.114806, 55.364444]} Name={'Empire Livings'} markers={markers} Main_marker={<>Empire <br /> Living </>}/>
+    <Places center_position={[25.114806, 55.364444]} Main_marker={'Empire Livings'} markers={markers} Name={<>Empire <br /> Living </>}/>
 
   <Fadein>
   <Fadein>  <Icon icons={icons} /></Fadein>
