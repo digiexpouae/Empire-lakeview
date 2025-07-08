@@ -92,7 +92,7 @@ return (
       {ima.map((elem, index) => (
         <div
           key={index}
-className={`shrink-0 inline-block xl:w-[380px] md:w-[340px] w-[220px] md:h-[550px] h-[450px] relative ${className}`}
+className={`shrink-0 inline-block xl:w-[380px] md:w-[340px] w-[220px] md:h-[450px] h-[450px] relative ${className}`}
         >
           <Image
             src={elem.im}
