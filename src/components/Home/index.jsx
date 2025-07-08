@@ -3,6 +3,12 @@ import Heroslider from '../../common/heroslider'
 import EmailPop from '../../common/emailpop'
 import { useState, useEffect } from 'react'
 import Header from '@/layout/header'
+import dynamic from 'next/dynamic';
+
+// Dynamically import ChatWidget with no SSR to avoid window is not defined errors
+const ChatWidget = dynamic(() => import('@/components/ChatWidget/ChatWidget'), {
+  ssr: false,
+});
 import Sectionthree from '../../common/sectionthree'
 import ima1 from '../../../public/assets/d3cffac39c025499b5d643c23941091538a28358.png';
 import ima2 from '../../../public/assets/896f9f592b964d92926d050a82ffdf7c0cc52923.jpg';
@@ -223,6 +229,9 @@ const index = () => {
       <SectionFour images={contactbg} />
 
       <Footer />
+      
+      {/* Chat Widget */}
+      <ChatWidget />
     </>
   )
 }
