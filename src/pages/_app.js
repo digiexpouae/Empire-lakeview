@@ -2,6 +2,13 @@ import "@/styles/globals.css";
 import 'leaflet/dist/leaflet.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
+import Conversation from '../components/VoiceChat'
+
+// Dynamically import ChatWidget with no SSR to avoid window is not defined errors
+const ChatWidget = dynamic(() => import('@/components/ChatWidget/ChatWidget'), {
+  ssr: false,
+});
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -16,6 +23,9 @@ export default function App({ Component, pageProps }) {
         style={{ minHeight: '100vh' }}
       >
         <Component {...pageProps} />
+        {/* Chat Widget - Available on all pages */}
+        <Conversation />
+        <ChatWidget />
       </motion.div>
     </AnimatePresence>
   );

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@elevenlabs/react": "^0.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@lottiefiles/react-lottie-player": "^3.6.0",
@@ -20,6 +21,7 @@
     "@sanity/vision": "^3.95.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "elevenlabs": "^1.59.0",
     "framer-motion": "^12.22.0",
     "gsap": "^3.12.7",
     "leaflet": "^1.9.4",
