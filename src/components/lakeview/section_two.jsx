@@ -12,7 +12,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
   const ref3 = useRef();
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2
+    threshold: 0
   });
 
   useEffect(() => {
@@ -32,8 +32,8 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
             {
             opacity: 1,
             y: 0,
-            duration: 0.5,
-            stagger: { each: 0.5, ease: "power1.out" },
+            duration: 0.3,
+            stagger: { each: 0.1, ease: "power1.out" },
           });
       }
     } catch (err) {

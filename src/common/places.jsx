@@ -1,7 +1,7 @@
 
 import React, {  useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
-import car from '../../public/assets/car1.png'
+import car from '../../public/assets/car.png'
 
 
 

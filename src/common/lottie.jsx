@@ -9,8 +9,8 @@ const lottie = ({amenities,className,className1,ref,className2,iconsize}) => {
          {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
-                  className={ `text-center flex flex-col items-center justify-center animate-fade-up-delayed  md:h-[100px] gap-[10px] ${className} `}
-                //   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+                  className={ `text-center flex flex-col items-center justify-center md:h-[100px] gap-[10px] ${className} `}
+               
                 >
 <Lottie animationData={amenity.icon} loop={true}  className= {`lg:h-[60px] lg:w-[60px] h-[60%] ${iconsize}`}/>               
                   <p className={`  text-[5px] md:text-[20px] font-light my-heading h-[40%] ${className2}`}>

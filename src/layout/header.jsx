@@ -92,7 +92,7 @@ const Header = () => {
               >
                 <a
                   href={elem.link}
-                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-xs lg:text-base"
+                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm"
                 >
                   {elem.name}
                 </a>
@@ -151,7 +151,7 @@ const Header = () => {
             <motion.a
               href="/contact"
               variants={fadeUp}
-              className="bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#FFF3DC] text-gray-800 px-4 lg:px-6 py-2 rounded-full transition-colors duration-300 transform text-sm lg:text-base whitespace-nowrap"
+              className="bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#FFF3DC] text-gray-800 px-4 lg:px-6 py-2 rounded-full transition-colors duration-300 transform text-sm  whitespace-nowrap"
             >
               Contact Us
             </motion.a>
@@ -161,7 +161,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               variants={fadeUp}
-              className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 lg:px-6 py-2 rounded-full transition-all duration-300 transform text-sm lg:text-base whitespace-nowrap"
+              className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 lg:px-6 py-2 rounded-full transition-all duration-300 transform text-sm  whitespace-nowrap"
             >
               Login / Register
             </motion.a>

@@ -47,7 +47,7 @@ export default function Section1() {
   };
 
   return (
-    <section className="w-full h-screen relative overflow-hidden">
+    <section className="w-full pt-20 h-screen relative overflow-hidden">
       {/* Fallback image - shows immediately and fades out when video loads */}
       <div className={`absolute  inset-0 transition-opacity duration-500 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}>
         <Image
@@ -64,7 +64,7 @@ export default function Section1() {
         <video
           ref={videoRef}
           key={videoSrc}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 top-20 w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           playsInline
           autoPlay
           muted

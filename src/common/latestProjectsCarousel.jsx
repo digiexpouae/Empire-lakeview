@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -9,21 +10,24 @@ const projects = [
     location: 'LIWAN',
     description:
       'Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom apartments, & 3-bedroom duplexes, with many units featuring private pools.',
-    image: '/assets/slider1.webp',
+    image: '/assets/slider/lakeview.png',
+    href: '/lakeviews',
   },
   {
     logo: '/assets/cardlogo3.png',
     location: 'DUBAI',
     description:
       'Empire Livings is a high-rise project offering elegant studio to 3-bedroom units in the heart of Dubai. A blend of smart tech and premium materials defines modern living here.',
-    image: '/assets/slider1.webp',
+    image: '/assets/slider/living.png',
+    href: '/EMPliving',
   },
   {
     logo: '/assets/cardlogo2.jpg',
     location: 'JVC',
     description:
       'Empire Heights is an upcoming luxury tower in Jumeirah Village Circle with rooftop pools, duplex penthouses, and stunning skyline views. Ideal for investors and families alike.',
-    image: '/assets/slider1.webp',
+    image: '/assets/slider/estate.png',
+    href: '/EMPEstates',
   },
 ];
 
@@ -63,9 +67,9 @@ const LatestProjects = () => {
     <section ref={containerRef} className="relative h-[300vh] bg-[#0D1028]">
       <div
         ref={stickyRef}
-        className="sticky -top-5 md:-top-20 flex flex-col items-center justify-center px-4 md:pt-0 pt-20 pb-20 overflow-hidden"
+        className="sticky top-0 md:top-5 mb-10 md:mb-16 flex flex-col items-center justify-center px-4 md:pt-0 pt-5 pb-5 overflow-hidden"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white mt-20 text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mt-20 text-center md:mb-5 mb-5">
           Latest Projects
         </h2>
 
@@ -77,7 +81,7 @@ const LatestProjects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-4 md:p-6 w-[80vw] md:w-[620px] shrink-0 shadow-xl flex flex-col justify-between"
+                className="bg-white rounded-2xl p-4 md:p-6 w-[80vw] md:h-[500px] h-[500px] md:w-[620px] shrink-0 shadow-xl flex flex-col justify-start"
               >
                 <div className="flex justify-between items-center mb-4">
                   <div className="relative w-24 h-24 md:w-32 md:h-32">
@@ -88,9 +92,11 @@ const LatestProjects = () => {
                       className="object-contain"
                     />
                   </div>
-                  <button className="px-3 py-2 md:px-4 md:py-2 bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] text-black text-sm rounded-full font-semibold hover:scale-105 transition whitespace-nowrap">
-                    View Project
-                  </button>
+                  <Link href={project.href} passHref legacyBehavior>
+                    <a className="px-3 py-2 md:px-4 md:py-2 bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] text-black text-sm rounded-full font-semibold hover:scale-105 transition whitespace-nowrap" target="_self">
+                      View Project
+                    </a>
+                  </Link>
                 </div>
 
                 <p className="text-sm text-gray-700 leading-relaxed mb-5">

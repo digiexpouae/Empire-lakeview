@@ -1,14 +1,4 @@
 import React from 'react'
-import swan from '../../public/assets/swan.png'
-import horse from '../../public/assets/horse.png'
-import mall from '../../public/assets/mall (1).png'
-import opera from '../../public/assets/opera.png'
-import palm from '../../public/assets/palm jumariah.png'
-import buildin from '../../public/assets/buildin.png'
-import dubaiframe from '../../public/assets/dubai frame.png'
-import plane from '../../public/assets/plane.png'
-import burj from '../../public/assets/burj-khalifa (1) (1).png'
-import bay from '../../public/assets/bay.png'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
