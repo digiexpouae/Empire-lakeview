@@ -8,6 +8,7 @@ const VoiceChat = () => {
   const [hasPermission, setHasPermission] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [textInput, setTextInput] = useState('');
 
   const conversation = useConversation({
     onConnect: () => {
@@ -71,6 +72,17 @@ const VoiceChat = () => {
     }
   };
 
+  const handleSendText = async () => {
+    try {
+      console.log('Sending text:', textInput);
+      await conversation.sendText(textInput);
+      setTextInput('');
+    } catch (error) {
+      console.error('sendText failed:', error);
+      setErrorMessage(error?.message || 'Failed to send message');
+    }
+  };
+  
   return (
     <div className="border rounded-lg shadow p-4 w-full max-w-md mx-auto bg-white">
       <div className="flex items-center justify-between mb-4">
@@ -106,6 +118,25 @@ const VoiceChat = () => {
           </button>
         )}
       </div>
+
+      {status === 'connected' && (
+        <div className="mb-4">
+          <textarea
+            value={textInput}
+            onChange={(e) => setTextInput(e.target.value)}
+            placeholder="Type your message..."
+            className="w-full p-2 border rounded mb-2"
+            rows={3}
+          />
+          <button
+            onClick={handleSendText}
+            disabled={!textInput.trim()}
+            className="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 disabled:opacity-50"
+          >
+            Send
+          </button>
+        </div>
+      )}
 
       <div className="text-center text-sm space-y-1">
         {status === 'connected' && (

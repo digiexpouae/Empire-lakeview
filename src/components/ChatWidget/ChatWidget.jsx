@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import bot from '../../../public/assets/Union.png'
+import bot from '../../../public/assets/Union.png';
+import { useConversation } from '@elevenlabs/react';
+import { Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
 const ChatWidget = () => {
   const [isFirstModalOpen, setIsFirstModalOpen] = useState(false);
   const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
@@ -18,11 +20,115 @@ const ChatWidget = () => {
     }));
   };
 
+  const [formErrors, setFormErrors] = useState({});
+
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.name.trim()) errors.name = 'Name is required';
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = 'Email is invalid';
+    }
+    if (!formData.phone.trim()) {
+      errors.phone = 'Phone number is required';
+    } else if (!/^\d+$/.test(formData.phone)) {
+      errors.phone = 'Phone number should contain only numbers';
+    }
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const [conversationState, setConversationState] = useState({
+    status: 'disconnected',
+    isSpeaking: false,
+    hasPermission: false,
+    isMuted: false,
+    errorMessage: '',
+    isListening: false // Track if we're actively listening
+  });
+
+  const conversation = useConversation({
+    onConnect: () => {
+      console.log('Connected to ElevenLabs');
+      setConversationState(prev => ({ ...prev, status: 'connected', errorMessage: '' }));
+    },
+    onDisconnect: () => {
+      console.log('Disconnected from ElevenLabs');
+      setConversationState(prev => ({ ...prev, status: 'disconnected' }));
+    },
+    onMessage: (message) => {
+      console.log('Received message:', message);
+    },
+    onError: (error) => {
+      const errorMessage = error?.message || 'An error occurred with the voice service';
+      console.error('ElevenLabs Error:', error);
+      setConversationState(prev => ({ ...prev, errorMessage }));
+    },
+  });
+
+  useEffect(() => {
+    const requestMicPermission = async () => {
+      try {
+        await navigator.mediaDevices.getUserMedia({ audio: true });
+        setConversationState(prev => ({ ...prev, hasPermission: true }));
+      } catch (error) {
+        console.error('Error accessing microphone:', error);
+        setConversationState(prev => ({
+          ...prev,
+          hasPermission: false,
+          errorMessage: 'Microphone access denied'
+        }));
+      }
+    };
+
+    requestMicPermission();
+  }, []);
+
+  const toggleConversation = async () => {
+    try {
+      if (conversationState.status === 'connected' && conversationState.isListening) {
+        // Stop listening but keep the connection alive
+        setConversationState(prev => ({ ...prev, isListening: false }));
+      } else if (conversationState.status === 'connected') {
+        // Already connected, just toggle listening state
+        setConversationState(prev => ({ ...prev, isListening: true }));
+      } else {
+        // Not connected yet, start a new session
+        await conversation.startSession({
+          agentId: process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID,
+        });
+        setConversationState(prev => ({ ...prev, isListening: true }));
+      }
+    } catch (error) {
+      console.error('Error toggling conversation:', error);
+      setConversationState(prev => ({
+        ...prev,
+        errorMessage: error?.message || 'Failed to toggle conversation'
+      }));
+    }
+  };
+
+  const handleImageClick = (e) => {
+    e.stopPropagation(); // Prevent modal from closing
+    toggleConversation();
+  };
+
+  // Clean up on unmount
+  useEffect(() => {
+    return () => {
+      if (conversationState.status === 'connected') {
+        conversation.endSession().catch(console.error);
+      }
+    };
+  }, []);
+
   const handleFirstModalSubmit = (e) => {
     e.preventDefault();
-    // Here you can add form validation
-    setIsFirstModalOpen(false);
-    setIsSecondModalOpen(true);
+    if (validateForm()) {
+      setIsFirstModalOpen(false);
+      setIsSecondModalOpen(true);
+    }
   };
 
   const handleChatSubmit = (e) => {
@@ -123,23 +229,69 @@ const ChatWidget = () => {
         </div>
       )}
 
-      {/* Second Modal - Chat Interface */}
+      {/* Second Modal - Chat Interface with Voice */}
       {isSecondModalOpen && (
         <div className="modal-overlay" onClick={() => setIsSecondModalOpen(false)}>
           <div className="modal-content chat-modal" onClick={e => e.stopPropagation()}>
-            <button className="close-button" onClick={() => setIsSecondModalOpen(false)}>×</button>
-            <div className="modal-logo">
-              <img src="/assets/aibot2.png" alt="AI Assistant" />
+            <div className="flex justify-between items-center mb-4">
+              <div 
+                className={`modal-logo cursor-pointer transform transition-transform duration-200 hover:scale-110 ${conversationState.isListening ? 'animate-pulse' : ''}`}
+                onClick={handleImageClick}
+                title={conversationState.isListening ? 'Click to stop' : 'Click to start speaking'}
+              >
+                <img 
+                  src="/assets/aibot2.png" 
+                  alt="AI Assistant" 
+                  className={`w-12 h-12 ${conversationState.isListening ? 'ring-2 ring-purple-500 rounded-full' : ''}`} 
+                />
+                {conversationState.isListening && (
+                  <div className="absolute -top-1 -right-1 bg-red-500 rounded-full w-3 h-3 animate-ping"></div>
+                )}
+              </div>
+              <div className="flex items-center gap-4">
+              <div 
+                className={`p-2 rounded-full ${conversationState.isListening ? 'bg-red-500' : 'bg-green-500'} text-white transition-colors duration-200`}
+              >
+                {conversationState.isListening ? (
+                  <MicOff className="w-5 h-5" />
+                ) : (
+                  <Mic className="w-5 h-5" />
+                )}
+              </div>
+              
+              {conversationState.status === 'connected' && (
+                <div className="flex items-center text-sm">
+                  <span className={`relative flex h-2 w-2 mr-1 ${conversationState.isListening ? 'text-green-500' : 'text-gray-400'}`}>
+                    <span className={`absolute inline-flex h-full w-full rounded-full ${conversationState.isListening ? 'bg-green-400' : 'bg-gray-400'} opacity-75`}></span>
+                    <span className={`relative inline-flex rounded-full h-2 w-2 ${conversationState.isListening ? 'bg-green-500' : 'bg-gray-500'}`}></span>
+                  </span>
+                  {conversationState.isListening ? 'Listening...' : 'Paused'}
+                </div>
+              )}
+              
+              <button 
+                onClick={() => setIsSecondModalOpen(false)}
+                className="close-button ml-2"
+              >
+                ×
+              </button>
+              </div>
             </div>
-            <h2>Ask whatever you want</h2>
-            <form onSubmit={handleChatSubmit} className="chat-form">
-              <textarea 
-                placeholder="Type your message here..."
-                className="chat-input"
-                rows="4"
-              />
-              <button type="submit" className="submit-button">Send</button>
-            </form>
+            <h2 className="text-xl font-semibold mb-4">
+              {conversationState.isListening ? 'Speak now...' : 'Click the mic to start'}
+            </h2>
+            
+            {/* Status Messages */}
+            {!conversationState.hasPermission && (
+              <div className="text-yellow-600 text-sm mb-4 p-2 bg-yellow-50 rounded">
+                Please allow microphone access to use voice chat
+              </div>
+            )}
+            {conversationState.errorMessage && (
+              <div className="text-red-500 text-sm mb-4 p-2 bg-red-50 rounded">
+                {conversationState.errorMessage}
+              </div>
+            )}
           </div>
         </div>
       )}
