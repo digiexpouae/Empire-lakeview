@@ -157,7 +157,7 @@ const ChatWidget = () => {
                 height={24}
               />
             </div>
-      <div className='flex'><div><Image  src={bot} /></div>  <span className="chat-widget-text">Let's Talk</span></div></div>
+      <div className='flex items-center'><div><Image  src={bot} /></div>  <span className="chat-widget-text">Let's Talk</span></div></div>
       </div>
 
       {/* First Modal - Contact Form */}
