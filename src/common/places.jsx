@@ -61,9 +61,14 @@ useEffect(() => {
 
   const swipperRef=useRef(null)
 const [activeIndex, setactiveIndex] = useState(0)
-const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl','w-[15px] h-[15px] absolute left-[40%] z-20 bg-white rounded-2xl',
-  'w-[15px] h-[15px] absolute left-[60%]  z-20 bg-white rounded-2xl',
-  'w-[15px] h-[15px] absolute left-[80%] z-20 bg-white rounded-2xl'
+// const styles=['w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl','w-[15px] h-[15px] absolute left-[40%] z-20 bg-white rounded-2xl',
+//   'w-[15px] h-[15px] absolute left-[60%]  z-20 bg-white rounded-2xl',
+//   'w-[15px] h-[15px] absolute left-[80%] z-20 bg-white rounded-2xl'
+// ]
+const styles=[{name:<>Empire <br />Lakeviews</> ,style:'w-[15px] h-[15px] absolute left-[20%] z-20 bg-white rounded-2xl'},
+  {name:<>5-10 <br /> minutes</> ,style:'w-[15px] h-[15px] absolute left-[40%] z-20 bg-white rounded-2xl'},
+  {name:<>20 <br /> minutes</> ,style:'w-[15px] h-[15px] absolute left-[60%]  z-20 bg-white rounded-2xl'},
+  {name:<>25 <br /> minutes</> ,style:'w-[15px] h-[15px] absolute left-[80%] z-20 bg-white rounded-2xl'}
 ]
   const movingRef=useRef(null)
 const carWrapperRef=useRef(null)
@@ -79,43 +84,43 @@ const carWrapperRef=useRef(null)
 
 
 
- return(
- <div className=' bg-[#0E1527] w-full md:pt-24 pt-20  text-white !h-[95vh]'  ref={sectionref}>
-      <div className='flex flex-col items-center justify-center gap-[100px]  w-full lg:mt-[20px] mt-[50px] ' >
-        <div className='flex flex-col items-center justify-center w-full ' >
-         <div ref={carWrapperRef} className=" relative w-full">
-
-        <div className="flex items-center justify-center w-full">
-        <hr className="border border-white w-[100%] relative  " />
-       
-        {styles.map((elem,index)=>{
-          return( 
-          <span key={index} onClick={()=>setactiveIndex(index)} className={`${elem} dot cursor-pointer`}>
-             {index == 0 &&
-          <div className='py-8 my-heading text-[10px] md:text-[17px] flex items-center text-center'>{Main_marker}</div>}
-          </span>
-    
-        
-        )
+      return(
+        <div className='  w-full md:pt-24 pt-20  text-white h-[100vh] mb-40'  ref={sectionref}>
+        <div className='flex flex-col items-center justify-center gap-[100px]  w-full lg:mt-[20px] mt-[50px] ' >
+          <div className='flex flex-col items-center justify-center w-full ' >
   
-      })
-        }
-    {console.log(activeIndex)}
-
-
-
+          <div className="relative w-full h-10 flex items-center">
+            <hr className="border-t border-white w-full absolute" />
+            {styles.map((elem, index) => (
+              <div 
+                key={index} 
+                className="absolute flex flex-col items-center " 
+                style={{ left: `${20 + index * 20}%`, transform: 'translate(-50%, 35%)' }}
+              >
+                <div className="w-[15px] h-[15px] bg-white rounded-full"></div>
+                {index ==0 ?    <div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
+                  {Main_marker}
+                </div>
+                :<div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
+                  {elem.name}
+                </div>}
+              </div>
+            ))}
+      {console.log(activeIndex)}
+  
+  
+  
     <div ref={movingRef} className='md:!w-[137px] !w-[62px] !h-[50px] md:!h-[92px] absolute left-[20%] rotate-180 z-30'><Image src={car} objectFit='cover' fill  className='transition-transform duration-700 ease-in-out'/>
-    </div></div>
-          </div> 
-          </div>
-        <div className='w-[100%]   mb-10 relative'>
-           <Map  className={'z-50'} carcontainer={carWrapperRef} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
-           
-            {/* <Slider images={im} delay={4000} slidesize={'xl:!h-[550px] lg:!h-[450px] md:!h-[300px] !w-[75vw] !h-[200px]  '}  activeIndex={activeIndex} slide={'md:!w-full md:!h-full !w-full !h-full'} num={1} /> */}
-        </div></div>
-      </div>
-
-  )
-}
-
-export default places
+    </div>
+            </div> 
+            </div>
+          <div className='w-[100%]   mb-10 relative'>
+             <Map  className={'z-50'} carcontainer={sectionref} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
+             
+          </div></div>
+        </div>
+       
+         )
+       }
+       
+       export default places
