@@ -126,7 +126,7 @@ const para5= "The Empire development team has committed to sustainability. This 
             <SectionThree />
             <Sectionfour />
             <Section images={image} />
-            <Places Name={'Empire Estates'}  markers={markers} center_position={[25.0631, 55.2471]} Main_marker={<>Empire <br /> Estates</>} />
+            <Places Main_marker={'Empire Estates'}  markers={markers} center_position={[25.0631, 55.2471]} Name={<>Empire <br /> Estates</>} />
             <Icons icons={icons}/>      
              
              <SectionFour images={contactbg} />
