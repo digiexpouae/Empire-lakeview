@@ -194,12 +194,24 @@ const ChatWidget = () => {
               <div className="form-group">
                 <div className="flex gap-1 w-full">
                   <select 
-                    className="country-code flex-1 min-w-[80px] bg-[#FFFFFF33] text-white border border-[rgba(255,255,255,0.1)] rounded-lg px-2 py-2 focus:outline-none focus:ring-2 focus:ring-[#4a90e2] focus:border-transparent"
+                    className="country-code  min-w-[80px] bg-[#FFFFFF33] text-white border border-[rgba(255,255,255,0.1)] rounded-lg px-1 py-2 focus:outline-none focus:ring-2 focus:ring-[#4a90e2] focus:border-transparent"
                     style={{ WebkitAppearance: 'none' }}
                   >
-                    <option value="+971" className="text-black">+971</option>
-                    <option value="+1" className="text-black">+1</option>
-                    <option value="+91" className="text-black">+91</option>
+                  <option value="+971" className="text-black"> +971</option>
+<option value="+92" className="text-black">  +92 </option>
+<option value="+91" className="text-black">  +91 </option>
+<option value="+966" className="text-black"> +966 </option>
+<option value="+965" className="text-black"> +965 </option>
+<option value="+974" className="text-black"> +974 </option>
+<option value="+968" className="text-black"> +968 </option>
+<option value="+973" className="text-black"> +973 </option>
+<option value="+880" className="text-black"> +880 </option>
+<option value="+20" className="text-black">  +20 </option>
+<option value="+60" className="text-black">  +60 </option>
+<option value="+63" className="text-black">  +63 </option>
+<option value="+62" className="text-black">  +62 </option>
+<option value="+65" className="text-black">  +65 </option>
+
                   </select>
                   <input
                     type="tel"
