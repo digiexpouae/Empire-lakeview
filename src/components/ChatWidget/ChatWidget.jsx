@@ -139,6 +139,7 @@ const ChatWidget = () => {
 
   return (
     <>
+    {/*chat */}
       {/* Floating Button with CSS Golden Border */}
       <div className="chat-widget" onClick={() => setIsFirstModalOpen(true)}>
         <div className="chat-widget-icon">
