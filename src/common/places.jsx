@@ -25,7 +25,7 @@ useEffect(() => {
     if (!movingRef.current || !sectionref.current) return;
 
    // First, set the initial position
-   gsapModule.gsap.set(movingRef.current, { left: '20%' });
+   gsapModule.gsap.set(movingRef.current, { left: '17%' });
    
    // Then create the animation that will be controlled by ScrollTrigger
    ctx = gsapModule.gsap.context(() => {
@@ -35,12 +35,12 @@ useEffect(() => {
        scrollTrigger: {
          trigger: sectionref.current,
          start: 'top top',  // Start when top of element is 80% from top of viewport
-         end: 'bottom 20%',  // End when bottom of element is 20% from top of viewport
+         end: '+=1500',  // End when bottom of element is 20% from top of viewport
          scrub: 1,
       
          onEnter: () => {
            // Ensure car is at start position when entering the trigger
-           gsapModule.gsap.set(movingRef.current, { left: '20%' });
+           gsapModule.gsap.set(movingRef.current, { left: '17%' });
          },
          onLeaveBack: () => {
            // Reset to start position when scrolling back past the trigger
@@ -104,7 +104,7 @@ const carWrapperRef=useRef(null)
 
 
 
-    <div ref={movingRef} className='md:!w-[127px] !w-[62px] !h-[50px] md:!h-[72px] absolute left-[20%] rotate-180 z-30'><Image src={car} objectFit='cover' fill  className='transition-transform duration-700 ease-in-out'/>
+    <div ref={movingRef} className='md:!w-[137px] !w-[62px] !h-[50px] md:!h-[92px] absolute left-[20%] rotate-180 z-30'><Image src={car} objectFit='cover' fill  className='transition-transform duration-700 ease-in-out'/>
     </div></div>
           </div> 
           </div>
