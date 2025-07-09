@@ -46,7 +46,7 @@ const empire = () => {
 
   ]
 
-  const textpara = 'Plazzo Heights is a six-storey residential building located in Jumeirah Village Circle (JVC), Dubai. Developed by Plazzo Development Real Estate, it offers studios, 1, and 2-bedroom apartments with modern amenities.'
+  const textpara = "Empire Development's luxury apartments in JVC have large windows, open layouts, and modern finishes. These contemporary apartments Dubai are made for people who value harmony and elegance. Empire Development's architecture is both eco-friendly and beautiful. It’s perfect for anyone wanting to invest in Dubai real estate. Everything from energy-saving technologies to rooftop gardens supports a better way of life."
   const head = 'Live wisely at Empire Residence JVC'
   const para = "Empire Residence (JVC)  by Empire Development's modern design meets daily comfort. Empire Development's stylish homes have large windows, open layouts, and sleek finishes are made for people who value harmony and elegance. Ideal for those looking to invest in Dubai real estate."
   const head2 = 'Comfort Meets Smart Living'
@@ -81,7 +81,7 @@ const empire = () => {
         </div>
 
        <div className='bg-[#0E1527]'>
-      <SectionTwo amenities={amenities} textpara={textpara}/>
+      <SectionTwo amenities={amenities} textpara={textpara} classNameproject={'mb-20'}/>
  
         <Sectionthree />
 

@@ -2,15 +2,16 @@ import React from 'react'
 import empire from '../../../public/assets/buildin.jpg'
 import Image from 'next/image'
 const sectiontwo = () => {
-    const textpara="Empire Livings by Empire Developments is a 15-storey residential tower in Dubai Science Park, featuring 202 units comprising studios, 1-bedroom apartments, and duplexes, with select units offering private pools. Residents enjoy amenities such as a swimming pool, gym, sauna, steam room, yoga space, outdoor cinema, co-working areas, and a children's play area. The development also includes a rooftop solar park, Zen garden, walking track, and BBQ area. Empire Livings is scheduled for completion in Q2 2027."
+    const textpara="Empire Development offers apartments for sale in Dubai in Jumeirah Village. This prime location makes life easier. It also offers great opportunities for real estate investment in Dubai. Empire Development apartments are ideal for anyone seeking a spacious and stylish home. These apartments also feature modern tech automation. It’s a great chance to buy luxury homes in Dubai. "
   return (
     <div className=' mb-10 h-[900px] md:h-[700px] w-full flex   justify-center'>
         <div className='flex md:flex-row flex-col w-[90%] md:w-[70%]   items-center justify-center  md:gap-[20px]' >
          <div className=" w-[90%] md:w-[60%] h-[450px]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start h-[300px] lg:h-[400px] gap-4" >
                <div 
-            className="w-full  text-black p-x-8 flex  md:items-start items-center justify-start xl:h-[280px] animate-slide-left"
+            className="w-full  text-black p-x-8 flex  md:items-start items-center justify-start xl:h-[122px] animate-slide-left"
         >
-            <h2 className="text-[30px] lg:text-[100px] sm:text-5xl my-heading font-bold tracking-tighter text-white">
+            <h2 className="text-[30px] lg:text-[80px] sm:text-5xl my-heading font-bold tracking-tighter text-white">
+              
               Overview
             </h2>
           </div>

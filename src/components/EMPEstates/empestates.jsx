@@ -24,7 +24,7 @@ import BurjKhalifa from '../../../public/burj.svg';
 import DubaiMarinaMall from '../../../public/dubai marina mall.svg';
 import mob from "../../../public/assets/empireestate_mobile.png"
 
-
+import Text from '../../common/section_text' 
 
 
 

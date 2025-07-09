@@ -72,8 +72,8 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
 
 
         <div className="container mx-auto px-4 mt-[50px]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 xl:gap-8 lg:gap-0 gap-5 place-items-left md:place-items-center">
-            <motion.div className="space-y-3" variants={fadeUp}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-8 px-4 md:px-8">
+            <motion.div className="space-y-3 px-2" variants={fadeUp}>
               <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 {quickLinks.map((link, index) => (
@@ -100,7 +100,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
               </ul>
             </motion.div>
 
-            <motion.div className="space-y-3" variants={fadeUp}>
+            <motion.div className="space-y-3 px-2" variants={fadeUp}>
               <h3 className="font-semibold text-lg mb-4">Latest Projects</h3>
               <ul className="space-y-2">
                 {latestProjects.map((link, index) => (
@@ -116,17 +116,19 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
               </ul>
             </motion.div>
 
-            <motion.div className="flex items-start h-full" variants={fadeUp}>
-              <a href="/" className="inline-block">
-                <Image
-                  src={Logo}
-                  alt="Empire Developments"
-                  className="h-[40px] w-auto md:h-[45px] lg:h-[50px] object-contain"
-                />
-              </a>
+            <motion.div className="space-y-3 px-2 flex flex-col" variants={fadeUp}>
+              <div className="h-[24px] mb-4">
+                <a href="/" className="inline-block">
+                  <Image
+                    src={Logo}
+                    alt="Empire Developments"
+                    className="h-[50px] w-auto object-contain"
+                  />
+                </a>
+              </div>
             </motion.div>
 
-            <motion.div className="space-y-3" variants={fadeUp}>
+            <motion.div className="space-y-3 px-2" variants={fadeUp}>
               <h3 className="font-semibold text-lg mb-4">Resources</h3>
               <ul className="space-y-2">
                 {resources.map((link, index) => (
@@ -142,7 +144,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
               </ul>
             </motion.div>
 
-            <motion.div className="space-y-3" variants={fadeUp}>
+            <motion.div className="space-y-3 px-2" variants={fadeUp}>
               <h3 className="font-semibold text-lg mb-4">Communities</h3>
               <ul className="space-y-2">
                 {communities.map((link, index) => (
@@ -159,17 +161,20 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
             </motion.div>
           </div>
 
+
+
           <motion.div
-            className="border-t border-white/30 mt-10 pt-6 flex flex-col md:flex-row md:items-center justify-between gap-4"
+            className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row md:items-center justify-between gap-4"
             variants={fadeUp}
           >
             {/* Left: Copyright */}
-            <p className="text-sm text-white">© 2025 Empire Developments</p>
+            <p className="text-sm text-white/80">© 2025 Empire Developments</p>
 
             {/* Middle: Links */}
-            <div className="flex flex-wrap items-center gap-6 text-sm">
-              <a href="#" className="hover:text-primary-600 transition-colors duration-300">Terms of Use</a>
-              <a href="#" className="hover:text-primary-600 transition-colors duration-300">Privacy Policy</a>
+            <div className="flex items-center gap-4 text-sm">
+              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Terms of Use</a>
+              <div className="w-px h-4 bg-white/20"></div>
+              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Privacy Policy</a>
             </div>
 
             {/* Right: Social Icons */}

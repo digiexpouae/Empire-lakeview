@@ -14,7 +14,7 @@ import ima1 from '../../../public/assets/d3cffac39c025499b5d643c23941091538a2835
 import ima2 from '../../../public/assets/896f9f592b964d92926d050a82ffdf7c0cc52923.jpg';
 import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390a.jpg';
 import Sectiontwo from '../../common/section_text'
-import Introducing from '@/common/introducing'
+import Introducing from '@/common/introducingtwo'
 import Footer from '@/layout/footer'
 import im1 from '../../../public/assets/cloud_one.png'
 import Image from 'next/image';
@@ -35,11 +35,11 @@ import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
 import Vision from "../../common/vision"
 import Hero from './Hero'
+import chess from '../../../public/assets/chess.jpg'
 import Section_two from '../../common/section_two';
 import LatestProjectsCarousel from '@/common/latestProjectsCarousel';
 import AdvantagesSection from '@/common/advantage_home'
 import Textsection from '../../common/hometext'
-
 const index = () => {
   const [showEmailPop, setShowEmailPop] = useState(false);
 
@@ -130,13 +130,7 @@ const index = () => {
       h: 50,
       w: 50
     },
-    {
-      icon: Special,
-      title: "Service request status",
-      h: 50,
-      w: 50
-    },
-
+   
   ]
 
   const introRef = useRef(null)
@@ -196,26 +190,34 @@ const index = () => {
         className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div> */}
-        <Textsection  head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a forward-looking real estate developer in Dubai. Empire Lakeview is not only a place to live, but it is a transformative vision brought to life by Empire development. Empire Development reshapes urban life and offers apartments and homes built with modern technology.'} />
+        <Textsection  head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a leading real estate developer in Dubai. We create smart, eco-friendly, and luxurious homes. Our future-ready homes combine luxury, cutting-edge technology, and elegant design. Empire Development is transforming the urban lifestyle in the UAE.'} />
 
-  <LatestProjectsCarousel />
       <div className='bg-[#0E1527] relative' ref={main}>
+  <LatestProjectsCarousel />
         {/* <Sectiontwo amenities={amenities} /> */}
 
 
-        <div ref={introRef} className='container-2 flex flex-col items-start pt-0 gap-0'>
          
-        
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[400px] relative'} />
-  
+        {/* <div className='h-[700px]'>
+          <h3 className='text-[15px] md:text-[45px] text-center my-heading leading-6 text-white font-bold'>
+            Successfully Delivered
+          </h3> */}
+    
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[500px] overflow-hidden flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[420px] relative'} />
+          {/* </div> */}
         </div>  
         
         <Vision backgroundImage="/assets/visionbg.png" />
+        <div className=' w-full  md:h-[500px] xl:h-[600px]'>
+          <Image src={chess} className='w-full h-full object-cover' />
+          </div>
 
          <div ref={brandRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
-         
         
+      
          <AdvantagesSection />
+
+       
         </div>  
         
         <Section />
@@ -224,7 +226,6 @@ const index = () => {
         
        
 
-      </div>
       
       <SectionFour images={contactbg} />
 
