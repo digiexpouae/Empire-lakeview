@@ -5,11 +5,13 @@ import { motion } from 'framer-motion';
 
 const Vision = ({ backgroundImage }) => {
   return (
-    <div
-      className="w-full h-[650px] bg-cover bg-center flex items-center justify-start px-6 md:px-20"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="max-w-5xl text-white">
+    <div className="relative w-full h-[650px]">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
+      <div className="relative z-10 h-full flex items-center justify-start px-6 md:px-20">
+        <div className="max-w-5xl text-white">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,11 +30,12 @@ const Vision = ({ backgroundImage }) => {
           viewport={{ once: true }}
           className="mt-6 text-base max-w-3xl md:text-lg font-light leading-relaxed"
         >
-          Welcome to Empire Development, a forward-looking real estate developer in Dubai.
-          Empire Lakeview is not only a place to live, but it is a transformative vision brought
-          to life by Empire development. Empire Development reshapes urban life and offers
-          apartments and homes built with modern technology.
+     Empire Development offers modern, smart, and eco-friendly projects tailored to our clients' needs. 
+     We focus on creating experiences that enhance every part of your life. 
+     Empire Development offers premium-quality real estate development.
+      If you want to buy a luxury home or property for sale in Dubai, Empire Development is your ideal partner.
         </motion.p>
+        </div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 
 
-const section_two = ({amenities,textpara,className,btn,className1,classNamemain}) => {
+const section_two = ({amenities,textpara,className,btn,className1,classNamemain,classNameproject}) => {
 
 const ref1=useRef()
 const ref2=useRef()
@@ -58,7 +58,7 @@ tl.fromTo(
 },[inView])
 return (<>
     <div className={`max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[600px] lg:h-[500px] flex flex-col items-center justify-between w-[80vw] md:w-[90vw] lg:w-[80vw] scrollbar-hide ${classNamemain}`} ref={ref}>
-      <div className=" w-full md:flex md:flex-row flex flex-col gap-[20px]">
+      <div className={` w-full md:flex md:flex-row flex flex-col  gap-[20px] ${classNameproject}`}>
         <div className="flex flex-col md:w-[50%] lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
           {/* Left side - Project title */}
           <div 

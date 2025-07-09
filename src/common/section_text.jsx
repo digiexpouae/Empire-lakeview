@@ -32,10 +32,8 @@ const SectionText = ({
           transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }}
           className="text-[lg] md:text-[20px] font-medium leading-relaxed"
         >
-          Welcome to Empire Development, a forward-looking real estate developer in Dubai.
-          Empire Lakeview is not only a place to live, but it is a transformative vision
-          brought to life by Empire Development. Empire Development reshapes urban life and
-          offers apartments and homes built with modern technology.
+         Empire Estate by Empire Development has set a new standard for luxury living in Dubai. This project offers high-end residences in Dubai. It includes many top-notch amenities. Empire Development homes blend comfort, smart features, and stylish design. This project is among the top luxury residential projects in Dubai.
+        
         </motion.p>
       </div>
     </div>

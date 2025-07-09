@@ -152,7 +152,7 @@ const about = () => {
 
       <div className='bg-[#0E1527]'>
         <Fadein>
-                  <Textsection  head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a forward-looking real estate developer in Dubai. Empire Lakeview is not only a place to live, but it is a transformative vision brought to life by Empire development. Empire Development reshapes urban life and offers apartments and homes built with modern technology.'} />
+                  <Textsection  head={'Discover a New Era of Living'} text={"Empire Development stands out among the new-age real estate developers in UAE. As a leading UAE property developer, we specialize in creating modern, smart, and long-lasting spaces. Empire Development is recognized as the best property developer in Dubai. We build smart, sustainable, futuristic homes that are reasonably priced."} />
 
         </Fadein>
             <Fadein>

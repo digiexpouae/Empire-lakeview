@@ -29,7 +29,7 @@ const [cloud, setcloud] = useState(false)
 // const images=['/assets/f.png','/assets/f.png']
 
 const text=
-"Plazzo Residence is a five-storey residential development located in Jumeirah Village Triangle, Dubai. Completed in 2016, the project offers studios, 1-, and 2-bedroom apartments with sizes ranging from 412 to 2,422 sq. ft. Amenities include rooftop swimming pools for adults and children, a gym, sauna, steam room, jacuzzi, children's play area, 24-hour concierge services, and covered parking."
+"Plazzo Residence (JVT) combines comfort and elegance. It meets the needs of modern living. These luxury apartments, JVT Dubai, are designed to enhance your daily life. Experience a life of elegance and quality at Empire Development JVT Real Estate. Many people rely on Empire Development for luxury real estate in JVT, Dubai. Where history blends innovation."
 
 const amenities = [  
   {
@@ -74,7 +74,7 @@ const amenities = [
 
 
       <div className='bg-[#0E1527]'>
-   < Sectiontwo images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[100px]'} className1={'lg:!h-[220px] md:h-[450px]'} classNamemain={'lg:!h-[600px] md:!h-[800px]'}/>
+   < Sectiontwo  images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[100px]'} className1={'lg:!h-[220px] md:h-[450px]'} classNamemain={'lg:!h-[600px] md:!h-[800px]'}/>
  
    <Sectionthree />
    
