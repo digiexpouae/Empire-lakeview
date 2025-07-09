@@ -25,6 +25,7 @@ import DubaiMarinaMall from '../../../public/dubai marina mall.svg';
 import mob from "../../../public/assets/empireestate_mobile.png"
 
 import Text from '../../common/section_text' 
+import Estatetextsection from '../../common/estatetextsection'
 
 
 
@@ -122,7 +123,7 @@ const para5= "The Empire development team has committed to sustainability. This 
         </div>
 
           <div className='bg-[#0E1527]'>
-      
+            <Estatetextsection />
             <SectionThree />
             <Sectionfour />
             <Section images={image} />
