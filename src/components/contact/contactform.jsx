@@ -39,7 +39,7 @@ const index = () => {
       <div className='bg-[#0E1527]'>
         <div className='container mx-auto px-4 py-10 md:py-16 lg:py-20'>
           <div className='flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16'>
-            {/* Contact Info Section */}
+            {/* Contact Info Sectionmm */}
             <div className='w-full lg:w-1/2 flex flex-col gap-6 md:gap-8'>
               <h1 className='text-4xl md:text-6xl lg:text-7xl text-white font-bold leading-tight'>
                 Get in Touch
