@@ -208,12 +208,19 @@ const ChatWidget = () => {
                   />
                 </div>
               </div>
-              <button type="submit" className="submit-button w-full text-white py-1 " style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)',borderRadius:'30px' }}>
-                <div className="flex items-center justify-center gap-2">
-                  <img src="/assets/Union2.png" alt="" className="w-5 h-5" />
-                  <span >Connect to AI Assistant</span>
-                </div>
-              </button>
+        <button type="submit" className="submit-button"
+
+        className="w-full text-white py-2 rounded-3xl "
+        style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)' }}
+      >              <div className="flex items-center justify-center gap-2">
+                        <img
+                          src="/assets/Union2.png"
+                          alt=""
+                          className="w-5 h-5"
+                        />
+                        <span>Connect to AI Assistant</span>
+                      </div>
+                    </button>
             </form>
           </div>
         </div>
