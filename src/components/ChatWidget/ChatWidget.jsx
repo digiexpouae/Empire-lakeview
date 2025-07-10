@@ -45,7 +45,8 @@ const ChatWidget = () => {
     hasPermission: false,
     isMuted: false,
     errorMessage: '',
-    isListening: false // Track if we're actively listening
+    isListening: false, // Track if we're actively listening
+    aiResponse: '' // Track AI's spoken text
   });
 
   const conversation = useConversation({
@@ -59,6 +60,9 @@ const ChatWidget = () => {
     },
     onMessage: (message) => {
       console.log('Received message:', message);
+      if (message.role === 'assistant') {
+        setConversationState(prev => ({ ...prev, aiResponse: message.content }));
+      }
     },
     onError: (error) => {
       const errorMessage = error?.message || 'An error occurred with the voice service';
@@ -128,6 +132,8 @@ const ChatWidget = () => {
     if (validateForm()) {
       setIsFirstModalOpen(false);
       setIsSecondModalOpen(true);
+      // Start the conversation when modal opens
+      toggleConversation();
     }
   };
 
@@ -163,11 +169,28 @@ const ChatWidget = () => {
 
       {/* First Modal - Contact Form */}
       {isFirstModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsFirstModalOpen(false)}>
+        <div className="modal-overlay" onClick={() => {
+          // Stop conversation when modal is closed
+          if (conversationState.status === 'connected') {
+            conversation.endSession().catch(console.error);
+          }
+          setIsFirstModalOpen(false);
+        }}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="close-button" onClick={() => setIsFirstModalOpen(false)}>×</button>
+            <button className="close-button" onClick={() => {
+              // Stop conversation when close button is clicked
+              if (conversationState.status === 'connected') {
+                conversation.endSession().catch(console.error);
+              }
+              setIsFirstModalOpen(false);
+            }}>×</button>
             <div className="modal-logo">
               <img src="/assets/aibot2.png" alt="AI Assistant" />
+              {conversationState.aiResponse && (
+                <div className="ai-response-text">
+                  {conversationState.aiResponse}
+                </div>
+              )}
             </div>
             <h2>Hi Ready To Talk to Me</h2>
             <form onSubmit={handleFirstModalSubmit}>

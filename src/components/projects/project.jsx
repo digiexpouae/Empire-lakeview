@@ -4,7 +4,7 @@ import Header from '@/layout/header';
 import Footer from '@/layout/footer';
 import Heroslider from '@/common/heroslider';
 import back from '../../../public/assets/1e94c7c4bfc77819cbc77ef163f6e6ec3b61cf21.jpg';
-import Introducing from '@/common/introducing';
+import Introducing from '@/common/introducingtwo';
 import ima1 from '../../../public/assets/d3cffac39c025499b5d643c23941091538a28358.png';
 import ima2 from '../../../public/assets/896f9f592b964d92926d050a82ffdf7c0cc52923.jpg';
 import ima3 from '../../../public/assets/a0085398a559c041737ed82d891a967e8c17390a.jpg';
@@ -82,7 +82,7 @@ const Project = () => {
 
         <div ref={introRef} className="flex flex-col items-center justify-center">
           <Fadein>
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'!h-[200px] overflow-hidden flex items-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[400px] relative'} />
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[500px] overflow-hidden flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[420px] relative'} />
   
           </Fadein>
 
