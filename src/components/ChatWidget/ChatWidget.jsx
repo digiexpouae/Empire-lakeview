@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import bot from '../../../public/assets/Union.png';
 import { useConversation } from '@elevenlabs/react';
-import { Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
+import { Mic, MicOff } from 'lucide-react';
+
 const ChatWidget = () => {
   const [isFirstModalOpen, setIsFirstModalOpen] = useState(false);
   const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
@@ -11,16 +12,96 @@ const ChatWidget = () => {
     email: '',
     phone: ''
   });
+  const [formErrors, setFormErrors] = useState({});
+
+  const [conversationState, setConversationState] = useState({
+    status: 'disconnected',
+    isSpeaking: false,
+    hasPermission: false,
+    isMuted: false,
+    errorMessage: '',
+    isListening: false,
+    aiResponse: ''
+  });
+
+  const conversation = useConversation({
+    onConnect: () => {
+      console.log('Connected to ElevenLabs');
+      setConversationState(prev => ({ ...prev, status: 'connected', errorMessage: '' }));
+    },
+    onDisconnect: () => {
+      console.log('Disconnected from ElevenLabs');
+      setConversationState(prev => ({ ...prev, status: 'disconnected' }));
+    },
+    onMessage: (message) => {
+      if (message.role === 'assistant') {
+        setConversationState(prev => ({ ...prev, aiResponse: message.content }));
+      }
+    },
+    onError: (error) => {
+      console.error('ElevenLabs Error:', error);
+      setConversationState(prev => ({ ...prev, errorMessage: error?.message || 'An error occurred with the voice service' }));
+    },
+  });
+
+  useEffect(() => {
+    const requestMicPermission = async () => {
+      try {
+        await navigator.mediaDevices.getUserMedia({ audio: true });
+        setConversationState(prev => ({ ...prev, hasPermission: true }));
+      } catch (error) {
+        console.error('Error accessing microphone:', error);
+        setConversationState(prev => ({
+          ...prev,
+          hasPermission: false,
+          errorMessage: 'Microphone access denied'
+        }));
+      }
+    };
+    requestMicPermission();
+  }, []);
+
+  // ✅ Automatically start conversation when second modal opens
+  useEffect(() => {
+    if (isSecondModalOpen) {
+      toggleConversation();
+    }
+  }, [isSecondModalOpen]);
+
+  const toggleConversation = async () => {
+    try {
+      if (conversationState.status === 'connected' && conversationState.isListening) {
+        setConversationState(prev => ({ ...prev, isListening: false }));
+      } else if (conversationState.status === 'connected') {
+        setConversationState(prev => ({ ...prev, isListening: true }));
+      } else {
+        await conversation.startSession({
+          agentId: process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID,
+        });
+        setConversationState(prev => ({ ...prev, isListening: true }));
+      }
+    } catch (error) {
+      console.error('Error toggling conversation:', error);
+      setConversationState(prev => ({ ...prev, errorMessage: error?.message || 'Failed to toggle conversation' }));
+    }
+  };
+
+  const cleanupConversation = () => {
+    if (conversationState.status === 'connected') {
+      conversation.endSession().catch(console.error);
+      setConversationState(prev => ({
+        ...prev,
+        status: 'disconnected',
+        isListening: false,
+        aiResponse: ''
+      }));
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
-
-  const [formErrors, setFormErrors] = useState({});
 
   const validateForm = () => {
     const errors = {};
@@ -39,143 +120,38 @@ const ChatWidget = () => {
     return Object.keys(errors).length === 0;
   };
 
-  const [conversationState, setConversationState] = useState({
-    status: 'disconnected',
-    isSpeaking: false,
-    hasPermission: false,
-    isMuted: false,
-    errorMessage: '',
-    isListening: false, // Track if we're actively listening
-    aiResponse: '' // Track only the most recent AI response
-  });
-
-  const conversation = useConversation({
-    onConnect: () => {
-      console.log('Connected to ElevenLabs');
-      setConversationState(prev => ({ ...prev, status: 'connected', errorMessage: '' }));
-    },
-    onDisconnect: () => {
-      console.log('Disconnected from ElevenLabs');
-      setConversationState(prev => ({ ...prev, status: 'disconnected' }));
-    },
-    onMessage: (message) => {
-      console.log('Received message:', message);
-      if (message.role === 'assistant') {
-        // Only keep the most recent AI response
-        setConversationState(prev => ({
-          ...prev,
-          aiResponse: message.content
-        }));
-      }
-    },
-    onError: (error) => {
-      const errorMessage = error?.message || 'An error occurred with the voice service';
-      console.error('ElevenLabs Error:', error);
-      setConversationState(prev => ({ ...prev, errorMessage }));
-    },
-  });
-
-  useEffect(() => {
-    const requestMicPermission = async () => {
-      try {
-        await navigator.mediaDevices.getUserMedia({ audio: true });
-        setConversationState(prev => ({ ...prev, hasPermission: true }));
-      } catch (error) {
-        console.error('Error accessing microphone:', error);
-        setConversationState(prev => ({
-          ...prev,
-          hasPermission: false,
-          errorMessage: 'Microphone access denied'
-        }));
-      }
-    };
-
-    requestMicPermission();
-  }, []);
-
-  const toggleConversation = async () => {
-    try {
-      if (conversationState.status === 'connected' && conversationState.isListening) {
-        // Stop listening but keep the connection alive
-        setConversationState(prev => ({ ...prev, isListening: false }));
-      } else if (conversationState.status === 'connected') {
-        // Already connected, just toggle listening state
-        setConversationState(prev => ({ ...prev, isListening: true }));
-      } else {
-        // Not connected yet, start a new session
-        await conversation.startSession({
-          agentId: process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID,
-        });
-        setConversationState(prev => ({ ...prev, isListening: true }));
-      }
-    } catch (error) {
-      console.error('Error toggling conversation:', error);
-      setConversationState(prev => ({
-        ...prev,
-        errorMessage: error?.message || 'Failed to toggle conversation'
-      }));
-    }
-  };
-
-  const handleImageClick = (e) => {
-    e.stopPropagation(); // Prevent modal from closing
-    toggleConversation();
-  };
-
-  // Clean up function
-  const cleanupConversation = () => {
-    if (conversationState.status === 'connected') {
-      conversation.endSession().catch(console.error);
-      setConversationState(prev => ({
-        ...prev,
-        status: 'disconnected',
-        isListening: false,
-        aiResponse: '' // Clear the response when cleaning up
-      }));
-    }
-  };
-
   const handleFirstModalSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
       setIsFirstModalOpen(false);
-      setIsSecondModalOpen(true);
-      // Start the conversation when modal opens
-      toggleConversation();
+      setIsSecondModalOpen(true); // ✅ triggers useEffect to start conversation
     }
   };
 
-  const handleChatSubmit = (e) => {
-    e.preventDefault();
-    // Handle chat submission
-    console.log('Chat submitted');
+  const handleImageClick = (e) => {
+    e.stopPropagation();
+    toggleConversation();
   };
 
   return (
     <>
-    {/*chat */}
-      {/* Floating Button with CSS Golden Border */}
+      {/* Floating Button */}
       <div className="chat-widget" onClick={() => setIsFirstModalOpen(true)}>
         <div className="chat-widget-icon">
-          <img 
-            src="/assets/aibot2.png" 
-            alt="AI Assistant" 
-            className="ai-logo" 
-          />
+          <img src="/assets/aibot2.png" alt="AI Assistant" className="ai-logo" />
         </div>
         <div>
-            <div className="chat-widget-image">
-              <Image 
-                src="/assets/aibot2.png" 
-                alt="AI Assistant"
-                width={24}
-                height={24}
-              />
-            </div>
-      <div className='flex items-center'><div><Image  src={bot} /></div>  <span className="chat-widget-text">Let's Talk</span></div></div>
+          <div className="chat-widget-image">
+            <Image src="/assets/aibot2.png" alt="AI Assistant" width={24} height={24} />
+          </div>
+          <div className='flex items-center'>
+            <div><Image src={bot} alt="" /></div>
+            <span className="chat-widget-text">Let's Talk</span>
+          </div>
+        </div>
       </div>
 
-      {/* First Modal - Contact Form */}
+      {/* First Modal */}
       {isFirstModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -191,29 +167,15 @@ const ChatWidget = () => {
                 {conversationState.aiResponse}
               </p>
             )}
-            <h2>Hi Ready To Talk to Me</h2>
+            <h2>Hi, Ready To Talk to Me</h2>
             <form onSubmit={handleFirstModalSubmit}>
               <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                />
+                <input type="text" name="name" placeholder="Your name" value={formData.name} onChange={handleInputChange} required />
               </div>
               <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                />
+                <input type="email" name="email" placeholder="Email address" value={formData.email} onChange={handleInputChange} required />
               </div>
-              <div className="form-group">
+               <div className="form-group">
                 <div className="flex gap-1 w-full">
                   <select 
                     className="country-code  min-w-[80px] bg-[#FFFFFF33] text-white border border-[rgba(255,255,255,0.1)] rounded-lg px-1 py-2 focus:outline-none focus:ring-2 focus:ring-[#4a90e2] focus:border-transparent"
@@ -246,17 +208,10 @@ const ChatWidget = () => {
                   />
                 </div>
               </div>
-              <button type="submit" className="submit-button" 
-
-  className="w-full text-white py-2 rounded-3xl "
-  style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)' }}
->              <div className="flex items-center justify-center gap-2">
-                  <img 
-                    src="/assets/Union2.png" 
-                    alt="" 
-                    className="w-5 h-5"
-                  />
-                  <span>Connect to AI Assistant</span>
+              <button type="submit" className="submit-button w-full text-white py-1 " style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)',borderRadius:'30px' }}>
+                <div className="flex items-center justify-center gap-2">
+                  <img src="/assets/Union2.png" alt="" className="w-5 h-5" />
+                  <span >Connect to AI Assistant</span>
                 </div>
               </button>
             </form>
@@ -264,59 +219,31 @@ const ChatWidget = () => {
         </div>
       )}
 
-      {/* Second Modal - Chat Interface with Voice */}
+
+      {/* Second Modal */}
       {isSecondModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsSecondModalOpen(false)}>
+        <div className="modal-overlay" onClick={() => {
+          cleanupConversation();
+          setIsSecondModalOpen(false);
+        }}>
           <div className="modal-content chat-modal" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-4">
-              <div 
-                className={`modal-logo cursor-pointer transform transition-transform duration-200 hover:scale-110 ${conversationState.isListening ? 'animate-pulse' : ''}`}
-                onClick={handleImageClick}
-                title={conversationState.isListening ? 'Click to stop' : 'Click to start speaking'}
-              >
-                <img 
-                  src="/assets/aibot2.png" 
-                  alt="AI Assistant" 
-                  className={`w-12 h-12 ${conversationState.isListening ? 'ring-2 ring-purple-500 rounded-full' : ''}`} 
-                />
-                {conversationState.isListening && (
-                  <div className="absolute -top-1 -right-1 bg-red-500 rounded-full w-3 h-3 animate-ping"></div>
-                )}
+              <div className={`modal-logo cursor-pointer ${conversationState.isListening ? 'animate-pulse' : ''}`} onClick={handleImageClick}>
+                <img src="/assets/aibot2.png" alt="AI Assistant" className={`w-12 h-12 ${conversationState.isListening ? 'ring-2 ring-purple-500 rounded-full' : ''}`} />
               </div>
               <div className="flex items-center gap-4">
-              <div 
-                className={`p-2 rounded-full ${conversationState.isListening ? 'bg-red-500' : 'bg-green-500'} text-white transition-colors duration-200`}
-              >
-                {conversationState.isListening ? (
-                  <MicOff className="w-5 h-5" />
-                ) : (
-                  <Mic className="w-5 h-5" />
-                )}
-              </div>
-              
-              {conversationState.status === 'connected' && (
-                <div className="flex items-center text-sm">
-                  <span className={`relative flex h-2 w-2 mr-1 ${conversationState.isListening ? 'text-green-500' : 'text-gray-400'}`}>
-                    <span className={`absolute inline-flex h-full w-full rounded-full ${conversationState.isListening ? 'bg-green-400' : 'bg-gray-400'} opacity-75`}></span>
-                    <span className={`relative inline-flex rounded-full h-2 w-2 ${conversationState.isListening ? 'bg-green-500' : 'bg-gray-500'}`}></span>
-                  </span>
-                  {conversationState.isListening ? 'Listening...' : 'Paused'}
+                <div className={`p-2 rounded-full ${conversationState.isListening ? 'bg-red-500' : 'bg-green-500'} text-white`}>
+                  {conversationState.isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
                 </div>
-              )}
-              
-              <button 
-                onClick={() => setIsSecondModalOpen(false)}
-                className="close-button ml-2"
-              >
-                ×
-              </button>
+                <button onClick={() => {
+                  cleanupConversation();
+                  setIsSecondModalOpen(false);
+                }} className="close-button ml-2">
+                  ×
+                </button>
               </div>
             </div>
-            <h2 className="text-xl font-semibold mb-4">
-              {conversationState.isListening ? '' : 'Click the mic to start'}
-            </h2>
-            
-            {/* Status Messages */}
+
             {!conversationState.hasPermission && (
               <div className="text-yellow-600 text-sm mb-4 p-2 bg-yellow-50 rounded">
                 Please allow microphone access to use voice chat
@@ -326,6 +253,11 @@ const ChatWidget = () => {
               <div className="text-red-500 text-sm mb-4 p-2 bg-red-50 rounded">
                 {conversationState.errorMessage}
               </div>
+            )}
+            {conversationState.aiResponse && (
+              <p className="text-white mt-4 mb-4 max-h-40 overflow-y-auto">
+                {conversationState.aiResponse}
+              </p>
             )}
           </div>
         </div>
