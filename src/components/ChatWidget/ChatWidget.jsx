@@ -46,7 +46,7 @@ const ChatWidget = () => {
     isMuted: false,
     errorMessage: '',
     isListening: false, // Track if we're actively listening
-    aiResponse: '' // Track AI's spoken text
+    aiResponse: '' // Track only the most recent AI response
   });
 
   const conversation = useConversation({
@@ -61,7 +61,11 @@ const ChatWidget = () => {
     onMessage: (message) => {
       console.log('Received message:', message);
       if (message.role === 'assistant') {
-        setConversationState(prev => ({ ...prev, aiResponse: message.content }));
+        // Only keep the most recent AI response
+        setConversationState(prev => ({
+          ...prev,
+          aiResponse: message.content
+        }));
       }
     },
     onError: (error) => {
@@ -118,14 +122,18 @@ const ChatWidget = () => {
     toggleConversation();
   };
 
-  // Clean up on unmount
-  useEffect(() => {
-    return () => {
-      if (conversationState.status === 'connected') {
-        conversation.endSession().catch(console.error);
-      }
-    };
-  }, []);
+  // Clean up function
+  const cleanupConversation = () => {
+    if (conversationState.status === 'connected') {
+      conversation.endSession().catch(console.error);
+      setConversationState(prev => ({
+        ...prev,
+        status: 'disconnected',
+        isListening: false,
+        aiResponse: '' // Clear the response when cleaning up
+      }));
+    }
+  };
 
   const handleFirstModalSubmit = (e) => {
     e.preventDefault();
@@ -169,29 +177,20 @@ const ChatWidget = () => {
 
       {/* First Modal - Contact Form */}
       {isFirstModalOpen && (
-        <div className="modal-overlay" onClick={() => {
-          // Stop conversation when modal is closed
-          if (conversationState.status === 'connected') {
-            conversation.endSession().catch(console.error);
-          }
-          setIsFirstModalOpen(false);
-        }}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <div className="modal-overlay">
+          <div className="modal-content">
             <button className="close-button" onClick={() => {
-              // Stop conversation when close button is clicked
-              if (conversationState.status === 'connected') {
-                conversation.endSession().catch(console.error);
-              }
+              cleanupConversation();
               setIsFirstModalOpen(false);
             }}>×</button>
             <div className="modal-logo">
               <img src="/assets/aibot2.png" alt="AI Assistant" />
-              {conversationState.aiResponse && (
-                <div className="ai-response-text">
-                  {conversationState.aiResponse}
-                </div>
-              )}
             </div>
+            {conversationState.aiResponse && (
+              <p className="text-white mt-4 mb-4 max-h-40 overflow-y-auto">
+                {conversationState.aiResponse}
+              </p>
+            )}
             <h2>Hi Ready To Talk to Me</h2>
             <form onSubmit={handleFirstModalSubmit}>
               <div className="form-group">
@@ -314,7 +313,7 @@ const ChatWidget = () => {
               </div>
             </div>
             <h2 className="text-xl font-semibold mb-4">
-              {conversationState.isListening ? 'Speak now...' : 'Click the mic to start'}
+              {conversationState.isListening ? '' : 'Click the mic to start'}
             </h2>
             
             {/* Status Messages */}
