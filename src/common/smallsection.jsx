@@ -139,12 +139,12 @@ return (
 
     {/* Original Desktop Layout - Completely Unchanged */}
     <div className="hidden md:block">
-      <div className={`w-full overflow-hidden whitespace-nowrap px-4 ${className1} flex flex-col items-center gap-[20px] container relative bg-[#0D1028]`}>
+      <div className={`w-full whitespace-nowrap ${className1} flex flex-col items-center gap-[20px] container relative bg-[#0D1028]`}>
         <div className={`inline-flex gap-[20px]`} ref={sliderRef}>
           {ima.map((elem, index) => (
             <div
               key={index}
-              className={`shrink-0 inline-block xl:w-[380px] md:w-[340px] w-[220px] md:h-[450px] h-[450px] relative ${className}`}
+              className={`shrink-0 inline-block md:w-[180px] xl:w-[340px] w-[220px] md:h-[450px] h-[450px] relative ${className}`}
             >
               <Image
                 src={elem.im}

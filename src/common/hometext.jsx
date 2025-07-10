@@ -23,9 +23,9 @@ const Hometext = ({ text, head, amenities, btn, back_image, className, home, ico
         <div className="max-w-6xl mx-auto px-2 sm:px-4 py-4 md:h-[600px] flex flex-col  justify-center  w-full md:w-[80vw] z-20 relative">
           <div className="w-full flex flex-col items-center justify-center md:items-start gap-4 px-4 sm:px-0">
             {/* LEFT SECTION */}
-            <div className='flex flex-col w-full md:w-auto lg:w-[60%]'>
+            <div className='flex flex-col w-full md:w-[60%] pl-4 lg:pl-0'>
               <div className='w-full text-black flex justify-center  '>
-                <h2 className="text-3xl sm:text-5xl md:text-[30px] lg:text-[60px] xl:text-[70px] font-bold tracking-tighter text-white text-center md:text-left">
+                <h2 className="text-3xl sm:text-5xl md:text-[40px] lg:text-[60px] xl:text-[70px] font-bold tracking-tighter text-white text-center md:text-left">
                   {head}
                 </h2>
               </div>
@@ -34,9 +34,9 @@ const Hometext = ({ text, head, amenities, btn, back_image, className, home, ico
             </div>
 
             {/* RIGHT SECTION */}
-            <div className="w-full md:w-[60%]">
+            <div className="w-full md:w-[70%] lg:w-[60%]">
               <div className="p-0 md:p-6 lg:p-0 flex flex-col items-center md:items-start text-center md:text-left">
-                <p className={`text-base sm:text-lg md:text-[18px] lg:text-[20px] text-white leading-4 md:leading-7 font-light ${classNamep}`}>
+                <p className={`text-base sm:text-lg  md:text-[20px] text-white leading-4 md:leading-7 font-light ${classNamep}`}>
                   {text}
                 </p>
               
