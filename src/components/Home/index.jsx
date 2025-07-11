@@ -35,7 +35,7 @@ import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
 import Vision from "../../common/vision"
 import Hero from './Hero'
-import chess from '../../../public/assets/chess.jpg'
+import chess from '../../../public/assets/lakeviews.png'
 import Section_two from '../../common/section_two';
 import LatestProjectsCarousel from '@/common/latestProjectsCarousel';
 import AdvantagesSection from '@/common/advantage_home'
@@ -208,11 +208,11 @@ const index = () => {
         </div>  
         
         <Vision backgroundImage="/assets/visionbg.png" />
-        <div className=' w-full  md:h-[500px] xl:h-[600px]'>
+        <div className=' w-full  md:h-[500px] lg:h-[700px]'>
           <Image src={chess} className='w-full h-full object-cover' />
           </div>
 
-         <div ref={brandRef} className=' container-2  flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
+         <div ref={brandRef} className=' flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
         
       
          <AdvantagesSection />
