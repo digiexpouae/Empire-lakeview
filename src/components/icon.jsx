@@ -69,14 +69,10 @@ const icon = ({ icons }) => {
               </SwiperSlide>
             ))}
             <div className="swiper-button-prev !text-[#CCAB64] !left-0 !top-1/2 !-translate-y-1/2 !w-8 !h-8 !flex !items-center !justify-center !bg-transparent">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 8L12 16L20 24" stroke="#CCAB64" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+        
             </div>
             <div className="swiper-button-next !text-[#CCAB64] !right-0 !top-1/2 !-translate-y-1/2 !w-8 !h-8 !flex !items-center !justify-center !bg-transparent">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 8L20 16L12 24" stroke="#CCAB64" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+          
             </div>
           </Swiper>
         </div>

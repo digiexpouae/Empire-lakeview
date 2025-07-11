@@ -16,7 +16,7 @@ export default function FeaturesSection() {
   const [activeFeature, setActiveFeature] = useState('pools');
 
   return (
-    <div className='h-[400px] md:h-[800px] w-full'>
+    <div className='h-[500px] md:h-[800px] w-full mt-10 relative'>
         <h1 className='text-[45px] text-center lg:text-[100px] my-heading  text-white font-bold'>Luxury Aminites</h1>
       <div className='flex items-center justify-center' style={{ overflowX: 'auto',borderTop:'1px solid white' }}>
         {features.map((feature) => (
@@ -45,7 +45,7 @@ export default function FeaturesSection() {
         ))}
       </div>
 
-      <div className='h-[400px] md:h-[500px] w-full relative'>
+      <div className='h-[400px] md:h-[600px] w-full '>
         {features.map((feature) =>
           feature.id === activeFeature ? (
             <Image
@@ -55,14 +55,14 @@ export default function FeaturesSection() {
               width={470} height={470}
               className='!w-full !h-full !object-cover'
 
-              style={{ width: '100%', height: '400px', objectFit: 'cover'}}
             />
           ) : null
         )}
-        <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[350px] 
+
+      </div>
+      <div className='absolute left-0 right-0 bottom-0 w-full  z-[999] h-[350px] 
 'style={{background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #0E1527 97%)'
 }}></div>
-      </div>
     </div>
   );
 }
