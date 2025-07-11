@@ -84,40 +84,58 @@ const carWrapperRef=useRef(null)
 
 
 
-      return(
-        <div className='  w-full md:pt-24 pt-20  text-white h-[100vh] mb-40'  ref={sectionref}>
-        <div className='flex flex-col items-center justify-center gap-[100px]  w-full lg:mt-[20px] mt-[50px] ' >
-          <div className='flex flex-col items-center justify-center w-full ' >
-  
-          <div className="relative w-full h-10 flex items-center">
-            <hr className="border-t border-white w-full absolute" />
-            {styles.map((elem, index) => (
-              <div 
-                key={index} 
-                className="absolute flex flex-col items-center " 
-                style={{ left: `${20 + index * 20}%`, transform: 'translate(-50%, 35%)' }}
-              >
-                <div className="w-[15px] h-[15px] bg-white rounded-full"></div>
-                {index ==0 ?    <div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
-                  {Name}
+      return (
+        <div className='w-full text-white' style={{ minHeight: '100vh' }} ref={sectionref}>
+          <div className='md:pt-24 pt-20 pb-20'>
+            <div className='flex flex-col items-center justify-center gap-[100px] w-full lg:mt-[20px] mt-[50px]'>
+              <div className='flex flex-col items-center justify-center w-full'>
+                <div className="relative w-full h-10 flex items-center">
+                  <hr className="border-t border-white w-full absolute" />
+                  {styles.map((elem, index) => (
+                    <div 
+                      key={index} 
+                      className="absolute flex flex-col items-center" 
+                      style={{ left: `${20 + index * 20}%`, transform: 'translate(-50%, 35%)' }}
+                    >
+                      <div className="w-[15px] h-[15px] bg-white rounded-full"></div>
+                      {index === 0 ? (
+                        <div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
+                          {Name}
+                        </div>
+                      ) : (
+                        <div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
+                          {elem.name}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                  
+                  <div ref={movingRef} className='md:!w-[137px] !w-[62px] !h-[50px] md:!h-[92px] absolute left-[20%] rotate-180 z-30'>
+                    <Image 
+                      src={car} 
+                      alt="Location marker"
+                      objectFit='cover' 
+                      fill  
+                      className='transition-transform duration-700 ease-in-out'
+                    />
+                  </div>
                 </div>
-                :<div className="text-white text-center text-xs md:text-sm whitespace-nowrap mt-2">
-                  {elem.name}
-                </div>}
               </div>
-            ))}
-      {console.log(activeIndex)}
-  
-  
-  
-    <div ref={movingRef} className='md:!w-[137px] !w-[62px] !h-[50px] md:!h-[92px] absolute left-[20%] rotate-180 z-30'><Image src={car} objectFit='cover' fill  className='transition-transform duration-700 ease-in-out'/>
-    </div>
-            </div> 
+              
+              <div className='w-full mb-10 relative' style={{ minHeight: '400px' }}>
+                <Map 
+                  className='z-50' 
+                  carcontainer={sectionref} 
+                  sectionref={movingRef} 
+                  containerRef={sectionref} 
+                  center_position={center_position} 
+                  Name={Name} 
+                  markers={markers} 
+                  Main_marker={Main_marker}
+                />
+              </div>
             </div>
-          <div className='w-[100%]   mb-10 relative'>
-             <Map  className={'z-50'} carcontainer={sectionref} sectionref={movingRef} containerRef={sectionref} center_position={center_position} Name={Name} markers={markers} Main_marker={Main_marker}/>
-             
-          </div></div>
+          </div>
         </div>
        
          )
