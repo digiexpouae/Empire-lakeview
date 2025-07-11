@@ -76,7 +76,7 @@ const LatestProjects = () => {
         const totalScrollWidth = getTotalWidth();
         const containerWidth = container.offsetWidth;
         const scrollDistance = Math.max(0, totalScrollWidth - containerWidth);
-const disance = scrollDistance + 10;
+const disance = scrollDistance + 50;
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
         animationRef.current = gsap.to(slider, {
@@ -146,9 +146,9 @@ const disance = scrollDistance + 10;
       <h2 className="text-white text-[30px] md:text-[60px] font-bold text-center mb-8 md:mb-12 px-4">
         Our Latest Projects
       </h2>
-      <div ref={containerRef} className="relative min-h-[70vh] w-full">
-        <div className="h-[calc(90vh-100px)] md:h-[80vh] w-full overflow-hidden">
-        <div ref={sliderRef} className="h-full flex items-center px-3 md:px-4 gap-4 md:gap-5">
+      <div ref={containerRef} className="relative h-[50vh] md:h-[80vh]  w-full">
+        <div className=" md:h-[80vh] w-full overflow-hidden">
+        <div ref={sliderRef} className="h-full flex items-start px-3 md:px-4 gap-4 md:gap-5">
           {projects.map((project, index) => (
             <div
               key={index}

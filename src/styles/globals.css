@@ -171,7 +171,7 @@ svg{
 /* Chat Widget Floating Button */
 .chat-widget {
   position: fixed;
-  bottom: 30px;
+  bottom: 0px;
   right: 30px;
   /* background: #0E1527; */
   color: #ffffff;
@@ -188,6 +188,11 @@ svg{
   -webkit-backdrop-filter: blur(0);
   border-radius: 50px;
 }
+@media (max-width:786px) {
+  .chat-widget {
+    right: 0px;
+  }
+}
 
 .chat-widget:hover {
   /* transform: translateY(-3px); */
@@ -196,8 +201,8 @@ svg{
 }
 
 .chat-widget-icon {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;

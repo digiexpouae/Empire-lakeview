@@ -139,7 +139,7 @@ return (
 
     {/* Original Desktop Layout - Completely Unchanged */}
     <div className="hidden md:block">
-      <div className={`w-full whitespace-nowrap ${className1} flex flex-col items-center gap-[20px] container relative bg-[#0D1028]`}>
+      <div className={`w-full whitespace-nowrap ${className1} flex flex-col items-center gap-[20px] container relative`}>
         <div className={`inline-flex gap-[20px]`} ref={sliderRef}>
           {ima.map((elem, index) => (
             <div
