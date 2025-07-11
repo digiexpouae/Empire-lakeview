@@ -3,8 +3,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
-const LAND_VIDEO_PATH = "/assets/desktop_video.mp4";
-const PORT_VIDEO_PATH = "/assets/mob_video.mp4";
+const LAND_VIDEO_PATH = "/assets/desktopvideo.mp4";
+const PORT_VIDEO_PATH = "/assets/videoplayback.mp4";
 const POSTER_IMAGE_PATH = "/assets/fallback.png";
 const LOGO_PATH = "/assets/logo2.png";
 
@@ -63,6 +63,7 @@ export default function Section1() {
       {videoSrc && (
         <video
           ref={videoRef}
+
           key={videoSrc}
           className={`absolute inset-0 top-20 w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           playsInline
