@@ -71,7 +71,7 @@ const empire = () => {
         <Header />
         <Heroslider  className1={'top-[3%]'} main={main} textone={'Empire'} texttwo={'Residence'} bottom={'md:bottom-[-350px] bottom-[-300px] md:!w-full w-[500px]'} main_im={Main} overlay={true} />
         
-        <Image src={Field} className='left-0 right-0 bottom-0 top-0 w-full h-[100%] z-[-10] !object-cover object-top-left' />
+        <Image src={Field} priority className='left-0 right-0 bottom-0 top-0 w-full h-[100%] z-[-10] !object-cover object-top-left' />
       </div>
 
       {/* Mobile only: plain div with header and mobile image, covers full screen */}

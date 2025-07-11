@@ -115,7 +115,7 @@ const para5="Empire Development has built Empire Lakeview with high-quality mate
 <div className='w-full relative md:block hidden md:h-screen h-[500px] '>
         <Header className='nav-menu absolute z-50'/>
             <Heroslider className={'top-[15%]'} textthree={'Empire'} className3={'top-2 lg:top-5 md:top-9'} texttwo={'Livings'} main={main} bottom={'-bottom-10 !h-[240px]  md:!h-[470px] !w-[85%] md:!w-[70%] lg:!w-[50%]'} main_im={Hero} cloud={cloud} overlay={true} im1={im} im2={im} />
-         <Image src={back} className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
+         <Image src={back} priority className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
           </div>
 
       <div className="block md:hidden w-full h-screen relative">
