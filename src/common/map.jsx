@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap, } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L, { icon } from 'leaflet';
@@ -49,46 +49,74 @@ useEffect(() => {
   return null;
 }
 
-const Map = ({ className, containerRef,sectionref,Name,center_position,markers,Main_marker,carcontainer}) => {
- 
+const Map = ({ className, containerRef, sectionref, Name, center_position, markers, Main_marker, carcontainer }) => {
+  const mapRef = useRef(null);
+  const [mapReady, setMapReady] = useState(false);
+  const [mapKey, setMapKey] = useState(0);
 
+  // Force re-render when markers or center position changes
+  useEffect(() => {
+    setMapReady(false);
+    const timer = setTimeout(() => {
+      setMapKey(prev => prev + 1);
+      setMapReady(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [markers, center_position]);
 
+  const handleMapLoad = (map) => {
+    mapRef.current = map;
+    
+    // Wait for the map to be fully initialized
+    setTimeout(() => {
+      if (markers?.coordinates) {
+        try {
+          const bounds = L.latLngBounds(markers.coordinates);
+          map.fitBounds(bounds, { padding: [100, 100] });
+        } catch (e) {
+          console.error('Error setting map bounds:', e);
+        }
+      }
+      
+      // Set up tile load tracking
+      let totalTiles = 0;
+      let loadedTiles = 0;
+      
+      map.eachLayer(layer => {
+        if (layer instanceof L.TileLayer) {
+          layer.on('tileloadstart', () => {
+            totalTiles++;
+          });
 
-const bounds = L.latLngBounds(markers.coordinates);
-  return ( <MapContainer
-      center={center_position}
-      zoom={25}
-      maxZoom={41}
-  whenCreated={(map) => {
-    map.fitBounds(bounds, { padding: [100, 100] }); // padding adds space around markers
-   // Wait until tiles are ready
-  map.eachLayer(layer => {
-    if (layer instanceof L.TileLayer) {
-      layer.on('tileloadstart', () => {
-        totalTiles++;
-      });
-
-      layer.on('tileload', () => {
-        loadedTiles++;
-        if (loadedTiles === totalTiles) {
-          // ✅ All tiles have loaded, now refresh ScrollTrigger
-          setTimeout(() => {
-            ScrollTrigger.refresh();
-            console.log('ScrollTrigger refreshed after tiles loaded.');
-          }, 100); // slight delay ensures layout settles
+          layer.on('tileload', () => {
+            loadedTiles++;
+            if (loadedTiles === totalTiles && totalTiles > 0) {
+              setTimeout(() => {
+                ScrollTrigger.refresh();
+                setMapReady(true);
+              }, 100);
+            }
+          });
         }
       });
-    }
-  });
-}}
+    }, 0);
+  };
 
-   zoomControl={false}
-  scrollWheelZoom={false}
-  touchZoom={false}
-  doubleClickZoom={false}
-  boxZoom={false}
-  dragging={false} // 
-      className={`${className}  h-[70vh]  w-[100%]`}
+  return (
+    <MapContainer
+      key={mapKey}
+      center={center_position}
+      zoom={13}
+      maxZoom={41}
+      zoomControl={false}
+      scrollWheelZoom={false}
+      touchZoom={false}
+      doubleClickZoom={false}
+      boxZoom={false}
+      dragging={false}
+      style={{ height: '70vh', width: '100%', minHeight: '400px' }}
+      className={className}
+      whenCreated={handleMapLoad}
     >{console.log()}
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
@@ -96,33 +124,51 @@ const bounds = L.latLngBounds(markers.coordinates);
       />
 
       {/* Main marker */}
-      <Marker position={center_position}   zIndexOffset={1000}// 👈 makes it stay on top
- icon={L.divIcon({
-        className: '',
-        html: `
-          <div style="display: flex; align-items: center; gap: 6px;">
-            <img src="/leaflet/marker-icon.png" width="5" height="5" />
-            <span style="font-size: 14px;color:#CCAB64; background: white; padding: 2px 6px; border-radius: 4px;">${Main_marker}</span>
-          </div>
-        `,
-      })}>
-        <Popup>{Name}</Popup>
-      </Marker>
+      {mapReady && center_position && (
+        <Marker 
+          position={center_position}
+          zIndexOffset={1000}
+          icon={L.divIcon({
+            className: 'main-marker',
+            html: `
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <img src="/leaflet/marker-icon.png" width="5" height="5" />
+                <span style="font-size: 14px;color:#CCAB64; background: white; padding: 2px 6px; border-radius: 4px; white-space: nowrap;">
+                  ${Main_marker || ''}
+                </span>
+              </div>
+            `,
+          })}
+        >
+          <Popup>{Name}</Popup>
+        </Marker>
+      )}
 
       {/* Other markers */}
-      {markers.map((marker, i) => (
-        <Marker key={i} position={marker.coordinates} icon={L.divIcon({
-          className: '',
-          html: `
-            <div style="display: flex; align-items: center; gap: 6px;">
-            <img src="${marker.icon}" width="5" height="5"  style="height:36px; width:36px"/>
-            <span style="font-size: 14px;color:#CCAB64; background: white; padding: 2px 6px; border-radius: 4px;">${marker.name}</span>
-            </div>
-          `,
-        })}>
-          <Popup>{marker.name}</Popup>
-        </Marker>
-        
+      {mapReady && markers?.map((marker, i) => (
+        marker?.coordinates && (
+          <Marker 
+            key={`${marker.coordinates.lat}-${marker.coordinates.lng}-${i}`}
+            position={marker.coordinates}
+            icon={L.divIcon({
+              className: 'location-marker',
+              html: `
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <img 
+                    src="${marker.icon || '/leaflet/marker-icon.png'}" 
+                    alt="${marker.name || 'Location'}"
+                    style="height: 36px; width: 36px; object-fit: contain;"
+                  />
+                  <span style="font-size: 14px; color: #CCAB64; background: white; padding: 2px 6px; border-radius: 4px; white-space: nowrap;">
+                    ${marker.name || ''}
+                  </span>
+                </div>
+              `,
+            })}
+          >
+            {marker.name && <Popup>{marker.name}</Popup>}
+          </Marker>
+        )
       ))}
 
       {/* 📌 Scroll-based zoom animation */}

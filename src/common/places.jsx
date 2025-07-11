@@ -14,49 +14,64 @@ const Map = dynamic(() => import('@/common/map'), {
 const places = ({center_position,Name,markers,Main_marker}) => {
 useEffect(() => {
   let ctx;
+  let animation;
 
   const loadGsap = async () => {
     const gsapModule = await import('gsap');
     const ScrollTrigger = (await import('gsap/ScrollTrigger')).ScrollTrigger;
     gsapModule.gsap.registerPlugin(ScrollTrigger);
-          ScrollTrigger.normalizeScroll(true);
-
+    ScrollTrigger.normalizeScroll(true);
 
     if (!movingRef.current || !sectionref.current) return;
 
-   // First, set the initial position
-   gsapModule.gsap.set(movingRef.current, { left: '17%' });
-   
-   // Then create the animation that will be controlled by ScrollTrigger
-   ctx = gsapModule.gsap.context(() => {
-     gsapModule.gsap.to(movingRef.current, {
-       left: '80%',
-       ease: 'none',
-       scrollTrigger: {
-         trigger: sectionref.current,
-         start: 'top top',  // Start when top of element is 80% from top of viewport
-         end: '+=1500',  // End when bottom of element is 20% from top of viewport
-         scrub: 1,
-      
-         onEnter: () => {
-           // Ensure car is at start position when entering the trigger
-           gsapModule.gsap.set(movingRef.current, { left: '17%' });
-         },
-         onLeaveBack: () => {
-           // Reset to start position when scrolling back past the trigger
-           gsapModule.gsap.set(movingRef.current, { left: '20%' });
-         }
-       }
-     });
-   }, sectionref);
+    // Clear any existing animations and ScrollTriggers
+    if (animation) {
+      animation.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    }
+
+    // Reset position
+    gsapModule.gsap.set(movingRef.current, { left: '17%' });
+    
+    // Create new animation with updated props
+    ctx = gsapModule.gsap.context(() => {
+      animation = gsapModule.gsap.to(movingRef.current, {
+        left: '80%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: sectionref.current,
+          start: 'top top',
+          end: '+=1500',
+          scrub: 1,
+          onEnter: () => {
+            gsapModule.gsap.set(movingRef.current, { left: '17%' });
+          },
+          onLeaveBack: () => {
+            gsapModule.gsap.set(movingRef.current, { left: '20%' });
+          },
+          // Add markers for debugging (can be removed in production)
+          markers: false
+        }
+      });
+    }, sectionref);
   };
 
   loadGsap();
 
+  // Cleanup function
   return () => {
-    ctx?.revert();
+    if (animation) {
+      animation.kill();
+    }
+    if (ctx) {
+      ctx.revert();
+    }
+    // Kill all ScrollTriggers to prevent memory leaks
+    if (typeof window !== 'undefined' && window.ScrollTrigger) {
+      window.ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    }
   };
-}, []);
+}, [center_position, Name, markers, Main_marker]); // Add all props that should trigger re-initialization
 
 
   const swipperRef=useRef(null)
