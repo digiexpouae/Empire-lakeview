@@ -172,9 +172,9 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
 
             {/* Middle: Links */}
             <div className="flex items-center gap-4 text-sm">
-              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Terms of Use</a>
+              <a href="/terms" className="text-white/80 hover:text-white transition-colors duration-300">Terms of Use</a>
               <div className="w-px h-4 bg-white/20"></div>
-              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Privacy Policy</a>
+              <a href="/privacy" className="text-white/80 hover:text-white transition-colors duration-300">Privacy Policy</a>
             </div>
 
             {/* Right: Social Icons */}
