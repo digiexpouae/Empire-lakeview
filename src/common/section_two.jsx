@@ -44,7 +44,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
   return (
     <>
       {/* OUTER WRAPPER */}
-      <div className="relative w-full overflow-hidden" ref={ref}>
+      <div className="relative w-full overflow-hidden bg-[#0E1527]" ref={ref}>
         {/* BACKGROUND IMAGE OUTSIDE PADDING */}
         {back_image && (
           <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] z-0 pointer-events-none">
