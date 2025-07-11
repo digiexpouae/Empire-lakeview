@@ -55,11 +55,11 @@ const Header = () => {
       link: '/projects',
       children: [
         { name: 'Lakeviews', link: '/lakeviews' },
+        { name: 'EMP(living)', link: '/EMPliving' },
+        { name: 'EMP(Estates)', link: '/EMPEstates' },
         { name: 'Empire Residence', link: '/Empireresidence' },
         { name: 'Plazzo Residence', link: '/plazoresidence' },
         { name: 'Plazzo Heights', link: '/plazoheights' },
-        { name: 'EMP(Estates)', link: '/EMPEstates' },
-        { name: 'EMP(living)', link: '/EMPliving' },
       ],
     },
     {   name: 'Channel Partners',
