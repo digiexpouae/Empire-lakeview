@@ -142,15 +142,15 @@ const disance = scrollDistance + 50;
   }, []);
 
   return (
-    <section className="bg-[#0D1028] py-10 md:py-16">
+    <section className="bg-[#0D1028] py-10 md:py-16 flex flex-col items-center">
       <h2 className="text-white text-[30px] md:text-[60px] font-bold text-center mb-8 md:mb-12 px-4">
         Our Latest Projects
       </h2>
-      <div ref={containerRef} className="relative h-[50vh] md:h-[80vh]  w-full">
+      <div ref={containerRef} className="relative h-[60vh] md:h-[80vh]  w-full">
         <div className=" md:h-[80vh] w-full overflow-hidden">
         <div ref={sliderRef} className="h-full flex items-start px-3 md:px-4 gap-4 md:gap-5">
           {projects.map((project, index) => (
-            <div
+            <div 
               key={index}
               className="project-card bg-white rounded-2xl p-4 md:p-6 w-[85vw] md:w-[580px] h-auto max-h-[80vh] shrink-0 shadow-xl flex flex-col"
             >
