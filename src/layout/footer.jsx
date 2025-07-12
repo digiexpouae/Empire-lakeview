@@ -22,19 +22,16 @@ const latestProjects = [
 ];
 
 const resources = [
-  { name: 'Press Release', href: '#' },
+  { name: 'Press Release', href: '/blogs' },
   { name: 'Blog', href: '#' },
-  { name: 'Whistleblower Line', href: '#' },
-  { name: 'Investor Relations', href: '#' },
-  { name: 'Mortgage Calculator', href: '#' },
+  { name: 'Mortgage Calculator', href: 'blogs' },
 ];
 
 const communities = [
-  { name: 'Arjan', href: '#' },
-  { name: 'JVC', href: '#' },
-  { name: 'Dubai South', href: '#' },
-  { name: 'Liwan', href: '#' },
-  { name: 'Dubai Science Park', href: '#' },
+  { name: 'Arjan', href: '/EMPEstates' },
+  { name: 'JVC', href: '/Empireresidence' },
+  { name: 'Liwan', href: '/lakeviews' },
+  { name: 'Dubai Science Park', href: '/EMPlivings' },
 ];
 
 // Animation variants
