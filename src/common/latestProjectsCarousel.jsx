@@ -18,7 +18,7 @@ const projects = [
     description:
       'Empire Development offers apartments for sale in Dubai in Jumeirah Village. This prime location makes life easier. It also offers great opportunities for real estate investment in Dubai. Empire Development apartments are ideal for anyone seeking a spacious and stylish home. These apartments also feature modern tech automation. It’s a great chance to buy luxury homes in Dubai. ',
     image: '/assets/slider/living.png',
-    href: '/EMPliving',
+    href: '/EMPlivings',
   },
   {
     logo: '/assets/cardlogo2.jpg',

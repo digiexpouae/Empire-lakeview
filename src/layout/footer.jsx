@@ -16,7 +16,7 @@ const quickLinks = [
 
 const latestProjects = [
   { name: 'Empire Lakeviews', href: '/lakeviews' },
-  { name: 'Empire Livings', href: '/EMPliving' },
+  { name: 'Empire Livings', href: '/EMPlivings' },
   { name: 'Empire Estates', href: '/EMPEstates' },
   { name: 'Empire Residence', href: '/Empireresidence' },
 ];

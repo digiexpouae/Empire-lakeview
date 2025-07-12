@@ -15,7 +15,7 @@ const projects = [
     text: 'Empire Living offers contemporary apartments in a vibrant community, featuring modern amenities, lush landscapes, and easy access to city hotspots.',
     btn: 'View Project',
     im: '/assets/empliving.jpg',
-    href: '/EMPliving',
+    href: '/EMPlivings',
   },
   {
     logo: '/assets/cardlogo2.png',
