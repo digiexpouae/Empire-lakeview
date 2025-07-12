@@ -25,7 +25,8 @@ export default function FeaturesSection() {
     <div
       key={feature.id}
       onClick={() => setActiveFeature(feature.id)}
-      className={`py-3 px-2 h-[80px] md:h-[120px] flex flex-col items-center justify-center cursor-pointer transition-colors duration-200`}
+      className={` w-[20%] md:w-[10%]
+ py-3 px-2 h-[80px] md:h-[120px] flex flex-col items-center justify-center cursor-pointer transition-colors duration-200`}
       style={{
         background: activeFeature === feature.id
           ? 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)'
@@ -33,7 +34,6 @@ export default function FeaturesSection() {
         color: activeFeature === feature.id ? 'black' : 'white',
         borderRight: '1px solid white',
         borderLeft: '1px solid white',
-        width: '20%'  // Ensures 5 items fit per row
       }}
     >
       <Image
