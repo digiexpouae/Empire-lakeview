@@ -12,7 +12,7 @@ import Map from '@/common/maptwo'
 import Sectiontext from '@/common/section_text'
 import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
-import mob from "../../../public/assets/Plazzo residence_mobile.png"
+import mob from "../../../public/assets/plazzo residence.jpg"
 import Sectionthree from './sectiontwo'
 const plazo = () => {
 const [main, setfirst] = useState(false)
