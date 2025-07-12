@@ -190,7 +190,8 @@ svg{
 }
 @media (max-width:786px) {
   .chat-widget {
-    right: 0px;
+    right: 20px;
+    bottom:0px
   }
 }
 
