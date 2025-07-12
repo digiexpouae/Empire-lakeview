@@ -23,7 +23,7 @@ const latestProjects = [
 
 const resources = [
   { name: 'Press Release', href: '/blogs' },
-  { name: 'Blog', href: '#' },
+  { name: 'Blog', href: '/blogs' },
   { name: 'Mortgage Calculator', href: 'blogs' },
 ];
 
