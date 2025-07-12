@@ -10,7 +10,7 @@ import SectionFour from '@/common/section4';
 import contactbg from "../../../public/assets/contact.png"
 import Sectionthree from '../empireresidence/sectionthree'
 import map2 from '../../../public/assets/empireimage.png'
-import mob from '../../../public/assets/residence.jpg'
+import mob from '../../../public/assets/Residence.png'
 import Map from '../../common/maptwo'
 import Testimonials from '@/common/testimonials'
 import Sectiontext from '@/common/section_text'
