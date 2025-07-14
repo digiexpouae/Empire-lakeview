@@ -179,7 +179,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
 
             {/* Right: Social Icons */}
             <div className="flex space-x-5 items-center mt-4 md:mt-0">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/empiredevelopmentsofficial?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/fb.png"
                   alt="Facebook"
@@ -188,7 +188,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/empiredevelopments1/?igsh=aDBlYTYwNXQ0ZmNi#" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/insta.png"
                   alt="Instagram"
@@ -197,7 +197,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/empiredevelopments1/" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/linkedin.png"
                   alt="LinkedIn"
@@ -206,7 +206,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/empdevelopments?s=21" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/x.png"
                   alt="X"
@@ -215,7 +215,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@EmpireDevelopments-ox1ju" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/youtube.png"
                   alt="YouTube"

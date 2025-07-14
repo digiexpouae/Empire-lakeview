@@ -423,3 +423,151 @@ svg{
     width: 40%;
   }
 }
+
+.mortgage-calculator-container {
+  background-color: #0b1d3a;
+  color: #ffffff;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.mortgage-calculator-content{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mortgage-calculator {
+  background-color: #1c2b4a;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.mortgage-calculator h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.calculator-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator-inputs {
+  width: 45%;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  background-color: #2a3a5a;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.input-field input {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-field span {
+  margin: 0 10px;
+}
+
+.input-field div {
+    display: flex;
+    gap: 5px;
+}
+
+.input-field button {
+    background-color: #3a4a6a;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.expert-advice-btn {
+  background-color: #d4af37;
+  color: #0b1d3a;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.calculator-results {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-container {
+  margin-bottom: 20px;
+}
+
+.result-details {
+    width: 100%;
+}
+
+.result-detail-content{
+    border-left: 1px solid #3a4a6a;
+    padding-left: 20px;
+}
+
+.result-details p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.calculator-description {
+  position: relative;
+  padding: 30px;
+  background-color: #0b1d3a;
+  border-radius: 10px;
+}
+
+.calculator-description p,
+.calculator-description ul {
+  max-width: 60%;
+}
+
+.calculator-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.calculator-description li {
+  margin-bottom: 15px;
+}
+
+.desc-logo{
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    opacity: 0.2;
+}
