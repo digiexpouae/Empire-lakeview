@@ -16,25 +16,22 @@ const quickLinks = [
 
 const latestProjects = [
   { name: 'Empire Lakeviews', href: '/lakeviews' },
-  { name: 'Empire Livings', href: '/EMPliving' },
+  { name: 'Empire Livings', href: '/EMPlivings' },
   { name: 'Empire Estates', href: '/EMPEstates' },
   { name: 'Empire Residence', href: '/Empireresidence' },
 ];
 
 const resources = [
-  { name: 'Press Release', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Whistleblower Line', href: '#' },
-  { name: 'Investor Relations', href: '#' },
-  { name: 'Mortgage Calculator', href: '#' },
+  { name: 'Press Release', href: '/blogs' },
+  { name: 'Blog', href: '/blogs' },
+  { name: 'Mortgage Calculator', href: 'blogs' },
 ];
 
 const communities = [
-  { name: 'Arjan', href: '#' },
-  { name: 'JVC', href: '#' },
-  { name: 'Dubai South', href: '#' },
-  { name: 'Liwan', href: '#' },
-  { name: 'Dubai Science Park', href: '#' },
+  { name: 'Arjan', href: '/EMPEstates' },
+  { name: 'JVC', href: '/Empireresidence' },
+  { name: 'Liwan', href: '/lakeviews' },
+  { name: 'Dubai Science Park', href: '/EMPlivings' },
 ];
 
 // Animation variants
@@ -172,9 +169,9 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
 
             {/* Middle: Links */}
             <div className="flex items-center gap-4 text-sm">
-              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Terms of Use</a>
+              <a href="/terms" className="text-white/80 hover:text-white transition-colors duration-300">Terms of Use</a>
               <div className="w-px h-4 bg-white/20"></div>
-              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Privacy Policy</a>
+              <a href="/privacy" className="text-white/80 hover:text-white transition-colors duration-300">Privacy Policy</a>
             </div>
 
             {/* Right: Social Icons */}

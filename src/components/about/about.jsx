@@ -146,6 +146,7 @@ const about = () => {
             priority
             alt="Background"
             className={`object-cover transition-opacity duration-700`}
+            priority
           />
         </div>
       </div>

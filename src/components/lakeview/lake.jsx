@@ -187,7 +187,7 @@ const index = () => {
           overlay={true}
           lakeview={true}
         />
-        <Image src={back} className="!left-0 !right-0 !top-0 !bottom-0 w-full h-full md:h-screen absolute z-0" />
+        <Image src={back} priority className="!left-0 !right-0 !top-0 !bottom-0 w-full h-full md:h-screen absolute z-0" />
       </div>
 
       {/* Mobile only: plain div with header and mobile image, covers full screen */}

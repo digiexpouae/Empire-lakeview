@@ -32,6 +32,7 @@ const index = () => {
           width={1200} 
           height={1000} 
           alt="Background"
+          priority
         />
         <div className="absolute inset-0 bg-[#002E3C80] z-10 transition-opacity duration-500 opacity-100"></div>
       </div>

@@ -6,7 +6,7 @@ import Image from 'next/image';
 const ProjectsNavigation = () => {
   const projects = [
     { id: 1, name: 'Empire Lakeviews', image: '/assets/lake.jpg', link: '/lakeviews' },
-    { id: 2, name: 'Empire Livings', image: '/assets/live.png', link: '/EMPliving' },
+    { id: 2, name: 'Empire Livings', image: '/assets/live.png', link: '/EMPlivings' },
     { id: 3, name: 'Empire Estates', image: '/assets/estate.jpg', link: '/EMPEstates' },
     { id: 4, name: 'Empire Residence', image: '/assets/plazoresidence.png', link: '/Empireresidence' },
     { id: 5, name: 'Plazo Residence', image: '/assets/plazores.png', link: '/plazoresidence' },

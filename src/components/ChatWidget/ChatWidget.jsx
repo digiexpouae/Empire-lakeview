@@ -210,7 +210,7 @@ const ChatWidget = () => {
               </div>
         <button type="submit" className="submit-button"
 
-        className="w-full text-white py-2 rounded-3xl "
+        className="w-full text-black py-2 rounded-3xl "
         style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)' }}
       >              <div className="flex items-center justify-center gap-2">
                         <img
