@@ -1,9 +1,9 @@
 import React from 'react'
-import MortgageCalculator from '@/components/mortgage-calculator/MortgageCalculator'
+import Mortgage from '@/components/mortgage-calculator/home'
 const mortgage = () => {
     return (
         <div>
-        <MortgageCalculator/>
+        <Mortgage/>
         </div>
     )
 }           
