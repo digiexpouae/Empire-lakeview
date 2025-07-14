@@ -1,4 +1,4 @@
-import MortgageCalculator from "./mortgageCalculator";
+import MortgageCalculator from "./MortgageCalculator.jsx";
 import Header from '../../layout/header'
 import Footer from '../../layout/footer'
 import Heroslider from "@/common/heroslider";
