@@ -621,9 +621,10 @@ input[type="range"] {
 
 .calculator-description {
   position: relative;
-  padding: 30px;
-  background-color: #0b1d3a;
-  border-radius: 10px;
+  overflow: hidden;
+  padding: 100px;
+  background-color: #0E1527 ;
+  color: white;
 }
 
 .calculator-description p,
@@ -633,16 +634,117 @@ input[type="range"] {
 
 .calculator-description ul {
   list-style: none;
-  padding: 0;
+   padding: 0; 
 }
 
 .calculator-description li {
   margin-bottom: 15px;
 }
 
-.desc-logo{
-    position: absolute;
-    right: 50px;
-    bottom: 20px;
-    opacity: 0.2;
+.desc-logo {
+  position: absolute;
+
+  transform: translate(150%, -50%);
+  opacity: 1;
 }
+
+
+/* ---------- Responsive Styling ---------- */
+@media (max-width: 1024px) {
+  /* .calculator-body {
+    /* flex-direction: column; */
+    /* align-items: stretch; */
+
+  .calculator-inputs,
+  .calculator-results {
+    width: 100% !important;
+  }
+
+  .calculator-results {
+    margin-top: 30px;
+  }
+
+  .calculator-description p,
+  .calculator-description ul {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+   .calculator-body {
+    flex-direction: column; 
+  align-items: stretch;
+  }
+  .mortgage-calculator-container {
+    padding: 30px 20px;
+  }
+
+  .mortgage-calculator h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    text-align: center;
+  }
+
+  .calculator-inputs .input-field input {
+    font-size: 0.9rem;
+  }
+
+  .expert-advice-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .result-details p {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+
+  /* .desc-logo {
+    right: 20px;
+    bottom: 10px;
+    width: 60px;
+  } */
+
+  .calculator-description {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mortgage-calculator h2 {
+    font-size: 1.6rem;
+  }
+
+  .input-field {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .result-details p {
+    flex-direction: row;
+    gap: 6px;
+    align-items: flex-start;
+  }
+
+  .input-field span {
+    margin: 5px 0;
+  }
+
+  .expert-advice-btn {
+    font-size: 0.85rem;
+    padding: 8px 18px;
+  }
+
+  .calculator-body {
+    gap: 10px;
+  }
+  .calculator-results{
+    display: none;
+  }
+  .calculator-inputs .input-group {
+    margin-bottom: 5px;
+  }
+  .result-detail-content{
+  padding-left: 0px;}
+}
+

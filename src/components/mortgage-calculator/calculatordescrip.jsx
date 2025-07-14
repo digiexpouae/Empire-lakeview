@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 const description =()=>{
     return(
         <div className="calculator-description">
@@ -10,7 +11,7 @@ const description =()=>{
   <li><strong>Down Payment:</strong> The initial amount paid upfront towards the purchase of the property, reducing the total loan amount.</li>
 </ul>
 <div className='desc-logo'>
-     <Image src="/assets/logo morr.png" alt="Logo" width={100} height={100} />
+     <Image src="/assets/logo morr.png" alt="Logo" width={500} height={500} />
 </div>
 </div>)}
 export default description 
