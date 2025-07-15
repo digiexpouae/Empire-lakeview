@@ -3,6 +3,7 @@ import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
 import { log } from 'console';
+import os from 'os';
 
 export const config = {
   api: {
@@ -15,7 +16,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const uploadDir = path.join(process.cwd(), '/public/uploads');
+  // const uploadDir = path.join(process.cwd(), '/public/uploads');
+  const uploadDir = path.join(os.tmpdir(), 'uploads');
   if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
   }
