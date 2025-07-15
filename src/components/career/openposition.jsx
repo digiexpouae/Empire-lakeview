@@ -32,7 +32,8 @@ export default function OpenPositions() {
                   <p className="text-sm md:text-base text-white/70 mb-4 w-[70%]">{job.description}</p>
                 )}
                 {job.button && (
-                  <button className="bg-[#E4CFA3] text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-[#f0dba9] transition-all">
+                  <button className=" text-black text-sm px-5 py-2 rounded-full  hover:bg-[#f0dba9] transition-all"     style={ {background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)'}}
+>
                     Apply Now
                   </button>
                 )}
