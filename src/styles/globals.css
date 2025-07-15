@@ -425,9 +425,7 @@ svg{
     flex-direction: column;
   }
   
-  .country-code {
-    width: 40%;
-  }
+ 
 }
 
 .mortgage-calculator-container {
@@ -803,7 +801,15 @@ input[type="range"] {
   color: #fff;
   font-size: 14px;
 }
-
+.form-group .country{
+  max-width: 15%;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background: #33354A;
+  color: #fff;
+  font-size: 14px;
+}
 .form-group input[type="file"] {
   padding: 10px;
 }

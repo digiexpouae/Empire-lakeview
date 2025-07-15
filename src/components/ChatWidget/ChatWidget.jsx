@@ -178,7 +178,7 @@ const ChatWidget = () => {
                <div className="form-group">
                 <div className="flex gap-1 w-full">
                   <select 
-                    className="country-code  min-w-[80px] bg-[#FFFFFF33] text-white border border-[rgba(255,255,255,0.1)] rounded-lg px-1 py-2 focus:outline-none focus:ring-2 focus:ring-[#4a90e2] focus:border-transparent"
+                    className="country-code country min-w-[80px] bg-[#FFFFFF33] text-white border border-[rgba(255,255,255,0.1)] rounded-lg px-1 py-2 focus:outline-none focus:ring-2 focus:ring-[#4a90e2] focus:border-transparent"
                     style={{ WebkitAppearance: 'none' }}
                   >
                   <option value="+971" className="text-black"> +971</option>
