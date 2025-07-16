@@ -715,6 +715,20 @@ input[type="range"] {
     padding: 30px;
   }
 }
+@media (max-width: 786px) {
+  .calculator-results{
+   display: none;
+ }
+   .result-details p {
+   flex-direction: row;
+   gap: 6px;
+   align-items: flex-start;
+ }
+ .result-detail-content{
+  border-left:none
+  }
+
+}
 
 @media (max-width: 480px) {
   .mortgage-calculator h2 {
