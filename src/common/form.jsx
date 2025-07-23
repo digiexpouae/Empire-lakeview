@@ -40,7 +40,8 @@ const form = ({ className, ref }) => {
         })
       });
       const data = await res.json();
-      if (res.ok) {
+    if (res.ok) {
+      setSuccess('Form submitted successfully')
        window.location.replace('/thankyou');
         setFormData({
           firstName: "",
@@ -51,7 +52,9 @@ const form = ({ className, ref }) => {
           dob: "",
           message: "",
         });
-      } else {
+        return;
+      } 
+      else {
         setError(data.error || "Something went wrong. Please try again.");
       }
     } catch (err) {

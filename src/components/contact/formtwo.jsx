@@ -40,6 +40,7 @@ const FormTwo = ({ className, ref }) => {
       });
       const data = await res.json();
       if (res.ok) {
+        setSuccess('Form submitted successfully')
         window.location.replace('/thankyou');
 
         // setSuccess("Your message has been sent successfully!");
@@ -52,8 +53,8 @@ const FormTwo = ({ className, ref }) => {
           dob: "",
           message: "",
         });
-     
-      
+          return;
+        
       } else {
         setError(data.message || "Failed to send message.");
       }

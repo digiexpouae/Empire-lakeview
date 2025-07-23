@@ -60,6 +60,7 @@ const router=useRouter();
       console.log(result);
 
       if (res.ok) {
+        setSuccess('Form submitted successfully')
         window.location.replace('/thankyou');
         setFormData({
           fullName: '',
@@ -75,6 +76,7 @@ const router=useRouter();
           resume: null,
           skills: '',
         });
+          return
       } else {
         setError(result.message || 'Submission failed.');
       }
