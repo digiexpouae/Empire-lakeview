@@ -227,6 +227,7 @@ const router=useRouter();
           <div className="form-group">
             <label>Please mention your top skills and the areas you’re best at.</label>
             <textarea
+            className='resize-none'
               name="skills"
               rows="4"
               placeholder="Select"

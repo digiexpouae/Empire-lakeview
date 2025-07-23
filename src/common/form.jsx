@@ -41,8 +41,8 @@ const form = ({ className, ref }) => {
       });
       const data = await res.json();
       if (res.ok) {
-         window.location.replace('/thankyou');
-            setFormData({
+       window.location.replace('/thankyou');
+        setFormData({
           firstName: "",
           lastName: "",
           email: "",
@@ -51,7 +51,6 @@ const form = ({ className, ref }) => {
           dob: "",
           message: "",
         });
-         return;
       } else {
         setError(data.error || "Something went wrong. Please try again.");
       }
