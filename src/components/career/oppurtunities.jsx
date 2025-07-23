@@ -60,7 +60,7 @@ const router=useRouter();
       console.log(result);
 
       if (res.ok) {
-        router.push('/thankyou');
+        window.location.replace('/thankyou');
         setFormData({
           fullName: '',
           email: '',

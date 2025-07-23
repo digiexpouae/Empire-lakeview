@@ -41,16 +41,17 @@ const form = ({ className, ref }) => {
       });
       const data = await res.json();
       if (res.ok) {
-        router.push('/thankyou');
-        setFields({
+         window.location.replace('/thankyou');
+            setFormData({
           firstName: "",
           lastName: "",
           email: "",
           phone: "",
           propertyType: "",
-          budget: "",
-          message: ""
+          dob: "",
+          message: "",
         });
+         return;
       } else {
         setError(data.error || "Something went wrong. Please try again.");
       }
