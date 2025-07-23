@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-
+import { useRouter } from 'next/router';
 export default function OpportunitiesForm() {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -20,7 +20,7 @@ export default function OpportunitiesForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
-
+const router=useRouter();
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     setFormData((prev) => ({
@@ -60,7 +60,7 @@ export default function OpportunitiesForm() {
       console.log(result);
 
       if (res.ok) {
-        setSuccess('Your application has been submitted!');
+        router.push('/thankyou');
         setFormData({
           fullName: '',
           email: '',

@@ -1,8 +1,8 @@
 'use client'
 
+import { useRouter } from "next/router";
 import React from "react"
 import { useState } from "react";
-
 const form = ({ className, ref }) => {
   const [fields, setFields] = useState({
     firstName: "",
@@ -20,7 +20,7 @@ const form = ({ className, ref }) => {
   const handleChange = (e) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
   };
-
+  const router =useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -41,7 +41,7 @@ const form = ({ className, ref }) => {
       });
       const data = await res.json();
       if (res.ok) {
-        setSuccess("Thank you! We have received your message.");
+        router.push('/thankyou');
         setFields({
           firstName: "",
           lastName: "",

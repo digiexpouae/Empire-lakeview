@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+import { useRouter } from "next/router";
 const FormTwo = ({ className, ref }) => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -39,7 +40,8 @@ const FormTwo = ({ className, ref }) => {
       });
       const data = await res.json();
       if (res.ok) {
-        setSuccess("Your message has been sent successfully!");
+        // setSuccess("Your message has been sent successfully!");
+        router.push('/thankyou');
         setFormData({
           firstName: "",
           lastName: "",
