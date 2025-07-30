@@ -1,31 +1,34 @@
 'use client';
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+
 export default function Complainform() {
   const [formData, setFormData] = useState({
-    fullName: '',
+    fullname: '',
     email: '',
     phoneCode: '+91',
-    phoneNumber: '',
-    country: '',
-    city: '',
-    role: '',
-    currentSalary: '',
-    expectedSalary: '',
-    linkedin: '',
-    resume: null,
-    skills: '',
+    phonenumber: '',
+    property: '',
+    propertyaddress: '',
+    unitvillanumber: '',
+    contractbookingnumber: '',
+    categoryofcomplaint: '',
+    severitylevel: '',
+    dateofincident: '',
+    detaileddescription: '',
+    previouslycontactattempt: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
-const router=useRouter();
+  const router = useRouter();
+
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: files ? files[0] : value,
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
@@ -37,46 +40,22 @@ const router=useRouter();
 
     try {
       const payload = new FormData();
-      payload.append('fullName', formData.fullName);
-      payload.append('email', formData.email);
-      payload.append('phone', `${formData.phoneCode} ${formData.phoneNumber}`);
-      payload.append('country', formData.country);
-      payload.append('city', formData.city);
-      payload.append('role', formData.role);
-      payload.append('currentSalary', formData.currentSalary);
-      payload.append('expectedSalary', formData.expectedSalary);
-      payload.append('linkedin', formData.linkedin);
-      payload.append('skills', formData.skills);
-      if (formData.resume) {
-        payload.append('resume', formData.resume);
-      }
+      Object.entries(formData).forEach(([key, value]) => {
+        payload.append(key, value);
+      });
+      payload.set('phonenumber', `${formData.phoneCode} ${formData.phonenumber}`);
 
-      const res = await fetch('/api/oppurtunity', {
+      const res = await fetch('/api/customer', {
         method: 'POST',
         body: payload,
       });
 
       const result = await res.json();
-      console.log(result);
 
       if (res.ok) {
-        setSuccess('Form submitted successfully')
+        setSuccess('Form submitted successfully');
         window.location.replace('/thankyou');
-        setFormData({
-          fullName: '',
-          email: '',
-          phoneCode: '+91',
-          phoneNumber: '',
-          country: '',
-          city: '',
-          role: '',
-          currentSalary: '',
-          expectedSalary: '',
-          linkedin: '',
-          resume: null,
-          skills: '',
-        });
-          return
+        return;
       } else {
         setError(result.message || 'Submission failed.');
       }
@@ -90,45 +69,41 @@ const router=useRouter();
   return (
     <div className="page-wrapper">
       <div className="form-container">
-        <h2 className='!text-4xl font-semibold '>Submit Your Complaint</h2>
+        <h2 className='!text-4xl font-semibold'>Submit Your Complaint</h2>
         <p className='text-center mb-6'>Please provide as much detail as possible to help us investigate your concern effectively.</p>
         <form onSubmit={handleSubmit}>
-        <p className='mb-4'>Your contact information</p>
-        <div className="form-row">
-    
+          <p className='mb-4'>Your contact information</p>
 
-          <div className="form-group">
-            <label>Full Name*</label>
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Enter your full name"
-              value={formData.fullName}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-   
+          <div className="form-row">
+            <div className="form-group">
+              <label>Full Name*</label>
+              <input
+                type="text"
+                name="fullname"
+                value={formData.fullname}
+                onChange={handleChange}
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
             <div className="form-group">
               <label>Email*</label>
               <input
                 type="email"
                 name="email"
-                placeholder="Enter"
                 value={formData.email}
                 onChange={handleChange}
+                placeholder="Enter your email address"
                 required
               />
             </div>
-
-          
           </div>
+
           <div className="form-group">
-              <label>Ph Number*</label>
-              <div className="phone-row">
-                <select name="phoneCode" value={formData.phoneCode} onChange={handleChange}>
-                  <option value="+1">+1</option>
+            <label>Ph Number*</label>
+            <div className="phone-row">
+              <select name="phoneCode" value={formData.phoneCode} onChange={handleChange}>
+              <option value="+1">+1</option>
                   <option value="+44">+44</option>
                   <option value="+61">+61</option>
                   <option value="+91">+91</option>
@@ -141,21 +116,21 @@ const router=useRouter();
                   <option value="+33">+33</option>
                   <option value="+55">+55</option>
                   <option value="+7">+7</option>
-                  <option value="+27">+27</option>
-                </select>
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="Mobile number"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+                  <option value="+27">+27</option>              </select>
+              <input
+                type="tel"
+                name="phonenumber"
+                placeholder="Enter your mobile number"
+                value={formData.phonenumber}
+                onChange={handleChange}
+                required
+              />
             </div>
-            <div className="form-group">
+          </div>
+
+          <div className="form-group">
             <label>Property/Project</label>
-            <select name="role" value={formData.role} onChange={handleChange}>
+            <select name="property" value={formData.property} onChange={handleChange}>
               <option value="">Select</option>
               <option value="Developer">Developer</option>
               <option value="Designer">Designer</option>
@@ -165,102 +140,102 @@ const router=useRouter();
 
           <div className="form-row">
             <div className="form-group">
-              <label>Property Adress</label>
+              <label>Property Address</label>
               <input
                 type="text"
-                name="Property Adress"
-                placeholder="Enter Property Adress"
-                value={formData.PropertyAdress}
+                name="propertyaddress"
+                value={formData.propertyaddress}
                 onChange={handleChange}
+                placeholder="Enter property address"
               />
             </div>
             <div className="form-group">
-              <label>Unit Villa Number</label>
+              <label>Unit/Villa Number</label>
               <input
                 type="text"
-                name="Unit Villa Number"
-                placeholder="Villa/Unit Number"
-                value={formData.Unit}
+                name="unitvillanumber"
+                value={formData.unitvillanumber}
                 onChange={handleChange}
+                placeholder="Enter villa/unit number"
               />
             </div>
           </div>
 
-      
           <div className="form-group">
-              <label>Contract Booking number</label>
-              <input
-                type="text"
-                name="Contract Booking number"
-                placeholder="Enter"
-                value={formData.ContractBookingnumber}
-                onChange={handleChange}
-              />
-            </div>
-   
-         
-            <div className="form-group">
-              <label>Category of complaint*</label>
-              <input
-                type="text"
-                name="Category of complaint"
-                placeholder="Enter"
-                value={formData.Categoryofcomplaint}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label> Severity Level</label>
-              <input
-                type="text"
-                name=" Severity Level"
-                placeholder="Enter"
-                value={formData.SeverityLevel}
-                onChange={handleChange}
-              />
-            </div>
-      
-         
-            <div className="form-group">
-              <label>Date of incident</label>
-              <input
-                type="date"
-                name="dateofincident"
-                value={formData.dateofincident}
-                onChange={handleChange}
-              />
+            <label>Contract Booking Number</label>
+            <input
+              type="text"
+              name="contractbookingnumber"
+              value={formData.contractbookingnumber}
+              onChange={handleChange}
+              placeholder="Enter contract/booking number"
+            />
           </div>
 
           <div className="form-group">
-            <label>Detailed Description </label>
+            <label>Category of Complaint*</label>
+            <input
+              type="text"
+              name="categoryofcomplaint"
+              value={formData.categoryofcomplaint}
+              onChange={handleChange}
+              placeholder="Enter complaint category"
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Severity Level</label>
+            <input
+              type="text"
+              name="severitylevel"
+              value={formData.severitylevel}
+              onChange={handleChange}
+              placeholder="Enter severity level"
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Date of Incident</label>
+            <input
+              type="date"
+              name="dateofincident"
+              value={formData.dateofincident}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Detailed Description</label>
             <textarea
-            className='resize-none'
+              className="resize-none"
               name="detaileddescription"
               rows="4"
-              placeholder="Enter description"
               value={formData.detaileddescription}
               onChange={handleChange}
+              placeholder="Enter detailed description"
             ></textarea>
           </div>
-          <div className="form-group">
-              <label>Previously Contact Attempt</label>
-              <input
-                type="text"
-                name="previouslycontactattempt"
-                placeholder='Enter'
-                value={formData.contactattempt}
-                onChange={handleChange}
-              />
-          </div> 
-          <div className="flex gap-2 items-center mb-2 ">
-              <input
-                type="checkbox"
-                name="previouslycontactattempt"
-                value={formData.previouslycontactattempt}
-                className='w-4 h-4'
-                onChange={handleChange}
-              />              <p className="text-sm">i consent to being contacted for follow-up on this report</p>
 
+          <div className="form-group">
+            <label>Previously Contact Attempt</label>
+            <input
+              type="text"
+              name="previouslycontactattempt"
+              placeholder="Enter yes or no"
+              value={formData.previouslycontactattempt ? 'Yes' : 'No'}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="flex gap-2 items-center mb-2">
+            <input
+              type="checkbox"
+              name="previouslycontactattempt"
+              checked={formData.previouslycontactattempt}
+              onChange={handleChange}
+              className="w-4 h-4"
+            />
+            <p className="text-sm">I consent to being contacted for follow-up on this report</p>
           </div>
 
           <button type="submit" className="submit-btn" disabled={isSubmitting}>
