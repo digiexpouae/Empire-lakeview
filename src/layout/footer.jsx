@@ -24,6 +24,8 @@ const latestProjects = [
 const resources = [
   { name: 'Press Release', href: '/blogs' },
   { name: 'Blog', href: '/blogs' },
+  { name: 'WhistleBowler Line', href: '/whistleblower' },
+  { name: 'Investor Relations', href: '/' },
   { name: 'Mortgage Calculator', href: '/mortgage-calculator' },
 ];
 
