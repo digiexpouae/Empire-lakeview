@@ -12,7 +12,7 @@ export default function ReportForm() {
     fullname: '',
     email: '',
     phnumber: '',
-    phoneCode: '+91',
+    phoneCode: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,31 +28,52 @@ export default function ReportForm() {
     }));
   };
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSuccess('');
     setError('');
 
-    try {
-      const payload = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        payload.append(key, value);
-      });
+    // Validate email format
+    if (!validateEmail(formData.email)) {
+      setError('Please enter a valid email address');
+      setIsSubmitting(false);
+      return;
+    }
 
-      // Combine phone code and number
-      payload.set('phnumber', `${formData.phoneCode} ${formData.phnumber}`);
+    try {
+      // Build the full payload as JSON
+      const payload = {
+        categoryofconcern: formData.categoryofconcern,
+        descriptionofincident: formData.descriptionofincident,
+        location: formData.location,
+        dateofincident: formData.dateofincident,
+        witnessifany: formData.witnessifany,
+        fullname: formData.fullname,
+        email: formData.email,
+        phone: `${formData.phoneCode} ${formData.phnumber}`,
+      };
 
       const res = await fetch('/api/whistleform', {
         method: 'POST',
-        body: payload,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
-
       const result = await res.json();
 
+
       if (res.ok) {
+    
         setSuccess('Form submitted successfully');
         window.location.replace('/thankyou');
+        console.log(res)
         setFormData({
           categoryofconcern: '',
           descriptionofincident: '',
@@ -62,9 +83,8 @@ export default function ReportForm() {
           fullname: '',
           email: '',
           phnumber: '',
-          phoneCode: '+91',
+          phoneCode: '',
         });
-        return;
       } else {
         setError(result.message || 'Submission failed.');
       }
@@ -79,22 +99,20 @@ export default function ReportForm() {
     <div className="page-wrapper">
       <div className="form-container">
         <h2 className="font-medium !text-4xl">Submit a Report</h2>
-        <p className="text-center">
+        <p className="text-center mb-6">
           Please provide as much detail as possible to help us investigate your concern effectively.
         </p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Category of concern</label>
-            <select
+            <input
+              type="text"
               name="categoryofconcern"
+              placeholder="Category of concern"
               value={formData.categoryofconcern}
               onChange={handleChange}
-            >
-              <option value="">Select</option>
-              <option value="Developer">Developer</option>
-              <option value="Designer">Designer</option>
-              <option value="Manager">Manager</option>
-            </select>
+              required
+            />
           </div>
 
           <div className="form-group">

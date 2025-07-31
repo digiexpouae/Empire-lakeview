@@ -16,7 +16,8 @@ export default function Complainform() {
     severitylevel: '',
     dateofincident: '',
     detaileddescription: '',
-    previouslycontactattempt: false,
+    previouslycontactattempt: '',
+    contactConsent:'false'
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,37 +35,45 @@ export default function Complainform() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+ 
     setSuccess('');
     setError('');
-
+  
+    if (!formData.contactConsent) {
+      setError('You must consent to be contacted to submit the form.');
+      return;
+    }
+    setIsSubmitting(true);
     try {
-      const payload = new FormData();
-      Object.entries(formData).forEach(([key, value]) => {
-        payload.append(key, value);
-      });
-      payload.set('phonenumber', `${formData.phoneCode} ${formData.phonenumber}`);
-
+      const finalFormData = {
+        ...formData,
+        phonenumber: `${formData.phoneCode} ${formData.phonenumber}`,
+      };
+  
       const res = await fetch('/api/customer', {
         method: 'POST',
-        body: payload,
+        headers: {
+          'Content-Type': 'application/json', // Important
+        },
+        body: JSON.stringify(finalFormData), // Send raw JSON
       });
-
+  
       const result = await res.json();
-
+  
       if (res.ok) {
         setSuccess('Form submitted successfully');
         window.location.replace('/thankyou');
-        return;
       } else {
         setError(result.message || 'Submission failed.');
       }
     } catch (err) {
+      console.error(err);
       setError('An error occurred while submitting the form.');
     } finally {
       setIsSubmitting(false);
     }
   };
+  
 
   return (
     <div className="page-wrapper">
@@ -130,12 +139,9 @@ export default function Complainform() {
 
           <div className="form-group">
             <label>Property/Project</label>
-            <select name="property" value={formData.property} onChange={handleChange}>
-              <option value="">Select</option>
-              <option value="Developer">Developer</option>
-              <option value="Designer">Designer</option>
-              <option value="Manager">Manager</option>
-            </select>
+            <input name="property" placeholder="Enter property/project name" value={formData.property} onChange={handleChange} required/>
+         
+         
           </div>
 
           <div className="form-row">
@@ -221,20 +227,20 @@ export default function Complainform() {
             <input
               type="text"
               name="previouslycontactattempt"
-              placeholder="Enter yes or no"
-              value={formData.previouslycontactattempt ? 'Yes' : 'No'}
+              placeholder="Enter"
+              value={formData.previouslycontactattempt}
               onChange={handleChange}
             />
           </div>
 
           <div className="flex gap-2 items-center mb-2">
-            <input
-              type="checkbox"
-              name="previouslycontactattempt"
-              checked={formData.previouslycontactattempt}
-              onChange={handleChange}
-              className="w-4 h-4"
-            />
+          <input
+    type="checkbox"
+    name="contactConsent"
+    checked={formData.contactConsent}
+    onChange={handleChange}
+    className="w-4 h-4"
+  />
             <p className="text-sm">I consent to being contacted for follow-up on this report</p>
           </div>
 
