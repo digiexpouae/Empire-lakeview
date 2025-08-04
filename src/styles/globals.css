@@ -776,6 +776,15 @@ input[type="range"] {
   justify-content: center;
 }
 
+.page-wrapper-2 {
+  background: #1B1D2F;
+  min-height: 80vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+/* ===
 /* === Form container === */
 .form-container {
   background: #1B1D2F;
