@@ -6,7 +6,6 @@ import Image from "next/image";
 const LAND_VIDEO_PATH = "/assets/newdesktop.mp4";
 const PORT_VIDEO_PATH = "/assets/newmobile.mp4";
 const POSTER_IMAGE_PATH = "/assets/fallback.png";
-const LOGO_PATH = "/assets/logo2.png";
 
 export default function Section1() {
   const [videoSrc, setVideoSrc] = useState(null);
