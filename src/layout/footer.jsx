@@ -16,25 +16,22 @@ const quickLinks = [
 
 const latestProjects = [
   { name: 'Empire Lakeviews', href: '/lakeviews' },
-  { name: 'Empire Livings', href: '/EMPliving' },
+  { name: 'Empire Livings', href: '/EMPlivings' },
   { name: 'Empire Estates', href: '/EMPEstates' },
   { name: 'Empire Residence', href: '/Empireresidence' },
 ];
 
 const resources = [
-  { name: 'Press Release', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Whistleblower Line', href: '#' },
-  { name: 'Investor Relations', href: '#' },
-  { name: 'Mortgage Calculator', href: '#' },
+  { name: 'Press Release', href: '/blogs' },
+  { name: 'Blog', href: '/blogs' },
+  { name: 'Mortgage Calculator', href: 'blogs' },
 ];
 
 const communities = [
-  { name: 'Arjan', href: '#' },
-  { name: 'JVC', href: '#' },
-  { name: 'Dubai South', href: '#' },
-  { name: 'Liwan', href: '#' },
-  { name: 'Dubai Science Park', href: '#' },
+  { name: 'Arjan', href: '/EMPEstates' },
+  { name: 'JVC', href: '/Empireresidence' },
+  { name: 'Liwan', href: '/lakeviews' },
+  { name: 'Dubai Science Park', href: '/EMPlivings' },
 ];
 
 // Animation variants
@@ -172,14 +169,14 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
 
             {/* Middle: Links */}
             <div className="flex items-center gap-4 text-sm">
-              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Terms of Use</a>
+              <a href="/terms" className="text-white/80 hover:text-white transition-colors duration-300">Terms of Use</a>
               <div className="w-px h-4 bg-white/20"></div>
-              <a href="#" className="text-white/80 hover:text-white transition-colors duration-300">Privacy Policy</a>
+              <a href="/privacy" className="text-white/80 hover:text-white transition-colors duration-300">Privacy Policy</a>
             </div>
 
             {/* Right: Social Icons */}
             <div className="flex space-x-5 items-center mt-4 md:mt-0">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/empiredevelopmentsofficial?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/fb.png"
                   alt="Facebook"
@@ -188,7 +185,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/empiredevelopments1/?igsh=aDBlYTYwNXQ0ZmNi#" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/insta.png"
                   alt="Instagram"
@@ -197,7 +194,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/empiredevelopments1/" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/linkedin.png"
                   alt="LinkedIn"
@@ -206,7 +203,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/empdevelopments?s=21" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/x.png"
                   alt="X"
@@ -215,7 +212,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
                   className="hover:scale-110 transition-transform duration-300"
                 />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@EmpireDevelopments-ox1ju" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/assets/youtube.png"
                   alt="YouTube"

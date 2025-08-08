@@ -22,7 +22,7 @@ const sectionthree = ({ wrapper }) => {
     btn: 'View Project',
     im: '/assets/aca90d068f6adc319f0ca21c6af07538d9cb4322.png',
     className: 'z-[30]',
-    href: '/EMPliving',
+    href: '/EMPlivings',
   },
   {
     logo: '/assets/cardlogo2.jpg',
