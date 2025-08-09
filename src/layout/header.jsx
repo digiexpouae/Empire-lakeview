@@ -63,7 +63,7 @@ const Header = () => {
       ],
     },
     {   name: 'Channel Partners',
-      link: 'https://empiredevelopments.ae/agency-register',
+      link: 'https://app.empiredevelopments.ae/agency-register ',
       external: true },
       { name: 'Blogs', link: '/blogs'}
   ];
@@ -157,7 +157,7 @@ const Header = () => {
             </motion.a>
 
             <motion.a
-              href="https://empiredevelopments.ae/login"
+              href="https://app.empiredevelopments.ae/login"
               target="_blank"
               rel="noopener noreferrer"
               variants={fadeUp}
@@ -226,7 +226,7 @@ const Header = () => {
                 Contact Us
               </motion.a>
               <motion.a
-                href="https://empiredevelopments.ae/login" target="_blank" rel="noopener noreferrer"
+                href="https://app.empiredevelopments.ae/login" target="_blank" rel="noopener noreferrer"
                 variants={fadeUp}
                 className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 py-2 rounded-full transition-all duration-300 text-center text-base"
               >
