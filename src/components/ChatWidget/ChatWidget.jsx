@@ -44,22 +44,6 @@ const ChatWidget = () => {
     },
   });
 
-  useEffect(() => {
-    const requestMicPermission = async () => {
-      try {
-        await navigator.mediaDevices.getUserMedia({ audio: true });
-        setConversationState(prev => ({ ...prev, hasPermission: true }));
-      } catch (error) {
-        console.error('Error accessing microphone:', error);
-        setConversationState(prev => ({
-          ...prev,
-          hasPermission: false,
-          errorMessage: 'Microphone access denied'
-        }));
-      }
-    };
-    requestMicPermission();
-  }, []);
 
   // ✅ Automatically start conversation when second modal opens
   useEffect(() => {
@@ -120,13 +104,38 @@ const ChatWidget = () => {
     return Object.keys(errors).length === 0;
   };
 
-  const handleFirstModalSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
+// ❌ remove the useEffect with requestMicPermission
+
+const handleFirstModalSubmit = async (e) => {
+  e.preventDefault();
+  if (validateForm()) {
+    try {
+      await navigator.mediaDevices.getUserMedia({ audio: true });
+      setConversationState(prev => ({ ...prev, hasPermission: true }));
       setIsFirstModalOpen(false);
-      setIsSecondModalOpen(true); // ✅ triggers useEffect to start conversation
+      setIsSecondModalOpen(true); // triggers useEffect to start conversation
+    } catch (error) {
+      console.error('Error accessing microphone:', error);
+
+      if (error.name === "NotAllowedError") {
+        // Mic blocked in browser settings
+        setConversationState(prev => ({
+          ...prev,
+          hasPermission: false,
+          errorMessage: 'Microphone is blocked. Please enable it in your browser settings.'
+        }));
+      } else {
+        setConversationState(prev => ({
+          ...prev,
+          hasPermission: false,
+          errorMessage: 'Unable to access microphone.'
+        }));
+      }
     }
-  };
+  }
+};
+
+
 
   const handleImageClick = (e) => {
     e.stopPropagation();
@@ -222,6 +231,11 @@ const ChatWidget = () => {
                       </div>
                     </button>
             </form>
+            {conversationState.errorMessage && (
+  <div className="text-red-500 text-sm mb-4 p-2 bg-red-50 rounded">
+    {conversationState.errorMessage}
+  </div>
+)}
           </div>
         </div>
       )}

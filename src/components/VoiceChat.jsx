@@ -28,19 +28,6 @@ const VoiceChat = () => {
 
   const { status, isSpeaking } = conversation;
 
-  useEffect(() => {
-    const requestMicPermission = async () => {
-      try {
-        await navigator.mediaDevices.getUserMedia({ audio: true });
-        setHasPermission(true);
-      } catch (error) {
-        setErrorMessage('Microphone access denied');
-        console.error('Error accessing microphone:', error);
-      }
-    };
-
-    requestMicPermission();
-  }, []);
 
   const handleStartConversation = async () => {
     try {
