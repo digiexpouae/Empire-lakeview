@@ -5,7 +5,7 @@ import Head from 'next/head';
 const index = () => {
   return (
     <>
- <Head>
+      <Head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -73,7 +73,7 @@ const index = () => {
         />
       </Head>
       <Home /></>
-  
+
   )
 }
 

@@ -43,7 +43,7 @@ import Textsection from '../../common/hometext'
 const index = () => {
   const [showEmailPop, setShowEmailPop] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => setShowEmailPop(true), 10_000); // 10 000 ms = 10 s
     return () => clearTimeout(timer); // clean-up if the component unmounts early
   }, []);
@@ -70,7 +70,7 @@ const index = () => {
       unlockScroll();
     };
   }, [showEmailPop]);
-  const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/Empireresidence',text:'Empire Residence'}]
+  const ima = [{ im: ima1, link: '/plazoheights', text: 'Plazzo heights' }, { im: ima2, link: '/plazoresidence', text: 'Plazzo Residence' }, { im: ima3, link: '/Empireresidence', text: 'Empire Residence' }]
 
   const main = useRef(null)
 
@@ -130,7 +130,7 @@ const index = () => {
       h: 50,
       w: 50
     },
-   
+
   ]
 
   const introRef = useRef(null)
@@ -148,10 +148,77 @@ const index = () => {
   const back = '/assets/3837ceaa4e2c8efd1acd975f7cdb181e3ba97fb9.png'
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.empiredevelopments.ae/#website",
+                  url: "https://www.empiredevelopments.ae/",
+                  name: "Empire Developments",
+                  description:
+                    "Empire Developments is a leading real estate developer in Dubai, UAE, offering premium residential and commercial properties with modern architecture and high ROI potential.",
+                  publisher: {
+                    "@id": "https://www.empiredevelopments.ae/#organization",
+                  },
+                  inLanguage: "en",
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target:
+                      "https://www.empiredevelopments.ae/?s={search_term_string}",
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.empiredevelopments.ae/#organization",
+                  name: "Empire Developments",
+                  url: "https://www.empiredevelopments.ae/",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://www.empiredevelopments.ae/wp-content/uploads/2024/04/Empire-Developments-Logo.png",
+                  },
+                  sameAs: [
+                    "https://www.facebook.com/empiredevelopments",
+                    "https://www.instagram.com/empiredevelopments",
+                    "https://www.linkedin.com/company/empiredevelopments",
+                  ],
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    telephone: "+971 800 700007",
+                    contactType: "Customer Service",
+                    areaServed: "AE",
+                    availableLanguage: ["English", "Arabic"],
+                  },
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://www.empiredevelopments.ae/#webpage",
+                  url: "https://www.empiredevelopments.ae/",
+                  name: "Empire Developments | Leading Real Estate Developer in Dubai, UAE",
+                  isPartOf: {
+                    "@id": "https://www.empiredevelopments.ae/#website",
+                  },
+                  about: {
+                    "@id": "https://www.empiredevelopments.ae/#organization",
+                  },
+                  description:
+                    "Explore premium properties in Dubai by Empire Developments. Discover luxury apartments, villas, and investment opportunities with high returns.",
+                  inLanguage: "en",
+                },
+              ],
+            }),
+          }}
+        />
+      </Head>
 
       {/* EMAIL POPUP MODAL */}
       {showEmailPop && (
-        <div style={{zIndex: 99999}} className="fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center">
+        <div style={{ zIndex: 99999 }} className="fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center">
           <div className="relative">
             <button
               onClick={() => setShowEmailPop(false)}
@@ -174,7 +241,7 @@ const index = () => {
 
       <Header className='nav-menu absolute z-50' />
 
-      <Hero/>
+      <Hero />
 
       {/* <div
         style={{
@@ -190,47 +257,47 @@ const index = () => {
         className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div> */}
-        <Textsection  head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a leading real estate developer in Dubai. We create smart, eco-friendly, and luxurious homes. Our future-ready homes combine luxury, cutting-edge technology, and elegant design. Empire Development is transforming the urban lifestyle in the UAE.'} />
+      <Textsection head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a leading real estate developer in Dubai. We create smart, eco-friendly, and luxurious homes. Our future-ready homes combine luxury, cutting-edge technology, and elegant design. Empire Development is transforming the urban lifestyle in the UAE.'} />
 
       <div className='bg-[#0E1527] relative' ref={main}>
-  <LatestProjectsCarousel />
+        <LatestProjectsCarousel />
         {/* <Sectiontwo amenities={amenities} /> */}
 
 
-         
+
         {/* <div className='h-[700px]'>
           <h3 className='text-[15px] md:text-[45px] text-center my-heading leading-6 text-white font-bold'>
             Successfully Delivered
           </h3> */}
-    
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[500px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
-          {/* </div> */}
-        </div>  
-        
-        <Vision backgroundImage="/assets/visionbg.png" />
-        <div className=' w-full  md:h-[500px] lg:h-[700px]'>
-          <Image src={chess} className='w-full h-full object-cover' />
-          </div>
 
-         <div ref={brandRef} className=' flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
-        
-      
-         <AdvantagesSection />
+        <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[500px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
+        {/* </div> */}
+      </div>
 
-       
-        </div>  
-        
-        <Section />
+      <Vision backgroundImage="/assets/visionbg.png" />
+      <div className=' w-full  md:h-[500px] lg:h-[700px]'>
+        <Image src={chess} className='w-full h-full object-cover' />
+      </div>
 
-        <Section_two home={true} head={'24/7 Access'} text={text} amenities={icons} back_image={true} icontext={'md:!text-[15px]'}/>
-        
-       
+      <div ref={brandRef} className=' flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
 
-      
+
+        <AdvantagesSection />
+
+
+      </div>
+
+      <Section />
+
+      <Section_two home={true} head={'24/7 Access'} text={text} amenities={icons} back_image={true} icontext={'md:!text-[15px]'} />
+
+
+
+
       <SectionFour images={contactbg} />
 
       <Footer />
-      
+
       {/* Chat Widget */}
       <ChatWidget />
     </>
