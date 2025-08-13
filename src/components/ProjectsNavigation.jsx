@@ -9,8 +9,8 @@ const ProjectsNavigation = () => {
     { id: 2, name: 'Empire Livings', image: '/assets/live.png', link: '/EMPlivings' },
     { id: 3, name: 'Empire Estates', image: '/assets/estate.jpg', link: '/EMPEstates' },
     { id: 4, name: 'Empire Residence', image: '/assets/plazoresidence.png', link: '/Empireresidence' },
-    { id: 5, name: 'Plazo Residence', image: '/assets/plazores.png', link: '/plazoresidence' },
-    { id: 6, name: 'Plazo Heights', image: '/assets/plazoheihtts.png', link: '/plazoheights' },
+    { id: 5, name: 'Plazzo Residence', image: '/assets/plazores.png', link: '/plazoresidence' },
+    { id: 6, name: 'Plazzo Heights', image: '/assets/plazoheihtts.png', link: '/plazoheights' },
   ];
 
   const [activeImage, setActiveImage] = React.useState(projects[0].image);
