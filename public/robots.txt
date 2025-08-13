@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /*?
+Disallow: /admin/
+Disallow: /login/
+Disallow: /ads.txt/
+Disallow: /?
+Disallow: /register/
+Disallow: /user/
+Disallow: /account/
+Disallow: /cart/
+Disallow: /forgot-password
+Disallow: /contact-us/
+Disallow: /checkout/
+Disallow: /search
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /agency-register
+
+Sitemap: https://empiredevelopments.ae/sitemap.xml
+
