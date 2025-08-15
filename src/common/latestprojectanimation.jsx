@@ -39,29 +39,29 @@ import { useGSAP } from "@gsap/react";
   },
 ];
    
- useGSAP(() => {
-  if (typeof window === "undefined") return;
+  useGSAP(() => {
+    if (typeof window === "undefined") return;
 
-  import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.normalizeScroll(true);
+    import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
+      gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.normalizeScroll(true);
+  
 
-    let resizeTimeout;
-
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
+      const handleResize = () => {
         setIsMobile(window.innerWidth < 768);
 
-        // Kill old animation & ScrollTriggers
+        // Kill old animation if it exists
         animationRef.current?.kill();
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        const containerWidth = containerRef.current
+  ?.querySelector('.container')
+  ?.offsetWidth || 0;
 
-        const containerWidth =
-          containerRef.current?.querySelector(".container")?.offsetWidth || 0;
+       
+        const sliderWidth = sliderRef.current.scrollWidth; // total width of all cards
 
-        const sliderWidth = sliderRef.current.scrollWidth;
+
         const distanceToSlide = sliderWidth - containerWidth;
+const cards = gsap.utils.toArray('.project-card');
 
         animationRef.current = gsap.to(sliderRef.current, {
           x: -distanceToSlide,
@@ -70,26 +70,24 @@ import { useGSAP } from "@gsap/react";
             trigger: containerRef.current,
             start: "top top",
             scrub: true,
+         
+                // snap: 1 / (cards.length - 1),
+
             pin: true,
+
+
           },
         });
+      };
 
-        // Force recalculation of ScrollTrigger
-        ScrollTrigger.refresh();
-      }, 150); // debounce delay
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      clearTimeout(resizeTimeout);
-      window.removeEventListener("resize", handleResize);
-      animationRef.current?.kill();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
-  });
-}, []);
+      handleResize();
+ window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+        animationRef.current?.kill();
+      };
+    });
+  }, []);
 
   
         return(
