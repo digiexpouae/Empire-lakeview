@@ -115,7 +115,7 @@ const child=document.querySelectorAll('.home')
                            // 👈 Animate to original position
               opacity: 1,
               duration: 2,
-              delay: 2,
+              delay: 1,
               ease: 'power2.out',
             }
         ),
@@ -126,7 +126,7 @@ const child=document.querySelectorAll('.home')
                          // 👈 Animate to original position
             opacity: 1,
             duration: 2,
-            delay: 2,
+            delay: 1,
             ease: 'power2.out',
           }
       )

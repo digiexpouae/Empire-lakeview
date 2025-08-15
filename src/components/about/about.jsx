@@ -153,7 +153,7 @@ const about = () => {
 
       <div className='bg-[#0E1527]'>
         <Fadein>
-                  <Textsection head={'Redefining Luxury Living in Dubai'}  text={"At Empire Developments, we craft more than homes — we create architectural landmarks that embody elegance, innovation, and exclusivity. From the heart of Dubai’s most prestigious addresses to emerging lifestyle destinations, our developments offer unparalleled views, bespoke interiors, and world-class amenities designed for those who demand the finest. With Empire Developments, every detail is a statement, every space a sanctuary, and every home a legacy"} />
+                  <Textsection head={'Driven by Vision, Built on Quality'}  text={"Empire Developments was founded under the leadership of Mr. Kamran Ghani, whose vision and entrepreneurial drive have been instrumental in shaping the company’s success. Recognized for its versatility and innovation in real estate development, Empire Developments specializes in delivering high-quality residential and commercial projects, combining innovative design, superior construction standards, and a commitment to creating exceptional value for both investors and homeowners."} />
 
         </Fadein>
             <Fadein>

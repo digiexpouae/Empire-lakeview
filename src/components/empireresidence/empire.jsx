@@ -85,7 +85,7 @@ const empire = () => {
  
         <Sectionthree />
 
-        <Map title={'View Plazzo Heights'} map={map2} />
+        <Map title={'View Empire Residence'} map={map2} />
    
         <Testimonials />
    
