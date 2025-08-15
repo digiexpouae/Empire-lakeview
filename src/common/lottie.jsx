@@ -13,7 +13,7 @@ const lottie = ({amenities,className,className1,ref,className2,iconsize}) => {
                
                 >
 <Lottie animationData={amenity.icon} loop={true}  className= {`lg:h-[60px] lg:w-[60px] h-[60%] ${iconsize}`}/>               
-                  <p className={`  text-[5px] md:text-[20px] font-light my-heading h-[40%] ${className2}`}>
+                  <p className={`  text-[5px] md:text-[20px] hidden md:block  font-light my-heading h-[40%] ${className2}`}>
                     {amenity.title}
                   </p>
                  

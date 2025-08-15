@@ -4,6 +4,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import Script from "next/script";
+import Lenis from "@studio-freight/lenis";
+import { useEffect } from "react";
+
 // Dynamically import ChatWidget with no SSR to avoid window is not defined errors
 const ChatWidget = dynamic(() => import('@/components/ChatWidget/ChatWidget'), {
   ssr: false,
@@ -11,7 +14,34 @@ const ChatWidget = dynamic(() => import('@/components/ChatWidget/ChatWidget'), {
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  useEffect(() => {
+    const lenis = new Lenis({
+ 
+      wheelMultiplier: 1,
+      touchMultiplier: 2.5,
+      duration: 1.2,
+      syncTouchLerp: 0.1,
+      lerp: 0.09
+ 
+ // ✅ Correct easing
+    });
+
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+
+
+  
+  }, []);
+
+ 
   return (
+
 <>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EX8BY8FJR"></script>
   <Script

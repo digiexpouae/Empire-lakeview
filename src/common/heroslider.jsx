@@ -103,8 +103,8 @@ const child=document.querySelectorAll('.home')
               {y:0,
                              // 👈 Animate to original position
                 opacity: 1,
-                duration: 4,
-                delay: 2,
+                duration: 2,
+                delay: 1,
                 ease: 'power2.out',
               }
           ),
@@ -114,7 +114,7 @@ const child=document.querySelectorAll('.home')
             {y:0,
                            // 👈 Animate to original position
               opacity: 1,
-              duration: 4,
+              duration: 2,
               delay: 2,
               ease: 'power2.out',
             }
@@ -125,7 +125,7 @@ const child=document.querySelectorAll('.home')
           {y:0,
                          // 👈 Animate to original position
             opacity: 1,
-            duration: 4,
+            duration: 2,
             delay: 2,
             ease: 'power2.out',
           }

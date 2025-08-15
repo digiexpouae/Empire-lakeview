@@ -114,19 +114,19 @@ const index = () => {
   const icons = [
     {
       icon: Voice,
-      title: "Voice service request",
+      title:<>Voice service <br/> request</>,
       h: 50,
       w: 50
     },
     {
       icon: Card,
-      title: "Online payment ",
+      title: <>Online <br /> payment </>,
       h: 50,
       w: 50
     },
     {
       icon: Process,
-      title: " Digital handover process",
+      title: <> Digital handover <br /> process</>,
       h: 50,
       w: 50
     },
@@ -190,7 +190,9 @@ const index = () => {
         className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div> */}
-        <Textsection  head={'Discover a New Era of Living'} text={'Welcome to Empire Development, a leading real estate developer in Dubai. We create smart, eco-friendly, and luxurious homes. Our future-ready homes combine luxury, cutting-edge technology, and elegant design. Empire Development is transforming the urban lifestyle in the UAE.'} />
+        <Textsection  head={'Redefining Luxury Living in Dubai'}
+         
+text={"At Empire Developments, we craft more than homes — we create architectural landmarks that embody elegance,innovation, and exclusivity.From the heart of Dubai’s most prestigious addresses to emerging lifestyle destinations, our developments offer unparalleled views, bespoke interiors, and world-class amenities designed for those who demand the finest. With Empire Developments, every detail is a statement, every space a sanctuary, and every home a legacy."} />
 
       <div className='bg-[#0E1527] relative' ref={main}>
   <LatestProjectsCarousel />
@@ -203,7 +205,7 @@ const index = () => {
             Successfully Delivered
           </h3> */}
     
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[500px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[350px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
           {/* </div> */}
         </div>  
         
@@ -222,7 +224,7 @@ const index = () => {
         
         <Section />
 
-        <Section_two home={true} head={'24/7 Access'} text={text} amenities={icons} back_image={true} icontext={'md:!text-[15px]'}/>
+        <Section_two home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} icontext={'md:!text-[15px]'}/>
         
        
 

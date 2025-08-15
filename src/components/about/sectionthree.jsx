@@ -61,14 +61,21 @@ const SectionThree = () => {
           {/* Text Block */}
           <div className='flex flex-col justify-center w-full md:w-[50%] text-center md:!text-start'>
             <motion.span
-              className='mb-4 text-[10px] lg:text-[11px] xl:text-[23px] my-heading xl:leading-9'
+              className='mb-4 text-[10px] lg:text-[11px] xl:text-[18px] tracking-tight  my-heading xl:leading-7'
               variants={textVariant}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               custom={0}
             >
-              Empowering the entrepreneurial odyssey with an unyielding vision, my mission is to transcend limits, scoff at the word 'NO,' and carve a legacy of relentless innovation and triumph.
+At Ghani Holdings, our journey has been guided by a
+vision without limits, one built on bold decisions,
+relentless innovation, and an unwavering commitment
+to excellence. For me, success is not only about the
+milestones we achieve, but about leading with passion,
+inspiring those around me, and building an Empire
+whose influence and legacy will continue to grow.
+
             </motion.span>
 
             <motion.div

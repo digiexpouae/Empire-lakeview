@@ -46,7 +46,9 @@ useEffect(()=>{
         </div>
         <div className='text-white w-full md:w-[40%] lg:w-[40%] mt-2 mb-4 md:mb-5 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left' ref={ref1}>
           <h2 className='text-2xl md:text-5xl mb-5 font-bold'>Vision</h2>
-          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-6'>To be a leading force in redefining real estate excellence by creating iconic, sustainable communities that inspire modern living.</span>
+          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-6'>To shape the future of real estate by creating landmark
+developments that inspire, elevate lifestyles, and set
+new benchmarks in luxury living.</span>
         </div>
       </motion.div>
       {/* Mission Section */}

@@ -30,10 +30,15 @@ const Vision = ({ backgroundImage }) => {
           viewport={{ once: true }}
           className="mt-6 text-base max-w-3xl md:text-lg font-light leading-relaxed"
         >
-     Empire Development offers modern, smart, and eco-friendly projects tailored to our clients' needs. 
-     We focus on creating experiences that enhance every part of your life. 
-     Empire Development offers premium-quality real estate development.
-      If you want to buy a luxury home or property for sale in Dubai, Empire Development is your ideal partner.
+At Empire Developments, we create landmark residences
+across Dubai that embody elegance, innovation, and
+enduring value. Every project is a testament to our
+commitment to thoughtful design, uncompromising quality,
+and a lifestyle that goes beyond the ordinary. In the heart of
+one of the world’s most dynamic real estate markets, our
+legacy is built not just in structures, but in the trust and pride
+of those who call them home.
+
         </motion.p>
         </div>
       </div>

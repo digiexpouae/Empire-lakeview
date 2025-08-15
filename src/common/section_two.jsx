@@ -64,7 +64,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
               </div>
 
               {/* Mobile Amenities */}
-              <div className="flex md:hidden gap-4 mt-4">
+              <div className="flex md:hidden justify-between md:gap-4 mt-4">
                 {amenities.map((amenity, idx) => (
                   <motion.div
                     key={amenity.title}

@@ -77,7 +77,7 @@ const AdvantagesSection = () => {
           viewport={{ once: true }}
           className="text-5xl md:text-6xl font-bold text-center text-[#2A2A2A] mb-12"
         >
-          The Advantages
+        What Sets Us Apart
         </motion.h2>
 
         {/* Desktop view */}
