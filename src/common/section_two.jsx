@@ -58,13 +58,13 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
             {/* LEFT SECTION */}
             <div className={`flex flex-col lg:w-[40%] ${home ? 'gap-8' : 'xl:gap-0 lg:gap-[45px]'}`}>
               <div className={`w-full text-black flex md:items-start items-center justify-center md:justify-start ${home ? '' : 'xl:h-[280px]'}`} ref={ref1}>
-                <h2 className="text-[40px] md:text-[30px] lg:text-[70px] sm:text-5xl font-bold tracking-tighter text-white">
+                <h2 className="text-[40px] md:text-[30px] lg:text-[60px] sm:text-5xl font-bold tracking-tighter text-white " style={{whiteSpace:'nowrap'}}>
                   {head}
                 </h2>
               </div>
 
               {/* Mobile Amenities */}
-              <div className="flex md:hidden justify-between md:gap-4 mt-4">
+              <div className="flex md:hidden justify-between px-10 md:px-0 md:gap-4 mt-4">
                 {amenities.map((amenity, idx) => (
                   <motion.div
                     key={amenity.title}
@@ -76,7 +76,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                     <div className="h-[50px] w-[50px] mb-1">
                       <LottieIcons amenities={[amenity]} iconsize="h-[50px] w-[50px]" />
                     </div>
-                    <span className="text-white text-[10px] mt-1 text-center">{amenity.title}</span>
+                    <span className="text-white text-[8px] leading-tight mt-1 text-center tracking-tighter clamp-3">{amenity.title}</span>
                   </motion.div>
                 ))}
               </div>

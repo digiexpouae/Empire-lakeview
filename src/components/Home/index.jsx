@@ -114,19 +114,19 @@ const index = () => {
   const icons = [
     {
       icon: Voice,
-      title:<>Voice <br/> service  request</>,
+      title:<>Voice  <br/> service <br/>  request</>,
       h: 50,
       w: 50
     },
     {
       icon: Card,
-      title: <>Online <br /> payment </>,
+      title: <>Online  <br/> payment </>, 
       h: 50,
       w: 50
     },
     {
       icon: Process,
-      title: <> Digital <br /> handover process</>,
+      title: <> Digital  <br/> handover <br/> process</>,
       h: 50,
       w: 50
     },

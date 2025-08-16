@@ -852,7 +852,7 @@ input[type="range"] {
   color: #fff;
   padding: 12px;
   border-radius: 20px 0 0 20px;
-  flex: 0 0 25%;
+  flex: 0 0 16%;
 }
 
 .phone-row input {
@@ -899,10 +899,16 @@ input[type="range"] {
   }
 
   .phone-row select {
-    flex: 0 0 30%;   /* adjust for mobile */
+    flex: 0 0 21%;   /* adjust for mobile */
   }
 
   .phone-row input {
     flex: 1 1 70%;
   }
+}
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;   /* limit to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
