@@ -3,7 +3,7 @@ import Image from 'next/image';
 import bot from '../../../public/assets/Union.png';
 import { useConversation } from '@elevenlabs/react';
 import { Mic, MicOff } from 'lucide-react';
-
+// done
 const ChatWidget = () => {
   const [isFirstModalOpen, setIsFirstModalOpen] = useState(false);
   const [isSecondModalOpen, setIsSecondModalOpen] = useState(false);
