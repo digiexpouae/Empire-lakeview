@@ -117,7 +117,7 @@ const AdvantagesSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center text-center max-w-[160px] mx-auto"
+            className="flex flex-col items-center text-center max-w-[200px] "
           >
             <div className="w-20 h-20 relative mb-2">
               <Image
@@ -127,7 +127,7 @@ const AdvantagesSection = () => {
                 className="object-contain"
               />
             </div>
-            <p className="text-sm font-medium text-[#2A2A2A] leading-tight">
+            <p  style={{whiteSpace: 'nowrap'}} className="text-sm font-medium text-[#2A2A2A] leading-tight">
               {advantages[currentIndex].title}
             </p>
           </motion.div>
