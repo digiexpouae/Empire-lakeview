@@ -22,7 +22,6 @@ import empire13 from '../../../public/assets/living16.webp'
 import empire14 from '../../../public/assets/livng3.webp'
 import empire15 from '../../../public/assets/living.jpg'
 import empire16 from '../../../public/assets/empirelivin (16).jpg'
-import empire17 from '../../../public/assets/empirelivin (17).jpg'
 import empire18 from '../../../public/assets/living16.webp'
 import empire19 from '../../../public/assets/ep.jpg'
 
@@ -58,27 +57,29 @@ const SectionThree = () => {
             trigger: container.current,
             start: "center center",
             end: `+=${scrollDistance}`,
-            scrub:true,
+            scrub:2.0,
             pin: true,
             pinType:'transform',
             pinSpacing: true,
             anticipatePin: 1,
-            onEnter: () => ScrollTrigger.refresh(),
+           
             onLeave: () => {
     document.querySelector('.container').style.position = 'relative';
   },
       
-            anticipatePin:1, onEnter: () => {
-      // if your map/slider needs to finish loading first:
-      ScrollTrigger.refresh();
-            },
+
           }
         });
       }, container);
     });
   });
 
-  return () => ctx.kill()
+  return () => {
+    // 👇 protect against undefined
+    if (ctx && ctx.kill) {
+      ctx.kill();
+    }
+  };
 }, [container]);
 
 
@@ -95,30 +96,30 @@ const SectionThree = () => {
 
             <div className='columns-4 flex flex-wrap h-full m-auto items-center justify-center gap-3'>
     
-    <div className={' mt-20 w-[22%] h-[110px] md:h-[190px] lg:h-[290px]'}><Image src={empire1} priority className='!h-full !w-full   rounded-3xl object-cover object-center'/></div>
-    <div className={'   w-[22%] h-[120px] md:h-[200px] lg:h-[280px] '}><Image src={empire18}  priority  className='!h-full !w-full  rounded-3xl object-cover '/></div>
-    <div className={'w-[22%] h-[90px] md:h-[170px] lg:h-[250px]  mt-16 '}><Image src={empire3} priority  className='!h-full !w-full  rounded-3xl object-cover '/></div>
-    <div className={'w-[22%] h-[120px] md:h-[200px] lg:h-[290px]  '}><Image src={empire4} priority  className='!h-full !w-full   rounded-3xl object-cover '/></div>
-    <div className={'w-[22%] h-[100px] md:h-[180px] lg:h-[260px] -mt-2 md:-mt-10'}><Image src={empire5} priority  className='!h-full !w-full   rounded-3xl object-cover '/></div>
-    <div className={'w-[22%] h-[140px] md:h-[270px] lg:h-[350px] -mt-10  md:-mt-10 lg:-mt-12'}><Image src={empire6} priority   className='!h-full !w-full   rounded-3xl object-cover '/></div>
-    <div className={'w-[22%] h-[80px] md:h-[160px] lg:h-[240px] -mt-12 md:-mt-30 '}><Image src={empire7} priority  className='!h-full !w-full   rounded-3xl object-cover '/></div>
-    <div className={'w-[22%] h-[120px] md:h-[200px] lg:h-[290px] -mt-16 md:-mt-24'}><Image src={empire8}  priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] -mt-2 md:-mt-12 lg:-mt-10 '}><Image src={empire9} priority   className='!h-full !w-full  rounded-3xl object-cover'/></div>
-    <div className={'w-[22%] h-[100px] md:-[180px] lg:h-[260px] md:-mt-28 lg:-mt-12'}><Image src={empire10} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%] h-[60px] md:h-[140px] lg:h-[320px] -mt-32 md:-mt-70 lg:-mt-42'}><Image src={empire2} priority   className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%] h-[100px] md:h-[180px] lg:h-[260px] -mt-16 md:-mt-38'}><Image src={empire12}  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px]  '}><Image src={empireliv} priority   className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%] h-[90px] md:h-[170px] lg:h-[250px]  -mt-20 md:-mt-84 lg:-mt-46 '}><Image src={empire14} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] lg:-mt-38 md:-mt-90 -mt-40'}><Image src={empire15} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] -mt-20 md:-mt-52'}><Image src={empire16} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%] h-[90px] md:h-[170px] lg:h-[250px] -mt-4 md:-mt-2'}><Image src={empire3}  priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
-    <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] -mt-16 md:-mt-84 lg:-mt-54'}><Image src={empire2}priority  className='!h-full !w-full   rounded-3xl object-cover'/></div> 
-         <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] -mt-26 md:-mt-65 lg:-mt-18'}><Image src={empire8} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div> 
+    <div className={'mt-20 w-[22%] loading="lazy" h-[110px] md:h-[190px] lg:h-[290px]'}><Image src={empire1}  className='!h-full !w-full   rounded-3xl object-cover object-center'/></div>
+    <div className={'w-[22%] loading="lazy" h-[120px] md:h-[200px] lg:h-[280px] '}><Image src={empire18}    className='!h-full !w-full  rounded-3xl object-cover '/></div>
+    <div className={'w-[22%] loading="lazy" h-[90px] md:h-[170px] lg:h-[250px]  mt-16 '}><Image src={empire3}   className='!h-full !w-full  rounded-3xl object-cover '/></div>
+    <div className={'w-[22%] loading="lazy" h-[120px] md:h-[200px] lg:h-[290px]  '}><Image src={empire4}   className='!h-full !w-full   rounded-3xl object-cover '/></div>
+    <div className={'w-[22%] loading="lazy" h-[100px] md:h-[180px] lg:h-[260px] -mt-2 md:-mt-10'}><Image src={empire5}   className='!h-full !w-full   rounded-3xl object-cover '/></div>
+    <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] -mt-10  md:-mt-10 lg:-mt-12'}><Image src={empire6}    className='!h-full !w-full   rounded-3xl object-cover '/></div>
+    <div className={'w-[22%] loading="lazy" h-[80px] md:h-[160px] lg:h-[240px] -mt-12 md:-mt-30 '}><Image src={empire7}   className='!h-full !w-full   rounded-3xl object-cover '/></div>
+    <div className={'w-[22%] loading="lazy" h-[120px] md:h-[200px] lg:h-[290px] -mt-16 md:-mt-24'}><Image src={empire8}    className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] -mt-2 md:-mt-12 lg:-mt-10 '}><Image src={empire9}    className='!h-full !w-full  rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy" h-[100px] md:-[180px] lg:h-[260px] md:-mt-28 lg:-mt-12'}><Image src={empire10}   className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy" h-[60px] md:h-[140px] lg:h-[320px] -mt-32 md:-mt-70 lg:-mt-42'}><Image src={empire2}    className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy" h-[100px] md:h-[180px] lg:h-[260px] -mt-16 md:-mt-38'}><Image src={empire12}  className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px]  '}><Image src={empireliv}    className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy" h-[90px] md:h-[170px] lg:h-[250px]  -mt-20 md:-mt-84 lg:-mt-46 '}><Image src={empire14}   className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] lg:-mt-38 md:-mt-90 -mt-40'}><Image src={empire15}   className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] -mt-20 md:-mt-52'}><Image src={empire16}   className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy" h-[90px] md:h-[170px] lg:h-[250px] -mt-4 md:-mt-2'}><Image src={empire3}    className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] -mt-16 md:-mt-84 lg:-mt-54'}><Image src={empire2}  className='!h-full !w-full   rounded-3xl object-cover'/></div> 
+         <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] -mt-26 md:-mt-65 lg:-mt-18'}><Image src={empire8}   className='!h-full !w-full   rounded-3xl object-cover'/></div> 
 
-     <div className={'w-[22%]  h-[140px] md:h-[270px] lg:h-[350px] -mt-8 md:-mt-24'}><Image priority  src={empire13}  className='!h-full !w-full   rounded-3xl object-cover'/></div> 
-     <div className={'w-[22%] h-[120px] md:h-[200px] lg:h-[290px] '}><Image src={empire} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
+     <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] -mt-8 md:-mt-24'}><Image   src={empire13}  className='!h-full !w-full   rounded-3xl object-cover'/></div> 
+     <div className={'w-[22%] loading="lazy" h-[120px] md:h-[200px] lg:h-[290px] '}><Image src={empire}   className='!h-full !w-full   rounded-3xl object-cover'/></div>
          <div className='flex flex-col items-center  w-[45%]'>
-          <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8 '}><Image src={empirelivin} priority  className='!h-full !w-full   rounded-3xl object-contain'/>
+          <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8 '}><Image src={empirelivin}   className='!h-full !w-full   rounded-3xl object-contain'/>
             </div>
                    <a 
                   href="/files/02 - Individual Floor Plans Book - Empire Livings.pdf"
@@ -128,7 +129,7 @@ const SectionThree = () => {
     hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-[9px] md:text-sm lg:text-base whitespace-nowrap">Download Floor Plan</a>
           </div>
 
-    <div className={'w-[22%] h-[120px] md:h-[180px] lg:h-[260px] '}><Image src={empire19} priority  className='!h-full !w-full   rounded-3xl object-cover'/></div>
+    <div className={'w-[22%] loading="lazy" h-[120px] md:h-[180px] lg:h-[260px] '}><Image src={empire19}   className='!h-full !w-full   rounded-3xl object-cover'/></div>
     {/* <div><Image src={empire}  className='!h-full !w-full   rounded-3xl object-cover'/></div> */}
     
           </div>
