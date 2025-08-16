@@ -114,7 +114,7 @@ const index = () => {
   const icons = [
     {
       icon: Voice,
-      title:<>Voice  <br/> service <br/>  request</>,
+      title:<>Voice   service <br/>  request</>,
       h: 50,
       w: 50
     },
@@ -126,7 +126,7 @@ const index = () => {
     },
     {
       icon: Process,
-      title: <> Digital  <br/> handover <br/> process</>,
+      title: <> Digital   handover <br/> process</>,
       h: 50,
       w: 50
     },
