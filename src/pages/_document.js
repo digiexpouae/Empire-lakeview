@@ -26,7 +26,7 @@ export default function Document() {
   <title>Property for Sale in Dubai | Real Estate Developers UAE</title>
   <base href="/" />
   <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
-  <link rel="icon" type="image/x-icon" href="/assets/EMPIRE Cursor-01.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="preconnect" href="https://www.google-analytics.com" />
