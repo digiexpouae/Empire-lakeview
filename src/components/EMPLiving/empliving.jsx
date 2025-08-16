@@ -40,7 +40,7 @@ const icons = [
   { img: DubaiMarina, name: 'Dubai Marina', distance: '25 minutes' },
 ];
 
-
+// links
 
 
 const markers = [
@@ -64,28 +64,28 @@ const images = [
     im: '/assets/EMPIRESLIDER4.webp',
     tex1: 'Studio',
     tex2: 'SIZE: 432.42 SQ.FT',
-    link1: 'https://empiredevelopments.ae/empire-livings/360views/emplivstudio',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/studio',
     link2: '/contact',
   },
   {
     im: '/assets/EMPIRESLIDER1.webp',
     tex1: '1 Bed',
     tex2: 'SIZE: 2633.68 SQ.FT. TO 2682.94 SQ.FT.',
-    link1: 'https://empiredevelopments.ae/empire-livings/360views/1bed',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/1bed',
     link2: '/contact',
   },
   {
     im: '/assets/EMPIRESLIDER2.webp',
     tex1: '2 Bed',
     tex2: 'SIZE: 1319 SQ.FT. TO 1328 SQ.FT.',
-    link1: 'https://empiredevelopments.ae/empire-livings/360views/2bed',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/2bed',
     link2: '/contact',
   },
   {
     im: '/assets/EMPIRESLIDER3.webp',
     tex1: 'Duplex',
     tex2: 'SIZE: 753 SQ.FT. TO 867 SQ.FT',
-    link1: 'https://empiredevelopments.ae/empire-livings/360views/duplex',
+    link1: 'https://empiredevelopments.ae/empire-estates/360views/2-bed-duplex',
     link2: '/contact',
   },
   {
