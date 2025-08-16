@@ -30,59 +30,62 @@ const SectionThree = () => {
   const scrollRef = useRef()
 
   useLayoutEffect(() => {
+    if (!scrollRef.current || !container.current) return;
+  
     let ctx;
-
-    import('gsap').then(gsapModule => {
-      import('gsap/ScrollTrigger').then(scrollTriggerModule => {
+    let mm;
+  
+    import("gsap").then((gsapModule) => {
+      import("gsap/ScrollTrigger").then((scrollTriggerModule) => {
         const gsap = gsapModule.default;
         const ScrollTrigger = scrollTriggerModule.ScrollTrigger;
         gsap.registerPlugin(ScrollTrigger);
-
-        if (!scrollRef.current || !container.current) return;
-
+  
+        mm = gsap.matchMedia();
         ctx = gsap.context(() => {
           const scrollEl = scrollRef.current;
           const scrollHeight = scrollEl.scrollHeight;
           const containerHeight = container.current.offsetHeight;
-          const scrollDistance = (scrollHeight + 100) - containerHeight;
+          const scrollDistance = scrollHeight - containerHeight;
           const ending = scrollDistance + 500;
-          
-          // Set scrollTop to 0 initially
-          scrollEl.scrollTop = 0;
-
-          // Create the scroll animation
-          const ct = gsap.to(scrollRef.current, {
-            scrollTop: ending,
-            ease: "none",
-            scrollTrigger: {
-              trigger: container.current,
-              start: "center center",
-              end: `+=${scrollDistance}`,
-              scrub: 2.0,
-              pin: true,
-              pinType: 'transform',
-              pinSpacing: true,
-              anticipatePin: 1,
-              onLeave: () => {
-                document.querySelector('.container').style.position = 'relative';
+  
+          mm.add("(min-width: 1024px)", () => {
+            // Reset scrollTop initially
+            scrollEl.scrollTop = 0;
+  
+            gsap.to(scrollEl, {
+              scrollTop: ending,
+              ease: "none",
+              scrollTrigger: {
+                trigger: container.current,
+                start: "center center",
+                end: `+=${scrollDistance}`,
+                scrub: 2,
+                pin: true,
+                pinType: "transform",
+                pinSpacing: true,
+                anticipatePin: 1,
+                onLeave: () => {
+                  container.current.style.position = "relative";
+                },
               },
-            }
+            });
           });
-        }, container);
+        });
       });
     });
-
+  
     return () => {
-      if (ctx && ctx.kill) {
-        ctx.kill();
-      }
+      if (ctx?.kill) ctx.kill();
+      if (mm?.revert) mm.revert();
     };
   }, [container]);
+  
 
   return (
-    <div className='flex flex-col items-center justify-center w-full text-center h-[100vh] z-[10] relative' ref={container} style={{ transform: 'translate3d(0,0,0)', willChange: 'transform' }}>
+    <div className='flex flex-col items-center justify-center w-full text-center h-auto lg:h-[100vh] z-[10] relative' ref={container} style={{ transform: 'translate3d(0,0,0)', willChange: 'transform' }}>
       <h1 className='text-[45px] lg:text-[100px] my-heading text-white font-bold' style={{ transform: 'translate3d(0,0,0)' }}>Picture Your Future</h1>
-      <div className='w-full h-screen overflow-hidden scrollbar-hide flex flex-col items-center justify-center' ref={scrollRef} style={{ transform: 'translate3d(0,0,0)', willChange: 'transform' }}>
+      <div className='w-full h-auto lg:h-screen overflow-hidden scrollbar-hide flex flex-col items-center justify-center' ref={scrollRef} style={{ transform: 'translate3d(0,0,0)', willChange: 'transform' }}>
         <div className='w-[90%] md:w-[80%] h-full flex items-center justify-center' style={{ transform: 'translate3d(0,0,0)' }}>
           <div className='columns-4 flex flex-wrap h-full m-auto items-center justify-center gap-3' style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden', perspective: '1000px' }}>
             <div className={'mt-20 w-[22%] loading="lazy" h-[110px] md:h-[190px] lg:h-[290px]'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire1} className='!h-full !w-full rounded-3xl object-cover object-center' style={{ transform: 'translate3d(0,0,0)' }} /></div>
@@ -91,17 +94,17 @@ const SectionThree = () => {
             <div className={'w-[22%] loading="lazy" h-[120px] md:h-[200px] lg:h-[290px]'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire4} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
             <div className={'w-[22%] loading="lazy" h-[100px] md:h-[180px] lg:h-[260px] -mt-2 md:-mt-10'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire5} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
             <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] -mt-10 md:-mt-10 lg:-mt-12'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire6} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[80px] md:h-[160px] lg:h-[240px] -mt-12 md:-mt-30'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire7} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[120px] md:h-[200px] lg:h-[290px] -mt-16 md:-mt-24'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire8} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] -mt-2 md:-mt-12 lg:-mt-10'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire9} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[100px] md:-[180px] lg:h-[260px] md:-mt-28 lg:-mt-12'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire10} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[60px] md:h-[140px] lg:h-[320px] -mt-32 md:-mt-70 lg:-mt-42'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire2} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[100px] md:h-[180px] lg:h-[260px] -mt-16 md:-mt-38'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire12} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px]'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empireliv} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[90px] md:h-[170px] lg:h-[250px] -mt-20 md:-mt-84 lg:-mt-46'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire14} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] lg:-mt-38 md:-mt-90 -mt-40'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire15} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] -mt-20 md:-mt-52'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire16} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
-            <div className={'w-[22%] loading="lazy" h-[90px] md:h-[170px] lg:h-[250px] -mt-4 md:-mt-2'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire3} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"   h-[80px] md:h-[160px] lg:h-[240px] -mt-12 md:-mt-30'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire7} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[120px] md:h-[200px] lg:h-[290px] -mt-16 md:-mt-24'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire8} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] -mt-2 md:-mt-12 lg:-mt-10'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire9} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[100px] md:-[180px] lg:h-[260px] md:-mt-28 lg:-mt-12'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire10} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[60px] md:h-[140px] lg:h-[320px] -mt-32 md:-mt-70 lg:-mt-42'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire2} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[100px] md:h-[180px] lg:h-[260px] -mt-16 md:-mt-38'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire12} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px]'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empireliv} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[90px] md:h-[170px] lg:h-[250px] -mt-20 md:-mt-84 lg:-mt-46'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire14} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] lg:-mt-38 md:-mt-90 -mt-40'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire15} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[140px] md:h-[270px] lg:h-[350px] -mt-20 md:-mt-52'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire16} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
+            <div className={'w-[22%] loading="lazy"  h-[90px] md:h-[170px] lg:h-[250px] -mt-4 md:-mt-2'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire3} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
             <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] -mt-16 md:-mt-84 lg:-mt-54'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire2} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
             <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] -mt-26 md:-mt-65 lg:-mt-18'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire8} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
             <div className={'w-[22%] loading="lazy" h-[140px] md:h-[270px] lg:h-[350px] -mt-8 md:-mt-24'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire13} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
