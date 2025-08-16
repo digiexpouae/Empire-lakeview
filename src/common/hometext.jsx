@@ -36,7 +36,7 @@ const Hometext = ({ text, head, amenities, btn, back_image, className, home, ico
             {/* RIGHT SECTION */}
             <div className="w-full lg:w-[60%]">
               <div className="p-0 md:p-6 lg:p-0 flex flex-col items-center md:items-start text-center md:text-left">
-                <p className={`text-base sm:text-lg  md:text-[20px] text-white leading-4 md:leading-7 font-light ${classNamep}`}>
+                <p className={`text-base sm:text-lg  md:text-[17px] text-white leading-4 md:leading-7 font-light ${classNamep}`}>
                   {text}
                 </p>
               
