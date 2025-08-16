@@ -20,7 +20,7 @@ const Vision = ({ backgroundImage }) => {
           className="text-5xl md:text-7xl font-bold leading-tight"
         >
           Built with vision.<br />
-          <span className="text-white">Backed by integrity.</span>
+          <span className="text-white">Defined by Excellence.</span>
         </motion.h1>
 
         <motion.p

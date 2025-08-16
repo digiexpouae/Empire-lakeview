@@ -114,7 +114,7 @@ const index = () => {
   const icons = [
     {
       icon: Voice,
-      title:<>Voice  <br/> service <br/>  request</>,
+      title:<>Voice   service <br/>  request</>,
       h: 50,
       w: 50
     },
@@ -126,7 +126,7 @@ const index = () => {
     },
     {
       icon: Process,
-      title: <> Digital  <br/> handover <br/> process</>,
+      title: <> Digital   handover <br/> process</>,
       h: 50,
       w: 50
     },
@@ -135,7 +135,7 @@ const index = () => {
 
   const introRef = useRef(null)
   const brandRef = useRef(null)
-  const text = 'Empower your property ownership experience with our seamless and efficient 24/7 property management services. At Empire Estate, we understand the importance of convenience and peace of mind. Our dedicated team ensures that your property is managed around the clock, providing you with the assurance and support you deserve. Welcome to a new era of property management tailored to your lifestyle.'
+  const text = 'We are dedicated to ensuring every aspect of your property ownership experience is seamless, secure, and tailored to your lifestyle. From around-the-clock assistance to intuitive digital services, we combine modern efficiency with personal attention. With Empire, exceptional service isn’t an option, it’s our standard.'
   const imag = [
     {
       src: '/assets/ee70d663c4a8db7d05f72f368ee23dc4874fe3d5.png',
