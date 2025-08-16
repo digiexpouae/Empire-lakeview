@@ -38,57 +38,77 @@ import { useGSAP } from "@gsap/react";
     href: '/EMPEstates',
   },
 ];
-   
-  useGSAP(() => {
-    if (typeof window === "undefined") return;
+useGSAP(() => {
+  if (typeof window === "undefined") return;
 
-    import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
-      gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.normalizeScroll(true);
-  
+  import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.normalizeScroll(true);
 
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
+    const createAnimation = () => {
+      const containerWidth =
+        containerRef.current?.querySelector(".container")?.offsetWidth || 0;
+      const sliderWidth = sliderRef.current?.scrollWidth || 0;
+      return sliderWidth - containerWidth;
+    };
 
-        // Kill old animation if it exists
-        animationRef.current?.kill();
-        const containerWidth = containerRef.current
-  ?.querySelector('.container')
-  ?.offsetWidth || 0;
+    const cards = gsap.utils.toArray(".project-card");
 
-       
-        const sliderWidth = sliderRef.current.scrollWidth; // total width of all cards
+    ScrollTrigger.matchMedia({
+      // Desktop (>= 1280px)
+      "(min-width: 1280px)": () => {
+        const distanceToSlide = createAnimation();
 
-
-        const distanceToSlide = sliderWidth - containerWidth;
-const cards = gsap.utils.toArray('.project-card');
-
-        animationRef.current = gsap.to(sliderRef.current, {
+        gsap.to(sliderRef.current, {
           x: -distanceToSlide,
           ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
             scrub: true,
-         
-                // snap: 1 / (cards.length - 1),
-
             pin: true,
-
-
+            invalidateOnRefresh: true,
+            // snap: 1 / (cards.length - 1),
           },
         });
-      };
+      },
 
-      handleResize();
- window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-        animationRef.current?.kill();
-      };
+      // Tablet (768px – 1279px)
+      "(min-width: 768px) and (max-width: 1279px)": () => {
+        const distanceToSlide = createAnimation();
+
+        gsap.to(sliderRef.current, {
+          x: -distanceToSlide,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            scrub: true,
+            pin: true,
+            invalidateOnRefresh: true,
+          },
+        });
+      },
+
+      // Mobile (< 768px) — also moves horizontally
+      "(max-width: 767px)": () => {
+        const distanceToSlide = createAnimation();
+
+        gsap.to(sliderRef.current, {
+          x: -distanceToSlide,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            scrub: true,
+            pin: true, // 👈 pinning also works on mobile
+            invalidateOnRefresh: true,
+          },
+        });
+      },
     });
-  }, []);
-
+  });
+}, []);
   
         return(
   <> 
