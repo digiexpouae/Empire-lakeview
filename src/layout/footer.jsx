@@ -29,6 +29,8 @@ const resources = [
   { name: 'WhistleBowler Line', href: '/whistleblower' },
   { name: 'Investor Relations', href: '/' },
   { name: 'Mortgage Calculator', href: '/mortgage-calculator' },
+  { name: 'Career', href: '/career' },
+
 ];
 
 const communities = [

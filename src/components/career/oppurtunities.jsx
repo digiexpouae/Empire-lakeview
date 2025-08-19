@@ -104,7 +104,7 @@ const router=useRouter();
             />
           </div>
 
-          <div className="form-row">
+      
             <div className="form-group">
               <label>Email*</label>
               <input
@@ -146,7 +146,7 @@ const router=useRouter();
                 />
               </div>
             </div>
-          </div>
+       
 
           <div className="form-row">
             <div className="form-group">
@@ -173,7 +173,7 @@ const router=useRouter();
 
           <div className="form-group">
             <label>Preferred Role</label>
-            <select name="role" value={formData.role} onChange={handleChange}>
+            <select name="role" value={formData.role} onChange={handleChange} >
               <option value="">Select</option>
               <option value="Developer">Developer</option>
               <option value="Designer">Designer</option>
