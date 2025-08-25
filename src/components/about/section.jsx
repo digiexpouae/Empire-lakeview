@@ -60,7 +60,7 @@ new benchmarks in luxury living.</span>
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className='w-full md:w-[40%] lg:w-[40%] text-white order-2 md:order-1 mt-2 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left' ref={ref2}>
-          <h2 className='text-2xl md:text-5xl mb-5 font-bold'>Mision</h2>
+          <h2 className='text-2xl md:text-5xl mb-5 font-bold'>Mission</h2>
           <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-6'>To deliver innovative, high-quality developments that exceed expectations, enrich lifestyles, and build long-term value for our clients, partners, and communities.</span>
         </div>
         <div className='relative h-[180px] xs:h-[200px] sm:h-[220px] md:h-[300px] md:w-[50%] lg:w-[40%] w-full z-20 order-1 md:order-2'>

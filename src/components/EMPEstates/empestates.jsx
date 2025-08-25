@@ -37,12 +37,12 @@ const empestates = () => {
 const icons = [
   { img: DubaiMiracleGarden, name: 'Dubai Miracle Garden', distance: '05 minutes' },
   { img: DubaiButterflyGarden, name: 'Dubai Butterfly Garden', distance: '07 minutes' },
-  { img: DubaiHillsMall, name: 'Dubai Hills Mall', distance: '15 minutes' },
-  { img: GlobalVillage, name: 'Global Village', distance: '15 minutes' },
-  { img: MallOfTheEmirates, name: 'Mall of the Emirates', distance: '20 minutes' },
-  { img: DubaiAutodrome, name: 'Dubai Autodrome', distance: '20 minutes' },
-  { img: BurjKhalifa, name: 'Burj Khalifa', distance: '20–25 minutes' },
-  { img: DubaiMarinaMall, name: 'Dubai Marina Mall', distance: '25 minutes' },
+  { img: DubaiHillsMall, name: <>Dubai Hills <br /> Mall</>, distance: '15 minutes' },
+  { img: GlobalVillage, name: <>Global<br /> Village</>, distance: '15 minutes' },
+  { img: MallOfTheEmirates, name: <>Mall of the <br/> Emirates</>, distance: '20 minutes' },
+  { img: DubaiAutodrome, name: <>Dubai <br /> Autodrome</>, distance: '20 minutes' },
+  { img: BurjKhalifa, name:<>Burj <br /> Khalifa</>, distance: '20–25 minutes' },
+  { img: DubaiMarinaMall, name: <>Dubai Marina <br /> Mall</>, distance: '25 minutes' },
 ]
 const markers = [
   { name: 'Dubai Miracle Garden', coordinates: [25.0631, 55.2471],  icon: '/assets/miracle.svg'  },

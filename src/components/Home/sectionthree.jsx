@@ -8,21 +8,21 @@ const projects = [
     text: 'Empire Lakeviews by Empire Developments is a luxury residential project located in Liwan, Dubailand, Dubai. This 29-storey development offers 604 units, including studios, 1- and 2-bedroom apartments, & 3-bedroom duplexes, with many units featuring private pools.',
     btn: 'View Project',
     im: '/assets/lakeview.jpg',
-    href: '/lakeviews',
+    href: '/EmpireLakeviews',
   },
   {
     logo: '/assets/cardlogo3.png',
     text: 'Empire Living offers contemporary apartments in a vibrant community, featuring modern amenities, lush landscapes, and easy access to city hotspots.',
     btn: 'View Project',
     im: '/assets/empliving.jpg',
-    href: '/EMPlivings',
+    href: '/EmpireLivings',
   },
   {
     logo: '/assets/cardlogo2.png',
     text: 'Empire Estates presents premium residences with elegant designs, spacious layouts, and a focus on family living in a prime Dubai location.',
     btn: 'View Project',
     im: '/assets/empestates.jpg',
-    href: '/EMPEstates',
+    href: '/EmpireEstates',
   },
 ];
 

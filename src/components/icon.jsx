@@ -25,7 +25,7 @@ const icon = ({ icons }) => {
           />
         </div>
         <div className="flex flex-col items-center justify-start text-center h-[35%] md:h-[50%] w-[70px] md:w-[210px]">
-          <span className="text-center font-bold text-[7px] md:text-[19px] w-[70%] my-heading text-wrap h-[70%] leading-3 md:leading-6 text-white">
+          <span className="text-center font-bold text-[7px] md:text-[19px] my-heading text-wrap h-[60%] leading-3 md:leading-6 text-white">
             {elem.name}
           </span>
           <p className="text-[7px] md:text-[18px] h-[30%] text-white">{elem.distance}</p>
@@ -78,8 +78,8 @@ const icon = ({ icons }) => {
         </div>
         {/* Desktop: grid */}
         <div className="hidden md:flex items-center justify-center flex-col">
-          <div className="grid grid-cols-4 gap-x-4 w-[60%]">{renderRow(firstRow)}</div>
-          <div className="flex justify-center w-[60%] gap-x-4">{renderRow(secondRow)}</div>
+          <div className="grid grid-cols-4 gap-x-2 w-[70%]">{renderRow(firstRow)}</div>
+          <div className="flex justify-center w-[70%] gap-x-2">{renderRow(secondRow)}</div>
         </div>
       </div>
     </div>

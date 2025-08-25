@@ -70,7 +70,7 @@ const index = () => {
       unlockScroll();
     };
   }, [showEmailPop]);
-  const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/Empireresidence',text:'Empire Residence'}]
+  const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/EmpireResidence',text:'Empire Residence'}]
 
   const main = useRef(null)
 
@@ -192,10 +192,10 @@ const index = () => {
       </div> */}
         <Textsection  head={'Redefining Luxury Living in Dubai'}
          
-text={"At Empire Developments, we craft more than homes — we create architectural landmarks that embody elegance,innovation, and exclusivity.From the heart of Dubai’s most prestigious addresses to emerging lifestyle destinations, our developments offer unparalleled views, bespoke interiors, and world-class amenities designed for those who demand the finest. With Empire Developments, every detail is a statement, every space a sanctuary, and every home a legacy."} />
+text={"At Empire Developments, we craft more than homes — we create architectural landmarks that embody elegance ,innovation and exclusivity. From the heart of Dubai’s most prestigious addresses to emerging lifestyle destinations, our developments offer unparalleled views, bespoke interiors, and world-class amenities designed for those who demand the finest. With Empire Developments, every detail is a statement, every space a sanctuary, and every home a legacy."} />
 
       <div className='bg-[#0E1527] relative' ref={main}>
-  <LatestProjectsCarousel />
+  <LatestProjectsCarousel project={'Our Latest Projects'} />
         {/* <Sectiontwo amenities={amenities} /> */}
 
 

@@ -47,9 +47,9 @@ const index = () => {
     { name: 'Dubai International Airport', coordinates: [25.2567, 55.3643], icon: '/assets/international (2).svg' },
   ];
   const icons = [
-    { img: Liwan, name: 'Liwan Lake', distance: '2 minutes' },
-    { img: AmayaMall, name: 'Amaya Mall', distance: '2 minutes' },
-    { img: IndianInternationalSchool, name: 'The Indian International School', distance: '8 minutes' },
+    { img: Liwan, name: <>Liwan <br/>  Lakes</>, distance: '2 minutes' },
+    { img: AmayaMall, name: <>Amaya <br/> Mall</>, distance: '2 minutes' },
+    { img: IndianInternationalSchool, name: <>The Indian International School</>, distance: '8 minutes' },
     { img: GEMSWellington, name: 'GEMS Wellington Academy', distance: '10 minutes' },
     { img: IMGWorlds, name: 'IMG Worlds of Adventure', distance: '8 minutes' },
     { img: DowntownDubai, name: 'Downtown Dubai & Dubai Mall', distance: '15 minutes' },
@@ -181,9 +181,10 @@ const index = () => {
           textone={"Empire"}
           texttwo={"Lakeviews"}
           textthree={"Liwan"}
-          p1={"a striking tower in Liwan,"}
-          p2={"designed for lifestyle"}
-          p3={"and luxury."}
+          p1={"A landmark in Liwan,"}
+
+          p2={" redefining lifestyle with"}
+          p3={"modern living."}
           overlay={true}
           lakeview={true}
         />
@@ -205,7 +206,7 @@ const index = () => {
      It’s a peaceful and eco-friendly place. Empire Lakeview by Empire Development is great for Liwan, Dubai property investment, or Dubai real estate investments`} home={false} icontext={'md:!text-[20px]'} />
           </div>
         </Fadein>
-        <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Brochure'} />
+        <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Floor Plans'} />
         
         <Sectionthree images={images} onAllVisible={handleAllVisible} />
        

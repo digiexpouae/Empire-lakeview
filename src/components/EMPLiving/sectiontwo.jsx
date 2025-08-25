@@ -10,9 +10,9 @@ const sectiontwo = () => {
                <div 
             className="w-full  text-black p-x-8 flex  md:items-start items-center justify-start xl:h-[122px] animate-slide-left"
         >
-            <h2 className="text-[30px] lg:text-[80px] sm:text-5xl my-heading font-bold tracking-tighter text-white">
+            <h2 className="text-[30px] lg:text-[70px] white-space-nowrap sm:text-5xl my-heading font-bold tracking-tighter text-white">
               
-              Overview
+             Project Overview
             </h2>
           </div>
             <p 
@@ -26,7 +26,7 @@ const sectiontwo = () => {
           
             className="
   bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap text-center">Download Floor Plan</a>
+    hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300  transform text-sm lg:text-base whitespace-nowrap text-center">Download Brochure</a>
             
             {/* Amenities section */}
           

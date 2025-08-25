@@ -109,7 +109,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                    href="/files/Empire Lakeviews - 2D Typical Floor Plans (2).pdf"
                    download
                   className="bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] cursor-pointer text-gray-800 w-[180px] px-2 py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
-                    Download Floor Plan
+                    Download Brochure
                   </a>
                 )}
               </div>

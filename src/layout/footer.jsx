@@ -15,10 +15,10 @@ const quickLinks = [
 ];
 
 const latestProjects = [
-  { name: 'Empire Lakeviews', href: '/lakeviews' },
-  { name: 'Empire Livings', href: '/EMPlivings' },
-  { name: 'Empire Estates', href: '/EMPEstates' },
-  { name: 'Empire Residence', href: '/Empireresidence' },
+  { name: 'Empire Lakeviews', href: '/EmpireLakeviews' },
+  { name: 'Empire Livings', href: '/EmpireLivings' },
+  { name: 'Empire Estates', href: '/EmpireEstates' },
+  { name: 'Empire Residence', href: '/EmpireResidence' },
 ];
 
 const resources = [
@@ -34,10 +34,10 @@ const resources = [
 ];
 
 const communities = [
-  { name: 'Arjan', href: '/EMPEstates' },
-  { name: 'JVC', href: '/Empireresidence' },
-  { name: 'Liwan', href: '/lakeviews' },
-  { name: 'Dubai Science Park', href: '/EMPlivings' },
+  { name: 'Arjan', href: '/EmpireEstates' },
+  { name: 'JVC', href: '/EmpireResidence' },
+  { name: 'Liwan', href: '/EmpireLakeviews' },
+  { name: 'Dubai Science Park', href: '/EmpireLivings' },
 ];
 
 // Animation variants

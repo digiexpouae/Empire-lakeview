@@ -14,7 +14,7 @@ const sectionthree = ({ wrapper }) => {
     btn: 'View Project',
     im: '/assets/lakeview.jpg',
     className: 'z-[40]',
-    href: '/lakeviews',
+    href: '/EmpireLakeviews',
   },
   {
     logo: '/assets/cardlogo3.png',
@@ -22,7 +22,7 @@ const sectionthree = ({ wrapper }) => {
     btn: 'View Project',
     im: '/assets/aca90d068f6adc319f0ca21c6af07538d9cb4322.png',
     className: 'z-[30]',
-    href: '/EMPlivings',
+    href: '/EmpireLivings',
   },
   {
     logo: '/assets/cardlogo2.jpg',
@@ -30,7 +30,7 @@ const sectionthree = ({ wrapper }) => {
     btn: 'View Project',
     im: '/assets/cbc303860f704bb9c770f6d5dc83b533c324b9f5.png',
     className: 'z-[20]',
-    href: '/EMPEstates',
+    href: '/EmpireEstates',
   },
 ];
 

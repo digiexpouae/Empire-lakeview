@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-const maptwo = ({title,map}) => {
+const maptwo = ({title,map,ifrmae_map}) => {
   return (
     <div className='flex flex-col items-center justify-center h-[400px] md:h-[700px] my-heading'>
         <div className='w-full text-center '>
@@ -8,7 +8,7 @@ const maptwo = ({title,map}) => {
           </div>
     <div className='  xl:!h-[500px] lg:!h-[450px] md:!h-[300px] w-[90vw] md:w-[75vw] !h-[200px] relative'>
      
-      <Image src={map}   fill className=" rounded-3xl object-cover object-bottom"   />
+    {ifrmae_map}
     </div>
     </div>
   )

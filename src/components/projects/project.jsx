@@ -18,7 +18,7 @@ import LatestProjects from '@/common/latestProjectsCarousel';
 
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
- const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/Empireresidence',text:'Empire Residence'}]
+ const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/EmpireResidence',text:'Empire Residence'}]
   const wrapper = useRef();
   const introRef = useRef();
 
@@ -74,10 +74,9 @@ const Project = () => {
         </div>
       </div>
 
-      <div className="bg-[#0E1527]">
+      <div className="bg-[#0D1028] pt-2">
 
-        
-        <LatestProjects/>
+        <LatestProjects project={'Delivering Landmark Developments'} className={'md:!text-[45px]'} />
 
 
         <div ref={introRef} className="flex flex-col items-center justify-center">

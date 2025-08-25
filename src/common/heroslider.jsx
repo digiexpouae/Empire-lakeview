@@ -143,7 +143,8 @@ const child=document.querySelectorAll('.home')
 <div className= {`absolute w-full  flex items-center justify-center top-20 md:top-30  opacity-0 ${className2}`} ref={text2}> 
 <div className='w-fit relative'>
 <h1 className={`xl:text-[180px]  lg:text-[160px] md:text-[130px] tracking-tight text-[16vw]  z-40 flex items-center justify-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold  ${texttwoclass} `}>{texttwo}</h1>
-{thankyou && <p className='text-center text-[#000000] text-lg'>We’ve received your submission and one of our representatives <br/> will reach out to you shortly to assist you further. </p>}
+{thankyou && <p className='text-center text-[#000000] text-lg'>We appreciate your interest. One of our representatives will be in <br/> touch with you shortly.
+  </p>}
 <div className={`absolute right-0 bottom-0 lg:mt-[25px] xl:mt-0 opacity-0 ${className3}`} ref={text3}>
 <span  className='lg:text-[35px] md:text-[30px] xl:text-[50px]  text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>{textthree}</span></div>
 

@@ -6,7 +6,7 @@ import Testimonial from '../components/swiperslider';
 const testimonials = () => {
   const testimonial = [
     {
-      text: "I've never been so excited about spices until I discovered . Their spices have transformed my home cooking. The flavors are bold, authentic, and just what I need to create restaurant-quality meals. It's like having a spice bazaar right in my kitchen!",
+      text: "I had an excellent experience with Empire Developer Dubai! Their team is professional, knowledgeable, and truly understands the Dubai real estate market. The entire process was smooth, and they provided great support from start to finish. Highly recommended for anyone looking for reliable property investment opportunities in Dubai!",
       name: 'Emily P.',
       image: '/assets/testi2.png',
       role: 'House Wife',

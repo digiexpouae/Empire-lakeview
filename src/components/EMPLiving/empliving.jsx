@@ -32,12 +32,12 @@ const empliving = () => {
 
   const empire = 'Empire Livings';
   const icons = [
-    { img: BusinessBay, name: 'Business Bay', distance: '15 minutes drive' },
-    { img: MallOfTheEmirates, name: 'Mall of the Emirates', distance: '15 minutes drive' },
-    { img: DubaiHillMall, name: 'Dubai Hill Mall', distance: '5 minutes drive' },
-    { img: PalmJumeirah, name: 'Palm Jumeirah', distance: '15 minutes drive' },
+    { img: BusinessBay, name: <>Business <br /> Bay</>, distance: '15 minutes drive' },
+    { img: MallOfTheEmirates, name: <>Mall of the <br/> Emirates</>, distance: '15 minutes drive' },
+    { img: DubaiHillMall, name: <>Dubai Hill <br /> Mall</>, distance: '5 minutes drive' },
+    { img: PalmJumeirah, name: <>Palm <br /> Jumeirah</>, distance: '15 minutes drive' },
     { img: DubaiInternationalAirport, name: 'Dubai International Airport', distance: '25 minutes drive' },
-    { img: DubaiMarina, name: 'Dubai Marina', distance: '25 minutes' },
+    { img: DubaiMarina, name: <>Dubai <br /> Marina</>, distance: '25 minutes' },
   ];
 
   // links

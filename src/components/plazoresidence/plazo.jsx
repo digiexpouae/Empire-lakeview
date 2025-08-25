@@ -78,7 +78,7 @@ const amenities = [
  
    <Sectionthree />
    
-      <Map  map={map} title={'View Plazzo Residence'}/>
+      <Map  map={map} title={'View Plazzo Residence'} ifrmae_map={<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57838.30638126727!2d55.12797876265093!3d25.03766605047006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6df4d4c316af%3A0x6f90c06a04cb7493!2sPlazzo%20Residence!5e0!3m2!1sen!2s!4v1756111576881!5m2!1sen!2s" style={{border:0,width:'100%',height:'100%',borderRadius:'30px'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>}/>
   <Testimonials />
     
     
