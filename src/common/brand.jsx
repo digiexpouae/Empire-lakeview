@@ -7,6 +7,7 @@ const BrandPillars = () => {
       src: "/assets/craftsmanship.png",
       alt: "Craftsmanship",
       label: 'Masterful Craftsmanship',
+      defining_label:'Precision in every detail, creating enduring landmarks.',
       width: 50,
       height: 50,
     },
@@ -14,8 +15,9 @@ const BrandPillars = () => {
       src: "/assets/design.png",
       alt: "Signature Design",
       label: "Signature Design",
-      width: 60,
-      height: 60,
+      width: 50,
+      height: 50,
+      defining_label:'Distinctive spaces that embody style, purpose, and innovation.',
     },
     {
       src: "/assets/quality.png",
@@ -23,6 +25,7 @@ const BrandPillars = () => {
       label: "Uncompromising Quality",
       width: 50,
       height: 50,
+      defining_label:'Delivering standards that endure and define prestige.'
     },
   ];
 
@@ -50,7 +53,7 @@ const BrandPillars = () => {
             The Brand Pillars
           </h2>
           <p className="text-md text-gray-800">A Legacy Built on Core Values</p>
-          <small>Our foundation is built on three defining pillars that set Empire apart</small>
+          <small className="text-[9px] leading-[0.5]">Our foundation is built on three defining pillars that set Empire apart</small>
         </div>
 
         {/* Desktop View */}
@@ -64,16 +67,17 @@ const BrandPillars = () => {
                 height={icon.height}
                 className="mb-2"
               />
-              <p className="text-base font-medium text-gray-900">
+              <p className="text-base font-medium md:text-[12px] lg:text-auto text-gray-900 " style={{whiteSpace:'nowrap'}} >
                 {icon.label}
               </p>
+              <small className="text-[9px] hidden md:block ">{icon.defining_label}</small>
             </div>
           ))}
         </div>
 
         {/* Mobile Slider */}
-        <div className="flex md:hidden justify-center">
-          <div className="flex flex-col items-center text-center transition-all duration-500 ease-in-out">
+        <div className="flex flex-col items-center md:hidden justify-center">
+          <div className="flex flex-col h-[90px]  items-center text-center transition-all duration-500 ease-in-out">
             <Image
               src={icons[currentIndex].src}
               alt={icons[currentIndex].alt}
@@ -84,7 +88,10 @@ const BrandPillars = () => {
             <p className="text-base font-medium text-gray-900">
               {icons[currentIndex].label}
             </p>
+          
+
           </div>
+          <small className="text-[9px]  ">{icons[currentIndex].defining_label}</small>
         </div>
       </div>
     </section>
