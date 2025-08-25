@@ -46,7 +46,7 @@ useEffect(()=>{
         </div>
         <div className='text-white w-full md:w-[40%] lg:w-[40%] mt-2 mb-4 md:mb-5 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left' ref={ref1}>
           <h2 className='text-2xl md:text-5xl mb-5 font-bold'>Vision</h2>
-          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-6'>To shape the future of real estate by creating landmark
+          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px]  leading-[1.2] md:leading-6'>To shape the future of real estate by creating landmark
 developments that inspire, elevate lifestyles, and set
 new benchmarks in luxury living.</span>
         </div>
@@ -61,7 +61,7 @@ new benchmarks in luxury living.</span>
       >
         <div className='w-full md:w-[40%] lg:w-[40%] text-white order-2 md:order-1 mt-2 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left' ref={ref2}>
           <h2 className='text-2xl md:text-5xl mb-5 font-bold'>Mission</h2>
-          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-6'>To deliver innovative, high-quality developments that exceed expectations, enrich lifestyles, and build long-term value for our clients, partners, and communities.</span>
+          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-[1.2] md:leading-6'>At Empire, our mission is to craft landmark developments that embody luxury, elevate lifestyles, and create enduring value for our clients, partners, and communities. With uncompromising standards, we go beyond building spaces, we shape experiences that define modern living.</span>
         </div>
         <div className='relative h-[180px] xs:h-[200px] sm:h-[220px] md:h-[300px] md:w-[50%] lg:w-[40%] w-full z-20 order-1 md:order-2'>
           <Image src={About2} className='!h-full !w-full !object-cover rounded-2xl' />
