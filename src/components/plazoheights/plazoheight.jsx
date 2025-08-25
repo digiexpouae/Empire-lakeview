@@ -7,7 +7,6 @@ import Hero from '../../../public/assets/ef1672414129e46146f488eaca82cf8a3b514a8
 import Sectiontext from '@/common/section_text'
 import Image from 'next/image'
 import Sectiontwo from '@/common/sectiontwo'
-import Testimonials from '@/common/testimonials'
 import Map from '../../common/maptwo'
 import map from '../../../public/assets/image.png'
 import Sectionthree from './sectionthree'
@@ -68,7 +67,6 @@ const plazoheights = () => {
           <Sectionthree />
              <Map  map={map} title={'View Plazzo Heights'} ifrmae_map={<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7228.164768792613!2d55.199663043022156!3d25.06519668576948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6c3757f8806f%3A0x1cd82a0fc54b3c19!2sPlazzo%20Heights!5e0!3m2!1sen!2s!4v1756111654453!5m2!1sen!2s" style={{border:0,width:'100%',height:'100%',borderRadius:'30px'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>}/>
     
-                <Testimonials/>
               
              <SectionFour images={contactbg} />
               

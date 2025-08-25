@@ -69,7 +69,7 @@ const Section = ({ images }) => {
 
 <div className="overlay absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center w-full bg-[linear-gradient(270deg,rgba(14,21,39,0)_52.53%,rgba(14,21,39,0.9)_80.55%),linear-gradient(0deg,rgba(14,21,39,0.3),rgba(14,21,39,0.3))] z-10" >
      <div className="absolute md:left-20 left-5 z-10 flex flex-col justify-center gap-3 md:w-[600px]">
-            <h2 className="lg:text-[50px] xl:text-[80px] text-[40px] leading-20 text-white my-heading font-bold">
+            <h2 className="lg:text-[50px] xl:text-[70px] text-[40px] leading-20 text-white my-heading font-bold">
               {currentImage.tex1}
             </h2> 
              <span className="text-white my-heading md:text-[25px] text-[10px]">{currentImage.tex2}</span>

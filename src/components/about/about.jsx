@@ -21,7 +21,7 @@ import star from '../../../public/assets/animation/star.json'
 import Fadein from '../../common/fadein'
 import { HeroDemo1 } from '../hero-gallery-demos'
 import { BentoCell, BentoGrid, ContainerScale, ContainerScroll } from "@/components/hero-gallery-scroll-animation";
-
+import Testimonials from '@/common/testimonials'
 import Textsection from '../../common/hometext'
 
 
@@ -166,12 +166,13 @@ const about = () => {
         </div>
 
 
-        <Fadein>
-
-
-        </Fadein>
+   
 
         <Fadein>   <Brand />    </Fadein>
+        <Fadein>
+
+<Testimonials />
+        </Fadein>
     
         
         <Fadein>    <SectionFour images={contactbg} />   </Fadein>

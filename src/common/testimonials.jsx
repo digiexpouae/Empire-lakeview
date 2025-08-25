@@ -7,19 +7,19 @@ const testimonials = () => {
   const testimonial = [
     {
       text: "I had an excellent experience with Empire Developer Dubai! Their team is professional, knowledgeable, and truly understands the Dubai real estate market. The entire process was smooth, and they provided great support from start to finish. Highly recommended for anyone looking for reliable property investment opportunities in Dubai!",
-      name: 'Emily P.',
+      name: 'Umer Khan',
       image: '/assets/testi2.png',
       role: 'House Wife',
     },
     {
-      text: "I've never been so excited about spices until I discovered . Their spices have transformed my home cooking. The flavors are bold, authentic, and just what I need to create restaurant-quality meals. It's like having a spice bazaar right in my kitchen!",
-      name: 'Emily P.',
+      text: "I had an excellent experience with Empire Developer Dubai! Their team is professional, knowledgeable, and truly understands the Dubai real estate market.",
+      name: 'Omer Zai',
       image: '/assets/testi2.png',
       role: 'House Wife',
     },
     {
-      text: "I've never been so excited about spices until I discovered . Their spices have transformed my home cooking. The flavors are bold, authentic, and just what I need to create restaurant-quality meals. It's like having a spice bazaar right in my kitchen!",
-      name: 'Emily P.',
+      text: "İt was a wonderful visit at Empire Development great project and awesome payment plans We met with mr. mohammad abdullah which was very helpful and knowledgeable wish them very success and I am sure will do great bussiness with them.",
+      name: 'Jarir Altaha',
       image: '/assets/testi2.png',
       role: 'House Wife',
     },

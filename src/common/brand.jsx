@@ -6,21 +6,21 @@ const BrandPillars = () => {
     {
       src: "/assets/craftsmanship.png",
       alt: "Craftsmanship",
-      label: "Craftsmanship",
+      label: 'Masterful Craftsmanship',
       width: 50,
       height: 50,
     },
     {
       src: "/assets/design.png",
-      alt: "Thoughtful Design",
-      label: "Thoughtful Design",
+      alt: "Signature Design",
+      label: "Signature Design",
       width: 60,
       height: 60,
     },
     {
       src: "/assets/quality.png",
-      alt: "Signature Quality",
-      label: "Signature Quality",
+      alt: "Uncompromising Quality",
+      label: "Uncompromising Quality",
       width: 50,
       height: 50,
     },
@@ -49,7 +49,8 @@ const BrandPillars = () => {
           <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-1">
             The Brand Pillars
           </h2>
-          <p className="text-md text-gray-800">Built on 3 Key Pillars</p>
+          <p className="text-md text-gray-800">A Legacy Built on Core Values</p>
+          <small>Our foundation is built on three defining pillars that set Empire apart</small>
         </div>
 
         {/* Desktop View */}
