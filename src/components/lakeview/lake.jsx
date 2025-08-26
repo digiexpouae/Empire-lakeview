@@ -5,7 +5,7 @@ import Section_two from './section_two'
 // import Section from '../home/section'
 import Footer from '@/layout/footer'
 import Mainplace from '../../common/mainplace'
-import mob from "../../../public/assets/Lakeviews_mobile.png"
+import mob from "../../../public/assets/lake mobile (2).png"
 import Icon from '../icon'
 import im from '../../../public/assets/sliderlake1.webp'
 import im2 from '../../../public/assets/sliderlake2.webp'
