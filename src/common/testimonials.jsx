@@ -33,7 +33,7 @@ const testimonials = () => {
           backgroundImage: "url('/assets/testbg.png')", // replace with your image
         }}
       >
-        <div className="bg-transparent p-4 justify-center rounded-xl w-full">
+        <div className="bg-transparent p-1 justify-center rounded-xl w-full">
           <Testimonial testimonial={testimonial} />
         </div>
       </div>
