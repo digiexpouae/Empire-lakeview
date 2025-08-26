@@ -67,7 +67,7 @@ const Header = () => {
       external: true },
       { name: 'Blogs', link: '/blogs'}
   ];
-// 
+// residence
   return (
     <div
       className={`fixed z-50 w-full transition-all duration-300 ${
