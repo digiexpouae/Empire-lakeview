@@ -30,7 +30,7 @@ const mapcontact = () => {
                   borderRight:'1px solid white',
                   borderLeft:'1px solid white',
 background: activeFeature === feature.id ? 'white' : 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)',
-                    color: activeFeature === feature.id ? 'black' : 'white',
+                    color: activeFeature === feature.id ? 'black' : 'black',
                     display: 'flex',
                     flexDirection: 'column',
                   

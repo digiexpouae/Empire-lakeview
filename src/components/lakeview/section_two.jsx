@@ -6,7 +6,7 @@ import LottieIcons from "../../common/lottie";
 import { motion } from "framer-motion";
 import back from '../../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.png';
 
-const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, icontext, classNamep }) => {
+const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, icontext, classNamep ,Lottieicons}) => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
@@ -76,6 +76,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                   iconsize="h-[50px] w-[50px] md:w-[30px] md:h-[30px] lg:w-[15px] lg:h-[15px]"
                   className1={`grid grid-cols-4 md:grid-cols-5 md:w-[80%] lg:grid-cols-8 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 lg:gap-8 '} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
                   ref={ref3}
+                  Lottieicons={Lottieicons}
                 />
               </div> 
 
@@ -95,7 +96,8 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                     className="flex flex-col items-center md:justify-start"
                   >
                     <div className="h-[50px] w-[50px] mb-1">
-                      <LottieIcons amenities={[amenity]} iconsize="h-[40px] w-[40px]" />
+                      <LottieIcons                 Lottieicons={Lottieicons}
+ amenities={[amenity]} iconsize="h-[40px] w-[40px]" />
                     </div>
                     <span className="text-white text-[10px] mt-1 text-center">{amenity.title}</span>
                   </motion.div>

@@ -6,7 +6,7 @@ import LottieIcons from "./lottie";
 import { motion } from "framer-motion";
 import back from '../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.png';
 
-const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, icontext, classNamep }) => {
+const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, icontext, classNamep ,Lottieicons}) => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
@@ -74,7 +74,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                     className="flex flex-col items-center md:justify-start"
                   >
                     <div className="h-[50px] w-[50px] mb-1">
-                      <LottieIcons amenities={[amenity]} iconsize="h-[50px] w-[50px]" />
+                      <LottieIcons amenities={[amenity]} iconsize="h-[50px] w-[50px]" Lottieicons={Lottieicons}/>
                     </div>
                     <span className="text-white text-[8px] leading-tight mt-1 text-center tracking-tighter clamp-3">{amenity.title}</span>
                   </motion.div>
@@ -100,11 +100,12 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
 
               <div className="mt-4 hidden md:block md:mt-8 flex items-star:justify-start">
                 <LottieIcons
-                  className="element"t md
+                Lottieicons={Lottieicons}
+                  className="element"
                   className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
                   amenities={amenities}
                   iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
-                  className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
+                  className1={`grid grid-cols-2 md:grid-cols-3  ${home ? 'gap-2 md:grid-cols-5' : 'gap-4 md:gap-8'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
                   
                 />
               </div>
