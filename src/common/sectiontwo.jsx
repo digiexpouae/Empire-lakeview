@@ -62,7 +62,7 @@ return (<>
         <div className="flex flex-col md:w-[50%] lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
           {/* Left side - Project title */}
           <div 
-            className="w-full  text-black p-x-8 flex  md:items-start items-center justify-center xl:h-[100px] animate-slide-left opacity-0"
+            className="w-full  text-black p-x-8 flex  md:items-start items-center md:justify-center xl:h-[100px] animate-slide-left opacity-0"
          ref={ref1} >
             <h2 className="text-[30px] lg:text-[70px] sm:text-5xl my-heading font-bold tracking-tighter text-white">
               Project Overview
