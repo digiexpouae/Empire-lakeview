@@ -205,7 +205,7 @@ text={"At Empire Developments, we craft more than homes — we create architectu
             Successfully Delivered
           </h3> */}
     
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[350px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
+          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[300px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
           {/* </div> */}
         </div>  
         

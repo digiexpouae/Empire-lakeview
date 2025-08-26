@@ -11,7 +11,7 @@ const LatestProjects = ({project,className}) => {
 
   return (
     <>
-    <section className="bg-[#0D1028] relative py-4 mb-4  md:mb-0 md:py-0 md:h-screen  flex flex-col items-center  !justify-center gap-4 md:gap-0 overflow-hidden " style={{justifyContent:'center'}} >
+    <section className="bg-[#0D1028] relative py-4 md:py-0 md:h-screen  flex flex-col items-center  !justify-center gap-4 md:gap-0 overflow-hidden " style={{justifyContent:'center'}} >
       <h2 className={`text-white text-[30px] md:text-[50px] font-bold text-center mb-8 md:mb-6 px-4 ${className}`}>
         {project}
       </h2>
