@@ -80,7 +80,7 @@ const empire = () => {
         </div>
 
        <div className='bg-[#0E1527]'>
-      <SectionTwo amenities={amenities} textpara={textpara} classNameproject={'mb-20'}/>
+      <SectionTwo amenities={amenities} textpara={textpara} classNameproject={'md:mb-20'}/>
  
         <Sectionthree />
 

@@ -75,7 +75,7 @@ return (<>
         <div className=" md:w-[50%] lg:w-[60%]">
           <div className={`md:p-6 sm:p-8 lg:p-0 flex flex-col items-center lg:h-[100px] gap-4 opacity-0 ${className1}`} ref={ref2}>
             <p 
-              className="text-[18px] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light text-start w-full"
+              className="text-xs md:text-[18px] leading-[1.2] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light text-start w-full"
             >
               {textpara}
             </p>
@@ -91,7 +91,7 @@ return (<>
 
       </div>
       <div className="w-full flex items-start justify-start  ">
-       <div className={`grid ${btn? 'lg:grid-cols-4 grid-cols-2 ':'md:grid-cols-4 grid-cols-2'} lg:grid-cols-4 grid-cols-2 gap-8 lg:gap-20 mt-8 lg:mt-20 ${btn? 'w-[60%]':'md:w-[100%] w-[100%] xl:w-[80%] opacity-0'}`} ref={ref3}>
+       <div className={`grid ${btn? 'lg:grid-cols-4 grid-cols-2 ':'md:grid-cols-4 grid-cols-2'} lg:grid-cols-4 grid-cols-2 gap-4 md:gap-8 lg:gap-20 mt-8 lg:mt-20 ${btn? 'w-[60%]':'md:w-[100%] w-[90%] xl:w-[80%] opacity-0'}`} ref={ref3}>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
@@ -99,7 +99,7 @@ return (<>
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
                   {/* Heading */}
-                  <p className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-center mb-1 sm:mb-2 font-medium w-full flex justify-start items-center">{amenity.text}</p>
+                  <p className="text-[12px] sm:text-[14px] md:text-[18px] my-heading text-left mb-1 sm:mb-2 font-medium w-full flex justify-start items-center">{amenity.text}</p>
                   {/* Logo or Title */}
                   <div className="flex-1 flex items-center justify-start w-full">
                     {index === 0 || index === 1 ? (
