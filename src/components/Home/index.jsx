@@ -224,7 +224,7 @@ text={"At Empire Developments, we craft more than homes — we create architectu
         
         <Section />
 
-        <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'!text-sm'} icontext={'md:!text-[15px]'}/>
+        <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'text-sm '} />
         
        
 
