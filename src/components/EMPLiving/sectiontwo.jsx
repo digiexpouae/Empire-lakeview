@@ -5,8 +5,8 @@ const sectiontwo = () => {
     const textpara="Empire Development offers apartments for sale in Dubai in Jumeirah Village. This prime location makes life easier. It also offers great opportunities for real estate investment in Dubai. Empire Development apartments are ideal for anyone seeking a spacious and stylish home. These apartments also feature modern tech automation. It’s a great chance to buy luxury homes in Dubai. "
   return (
     <div className=' mb-10 h-[800px] md:h-[700px] w-full flex  justify-center'>
-        <div className='flex md:flex-row flex-col w-[90%] md:w-[70%]   items-center justify-center gap-6  md:gap-[20px]' >
-         <div className=" w-[90%] md:w-[60%]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start h-[300px] lg:h-[400px] gap-4" >
+        <div className='flex md:flex-row flex-col w-[90%] md:w-[80%]   items-center justify-center md:justify-between gap-6  md:gap-[30px]' >
+         <div className=" w-[90%] md:w-[50%]"> <div className="md:p-6 sm:p-8 lg:p-0 flex flex-col items-start  lg:h-[400px] gap-4" >
                <div 
             className="w-full  text-black p-x-8 flex  md:items-start items-center justify-start xl:h-[122px] animate-slide-left"
         >
@@ -16,7 +16,7 @@ const sectiontwo = () => {
             </h2>
           </div>
             <p 
-              className=" text-sm md:text-[14px] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-5 font-light"
+              className=" text-sm md:text-[14px] lg:text-[18px] animate-fade-up text-white leading-5 my-heading md:leading-5 font-light"
             >
             {textpara}
             </p>
