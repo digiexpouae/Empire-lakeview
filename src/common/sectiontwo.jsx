@@ -75,7 +75,7 @@ return (<>
         <div className=" lg:w-[60%]">
           <div className={`md:p-6 sm:p-8 lg:p-0 flex flex-col items-center lg:h-[100px] gap-4 opacity-0 ${className1}`} ref={ref2}>
             <p 
-              className="text-xs md:text-[18px] leading-[1.2] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light text-start w-full"
+              className="text-sm md:text-[18px] leading-[1.2] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light text-start w-full"
             >
               {textpara}
             </p>
