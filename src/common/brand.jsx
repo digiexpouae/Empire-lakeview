@@ -63,9 +63,10 @@ const BrandPillars = () => {
               <Image
                 src={icon.src}
                 alt={icon.alt}
-                width={icon.width}
-                height={icon.height}
-                className="mb-2"
+                width={45}
+                height={45}
+
+                className="mb-2 !h-[45px] !w-[45px] "
               />
               <p className="text-base font-medium md:text-[12px] lg:text-auto text-gray-900 " style={{whiteSpace:'nowrap'}} >
                 {icon.label}
