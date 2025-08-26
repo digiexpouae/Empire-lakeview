@@ -66,7 +66,7 @@ const AdvantagesSection = () => {
 
   return (
     <section
-      className="w-full py-16"
+      className="w-full py-8 md:py-16"
       style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)' }}
     >
       <div className="max-w-7xl mx-auto px-4">
@@ -75,7 +75,7 @@ const AdvantagesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-6xl font-bold text-center text-[#2A2A2A] mb-12"
+          className="text-3xl md:text-5xl md:text-6xl font-bold text-center text-[#2A2A2A] mb-12"
         >
         What Sets Us Apart
         </motion.h2>
@@ -119,7 +119,7 @@ const AdvantagesSection = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center text-center max-w-[200px] "
           >
-            <div className="w-20 h-20 relative mb-2">
+            <div className="w-10 h-10 relative mb-2">
               <Image
                 src={advantages[currentIndex].icon}
                 alt={advantages[currentIndex].title}
