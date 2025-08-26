@@ -57,7 +57,7 @@ const Header = () => {
         { name: 'Empire Lakeviews', link: '/EmpireLakeviews' },
         { name: 'Empire Livings', link: '/EmpireLivings' },
         { name: 'Empire Estates', link: '/EmpireEstates' },
-        { name: 'Empire Residence', link: '/Empireresidence' },
+        { name: 'Empire Residence', link: '/EmpireResidence' },
         { name: 'Plazzo Residence', link: '/plazoresidence' },
         { name: 'Plazzo Heights', link: '/plazoheights' },
       ],
@@ -67,7 +67,7 @@ const Header = () => {
       external: true },
       { name: 'Blogs', link: '/blogs'}
   ];
-// residence
+// 
   return (
     <div
       className={`fixed z-50 w-full transition-all duration-300 ${
