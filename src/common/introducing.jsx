@@ -60,7 +60,6 @@ gsap.fromTo(sliderRef.current, {}, {
 
 
 
-
    
 return (
 
@@ -72,7 +71,7 @@ return (
         <span className='text-white'>{text1}</span>
 
         {logo?(<div className='md:h-[80px] md:w-[150px] h-[60px] w-[100px]'>
-          <Image src={Logo} className='!w-full !h-full' width={150} height={80} alt="Logo" />
+          <Image  src={Logo} className='!w-full !h-full' width={150} height={80} alt="Logo" />
         </div>):(<div className=''><h3 className='text-[15px] md:text-[25px] text-center my-heading leading-6  text-white font-medium'>Successfully <br /> Delivered</h3></div>)
 
 }
@@ -94,12 +93,15 @@ return (
           key={index}
 className={`shrink-0 inline-block xl:w-[380px] md:w-[340px] w-[220px] md:h-[450px] h-[450px] relative ${className}`}
         >
-          <Image
-            src={elem.im}
-            priority
-            alt={`Slide ${index}`}
-            className={`!h-full !w-full  ${overlay && 'md:object-cover'} ${intro && 'object-cover'} rounded-2xl relative  `}
-          />
+<Image
+  src={elem.im}
+  priority
+  fill
+  onClick={() => window.open(elem.im, "_blank")}
+  alt={`Slide ${index}`}
+  className={`!h-full !w-full cursor-pointer ${overlay && 'md:object-cover'} ${intro && 'object-cover'} rounded-2xl relative`}
+/>
+
 {viewprojects && <div className='absolute left-0 right-0 top-0 bottom-0 bg-black/40 z-10 rounded-2xl'></div>}
        {viewprojects &&
           <div className='absolute left-3 bottom-6 z-40'>

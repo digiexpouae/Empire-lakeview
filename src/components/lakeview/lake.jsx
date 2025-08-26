@@ -121,7 +121,19 @@ const index = () => {
       subtitle: '',
     }
   ];
-  const content = [{ im: im }, { im: im2 }, { im: im3 }, { im: im4 }, { im: im5 }, { im: im6 }];
+
+  const content = [
+    { im: "/assets/sliderlake1.webp" },
+    { im: "/assets/sliderlake2.webp" },
+    { im: "/assets/sliderlake3.webp" },
+    { im: "/assets/sliderlake4.webp" },
+    { im: "/assets/sliderlake5.webp" },
+    { im: "/assets/sliderlake6.webp" },
+  ];
+
+
+
+
 
   const images = [
     {
