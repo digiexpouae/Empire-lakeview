@@ -11,7 +11,7 @@ const Hometext = ({ text, head, amenities, btn, back_image, className, home, ico
   return (
     <>
       {/* OUTER WRAPPER */}
-      <div className="relative w-full h-screen overflow-hidden bg-[#1E2435] h-[400px] flex flex-col items-center justify-center md:h-auto" >
+      <div className="relative w-full  overflow-hidden bg-[#1E2435] h-[400px] flex flex-col items-center justify-center md:h-auto" >
         {/* BACKGROUND IMAGE OUTSIDE PADDING */}
      
           <div className="absolute right-0 top-1/2 translate-x-1/4 -translate-y-1/2 w-[200px] h-[200px] md:w-[350px] md:h-[350px] z-0 pointer-events-none">
@@ -36,7 +36,7 @@ const Hometext = ({ text, head, amenities, btn, back_image, className, home, ico
             {/* RIGHT SECTION */}
             <div className="w-full lg:w-[60%]">
               <div className="p-0 md:p-6 lg:p-0 flex flex-col items-center md:items-start text-center md:text-left">
-                <p className={`text-md sm:text-lg  md:text-[17px] text-white leading-4 md:leading-7 font-light ${classNamep}`}>
+                <p className={`text-xs sm:text-lg  md:text-[17px] text-white leading-4 md:leading-7 font-light ${classNamep}`}>
                   {text}
                 </p>
               
