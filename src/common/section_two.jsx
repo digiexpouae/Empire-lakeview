@@ -98,13 +98,13 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                 )}
               </div>
 
-              <div className="mt-4 hidden md:block md:mt-8 flex items-start md:justify-start w-full">
+              <div className="mt-4 hidden md:block md:mt-8 flex items-star:justify-start">
                 <LottieIcons
-                  className="element"
+                  className="element"t md
                   className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
                   amenities={amenities}
                   iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
-                  className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8 lg:gap-36'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
+                  className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
                   
                 />
               </div>

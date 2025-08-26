@@ -73,7 +73,7 @@ const amenities = [
 
 
       <div className='bg-[#0E1527]'>
-   < Sectiontwo  images={images} amenities={amenities} textpara={text} className={'md:!h-[80px] lg:!h-[100px]'} className1={'lg:!h-[220px] md:h-[450px]'} classNamemain={'lg:!h-[600px] md:!h-[800px]'}/>
+   < Sectiontwo  images={images} amenities={amenities} textpara={text} classNameproject={'lg:mb-20'}  className={'md:!h-[80px] lg:!h-[100px]'} />
  
    <Sectionthree />
    

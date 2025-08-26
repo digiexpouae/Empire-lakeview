@@ -57,12 +57,12 @@ tl.fromTo(
 
 },[inView])
 return (<>
-    <div className={`max-w-6xl mx-auto px-4 sm:px-6 py-16 md:h-[600px] lg:h-[500px] flex flex-col items-center justify-between w-[80vw] md:w-[90vw] lg:w-[80vw] scrollbar-hide ${classNamemain}`} ref={ref}>
-      <div className={` w-full md:flex md:flex-row flex flex-col  gap-[20px] ${classNameproject}`}>
-        <div className="flex flex-col md:w-[50%] lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
+    <div className={`max-w-6xl mx-auto  sm:px-6 py-16 flex flex-col items-center justify-between w-[80vw] md:w-[90vw] lg:w-[80vw] scrollbar-hide ${classNamemain}`} ref={ref}>
+      <div className={` w-full md:flex lg:flex-row flex flex-col  gap-[20px] ${classNameproject}`}>
+        <div className="flex flex-col lg:w-[40%] xl:gap-0 lg:gap-[45px] ">
           {/* Left side - Project title */}
           <div 
-            className="w-full  text-black p-x-8 flex  md:items-start items-center md:justify-center xl:h-[100px] animate-slide-left opacity-0"
+            className="w-full  text-black md:px-4 lg:px-0 flex  md:items-start items-center lg:justify-center xl:h-[100px] animate-slide-left opacity-0"
          ref={ref1} >
             <h2 className="text-[30px] lg:text-[70px] sm:text-5xl my-heading font-bold tracking-tighter text-white">
               Project Overview
@@ -72,7 +72,7 @@ return (<>
           {/* Right side - Project description and amenities */}
          
         </div>
-        <div className=" md:w-[50%] lg:w-[60%]">
+        <div className=" lg:w-[60%]">
           <div className={`md:p-6 sm:p-8 lg:p-0 flex flex-col items-center lg:h-[100px] gap-4 opacity-0 ${className1}`} ref={ref2}>
             <p 
               className="text-xs md:text-[18px] leading-[1.2] lg:text-[20px] animate-fade-up text-white leading-5 my-heading md:leading-7 font-light text-start w-full"
@@ -95,7 +95,7 @@ return (<>
               {amenities.map((amenity, index) => (
                 <div 
                   key={index} 
-                  className="flex flex-col items-center justify-between px-3 py-2 bg-white rounded-[13px] animate-fade-up-delayed h-[110px] w-[110px] sm:h-[130px] sm:w-[130px] md:h-[160px] md:w-[160px] lg:h-[200px] lg:w-[200px] element text-center gap-1 sm:gap-2"
+                  className="flex flex-col items-center justify-between px-3 py-2 bg-white rounded-[13px] animate-fade-up-delayed h-[110px] w-[110px] sm:h-[130px] sm:w-[130px] md:h-[170px] md:w-[160px] lg:h-[200px] lg:w-[200px] element text-center gap-1 sm:gap-2"
                   style={{ animationDelay: `${0.6 + index * 0.1}s` }}
                 >
                   {/* Heading */}

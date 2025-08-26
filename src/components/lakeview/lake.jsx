@@ -20,11 +20,20 @@ import Sectionthree from '../../common/section'
 import back from '../../../public/assets/lake background.webp'
 import empire from '../../../public/assets/empire2.png'
 import im1 from '../../../public/assets/cloud_one.png'
-import spa from '../../../public/assets/animation/Spa Relaxation.json'
-import video from '../../../public/assets/animation/Video Camera.json'
-import joy from '../../../public/assets/animation/Joystick (1).json'
-import golf from '../../../public/assets/animation/Golf Club[1].json'
-import other from '../../../public/assets/animation/Other (1).json'
+import icon1 from '../../../public/Infinity Pool.svg'
+import icon2 from '../../../public/Creek Park.svg'
+import icon3 from '../../../public/Mini Golf Course.svg'
+import icon4 from '../../../public/Amphi- theatre.svg'
+import icon5 from '../../../public/Jogging Track.svg'
+import icon6 from '../../../public/Co-working Space.svg'
+import icon7 from '../../../public/Outdoor Gym.svg'
+import icon8 from '../../../public/Kids Play Area.svg'
+
+
+
+
+
+
 import Liwan from '../../../public/liwanlake.svg';
 import AmayaMall from '../../../public/assets/amayamall.svg';
 import IndianInternationalSchool from '../../../public/international school.svg';
@@ -57,32 +66,50 @@ const index = () => {
   ];
   const amenities = [
     {
-      icon: spa,
-      title: "Steam & Sauna",
+      icon: icon1,
+      title: "Infinity Pool",
       h: 50,
       w: 50
     },
     {
-      icon: video,
-      title: "Outdoor Cinema ",
+      icon: icon2,
+      title: "Creek Park",
       h: 50,
       w: 50
     },
     {
-      icon: joy,
-      title: "Gaming Arcade",
-      h: 50,
-      w: 50
-    },
-    {
-      icon: golf,
+      icon: icon3,
       title: "Mini Golf Course",
       h: 50,
       w: 50
     },
     {
-      icon: other,
-      title: "And Other Features",
+      icon: icon4,
+      title: "Amphi-theatre",
+      h: 50,
+      w: 50
+    },
+    {
+      icon: icon5,
+      title: "Jogging Track",
+      h: 20,
+      w: 20
+    },
+    {
+      icon: icon6,
+      title: "Co-working Space",
+      h: 20,
+      w: 20
+    },
+    {
+      icon: icon7,
+      title: "Outdoor Gym",
+      h: 20,
+      w: 20
+    },
+    {
+      icon: icon8,
+      title: "Kids Play Area",
       h: 20,
       w: 20
     },
@@ -203,7 +230,7 @@ const index = () => {
           <div className='md:mt-0'>
             <Section_two btn={true} head={'Project Overview'} amenities={amenities} text={`
     Liwan homes by Empire Development feature open layouts and high-end finishes. In Premium Residences, Liwan residents enjoy a modern lifestyle.
-     It’s a peaceful and eco-friendly place. Empire Lakeview by Empire Development is great for Liwan, Dubai property investment, or Dubai real estate investments`} home={false} icontext={'md:!text-[20px]'} />
+     It’s a peaceful and eco-friendly place. Empire Lakeview by Empire Development is great for Liwan, Dubai property investment, or Dubai real estate investments`} home={false} icontext={'md:!text-sm'} />
           </div>
         </Fadein>
         <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Floor Plans'} />

@@ -57,7 +57,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
         )}
 
         {/* MAIN CONTENT WITH PADDING */}
-        <div className="max-w-6xl mx-auto px-2 sm:px-4 py-8 md:py-16 md:h-[600px] flex items-center justify-center md:justify-start  w-full md:w-[80vw] z-20 relative">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 py-8 md:py-16 md:h-[600px] flex items-center justify-center md:justify-start  w-full md:w-5xl lg:w-full  relative">
           <div className={`w-full flex ${home ? 'flex-col gap-8 justify-center md:justify-start' : 'flex-col lg:flex-row gap-8 md:gap-[20px] lg:gap-[80px]'}`}>
             {/* LEFT SECTION */}
             <div className={`flex flex-col lg:w-[40%] ${home ? 'gap-8' : 'xl:gap-0 lg:gap-[45px]'}`}>
@@ -68,19 +68,24 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
               </div>
 
               {/* Lottie Icons Desktop (moved here) */}
-              <div className=" mt-5 md:mt-0 ml-10 hidden md:block md:mt-8 w-full">
+               <div className=" mt-5 w-[90%]  hidden md:block md:mt-0 lg:w-6xl  lg:py-14 xl:py-0">
                 <LottieIcons
                   className="element"
                   className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
                   amenities={amenities}
-                  iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
-                  className1={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 md:gap-8 lg:gap-36'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
+                  iconsize="h-[50px] w-[50px] md:w-[30px] md:h-[30px] lg:w-[15px] lg:h-[15px]"
+                  className1={`grid grid-cols-4 md:grid-cols-5 md:w-[80%] lg:grid-cols-8 ${home ? 'gap-2 md:grid-cols-4' : 'gap-4 lg:gap-8 '} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
                   ref={ref3}
                 />
-              </div>
+              </div> 
+
+
+              {/* <div className=" mt-5 md:mt-0 ml-10 hidden md:block md:mt-8 w-full">
+                <Image className="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"/>
+              </div> */}
 
               {/* Mobile Amenities */}
-              <div className="flex md:hidden gap-4 mt-4">
+              <div className="flex flex-wrap items-center justify-center md:hidden gap-3 w-screen mt-4">
                 {amenities.map((amenity, idx) => (
                   <motion.div
                     key={amenity.title}
@@ -90,7 +95,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                     className="flex flex-col items-center md:justify-start"
                   >
                     <div className="h-[50px] w-[50px] mb-1">
-                      <LottieIcons amenities={[amenity]} iconsize="h-[50px] w-[50px]" />
+                      <LottieIcons amenities={[amenity]} iconsize="h-[40px] w-[40px]" />
                     </div>
                     <span className="text-white text-[10px] mt-1 text-center">{amenity.title}</span>
                   </motion.div>
@@ -99,16 +104,16 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
             </div>
 
             {/* RIGHT SECTION */}
-            <div className={`${home ? 'lg:w-[80%] md:w-[100%]' : 'w-full lg:w-[60%] mt-6 md:mt-0'}`}>
+            <div className={`${home ? 'lg:w-[80%] md:w-[100%]' : 'w-full md:w-[70%] lg:w-[60%] mt-6 md:mt-0'}`}>
               <div className={`p-0 md:p-6 sm:p-8 lg:p-0 flex flex-col items-center md:items-start text-center md:text-left ${home ? '' : 'lg:h-[280px]'} gap-4`} ref={ref2}>
-                <p className={`text-[15px] md:text-[18px] lg:text-[20px] text-white leading-5 md:leading-7 font-light ${classNamep}`}>
+                <p className={`text-[15px] md:text-md lg:text-[20px] text-white leading-5 md:leading-7 font-light ${classNamep}`}>
                   {text}
                 </p>
                 {btn && (
                   <a 
                    href="/files/Empire Lakeviews - 2D Typical Floor Plans (2).pdf"
                    download
-                  className="bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] cursor-pointer text-gray-800 w-[180px] px-2 py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
+                  className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] cursor-pointer text-gray-800 w-[180px] px-2 py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
                     Download Brochure
                   </a>
                 )}
