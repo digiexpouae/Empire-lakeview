@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Vision = ({ backgroundImage }) => {
   return (
-    <div className="relative w-full h-[650px]">
+    <div className="relative w-full h-[500px] md:h-[650px]">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -17,7 +17,7 @@ const Vision = ({ backgroundImage }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-bold leading-tight"
+          className="text-3xl md:text-7xl font-bold leading-tight"
         >
           Built with vision.<br />
           <span className="text-white">Defined by Excellence.</span>
@@ -28,7 +28,7 @@ const Vision = ({ backgroundImage }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-6 text-base max-w-3xl md:text-lg font-light leading-relaxed"
+          className="mt-6 text-sm md:text-base max-w-3xl md:text-lg font-light leading-relaxed"
         >
 At Empire Developments, we create landmark residences
 across Dubai that embody elegance, innovation, and
