@@ -30,15 +30,13 @@ export default async function handler(req, res) {
       subject: `📩 Contact Form Submission from ${name || email}`,
       text: `Name: ${name || ''}\nEmail: ${email}\nPhone: ${phone || ''}\nProperty Type: ${propertyType || ''}\nBudget: ${budget || ''}\nMessage: ${message || ''}`,
       html: `
-        <div style="background:linear-gradient(135deg,#f7f7f7,#e9e9e9);padding:40px 20px;font-family:Arial, Helvetica, sans-serif;">
+        <div style="background:linear-gradient(135deg,#f7f7f7,#e9e9e9);padding:30px 20px;font-family:Arial, Helvetica, sans-serif;">
           <div style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.08);padding:40px 32px;line-height:1.6;">
             
             <!-- Logo -->
             <div style="text-align:center;margin-bottom:28px;">
-              <div style="display:inline-block;background:#000;padding:16px;border-radius:50%;">
-                <img src="https://empire-lakeview.vercel.app/_next/image?url=%2Fassets%2Flogo%20(2).png&w=640&q=75" 
-                     alt="Empire Logo" 
-                     style="height:60px;display:block;" />
+              <div style="display:inline-block;background:#000;padding:16px;border-radius:5%;">
+            <img src="https://empire-lakeview.vercel.app/assets/logo%20(2).png" alt="Empire Logo" style="height:60px; width:120px;display:block;" />
               </div>
               <h2 style="margin:24px 0 0;color:#CCAB64;font-size:26px;font-weight:700;">New Contact Form Submission</h2>
             </div>
