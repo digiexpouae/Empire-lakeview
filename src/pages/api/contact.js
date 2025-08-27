@@ -27,29 +27,71 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: process.env.SMTP_FROM || email,
       to: process.env.SMTP_TO || process.env.SMTP_USER,
-      subject: `Contact Form Submission from ${name || email}`,
+      subject: `📩 Contact Form Submission from ${name || email}`,
       text: `Name: ${name || ''}\nEmail: ${email}\nPhone: ${phone || ''}\nProperty Type: ${propertyType || ''}\nBudget: ${budget || ''}\nMessage: ${message || ''}`,
       html: `
-        <div style="max-width:520px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:32px 24px 24px 24px;font-family:sans-serif;">
-          <div style="text-align:center;margin-bottom:24px;">
-            <img src="/assets/logo2.png" alt="Empire Logo" style="height:60px;margin-bottom:8px;" />
-            <h2 style="margin:0;color:#CCAB64;font-size:24px;">New Contact Form Submission</h2>
+        <div style="background:linear-gradient(135deg,#f7f7f7,#e9e9e9);padding:40px 20px;font-family:Arial, Helvetica, sans-serif;">
+          <div style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.08);padding:40px 32px;line-height:1.6;">
+            
+            <!-- Logo -->
+            <div style="text-align:center;margin-bottom:28px;">
+              <div style="display:inline-block;background:#000;padding:16px;border-radius:50%;">
+                <img src="https://empire-lakeview.vercel.app/_next/image?url=%2Fassets%2Flogo%20(2).png&w=640&q=75" 
+                     alt="Empire Logo" 
+                     style="height:60px;display:block;" />
+              </div>
+              <h2 style="margin:24px 0 0;color:#CCAB64;font-size:26px;font-weight:700;">New Contact Form Submission</h2>
+            </div>
+    
+            <!-- Info Table -->
+            <table style="width:100%;border-collapse:collapse;font-size:15px;color:#333;margin-top:20px;">
+              <tr>
+                <td style="padding:12px 0;font-weight:600;width:160px;color:#555;">Name:</td>
+                <td style="padding:12px 0;">${name || ''}</td>
+              </tr>
+              <tr style="background:#fafafa;">
+                <td style="padding:12px 0;font-weight:600;color:#555;">Email:</td>
+                <td style="padding:12px 0;">${email}</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 0;font-weight:600;color:#555;">Phone:</td>
+                <td style="padding:12px 0;">${phone || ''}</td>
+              </tr>
+              <tr style="background:#fafafa;">
+                <td style="padding:12px 0;font-weight:600;color:#555;">Property Type:</td>
+                <td style="padding:12px 0;">${propertyType || ''}</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 0;font-weight:600;color:#555;">Budget:</td>
+                <td style="padding:12px 0;">${budget || ''}</td>
+              </tr>
+              <tr style="background:#fafafa;">
+                <td style="padding:12px 0;font-weight:600;color:#555;vertical-align:top;">Message:</td>
+                <td style="padding:12px 0;">${message || ''}</td>
+              </tr>
+            </table>
+    
+            <!-- CTA -->
+            <div style="text-align:center;margin-top:32px;">
+              <a href="mailto:${email}" 
+                 style="display:inline-block;background:#CCAB64;color:#fff;text-decoration:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,0.1);">
+                Reply to Inquiry
+              </a>
+            </div>
+    
+            <!-- Footer -->
+            <div style="margin-top:40px;text-align:center;color:#999;font-size:13px;border-top:1px solid #eee;padding-top:16px;">
+              © ${new Date().getFullYear()} Empire Lakeview. All rights reserved.
+            </div>
           </div>
-          <table style="width:100%;border-collapse:collapse;font-size:16px;">
-            <tr><td style="padding:8px 0;font-weight:bold;width:140px;">Name:</td><td>${name || ''}</td></tr>
-            <tr><td style="padding:8px 0;font-weight:bold;">Email:</td><td>${email}</td></tr>
-            <tr><td style="padding:8px 0;font-weight:bold;">Phone:</td><td>${phone || ''}</td></tr>
-            <tr><td style="padding:8px 0;font-weight:bold;">Property Type:</td><td>${propertyType || ''}</td></tr>
-            <tr><td style="padding:8px 0;font-weight:bold;">Budget:</td><td>${budget || ''}</td></tr>
-            <tr><td style="padding:8px 0;font-weight:bold;vertical-align:top;">Message:</td><td>${message || ''}</td></tr>
-          </table>
-          <div style="margin-top:32px;text-align:center;color:#888;font-size:13px;">Empire Lakeview &copy; ${new Date().getFullYear()}</div>
         </div>
       `
     });
+    
+    
 
 
-    return res.status(200).json({ message: 'Email sent successfully' });
+    return res.status(200).json({ message: 'Email sent successfully.' });
   } catch (error) {
     return res.status(500).json({ message: 'Failed to send email', error: error.message });
   }
