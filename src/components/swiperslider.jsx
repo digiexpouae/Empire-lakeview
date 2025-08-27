@@ -19,7 +19,7 @@ const SwiperSlider = ({ testimonial }) => {
           <div className="p-2 md:p-6 ">
             <h3 className="font-bold  text-[20px] md:text-[45px] mb-4 my-heading">Testimonials</h3>
             <div className="flex flex-col gap-2 justify-between items-center">
-              <div className="text-xs h-[125px] md:h-[90px] md:text-[12px] lg:text-lg italic ">"{elem.text}"</div>
+              <div className="text-xs h-[135px] md:h-[90px] md:text-[12px] lg:text-lg italic ">"{elem.text}"</div>
               <div className="flex items-center gap-4 mt-4 w-full">
                 <div className="flex gap-[20px] w-full ">
                     {/* <div className='w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]'> */}
