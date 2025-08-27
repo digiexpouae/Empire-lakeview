@@ -30,49 +30,64 @@ export default async function handler(req, res) {
       subject: `📩 Contact Form Submission from ${name || email}`,
       text: `Name: ${name || ''}\nEmail: ${email}\nPhone: ${phone || ''}\nProperty Type: ${propertyType || ''}\nBudget: ${budget || ''}\nMessage: ${message || ''}`,
       html: `
-        <div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);padding:40px 30px;font-family:Arial, Helvetica, sans-serif;line-height:1.6;">
-          
-          <!-- Header -->
-          <div style="text-align:center;margin-bottom:28px;">
-            <img src="https://empire-lakeview.vercel.app/_next/image?url=%2Fassets%2Flogo%20(2).png&w=640&q=75" alt="Empire Logo" style="height:60px;margin-bottom:16px;" />
-            <h2 style="margin:0;color:#CCAB64;font-size:26px;font-weight:600;">New Contact Form Submission</h2>
-          </div>
+        <div style="background:linear-gradient(135deg,#f7f7f7,#e9e9e9);padding:40px 20px;font-family:Arial, Helvetica, sans-serif;">
+          <div style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.08);padding:40px 32px;line-height:1.6;">
+            
+            <!-- Logo -->
+            <div style="text-align:center;margin-bottom:28px;">
+              <div style="display:inline-block;background:#000;padding:16px;border-radius:50%;">
+                <img src="https://empire-lakeview.vercel.app/_next/image?url=%2Fassets%2Flogo%20(2).png&w=640&q=75" 
+                     alt="Empire Logo" 
+                     style="height:60px;display:block;" />
+              </div>
+              <h2 style="margin:24px 0 0;color:#CCAB64;font-size:26px;font-weight:700;">New Contact Form Submission</h2>
+            </div>
     
-          <!-- Content Table -->
-          <table style="width:100%;border-collapse:collapse;font-size:15px;color:#333;">
-            <tr>
-              <td style="padding:10px 0;font-weight:600;width:150px;color:#555;">Name:</td>
-              <td style="padding:10px 0;">${name || ''}</td>
-            </tr>
-            <tr style="background:#fafafa;">
-              <td style="padding:10px 0;font-weight:600;color:#555;">Email:</td>
-              <td style="padding:10px 0;">${email}</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 0;font-weight:600;color:#555;">Phone:</td>
-              <td style="padding:10px 0;">${phone || ''}</td>
-            </tr>
-            <tr style="background:#fafafa;">
-              <td style="padding:10px 0;font-weight:600;color:#555;">Property Type:</td>
-              <td style="padding:10px 0;">${propertyType || ''}</td>
-            </tr>
-            <tr>
-              <td style="padding:10px 0;font-weight:600;color:#555;">Budget:</td>
-              <td style="padding:10px 0;">${budget || ''}</td>
-            </tr>
-            <tr style="background:#fafafa;">
-              <td style="padding:10px 0;font-weight:600;color:#555;vertical-align:top;">Message:</td>
-              <td style="padding:10px 0;">${message || ''}</td>
-            </tr>
-          </table>
+            <!-- Info Table -->
+            <table style="width:100%;border-collapse:collapse;font-size:15px;color:#333;margin-top:20px;">
+              <tr>
+                <td style="padding:12px 0;font-weight:600;width:160px;color:#555;">Name:</td>
+                <td style="padding:12px 0;">${name || ''}</td>
+              </tr>
+              <tr style="background:#fafafa;">
+                <td style="padding:12px 0;font-weight:600;color:#555;">Email:</td>
+                <td style="padding:12px 0;">${email}</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 0;font-weight:600;color:#555;">Phone:</td>
+                <td style="padding:12px 0;">${phone || ''}</td>
+              </tr>
+              <tr style="background:#fafafa;">
+                <td style="padding:12px 0;font-weight:600;color:#555;">Property Type:</td>
+                <td style="padding:12px 0;">${propertyType || ''}</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 0;font-weight:600;color:#555;">Budget:</td>
+                <td style="padding:12px 0;">${budget || ''}</td>
+              </tr>
+              <tr style="background:#fafafa;">
+                <td style="padding:12px 0;font-weight:600;color:#555;vertical-align:top;">Message:</td>
+                <td style="padding:12px 0;">${message || ''}</td>
+              </tr>
+            </table>
     
-          <!-- Footer -->
-          <div style="margin-top:40px;text-align:center;color:#999;font-size:13px;border-top:1px solid #eee;padding-top:16px;">
-            © ${new Date().getFullYear()} Empire Lakeview. All rights reserved.
+            <!-- CTA -->
+            <div style="text-align:center;margin-top:32px;">
+              <a href="mailto:${email}" 
+                 style="display:inline-block;background:#CCAB64;color:#fff;text-decoration:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,0.1);">
+                Reply to Inquiry
+              </a>
+            </div>
+    
+            <!-- Footer -->
+            <div style="margin-top:40px;text-align:center;color:#999;font-size:13px;border-top:1px solid #eee;padding-top:16px;">
+              © ${new Date().getFullYear()} Empire Lakeview. All rights reserved.
+            </div>
           </div>
         </div>
       `
     });
+    
     
 
 
