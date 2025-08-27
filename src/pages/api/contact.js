@@ -1,7 +1,6 @@
 import nodemailer from 'nodemailer';
-import { useRouter } from 'next/router';
-export default async function handler(req, res) {
 
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
@@ -16,7 +15,7 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
-    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for 587/25
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
@@ -33,14 +32,12 @@ export default async function handler(req, res) {
         <div style="background:linear-gradient(135deg,#f7f7f7,#e9e9e9);padding:30px 20px;font-family:Arial, Helvetica, sans-serif;">
           <div style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.08);padding:40px 32px;line-height:1.6;">
             
-            <!-- Logo -->
-            <div style="text-align:center;margin-bottom:28px;">
-              
-            <img src="https://raw.githubusercontent.com/digiexpouae/Empire-lakeview/a5c792c016f751a3b2fdca32e3728d8170e25015/public/assets/black.svg" alt="Empire Logo" style="height:60px; width:120px;display:block;" />
+         <!-- Logo -->
+<div style="text-align:center;margin-bottom:28px;">
+  <img src="cid:logo" alt="Empire Logo" style="height:55px;width:135px;display:inline-block;margin:0 auto;" />
+  <h2 style="margin:24px 0 0;color:#CCAB64;font-size:27px;font-weight:700;">New Contact Form Submission</h2>
+</div>
 
-              <h2 style="margin:24px 0 0;color:#CCAB64;font-size:27px;font-weight:700;">New Contact Form Submission</h2>
-            </div>
-    
             <!-- Info Table -->
             <table style="width:100%;border-collapse:collapse;font-size:15px;color:#333;margin-top:20px;">
               <tr>
@@ -83,11 +80,15 @@ export default async function handler(req, res) {
             </div>
           </div>
         </div>
-      `
+      `,
+      attachments: [
+        {
+          filename: 'black.png', // your PNG logo
+          path: `${process.cwd()}/public/assets/black.png`, // full path on server
+          cid: 'logo' // must match src="cid:logo"
+        }
+      ]
     });
-    
-    
-
 
     return res.status(200).json({ message: 'Email sent successfully.' });
   } catch (error) {
