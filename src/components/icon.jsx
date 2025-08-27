@@ -61,7 +61,7 @@ const icon = ({ icons }) => {
                       alt={elem.name}
                     />
                   </div>
-                  <span className="text-center font-bold text-[14px] w-full my-heading text-wrap leading-3 text-white mt-2">
+                  <span className="text-center font-bold text-[14px] w-full my-heading text-wrap leading-4 text-white mt-2">
                     {elem.name}
                   </span>
                   <p className="text-[12px] text-white mt-1">{elem.distance}</p>
