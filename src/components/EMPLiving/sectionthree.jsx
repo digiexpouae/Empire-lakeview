@@ -84,7 +84,8 @@ const SectionThree = () => {
 
   return (
     <div className='flex flex-col items-center justify-center w-full text-center h-auto lg:h-[100vh] z-[10] relative' ref={container} style={{ transform: 'translate3d(0,0,0)', willChange: 'transform' }}>
-      <h1 className='text-[45px] lg:text-[100px] my-heading text-white font-bold' style={{ transform: 'translate3d(0,0,0)' }}>Picture Your Future</h1>
+      <h1 className='text-[45px] lg:text-[100px] my-heading text-white font-bold' style={{ transform: 'translate3d(0,0,0)' }}>Envision Your Legacy
+      </h1>
       <div className='w-full h-auto lg:h-screen overflow-hidden scrollbar-hide flex flex-col items-center justify-center' ref={scrollRef} style={{ transform: 'translate3d(0,0,0)', willChange: 'transform' }}>
         <div className='w-[90%] md:w-[80%] h-full flex items-center justify-center' style={{ transform: 'translate3d(0,0,0)' }}>
           <div className='columns-4 flex flex-wrap h-full m-auto items-center justify-center gap-3' style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden', perspective: '1000px' }}>
