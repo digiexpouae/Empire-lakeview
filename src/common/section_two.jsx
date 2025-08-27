@@ -102,7 +102,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                 <LottieIcons
                 Lottieicons={Lottieicons}
                   className="element"
-                  className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
+                  className2={`text-center text-white md:w-[150px] !text-[15px] ${icontext}`}
                   amenities={amenities}
                   iconsize="h-[50px] w-[50px] md:w-[50px] md:h-[50px]"
                   className1={`grid grid-cols-2 md:grid-cols-3  ${home ? 'gap-2 md:grid-cols-5' : 'gap-4 md:gap-8'} mt-4 w-full ${home ? 'opacity-100' : 'opacity-0'}`}
