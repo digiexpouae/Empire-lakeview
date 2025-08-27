@@ -61,7 +61,7 @@ new benchmarks in luxury living.</span>
       >
         <div className='w-full md:w-[40%] lg:w-[40%] text-white order-2 md:order-1 mt-2 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left' ref={ref2}>
           <h2 className='text-2xl md:text-5xl mb-5 font-bold'>Mission</h2>
-          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-[1.2] md:leading-6'>At Empire, our mission is to craft landmark developments that embody luxury, elevate lifestyles, and create enduring value for our clients, partners, and communities. With uncompromising standards, we go beyond building spaces, we shape experiences that define modern living.</span>
+          <span className='lg:text-[20px] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[15px] leading-[1.2] md:leading-6'>To lead the transformation of urban living in the UAE by delivering innovative, smart, and eco-conscious developments of the highest quality.</span>
         </div>
         <div className='relative h-[180px] xs:h-[200px] sm:h-[220px] md:h-[300px] md:w-[50%] lg:w-[40%] w-full z-20 order-1 md:order-2'>
           <Image src={About2} className='!h-full !w-full !object-cover rounded-2xl' />
