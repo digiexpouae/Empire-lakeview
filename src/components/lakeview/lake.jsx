@@ -241,8 +241,7 @@ const index = () => {
         <Fadein>
           <div className='md:mt-0'>
             <Section_two btn={true} Lottieicons={false} head={'Project Overview'} amenities={amenities} text={`
-    Liwan homes by Empire Development feature open layouts and high-end finishes. In Premium Residences, Liwan residents enjoy a modern lifestyle.
-     It’s a peaceful and eco-friendly place. Empire Lakeview by Empire Development is great for Liwan, Dubai property investment, or Dubai real estate investments`} home={false} icontext={'md:!text-sm'} />
+Empire Development's Liwan Homes offers a lifestyle where style and daily convenience come together. Large floor plans and bright interiors create a warm ambiance. Elegant finishes add to this inviting feel. Every home features smart automation, integrating security and comfort into everyday life. The neighborhood is calm and great for families, with beautiful landscaping everywhere. It's a modern oasis that provides lasting value in Dubai's real estate market.`} home={false} icontext={'md:!text-sm'} />
           </div>
         </Fadein>
         <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Floor Plans'} />

@@ -2,7 +2,7 @@ import React from 'react'
 import empire from '../../../public/assets/Replacement.png'
 import Image from 'next/image'
 const sectiontwo = () => {
-    const textpara="Empire Development offers apartments for sale in Dubai in Jumeirah Village. This prime location makes life easier. It also offers great opportunities for real estate investment in Dubai. Empire Development apartments are ideal for anyone seeking a spacious and stylish home. These apartments also feature modern tech automation. It’s a great chance to buy luxury homes in Dubai. "
+    const textpara="Empire Living sets a new benchmark for modern luxury in JVC. Each apartment by Empire Development features beautiful designs and smart home tech. These innovations simplify life. Residents can enjoy rooftop recreation areas with city views, wellness centers, and gardens. It's an ideal place for modern families and investors who want to look ahead."
   return (
     <div className=' mb-10 h-[800px] md:h-[700px] w-full flex  justify-center'>
         <div className='flex md:flex-row flex-col w-[90%] md:w-[80%]   items-center justify-center md:justify-between gap-6  md:gap-[30px]' >
