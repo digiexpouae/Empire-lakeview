@@ -35,9 +35,9 @@ export default async function handler(req, res) {
             
             <!-- Logo -->
             <div style="text-align:center;margin-bottom:28px;">
-              <div style="display:inline-block;background:#000;padding:16px;border-radius:5%;">
-            <img src="https://empire-lakeview.vercel.app/assets/logo%20(2).png" alt="Empire Logo" style="height:60px; width:120px;display:block;" />
-              </div>
+              
+            <img src="https://empire-lakeview.vercel.app/assets/black.svg" alt="Empire Logo" style="height:60px; width:120px;display:block;" />
+
               <h2 style="margin:24px 0 0;color:#CCAB64;font-size:26px;font-weight:700;">New Contact Form Submission</h2>
             </div>
     
