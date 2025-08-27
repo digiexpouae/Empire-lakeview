@@ -32,7 +32,7 @@ export default async function handler(req, res) {
       html: `
         <div style="max-width:520px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:32px 24px 24px 24px;font-family:sans-serif;">
           <div style="text-align:center;margin-bottom:24px;">
-            <img src="/assets/logo2.png" alt="Empire Logo" style="height:60px;margin-bottom:8px;" />
+            <img src="https://empire-lakeview.vercel.app/_next/image?url=%2Fassets%2Flogo%20(2).png&w=640&q=75" alt="Empire Logo" style="height:60px;margin-bottom:8px;" />
             <h2 style="margin:0;color:#CCAB64;font-size:24px;">New Contact Form Submission</h2>
           </div>
           <table style="width:100%;border-collapse:collapse;font-size:16px;">
