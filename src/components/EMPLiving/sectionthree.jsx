@@ -116,7 +116,7 @@ const SectionThree = () => {
               <a
                 href="/files/Empire Livings - Floor Plan (3).pdf"
                 download
-                className="h-[30px] md:h-auto cursor-pointer flex items-center justify-center bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[9px] md:text-sm lg:text-base whitespace-nowrap" style={{ transform: 'translate3d(0,0,0)' }}>Download Brochure</a>
+                className="h-[30px] md:h-auto cursor-pointer flex items-center justify-center bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[9px] md:text-sm lg:text-base whitespace-nowrap" style={{ transform: 'translate3d(0,0,0)' }}>Download Floor Plans</a>
             </div>
             <div className={'w-[22%] loading="lazy" h-[120px] md:h-[180px] lg:h-[260px]'} style={{ transform: 'translate3d(0,0,0)', backfaceVisibility: 'hidden' }}><Image src={empire19} className='!h-full !w-full rounded-3xl object-cover' style={{ transform: 'translate3d(0,0,0)' }} /></div>
           </div>
