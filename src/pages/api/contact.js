@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Email is required' });
   }
 
-  // Configure your SMTP transport
+  // Configure SMTP transport
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
@@ -27,16 +27,23 @@ export default async function handler(req, res) {
       from: process.env.SMTP_FROM || email,
       to: process.env.SMTP_TO || process.env.SMTP_USER,
       subject: `📩 Contact Form Submission from ${name || email}`,
-      text: `Name: ${name || ''}\nEmail: ${email}\nPhone: ${phone || ''}\nProperty Type: ${propertyType || ''}\nBudget: ${budget || ''}\nMessage: ${message || ''}`,
+      text: `
+Name: ${name || ''}
+Email: ${email}
+Phone: ${phone || ''}
+Property Type: ${propertyType || ''}
+Budget: ${budget || ''}
+Message: ${message || ''}
+      `,
       html: `
         <div style="background:linear-gradient(135deg,#f7f7f7,#e9e9e9);padding:30px 20px;font-family:Arial, Helvetica, sans-serif;">
           <div style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.08);padding:40px 32px;line-height:1.6;">
             
-         <!-- Logo -->
-<div style="text-align:center;margin-bottom:28px;">
-  <img src="cid:logo" alt="Empire Logo" style="height:55px;width:135px;display:inline-block;margin:0 auto;" />
-  <h2 style="margin:24px 0 0;color:#CCAB64;font-size:27px;font-weight:700;">New Contact Form Submission</h2>
-</div>
+            <!-- Logo -->
+            <div style="text-align:center;margin-bottom:28px;">
+              <img src="https://empire-lakeview.vercel.app/assets/black.png" alt="Empire Logo" style="height:55px;width:135px;display:inline-block;margin:0 auto;" />
+              <h2 style="margin:24px 0 0;color:#CCAB64;font-size:27px;font-weight:700;">New Contact Form Submission</h2>
+            </div>
 
             <!-- Info Table -->
             <table style="width:100%;border-collapse:collapse;font-size:15px;color:#333;margin-top:20px;">
@@ -80,18 +87,12 @@ export default async function handler(req, res) {
             </div>
           </div>
         </div>
-      `,
-      attachments: [
-        {
-          filename: 'black.png', // your PNG logo
-          path: `${process.cwd()}/public/assets/black.png`, // full path on server
-          cid: 'logo' // must match src="cid:logo"
-        }
-      ]
+      `
     });
 
     return res.status(200).json({ message: 'Email sent successfully.' });
   } catch (error) {
+    console.error('Email send error:', error);
     return res.status(500).json({ message: 'Failed to send email', error: error.message });
   }
 }
