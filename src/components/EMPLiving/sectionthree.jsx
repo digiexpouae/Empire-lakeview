@@ -114,7 +114,7 @@ const SectionThree = () => {
               <div className={'w-[90%] h-[120px] md:h-[150px] -mt-8'} style={{ transform: 'translate3d(0,0,0)' }}><Image src={empirelivin} className='!h-full !w-full rounded-3xl object-contain' style={{ transform: 'translate3d(0,0,0)' }} />
               </div>
               <a
-                href="/files/02 - Individual Floor Plans Book - Empire Livings.pdf"
+                href="/files/Empire Livings - Floor Plan (3).pdf"
                 download
                 className="h-[30px] md:h-auto cursor-pointer flex items-center justify-center bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[120px] md:w-[180px] lg:px-2 py-1 rounded-full transition-colors duration-300 transform text-[9px] md:text-sm lg:text-base whitespace-nowrap" style={{ transform: 'translate3d(0,0,0)' }}>Download Brochure</a>
             </div>
@@ -124,7 +124,7 @@ const SectionThree = () => {
       </div>
       <div className='absolute left-0 right-0 bottom-0 w-full md:h-[50px] lg:h-[50px]' style={{ background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #0E1527 97%)', transform: 'translate3d(0,0,0)' }}></div>
     </div>
-  )
+  ) 
 }
 
 export default SectionThree
