@@ -25,7 +25,11 @@ export default async function handler(req, res) {
   try {
     await transporter.sendMail({
       from: process.env.SMTP_FROM || email,
-      to: process.env.SMTP_TO || process.env.SMTP_USER,
+      // ✅ Send to two recipients:
+      to: [
+        process.env.SMTP_TO || process.env.SMTP_USER,
+        process.env.SMTP_TO_SECOND || 'secondreceiver@example.com', // add second address here or via env variable
+      ],
       subject: `📩 Contact Form Submission from ${name || email}`,
       text: `
 Name: ${name || ''}
