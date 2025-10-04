@@ -20,6 +20,7 @@ const sectiontwo = () => {
             >
             {textpara}
             </p>
+            {/* brochure */}
             <a 
               href="/files/Brochure - Empire Livings.pdf"
               download
