@@ -21,7 +21,7 @@ const sectiontwo = () => {
             {textpara}
             </p>
             <a 
-              href="/files/04 - Typial Floor Plans Book - Empire Livings (1).pdf"
+              href="/files/Brochure - Empire Livings.pdf"
               download
           
             className="
