@@ -113,8 +113,8 @@ const BlogPost = ({ blog, error }) => {
         </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
-      <div className="max-w-4xl text-center">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl text-center">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 {title}
               </h1>

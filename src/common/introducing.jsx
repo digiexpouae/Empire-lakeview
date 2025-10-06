@@ -77,7 +77,7 @@ return (
 }
       {logo?  <a 
        
-          href="/files/03 - Fact Sheet - Empire LakeViews (4).pdf"
+          href="/files/Empire Lakeviews - 2D Typical Floor Plans (2).pdf"
                    download
         className='button  !py-[5px] !w-[170px] !text-[15px] flex items-center justify-center'>{btntext}</a>:
         <a 
@@ -97,7 +97,7 @@ className={`shrink-0 inline-block xl:w-[380px] md:w-[340px] w-[220px] md:h-[450p
   src={elem.im}
   priority
   fill
-  onClick={() => window.open(elem.im, "_blank")}
+  onClick={() => window.location.href = elem.im}
   alt={`Slide ${index}`}
   className={`!h-full !w-full cursor-pointer ${overlay && 'md:object-cover'} ${intro && 'object-cover'} rounded-2xl relative`}
 />

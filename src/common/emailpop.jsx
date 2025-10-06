@@ -102,7 +102,7 @@ const EmailPop = () => {
         </div>
 
         {/* Submit */}
-        <div className="w-full flex justify-end mt-2">
+        <div className="w-full flex justify-center mt-2">
           <button
             type="submit"
             disabled={loading}

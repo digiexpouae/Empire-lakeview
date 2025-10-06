@@ -15,24 +15,7 @@ import mob from "../../../public/assets/Height_mobile.png"
 import contactbg from "../../../public/assets/contact.png"
 const plazoheights = () => {
    const amenities = [  
-    {
-      text:"Projects Delivered",
-      title: "2015-2019",
-    
-    },
-  {
-     text:'Unit Types',
-      title: "Studios, 1 & 2 Bed",
-      text2:'Apartments'
-    },
-    {
-        text:'Developer',
-    im:'/assets/plazoo.png'
-
-    },
-
-
-
+ 
   ]
   const images=[{src:'/assets/260780ea8e7c2393724d8e1ec8066a2b09f5a17f.jpg'}]
   const textpara='Empire Development JVC residential apartments blend luxury with comfort. It features smart design and innovative technology. These affordable luxury Dubai apartments redefine JVC urban modern life. Empire Development is proud to be one of the top real estate companies near me. '

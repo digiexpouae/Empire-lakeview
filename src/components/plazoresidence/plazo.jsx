@@ -31,21 +31,7 @@ const text=
 "Plazzo Residence (JVT) combines comfort and elegance. It meets the needs of modern living. These luxury apartments, JVT Dubai, are designed to enhance your daily life. Experience a life of elegance and quality at Empire Development JVT Real Estate. Many people rely on Empire Development for luxury real estate in JVT, Dubai. Where history blends innovation."
 
 const amenities = [  
-  {
-    text:"Projects Delivered",
-    title: "2015-2019",
   
-  },
-{
-   text:'Unit Types',
-    title: "Studios, 1 & 2 Bed",
-    text2:'Apartments'
-  },
-  {
-      text:'Developer',
-  im:'/assets/plazoo.png'
-
-  },
 
 
 

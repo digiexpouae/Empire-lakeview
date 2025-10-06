@@ -11,7 +11,7 @@ const Term = () => {
           TERMS AND CONDITIONS
         </h2>
 
-        <section className="py-10 w-full px-4 mx-auto md:w-[662px] text-white font-secondary text-sm rich-text-block">
+        <section className="py-10 w-full px-4 mx-auto md:max-w-5xl text-white font-secondary text-base rich-text-block">
           <table className="w-full border-separate border-spacing-y-4">
             <tbody>
               <tr>

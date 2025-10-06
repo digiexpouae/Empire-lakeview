@@ -109,7 +109,7 @@ export default function Complainform() {
           </div>
 
           <div className="form-group">
-            <label>Ph Number*</label>
+            <label>Phone Number*</label>
             <div className="phone-row">
               <select name="phoneCode" value={formData.phoneCode} onChange={handleChange}>
               <option value="+1">+1</option>
@@ -178,7 +178,7 @@ export default function Complainform() {
             />
           </div>
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label>Category of Complaint*</label>
             <input
               type="text"
@@ -187,9 +187,9 @@ export default function Complainform() {
               onChange={handleChange}
               placeholder="Enter complaint category"
             />
-          </div>
+          </div> */}
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label>Severity Level</label>
             <input
               type="text"
@@ -198,7 +198,7 @@ export default function Complainform() {
               onChange={handleChange}
               placeholder="Enter severity level"
             />
-          </div>
+          </div> */}
 
           <div className="form-group">
             <label>Date of Incident</label>
@@ -223,7 +223,7 @@ export default function Complainform() {
           </div>
 
           <div className="form-group">
-            <label>Previously Contact Attempt</label>
+            <label>Previously contacted representative at Empire Developments</label>
             <input
               type="text"
               name="previouslycontactattempt"

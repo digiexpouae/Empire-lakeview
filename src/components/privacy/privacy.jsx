@@ -19,14 +19,14 @@ const privacy = () => {
       py-[40px]
       w-full
       px-[16px]
-      text-sm
+       text-sm md:text-base
       mx-auto 
-      md:w-[662px] 
+      md:max-w-5xl
       font-secondary
-      text-m
+      
       rich-text-block
   ">
-    <p><b>Empire Development Privacy Policy</b></p>
+  <h2 className="text-xl font-medium">Empire Development Privacy Policy</h2>
     <p>We are committed to safeguarding the privacy of our website visitors; this policy sets out how we will treat your personal information. Our website uses cookies. By using our website and agreeing to this policy, you consent to our use of cookies in accordance with the terms of this policy. "Privacy Policy" or "Policy" refers to this privacy policy.</p>
     <p>This Privacy Policy was last updated on 01 August 2024</p>
     <p>It would be helpful to start by explaining some key terms used in this Privacy Policy:</p>

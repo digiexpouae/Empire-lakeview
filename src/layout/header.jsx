@@ -66,6 +66,7 @@ const Header = () => {
       link: 'https://app.empiredevelopment.ae/agency-register ',
       external: true },
       { name: 'Blogs', link: '/blogs'}
+      // ,{name:'Investment Calculator',link:'/mortgage-calculator'}
   ];
 // 
   return (

@@ -23,11 +23,11 @@ const latestProjects = [
 
 const resources = [
   { name: 'Press Release', href: '/blogs' },
-  {name:'Customer Complaint',href:'/customer_complaint'},
+  {name:'Customer Support',href:'/customer_complaint'},
   {name:'Supplier',href:'/suplier'},
   { name: 'Blog', href: '/blogs' },
   { name: 'WhistleBowler Line', href: '/whistleblower' },
-  { name: 'Investor Relations', href: '/' },
+  // { name: 'Investor Relations', href: '/' },
   { name: 'Mortgage Calculator', href: '/mortgage-calculator' },
   { name: 'Career', href: '/career' },
 
@@ -71,7 +71,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
     >
-      <div className="bg-black w-full py-10 text-white">
+      <div className="bg-black w-full py-4 text-white">
 
 
         <div className="container mx-auto px-4 mt-[50px]">
