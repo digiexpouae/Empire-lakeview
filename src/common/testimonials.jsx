@@ -26,7 +26,7 @@ const testimonials = () => {
   ];
 
   return (
-    <div className="w-full md:py-16 px-4 flex items-center justify-center">
+    <div className="w-full py-16 px-4 flex items-center justify-center">
       <div
         className="rounded-2xl w-full h-full  max-w-5xl px-6 py-10 flex items-center justify-center shadow-lg bg-cover bg-center bg-no-repeat"
         style={{
