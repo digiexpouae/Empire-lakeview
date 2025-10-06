@@ -25,22 +25,7 @@ const empire = () => {
   ];
 
   const amenities = [  
-    {
-      text:"Projects Delivered",
-      title: "2015-2019",
-    
-    },
-  {
-     text:'Unit Types',
-      title: "Studios, 1 & 2 Bed",
-      text2:'Apartments'
-    },
-    {
-        text:'Developer',
-    im:'/assets/plazoo.png'
-
-    },
-
+   
 
 
   ]

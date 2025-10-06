@@ -58,8 +58,8 @@ const Header = () => {
         { name: 'Empire Livings', link: '/EmpireLivings' },
         { name: 'Empire Estates', link: '/EmpireEstates' },
         { name: 'Empire Residence', link: '/EmpireResidence' },
-        { name: 'Plazzo Residence', link: '/plazoresidence' },
-        { name: 'Plazzo Heights', link: '/plazoheights' },
+        { name: 'Plazzo Residence', link: '/plazzoresidence' },
+        { name: 'Plazzo Heights', link: '/plazzoheights' },
       ],
     },
     {   name: 'Channel Partners',
@@ -76,10 +76,10 @@ const Header = () => {
 }`}>
       <header className="relative z-50">
         {/* Top bar */}
-        <div className="flex justify-between items-center h-[80px] px-4 sm:px-6 xl:px-20 lg:px-10 mdpy-10 py-3">
+        <div className="flex justify-between items-center h-[80px] px-4 sm:px-6 xl:px-12 lg:px-10 mdpy-10 py-3">
           {/* Desktop Nav  fixes*/}
           <motion.nav
-            className="hidden lg:flex items-center gap-x-3 lg:gap-x-3 xl:gap-x-6 ml-10 pl-4"
+            className="hidden lg:flex items-center gap-x-3 lg:gap-x-3 xl:gap-x-8 ml-10 pl-4"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -136,8 +136,8 @@ const Header = () => {
                 src="/assets/logo (2).png"
                 alt="Empire Developments"
                 className="h-[40px] w-auto lg:h-[45px] lg:h-[50px] object-contain"
-                width={200}
-                height={200}
+                width={150}
+                height={150}
               />
             </a>
           </div>
@@ -149,6 +149,13 @@ const Header = () => {
             initial="hidden"
             animate="visible"
           >
+            <a
+                  href='/mortgage-calculator'
+                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm"
+                >
+                 Investment Calculator
+                </a>
+
             <motion.a
               href="/contact"
               variants={fadeUp}
@@ -219,6 +226,7 @@ const Header = () => {
               className="flex flex-col gap-y-2 pt-3 border-t border-white/20"
               variants={containerVariants}
             >
+             
               <motion.a
                 href="/contact"
                 variants={fadeUp}
