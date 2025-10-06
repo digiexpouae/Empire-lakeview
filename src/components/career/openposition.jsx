@@ -40,23 +40,23 @@ export default function OpenPositions() {
                   className="shrink-0 cursor-pointer"
                   onClick={() => toggleJob(index)}
                 >
-                  <div 
-                    className={`w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 ${
+                   <div 
+                    className={`w-10 h-10 rounded-full text-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300 ${
                       activeJob === index ? 'transform rotate-[-90deg]' : 'transform rotate-0'
                     }`}
-                    style={{
-                      background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)',
-                      transformOrigin: 'center center',
-                    }}
-                  >
-                    <Image
+                    // style={{
+                    //   background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)',
+                    //   transformOrigin: 'center center',
+                    // }}
+                  > +
+                    {/* <Image
                       src={arrow1}
                       alt="Arrow"
                       className="w-3 h-3 transition-transform duration-300"
                       width={14}
                       height={14}
-                    />
-                  </div>
+                    /> */}
+                  </div> 
                 </div>
               </div>
               
