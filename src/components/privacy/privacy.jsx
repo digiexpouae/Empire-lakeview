@@ -23,7 +23,7 @@ const privacy = () => {
       mx-auto 
       md:max-w-5xl
       font-secondary
-      
+      flex flex-col gap-4
       rich-text-block
   ">
   <h2 className="text-xl font-medium">Empire Development Privacy Policy</h2>

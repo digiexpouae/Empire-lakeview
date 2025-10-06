@@ -6,7 +6,7 @@ const Term = () => {
     <>
       <Header />
 
-      <div className="w-full  bg-black pt-40">
+      <div className="w-full  bg-black pt-40 flex flex-col gap-4">
         <h2 className="my-heading text-center text-white text-[32px] font-medium">
           TERMS AND CONDITIONS
         </h2>
