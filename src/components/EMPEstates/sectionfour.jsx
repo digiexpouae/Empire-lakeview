@@ -42,7 +42,7 @@ const sectionfour = () => {
     <section className="flex flex-col md:flex-row items-center justify-center gap-20  md:gap-40 md:h-[700px] text-white p-6 rounded-xl max-w-6xl mx-auto">
       {/* Text Column */}
       <div className="w-full md:w-[40%] space-y-4 flex flex-col items-start justify-start">
-        <h2 className="text-4xl md:text-[60px] my-heading font-bold mb-5 md:mb-12">Aminities</h2>
+        <h2 className="text-4xl md:text-[60px] my-heading font-bold mb-5 md:mb-12">Amenities</h2>
         <ul className="space-y-6">
           {amenities.map((item, i) => (
             <li
