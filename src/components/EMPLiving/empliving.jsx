@@ -64,14 +64,14 @@ const empliving = () => {
       im: '/assets/EMPIRESLIDER4.webp',
       tex1: 'Studio',
       tex2: 'SIZE: 432.42 SQ.FT',
-      link1: 'https://empiredevelopments.ae/empire-estates/360views/studio',
+      link1: 'https://empire-lakeview.vercel.app/360/empirelivings/emplivstudio/index.htm',
       link2: '/contact',
     },
     {
       im: '/assets/EMPIRESLIDER1.webp',
       tex1: '1 Bed',
       tex2: 'SIZE: 2633.68 SQ.FT. TO 2682.94 SQ.FT.',
-      link1: 'https://empiredevelopments.ae/empire-estates/360views/1bed',
+      link1: 'https://empire-lakeview.vercel.app/360/empirelivings/empliv1bed/index.htm',
       link2: '/contact',
     },
     {
@@ -85,7 +85,7 @@ const empliving = () => {
       im: '/assets/EMPIRESLIDER3.webp',
       tex1: 'Duplex',
       tex2: 'SIZE: 753 SQ.FT. TO 867 SQ.FT',
-      link1: 'https://empiredevelopments.ae/empire-estates/360views/2-bed-duplex',
+      link1: 'https://empire-lakeview.vercel.app/360/empirelivings/emplivduplex/index.htm',
       link2: '/contact',
     },
     {
