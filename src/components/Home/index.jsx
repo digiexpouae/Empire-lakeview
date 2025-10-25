@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Header from '@/layout/header'
 // import dynamic from 'next/dynamic';
 
-// Dynamically import ChatWidget with no SSR to avoid window is not defined errors
+// Dynamically import ChatWidget with no SSR to avoid  window is not defined errors
 // const ChatWidget = dynamic(() => import('@/components/ChatWidget/ChatWidget'), {
 //   ssr: false,
 // });
@@ -21,6 +21,7 @@ import Image from 'next/image';
 import Brand from '@/common/brand';
 import Section from './sectiontwo'
 import Slidernews from '@/components/Slidernews'
+import MobileSlider from '@/components/mobileslider'
 import Voice from '../../../public/assets/animation/Voice (1).json'
 import Card from '../../../public/assets/animation/Payment (1)[1].json'
 import Process from '../../../public/assets/animation/Process (1).json'
@@ -226,9 +227,14 @@ text={"At Empire Developments, we craft more than homes — we create architectu
         <Section />
 
         <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'text-sm '} />
-        
-       <Slidernews heading="LATEST NEWS" href="/news" buttonheading="View All News"  />
 
+       <div className='md:block hidden'>
+       <Slidernews heading="LATEST NEWS" href="/news" buttonheading="View All News"  />
+       </div> 
+       
+          <div className='md:hidden block'>
+          <MobileSlider />
+          </div>
       
       <SectionFour images={contactbg} />
 
