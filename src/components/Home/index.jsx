@@ -20,6 +20,7 @@ import im1 from '../../../public/assets/cloud_one.png'
 import Image from 'next/image';
 import Brand from '@/common/brand';
 import Section from './sectiontwo'
+import Slidernews from '@/components/Slidernews'
 import Voice from '../../../public/assets/animation/Voice (1).json'
 import Card from '../../../public/assets/animation/Payment (1)[1].json'
 import Process from '../../../public/assets/animation/Process (1).json'
@@ -226,7 +227,7 @@ text={"At Empire Developments, we craft more than homes — we create architectu
 
         <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'text-sm '} />
         
-       
+       <Slidernews heading="LATEST NEWS" href="/news" buttonheading="View All News"  />
 
       
       <SectionFour images={contactbg} />
