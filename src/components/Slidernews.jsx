@@ -92,6 +92,27 @@ const Slider = ({ heading, buttonheading, href }) => {
     text: 'إمباير تواصل تحقيق النمو القوي في السوق العقاري الإماراتي — Nas News UAE',
     buttonHref: 'https://nasnews.ae/tie-life-style/%d8%aa%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d9%82%d9%8a%d9%85%d8%a9-%d9%85%d8%ad%d9%81%d8%b8%d8%a9-%d8%b9%d9%82%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88/',
   },
+   {
+    image: '',
+    logo: '',
+    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
+    text: 'Bringing affordable luxury to end-users through a 0.5% monthly payment model',
+    buttonHref: 'https://gulfnews.com/gn-focus/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-1.500324059',
+  },
+     {
+    image: '',
+    logo: '',
+    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion',
+    text: 'The total project portfolio of Empire Developments, one of the fastest-growing real estate developers in the UAE, has exceeded Dh2 billion (US$540 million) in value this year',
+    buttonHref: 'https://www.propertytime.ae/featured/empire-developments-property-portfolio-value-exceeds-dh2-billion',
+  },
+   {
+    image: '',
+    logo: '',
+    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
+    text: 'A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income',
+    buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
+  },
 ];
 
   const duplicatedSlides = [...slides, ...slides];
