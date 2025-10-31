@@ -23,63 +23,63 @@ const Slider = ({ heading, buttonheading, href }) => {
 
  const slides = [
   {
-    image: '/assets/empirelivings.webp',
+    image: '/assets/3-10.png',
     logo: '/assets/logo-1.png',
     heading: 'Empire Developments Property Portfolio Value Exceeds AED 2 Billion',
     text: 'Empire Developments charts a strong growth vision aligned with the UAE — Zawya',
     buttonHref: 'https://www.zawya.com/en/press-release/companies-news/empire-developments-property-portfolio-value-exceeds-aed2bln-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-yuw6u0ry',
   },
   {
-   image: '/assets/estates (2).jpg',
+   image: '/assets/3-09.png',
     logo: '/assets/logo-2.png',
     heading: 'Empire Developments Portfolio Surpasses Dh2 Billion',
     text: 'Empire Developments continues strong growth aligned with UAE Vision — Observer Dubai (English)',
     buttonHref: 'https://www.observerdubai.com/2025/10/20/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
   {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-08.png',
     logo:  '/assets/logo-3.png',
     heading: 'Empire Developments Crosses AED 2 Billion in Project Portfolio Value',
     text: 'Empire Developments achieves major milestone — Construction Business News Middle East',
     buttonHref: 'https://www.cbnme.com/news/empire-developments-crosses-aed-2-billion-in-project-portfolio-value/',
   },
   {
-      image: '/assets/estates (2).jpg',
+      image: '/assets/3-07',
      logo:  '/assets/logo-4.png',
     heading: 'Empire Developments Portfolio Value Exceeds Dh2 Billion',
     text: 'Company charts strong growth vision in line with UAE goals — ME News 247',
     buttonHref: 'https://menews247.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
   {
-      image: '/assets/empirelivings.webp',
+      image: '/assets/3-06.png',
     logo: '/assets/logo-5.png',
     heading: 'Empire Developments’ 1,500-Unit Portfolio Surpasses Dh2 Billion',
     text: 'Three major projects under development — Gulf Property Media',
     buttonHref: 'https://gulfproperty.media/focus/nws_empire_developments%E2%80%99_1_500_unit_portfolio_surpasses_dh2_bn_with_three_projects_under_development_',
   },
   {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-09.png',
     logo: '/assets/logo-2.png',
     heading: 'تتجاوز قيمة محفظة عقارات إمباير للتطوير العقاري 2 مليار درهم',
     text: 'رؤية نمو قوية تتماشى مع أهداف دولة الإمارات — Observer Dubai (Arabic)',
     buttonHref: 'https://www.observerdubai.com/2025/10/20/%D8%AA%D8%AA%D8%AC%D8%A7%D9%88%D8%B2-%D9%82%D9%8A%D9%85%D8%A9-%D9%85%D8%AD%D9%81%D8%B8%D8%A9-%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A5%D9%85%D8%A8%D8%A7%D9%8A%D8%B1-%D9%84%D9%84%D8%AA%D8%B7%D9%88/?lang=ar',
   },
   {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-04.png',
     logo: '/assets/logo-6.png',
     heading: 'Empire Developments Portfolio Value Crosses Dh2 Billion',
     text: 'Strong vision aligned with UAE’s growth — PanTime Arabia (English)',
     buttonHref: 'https://pantimearabia.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
   {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-03.png',
     logo: '/assets/logo-6.png',
     heading: 'محفظة عقارات إمباير للتطوير العقاري تتجاوز 2 مليار درهم',
     text: 'رؤية إمباير للنمو تتماشى مع استراتيجية الإمارات — PanTime Arabia (Arabic)',
     buttonHref: 'https://pantimearabia.com/محفظة-عقارات-إمباير-للتطوير-العقاري-م/?lang=ar',
   },
   {
-      image: '/assets/empirelivings.webp',
+      image: '/assets/3-02.png',
     logo: '/assets/logo-7.png',
     heading: 'Empire Developments Portfolio Value Surpasses AED 2 Billion',
     text: 'Strong expansion vision for UAE real estate — Dubai Property Guide',
@@ -87,28 +87,28 @@ const Slider = ({ heading, buttonheading, href }) => {
   },
   {
 
-     image: '/assets/empirelivings.webp',
+     image: '/assets/3-01.png',
     logo: '/assets/logo-8.webp',
     heading: 'تتجاوز قيمة محفظة عقارات إمباير للتطوير العقاري 2 مليار درهم',
     text: 'إمباير تواصل تحقيق النمو القوي في السوق العقاري الإماراتي — Nas News UAE',
     buttonHref: 'https://nasnews.ae/tie-life-style/%d8%aa%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d9%82%d9%8a%d9%85%d8%a9-%d9%85%d8%ad%d9%81%d8%b8%d8%a9-%d8%b9%d9%82%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88/',
   },
    {
-    image: '/assets/empirelivings.webp',
+    image: '/assets/3.png',
     logo: '/assets/logo-9.png',
     heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
     text: 'Bringing affordable luxury to end-users through a 0.5% monthly payment model',
     buttonHref: 'https://gulfnews.com/gn-focus/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-1.500324059',
   },
      {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/2.png',
     logo:  '/assets/logo-10.png',
     heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion',
     text: 'The total project portfolio of Empire Developments, one of the fastest-growing real estate developers in the UAE, has exceeded Dh2 billion (US$540 million) in value this year',
     buttonHref: 'https://www.propertytime.ae/featured/empire-developments-property-portfolio-value-exceeds-dh2-billion',
   },
    {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-08.png',
     logo:  '/assets/logo-11.jpg',
     heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
     text: 'A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income',
@@ -233,7 +233,7 @@ const Slider = ({ heading, buttonheading, href }) => {
                     }}
                   >
                     <div className=" max-w-md">
-                      <div className="absolute top-10">
+                      {/* <div className="absolute top-10">
                         <Image
                           src={slide.logo}
                           alt="Slide Logo"
@@ -241,8 +241,8 @@ const Slider = ({ heading, buttonheading, href }) => {
                           height={32}
                           className="object-contain drop-shadow-lg"
                         />
-                      </div>
-                      <h2
+                      </div> */}
+                      {/* <h2
                         style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
                         className="text-white text-4xl  font-semibold leading-[1] mt-10 mb-1 drop-shadow-lg"
                       >
@@ -250,7 +250,7 @@ const Slider = ({ heading, buttonheading, href }) => {
                       </h2>
                       <p className="text-white text-sm font-lexend mb-4 max-w-md drop-shadow-lg line-clamp-2">
                         {slide.text}
-                      </p>
+                      </p> */}
                       <a href={slide.buttonHref} target="_blank" rel="noopener noreferrer">
                         <button
                           style={{

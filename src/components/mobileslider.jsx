@@ -8,82 +8,69 @@ import Image from 'next/image';
 
  const slides = [
   {
-    image: '/assets/empirelivings.webp',
+    image: '/assets/3-10.png',
     logo: '/assets/logo-1.png',
-    heading: 'Empire Developments Property Portfolio Value Exceeds AED 2 Billion',
     buttonHref: 'https://www.zawya.com/en/press-release/companies-news/empire-developments-property-portfolio-value-exceeds-aed2bln-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-yuw6u0ry',
   },
   {
-   image: '/assets/estates (2).jpg',
-    logo: '/assets/logo-2__3.png',
-    heading: 'Empire Developments Portfolio Surpasses Dh2 Billion',
+   image: '/assets/3-09.png',
+    logo: '/assets/logo-2.png',
     buttonHref: 'https://www.observerdubai.com/2025/10/20/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
   {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-08.png',
     logo:  '/assets/logo-3.png',
-    heading: 'Empire Developments Crosses AED 2 Billion in Project Portfolio Value',
     buttonHref: 'https://www.cbnme.com/news/empire-developments-crosses-aed-2-billion-in-project-portfolio-value/',
   },
   {
-      image: '/assets/estates (2).jpg',
+      image: '/assets/3-07.png',
      logo:  '/assets/logo-4.png',
-    heading: 'Empire Developments Portfolio Value Exceeds Dh2 Billion',
     buttonHref: 'https://menews247.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
   {
-      image: '/assets/empirelivings.webp',
+      image: '/assets/3-06.png',
     logo: '/assets/logo-5.png',
-    heading: 'Empire Developments’ 1,500-Unit Portfolio Surpasses Dh2 Billion',
     buttonHref: 'https://gulfproperty.media/focus/nws_empire_developments%E2%80%99_1_500_unit_portfolio_surpasses_dh2_bn_with_three_projects_under_development_',
   },
   {
-    image: '/assets/estates (2).jpg',
-    logo: '/assets/logo-2__3.png',
-    heading: 'تتجاوز قيمة محفظة عقارات إمباير للتطوير العقاري 2 مليار درهم',
+    image: '/assets/3-09.png',
+    logo: '/assets/logo-2.png',
     buttonHref: 'https://www.observerdubai.com/2025/10/20/%D8%AA%D8%AA%D8%AC%D8%A7%D9%88%D8%B2-%D9%82%D9%8A%D9%85%D8%A9-%D9%85%D8%AD%D9%81%D8%B8%D8%A9-%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A5%D9%85%D8%A8%D8%A7%D9%8A%D8%B1-%D9%84%D9%84%D8%AA%D8%B7%D9%88/?lang=ar',
   },
   {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-04.png',
     logo: '/assets/logo-6.png',
-    heading: 'Empire Developments Portfolio Value Crosses Dh2 Billion',
     buttonHref: 'https://pantimearabia.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
   {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-03.png',
     logo: '/assets/logo-6.png',
-    heading: 'محفظة عقارات إمباير للتطوير العقاري تتجاوز 2 مليار درهم',
     buttonHref: 'https://pantimearabia.com/محفظة-عقارات-إمباير-للتطوير-العقاري-م/?lang=ar',
   },
   {
-      image: '/assets/empirelivings.webp',
+      image: '/assets/3-02.png',
     logo: '/assets/logo-7.png',
-    heading: 'Empire Developments Portfolio Value Surpasses AED 2 Billion',
     buttonHref: 'https://dubaipropertyguide.io/empire-developments-property-portfolio-value-exceeds-aed2bln-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
   {
 
-     image: '/assets/empirelivings.webp',
+     image: '/assets/3-01.png',
     logo: '/assets/logo-8.webp',
-    heading: 'تتجاوز قيمة محفظة عقارات إمباير للتطوير العقاري 2 مليار درهم',
     buttonHref: 'https://nasnews.ae/tie-life-style/%d8%aa%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d9%82%d9%8a%d9%85%d8%a9-%d9%85%d8%ad%d9%81%d8%b8%d8%a9-%d8%b9%d9%82%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88/',
   },
    {
-    image: '/assets/empirelivings.webp',
-    logo: '/assets/logo-9 (2).png',
-    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
+    image: '/assets/3.png',
+    logo: '/assets/logo-9.png',
     buttonHref: 'https://gulfnews.com/gn-focus/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-1.500324059',
   },
      {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/2.png',
     logo:  '/assets/logo-10.png',
-    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion',
     buttonHref: 'https://www.propertytime.ae/featured/empire-developments-property-portfolio-value-exceeds-dh2-billion',
   },
    {
-    image: '/assets/estates (2).jpg',
+    image: '/assets/3-08.png',
     logo:  '/assets/logo-11.jpg',
-    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
     buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
 ];
@@ -145,13 +132,13 @@ const MobileSlider = () => {
                 <div className="absolute inset-0 flex flex-col max-w-[80%] justify-center p-6 text-white z-10">
                   {slide.logo && (
                     <div className="absolute top-6 left-6 sm:top-10 sm:left-10">
-                      <Image
+                      {/* <Image
                         src={slide.logo}
                         alt="Logo"
                         width={120}
                         height={32}
                         className="object-contain drop-shadow-lg"
-                      />
+                      /> */}
                     </div>
                   )}
                   <h2
@@ -164,7 +151,7 @@ const MobileSlider = () => {
                     href={slide.buttonHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 px-5 py-2 border max-w-[120px] border-white text-sm rounded-md hover:bg-white hover:text-black transition"
+                    className="mt-36 px-5 py-2 border max-w-[120px] border-white text-sm rounded-md hover:bg-white hover:text-black transition"
                   >
                     Read More
                   </a>
