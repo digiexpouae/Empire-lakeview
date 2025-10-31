@@ -154,7 +154,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
         interval = setInterval(() => {
             if (!transitioning) {
                 setTransitioning(true);
-                // setCurrent((prev) => prev + 1);
+                setCurrent((prev) => prev + 1);
             }
         }, 2000);
 
@@ -300,7 +300,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -354,7 +354,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -409,7 +409,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -461,7 +461,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -518,7 +518,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -579,7 +579,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -640,7 +640,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -697,7 +697,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -754,7 +754,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -815,7 +815,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -872,7 +872,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -898,7 +898,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                             >
                                 <Image src='/assets/3-01.png' alt="Slide 8" fill className="object-cover" />
                                 <div
-                                    // className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
                                     // style={{
                                     //     background:
                                     //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
@@ -927,7 +927,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -983,7 +983,7 @@ Bringing affordable luxury to end-users through a 0.5% monthly payment model
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -1037,7 +1037,7 @@ The total project portfolio of Empire Developments, one of the fastest-growing r
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
@@ -1091,7 +1091,7 @@ A delivery-focused developer of high-quality affordable luxury homes, Empire Dev
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
                                                 }}
-                                                className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
                                             </button>
