@@ -87,7 +87,7 @@ const Blogs = () => {
           )}
         </div>
       </div>
-      <Navigationslider heading={'Articles'} buttonheading={'View All'} href={'/blogs'} />
+      <Navigationslider heading={'Feature In'} buttonheading={'View All'} href={'/blogs'} />
       <Mobileslider />
       <Footer />
     </>

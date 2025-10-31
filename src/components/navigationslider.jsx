@@ -194,7 +194,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                 >
                     <h2
                         className="text-4xl sm:text-6xl mt-10  font-light text-white tracking-tight mb-4"
-                        style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                       
                     >
                         {heading}
                     </h2>
