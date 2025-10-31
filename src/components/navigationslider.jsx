@@ -182,7 +182,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
     };
 
     return (
-        <div className="w-full h-auto bg-black px-2 pb-20 pt-10 relative hidden md:flex justify-center">
+        <div className="w-full h-auto bg-[#0E1527] px-2 pb-20 pt-10 relative hidden md:flex justify-center">
             <div className="w-full max-w-5xl">
                 {/* Header */}
                 <motion.div
@@ -199,7 +199,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                         {heading}
                     </h2>
                     <Link href={href ?? '#'}>
-                        <button className="bg-white text-black mb-14  cursor-pointer px-6 py-2 rounded-md transition text-sm sm:text-base w-auto">
+                        <button className="bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] text-black mb-14  cursor-pointer px-6 py-2 rounded-md transition text-sm sm:text-base w-auto">
                             {buttonheading}
                         </button>
                     </Link>
@@ -218,7 +218,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                     <button
                         aria-label="Previous Slide"
                         onClick={goToPrev}
-                        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 cursor-pointer hover:bg-white text-black rounded-full p-2 shadow-lg focus:outline-none transform transition-transform duration-300 hover:scale-110 active:scale-95"
+                        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] cursor-pointer hover:bg-white text-black rounded-full p-2 shadow-lg focus:outline-none transform transition-transform duration-300 hover:scale-110 active:scale-95"
                         style={{ border: '1px solid black', fontSize: 20 }}
                     >
                         &#8592;
@@ -228,7 +228,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                     <button
                         aria-label="Next Slide"
                         onClick={goToNext}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/80 cursor-pointer hover:bg-white text-black rounded-full p-2 shadow-lg focus:outline-none transform transition-transform duration-300 hover:scale-110 active:scale-95"
+                        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] cursor-pointer hover:bg-white text-black rounded-full p-2 shadow-lg focus:outline-none transform transition-transform duration-300 hover:scale-110 active:scale-95"
                         style={{ border: '1px solid black', fontSize: 20 }}
                     >
                         &#8594;
@@ -270,10 +270,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-10.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //  'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-6  sm:top-10 ">
@@ -325,10 +325,9 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-09.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //   background:'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -380,10 +379,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-08.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -435,10 +434,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-08.png' alt="Slide 0" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                               s
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -492,10 +488,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-07.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -549,10 +545,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-07.png' alt="Slide 2" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -610,10 +606,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-06.png' alt="Slide 3" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -671,10 +667,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-09.png' alt="Slide 4" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -728,10 +724,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-04.png'  alt="Slide 5" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -785,10 +781,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-03.png' alt="Slide 6" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -846,10 +842,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-02.png' alt="Slide 7" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -902,11 +898,11 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                             >
                                 <Image src='/assets/3-01.png' alt="Slide 8" fill className="object-cover" />
                                 <div
-                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -957,10 +953,10 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3.png' alt="Slide 8" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-4  sm:top-10 ">
@@ -1012,10 +1008,10 @@ Bringing affordable luxury to end-users through a 0.5% monthly payment model
                                 <Image src='/assets/2.png' alt="Slide 8" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
@@ -1066,10 +1062,10 @@ The total project portfolio of Empire Developments, one of the fastest-growing r
                                 <Image src='/assets/3-08.png' alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    style={{
-                                        background:
-                                            'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    }}
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
