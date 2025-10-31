@@ -44,7 +44,7 @@ const Slider = ({ heading, buttonheading, href }) => {
     buttonHref: 'https://www.cbnme.com/news/empire-developments-crosses-aed-2-billion-in-project-portfolio-value/',
   },
   {
-      image: '/assets/3-07',
+      image: '/assets/3-07.png',
      logo:  '/assets/logo-4.png',
     heading: 'Empire Developments Portfolio Value Exceeds Dh2 Billion',
     text: 'Company charts strong growth vision in line with UAE goals — ME News 247',
@@ -228,9 +228,9 @@ const Slider = ({ heading, buttonheading, href }) => {
                   />
                   <div
                     className="absolute inset-0 flex flex-col justify-end p-6 z-10"
-                    style={{
-                      background: 'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                    }}
+                    // style={{
+                    //   background: 'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                    // }}
                   >
                     <div className=" max-w-md">
                       {/* <div className="absolute top-10">

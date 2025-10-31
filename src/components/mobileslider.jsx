@@ -127,7 +127,7 @@ const MobileSlider = () => {
                     priority
                   />
                 ) : (
-                  <div className="absolute inset-0 bg-gray-700" />
+                  <div className="absolute inset-0 " />
                 )}
                 <div className="absolute inset-0 flex flex-col max-w-[80%] justify-center p-6 text-white z-10">
                   {slide.logo && (
