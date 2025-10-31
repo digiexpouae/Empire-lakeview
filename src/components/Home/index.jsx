@@ -229,7 +229,7 @@ text={"At Empire Developments, we craft more than homes — we create architectu
         <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'text-sm '} />
 
        <div className='md:block hidden'>
-       <Slidernews heading="LATEST NEWS" href="/blogs" buttonheading="View All News"  />
+       <Slidernews heading="Lastest News" href="/blogs" buttonheading="View All News"  />
        </div> 
        
           <div className='md:hidden block'>

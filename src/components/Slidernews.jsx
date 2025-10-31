@@ -144,13 +144,13 @@ const Slider = ({ heading, buttonheading, href }) => {
           <div className="flex flex-col items-center sm:items-start w-full sm:w-auto">
             <h2
               className="text-6xl text-white font-light tracking-tight mb-2 text-center sm:text-left"
-              style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+        
             >
               {heading}
             </h2>
           </div>
           <Link href={href}>
-            <button className="bg-black cursor-pointer text-white px-4 py-2 rounded-md transition text-xs sm:text-sm w-full sm:w-auto">
+            <button className="bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] cursor-pointer text-black px-4 py-2 rounded-md transition text-xs sm:text-sm w-full sm:w-auto">
               {buttonheading}
             </button>
           </Link>
@@ -257,7 +257,7 @@ const Slider = ({ heading, buttonheading, href }) => {
                             border: '1px solid #fff',
                             borderRadius: '7px',
                           }}
-                          className="text-white text-xs font-lexend cursor-pointer px-3 py-2 shadow-md transition w-fit"
+                          className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  transition w-fit"
                         >
                           Read More
                         </button>
