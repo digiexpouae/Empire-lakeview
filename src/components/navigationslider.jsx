@@ -154,7 +154,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
         interval = setInterval(() => {
             if (!transitioning) {
                 setTransitioning(true);
-                setCurrent((prev) => prev + 1);
+                // setCurrent((prev) => prev + 1);
             }
         }, 2000);
 
@@ -254,17 +254,17 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                         >
                             {/* Slide 1 */}
                                 <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${1 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden  bg-white relative ${1 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
-                                    width: `${slideWidth}px`,
-                                    height: `${containerHeight}px`,
+                                    // width: `${slideWidth}px`,
+                                    // height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
                                     transform: 1 === current ? 'scale(1.09)' : 'scale(0.95)',
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
-                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                        'transform 0.8s   cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
                                 <Image src='/assets/3-10.png'  alt="Slide 1" fill className="object-cover" />

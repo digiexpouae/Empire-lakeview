@@ -218,7 +218,7 @@ const Slider = ({ heading, buttonheading, href }) => {
               {duplicatedSlides.map((slide, index) => (
                 <div
                   key={index}
-                  className="slide-item flex-shrink-0 w-96 h-96 md:w-[45rem] md:h-[28rem] rounded-xl overflow-hidden shadow-2xl relative"
+                  className="slide-item flex-shrink-0 w-96 h-96 md:w-[45rem] aspect-[16/9] rounded-xl overflow-hidden shadow-2xl relative"
                 >
                   <Image 
                     src={slide.image} 
