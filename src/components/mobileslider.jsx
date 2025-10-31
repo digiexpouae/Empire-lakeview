@@ -151,7 +151,7 @@ const MobileSlider = () => {
                     href={slide.buttonHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-36 px-5 py-2 text-black  bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  max-w-[120px] text-sm rounded-md hover:bg-white hover:text-black transition"
+                    className="mt-26  py-1 text-black text-center bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  max-w-[90px] text-sm rounded-md hover:bg-white hover:text-black transition"
                   >
                     Read More
                   </a>
