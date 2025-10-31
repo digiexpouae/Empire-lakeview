@@ -106,7 +106,7 @@ const MobileSlider = () => {
         }
       `}</style>
 
-      <div className="relative w-full h-[300px]" style={{ aspectRatio: '16 / 9' }}>
+      <div className="relative w-full  aspect-[16/9]" style={{ aspectRatio: '16 / 9' }}>
         <Swiper
           modules={[Pagination]}
           spaceBetween={0}
@@ -116,14 +116,14 @@ const MobileSlider = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full">
+              <div className="relative w-full aspect-[16/9]">
                 {slide.image ? (
                   <Image
                     src={slide.image}
                     alt={slide.heading}
                     layout="fill"
                     objectFit="cover"
-                    className="brightness-[0.5]"
+                   className="object-cover "
                     priority
                   />
                 ) : (
