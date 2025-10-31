@@ -5,7 +5,8 @@ import Footer from '../layout/footer';
 import { client } from '../../sanity/lib/client'
 import { urlFor } from "../../sanity/lib/image";
 import { useEffect, useState } from 'react';
-
+import Navigationslider from '../components/navigationslider'
+import Mobileslider from '../components/mobileslider'
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -86,6 +87,8 @@ const Blogs = () => {
           )}
         </div>
       </div>
+      <Navigationslider heading={'Articles'} buttonheading={'View All'} href={'/blogs'} />
+      <Mobileslider />
       <Footer />
     </>
   );

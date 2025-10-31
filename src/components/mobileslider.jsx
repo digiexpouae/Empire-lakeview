@@ -79,7 +79,7 @@ import Image from 'next/image';
 
 const MobileSlider = () => {
   return (
-    <div className="w-full relative overflow-hidden bg-white">
+    <div className="w-full block md:hidden relative overflow-hidden bg-white">
       <style jsx>{`
         :global(.swiper-pagination) {
           bottom: 12px !important;
