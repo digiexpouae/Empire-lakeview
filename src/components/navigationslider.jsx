@@ -113,7 +113,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
         const handleResize = () => {
             const container = Math.min(Math.max(window.innerWidth * 0.85, 280), 900);
             const slide = container * 0.8;
-            const preview = container * 0.1;
+            const preview = container *0.03;
             setSlideWidth(slide);
             setPreviewWidth(preview);
         };
@@ -186,7 +186,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
   // distance = 0 → active slide
   // distance = 1 → one away
   // distance = 2 → further away
-  const scale = 1.2 - Math.min(distance * 0.3, 0.2);
+  const scale = 1.1 - Math.min(distance * 0.3, 0.2);
   console.log(scale +'scale')
   return scale;
 };
