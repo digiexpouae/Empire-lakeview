@@ -175,7 +175,7 @@ const index = () => {
       im: '/assets/slider4.webp',
       tex1: 'Duplex',
       tex2: 'Size: 2,633.71 SQ.FT',
-      link1: '/https://empire-lakeview.vercel.app/360/lakeviews/duplex/index.htm',
+      link1: 'https://empire-lakeview.vercel.app/360/lakeviews/duplex/index.htm',
       link2: '/contact'
     },
    { im: '',
