@@ -113,7 +113,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
         const handleResize = () => {
             const container = Math.min(Math.max(window.innerWidth * 0.85, 280), 900);
             const slide = container * 0.8;
-            const preview = container * 0.2;
+            const preview = container * 0.1;
             setSlideWidth(slide);
             setPreviewWidth(preview);
         };
@@ -254,7 +254,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                         >
                             {/* Slide 1 */}
                                 <div
-                                className={`rounded-3xl overflow-hidden  bg-white relative ${1 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden   bg-white relative ${1 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     // width: `${slideWidth}px`,
@@ -363,7 +363,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 </div>
                             </div>
                               <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${1 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative  ${1 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
@@ -434,7 +434,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                 <Image src='/assets/3-08.png' alt="Slide 0" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                               s
+                               
                                 >
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
