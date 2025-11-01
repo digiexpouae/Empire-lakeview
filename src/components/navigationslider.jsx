@@ -155,6 +155,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
             if (!transitioning) {
                 setTransitioning(true);
                 setCurrent((prev) => prev + 1);
+            
             }
         }, 2000);
 
@@ -180,6 +181,16 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
             setCurrent((prev) => prev + 1);
         }
     };
+    const getScaleForSlide = (index) => {
+  const distance = Math.abs(current+1 - index);
+  // distance = 0 → active slide
+  // distance = 1 → one away
+  // distance = 2 → further away
+  const scale = 1.2 - Math.min(distance * 0.3, 0.2);
+  console.log(scale +'scale')
+  return scale;
+};
+
 
     return (
         <div className="w-full h-auto bg-[#0E1527] px-2 pb-20 pt-10 relative hidden md:flex justify-center">
@@ -261,7 +272,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     // height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 1 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                   transform: `scale(${getScaleForSlide(0)})` ,
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s   cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -316,7 +327,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 1 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                 transform: `scale(${getScaleForSlide(1)})` ,
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -370,7 +381,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 1 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                    transform: `scale(${getScaleForSlide(2)})` , 
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -425,7 +436,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 0 === current ? 'scale(1.30)' : 'scale(0.95)',
+                                   transform: `scale(${getScaleForSlide(3)})` ,
                                     boxShadow: 0 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -479,7 +490,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 1 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                    transform: `scale(${getScaleForSlide(4)})` ,
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -536,7 +547,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 2 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                        transform: `scale(${getScaleForSlide(5)})` ,
                                     boxShadow: 2 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -597,7 +608,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 3 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                       transform: `scale(${getScaleForSlide(6)})` ,
                                     boxShadow: 3 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -658,7 +669,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 4 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                       transform: `scale(${getScaleForSlide(7)})` ,
                                     boxShadow: 4 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -715,7 +726,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 5 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                     transform: `scale(${getScaleForSlide(8)})` ,
                                     boxShadow: 5 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -772,7 +783,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 6 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                 transform: `scale(${getScaleForSlide(9)})` ,
                                     boxShadow: 6 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -833,7 +844,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 7 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                     transform: `scale(${getScaleForSlide(10)})` ,
                                     boxShadow: 7 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -890,7 +901,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 8 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                       transform: `scale(${getScaleForSlide(11)})` ,
                                     boxShadow: 8 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -944,7 +955,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 8 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                         transform: `scale(${getScaleForSlide(12)})` ,
                                     boxShadow: 8 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -999,7 +1010,7 @@ Bringing affordable luxury to end-users through a 0.5% monthly payment model
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 8 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                          transform: `scale(${getScaleForSlide(13)})` ,
                                     boxShadow: 8 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
@@ -1053,7 +1064,7 @@ The total project portfolio of Empire Developments, one of the fastest-growing r
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: 1 === current ? 'scale(1.09)' : 'scale(0.95)',
+                                        transform: `scale(${getScaleForSlide(14)})` ,
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
