@@ -72,7 +72,7 @@ const index = () => {
       unlockScroll();
     };
   }, [showEmailPop]);
-  const ima = [{im:ima1,link:'/plazoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/EmpireResidence',text:'Empire Residence'}]
+  const ima = [{im:ima1,link:'/plazzoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazzoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/EmpireResidence',text:'Empire Residence'}]
 
   const main = useRef(null)
 
