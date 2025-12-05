@@ -73,6 +73,28 @@ import Image from 'next/image';
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
+    {
+    image: '/assets/sl1.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://emiratesreporter.com/real-estate/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dubai-science-park/',
+  },
+
+ {
+    image: '/assets/sl2.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://pantimearabia.com/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dsp/',
+  },
+ {
+    image: '/assets/sl3.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://pantimearabia.com/%D8%A5%D9%85%D8%A8%D8%A7%D9%8A%D8%B1-%D8%AF%D9%8A%D9%81%D9%8A%D9%84%D9%88%D8%A8%D9%85%D9%86%D8%AA%D8%B3-%D8%AA%D8%B9%D9%8A%D9%86-%D8%B4%D8%B1%D9%83%D8%A9-%D8%B3%D9%8A%D9%86%D9%8A%D8%A7%D8%B1-%D8%A7/?lang=ar',
+  },
+ {
+    image: '/assets/sl4.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://www.observerdubai.com/2025/11/26/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dsp/',
+  },
+
 ];
 
 
@@ -114,10 +136,19 @@ const MobileSlider = () => {
           pagination={{ clickable: true }}
           className="w-full h-full"
         >
+
           {slides.map((slide, index) => (
+          
             <SwiperSlide key={index}>
+                 <a
+                    href={slide.buttonHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    // className="mt-26  py-1 text-black text-center bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  max-w-[90px] text-sm rounded-md hover:bg-white hover:text-black transition"
+                  >
               <div className="relative w-full aspect-[16/9]">
                 {slide.image ? (
+                  
                   <Image
                     src={slide.image}
                     alt={slide.heading}
@@ -130,7 +161,6 @@ const MobileSlider = () => {
                   <div className="absolute inset-0 " />
                 )}
                 <div className="absolute inset-0 flex flex-col max-w-[80%] justify-center p-6 text-white z-10">
-                  {slide.logo && (
                     <div className="absolute top-6 left-6 sm:top-10 sm:left-10">
                       {/* <Image
                         src={slide.logo}
@@ -140,24 +170,25 @@ const MobileSlider = () => {
                         className="object-contain drop-shadow-lg"
                       /> */}
                     </div>
-                  )}
                   <h2
                     className="text-xl font-bold max-w-xl leading-[1.1] mt-5"
                     style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
                   >
                     {slide.heading}
                   </h2>
-                  <a
+                  {/* <a
                     href={slide.buttonHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-26  py-1 text-black text-center bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  max-w-[90px] text-sm rounded-md hover:bg-white hover:text-black transition"
                   >
                     Read More
-                  </a>
+                  </a> */}
                 </div>
               </div>
+              </a>
             </SwiperSlide>
+            
           ))}
         </Swiper>
       </div>

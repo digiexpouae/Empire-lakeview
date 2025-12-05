@@ -114,6 +114,37 @@ const Slider = ({ heading, buttonheading, href }) => {
     text: 'A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income',
     buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
+   {
+    image: '/assets/sl1.png',
+    logo:  '/assets/logo-11.jpg',
+    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
+    text: 'A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income',
+    buttonHref: 'https://emiratesreporter.com/real-estate/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dubai-science-park/',
+  },
+
+ {
+    image: '/assets/sl2.png',
+    logo:  '/assets/logo-11.jpg',
+    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
+    text: 'A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income',
+    buttonHref: 'https://pantimearabia.com/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dsp/',
+  },
+ {
+    image: '/assets/sl3.png',
+    logo:  '/assets/logo-11.jpg',
+    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
+    text: 'A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income',
+    buttonHref: 'https://pantimearabia.com/%D8%A5%D9%85%D8%A8%D8%A7%D9%8A%D8%B1-%D8%AF%D9%8A%D9%81%D9%8A%D9%84%D9%88%D8%A8%D9%85%D9%86%D8%AA%D8%B3-%D8%AA%D8%B9%D9%8A%D9%86-%D8%B4%D8%B1%D9%83%D8%A9-%D8%B3%D9%8A%D9%86%D9%8A%D8%A7%D8%B1-%D8%A7/?lang=ar',
+  },
+ {
+    image: '/assets/sl4.png',
+    logo:  '/assets/logo-11.jpg',
+    heading: 'Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE',
+    text: 'A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income',
+    buttonHref: 'https://www.observerdubai.com/2025/11/26/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dsp/',
+  },
+
+  
 ];
 
   const duplicatedSlides = [...slides, ...slides];
@@ -257,7 +288,7 @@ const Slider = ({ heading, buttonheading, href }) => {
                             border: '1px solid #fff',
                             borderRadius: '7px',
                           }}
-                          className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  transition w-fit"
+                          className="ml-4 text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  transition w-fit"
                         >
                           Read More
                         </button>

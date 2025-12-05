@@ -33,7 +33,7 @@ const fadeUp = {
 const ClientSlider = ({ heading, buttonheading, href }) => {
     const [current, setCurrent] = useState(1);
 
-    const total = 10; // Since we have 7 slides now
+    const total = 15 // Since we have 7 slides now
     const extendedSlides = [
   {
     image: '/assets/3-10.png',
@@ -101,7 +101,18 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
+      {
+    image: '/assets/2.png',
+    logo:  '/assets/logo-10.png',
+    buttonHref: 'https://www.propertytime.ae/featured/empire-developments-property-portfolio-value-exceeds-dh2-billion',
+  },
+   {
+    image: '/assets/3-08.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
+  },
 ];
+
     const extendedTotal = extendedSlides.length;
 
     const [slideWidth, setSlideWidth] = useState(0);
@@ -149,20 +160,20 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
         return () => clearTimeout(timeout);
     }, [current, transitioning, total]);
 
-    useEffect(() => {
-        let interval;
-        interval = setInterval(() => {
-            if (!transitioning) {
-                setTransitioning(true);
-                setCurrent((prev) => prev + 1);
+    // useEffect(() => {
+    //     let interval;
+    //     interval = setInterval(() => {
+    //         if (!transitioning) {
+    //             setTransitioning(true);
+    //             setCurrent((prev) => prev + 1);
             
-            }
-        }, 2000);
+    //         }
+    //     }, 2000);
 
-        return () => {
-            if (interval) clearInterval(interval);
-        };
-    }, [transitioning]);
+    //     return () => {
+    //         if (interval) clearInterval(interval);
+    //     };
+    // }, [transitioning]);
 
     const realIndex = (current - 1 + total) % total;
     const containerWidth = slideWidth + previewWidth;
@@ -182,9 +193,9 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
         }
     };
     const getScaleForSlide = (index) => {
-  const distance = Math.abs(current+1 - index);
+  const distance = Math.abs(current+2 - index);
   // distance = 0 → active slide
-  // distance = 1 → one away
+  // distance = 1 → one away1
   // distance = 2 → further away
   const scale = 1.1 - Math.min(distance * 0.3, 0.2);
   console.log(scale +'scale')
@@ -272,12 +283,14 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                     // height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                   transform: `scale(${getScaleForSlide(0)})` ,
+                                   transform: `scale(${getScaleForSlide(1)})` ,
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s   cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://www.zawya.com/en/press-release/companies-news/empire-developments-property-portfolio-value-exceeds-aed2bln-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-yuw6u0ry" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-10.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -305,8 +318,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Renowned developer launches first UAE project for public sale after four decades of delivering exclusive private developments
                                         </p> */}
-                                        <a href="https://www.zawya.com/en/press-release/companies-news/empire-developments-property-portfolio-value-exceeds-aed2bln-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-yuw6u0ry" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -314,25 +326,28 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                       
                                     </div>
                                 </div>
+                                </a>
                             </div>
                              <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${1 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative ${2 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                 transform: `scale(${getScaleForSlide(1)})` ,
+                                 transform: `scale(${getScaleForSlide(2)})` ,
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://www.observerdubai.com/2025/10/20/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-09.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -359,8 +374,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Renowned developer launches first UAE project for public sale after four decades of delivering exclusive private developments
                                         </p> */}
-                                        <a href="https://www.observerdubai.com/2025/10/20/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -368,25 +382,28 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                      
                                     </div>
                                 </div>
+                                </a>
                             </div>
                               <div
-                                className={`rounded-3xl overflow-hidden bg-white relative  ${1 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative  ${2 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: `scale(${getScaleForSlide(2)})` , 
+                                    transform: `scale(${getScaleForSlide(3)})` , 
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://www.cbnme.com/news/empire-developments-crosses-aed-2-billion-in-project-portfolio-value/" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-08.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -414,8 +431,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Renowned developer launches first UAE project for public sale after four decades of delivering exclusive private developments
                                         </p> */}
-                                        <a href="https://www.cbnme.com/news/empire-developments-crosses-aed-2-billion-in-project-portfolio-value/" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -423,25 +439,28 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                     
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${0 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative ${3 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                   transform: `scale(${getScaleForSlide(3)})` ,
+                                   transform: `scale(${getScaleForSlide(4)})` ,
                                     boxShadow: 0 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://www.cbnme.com/news/empire-developments-crosses-aed-2-billion-in-project-portfolio-value/" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-08.png' alt="Slide 0" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -466,8 +485,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Kamdar Developments has appointed Luxedesign (LDV) as the General Contractor for the 105 Residences in JVC and an exclusive luxury villa collection in Meydan.
                                         </p> */}
-                                        <a href="https://www.cbnme.com/news/empire-developments-crosses-aed-2-billion-in-project-portfolio-value/" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -475,27 +493,30 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                        
                                     </div>
                                 </div>
+                                </a>
                             </div>
 
                             {/* Slide 2 */}
                             <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${1 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative ${4 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
                                     height: `${containerHeight}px`,
                                     marginRight: `${previewWidth}px`,
                                     flex: '0 0 auto',
-                                    transform: `scale(${getScaleForSlide(4)})` ,
+                                    transform: `scale(${getScaleForSlide(5)})` ,
                                     boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://menews247.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-07.png'  alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -523,8 +544,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Renowned developer launches first UAE project for public sale after four decades of delivering exclusive private developments
                                         </p> */}
-                                        <a href="https://menews247.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -532,76 +552,18 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                     
                                     </div>
                                 </div>
+                                </a>
                             </div>
 
                             {/* Slide 3 */}
-                            <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${2 === current ? 'z-20' : 'z-10'
-                                    }`}
-                                style={{
-                                    width: `${slideWidth}px`,
-                                    height: `${containerHeight}px`,
-                                    marginRight: `${previewWidth}px`,
-                                    flex: '0 0 auto',
-                                        transform: `scale(${getScaleForSlide(5)})` ,
-                                    boxShadow: 2 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
-                                    transition:
-                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
-                                }}
-                            >
-                                <Image src='/assets/3-07.png' alt="Slide 2" fill className="object-cover" />
-                                <div
-                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
-                                    // style={{
-                                    //     background:
-                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
-                                    // }}
-                                >
-                                    <div className="max-w-md mt-[220px]">
-                                        <div className="absolute top-20  sm:top-10 ">
-                                            {/* <Image
-                                                src={arabialogo}
-                                                alt="Slide Logo"
-                                                width={120}
-                                                height={32}
-                                                className="object-contain drop-shadow-lg"
-                                            /> */}
-                                        </div>
-                                        {/* <h2
-                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
-                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
-                                        >
-                                            Kamdar Developments Breaks Ground on <span style={{
-                                                fontFamily: 'lexend',
-                                                fontSize: '29px',
-                                                fontWeight: '300',
-                                            }}>105 </span>Residences in JVC
-                                        </h2>
-                                        <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
-                                            A 105-unit luxury residential Dubai project starting from $174,000 with completion expected in early 2027
-                                        </p> */}
-                                        <a href="https://menews247.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
-                                            <button
-                                                style={{
-                                                    border: '1px solid #A08741',
-                                                    borderRadius: '7px',
-                                                }}
-                                                className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
-                                            >
-                                                Read More
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
 
                             {/* Slide 4 */}
                             <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${3 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative ${5 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
@@ -614,6 +576,8 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href='https://gulfproperty.media/focus/nws_empire_developments%E2%80%99_1_500_unit_portfolio_surpasses_dh2_bn_with_three_projects_under_development_' target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-06.png' alt="Slide 3" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -645,8 +609,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Dubai-based Kamdar Developers has announced the launch of its new Kamdar 105 Residences project in Jumeirah Village Circle,
                                         </p> */}
-                                        <a href="'https://gulfproperty.media/focus/nws_empire_developments%E2%80%99_1_500_unit_portfolio_surpasses_dh2_bn_with_three_projects_under_development_" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -654,10 +617,11 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                     
                                     </div>
                                 </div>
+                                </a>
                             </div>
 
                             {/* Slide 5 */}
@@ -675,6 +639,8 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                       <a href="https://www.observerdubai.com/2025/10/20/%D8%AA%D8%AA%D8%AC%D8%A7%D9%88%D8%B2-%D9%82%D9%8A%D9%85%D8%A9-%D9%85%D8%AD%D9%81%D8%B8%D8%A9-%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A5%D9%85%D8%A8%D8%A7%D9%8A%D8%B1-%D9%84%D9%84%D8%AA%D8%B7%D9%88/?lang=ar" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-09.png' alt="Slide 4" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -702,8 +668,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Kamdar Developments has launched 105 Residences, a new high-end development in Jumeirah Village Circle.
                                         </p> */}
-                                        <a href="https://www.observerdubai.com/2025/10/20/%D8%AA%D8%AA%D8%AC%D8%A7%D9%88%D8%B2-%D9%82%D9%8A%D9%85%D8%A9-%D9%85%D8%AD%D9%81%D8%B8%D8%A9-%D8%B9%D9%82%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A5%D9%85%D8%A8%D8%A7%D9%8A%D8%B1-%D9%84%D9%84%D8%AA%D8%B7%D9%88/?lang=ar" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -711,10 +676,11 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                       
                                     </div>
                                 </div>
+                                </a>
                             </div>
 
                             {/* Slide 6 */}
@@ -732,14 +698,16 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+            <a href="https://pantimearabia.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-04.png'  alt="Slide 5" fill className="object-cover" />
-                                <div
+                        <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
                                     // style={{
                                     //     background:
                                     //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
                                     // }}
-                                >
+>
                                     <div className="max-w-md mt-[220px]">
                                         <div className="absolute top-20  sm:top-10 ">
                                             {/* <Image
@@ -759,8 +727,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Emphasising on timely delivery and exceptional quality, Luxedesign's appointment is expected to support the project's completion by early 2027
                                         </p> */}
-                                        <a href="https://pantimearabia.com/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -768,10 +735,12 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                       
                                     </div>
+                                   
                                 </div>
+                                 </a>
                             </div> 
 
                             {/* Slide 7 */}
@@ -789,6 +758,8 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://pantimearabia.com/محفظة-عقارات-إمباير-للتطوير-العقاري-م/?lang=ar" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-03.png' alt="Slide 6" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -820,8 +791,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             105 Residences in Dubai's JVC features comprehensive amenities, including a rooftop open-air cinema, swimming pool, fitness studio and more
                                         </p> */}
-                                        <a href="https://pantimearabia.com/محفظة-عقارات-إمباير-للتطوير-العقاري-م/?lang=ar" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -829,10 +799,11 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                      
                                     </div>
                                 </div>
+                                </a>
                             </div>
 
                             {/* Slide 8 */}
@@ -850,6 +821,8 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://dubaipropertyguide.io/empire-developments-property-portfolio-value-exceeds-aed2bln-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-02.png' alt="Slide 7" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -877,8 +850,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
                                             Kamdar Developments has appointed Luxedesign (LDV) as the General Contractor for the 105 Residences in JVC and an exclusive luxury villa collection in Meydan.
                                         </p> */}
-                                        <a href="https://dubaipropertyguide.io/empire-developments-property-portfolio-value-exceeds-aed2bln-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -886,10 +858,11 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                      
                                     </div>
                                 </div>
+                                </a>
                             </div>
 
                             {/* Slide 9 */}
@@ -907,6 +880,8 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                        <a href="https://nasnews.ae/tie-life-style/%d8%aa%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d9%82%d9%8a%d9%85%d8%a9-%d9%85%d8%ad%d9%81%d8%b8%d8%a9-%d8%b9%d9%82%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88/" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3-01.png' alt="Slide 8" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -932,8 +907,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
 تتجاوز قيمة محفظة عقارات إمباير للتطوير العقاري 2 مليار درهم                                        </h2>
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
 إمباير تواصل تحقيق النمو القوي في السوق العقاري الإماراتي — Nas News UAE                                        </p> */}
-                                        <a href="https://nasnews.ae/tie-life-style/%d8%aa%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d9%82%d9%8a%d9%85%d8%a9-%d9%85%d8%ad%d9%81%d8%b8%d8%a9-%d8%b9%d9%82%d8%a7%d8%b1%d8%a7%d8%aa-%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88/" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -941,10 +915,11 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                   
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             {/* Slide 10 */}
                             <div
@@ -961,6 +936,8 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                              <a href="https://gulfnews.com/gn-focus/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-1.500324059" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/3.png' alt="Slide 8" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -988,8 +965,7 @@ Empire Developments’ property portfolio value exceeds Dh2 billion as it charts
                                         <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
 Bringing affordable luxury to end-users through a 0.5% monthly payment model
                                         </p> */}
-                                        <a href="https://gulfnews.com/gn-focus/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae-1.500324059" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -997,13 +973,14 @@ Bringing affordable luxury to end-users through a 0.5% monthly payment model
                                                 className="text-black  text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                      
                                     </div>
                                 </div>
+                                </a>
                             </div>
                             <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${8 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative ${10 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
@@ -1016,6 +993,8 @@ Bringing affordable luxury to end-users through a 0.5% monthly payment model
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
                             >
+                                                                       <a href="https://www.propertytime.ae/featured/empire-developments-property-portfolio-value-exceeds-dh2-billion" target="_blank" rel="noopener noreferrer">
+
                                 <Image src='/assets/2.png' alt="Slide 8" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -1042,8 +1021,7 @@ Empire Developments’ property portfolio value exceeds Dh2 billion             
                                         {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
 The total project portfolio of Empire Developments, one of the fastest-growing real estate developers in the UAE, has exceeded Dh2 billion (US$540 million) in value this year.
                                         </p> */}
-                                        <a href="https://www.propertytime.ae/featured/empire-developments-property-portfolio-value-exceeds-dh2-billion" target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -1051,13 +1029,14 @@ The total project portfolio of Empire Developments, one of the fastest-growing r
                                                 className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                      
                                     </div>
                                 </div>
+                                </a>
                             </div>
                            <div
-                                className={`rounded-3xl overflow-hidden bg-white relative ${1 === current ? 'z-20' : 'z-10'
+                                className={`rounded-3xl overflow-hidden bg-white relative ${11 === current ? 'z-20' : 'z-10'
                                     }`}
                                 style={{
                                     width: `${slideWidth}px`,
@@ -1069,7 +1048,9 @@ The total project portfolio of Empire Developments, one of the fastest-growing r
                                     transition:
                                         'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
                                 }}
-                            >
+                            >                                        <a  href='https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/' target="_blank" rel="noopener noreferrer">
+
+
                                 <Image src='/assets/3-08.png' alt="Slide 1" fill className="object-cover" />
                                 <div
                                     className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
@@ -1096,8 +1077,7 @@ Empire Developments’ property portfolio value exceeds Dh2 billion as it charts
                                         </h2> */}
                                         {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
 A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
-                                        <a  href='https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/' target="_blank" rel="noopener noreferrer">
-                                            <button
+                                            {/* <button
                                                 style={{
                                                     border: '1px solid #A08741',
                                                     borderRadius: '7px',
@@ -1105,11 +1085,236 @@ A delivery-focused developer of high-quality affordable luxury homes, Empire Dev
                                                 className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
                                             >
                                                 Read More
-                                            </button>
-                                        </a>
+                                            </button> */}
+                                       
                                     </div>
                                 </div>
+                                </a>
                             </div>
+
+                               <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${12 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(15)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >                                        <a  href='https://emiratesreporter.com/real-estate/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dubai-science-park/' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/sl1.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                       
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                                   <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${1 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(16)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://pantimearabia.com/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dsp/' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/sl2.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                                      <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${13 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(17)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://pantimearabia.com/%D8%A5%D9%85%D8%A8%D8%A7%D9%8A%D8%B1-%D8%AF%D9%8A%D9%81%D9%8A%D9%84%D9%88%D8%A8%D9%85%D9%86%D8%AA%D8%B3-%D8%AA%D8%B9%D9%8A%D9%86-%D8%B4%D8%B1%D9%83%D8%A9-%D8%B3%D9%8A%D9%86%D9%8A%D8%A7%D8%B1-%D8%A7/?lang=ar' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/sl3.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            
+                                        <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${14 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(18)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://www.observerdubai.com/2025/11/26/empire-developments-appoints-sinyar-al-khaleej-contracting-as-main-contractor-for-empire-livings-in-dsp/' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/sl4.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div>  
                         </div>
                     </div>
                 </motion.div>
