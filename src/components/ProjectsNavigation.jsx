@@ -5,12 +5,13 @@ import Image from 'next/image';
 
 const ProjectsNavigation = () => {
   const projects = [
-    { id: 1, name: 'Empire Lakeviews', image: '/assets/lake.jpg', link: '/EmpireLakeviews' },
-    { id: 2, name: 'Empire Livings', image: '/assets/live.png', link: '/EmpireLivings' },
-    { id: 3, name: 'Empire Estates', image: '/assets/estate.jpg', link: '/EmpireEstates' },
-    { id: 4, name: 'Empire Residence', image: '/assets/plazoresidence.png', link: '/EmpireResidence' },
-    { id: 5, name: 'Plazzo Residence', image: '/assets/plazores.png', link: '/plazzoresidence' },
-    { id: 6, name: 'Plazzo Heights', image: '/assets/plazoheihtts.png', link: '/plazzoheights' },
+    { id: 1, name: 'Empire Gardens', image: '/assets/gardens/gardens.jpg', link: '/EmpireGardens' },
+    { id: 2, name: 'Empire Lakeviews', image: '/assets/lake.jpg', link: '/EmpireLakeviews' },
+    { id: 3, name: 'Empire Livings', image: '/assets/live.png', link: '/EmpireLivings' },
+    { id: 4, name: 'Empire Estates', image: '/assets/estate.jpg', link: '/EmpireEstates' },
+    { id: 5, name: 'Empire Residence', image: '/assets/plazoresidence.png', link: '/EmpireResidence' },
+    { id: 6, name: 'Plazzo Residence', image: '/assets/plazores.png', link: '/plazzoresidence' },
+    { id: 7, name: 'Plazzo Heights', image: '/assets/plazoheihtts.png', link: '/plazzoheights' },
   ];
 
   const [activeImage, setActiveImage] = React.useState(projects[0].image);
@@ -28,7 +29,7 @@ const ProjectsNavigation = () => {
                 className="block group"
                 onMouseEnter={() => setActiveImage(project.image)}
               >
-                <div className="px-6 py-2 text-xl text-gray-800 hover:text-blue-600 transition-colors border-b border-gray-200">
+                <div className="px-6 py-1 text-xl text-gray-800 hover:text-blue-600 transition-colors border-b border-gray-200">
                   {project.name}
                 </div>
               </Link>

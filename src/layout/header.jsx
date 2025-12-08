@@ -54,6 +54,9 @@ const Header = () => {
       name: 'Properties',
       link: '/projects',
       children: [
+                { name: 'Empire Gardens', link: '/EmpireGardens' },
+
+
         { name: 'Empire Lakeviews', link: '/EmpireLakeviews' },
         { name: 'Empire Livings', link: '/EmpireLivings' },
         { name: 'Empire Estates', link: '/EmpireEstates' },
