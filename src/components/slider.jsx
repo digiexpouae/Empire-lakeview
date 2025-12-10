@@ -34,7 +34,6 @@ useEffect(() => {
       end: `+=1500`,
       scrub: true,
       pin: true,
-      pinType:'transform',
       pinSpacing: true,
       anticipatePin:1,
       preventOverlaps:true,

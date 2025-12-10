@@ -27,7 +27,6 @@ useEffect(() => {
     start: 'bottom bottom',
     end: '+=1500',
     pin:true,
-    pinType:'transform',
     scrub: true,  anticipatePin: 1,          // ← tells ScrollTrigger to “pre-pin” 1px early
   pinSpacing:true,       // ← forces position:fixed which is more stable
 
