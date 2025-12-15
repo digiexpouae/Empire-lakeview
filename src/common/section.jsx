@@ -79,7 +79,7 @@ const Section = ({ images,btn }) => {
               </Link> 
                <Link
                   href={currentImage.link2 || '#'}
-                className={`${btn?  "hidden":"text-gray-800 md:px-4 cursor-pointer px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"}`}
+                className={"text-gray-800 md:px-4 cursor-pointer px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"}
                 style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)'
 
                  }}
