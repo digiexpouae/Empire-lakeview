@@ -64,7 +64,7 @@ const heroslider = ({thankyou,p1,p2,p3,garden,textone,lakeview,garden_im,texttwo
             }
           );
         });
-      
+          const tl2 = gsap.timeline();
 
     const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power2.out' } });
 const child=document.querySelectorAll('.home')
@@ -87,9 +87,11 @@ const child=document.querySelectorAll('.home')
                 duration: 2,
                 delay:2,
                 ease: 'power2.out',
-              }),  gsap.fromTo(
-                im.current,
-                {y:400, opacity: 0 },   // 👈 Start 400px below
+              })
+ 
+
+tl2.fromTo( im.current,
+                {y:150, opacity: 0 },   // 👈 Start 400px below
                 {y:0,
                                // 👈 Animate to original position
                   opacity: 1,
@@ -97,39 +99,20 @@ const child=document.querySelectorAll('.home')
                   delay: 1,
                   ease: 'power2.out',
                 }
-            ),gsap.fromTo(
-              text1.current,
-              {y:0, opacity: 0 },   // 👈 Start 400px below
-              {y:0,
-                             // 👈 Animate to original position
-                opacity: 1,
-                duration: 2,
-                delay: 1,
-                ease: 'power2.out',
-              }
-          ),
-          gsap.fromTo(
-            text2.current,
-            {y:0, opacity: 0 },   // 👈 Start 400px below
-            {y:0,
-                           // 👈 Animate to original position
-              opacity: 1,
-              duration: 2,
-              delay: 1,
-              ease: 'power2.out',
-            }
-        ),
-        gsap.fromTo(
-          text3.current,
-          {y:0, opacity: 0 },   // 👈 Start 400px below
-          {y:0,
-                         // 👈 Animate to original position
-            opacity: 1,
-            duration: 2,
-            delay: 1,
-            ease: 'power2.out',
-          }
-      )
+            )
+
+
+.fromTo(
+  text2.current,
+  { y: -40, opacity: 0 },
+  { y: 0, opacity: 1, duration: 2, ease: 'power2.out' }
+)
+.fromTo(
+  text3.current,
+  { y: -10, opacity: 0 },
+  { y: 0, opacity: 1, duration: 2, ease: 'power2.out' },
+  "<1"  // wait 0.2s after text2 finishes
+);
       return () => mm.revert(); // Clean up
 
       }, []);
@@ -169,12 +152,12 @@ const child=document.querySelectorAll('.home')
  {garden && 
  <div className={`relative flex items-center justify-center h-[500px] md:h-screen w-full z-50 ${className}`} >
 <div className='relative h-full w-full flex items-center justify-center'>
-<div className='absolute bottom-0 z-40 w-full h-full '>
+<div className='absolute bottom-0 z-40 w-full h-full ' ref={im}>
 <Image src={garden_im}  height={1080} width={2000} className={`object-cover h-full w-full `} />
 </div>
 <div className='relative h-full w-full flex items-center justify-center'>
   <div className='absolute inset-0 flex justify-center  translate-y-1/6'>
-<h1 className={`xl:text-[180px] absolute   md:text-[130px] tracking-tight text-[16vw]  z-10  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold  ${texttwoclass} `}>{texttwo}</h1> 
+<h1 className={`xl:text-[180px] absolute   md:text-[130px] tracking-tight text-[16vw]  z-10  bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold  opacity-0 ${texttwoclass} `} ref={text2} > {texttwo}</h1> 
 
  <div className={`absolute top-6  translate-x-42  opacity-0 ${className3}`} ref={text3}>
 <span  className='lg:text-[35px] md:text-[30px] xl:text-[50px]  text-[4vw] bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-white font-bold z-20 my-heading'>{textthree}</span>

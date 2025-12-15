@@ -4,7 +4,7 @@ import Slider from '../components/slider'; // Adjust path as needed
 import Link from 'next/link';
 
 
-const Section = ({ images }) => {
+const Section = ({ images,btn }) => {
       // Initialize with the first image if available
       const [currentImage, setCurrentImage] = useState(images?.[0] || {});
       
@@ -74,12 +74,12 @@ const Section = ({ images }) => {
             </h2> 
              <span className="text-white my-heading md:text-[25px] text-[10px]">{currentImage.tex2}</span>
             <div className="flex md:gap-3 gap-2">
-              <Link href={currentImage.link1 || '#'} className="text-white border cursor-pointer border-white hover:bg-white hover:text-cyan-800 md:text-[15px] text-[10px]  md:px-4 md:py-2 px-2 py-1 rounded-full transition-all duration-300 text-base">
+              <Link href={currentImage.link1 || '#'} className={`${btn? "hidden": "text-white border cursor-pointer border-white hover:bg-white hover:text-cyan-800 md:text-[15px] text-[10px]  md:px-4 md:py-2 px-2 py-1 rounded-full transition-all duration-300 text-base"}`}>
                 360 view
               </Link> 
                <Link
                   href={currentImage.link2 || '#'}
-                className="text-gray-800 md:px-4 cursor-pointer px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"
+                className={`${btn?  "hidden":"text-gray-800 md:px-4 cursor-pointer px-2 py-1 md:text-[15px] text-[10px] md:py-2 rounded-full transition-colors duration-300 text-base"}`}
                 style={{ background: 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)'
 
                  }}

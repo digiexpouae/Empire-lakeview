@@ -106,7 +106,7 @@ const index = () => {
                                <Slider />
                         <Section />
                            <Aminities />
-                                <Sectionslider images={image} />
+                                <Sectionslider btn={true} images={image} />
                          {/* <Estatetextsection /> */}
                          {/* <SectionThree /> */}
                          {/* <Sectionfour /> */}

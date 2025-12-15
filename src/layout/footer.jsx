@@ -19,6 +19,7 @@ const latestProjects = [
   { name: 'Empire Livings', href: '/EmpireLivings' },
   { name: 'Empire Estates', href: '/EmpireEstates' },
   { name: 'Empire Residence', href: '/EmpireResidence' },
+  {name:'Empire Gardens',href:'/EmpireGardens'}
 ];
 
 const resources = [
