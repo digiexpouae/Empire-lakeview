@@ -42,6 +42,14 @@ const LatestProjectAnimation=({containerRef})=>{
     image: '/assets/slider/estate.png',
     href: '/EmpireEstates',
   },
+  {
+    logo: '/assets/gardens/garden-logo.png',
+    location: 'JVC',
+    description:
+      'Located in the heart of Dubailand, Empire Gardens presents a sophisticated lifestyle surrounded by greenery and open spaces. Meticulously crafted residences, timeless architecture, and serene outdoor settings offer a harmonious escape where modern living feels effortlessly calm.',
+    image: '/assets/gardens/sl.jpg',
+    href: '/EmpireEstates',
+  },
 ];
 // useGSAP(() => {
 //   if (typeof window === "undefined") return;
@@ -165,7 +173,7 @@ const LatestProjectAnimation=({containerRef})=>{
                 </div>
 
                 {/* Description */}
-                <div className="flex-1 mb-3 md:mb-4">
+                <div className="flex-1 mb-3 md:mb-6">
                   <p className="text-xs md:text-sm text-gray-700 leading-[1.2] h-[110px] md:h-[75px] pr-2 ">
                     {project.description}
                   </p>

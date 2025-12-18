@@ -33,7 +33,7 @@ const fadeUp = {
 const ClientSlider = ({ heading, buttonheading, href }) => {
     const [current, setCurrent] = useState(1);
 
-    const total = 15 // Since we have 7 slides now
+    const total = 22 // Since we have 7 slides now
     const extendedSlides = [
   {
     image: '/assets/3-10.png',
@@ -111,6 +111,31 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
   },
+    {
+    image: '/assets/3-08.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
+  },
+    {
+    image: '/assets/3-08.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
+  },
+   {
+    image: '/assets/3-08.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
+  },
+    {
+    image: '/assets/3-08.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
+  },
+    {
+    image: '/assets/3-08.png',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://mid-east.info/empire-developments-property-portfolio-value-exceeds-dh2-billion-as-it-charts-a-strong-growth-vision-aligned-with-the-uae/',
+  },
 ];
 
     const extendedTotal = extendedSlides.length;
@@ -155,7 +180,7 @@ const ClientSlider = ({ heading, buttonheading, href }) => {
             } else {
                 setTransitioning(false);
             }
-        }, 1000);
+        }, 2000);
 
         return () => clearTimeout(timeout);
     }, [current, transitioning, total]);
@@ -1315,6 +1340,399 @@ A delivery-focused developer of high-quality affordable luxury homes, Empire Dev
                                 </div>
                                   </a>
                             </div>  
+                                          <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${19 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(19)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://menews247.com/empire-developments-breaks-ground-on-empire-lake-views-a-landmark-31-floor-residential-tower-in-liwan/' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/a-1.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div> 
+
+                                             <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${20 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(20)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://www.zawya.com/en/press-release/companies-news/empire-developments-breaks-ground-on-empire-lake-views-a-landmark-31-floor-residential-tower-in-liwan-ev57lagr' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/a-2.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div> 
+                                              <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${20 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(21)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://gulfproperty.media/construction/nws_empire_developments_breaks_ground_on_its_liwan_project' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/a-3.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div> 
+                                                  <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${20 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(22)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://emiratesreporter.com/headline/property-times-empire-developments-breaks-ground-on-empire-lake-views-a-landmark-31-floor-residential-tower-in-liwan/' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/a-4.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div> 
+                                                  <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${20 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(23)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://lilacnews.net/%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d8%b9%d9%82%d8%a7%d8%b1%d9%8a-%d8%aa%d8%a8%d8%af%d8%a3-%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d8%a7%d9%84%d8%a5/' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/a-5.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div> 
+                                                  <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${20 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(24)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://www.biztoday.news/2025/12/16/demand-for-mid-market-communities-is-rising-empire-lake-views-answers-the-call-kamran-ghani/' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/a-6.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div> 
+                                                  <div
+                                className={`rounded-3xl overflow-hidden bg-white relative ${20 === current ? 'z-20' : 'z-10'
+                                    }`}
+                                style={{
+                                    width: `${slideWidth}px`,
+                                    height: `${containerHeight}px`,
+                                    marginRight: `${previewWidth}px`,
+                                    flex: '0 0 auto',
+                                        transform: `scale(${getScaleForSlide(25)})` ,
+                                    boxShadow: 1 === current ? '0 10px 30px rgba(0,0,0,0.15)' : 'none',
+                                    transition:
+                                        'transform 0.8s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1)',
+                                }}
+                            >
+                                                                        <a  href='https://www.tradearabia.com/News/331510/Empire-breaks-ground-on-landmark-634-unit-residential-tower-in-Dubai' target="_blank" rel="noopener noreferrer">
+
+                                <Image src='/assets/a-7.png' alt="Slide 1" fill className="object-cover" />
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-end sm:justify-center p-6 sm:p-12 z-10"
+                                    // style={{
+                                    //     background:
+                                    //         'linear-gradient(180deg,rgba(25,25,25,0.45) 60%,rgba(25,25,25,0.85) 100%)',
+                                    // }}
+                                >
+                                    <div className="max-w-md mt-[220px]">
+                                        <div className="absolute top-20  sm:top-10 ">
+                                            {/* <Image
+                                                src='/assets/logo-11.jpg'
+                                                alt="Slide Logo"
+                                                width={120}
+                                                height={32}
+                                                className="object-contain drop-shadow-lg"
+                                            /> */}
+                                        </div>
+                                        {/* <h2
+                                            style={{ fontFamily: 'Luxerie, Lexend, sans-serif' }}
+                                            className="text-white text-3xl font-semibold leading-[1] mt-3 mb-1 drop-shadow-lg"
+                                        >
+Empire Developments’ property portfolio value exceeds Dh2 billion as it charts a strong growth vision aligned with the UAE
+                                        </h2> */}
+                                        {/* <p className="text-white text-md font-lexend mb-8 max-w-md drop-shadow-lg">
+A delivery-focused developer of high-quality affordable luxury homes, Empire Developments’ customer-centric approach encouraged it to introduce a game-changing 0.5 percent monthly payment plan that makes home super affordable to end-users with limited household income                                        </p> */}
+                                            {/* <button
+                                                style={{
+                                                    border: '1px solid #A08741',
+                                                    borderRadius: '7px',
+                                                }}
+                                                className="text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] transition w-fit"
+                                            >
+                                                Read More
+                                            </button> */}
+                                      
+                                    </div>
+                                </div>
+                                  </a>
+                            </div> 
                         </div>
                     </div>
                 </motion.div>
