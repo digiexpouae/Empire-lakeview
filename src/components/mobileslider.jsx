@@ -96,43 +96,62 @@ import Image from 'next/image';
   },
 
   {
-    image: '/assets/a-1.png',
+    image: '/assets/a-1.webp',
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://menews247.com/empire-developments-breaks-ground-on-empire-lake-views-a-landmark-31-floor-residential-tower-in-liwan/',
   },
    {
-    image: '/assets/a-2.png',
+    image: '/assets/a-2.webp',
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://www.zawya.com/en/press-release/companies-news/empire-developments-breaks-ground-on-empire-lake-views-a-landmark-31-floor-residential-tower-in-liwan-ev57lagr',
   },
    {
-    image: '/assets/a-3.png',
+    image: '/assets/a-3.webp',
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://gulfproperty.media/construction/nws_empire_developments_breaks_ground_on_its_liwan_project',
   },
   {
-    image: '/assets/a-4.png',
+    image: '/assets/a-4.webp',
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://emiratesreporter.com/headline/property-times-empire-developments-breaks-ground-on-empire-lake-views-a-landmark-31-floor-residential-tower-in-liwan/',
   },
    {
-    image: '/assets/a-5.png',
+    image: '/assets/a-5.webp',
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://lilacnews.net/%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d8%b9%d9%82%d8%a7%d8%b1%d9%8a-%d8%aa%d8%a8%d8%af%d8%a3-%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d8%a7%d9%84%d8%a5/',
   },
    {
-    image: '/assets/a-6.png',
+    image: '/assets/a-6.webp',
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://www.biztoday.news/2025/12/16/demand-for-mid-market-communities-is-rising-empire-lake-views-answers-the-call-kamran-ghani/',
   },
     {
-    image: '/assets/a-7.png',
+    image: '/assets/a-7.webp',
     logo:  '/assets/logo-11.jpg',
     buttonHref: 'https://www.tradearabia.com/News/331510/Empire-breaks-ground-on-landmark-634-unit-residential-tower-in-Dubai',
   },
 
 
-
+  {
+    image: '/assets/a-8.webp',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://www.zawya.com/ar/%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B5%D8%AD%D9%81%D9%8A%D8%A9/%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A7%D8%AA/31-q8bhenjk',
+  },
+   {
+    image: '/assets/a-9.webp',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://25h.app/2025/12/16/%d8%a5%d9%85%d8%a8%d8%a7%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d8%b9%d9%82%d8%a7%d8%b1%d9%8a-%d8%aa%d8%a8%d8%af%d8%a3-%d8%a3%d8%b9%d9%85%d8%a7%d9%84-%d8%a7%d9%84%d8%a5/',
+  },
+ {
+    image: '/assets/a-10.webp',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://www.dxbnewsnetwork.com/empire-developments-unveils-luxury-living-in-liwan-dubai',
+  },
+ {
+    image: '/assets/a-12.webp',
+    logo:  '/assets/logo-11.jpg',
+    buttonHref: 'https://www.dxbnewsnetwork.com/empire-developments-unveils-luxury-living-in-liwan-dubai',
+  },
 
 
 

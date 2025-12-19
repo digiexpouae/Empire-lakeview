@@ -19,7 +19,7 @@ export default function PropertyShowcase() {
           <div className="rounded-lg overflow-hidden">
             
             {/* Header Section */}
-            <div className=" md:px-8 px-4 py-10 border-b  ">
+            <div className=" md:px-8 px-4 py-10 ">
               <h1 className="text-4xl md:text-6xl font-semibold text-white text-center leading-[1.2]">
                 A Concrete Rise In The<br />
                 City's Finest Selling
@@ -42,38 +42,38 @@ export default function PropertyShowcase() {
 
             {/* Video/Image Section */}
             <div className="relative aspect-video rounded-lg ">
-              <Image
+              {/* <Image
                 src="/assets/gardens/rise.jpg"
                 alt="Luxury rooftop terrace"
                 width={800}
                 height={675}
                 className="w-full h-full object-cover rounded-lg"
               />
-              
+              */}
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  className="rounded-lg"
+>
+  <source
+    src="/assets/Empire Garden Teaser 02 Hor.mp4"
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
+
+
               {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               
               {/* Play Button */}
-              <button
-                onClick={() => setIsPlaying(!isPlaying)}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group"
-              >
-                <div className="relative">
-                  {/* Pulsing Ring Effect */}
-                  <div className="absolute inset-0 bg-white/20 rounded-full animate-ping" />
-                  
-                  {/* Play Button */}
-                  <div className="relative bg-white/90 hover:bg-white rounded-full p-6 transition-all duration-300 shadow-2xl group-hover:scale-110">
-                    <Play className="w-8 h-8 text-slate-900 fill-slate-900 ml-1" />
-                  </div>
-                </div>
-              </button>
+              
 
-              {/* Decorative Elements */}
-              <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between opacity-60">
-                <div className="text-white text-sm font-medium">Virtual Tour Available</div>
-                <div className="text-white text-sm font-medium">360° View</div>
-              </div>
+           
             </div>
 
           </div>
