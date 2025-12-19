@@ -125,9 +125,7 @@ const empliving = () => {
 
     <div className='bg-[#0E1527]'>
 
-      <Fadein>
         <Sectiontwo />
-      </Fadein>
 
       <Fadein>
         <SectionThree />
@@ -141,10 +139,9 @@ const empliving = () => {
 
 
 
-      <Fadein>
+   
         
         <Sectionfour className='mt-10' images={images} slide={4} />
-      </Fadein>
 
       <Places center_position={[25.114806, 55.364444]} Main_marker={'Empire Livings'} markers={markers} Name={<>Empire <br /> Living </>} />
 
