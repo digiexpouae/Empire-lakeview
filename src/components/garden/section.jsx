@@ -56,6 +56,7 @@ export default function PropertyShowcase() {
   muted
   loop
   playsInline
+  poster='/assets/placeholderimage.JPG'
   preload="metadata"
   className="rounded-lg"
 >
