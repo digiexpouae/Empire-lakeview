@@ -1,9 +1,9 @@
 import React from 'react'
-import EMP from '../components/EMPEstates/empestates'
+import Index from '../components/EMPEstates/empestates'
 const EMPEstates = () => {
   return (
- 
-    <EMP />
+
+    <Index />
   )
 }
 
