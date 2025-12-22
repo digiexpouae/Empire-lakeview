@@ -33,7 +33,7 @@ const empliving = () => {
   const empire = 'Empire Livings';
   const icons = [
     { img: BusinessBay, name: <>Business <br /> Bay</>, distance: '15 minutes drive' },
-    { img: MallOfTheEmirates, name: <>Mall of the <br/> Emirates</>, distance: '15 minutes drive' },
+    { img: MallOfTheEmirates, name: <>Mall of the <br /> Emirates</>, distance: '15 minutes drive' },
     { img: DubaiHillMall, name: <>Dubai Hill <br /> Mall</>, distance: '5 minutes drive' },
     { img: PalmJumeirah, name: <>Palm <br /> Jumeirah</>, distance: '15 minutes drive' },
     { img: DubaiInternationalAirport, name: 'Dubai International Airport', distance: '25 minutes drive' },
@@ -125,11 +125,9 @@ const empliving = () => {
 
     <div className='bg-[#0E1527]'>
 
-        <Sectiontwo />
+      <Sectiontwo />
 
-      <Fadein>
-        <SectionThree />
-      </Fadein>
+      <SectionThree />
 
 
 
@@ -139,9 +137,9 @@ const empliving = () => {
 
 
 
-   
-        
-        <Sectionfour className='mt-10' images={images} slide={4} />
+
+
+      <Sectionfour className='mt-10' images={images} slide={4} />
 
       <Places center_position={[25.114806, 55.364444]} Main_marker={'Empire Livings'} markers={markers} Name={<>Empire <br /> Living </>} />
 
