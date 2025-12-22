@@ -54,7 +54,7 @@ const Header = () => {
       name: 'Properties',
       link: '/projects',
       children: [
-                { name: 'Empire Gardens', link: '/EmpireGardens' },
+        { name: 'Empire Gardens', link: '/EmpireGardens' },
 
 
         { name: 'Empire Lakeviews', link: '/EmpireLakeviews' },
@@ -65,18 +65,19 @@ const Header = () => {
         { name: 'Plazzo Heights', link: '/plazzoheights' },
       ],
     },
-    {   name: 'Channel Partners',
+    {
+      name: 'Channel Partners',
       link: 'https://app.empiredevelopment.ae/agency-register ',
-      external: true },
-      { name: 'Blogs', link: '/blogs'}
-      // ,{name:'Investment Calculator',link:'/mortgage-calculator'}
+      external: true
+    },
+    { name: 'Blogs', link: '/blogs' }
+    // ,{name:'Investment Calculator',link:'/mortgage-calculator'}
   ];
-// 
+  // 
   return (
     <div
-      className={`fixed z-50 w-full transition-all duration-300 ${
-      scrolled ? 'bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-md'
-}`}>
+      className={`fixed z-50 w-full transition-all duration-300 ${scrolled ? 'bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-md'
+        }`}>
       <header className="relative z-50">
         {/* Top bar */}
         <div className="flex justify-between items-center h-[80px] px-4 sm:px-6 xl:px-12 lg:px-10 mdpy-10 py-3">
@@ -153,11 +154,11 @@ const Header = () => {
             animate="visible"
           >
             <a
-                  href='/mortgage-calculator'
-                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm"
-                >
-                 Investment Calculator
-                </a>
+              href='/mortgage-calculator'
+              className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm"
+            >
+              Investment Calculator
+            </a>
 
             <motion.a
               href="/contact"
@@ -181,11 +182,10 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden absolute w-full bg-[#0E1527]/95 backdrop-blur-sm transition-all duration-300 ${
-            isOpen
-              ? 'max-h-[500px] opacity-100'
+          className={`lg:hidden absolute w-full bg-[#0E1527]/95 backdrop-blur-sm transition-all duration-300 ${isOpen
+              ? 'max-h-[700px] opacity-100'
               : 'max-h-0 opacity-0 overflow-hidden'
-          }`}
+            }`}
         >
           <motion.div
             className="flex flex-col space-y-3 px-4 py-4"
@@ -229,7 +229,7 @@ const Header = () => {
               className="flex flex-col gap-y-2 pt-3 border-t border-white/20"
               variants={containerVariants}
             >
-             
+
               <motion.a
                 href="/contact"
                 variants={fadeUp}
