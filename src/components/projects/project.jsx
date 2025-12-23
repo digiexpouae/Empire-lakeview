@@ -18,7 +18,7 @@ import LatestProjects from '@/common/latestProjectsCarousel';
 
 const Project = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
- const ima = [{im:ima1,link:'/plazzoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazzoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/EmpireResidence',text:'Empire Residence'}]
+  const ima = [{ im: ima1, link: '/plazzoheights', text: 'Plazzo heights' }, { im: ima2, link: '/plazzoresidence', text: 'Plazzo Residence' }, { im: ima3, link: '/EmpireResidence', text: 'Empire Residence' }]
   const wrapper = useRef();
   const introRef = useRef();
 
@@ -76,19 +76,19 @@ const Project = () => {
 
       <div className="bg-[#0D1028] pt-2">
 
-        <LatestProjects project={'Delivering Landmark Developments'} className={'md:!text-[45px]'} />
+        <LatestProjects project={'Delivering Landmark Developments'} className={'md:!text-[45px]'} classNameMain={'md:!py-20'} />
 
 
         <div ref={introRef} className="flex flex-col items-center justify-center">
           <Fadein>
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[350px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
-  
+            <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[350px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
+
           </Fadein>
 
         </div>
 
         <Fadein>
-        <SectionFour images={contactbg} />
+          <SectionFour images={contactbg} />
         </Fadein>
       </div>
 

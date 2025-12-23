@@ -5,21 +5,21 @@ import Link from 'next/link';
 import Lastestprojectanimation from './latestprojectanimation';
 
 
-const LatestProjects = ({project,className}) => {
+const LatestProjects = ({ project, className, classNameMain }) => {
   // const containerRef=useRef(null)
 
 
   return (
     <>
-    <section className="bg-[#0D1028] relative py-4 md:py-10 flex flex-col items-center  !justify-center gap-4 md:gap-0 overflow-hidden " style={{justifyContent:'center'}} >
-      <h2 className={`text-white text-[30px] md:text-[50px] font-bold text-center mb-8 md:mb-6 px-4 ${className}`}>
-        {project}
-      </h2>
-  <Lastestprojectanimation />
+      <section className={`bg-[#0D1028] relative py-10 flex flex-col items-center  !justify-center gap-4 md:gap-0 overflow-hidden ${classNameMain} `} style={{ justifyContent: 'center' }} >
+        <h2 className={`text-white text-[30px] md:text-[50px] font-medium text-center mb-2 md:mb-6 px-4 ${className}`}>
+          {project}
+        </h2>
+        <Lastestprojectanimation />
 
-  </section> 
+      </section>
 
- </>
+    </>
   );
 };
 

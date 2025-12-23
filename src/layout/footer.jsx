@@ -19,18 +19,17 @@ const latestProjects = [
   { name: 'Empire Livings', href: '/EmpireLivings' },
   { name: 'Empire Estates', href: '/EmpireEstates' },
   { name: 'Empire Residence', href: '/EmpireResidence' },
-  {name:'Empire Gardens',href:'/EmpireGardens'}
+  { name: 'Empire Gardens', href: '/EmpireGardens' }
 ];
 
 const resources = [
   { name: 'Press Release', href: '/blogs' },
-  {name:'Customer Support',href:'/customer_complaint'},
-  {name:'Supplier',href:'/suplier'},
-  { name: 'Blog', href: '/blogs' },
+  { name: 'Customer Support', href: '/customer_complaint' },
+  { name: 'Supplier', href: '/suplier' },
   { name: 'WhistleBowler Line', href: '/whistleblower' },
   // { name: 'Investor Relations', href: '/' },
   { name: 'Mortgage Calculator', href: '/mortgage-calculator' },
-  { name: 'Career', href: '/career' },
+  // { name: 'Career', href: '/career' },
 
 ];
 
@@ -39,6 +38,7 @@ const communities = [
   { name: 'JVC', href: '/EmpireResidence' },
   { name: 'Liwan', href: '/EmpireLakeviews' },
   { name: 'Dubai Science Park', href: '/EmpireLivings' },
+  { name: 'DLRC ', href: '/EmpireGardens' },
 ];
 
 // Animation variants

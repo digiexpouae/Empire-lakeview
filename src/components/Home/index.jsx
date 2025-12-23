@@ -45,7 +45,7 @@ import Textsection from '../../common/hometext'
 const index = () => {
   const [showEmailPop, setShowEmailPop] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     const timer = setTimeout(() => setShowEmailPop(true), 10_000); // 10 000 ms = 10 s
     return () => clearTimeout(timer); // clean-up if the component unmounts early
   }, []);
@@ -72,7 +72,7 @@ const index = () => {
       unlockScroll();
     };
   }, [showEmailPop]);
-  const ima = [{im:ima1,link:'/plazzoheights',text:'Plazzo heights'}, {im:ima2,link:'/plazzoresidence',text:'Plazzo Residence'}, {im:ima3,link:'/EmpireResidence',text:'Empire Residence'}]
+  const ima = [{ im: ima1, link: '/plazzoheights', text: 'Plazzo heights' }, { im: ima2, link: '/plazzoresidence', text: 'Plazzo Residence' }, { im: ima3, link: '/EmpireResidence', text: 'Empire Residence' }]
 
   const main = useRef(null)
 
@@ -116,23 +116,23 @@ const index = () => {
   const icons = [
     {
       icon: Voice,
-      title:<>Voice   service <br/>  request</>,
+      title: <>Voice   service <br />  request</>,
       h: 50,
       w: 50
     },
     {
       icon: Card,
-      title: <>Online  <br/> payment </>, 
+      title: <>Online  <br /> payment </>,
       h: 50,
       w: 50
     },
     {
       icon: Process,
-      title: <> Digital   handover <br/> process</>,
+      title: <> Digital   handover <br /> process</>,
       h: 50,
       w: 50
     },
-   
+
   ]
 
   const introRef = useRef(null)
@@ -153,7 +153,7 @@ const index = () => {
 
       {/* EMAIL POPUP MODAL */}
       {showEmailPop && (
-        <div style={{zIndex: 99999}} className="fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center">
+        <div style={{ zIndex: 99999 }} className="fixed inset-0 bg-transparent bg-opacity-60 flex items-center justify-center">
           <div className="relative">
             <button
               onClick={() => setShowEmailPop(false)}
@@ -176,7 +176,7 @@ const index = () => {
 
       <Header className='nav-menu absolute z-50' />
 
-      <Hero/>
+      <Hero />
 
       {/* <div
         style={{
@@ -192,54 +192,54 @@ const index = () => {
         className='md:block hidden bg-cover md:bg-contain bg-center bg-no-repeat bg-fixed'>
         <HeroDemo1 />
       </div> */}
-        <Textsection  head={'Redefining Luxury Living in Dubai'}
-         
-text={"At Empire Developments, we craft more than homes — we create architectural landmarks that embody elegance, innovation and exclusivity. From the heart of Dubai’s most prestigious addresses to emerging lifestyle destinations, our developments offer unparalleled views, bespoke interiors, and world-class amenities designed for those who demand the finest. With Empire Developments, every detail is a statement, every space a sanctuary, and every home a legacy."} />
+      <Textsection head={'Redefining Luxury Living in Dubai'}
+
+        text={"At Empire Developments, we craft more than homes — we create architectural landmarks that embody elegance, innovation and exclusivity. From the heart of Dubai’s most prestigious addresses to emerging lifestyle destinations, our developments offer unparalleled views, bespoke interiors, and world-class amenities designed for those who demand the finest. With Empire Developments, every detail is a statement, every space a sanctuary, and every home a legacy."} />
 
       <div className='bg-[#0E1527] relative' ref={main}>
-  <LatestProjectsCarousel project={'Our Latest Projects'} />
+        <LatestProjectsCarousel project={'OUR LATEST PROJECTS'} />
         {/* <Sectiontwo amenities={amenities} /> */}
 
 
-         
+
         {/* <div className='h-[700px]'>
           <h3 className='text-[15px] md:text-[45px] text-center my-heading leading-6 text-white font-bold'>
             Successfully Delivered
           </h3> */}
-    
-          <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[300px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
-          {/* </div> */}
-        </div>  
-        
-        <Vision backgroundImage="/assets/visionbg.png" />
-        <div className=' w-full  md:h-[500px] lg:h-[700px]'>
-          <Image src={chess} className='w-full h-full object-cover' />
-          </div>
 
-         <div ref={brandRef} className=' flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
-        
-      
-         <AdvantagesSection />
+        <Introducing links='/projects' ima={ima} overlay={true} introRef={introRef} text1={'Projects'} className1={'md:!h-[300px]  flex items-center justify-center'} btntext={'View All Projects'} logo={false} viewprojects={true} className={'!h-[150px] md:!h-[270px] !w-[190px]  md:!w-[35vw] xl:!w-[420px] relative'} />
+        {/* </div> */}
+      </div>
 
-       
-        </div>  
-        
-        <Section />
+      <Vision backgroundImage="/assets/visionbg.png" />
+      <div className=' w-full  md:h-[500px] lg:h-[700px]'>
+        <Image src={chess} className='w-full h-full object-cover' />
+      </div>
 
-        <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'text-sm '} />
+      <div ref={brandRef} className=' flex flex-col items-start justify-evenly  lg:justify-evenly lg:gap-[50px]'>
 
-       <div className='md:block hidden'>
-       <Slidernews heading="Lastest News" href="/blogs" buttonheading="View All News"  />
-       </div> 
-       
-          <div className='md:hidden block'>
-          <MobileSlider />
-          </div>
-      
+
+        <AdvantagesSection />
+
+
+      </div>
+
+      <Section />
+
+      <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'text-sm '} />
+
+      <div className='md:block hidden'>
+        <Slidernews heading="Lastest News" href="/blogs" buttonheading="View All News" btn={true} />
+      </div>
+
+      <div className='md:hidden block'>
+        <MobileSlider />
+      </div>
+
       <SectionFour images={contactbg} />
 
       <Footer />
-      
+
       {/* Chat Widget */}
       {/* <ChatWidget /> */}
     </>

@@ -20,7 +20,7 @@ export default function OpportunitiesForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
-const router=useRouter();
+  const router = useRouter();
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     setFormData((prev) => ({
@@ -76,7 +76,7 @@ const router=useRouter();
           resume: null,
           skills: '',
         });
-          return
+        return
       } else {
         setError(result.message || 'Submission failed.');
       }
@@ -104,49 +104,49 @@ const router=useRouter();
             />
           </div>
 
-      
-            <div className="form-group">
-              <label>Email*</label>
+
+          <div className="form-group">
+            <label>Email*</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Phone Number*</label>
+            <div className="phone-row">
+              <select name="phoneCode" value={formData.phoneCode} onChange={handleChange}>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+61">+61</option>
+                <option value="+91">+91</option>
+                <option value="+92">+92</option>
+                <option value="+971">+971</option>
+                <option value="+880">+880</option>
+                <option value="+86">+86</option>
+                <option value="+81">+81</option>
+                <option value="+49">+49</option>
+                <option value="+33">+33</option>
+                <option value="+55">+55</option>
+                <option value="+7">+7</option>
+                <option value="+27">+27</option>
+              </select>
               <input
-                type="email"
-                name="email"
-                placeholder="Enter"
-                value={formData.email}
+                type="tel"
+                name="phoneNumber"
+                placeholder="Mobile number"
+                value={formData.phoneNumber}
                 onChange={handleChange}
                 required
               />
             </div>
+          </div>
 
-            <div className="form-group">
-              <label>Ph Number*</label>
-              <div className="phone-row">
-                <select name="phoneCode" value={formData.phoneCode} onChange={handleChange}>
-                  <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                  <option value="+61">+61</option>
-                  <option value="+91">+91</option>
-                  <option value="+92">+92</option>
-                  <option value="+971">+971</option>
-                  <option value="+880">+880</option>
-                  <option value="+86">+86</option>
-                  <option value="+81">+81</option>
-                  <option value="+49">+49</option>
-                  <option value="+33">+33</option>
-                  <option value="+55">+55</option>
-                  <option value="+7">+7</option>
-                  <option value="+27">+27</option>
-                </select>
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="Mobile number"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-       
 
           <div className="form-row">
             <div className="form-group">
@@ -229,7 +229,7 @@ const router=useRouter();
           <div className="form-group">
             <label>Please mention your top skills and the areas you’re best at.</label>
             <textarea
-            className='resize-none'
+              className='resize-none'
               name="skills"
               rows="4"
               placeholder="Select"

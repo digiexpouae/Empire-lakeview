@@ -17,7 +17,7 @@ export default function Complainform() {
     dateofincident: '',
     detaileddescription: '',
     previouslycontactattempt: '',
-    contactConsent:'false'
+    contactConsent: 'false'
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,10 +35,10 @@ export default function Complainform() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     setSuccess('');
     setError('');
-  
+
     if (!formData.contactConsent) {
       setError('You must consent to be contacted to submit the form.');
       return;
@@ -49,7 +49,7 @@ export default function Complainform() {
         ...formData,
         phonenumber: `${formData.phoneCode} ${formData.phonenumber}`,
       };
-  
+
       const res = await fetch('/api/customer', {
         method: 'POST',
         headers: {
@@ -57,9 +57,9 @@ export default function Complainform() {
         },
         body: JSON.stringify(finalFormData), // Send raw JSON
       });
-  
+
       const result = await res.json();
-  
+
       if (res.ok) {
         setSuccess('Form submitted successfully');
         window.location.replace('/thankyou');
@@ -73,7 +73,7 @@ export default function Complainform() {
       setIsSubmitting(false);
     }
   };
-  
+
 
   return (
     <div className="page-wrapper">
@@ -112,20 +112,20 @@ export default function Complainform() {
             <label>Phone Number*</label>
             <div className="phone-row">
               <select name="phoneCode" value={formData.phoneCode} onChange={handleChange}>
-              <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                  <option value="+61">+61</option>
-                  <option value="+91">+91</option>
-                  <option value="+92">+92</option>
-                  <option value="+971">+971</option>
-                  <option value="+880">+880</option>
-                  <option value="+86">+86</option>
-                  <option value="+81">+81</option>
-                  <option value="+49">+49</option>
-                  <option value="+33">+33</option>
-                  <option value="+55">+55</option>
-                  <option value="+7">+7</option>
-                  <option value="+27">+27</option>              </select>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+61">+61</option>
+                <option value="+91">+91</option>
+                <option value="+92">+92</option>
+                <option value="+971">+971</option>
+                <option value="+880">+880</option>
+                <option value="+86">+86</option>
+                <option value="+81">+81</option>
+                <option value="+49">+49</option>
+                <option value="+33">+33</option>
+                <option value="+55">+55</option>
+                <option value="+7">+7</option>
+                <option value="+27">+27</option>              </select>
               <input
                 type="tel"
                 name="phonenumber"
@@ -139,9 +139,9 @@ export default function Complainform() {
 
           <div className="form-group">
             <label>Property/Project</label>
-            <input name="property" placeholder="Enter property/project name" value={formData.property} onChange={handleChange} required/>
-         
-         
+            <input name="property" placeholder="Enter property/project name" value={formData.property} onChange={handleChange} required />
+
+
           </div>
 
           <div className="form-row">
@@ -156,7 +156,7 @@ export default function Complainform() {
               />
             </div>
             <div className="form-group">
-              <label>Unit/Villa Number</label>
+              <label>Unit Number</label>
               <input
                 type="text"
                 name="unitvillanumber"
@@ -234,13 +234,13 @@ export default function Complainform() {
           </div>
 
           <div className="flex gap-2 items-center mb-2">
-          <input
-    type="checkbox"
-    name="contactConsent"
-    checked={formData.contactConsent}
-    onChange={handleChange}
-    className="w-4 h-4"
-  />
+            <input
+              type="checkbox"
+              name="contactConsent"
+              checked={formData.contactConsent}
+              onChange={handleChange}
+              className="w-4 h-4"
+            />
             <p className="text-sm">I consent to being contacted for follow-up on this report</p>
           </div>
 

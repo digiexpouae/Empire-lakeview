@@ -37,7 +37,7 @@ export default function PropertyGallerySlider() {
       title: 'Architectural Excellence',
       description: 'Award-winning contemporary design'
     }
-      ,  {
+    , {
       image: '/assets/gardens/g-7.jpg',
       title: 'Modern Kitchen',
       description: 'Contemporary design with premium appliances'
@@ -135,10 +135,28 @@ export default function PropertyGallerySlider() {
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
+
+
+  const downloadFiles = () => {
+    const files = [
+      '/files/Empire Gardens DLRC - Individual Floor Plans Book.pdf',
+      '/files/Empire Gardens DLRC - Typical Floor Plans Book.pdf'
+    ];
+
+    files.forEach((file) => {
+      const link = document.createElement('a');
+      link.href = file;
+      link.setAttribute('download', '');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  };
+
   return (
     <div className="  py-4 ">
       <div className="w-full">
-       
+
         <div
           ref={sliderRef}
           onMouseDown={handleMouseDown}
@@ -165,9 +183,9 @@ export default function PropertyGallerySlider() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none"
                 draggable="false"
               />
-              
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-30" />
-              
+
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white opacity-0 translate-y-5 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 z-10">
                 <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
                   {slide.title}
@@ -179,6 +197,17 @@ export default function PropertyGallerySlider() {
             </div>
           ))}
         </div>
+
+        <div className='flex justify-center w-full mt-4'>
+          <a
+            onClick={downloadFiles}
+            className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[200px] py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
+            Download Floor Plan
+          </a>
+
+
+        </div>
+
       </div>
 
     </div>

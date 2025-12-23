@@ -136,7 +136,7 @@ const about = () => {
           overlay={false}
           bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
           cloud={false}
-        texttwoclass={'xl:!text-[120px] lg:!text-[120px]'}
+          texttwoclass={'xl:!text-[120px] lg:!text-[120px]'}
 
         />
         <div className="absolute inset-0 -z-10">
@@ -146,19 +146,18 @@ const about = () => {
             priority
             alt="Background"
             className={`object-cover transition-opacity duration-700`}
-            priority
           />
         </div>
       </div>
 
       <div className='bg-[#0E1527]'>
         <Fadein>
-                  <Textsection head={'Driven by Vision, Built on Quality'}  text={"Empire Developments was founded under the leadership of Mr. Kamran Ghani, whose vision and entrepreneurial drive have been instrumental in shaping the company’s success. Recognized for its versatility and innovation in real estate development, Empire Developments specializes in delivering high-quality residential and commercial projects, combining innovative design, superior construction standards, and a commitment to creating exceptional value for both investors and homeowners."} />
+          <Textsection head={'Driven by Vision, Built on Quality'} text={"Empire Developments was founded under the leadership of Mr. Kamran Ghani, whose vision and entrepreneurial drive have been instrumental in shaping the company’s success. Recognized for its versatility and innovation in real estate development, Empire Developments specializes in delivering high-quality residential and commercial projects, combining innovative design, superior construction standards, and a commitment to creating exceptional value for both investors and homeowners."} />
 
         </Fadein>
-            <Fadein>
-            <Sectionthree /></Fadein>
-        
+        <Fadein>
+          <Sectionthree /></Fadein>
+
         <div>
           <Fadein>
             <Section />
@@ -166,15 +165,15 @@ const about = () => {
         </div>
 
 
-   
+
 
         <Fadein>   <Brand />    </Fadein>
         <Fadein>
 
-<Testimonials />
+          <Testimonials />
         </Fadein>
-    
-        
+
+
         <Fadein>    <SectionFour images={contactbg} />   </Fadein>
       </div>
       <Footer />

@@ -70,7 +70,7 @@ const Header = () => {
       link: 'https://app.empiredevelopment.ae/agency-register ',
       external: true
     },
-    { name: 'Blogs', link: '/blogs' }
+    { name: 'News in press', link: '/news' }
     // ,{name:'Investment Calculator',link:'/mortgage-calculator'}
   ];
   // 
@@ -83,7 +83,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-[80px] px-4 sm:px-6 xl:px-12 lg:px-10 mdpy-10 py-3">
           {/* Desktop Nav  fixes*/}
           <motion.nav
-            className="hidden lg:flex items-center gap-x-3 lg:gap-x-3 xl:gap-x-8 ml-10 pl-4"
+            className="hidden lg:flex items-center gap-x-3 lg:gap-x-3 xl:gap-x-4 ml-10 pl-4"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -183,8 +183,8 @@ const Header = () => {
         {/* Mobile Navigation */}
         <div
           className={`lg:hidden absolute w-full bg-[#0E1527]/95 backdrop-blur-sm transition-all duration-300 ${isOpen
-              ? 'max-h-[700px] opacity-100'
-              : 'max-h-0 opacity-0 overflow-hidden'
+            ? 'max-h-[700px] opacity-100'
+            : 'max-h-0 opacity-0 overflow-hidden'
             }`}
         >
           <motion.div
