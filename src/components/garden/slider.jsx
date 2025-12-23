@@ -139,8 +139,8 @@ export default function PropertyGallerySlider() {
 
   const downloadFiles = () => {
     const files = [
-      '/files/Empire Gardens DLRC - Individual Floor Plans Book.pdf',
-      '/files/Empire Gardens DLRC - Typical Floor Plans Book.pdf'
+      'https://empire-lakeview.vercel.app/files/Empire Gardens DLRC - Individual Floor Plans Book.pdf',
+      'https://empire-lakeview.vercel.app/files/Empire Gardens DLRC - Typical Floor Plans Book.pdf'
     ];
 
     files.forEach((file) => {
@@ -201,7 +201,7 @@ export default function PropertyGallerySlider() {
         <div className='flex justify-center w-full mt-4'>
           <a
             onClick={downloadFiles}
-            className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[200px] py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
+            className="bg-gradient-to-r from-[#CCAB64] text-center cursor-pointer to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[200px] py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
             Download Floor Plan
           </a>
 
