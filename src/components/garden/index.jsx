@@ -12,7 +12,7 @@ import Text from '../../components/garden/text'
 import Icons from '../../components/icon'
 import Slider from './slider'
 import MallOfTheEmirates from '../../../public/mall of emirates.svg';
-import GlobalVillage from '../../../public/miracle.svg';
+import SiliconOasis from '../../../public/assets/Dubai hill.svg';
 import PalmJumeirah from '../../../public/palm jumairah.svg';
 import DubaiInternationalAirport from '../../../public/assets/international (2).svg';
 import DubaiMarina from '../../../public/marine.svg';
@@ -71,7 +71,7 @@ const index = () => {
   ];
 
   const icons = [
-    { img: GlobalVillage, name: <>Global  <br /> Village</>, distance: '05 minutes drive' },
+    { img: SiliconOasis, name: <>Silicon  <br /> Oasis</>, distance: '05 minutes drive' },
     { img: MallOfTheEmirates, name: <>Dubai Outlet  <br /> Mall</>, distance: '05 minutes drive' },
     { img: Dubaisafari, name: <>Dubai  <br /> Safari</>, distance: '5 minutes drive' },
     { img: DesertPalm, name: <>Desert <br /> Palm</>, distance: '12 minutes drive' },

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import desktopImg from '../../../public/assets/fastest2.png'
-import mobileImg from '../../../public/assets/mobimg.png'
+import desktopImg from '../../../public/assets/award-img.png'
+import mobileImg from '../../../public/assets/award-img-mobile.png'
 
 const SectionTwo = () => {
   return (

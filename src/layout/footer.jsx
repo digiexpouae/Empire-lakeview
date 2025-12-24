@@ -28,6 +28,7 @@ const resources = [
   { name: 'Supplier', href: '/suplier' },
   { name: 'WhistleBowler Line', href: '/whistleblower' },
   // { name: 'Investor Relations', href: '/' },
+  { name: 'Blogs', href: '/blogs' },
   { name: 'Mortgage Calculator', href: '/mortgage-calculator' },
   // { name: 'Career', href: '/career' },
 
