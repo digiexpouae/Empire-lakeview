@@ -12,8 +12,7 @@ const text = () => {
           href="/files/Digital Brochure - Empire Gardens DLRC_compressed.pdf"
           className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] text-gray-800 w-[200px] py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block"
 
-          target="_blank"
-          rel="noopener noreferrer"
+          download
         >
           Download Brochure
         </a>

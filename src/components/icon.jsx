@@ -13,19 +13,19 @@ const icon = ({ icons }) => {
     row.map((elem, index) => (
       <div
         key={index}
-        className="flex flex-col items-center justify-center text-white h-[150px] md:h-[200px]"
+        className="flex flex-col  items-center justify-center text-white h-[150px] md:h-[200px]"
       >
-        <div className="w-[38px] md:w-[80px] flex items-center justify-center h-[23%] md:h-[60%]">
+        <div className="w-[38px] md:w-[80px] flex items-end justify-center h-[23%] md:h-[60%]">
           <Image
             src={elem.img}
             width={100}
             height={100}
-            className={`!h-full ${elem.clas}`}
+            className={`!h-[70%] ${elem.clas}`}
             alt={elem.name}
           />
         </div>
-        <div className="flex flex-col items-center justify-start text-center h-[35%] md:h-[50%] w-[70px] md:w-[210px]">
-          <span className="text-center font-bold text-[7px] md:text-[19px] my-heading text-wrap h-[60%] leading-3 md:leading-6 text-white">
+        <div className="flex flex-col  items-center justify-end text-center h-[35%] md:h-[50%] w-[70px] md:w-[210px]">
+          <span className="text-center font-bold text-[7px]  md:text-[19px] my-heading text-wrap h-[60%] leading-3 md:leading-6 text-white">
             {elem.name}
           </span>
           <p className="text-[7px] md:text-[18px] h-[30%] text-white">{elem.distance}</p>
@@ -69,16 +69,16 @@ const icon = ({ icons }) => {
               </SwiperSlide>
             ))}
             <div className="swiper-button-prev !text-[#CCAB64] !left-0 !top-1/2 !-translate-y-1/2 !w-8 !h-8 !flex !items-center !justify-center !bg-transparent">
-        
+
             </div>
             <div className="swiper-button-next !text-[#CCAB64] !right-0 !top-1/2 !-translate-y-1/2 !w-8 !h-8 !flex !items-center !justify-center !bg-transparent">
-          
+
             </div>
           </Swiper>
         </div>
         {/* Desktop: grid */}
-        <div className="hidden md:flex items-center justify-center flex-col">
-          <div className="grid grid-cols-4 gap-x-2 w-[70%]">{renderRow(firstRow)}</div>
+        <div className="hidden md:flex items-center justify-center flex-col gap-6">
+          <div className="grid grid-cols-4 gap-x-2 w-[70%] justify-center">{renderRow(firstRow)}</div>
           <div className="flex justify-center w-[70%] gap-x-2">{renderRow(secondRow)}</div>
         </div>
       </div>

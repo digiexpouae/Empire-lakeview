@@ -12,14 +12,16 @@ import Text from '../../components/garden/text'
 import Icons from '../../components/icon'
 import Slider from './slider'
 import MallOfTheEmirates from '../../../public/mall of emirates.svg';
-import DubaiHillMall from '../../../public/dubai hill mall.svg';
+import GlobalVillage from '../../../public/miracle.svg';
 import PalmJumeirah from '../../../public/palm jumairah.svg';
 import DubaiInternationalAirport from '../../../public/assets/international (2).svg';
 import DubaiMarina from '../../../public/marine.svg';
-import BusinessBay from '../../../public/assets/g2589.svg';
 import Aminities from './aminities'
+import BurjKhalifa from '../../../public/burj.svg';
 import Section from './section'
 import Sectionslider from '../../common/section'
+import Dubaisafari from '../../../public/assets/2.svg'
+import DesertPalm from '../../../public/assets/3.svg'
 import Gardens from '../../../public/assets/gardens/gardens.png'
 const index = () => {
   const image = [
@@ -69,19 +71,23 @@ const index = () => {
   ];
 
   const icons = [
-    { img: BusinessBay, name: <>Business <br /> Bay</>, distance: '15 minutes drive' },
-    { img: MallOfTheEmirates, name: <>Mall of the <br /> Emirates</>, distance: '15 minutes drive' },
-    { img: DubaiHillMall, name: <>Dubai Hill <br /> Mall</>, distance: '5 minutes drive' },
-    { img: PalmJumeirah, name: <>Palm <br /> Jumeirah</>, distance: '15 minutes drive' },
+    { img: GlobalVillage, name: <>Global  <br /> Village</>, distance: '05 minutes drive' },
+    { img: MallOfTheEmirates, name: <>Dubai Outlet  <br /> Mall</>, distance: '05 minutes drive' },
+    { img: Dubaisafari, name: <>Dubai  <br /> Safari</>, distance: '5 minutes drive' },
+    { img: DesertPalm, name: <>Desert <br /> Palm</>, distance: '12 minutes drive' },
     { img: DubaiInternationalAirport, name: 'Dubai International Airport', distance: '25 minutes drive' },
+    { img: BurjKhalifa, name: <>Burj <br /> Khalifa</>, distance: '22 minutes drive' },
+
     { img: DubaiMarina, name: <>Dubai <br /> Marina</>, distance: '25 minutes' },
+    { img: PalmJumeirah, name: <>Palm <br /> Jumeirah</>, distance: '15 minutes drive' },
+
   ];
   const markers = [
     { name: ' Silicon Oasis', coordinates: [25.1238, 55.3821], icon: '/assets/Dubai hill.svg' },
     { name: 'Mall of the Emirates', coordinates: [25.118009, 55.200367], icon: '/assets/mall of emirates.svg' },
     { name: 'Dubai Marina	', coordinates: [25.080562, 55.140911], icon: '/assets/Dubai marine.svg' },
 
-    { name: 'Dubai Safari	', coordinates: [25.1718, 55.4456], icon: '' },
+    { name: 'Dubai Safari	', coordinates: [25.1718, 55.4456], icon: '/assets/2.svg' },
   ];
 
   const main = true
@@ -113,7 +119,7 @@ const index = () => {
       {/* <SectionThree /> */}
       {/* <Sectionfour /> */}
       {/* <Section images={image} /> */}
-      <Places Main_marker={'Gardens'} markers={markers} center_position={[25.0401, 55.4246]} Name={<>Empire <br /> Gardens</>} />
+      <Places Main_marker={'Empire Gardens'} markers={markers} center_position={[25.0401, 55.4246]} Name={<>Empire <br /> Gardens</>} />
       <Icons icons={icons} />
 
       <SectionFour images={contactbg} />
