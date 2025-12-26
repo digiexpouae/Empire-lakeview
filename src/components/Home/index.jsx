@@ -229,7 +229,7 @@ const index = () => {
       <Section_two Lottieicons={true} home={true} head={<>24/7 Commitment<br /> to Excellence</>} text={text} amenities={icons} back_image={true} classNamep={'text-sm '} />
 
       <div className='md:block hidden'>
-        <Slidernews heading="Lastest News" href="/blogs" buttonheading="View All News" btn={true} />
+        <Slidernews heading="Lastest News" href="/news" buttonheading="View All News" btn={true} />
       </div>
 
       <div className='md:hidden block'>

@@ -17,7 +17,7 @@ const fadeUp = {
   },
 };
 
-const Slider = ({ heading, buttonheading, href, btn }) => {
+const Slider = ({ heading, buttonheading, href }) => {
   const [isHovered, setIsHovered] = useState(false);
   const sliderRef = useRef(null);
 
@@ -252,11 +252,13 @@ const Slider = ({ heading, buttonheading, href, btn }) => {
               {heading}
             </h2>
           </div>
+          {/* {btn ? ( */}
           <Link href={href}>
             <button className="bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] cursor-pointer text-black px-4 py-2 rounded-md transition text-xs sm:text-sm w-full sm:w-auto">
               {buttonheading}
             </button>
           </Link>
+          {/* ) : ('')} */}
         </motion.div>
 
         {/* Infinite Scroll Slider */}
@@ -355,20 +357,20 @@ const Slider = ({ heading, buttonheading, href, btn }) => {
                         {slide.text}
                       </p> */}
 
-                      {btn ? (
-                        <a href={slide.buttonHref} target="_blank" rel="noopener noreferrer">
-                          <button
-                            style={{
-                              border: '1px solid #fff',
-                              borderRadius: '7px',
-                            }}
-                            className="ml-4 text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  transition w-fit"
-                          >
-                            Read More
-                          </button>
-                        </a>
 
-                      ) : ('')}
+                      <a href={slide.buttonHref} target="_blank" rel="noopener noreferrer">
+                        <button
+                          style={{
+                            border: '1px solid #fff',
+                            borderRadius: '7px',
+                          }}
+                          className="ml-4 text-black text-xs font-lexend cursor-pointer px-3 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)]  transition w-fit"
+                        >
+                          Read More
+                        </button>
+                      </a>
+
+
                     </div>
                   </div>
                 </div>

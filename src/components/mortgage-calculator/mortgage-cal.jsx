@@ -339,7 +339,7 @@ export default function MortgageCalculator() {
             </div>
 
             {/* Main Card */}
-            <div className={`max-w-3xl mx-auto p-8 ${card}`}>
+            <div className={`max-w-3xl mx-auto p-4 md:p-8 ${card}`}>
                 {/* Input */}
                 <div className="mb-10">
                     <label className="block text-sm font-medium mb-3 text-gray-300">
@@ -365,10 +365,11 @@ export default function MortgageCalculator() {
                         <button
                             onClick={calculatePlan}
                             disabled={!unitValue}
-                            className="px-10 py-4 rounded-2xl font-semibold !text-black
+                            className="px-10 py-4 rounded-2xl font-medium !text-black
                          bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
                          hover:bg-[#CCAB64]hover:shadow-2xl transition
-                         disabled:opacity-40 disabled:cursor-not-allowed"
+                         disabled:opacity-40 disabled:cursor-not-allowed
+                         text-md"
                         >
                             Calculate Plan
                         </button>
@@ -425,6 +426,7 @@ export default function MortgageCalculator() {
                                     title="Down Payment"
                                     description="Pay 20% upfront to begin"
                                     value={formatCurrency(plan.downPayment)}
+                                    className="md:flex hidden"
                                 />
 
                                 {/* Step 2 */}
@@ -433,12 +435,13 @@ export default function MortgageCalculator() {
                                     description={`Pay ${formatCurrency(
                                         plan.monthlyPayment
                                     )} for ${plan.monthsToKey} months`}
+                                    className="md:flex hidden"
                                     // value={`Total: ${formatCurrency(plan.keyHandoverAt)}`}
-                                    icon={<Key className="w-5 h-5 !text-black" />}
+                                    icon={<Key className="w-5 h-5  !text-black" />}
                                 />
 
                                 {/* Key Handover */}
-                                <div className="p-8 rounded-3xl bg-gradient-to-br from-[#FAECC9] to-white border-2 border-[#CCAB64] shadow-2xl">
+                                <div className="p-5 md:p-8 rounded-3xl bg-gradient-to-br from-[#FAECC9] to-white border-2 border-[#CCAB64] shadow-2xl">
                                     <h3 className="text-2xl font-semibold text-[#252938] mb-2">
                                         <div className="flex items-center gap-2">   <Key className="w-6 h-6 !text-[#CCAB64]" /> Key Handover
 
@@ -458,6 +461,7 @@ export default function MortgageCalculator() {
                                     title="Remaining Payments"
                                     description={`${plan.monthsAfterKey} months after handover`}
                                     value={formatCurrency(plan.monthlyPayment * 44)}
+                                    className="md:flex hidden"
                                 />
 
                                 {/* Final */}
@@ -499,10 +503,10 @@ export default function MortgageCalculator() {
     );
 }
 
-function Step({ title, description, value, icon }) {
+function Step({ title, description, value, icon, className }) {
     return (
-        <div className="relative flex gap-6">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#CCAB64] to-[#FAECC9] flex items-center justify-center text-black font-bold">
+        <div className={`relative flex gap-6 `}>
+            <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br from-[#CCAB64] to-[#FAECC9] flex items-center justify-center text-black font-bold  ${className}`}>
                 {icon || "✓"}
             </div>
             <div>
