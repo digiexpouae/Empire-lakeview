@@ -248,16 +248,16 @@ export default function PressRelease() {
                             key={release.id}
                             className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 border border-white/10"
                         >
-                            <div className="flex flex-col md:flex-row">
-                                <div className="md:w-1/3 lg:w-1/4 relative">
-                                    <Image
-                                        src={release.image}
-                                        alt={release.heading}
-                                        className="w-full h-64 md:h-full object-cover"
-                                        width={300}
-                                        height={240}
-                                    />
-
+                            <div className="flex flex-col md:flex-row  ">
+                                <div className="md:w-1/3 lg:w-1/2 relative  ">
+                                    <div className="relative w-full  aspect-[16/9] ">
+                                        <Image
+                                            src={release.image}
+                                            alt={release.heading}
+                                            className="w-full h-full md:h-full object-cover "
+                                            fill
+                                        />
+                                    </div>
                                 </div>
                                 <div className="md:w-2/3 lg:w-3/4 p-6 sm:p-8">
                                     <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 hover:text-[#CCAB64] transition-colors leading-tight line-clamp-2">
@@ -281,7 +281,7 @@ export default function PressRelease() {
                 </div>
 
                 {/* Pagination */}
-                <div className="flex justify-center items-center gap-2 flex-wrap">
+                <div className="flex justify-center items-center gap-2 ">
                     <button
                         onClick={() => paginate(currentPage - 1)}
                         disabled={currentPage === 1}
@@ -311,6 +311,6 @@ export default function PressRelease() {
                     Page {currentPage} of {totalPages}
                 </p>
             </div>
-        </div>
+        </div >
     );
 }

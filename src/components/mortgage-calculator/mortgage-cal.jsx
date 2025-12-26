@@ -339,7 +339,7 @@ export default function MortgageCalculator() {
             </div>
 
             {/* Main Card */}
-            <div className={`max-w-3xl mx-auto p-4 md:p-8 ${card}`}>
+            <div className={`max-w-4xl mx-auto p-4 md:p-8 ${card}`}>
                 {/* Input */}
                 <div className="mb-10">
                     <label className="block text-sm font-medium mb-3 text-gray-300">
@@ -479,7 +479,7 @@ export default function MortgageCalculator() {
                                 {/* Step 3 */}
                                 <Step
                                     title="Guaranteed Rental Income"
-                                    value={formatCurrency(plan.monthlyPayment * 0.8)}
+                                    value={formatCurrency(plan.monthlyPayment * 12 * 0.8)}
                                     className="md:flex hidden"
                                 />
                             </div>
@@ -495,11 +495,19 @@ export default function MortgageCalculator() {
                                 ["Guaranteed Rental Income", plan.monthlyPayment],
                             ].map(([label, value], index, array) => {
                                 const isLast = index === array.length - 1;
+                                const isKeyMonth = label === "Key Month";
 
-                                const displayValue =
-                                    typeof value === "number"
-                                        ? formatCurrency(isLast ? value * 0.8 : value)
-                                        : value;
+                                let displayValue;
+
+                                if (typeof value === "number") {
+                                    if (isKeyMonth) {
+                                        displayValue = value; //  no currency
+                                    } else {
+                                        displayValue = formatCurrency(isLast ? value * 0.8 : value);
+                                    }
+                                } else {
+                                    displayValue = value;
+                                }
 
                                 return (
                                     <div
@@ -513,6 +521,7 @@ export default function MortgageCalculator() {
                                     </div>
                                 );
                             })}
+
                         </div>
 
                     </div>
