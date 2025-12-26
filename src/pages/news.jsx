@@ -5,7 +5,7 @@ import Slidernews from '../components/Slidernews'
 import Navigationslider from '../components/navigationslider'
 import Mobileslider from '../components/mobileslider'
 import Image from 'next/image'
-import HeroSlider from '../common/HeroSlider'
+import HeroSlider from '../common/heroslider'
 const news = () => {
     return (
         <>
