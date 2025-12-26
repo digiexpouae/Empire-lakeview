@@ -490,12 +490,12 @@ export default function MortgageCalculator() {
                             {[
                                 ["Property Value", plan.unitValue],
                                 ["Duration", `${plan.totalMonths} Months`],
-                                ["Key Month", plan.monthsToKey],
+                                ["Key Handover", plan.monthsToKey],
                                 ["Monthly", plan.monthlyPayment],
                                 ["Guaranteed Rental Income", plan.monthlyPayment],
                             ].map(([label, value], index, array) => {
                                 const isLast = index === array.length - 1;
-                                const isKeyMonth = label === "Key Month";
+                                const isKeyMonth = label === "Key Handover";
 
                                 let displayValue;
 
