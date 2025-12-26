@@ -503,7 +503,7 @@ export default function MortgageCalculator() {
                                     if (isKeyMonth) {
                                         displayValue = value; //  no currency
                                     } else {
-                                        displayValue = formatCurrency(isLast ? value * 0.8 : value);
+                                        displayValue = formatCurrency(isLast ? value * 12 * 0.8 : value);
                                     }
                                 } else {
                                     displayValue = value;
