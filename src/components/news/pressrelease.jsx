@@ -249,7 +249,7 @@ export default function PressRelease() {
                             className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 border border-white/10"
                         >
                             <div className="flex flex-col md:flex-row  ">
-                                <div className="md:w-1/3 lg:w-1/2 relative  ">
+                                <div className="md:w-1/2 lg:w-[70%] xl:w-1/2 relative  ">
                                     <div className="relative w-full  aspect-[16/9] ">
                                         <Image
                                             src={release.image}
@@ -260,7 +260,7 @@ export default function PressRelease() {
                                     </div>
                                 </div>
                                 <div className="md:w-2/3 lg:w-3/4 p-6 sm:p-8">
-                                    <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 hover:text-[#CCAB64] transition-colors leading-tight line-clamp-2">
+                                    <h2 className="text-xl sm:text-2xl font-medium text-white mb-4 hover:text-[#CCAB64] transition-colors leading-tight line-clamp-2">
                                         {release.heading}
                                     </h2>
                                     <p className="text-gray-300 mb-6 leading-relaxed line-clamp-2">
