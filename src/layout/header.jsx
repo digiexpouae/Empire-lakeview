@@ -82,7 +82,7 @@ const Header = () => {
     name: 'Calculator',
     link: '/news',
     children: [
-      { name: 'Invesment Calculator', link: '/Invesmentcalculator ' },
+      { name: 'Investment Calculator', link: '/Investmentcalculator ' },
       { name: 'Mortgage Calculator', link: '/mortgage-calculator' },
     ],
   },

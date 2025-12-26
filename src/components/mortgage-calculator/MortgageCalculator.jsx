@@ -35,7 +35,7 @@ const MortgageCalculator = ({ className }) => {
     <div className={`mortgage-calculator-container bg-transparent text-white p-4 font-sans w-full h-full flex flex-col justify-center ${className}`}>
       <div className='mortgage-calculator-content'>
         <div className="mortgage-calculator mt-4">
-          <h2>Investment Calculator</h2>
+          <h2>Mortgage Calculator</h2>
           <div className="calculator-body">
             <div className="flex flex-col">
               <div className="calculator-inputs">

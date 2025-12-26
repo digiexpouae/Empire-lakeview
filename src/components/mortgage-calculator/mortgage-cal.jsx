@@ -331,7 +331,7 @@ export default function MortgageCalculator() {
                     <Home className="text-black w-7 h-7" />
                 </div>
                 <div>
-                    <h1 className="text-2xl font-semibold">Mortgage Calculator</h1>
+                    <h1 className="text-2xl font-semibold">Investment Calculator</h1>
                     <p className="text-gray-400 text-sm">
                         Plan your property investment journey
                     </p>
