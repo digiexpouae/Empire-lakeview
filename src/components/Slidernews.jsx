@@ -234,7 +234,7 @@ const Slider = ({ heading, buttonheading, href }) => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#0D1028] px-2 sm:px-8 pt-12 flex justify-center">
+    <div className="w-full min-h-screen bg-[#0D1028] px-2 sm:px-8 pt-12 flex justify-center items-center">
       <div className="w-full max-w-5xl">
         {/* Header */}
         <motion.div

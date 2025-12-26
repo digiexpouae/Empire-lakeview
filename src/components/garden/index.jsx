@@ -73,13 +73,15 @@ const index = () => {
   const icons = [
     { img: SiliconOasis, name: <>Silicon  <br /> Oasis</>, distance: '05 minutes drive' },
     { img: MallOfTheEmirates, name: <>Dubai Outlet  <br /> Mall</>, distance: '05 minutes drive' },
-    { img: Dubaisafari, name: <>Dubai  <br /> Safari</>, distance: '5 minutes drive' },
+    { img: Dubaisafari, name: <>Dubai  <br /> Safari</>, distance: '12 minutes drive' },
     { img: DesertPalm, name: <>Desert <br /> Palm</>, distance: '12 minutes drive' },
-    { img: DubaiInternationalAirport, name: 'Dubai International Airport', distance: '25 minutes drive' },
+    { img: PalmJumeirah, name: <>Palm <br /> Jumeirah</>, distance: '15 minutes drive' },
+
     { img: BurjKhalifa, name: <>Burj <br /> Khalifa</>, distance: '22 minutes drive' },
 
+    { img: DubaiInternationalAirport, name: 'Dubai International Airport', distance: '25 minutes drive' },
+
     { img: DubaiMarina, name: <>Dubai <br /> Marina</>, distance: '25 minutes' },
-    { img: PalmJumeirah, name: <>Palm <br /> Jumeirah</>, distance: '15 minutes drive' },
 
   ];
   const markers = [

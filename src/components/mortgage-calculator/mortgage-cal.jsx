@@ -324,7 +324,7 @@ export default function MortgageCalculator() {
         "rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-xl";
 
     return (
-        <div className="min-h-screen px-4 py-10 bg-[#1a1d2e] text-white">
+        <div className="px-4 py-10 bg-[#1a1d2e]  text-white">
             {/* Header */}
             <div className="max-w-3xl mx-auto mb-10 flex items-center gap-4">
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#CCAB64] to-[#FAECC9]">
@@ -476,26 +476,45 @@ export default function MortgageCalculator() {
                                         </p>
                                     </div>
                                 </div>
+                                {/* Step 3 */}
+                                <Step
+                                    title="Guaranteed Rental Income"
+                                    value={formatCurrency(plan.monthlyPayment * 0.8)}
+                                    className="md:flex hidden"
+                                />
                             </div>
                         </div>
 
                         {/* Dashboard Summary */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             {[
-                                ["Property Value", formatCurrency(plan.unitValue)],
+                                ["Property Value", plan.unitValue],
                                 ["Duration", `${plan.totalMonths} Months`],
                                 ["Key Month", plan.monthsToKey],
-                                ["Monthly", formatCurrency(plan.monthlyPayment)],
-                            ].map(([label, value]) => (
-                                <div
-                                    key={label}
-                                    className={`${card} p-5 text-center hover:bg-white/10 transition`}
-                                >
-                                    <div className="text-xs text-gray-400 mb-1">{label}</div>
-                                    <div className="text-sm md:text-xl font-semibold">{value}</div>
-                                </div>
-                            ))}
+                                ["Monthly", plan.monthlyPayment],
+                                ["Guaranteed Rental Income", plan.monthlyPayment],
+                            ].map(([label, value], index, array) => {
+                                const isLast = index === array.length - 1;
+
+                                const displayValue =
+                                    typeof value === "number"
+                                        ? formatCurrency(isLast ? value * 0.8 : value)
+                                        : value;
+
+                                return (
+                                    <div
+                                        key={label}
+                                        className={`${card} p-5 text-center hover:bg-white/10 transition`}
+                                    >
+                                        <div className="text-xs text-gray-400 mb-1">{label}</div>
+                                        <div className="text-sm md:text-xl font-semibold">
+                                            {displayValue}
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
+
                     </div>
                 )}
             </div>

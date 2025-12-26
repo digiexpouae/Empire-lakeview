@@ -6,6 +6,7 @@ import Navigationslider from '../components/navigationslider'
 import Mobileslider from '../components/mobileslider'
 import Image from 'next/image'
 import HeroSlider from '../common/heroslider'
+import Press from '../components/news/pressrelease'
 const news = () => {
     return (
         <>
@@ -34,14 +35,14 @@ const news = () => {
 
 
             </div>
-            <div className='hidden md:block'>
+            {/* <div className='hidden md:block'>
                 <Slidernews href="/news" heading="LATEST NEWS" buttonheading="View All News" />
-            </div>
+            </div> */}
             <div className="bg-[#0D1028] pt-24  md:pb-0 md:pt-0">
-
-                <Navigationslider heading={'Feature In'} buttonheading={'View All'} href={'/blogs'} />
-                <h2 className='md:hidden block text-center text-white text-3xl font-medium mb-4 '>LATEST NEWS</h2>
-                <Mobileslider />
+                <Press />
+                {/* <Navigationslider heading={'Feature In'} buttonheading={'View All'} href={'/blogs'} /> */}
+                {/* <h2 className='md:hidden block text-center text-white text-3xl font-medium mb-4 '>LATEST NEWS</h2>
+                <Mobileslider /> */}
             </div>
             <Footer />
 

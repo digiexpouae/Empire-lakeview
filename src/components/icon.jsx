@@ -24,7 +24,7 @@ const icon = ({ icons }) => {
             alt={elem.name}
           />
         </div>
-        <div className="flex flex-col  items-center justify-end text-center h-[35%] md:h-[50%] w-[70px] md:w-[210px]">
+        <div className="flex flex-col  items-center justify-end text-center h-[35%] md:h-[40%] w-[70px] md:w-[210px]">
           <span className="text-center font-bold text-[7px]  md:text-[19px] my-heading text-wrap h-[60%] leading-3 md:leading-6 text-white">
             {elem.name}
           </span>

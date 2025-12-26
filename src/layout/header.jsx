@@ -55,8 +55,6 @@ const Header = () => {
       link: '/projects',
       children: [
         { name: 'Empire Gardens', link: '/EmpireGardens' },
-
-
         { name: 'Empire Lakeviews', link: '/EmpireLakeviews' },
         { name: 'Empire Livings', link: '/EmpireLivings' },
         { name: 'Empire Estates', link: '/EmpireEstates' },
@@ -67,13 +65,30 @@ const Header = () => {
     },
     {
       name: 'Channel Partners',
-      link: 'https://app.empiredevelopment.ae/agency-register ',
+      link: 'https://app.empiredevelopment.ae/agency-register',
       external: true
     },
-    { name: 'News in press', link: '/news' }
-    // ,{name:'Investment Calculator',link:'/mortgage-calculator'}
+    {
+      name: 'Media',
+      link: '/news',
+      children: [
+        { name: 'Press Releases', link: '/news' },
+        { name: 'Blogs', link: '/blogs' },
+      ],
+    },
+
   ];
-  // 
+  const nav2 = [{
+    name: 'Calculator',
+    link: '/news',
+    children: [
+      { name: 'Invesment Calculator', link: '/Invesmentcalculator ' },
+      { name: 'Mortgage Calculator', link: '/mortgage-calculator' },
+    ],
+  },
+
+  ];
+
   return (
     <div
       className={`fixed z-50 w-full transition-all duration-300 ${scrolled ? 'bg-black/60 backdrop-blur-md shadow-md' : 'bg-transparent backdrop-blur-md'
@@ -102,8 +117,8 @@ const Header = () => {
                   {elem.name}
                 </a>
 
-                {index === 2 && (
-                  <div className="inline-flex items-center justify-center w-5 h-5">
+                {elem.children && (
+                  <div className="inline-flex items-center justify-center w-5 h-5 ml-1">
                     <FontAwesomeIcon
                       icon={faCaretDown}
                       className="w-full h-full text-xl text-white cursor-pointer"
@@ -112,13 +127,30 @@ const Header = () => {
                 )}
 
                 {elem.children && (
-                  <div className="fixed rounded-2xl left-10 top-20 mt-1 w-[80vw] bg-white text-gray-800 rounded-r-2xl shadow-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50 overflow-hidden">
-                    <ProjectsNavigation />
-                  </div>
+                  <>
+                    {index === 2 ? (
+                      <div className="fixed rounded-2xl left-10 top-20 mt-1 w-[80vw] bg-white text-gray-800 rounded-r-2xl shadow-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50 overflow-hidden">
+                        <ProjectsNavigation />
+                      </div>
+                    ) : (
+                      <div className="absolute rounded-2xl left-0 top-full mt-1 min-w-[200px] bg-white text-gray-800 shadow-xl backdrop-blur-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50 overflow-hidden">
+                        {elem.children.map((child, idx) => (
+                          <Link
+                            key={idx}
+                            href={child.link}
+                            className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
                 )}
               </motion.div>
             ))}
           </motion.nav>
+
 
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden">
@@ -153,12 +185,41 @@ const Header = () => {
             initial="hidden"
             animate="visible"
           >
-            <a
-              href='/mortgage-calculator'
-              className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm"
-            >
-              Investment Calculator
-            </a>
+
+            {nav2.map((elem, index) => (
+              <div key={index} className="relative group flex items-center">
+                <a
+                  href={elem.link}
+                  className="text-white hover:text-yellow-300 transition-colors duration-300 text-sm"
+                >
+                  {elem.name}
+                </a>
+
+                {elem.children && (
+                  <div className="inline-flex items-center justify-center w-5 h-5 ml-1">
+                    <FontAwesomeIcon
+                      icon={faCaretDown}
+                      className="w-full h-full text-xl text-white cursor-pointer"
+                    />
+                  </div>
+                )}
+
+                {elem.children && (
+                  <div className="absolute left-0 top-full mt-1 min-w-[200px] bg-white text-gray-800 shadow-xl opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 invisible group-hover:visible z-50 overflow-hidden rounded-2xl">
+                    {elem.children.map((child, idx) => (
+                      <Link
+                        key={idx}
+                        href={child.link}
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
 
             <motion.a
               href="/contact"
@@ -176,6 +237,8 @@ const Header = () => {
               className="text-white border border-white hover:bg-white hover:text-cyan-800 px-4 lg:px-6 py-2 rounded-full transition-all duration-300 transform text-sm  whitespace-nowrap"
             >
               Login / Register
+
+
             </motion.a>
           </motion.div>
         </div>
@@ -224,6 +287,36 @@ const Header = () => {
               </motion.div>
             ))}
 
+            {nav2.map((elem, index) => (
+              <motion.div key={index} variants={fadeUp}>
+                <button
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === index ? null : index)
+                  }
+                  className="w-full text-left text-white hover:text-yellow-300 transition-colors duration-300 text-base py-1 flex justify-between items-center"
+                >
+                  <Link href={elem.link}>{elem.name}</Link>
+                  {elem.children && (
+                    <span className="ml-2">
+                      {openDropdown === index ? '▲' : '▼'}
+                    </span>
+                  )}
+                </button>
+                {elem.children && openDropdown === index && (
+                  <div className="ml-4 mt-1 rounded space-y-1">
+                    {elem.children.map((child, idx) => (
+                      <a
+                        key={idx}
+                        href={child.link}
+                        className="block text-white hover:text-yellow-300 transition-colors duration-300 text-sm"
+                      >
+                        {child.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </motion.div>
+            ))}
             {/* Mobile CTA Buttons */}
             <motion.div
               className="flex flex-col gap-y-2 pt-3 border-t border-white/20"
