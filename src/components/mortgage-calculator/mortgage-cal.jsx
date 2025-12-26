@@ -490,7 +490,7 @@ export default function MortgageCalculator() {
                             {[
                                 ["Property Value", plan.unitValue],
                                 ["Duration", `${plan.totalMonths} Months`],
-                                ["Key Handover", plan.monthsToKey],
+                                ["Key Handover", `${plan.monthsToKey}Months`],
                                 ["Monthly", plan.monthlyPayment],
                                 ["Guaranteed Rental Income", plan.monthlyPayment],
                             ].map(([label, value], index, array) => {
