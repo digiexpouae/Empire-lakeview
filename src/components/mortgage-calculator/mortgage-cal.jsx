@@ -405,7 +405,7 @@ export default function MortgageCalculator() {
                                     <div className="text-xs text-gray-400 uppercase mb-1">
                                         {item.label}
                                     </div>
-                                    <div className="text-2xl font-semibold">{item.value}</div>
+                                    <div className="text-2xl font-semibold  whitespace-nowrap overflow-x-auto scrollbar-hide">{item.value}</div>
                                     <div className="text-xs text-gray-500 mt-2">{item.hint}</div>
                                 </div>
                             ))}
@@ -435,7 +435,7 @@ export default function MortgageCalculator() {
                                     description={`Pay ${formatCurrency(
                                         plan.monthlyPayment
                                     )} for ${plan.monthsToKey} months`}
-                                    className="md:flex hidden"
+                                    className="md:flex hidden  "
                                     // value={`Total: ${formatCurrency(plan.keyHandoverAt)}`}
                                     icon={<Key className="w-5 h-5  !text-black" />}
                                 />
@@ -515,7 +515,7 @@ export default function MortgageCalculator() {
                                         className={`${card} p-5 text-center hover:bg-white/10 transition`}
                                     >
                                         <div className="text-xs text-gray-400 mb-1">{label}</div>
-                                        <div className="text-sm md:text-xl font-semibold">
+                                        <div className="text-sm md:text-xl font-semibold whitespace-nowrap overflow-x-auto  scrollbar-hide">
                                             {displayValue}
                                         </div>
                                     </div>
@@ -540,7 +540,7 @@ function Step({ title, description, value, icon, className }) {
             <div>
                 <h3 className="font-semibold text-lg mb-1">{title}</h3>
                 <p className="text-gray-400 text-sm mb-2">{description}</p>
-                <div className="text-[#CCAB64] font-semibold">{value}</div>
+                <div className="text-[#CCAB64] font-semibold ">{value}</div>
             </div>
         </div>
     );

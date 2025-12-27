@@ -8,11 +8,12 @@
   --font-poppins: 'Poppins', sans-serif;
 }
 
-html, body {
+html,
+body {
   font-family: var(--font-poppins);
 }
 
-.html{
+.html {
   scroll-behavior: smooth;
 }
 
@@ -31,18 +32,20 @@ body {
 
 .scrollbar-hide {
   -ms-overflow-style: none;
-  scrollbar-width: none;     
+  scrollbar-width: none;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
-.heading{ @apply  leading-17 md:leading-none text-[45px] text-center md:text-[90px] font-extrabold text-white}
+
+.heading {
+  @apply leading-17 md:leading-none text-[45px] text-center md:text-[90px] font-extrabold text-white
+}
+
 .button {
-  @apply bg-gradient-to-r from-[#CCAB64] to-[#FAECC9]
-    hover:from-[#E5C98C] hover:to-[#FFF3DC] 
-    text-gray-800 w-[220px] lg:px-6 py-2 rounded-full 
-    transition-colors duration-300 transform 
-    text-sm lg:text-base whitespace-nowrap;
+  @apply bg-gradient-to-r from-[#CCAB64] to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#FFF3DC] text-gray-800 w-[220px] lg:px-6 py-2 rounded-full transition-colors duration-300 transform text-sm lg:text-base whitespace-nowrap;
 }
 
 
@@ -54,8 +57,8 @@ body {
   left: 0;
   top: 300%;
   white-space: nowrap;
-    left: -100%;
-  
+  left: -100%;
+
 
 }
 
@@ -72,66 +75,80 @@ body {
   content: '20 minutes';
   position: absolute;
   top: 300%;
-    white-space: nowrap;
-    left: -100%;
+  white-space: nowrap;
+  left: -100%;
 
 }
+
 @media (max-width: 640px) {
+
   .dot:nth-child(3)::after,
   .dot:nth-child(4)::after,
   .dot:nth-child(5)::after {
-    font-size: 10px; /* or smaller if needed */
+    font-size: 10px;
+    /* or smaller if needed */
   }
 }
 
 .leaflet-grab {
   cursor: default !important;
 }
-svg{
+
+svg {
   color: #CCAB64;
 }
 
-  @media (max-width:768px) {
-    .pin-spacer{ 
-    overflow:hidden  !important ;
+@media (max-width:768px) {
+  .pin-spacer {
+    overflow: hidden !important;
   }
 
 }
-.rounded-button:nth-child(1){
-  border-top-left-radius:20px ;
+
+.rounded-button:nth-child(1) {
+  border-top-left-radius: 20px;
 }
-.rounded-button:nth-child(2){
+
+.rounded-button:nth-child(2) {
   border-top-right-radius: 20px;
 
 }
-.pin-spacer{
-  overflow: hidden!important;
+
+.pin-spacer {
+  overflow: hidden !important;
 }
+
 @media screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
 
-.form-section{
-  display: flex!important;
-  height: auto!important;
-}
-.form-field{
-  width: 60vw;
-}
-.form-heading{
-  font-size: 80px!important;
-}
+  .form-section {
+    display: flex !important;
+    height: auto !important;
+  }
+
+  .form-field {
+    width: 60vw;
+  }
+
+  .form-heading {
+    font-size: 80px !important;
+  }
+
   .container-1,
   .container-2 {
     height: 100vh;
   }
-  .section-1{
-    height: 200px!important;
+
+  .section-1 {
+    height: 200px !important;
   }
-.section-2{
-  align-items: start!important;
+
+  .section-2 {
+    align-items: start !important;
+  }
+
+
 }
 
- 
-}
 /* Modal Styles */
 .modal-overlay {
   position: fixed;
@@ -172,7 +189,7 @@ svg{
 .chat-widget {
   position: fixed;
   bottom: 50px;
-  right:20px;
+  right: 20px;
   /* background: #0E1527; */
   color: #ffffff;
   padding: 15px 20px;
@@ -188,10 +205,11 @@ svg{
   -webkit-backdrop-filter: blur(0);
   border-radius: 50px;
 }
+
 @media (max-width:786px) {
   .chat-widget {
     right: 20px;
-    bottom:0px
+    bottom: 0px
   }
 }
 
@@ -230,7 +248,8 @@ svg{
 }
 
 .chat-widget-image {
-  display: none; /* Hide the duplicate image by default */
+  display: none;
+  /* Hide the duplicate image by default */
 }
 
 .chat-widget-text {
@@ -276,6 +295,7 @@ svg{
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -316,7 +336,8 @@ svg{
 .form-group textarea {
   width: 100%;
   padding: 14px 20px;
-  background: #FFFFFF33; /* 20% opacity white */
+  background: #FFFFFF33;
+  /* 20% opacity white */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   font-size: 15px;
@@ -420,12 +441,12 @@ svg{
     margin: 0 20px;
     padding: 25px 20px;
   }
-  
+
   .phone-input {
     flex-direction: column;
   }
-  
- 
+
+
 }
 
 .mortgage-calculator-container {
@@ -435,12 +456,14 @@ svg{
   font-family: Arial, sans-serif;
 }
 
-.mortgage-calculator-content{
-    max-width: 1200px;
+.mortgage-calculator-content {
+  max-width: 1200px;
 }
-.mortgage-calculator{
-    width: 100%;
+
+.mortgage-calculator {
+  width: 100%;
 }
+
 .calculator-body {
   display: flex;
   justify-content: space-between;
@@ -558,17 +581,17 @@ svg{
 }
 
 .input-field div {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 .input-field button {
-    background-color: #1E2435;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 3px;
+  background-color: #1E2435;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
 
 input[type="range"] {
@@ -593,6 +616,7 @@ input[type="range"] {
   flex-direction: column;
   align-items: center;
 }
+
 .chart-container {
   margin-bottom: 20px;
 }
@@ -606,9 +630,9 @@ input[type="range"] {
   flex: 1.5;
 }
 
-.result-detail-content{
-    border-left: 1px solid #3a4a6a;
-    padding-left: 20px;
+.result-detail-content {
+  border-left: 1px solid #3a4a6a;
+  padding-left: 20px;
 }
 
 .result-details p {
@@ -621,7 +645,7 @@ input[type="range"] {
   position: relative;
   overflow: hidden;
   padding: 100px;
-  background-color: #0E1527 ;
+  background-color: #0E1527;
   color: white;
 }
 
@@ -632,7 +656,7 @@ input[type="range"] {
 
 .calculator-description ul {
   list-style: none;
-   padding: 0; 
+  padding: 0;
 }
 
 .calculator-description li {
@@ -646,10 +670,10 @@ input[type="range"] {
   opacity: 1;
 }
 
-.career-logo{
-    position: absolute;
-    transform: translate(-100%, 50%);
-    opacity: 1;
+.career-logo {
+  position: absolute;
+  transform: translate(-100%, 50%);
+  opacity: 1;
 
 }
 
@@ -658,7 +682,7 @@ input[type="range"] {
 @media (max-width: 1024px) {
   /* .calculator-body {
     /* flex-direction: column; */
-    /* align-items: stretch; */
+  /* align-items: stretch; */
 
   .calculator-inputs,
   .calculator-results {
@@ -676,10 +700,11 @@ input[type="range"] {
 }
 
 @media (max-width: 768px) {
-   .calculator-body {
-    flex-direction: column; 
-  align-items: stretch;
+  .calculator-body {
+    flex-direction: column;
+    align-items: stretch;
   }
+
   .mortgage-calculator-container {
     padding: 30px 20px;
   }
@@ -715,17 +740,20 @@ input[type="range"] {
     padding: 30px;
   }
 }
+
 @media (max-width: 786px) {
-  .calculator-results{
-   display: none;
- }
-   .result-details p {
-   flex-direction: row;
-   gap: 6px;
-   align-items: flex-start;
- }
- .result-detail-content{
-  border-left:none
+  .calculator-results {
+    display: none;
+  }
+
+  .result-details p {
+    flex-direction: row;
+    gap: 6px;
+    align-items: flex-start;
+  }
+
+  .result-detail-content {
+    border-left: none
   }
 
 }
@@ -739,6 +767,7 @@ input[type="range"] {
     flex-direction: row;
     align-items: flex-start;
   }
+
   .result-details p {
     flex-direction: row;
     gap: 6px;
@@ -757,14 +786,18 @@ input[type="range"] {
   .calculator-body {
     gap: 10px;
   }
-  .calculator-results{
+
+  .calculator-results {
     display: none;
   }
+
   .calculator-inputs .input-group {
     margin-bottom: 5px;
   }
-  .result-detail-content{
-  padding-left: 0px;}
+
+  .result-detail-content {
+    padding-left: 0px;
+  }
 }
 
 /* === Page wrapper === */
@@ -775,6 +808,7 @@ input[type="range"] {
   align-items: center;
   justify-content: center;
 }
+
 /* kll */
 
 .page-wrapper-2 {
@@ -805,7 +839,8 @@ input[type="range"] {
 /* === Form group === */
 .form-group {
   margin-bottom: 20px;
-  flex: 1; /* Makes all form-row columns equal */
+  flex: 1;
+  /* Makes all form-row columns equal */
 }
 
 .form-group label {
@@ -825,7 +860,8 @@ input[type="range"] {
   color: #fff;
   font-size: 14px;
 }
-.form-group .country{
+
+.form-group .country {
   max-width: 15%;
   padding: 12px;
   border: none;
@@ -834,6 +870,7 @@ input[type="range"] {
   color: #fff;
   font-size: 14px;
 }
+
 .form-group input[type="file"] {
   padding: 10px;
 }
@@ -890,25 +927,30 @@ input[type="range"] {
 
 @media (max-width: 768px) {
   .form-row {
-    flex-direction: column; /* stacks Email and Phone blocks vertically */
+    flex-direction: column;
+    /* stacks Email and Phone blocks vertically */
   }
 
   /* Phone stays row inside its block */
   .phone-row {
-    flex-direction: row; /* always row! */
+    flex-direction: row;
+    /* always row! */
   }
 
   .phone-row select {
-    flex: 0 0 21%;   /* adjust for mobile */
+    flex: 0 0 21%;
+    /* adjust for mobile */
   }
 
   .phone-row input {
     flex: 1 1 70%;
   }
 }
+
 .clamp-3 {
   display: -webkit-box;
-  -webkit-line-clamp: 3;   /* limit to 3 lines */
+  -webkit-line-clamp: 3;
+  /* limit to 3 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
