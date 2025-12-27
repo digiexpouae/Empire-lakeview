@@ -173,7 +173,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
             variants={fadeUp}
           >
             {/* Left: Copyright */}
-            <p className="text-sm text-white/80">© 2025 Empire Developments</p>
+            <p className="text-sm text-white/80">© 2026 Empire Developments</p>
 
             {/* Middle: Links */}
             <div className="flex items-center gap-4 text-sm">
