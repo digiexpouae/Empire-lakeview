@@ -72,7 +72,7 @@ const Header = () => {
       name: 'Media',
       link: '/news',
       children: [
-        { name: 'Press Releases', link: '/news' },
+        { name: 'Press Coverage', link: '/news' },
         { name: 'Blogs', link: '/blogs' },
       ],
     },

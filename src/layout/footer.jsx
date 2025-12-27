@@ -23,7 +23,7 @@ const latestProjects = [
 ];
 
 const resources = [
-  { name: 'Press Release', href: '/blogs' },
+  { name: 'Press Coverage', href: '/news' },
   { name: 'Customer Support', href: '/customer_complaint' },
   { name: 'Supplier', href: '/suplier' },
   { name: 'WhistleBowler Line', href: '/whistleblower' },

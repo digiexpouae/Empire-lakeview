@@ -236,17 +236,16 @@ export default function PressRelease() {
     };
 
     return (
-        <div className="min-h-screen bg-[#0D1028] py-12 px-4 sm:px-6 lg:px-8">
+        <div className="  py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl uppercase font-medium text-white mb-12 text-center">
-                    Press Releases
-                </h1>
+                    Press Coverage                </h1>
 
                 <div className="space-y-6 mb-12">
                     {currentReleases.map((release) => (
                         <div
                             key={release.id}
-                            className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 border border-white/10"
+                            className="backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 border border-white/10"
                         >
                             <div className="flex flex-col  md:flex-row  ">
                                 <div className="md:w-1/2 lg:w-[70%] xl:w-1/2 relative  ">

@@ -11,11 +11,11 @@ const news = () => {
     return (
         <>
             <Header />
-            <div className='h-screen w-full '>
+            <div className='h-screen w-full  '>
                 <HeroSlider
                     className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
                     className2={'!top-[60%] md:!top-[40%] xl:!top-[35%]'}
-                    texttwo={'Press Release'}
+                    texttwo={'Press Coverage'}
                     texttwoclass={'xl:!text-[100px] !text-md text-center md:!text-[100px]'}
 
                     main={true}
@@ -40,7 +40,7 @@ const news = () => {
             {/* <div className='hidden md:block'>
                 <Slidernews href="/news" heading="LATEST NEWS" buttonheading="View All News" />
             </div> */}
-            <div className="bg-[#0D1028] pt-24  md:pb-0 md:pt-0">
+            <div className=" bg-[#0D1028] ">
                 <Press />
                 {/* <Navigationslider heading={'Feature In'} buttonheading={'View All'} href={'/blogs'} /> */}
                 {/* <h2 className='md:hidden block text-center text-white text-3xl font-medium mb-4 '>LATEST NEWS</h2>
