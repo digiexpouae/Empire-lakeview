@@ -80,7 +80,7 @@ const Header = () => {
   ];
   const nav2 = [{
     name: 'Calculator',
-    link: '/news',
+    link: '',
     children: [
       { name: 'Investment Calculator', link: '/Investmentcalculator ' },
       { name: 'Mortgage Calculator', link: '/mortgage-calculator' },

@@ -248,9 +248,9 @@ export default function PressRelease() {
                             key={release.id}
                             className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 border border-white/10"
                         >
-                            <div className="flex flex-col md:flex-row  ">
+                            <div className="flex flex-col  md:flex-row  ">
                                 <div className="md:w-1/2 lg:w-[70%] xl:w-1/2 relative  ">
-                                    <div className="relative w-full  aspect-[16/9] ">
+                                    <div className="relative w-full   aspect-[16/9] ">
                                         <Image
                                             src={release.image}
                                             alt={release.heading}
@@ -259,18 +259,18 @@ export default function PressRelease() {
                                         />
                                     </div>
                                 </div>
-                                <div className="md:w-2/3 lg:w-3/4 p-6 sm:p-8">
-                                    <h2 className="text-xl sm:text-2xl font-medium text-white mb-4 hover:text-[#CCAB64] transition-colors leading-tight line-clamp-2">
+                                <div className="md:w-1/2 lg:w-3/4 flex flex-col justify-center md:px-6 p-6 md:p-0">
+                                    <h2 className="text-xl lg:text-2xl md:text-lg font-medium text-white mb-4 hover:text-[#CCAB64] transition-colors leading-tight line-clamp-2">
                                         {release.heading}
                                     </h2>
-                                    <p className="text-gray-300 mb-6 leading-relaxed line-clamp-2">
+                                    <p className="text-gray-300 mb-6 text-md leading-relaxed line-clamp-2">
                                         {release.text}
                                     </p>
                                     <a
                                         href={release.buttonHref}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center text-sm px-2 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] text-[#0D1028]  rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
+                                        className="inline-flex items-center w-22 justify-center text-center text-xs px-2 py-2 bg-[linear-gradient(90deg,#CCAB64_0%,#FAECC9_100%)] text-[#0D1028]  rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
                                     >
                                         Read More
                                     </a>
