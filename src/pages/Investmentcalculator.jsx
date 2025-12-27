@@ -16,7 +16,7 @@ const Invesmnetcalculator = () => {
                     className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
                     className2={'!top-[50%] md:!top-[40%] right-0 left-0 xl:!top-[35%]'}
                     texttwo={<>Investment Calculator</>}
-                    texttwoclass={'xl:!text-[100px] !text-md text-center'}
+                    texttwoclass={'xl:!text-[100px] !text-md text-center lg:!text-[100px]'}
                     main={true}
                     bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
                     cloud={false}

@@ -326,7 +326,7 @@ export default function MortgageCalculator() {
     return (
         <div className="px-4 py-10 bg-[#1a1d2e]  text-white">
             {/* Header */}
-            <div className="max-w-3xl mx-auto mb-10 flex items-center gap-4">
+            <div className="max-w-3xl mx-auto mb-10 flex items-start  md:items-center gap-4">
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#CCAB64] to-[#FAECC9]">
                     <Home className="text-black w-7 h-7" />
                 </div>
@@ -490,9 +490,9 @@ export default function MortgageCalculator() {
                             {[
                                 ["Property Value", plan.unitValue],
                                 ["Duration", `${plan.totalMonths} Months`],
-                                ["Key Handover", `${plan.monthsToKey}Months`],
+                                ["Key Handover", `${plan.monthsToKey} Months`],
                                 ["Monthly", plan.monthlyPayment],
-                                ["Guaranteed Rental Income", plan.monthlyPayment],
+                                ["Guaranteed Rental Income (Annual)", plan.monthlyPayment],
                             ].map(([label, value], index, array) => {
                                 const isLast = index === array.length - 1;
                                 const isKeyMonth = label === "Key Handover";
