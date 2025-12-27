@@ -15,7 +15,7 @@ const news = () => {
                 <HeroSlider
                     className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
                     className2={'!top-[70%] md:!top-[40%] xl:!top-[35%]'}
-                    texttwo={'Latest News'}
+                    texttwo={'Press Release'}
                     texttwoclass={'xl:!text-[100px] !text-md text-center md:!text-[100px]'}
 
                     main={true}

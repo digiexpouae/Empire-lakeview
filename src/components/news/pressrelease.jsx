@@ -239,7 +239,7 @@ export default function PressRelease() {
         <div className="min-h-screen bg-[#0D1028] py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl uppercase font-medium text-white mb-12 text-center">
-                    Latest News & Press Releases
+                    Press Releases
                 </h1>
 
                 <div className="space-y-6 mb-12">
