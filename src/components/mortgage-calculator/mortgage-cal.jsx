@@ -478,7 +478,7 @@ export default function MortgageCalculator() {
                                 </div>
                                 {/* Step 3 */}
                                 <Step
-                                    title="Guaranteed Rental Income"
+                                    title="Guaranteed Rental Income (Annual)"
                                     value={formatCurrency(plan.monthlyPayment * 12 * 0.8)}
                                     className="md:flex hidden"
                                 />
