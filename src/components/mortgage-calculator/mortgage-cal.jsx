@@ -298,7 +298,7 @@ export default function MortgageCalculator() {
         const monthlyPayment = value * 0.01;
         const keyHandoverAt = value * 0.56;
         const monthsToKey = Math.ceil(
-            (keyHandoverAt - downPayment) / monthlyPayment
+            (keyHandoverAt - downPayment) / monthlyPayment - 1e-10
         );
         const totalMonths = 80;
 
