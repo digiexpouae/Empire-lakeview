@@ -10,8 +10,9 @@ import Press from '../components/news/pressrelease'
 const news = () => {
     return (
         <>
-            <Header />
-            <div className='h-screen w-full  '>
+
+            <div className='h-screen w-full relative  '>
+                <Header />
                 <HeroSlider
                     className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
                     className2={'!top-[60%] md:!top-[40%] xl:!top-[35%]'}
