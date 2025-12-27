@@ -14,7 +14,7 @@ const news = () => {
             <div className='h-screen w-full '>
                 <HeroSlider
                     className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
-                    className2={'!top-[70%] md:!top-[40%] xl:!top-[35%]'}
+                    className2={'!top-[60%] md:!top-[40%] xl:!top-[35%]'}
                     texttwo={'Press Release'}
                     texttwoclass={'xl:!text-[100px] !text-md text-center md:!text-[100px]'}
 
