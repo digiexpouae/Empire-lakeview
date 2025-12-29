@@ -134,8 +134,8 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
               </div>
 
               <div className='h-[120px] flex flex-col gap-2  w-[130px]  items-center justify-center'>
-                <p className="text-center leading-[1.5]" style={{ textWrap: 'nowrap' }}>Join Our Community</p>
-                <div className=' '><Image
+                <p className="text-center leading-[1.5]  pl-10 md:pl-0" style={{ textWrap: 'nowrap' }}>Join Our Community</p>
+                <div className=''><Image
                   src='/assets/qrcode.jpeg'
                   alt="Empire Developments"
                   width={120}
