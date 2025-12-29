@@ -121,7 +121,7 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
               </ul>
             </motion.div>
 
-            <motion.div className="space-y-3 px-2 flex flex-col gap-4   " variants={fadeUp}>
+            <motion.div className="space-y-3 px-2 flex flex-col gap-10   " variants={fadeUp}>
               <div className="h-[24px] mb-4">
                 <a href="/" className="inline-block">
                   <Image
@@ -132,13 +132,17 @@ const Footer = ({ footertext, text1, text, text2, textpara }) => {
 
                 </a>
               </div>
-              <div className='h-[120px] w-[130px] flex items-center justify-center'>   <Image
-                src='/assets/qrcode.jpeg'
-                alt="Empire Developments"
-                width={120}
-                height={120}
-                className="h-[120px] w-auto object-contain"
-              />
+
+              <div className='h-[120px] flex flex-col gap-2  w-[130px]  items-center justify-center'>
+                <p className="text-center leading-[1.5]" style={{ textWrap: 'nowrap' }}>Join Our Community</p>
+                <div className=' '><Image
+                  src='/assets/qrcode.jpeg'
+                  alt="Empire Developments"
+                  width={120}
+                  height={120}
+                  className="h-[120px] w-auto object-contain"
+                />
+                </div>
               </div>
             </motion.div>
 
