@@ -3,8 +3,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
-const LAND_VIDEO_PATH = "/assets/newdesktop.mp4";
-const PORT_VIDEO_PATH = "/assets/newmobile.mp4";
+const LAND_VIDEO_PATH = "/assets/desktop.mp4";
+const PORT_VIDEO_PATH = "/assets/mobile.mp4";
 const POSTER_IMAGE_PATH = "/assets/fallback.png";
 
 export default function Section1() {
