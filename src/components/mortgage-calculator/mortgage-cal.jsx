@@ -478,7 +478,7 @@ export default function MortgageCalculator() {
                                 </div>
                                 {/* Step 3 */}
                                 <Step
-                                    title="Guaranteed Rental Income (Annual)"
+                                    title="Estimated Rental Income (Annual)"
                                     value={formatCurrency(plan.monthlyPayment * 12 * 0.8)}
                                     className="md:flex hidden"
                                 />
@@ -492,7 +492,7 @@ export default function MortgageCalculator() {
                                 ["Duration", `${plan.totalMonths} Months`],
                                 ["Key Handover", `${plan.monthsToKey} Months`],
                                 ["Monthly", plan.monthlyPayment],
-                                ["Guaranteed Rental Income (Annual)", plan.monthlyPayment],
+                                ["Estimated Rental Income (Annual)", plan.monthlyPayment],
                             ].map(([label, value], index, array) => {
                                 const isLast = index === array.length - 1;
                                 const isKeyMonth = label === "Key Handover";
