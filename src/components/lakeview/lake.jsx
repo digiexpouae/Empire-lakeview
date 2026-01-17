@@ -56,8 +56,8 @@ const index = () => {
     { name: 'Dubai International Airport', coordinates: [25.2567, 55.3643], icon: '/assets/international (2).svg' },
   ];
   const icons = [
-    { img: Liwan, name: <>Liwan <br/>  Lakes</>, distance: '2 minutes' },
-    { img: AmayaMall, name: <>Amaya <br/> Mall</>, distance: '2 minutes' },
+    { img: Liwan, name: <>Liwan <br />  Lakes</>, distance: '2 minutes' },
+    { img: AmayaMall, name: <>Amaya <br /> Mall</>, distance: '2 minutes' },
     { img: IndianInternationalSchool, name: <>The Indian International School</>, distance: '8 minutes' },
     { img: GEMSWellington, name: 'GEMS Wellington Academy', distance: '10 minutes' },
     { img: IMGWorlds, name: 'IMG Worlds of Adventure', distance: '8 minutes' },
@@ -139,52 +139,54 @@ const index = () => {
     {
       im: '/assets/slider5.webp',
       tex1: 'Studio',
-      tex2: 'Size: 414.15 SQ.FT. To 484.53',
+      tex2: 'SIZE RANGE: 410.75 TO 432.60 SQ.FT ',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/studio/index.htm',
       link2: '/contact',
     },
     {
       im: '/assets/slider6.webp',
-      tex1: 'Studio with Pool',
-      tex2: 'Size: 407.09 SQ.FT To 427.61',
+      tex1: 'Studio with pool',
+      tex2: 'SIZE: 407.09 TO 425.39 SQ.FT ',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/studio-pool/index.htm',
       link2: '/contact',
     },
     {
       im: '/assets/slider1.webp',
-      tex1: '1 Bed',
-      tex2: 'Size: 830.11 SQ.FT. To 830.11 SQ.FT.',
+      tex1: '1 Bed Apartment ',
+      tex2: 'SIZE RANGE: 753.80 TO 830.11 SQ.FT',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/1bed/index.htm',
       link2: '/contact',
     },
     {
       im: '/assets/slider2.webp',
-      tex1: '1 Bed With Pool',
-      tex2: 'Size: 753.80 SQ.FT. To 856.70 SQ.FT.',
+      tex1: '1 Bed Apartment with pool',
+      tex2: 'SIZE RANGE: 789.86 TO 867.14 SQ.FT',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/1bed-pool/index.htm',
       link2: '/contact',
     },
     {
       im: '/assets/slider3.webp',
-      tex1: '2 Bed',
-      tex2: 'Size: 1,299.61.FT. To 1,328.05 SQ.FT',
+      tex1: '2 Bed Apartment with pool',
+      tex2: 'SIZE RANGE: 1319.66 SQ.FT',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/2bed/index.htm',
       link2: '/contact',
     },
     {
       im: '/assets/slider4.webp',
-      tex1: 'Duplex',
-      tex2: 'Size: 2,633.71 SQ.FT',
+      tex1: '3 Bed Duplex with pool',
+      tex2: 'SIZE RANGE: 2633.71 SQ.FT',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/duplex/index.htm',
       link2: '/contact'
     },
-   { im: '',
-    tex1:'',
-    tex2:'',
-    link1:'',
-    link2:''}
+    {
+      im: '',
+      tex1: '',
+      tex2: '',
+      link1: '',
+      link2: ''
+    }
   ];
-  
+
 
   const [showFooter, setShowFooter] = useState(false);
   const [overlay, setoverlay] = useState(true)
@@ -211,7 +213,7 @@ const index = () => {
           className={"top-[15%]"}
           main={main}
           bottom={"bottom-[-250px]"}
-         
+
           Home={false}
           main_im={empire}
           im1={im1}
@@ -245,14 +247,14 @@ Empire Development's Liwan Homes offers a lifestyle where style and daily conven
           </div>
         </Fadein>
         <Introducing ima={content} intro={true} Logo={'/assets/a7c7c7715ce8f5e3ea0b1cea5a135d0970ec0d6a.png'} logo={true} text1={'Introducing'} btntext={'Download Floor Plans'} />
-        
+
         <Sectionthree images={images} onAllVisible={handleAllVisible} />
-       
-          <Mainplace markers={markers} Main_marker={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Name={<>Empire <br/> Lakeviews</>}/>
-          <Fadein><Icon icons={icons} /></Fadein>
+
+        <Mainplace markers={markers} Main_marker={'Empire Lakeviews'} center_position={[25.114806, 55.364444]} Name={<>Empire <br /> Lakeviews</>} />
+        <Fadein><Icon icons={icons} /></Fadein>
 
         <Fadein>
-          
+
         </Fadein>
 
         <Fadein>
