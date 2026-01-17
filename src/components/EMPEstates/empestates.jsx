@@ -54,58 +54,81 @@ const empirestates = () => {
 
 
 
-  const image = [
-    {
-      im: '/assets/ima2.jpg',
-      tex1: 'Studio',
-      tex2: 'SIZE: 443.55 SQ.FT',
-      link1: 'https://empiredevelopments.ae/crm/empire_estates/studio/',
-      link2: '/contact',
-    },
+  // const image = [
+  //   {
+  //     im: '/assets/ima2.jpg',
+  //     tex1: 'Studio',
+  //     tex2: 'SIZE: 443.55 SQ.FT',
+  //     link1: 'https://empiredevelopments.ae/crm/empire_estates/studio/',
+  //     link2: '/contact',
+  //   },
 
-    {
-      im: '/assets/bed1.jpg',
-      tex1: '1 Bed',
-      tex2: 'SIZE: 898.42 SQ.FT.',
-      link1: 'https://empire-lakeview.vercel.app/360/empire_estates/1bed/index.htm',
-      link2: '/contact'
-    },
-    {
-      im: '/assets/bed2.jpg',
-      tex1: '2 Bed',
-      tex2: 'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.',
-      link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bed/index.htm',
-      link2: '/contact',
-    },
-    {
-      im: '/assets/bed3.jpg',
-      tex1: '2 Bed Duplex',
-      tex2: 'SIZE: 1,757.74 SQ.FT. TO 2,137.48 SQ.FT.',
-      link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bedduplex/index.htm',
-      link2: '/contact',
-    },
-    // {
-    //   im: '/assets/bed4.jpg',
-    //   tex1: '2 Bedroom Triplex',
-    //   tex2: 'SIZE: 2,137.48 SQ.FT.',
-    //   link1: 'http://localhost:3000/360/empire_estates/empirevr/index.htm',
-    //   link2: '/contact',
-    // },
+  //   {
+  //     im: '/assets/bed1.jpg',
+  //     tex1: '1 Bed',
+  //     tex2: 'SIZE: 898.42 SQ.FT.',
+  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/1bed/index.htm',
+  //     link2: '/contact'
+  //   },
+  //   {
+  //     im: '/assets/bed2.jpg',
+  //     tex1: '2 Bed',
+  //     tex2: 'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.',
+  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bed/index.htm',
+  //     link2: '/contact',
+  //   },
+  //   {
+  //     im: '/assets/bed3.jpg',
+  //     tex1: '2 Bed Duplex',
+  //     tex2: 'SIZE: 1,757.74 SQ.FT. TO 2,137.48 SQ.FT.',
+  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bedduplex/index.htm',
+  //     link2: '/contact',
+  //   },
+  //   // {
+  //   //   im: '/assets/bed4.jpg',
+  //   //   tex1: '2 Bedroom Triplex',
+  //   //   tex2: 'SIZE: 2,137.48 SQ.FT.',
+  //   //   link1: 'http://localhost:3000/360/empire_estates/empirevr/index.htm',
+  //   //   link2: '/contact',
+  //   // },
 
-    {
-      im: '/assets/bed5.jpg',
-      tex1: '3 Bed',
-      tex2: 'SIZE: 1,771.01 SQ.FT. TO 1,771.01 SQ.FT.',
-      link1: 'https://empire-lakeview.vercel.app/360/empire_estates/3bed/index.htm',
-      link2: '/contact',
-    }, {
-      im: '',
-      tex1: '',
-      tex2: '',
-      link1: '/',
-      link2: '/',
-    }
-  ];
+  //   {
+  //     im: '/assets/bed5.jpg',
+  //     tex1: '3 Bed',
+  //     tex2: 'SIZE: 1,771.01 SQ.FT. TO 1,771.01 SQ.FT.',
+  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/3bed/index.htm',
+  //     link2: '/contact',
+  //   }, {
+  //     im: '',
+  //     tex1: '',
+  //     tex2: '',
+  //     link1: '/',
+  //     link2: '/',
+  //   }
+  // ];
+
+    const image = [
+    { im: '/assets/ima2.jpg', tex1: 'Studio - Without Pool', tex2: 'SIZE: 371.00 SQ.FT TO 402.00 SQ.FT', link1: 'https://empiredevelopments.ae/crm/empire_estates/studio/', link2: '/contact' },
+    { im: '/assets/ima2.jpg', tex1: 'Studio - With Pool', tex2: 'SIZE: 420.00 SQ.FT TO 462.00 SQ.FT', link1: 'https://empiredevelopments.ae/crm/empire_estates/studio/', link2: '/contact' },
+    { im: '/assets/bed1.jpg', tex1: '1 Bed Apartment - With Pool', tex2: 'SIZE: 834.00 SQ.FT TO 1249.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/1bed/index.htm', link2: '/contact' },
+    { im: '/assets/bed2.jpg', tex1: '2 Bed Apartment - With Pool', tex2: 'SIZE: 1015.00 SQ.FT TO 1624.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bed/index.htm', link2: '/contact' },
+    { im: '/assets/bed3.jpg', tex1: '2 Bed Duplex - With Pool', tex2: 'SIZE: 1644.00 SQ.FT TO 2870.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bedduplex/index.htm', link2: '/contact' },
+    { im: '/assets/bed3.jpg', tex1: '2 Bed Duplex - Maid With Pool', tex2: 'SIZE: 1636.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bedduplex/index.htm', link2: '/contact' },
+    { im: '/assets/bed3.jpg', tex1: '2 Bed Apartment - Maid With Pool', tex2: 'SIZE: 1670.00 SQ.FT TO 1755.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bed/index.htm', link2: '/contact' },
+    { im: '/assets/bed3.jpg', tex1: '2 Bed Apartment With Roof Pool', tex2: 'SIZE: 2661.00 SQ.FT TO 2737.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bed/index.htm', link2: '/contact' },
+    { im: '/assets/bed3.jpg', tex1: '2 Bed Triplex With Roof Pool', tex2: 'SIZE: 2814.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bed/index.htm', link2: '/contact' },
+    { im: '/assets/bed5.jpg', tex1: '3 Bed Apartment - With Pool', tex2: 'SIZE: 1722.00 SQ.FT TO 1784.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/3bed/index.htm', link2: '/contact' },
+    { im: '/assets/bed5.jpg', tex1: '3 Bed Apartment - With Roof Pool', tex2: 'SIZE: 3089.00 SQ.FT TO 3198.00 SQ.FT', link1: 'https://empire-lakeview.vercel.app/360/empire_estates/3bed/index.htm', link2: '/contact' },
+ ,
+ {
+       im: '',
+       tex1: '',
+       tex2: '',
+       link1: '/',
+       link2: '/',
+     }
+ 
+  ]
 
 
   const [cloud, setcloud] = useState(false)
