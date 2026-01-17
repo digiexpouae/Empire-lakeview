@@ -24,44 +24,61 @@ import Dubaisafari from '../../../public/assets/2.svg'
 import DesertPalm from '../../../public/assets/3.svg'
 import Gardens from '../../../public/assets/gardens/gardens.png'
 const index = () => {
-  const image = [
-    //   {
-    //     im: '/assets/ima2.jpg',
-    //     tex1: 'Studio',
-    //     tex2: 'SIZE: 443.55 SQ.FT',
-    //     link1:'https://empiredevelopments.ae/empire-estates/360views/studio',
-    //     link2:'/contact',
-    //   },
 
+  const image = [
+    // STUDIO – WITHOUT POOL (no existing studio image/link)
+    {
+      im: '/assets/ima2.jpg',
+      tex1: 'Studio - Without Pool',
+      tex2: 'SIZE RANGE: 427.97 TO 453.70 SQ. FT',
+      link1: 'https://empiredevelopments.ae/empire-estates/360views/studio',
+      link2: '/contact',
+    },
+
+    // STUDIO – WITH POOL
+    {
+      im: '/assets/ima2.jpg',
+      tex1: 'Studio - With Pool',
+      tex2: 'SIZE RANGE: 469.72 TO 558.11 SQ. FT',
+      link1: 'https://empiredevelopments.ae/empire-estates/360views/studio',
+      link2: '/contact',
+    },
+
+    // 1 BED APARTMENT – WITH POOL (reused)
     {
       im: '/assets/gardens/1.jpg',
-      tex1: '1 Bed',
-      tex2: 'Size: 425.55 SQ.FT.',
+      tex1: '1 Bed Apartment - With Pool',
+      tex2: 'SIZE RANGE: 746.00 TO 962.00 SQ. FT',
       link1: 'https://empiredevelopments.ae/empire-estates/360views/1bed',
-      link2: '/contact'
+      link2: '/contact',
     },
+
+    // 2 BED (kept as-is, no updated size provided)
     {
       im: '/assets/gardens/slides.jpg',
       tex1: '2 Bed',
-      tex2: 'Size: 425.55 SQ.FT.',
+      tex2: 'SIZE: 425.55 SQ.FT',
       link1: 'https://empiredevelopments.ae/empire-estates/360views/2bed',
       link2: '/contact',
     },
+
+    // 3 BED APARTMENT – WITH POOL (reused)
     {
       im: '/assets/gardens/2.jpg',
-      tex1: '3 Bed',
-      tex2: 'Size: 425.55 SQ.FT.',
+      tex1: '3 Bed Apartment - With Pool',
+      tex2: 'SIZE: 1659.90 SQ. FT',
       link1: 'https://empiredevelopments.ae/empire-estates/360views/2-bed-duplex',
       link2: '/contact',
     },
+
+    // 3 BED DUPLEX – WITH POOL (reused)
     {
       im: '/assets/gardens/3.jpg',
-      tex1: '3 Bed Duplex',
-      tex2: 'SIZE:  425.55 SQ.FT.',
+      tex1: '3 Bed Duplex - With Pool',
+      tex2: 'SIZE: 2,235.23 SQ. FT',
       link1: '#',
       link2: '/contact',
-    },
-    {
+    }, {
       im: '',
       tex1: '',
       tex2: '',
