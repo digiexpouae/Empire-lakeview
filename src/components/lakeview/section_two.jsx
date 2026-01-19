@@ -6,7 +6,7 @@ import LottieIcons from "../../common/lottie";
 import { motion } from "framer-motion";
 import back from '../../../public/assets/1984e08ad90983cfd81c68d9706dcc268b39c257.png';
 
-const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, icontext, classNamep ,Lottieicons}) => {
+const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, icontext, classNamep, Lottieicons }) => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
@@ -28,13 +28,13 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
         tl.fromTo(ref1.current, { x: -200, opacity: 0 }, { x: 0, opacity: 1 })
           .fromTo(ref2.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.7")
           .fromTo(ref3.current, { y: 200, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.8")
-          .fromTo(".element", { opacity: 0, y: 200 }, 
+          .fromTo(".element", { opacity: 0, y: 200 },
             {
-            opacity: 1,
-            y: 0,
-            duration: 0.3,
-            stagger: { each: 0.1, ease: "power1.out" },
-          });
+              opacity: 1,
+              y: 0,
+              duration: 0.3,
+              stagger: { each: 0.1, ease: "power1.out" },
+            });
       }
     } catch (err) {
       console.error("GSAP animation error:", err);
@@ -46,7 +46,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
       {/* OUTER WRAPPER */}
       <div className="relative w-full overflow-hidden" ref={ref}>
         {/* Watermark Logo at Bottom Right */}
-        <div style={{position: 'absolute', right: 0, bottom: -40, zIndex: 0, opacity: 1, pointerEvents: 'none'}}>
+        <div style={{ position: 'absolute', right: 0, bottom: -40, zIndex: 0, opacity: 1, pointerEvents: 'none' }}>
           <Image src={require('../../../public/assets/gridlogo.png')} alt="Grid Logo" width={400} height={400} />
         </div>
         {/* BACKGROUND IMAGE OUTSIDE PADDING */}
@@ -68,7 +68,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
               </div>
 
               {/* Lottie Icons Desktop (moved here) */}
-               <div className=" mt-5 w-[90%]  hidden md:block md:mt-0 lg:w-6xl  lg:py-14 xl:py-0">
+              <div className=" mt-5 w-[90%]  hidden md:block md:mt-0 lg:w-6xl  lg:py-14 xl:py-0">
                 <LottieIcons
                   className="element"
                   className2={`text-center text-white md:w-[150px] !text-[10px] ${icontext}`}
@@ -78,7 +78,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                   ref={ref3}
                   Lottieicons={Lottieicons}
                 />
-              </div> 
+              </div>
 
 
               {/* <div className=" mt-5 md:mt-0 ml-10 hidden md:block md:mt-8 w-full">
@@ -96,8 +96,8 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                     className="flex flex-col items-center md:justify-start"
                   >
                     <div className="h-[50px] w-[50px] mb-1">
-                      <LottieIcons                 Lottieicons={Lottieicons}
- amenities={[amenity]} iconsize="h-[40px] w-[40px]" />
+                      <LottieIcons Lottieicons={Lottieicons}
+                        amenities={[amenity]} iconsize="h-[40px] w-[40px]" />
                     </div>
                     <span className="text-white text-[10px] mt-1 text-center">{amenity.title}</span>
                   </motion.div>
@@ -112,10 +112,10 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                   {text}
                 </p>
                 {btn && (
-                  <a 
-                   href="/files/03 - Fact Sheet - Empire LakeViews (4).pdf" 
-                   download
-                  className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] cursor-pointer text-gray-800 w-[180px] px-2 py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
+                  <a
+                    href="/broucher/03 - Fact Sheet - Empire LakeViews (4).pdf"
+                    download
+                    className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] cursor-pointer text-gray-800 w-[180px] px-2 py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
                     Download Brochure
                   </a>
                 )}
