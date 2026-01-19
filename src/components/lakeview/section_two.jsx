@@ -113,7 +113,7 @@ const SectionTwo = ({ text, head, amenities, btn, back_image, className, home, i
                 </p>
                 {btn && (
                   <a
-                    href="/broucher/03 - Fact Sheet - Empire LakeViews (4).pdf"
+                    href="/files/03 - Fact Sheet - Empire LakeViews (4).pdf"
                     download
                     className="bg-gradient-to-r from-[#CCAB64] text-center to-[#FAECC9] hover:from-[#E5C98C] hover:to-[#E5C98C] cursor-pointer text-gray-800 w-[180px] px-2 py-1 rounded-full transition-colors duration-300 text-sm lg:text-base mx-auto md:mx-0 block">
                     Download Brochure
