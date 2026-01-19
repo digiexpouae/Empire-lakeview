@@ -5,6 +5,7 @@ import Footer from '../layout/footer'
 import Heroslider from "../common/heroslider";
 import back from '../../public/assets/finance.jpg'
 import Image from 'next/image';
+import InvestmentCalculator from '../components/InvestmentCalculator/Investment'
 const Invesmnetcalculator = () => {
     return (
         <>
@@ -27,7 +28,7 @@ const Invesmnetcalculator = () => {
 
 
             </div>
-            <MortgageCal />
+            <InvestmentCalculator />
 
             <Footer />
         </>
