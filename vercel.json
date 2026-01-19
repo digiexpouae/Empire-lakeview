@@ -1,0 +1,13 @@
+{
+    "headers": [
+        {
+            "source": "/files/(.*).pdf",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/pdf"
+                }
+            ]
+        }
+    ]
+}
