@@ -139,7 +139,7 @@ const index = () => {
     {
       im: '/assets/slider5.webp',
       tex1: 'Studio',
-      tex2: 'SIZE RANGE: 410.75 TO 432.60 SQ.FT ',
+      tex2: 'SIZE RANGE: 410.75 TO 484.00 SQ.FT ',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/studio/index.htm',
       link2: '/contact',
     },
@@ -160,7 +160,7 @@ const index = () => {
     {
       im: '/assets/slider2.webp',
       tex1: '1 Bed Apartment with pool',
-      tex2: 'SIZE RANGE: 789.86 TO 867.14 SQ.FT',
+      tex2: 'SIZE RANGE: 753.80 TO 867.14 SQ.FT',
       link1: 'https://empire-lakeview.vercel.app/360/lakeviews/1bed-pool/index.htm',
       link2: '/contact',
     },

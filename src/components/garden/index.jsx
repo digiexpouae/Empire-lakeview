@@ -54,13 +54,7 @@ const index = () => {
     },
 
     // 2 BED (kept as-is, no updated size provided)
-    {
-      im: '/assets/gardens/slides.jpg',
-      tex1: '2 Bed',
-      tex2: 'SIZE: 425.55 SQ.FT',
-      link1: 'https://empiredevelopments.ae/empire-estates/360views/2bed',
-      link2: '/contact',
-    },
+
 
     // 3 BED APARTMENT – WITH POOL (reused)
     {
