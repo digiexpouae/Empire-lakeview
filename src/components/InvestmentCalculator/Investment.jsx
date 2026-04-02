@@ -6,12 +6,13 @@ export default function MortgageCalculator() {
     const [selectedProperty, setSelectedProperty] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("");
     const [plan, setPlan] = useState(null);
+        const equity= installmentRate === 0.5 ? 70 : 50 ;
 
     const properties = {
         Garden: {
             categories: [
-                { name: "STUDIO - WITHOUT POOL", size: "427.97 TO 453.70 SQ. FT", price: 650000 },
-                { name: "STUDIO - WITH POOL", size: "469.72 TO 558.11 SQ. FT", price: 720000 },
+                { name: "STUDIO - WITHOUT POOL", size: "427.97 TO 453.70 SQ. FT", price: 750000 },
+                { name: "STUDIO - WITH POOL", size: "469.72 TO 558.11 SQ. FT", price: 820000 },
                 { name: "1 BED APARTMENT - WITH POOL", size: "746.00 TO 962.00 SQ. FT", price: 950000 },
                 { name: "3 BED APARTMENT - WITH POOL", size: "1659.90 SQ. FT", price: 1650000 },
                 { name: "3 BED DUPLEX - WITH POOL", size: "2235.23 SQ. FT", price: 2200000 },
@@ -46,14 +47,13 @@ useEffect(()=>{
         const monthlyPayment = value * (rate / 100);
         const keyHandoverAt = value * 0.56;
         const totalMonths = rate === 1 ? 80 : 97;
-
         setPlan({
             unitValue: value,
             downPayment,
             monthlyPayment,
             keyHandoverAt,
             totalMonths,
-            totalYears: (totalMonths / 12).toFixed(1),
+            totalYears: ((totalMonths / 12)).toFixed(1),
             projectedValue: value * 1.15,
             netWorth: (value * 1.15) - value,
             installmentRate: rate,
@@ -196,12 +196,12 @@ useEffect(()=>{
                                 <ResultStat label="13-23 Month" value={formatCurrency(plan.monthlyPayment)} sub={`${plan.installmentRate}% Rate`} />
                                 <ResultStat label="24 Month" value={formatCurrency(plan.monthlyPayment*22)} sub={`${plan.installmentRate*24-1}% Rate`} />
                                 <ResultStat label="25-35 Month" value={formatCurrency(plan.monthlyPayment)} sub={`${plan.installmentRate}% Rate`} />
-                                <ResultStat label="36 Month" value={formatCurrency(plan.monthlyPayment*20)} sub={`${plan.installmentRate*24-2}% Rate`} />
+                                <ResultStat label="36 Month" value={formatCurrency(plan.monthlyPayment*21)} sub={`${plan.installmentRate*24-1.5}% Rate`} />
                               </>  }
                                 <ResultStat label="Duration" value={`${plan.totalYears} yrs`} sub={`${plan.totalMonths} Installments`} />
                                 <ResultStat
-                                    label="Equity (56%)"
-                                    value={formatCurrency((plan.unitValue * 56) / 100)}
+                                    label={`Equity (${installmentRate ==0.5 ? '70%' : '50%'} )`}
+                                    value={formatCurrency((plan.unitValue * (installmentRate == 0.5 ? 70:50)) / 100)}
                                     sub="At Handover"
                                 />
                             </div>
@@ -211,10 +211,10 @@ useEffect(()=>{
                                 <div className="flex justify-between items-end mb-6">
                                     <div>
                                         <h3 className="text-lg font-bold text-white mb-1">Pay as You Build</h3>
-                                        <p className="text-sm text-gray-400">Construction-linked payment milestones</p>
+                                        <p className="text-sm text-gray-400">During Construction </p>
                                     </div>
                                     <div className="text-right">
-                                        <p className="text-2xl font-bold text-[#CCAB64]">56%</p>
+                                        <p className="text-2xl font-bold text-[#CCAB64]">   {installmentRate == 0.5 ? "70%":"50%"}</p>
                                         <p className="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Handover Equity</p>
                                     </div>
                                 </div>
@@ -235,10 +235,23 @@ useEffect(()=>{
                                     <div className="flex items-start gap-4">
                                         <div className="p-2 bg-green-500/10 rounded-lg"><TrendingUp className="w-5 h-5 text-green-400" /></div>
                                         <div>
+                                           {installmentRate == 0.5 ? (<>
+                      
+                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">EST. YEARLY RENTAL PROFIT</p>
+                                            <p className="text-xl font-bold text-white">  {rentMapping[plan.property]?.[plan.category] 
+    ? formatCurrency(rentMapping[plan.property][plan.category] - (plan.monthlyPayment * 12)) 
+    : 'Contact for ROI'}
+</p>
+                                            <p className="text-xs text-green-400 font-medium"> After excluding 0.5% monthly payments for 5 years ( 30% )
+</p>
+                      </>): (<>
                                             <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Projected ROI (3Y)</p>
                                             <p className="text-xl font-bold text-white">{formatCurrency(plan.projectedValue)}</p>
                                             <p className="text-xs text-green-400 font-medium">+{formatCurrency(plan.netWorth)} Net Gain</p>
-                                        </div>
+                      </>)
+                        }  
+                      
+                       </div>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <div className="p-2 bg-blue-500/10 rounded-lg"><MapPin className="w-5 h-5 text-blue-400" /></div>
