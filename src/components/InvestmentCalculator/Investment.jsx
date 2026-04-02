@@ -46,7 +46,7 @@ useEffect(()=>{
         const downPayment = value * 0.2;
         const monthlyPayment = value * (rate / 100);
         const keyHandoverAt = value * 0.56;
-        const totalMonths = rate === 1 ? 80 : 97;
+        const totalMonths = rate === 1 ? 80 : 96;
         setPlan({
             unitValue: value,
             downPayment,
