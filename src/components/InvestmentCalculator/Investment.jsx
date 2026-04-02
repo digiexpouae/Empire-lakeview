@@ -53,7 +53,7 @@ useEffect(()=>{
             monthlyPayment,
             keyHandoverAt,
             totalMonths,
-            totalYears: ((totalMonths / 12)).toFixed(1),
+            totalYears: parseFloat((totalMonths / 12).toFixed(1)),
             projectedValue: value * 1.15,
             netWorth: (value * 1.15) - value,
             installmentRate: rate,
