@@ -498,8 +498,8 @@ export default function MortgageCalculator() {
 
                             <div className="bg-white/5 border border-white/10 rounded-3xl p-8 text-center relative overflow-hidden group">
                                 <div className="relative z-10">
-                                    <h3 className="text-2xl font-bold text-white mb-2">Ready to Secure this Unit?</h3>
-                                    <p className="text-white mb-6">Get the complete 160-month PDF breakdown instantly on WhatsApp.</p>
+                                    <h3 className="text-2xl font-bold text-white mb-4">Ready to Secure this Unit?</h3>
+                                    {/* <p className="text-white mb-6">Get the complete 160-month PDF breakdown instantly on WhatsApp.</p> */}
                                     <Link href="https://wa.me/971800700007" target="_blank" rel="noopener noreferrer">
                                         <button className="bg-black text-white px-10 py-4 rounded-xl cursor-pointer font-bold hover:bg-zinc-900 transition-colors shadow-xl">
                                             WhatsApp This Plan
@@ -524,3 +524,9 @@ function ResultStat({ label, value, sub }) {
         </div>
     );
 }
+
+
+
+
+
+
