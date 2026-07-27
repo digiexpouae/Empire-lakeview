@@ -28,7 +28,7 @@ const [cloud, setcloud] = useState(false)
 // const images=['/assets/f.png','/assets/f.png']
 
 const text=
-"Plazzo Residence (JVT) combines comfort and elegance. It meets the needs of modern living. These luxury apartments, JVT Dubai, are designed to enhance your daily life. Experience a life of elegance and quality at Empire Development JVT Real Estate. Many people rely on Empire Development for luxury real estate in JVT, Dubai. Where history blends innovation."
+"Plazzo Residences by Empire Developments redefines luxury living with affordable pricing and thoughtfully designed homes. Strategically located in Jumeirah Village Triangle, it offers seamless connectivity via Sheikh Mohammed Bin Zayed Road and Al Khail Road. Blending contemporary architecture with premium lifestyle amenities, it delivers the perfect balance of comfort, elegance, luxury and long-term value. "
 
 const amenities = [  
   
@@ -36,14 +36,6 @@ const amenities = [
 
 
 ]
-  const text1='Modern Living Meets Elegance.'
-  const para="Empire Lakeview's Plazzo Residence (JVT) offers a mix of comfort and elegance. These homes meet the demand of modern homes. Empire Development is among the top real estate developers in UAE and has developed these luxury apartments JVT Dubai, to enhance your daily life. At Empire Development's Palazzo Residence, you enjoy a life of elegance and quality."
-  const texthead='Smart Homes, Smart Choices' 
-  const para2="Empire Development's homes include smart features for convenience, exceeding the basic requirements. You can manage temperature, lighting, and home security all from your phone. Today's fast-paced life calls for this tech-savvy approach. Empire Development has added sustainable features like energy-efficient systems for your convenience."
- const texthead2='Modern Amenities for  Modern Living '
- const para3="At Plazzo residence, you can relax at the rooftop pool. Empire Development has provided a gym center and beautiful gardens. Play areas for kids and 24/7 security ensures peace of mind. c Covered parking, retail stores and public lounges are also available. Each facility brings ease."
- const head3='Luxury with a legacy '
- const para4="Empire Development offers long-term value. From premium materials to expert workmanship, we include everything. Many people rely on Empire Development for luxury real estate in JVT, Dubai. Where history blends innovation."
  return (
     <>  <div className='hidden md:block relative w-full md:h-screen h-[500px] z-20'>
         <Header />

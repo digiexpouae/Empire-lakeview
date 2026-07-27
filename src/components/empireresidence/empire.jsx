@@ -30,7 +30,7 @@ const empire = () => {
 
   ]
 
-  const textpara = "Empire Development's luxury apartments in JVC have large windows, open layouts, and modern finishes. These contemporary apartments Dubai are made for people who value harmony and elegance. Empire Development's architecture is both eco-friendly and beautiful. It’s perfect for anyone wanting to invest in Dubai real estate. Everything from energy-saving technologies to rooftop gardens supports a better way of life."
+  const textpara = "Empire Residences by Empire Developments introduces smart living with automated lighting, climate control, security, multimedia, and fingerprint door access. Located in the heart of Dubai (JVC), it offers seamless connectivity to Dubai's key destinations. Featuring contemporary residences, premium lifestyle amenities, flexible payment plans, and affordable pricing, it is designed for modern urban living. "
   const head = 'Live wisely at Empire Residence JVC'
   const para = "Empire Residence (JVC)  by Empire Development's modern design meets daily comfort. Empire Development's stylish homes have large windows, open layouts, and sleek finishes are made for people who value harmony and elegance. Ideal for those looking to invest in Dubai real estate."
   const head2 = 'Comfort Meets Smart Living'
