@@ -22,8 +22,7 @@ useEffect(() => {
     if (!swiperInstance || !wrapper?.current) return;
 
     const totalSlides = images.length;
-    const scrollLength = window.innerHeight * totalSlides;
-    const scroll =scrollLength
+    const scrollLength = Math.max(window.innerHeight, 700) * (totalSlides / 2);
 
     // Force Swiper to show slide 0 on init
     swiperInstance.slideTo(0, 0);
@@ -31,8 +30,8 @@ useEffect(() => {
     ScrollTrigger.create({
       trigger: wrapper.current,
       start: 'center center',
-      end: `+=1500`,
-      scrub: true,
+      end: `+=${scrollLength}`,
+      scrub: 2,
       pin: true,
       pinSpacing: true,
       anticipatePin:1,

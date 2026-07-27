@@ -46,66 +46,13 @@ const empirestates = () => {
   ]
   const markers = [
     { name: 'Dubai Miracle Garden', coordinates: [25.0631, 55.2471], icon: '/assets/miracle.svg' },
-    { name: 'Dubai Butterfly Garden', coordinates: [25.0615, 55.2468], icon: '/assets/butterfly.svg' },
+    { name: 'Dubai Hills Mall', coordinates: [ 25.10125, 55.23795], icon: '/dubai hill mall.svg' },
     { name: 'Dubai Global Village	', coordinates: [25.0672, 55.3047], icon: '/assets/villae.svg' },
     { name: 'Burj Khalifa	', coordinates: [25.1972, 55.2744], icon: '/assets/burj.svg' },
 
   ];
 
 
-
-  // const image = [
-  //   {
-  //     im: '/assets/ima2.jpg',
-  //     tex1: 'Studio',
-  //     tex2: 'SIZE: 443.55 SQ.FT',
-  //     link1: 'https://empiredevelopments.ae/crm/empire_estates/studio/',
-  //     link2: '/contact',
-  //   },
-
-  //   {
-  //     im: '/assets/bed1.jpg',
-  //     tex1: '1 Bed',
-  //     tex2: 'SIZE: 898.42 SQ.FT.',
-  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/1bed/index.htm',
-  //     link2: '/contact'
-  //   },
-  //   {
-  //     im: '/assets/bed2.jpg',
-  //     tex1: '2 Bed',
-  //     tex2: 'SIZE: 1,036.55 SQ.FT. TO 1,757.75 SQ.FT.',
-  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bed/index.htm',
-  //     link2: '/contact',
-  //   },
-  //   {
-  //     im: '/assets/bed3.jpg',
-  //     tex1: '2 Bed Duplex',
-  //     tex2: 'SIZE: 1,757.74 SQ.FT. TO 2,137.48 SQ.FT.',
-  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/2bedduplex/index.htm',
-  //     link2: '/contact',
-  //   },
-  //   // {
-  //   //   im: '/assets/bed4.jpg',
-  //   //   tex1: '2 Bedroom Triplex',
-  //   //   tex2: 'SIZE: 2,137.48 SQ.FT.',
-  //   //   link1: 'http://localhost:3000/360/empire_estates/empirevr/index.htm',
-  //   //   link2: '/contact',
-  //   // },
-
-  //   {
-  //     im: '/assets/bed5.jpg',
-  //     tex1: '3 Bed',
-  //     tex2: 'SIZE: 1,771.01 SQ.FT. TO 1,771.01 SQ.FT.',
-  //     link1: 'https://empire-lakeview.vercel.app/360/empire_estates/3bed/index.htm',
-  //     link2: '/contact',
-  //   }, {
-  //     im: '',
-  //     tex1: '',
-  //     tex2: '',
-  //     link1: '/',
-  //     link2: '/',
-  //   }
-  // ];
 
     const image = [
     { im: '/assets/ima2.jpg', tex1: 'Studio - Without Pool', tex2: 'SIZE: 371.00 SQ.FT TO 402.00 SQ.FT', link1: 'https://empiredevelopments.ae/crm/empire_estates/studio/', link2: '/contact' },
@@ -166,7 +113,7 @@ const para4= "Empire State by Empire Developments provides many high-quality ame
             <SectionThree />
       <Sectionfour />
       <Section images={image} />
-      <Places Main_marker={'Empire Estates'}  markers={markers} center_position={[25.0631, 55.2471]} Name={<>Empire <br /> Estates</>} />
+      <Places Main_marker={'Empire Estates'}  markers={markers} center_position={[25.05846, 55.23645]} Name={<>Empire <br /> Estates</>} />
       <Icons icons={icons}/>      
        
        <SectionFour images={contactbg} />                             
