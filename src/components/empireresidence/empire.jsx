@@ -3,7 +3,7 @@ import Header from '@/layout/header'
 import Heroslider from '@/common/heroslider'
 import Image from 'next/image'
 import Field from '../../../public/assets/field.jpg'
-import Main from '../../../public/assets/mainproject1.png'
+import Main from '../../../public/assets/EmpireResidence.webp'
 import Footer from '../../layout/footer'
 import SectionTwo from '../../common/sectiontwo'
 import SectionFour from '@/common/section4';
