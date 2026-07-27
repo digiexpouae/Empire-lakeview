@@ -11,8 +11,8 @@ import Image from 'next/image'
 
 const sectionthree = () => {
   return (
-    <div className='flex  md:h-[500px] h-[400px] w-full items-center justify-center'>
-      <div className=' flex items-center justify-center gap-[10px] h-[600px] w-[90%] lg:w-[85%]'>
+    <div className='flex  py-6 md:py-12 w-full items-center justify-center'>
+      <div className=' flex items-center justify-center gap-[10px]  w-[90%] lg:w-[85%]'>
         <div className='w-[60px] h-[60px] md:w-[90px] md:h-[90px] lg:w-[160px] lg:h-[160px]'><Image src={im1} alt="image 1" className='object-cover !h-full !w-full'/>
 </div>
          <div className='flex flex-col items-end gap-[12px]'>

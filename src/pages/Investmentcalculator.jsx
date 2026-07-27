@@ -11,20 +11,29 @@ const Invesmnetcalculator = () => {
         <>
 
 
-            <div className='w-full relative  h-screen  '>
+            <div className='w-full relative h-screen  '>
                 <Header className='nav-menu absolute z-50' />
                 <Heroslider
                     className3={'top-2 lg:top-5 md:top-9 xl:top-12'}
                     className2={'!top-[50%] md:!top-[40%] right-0 left-0 xl:!top-[35%]'}
-                    texttwo={<>Investment Calculator</>}
                     texttwoclass={'xl:!text-[100px] !text-md text-center lg:!text-[100px]'}
                     main={true}
                     bottom={'bottom-0 !h-[240px] md:!h-[400px] !w-[85%] md:!w-[70%] lg:!w-[50%] hidden'}
                     cloud={false}
                 />
-                <div className="absolute inset-0 bg-zinc-800   z-10 transition-opacity duration-500 opacity-80"></div>
+                <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center   z-10 transition-opacity duration-500 opacity-80">
 
-                <Image src={back} priority className='!left-0 !right-0 !top-0 !bottom-0 w-full h-[100%] ' />
+
+                    <h1 className={`md:text-[100px] tracking-tight text-[16vw]  text-center bg-[linear-gradient(180deg,#ffffff_37.98%,#7DB1D1_100%)] bg-clip-text text-transparent font-extrabold `}>
+Investment Calculator
+
+                    </h1>
+
+                </div>
+
+
+
+                <Image src={back} priority fill className=' object-cover' />
 
 
             </div>

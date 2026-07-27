@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
-import Image from 'next/image';
 const mapcontact = () => {
     const features = [
-      {     id: '1', title: 'Sales & Experience Center -', text2: '(Business Bay)', image: '/assets/mapcontact1.png' },
-        {   id: '2', title: 'Corporate Office',text2:'(Sheikh Zayed Road)', image: '/assets/mapcontact2.png' },
+      {     id: '1', title: 'Sales & Experience Center -', text2: '(Business Bay)', mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19786.293312914153!2d55.23338479706228!3d25.180935624720192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xabb93feac0e679bf%3A0xda03db40a078c7b9!2sEmpire%20Developments%20(Sales%20%26%20Experience%20Center)!5e0!3m2!1sen!2s!4v1785147160694!5m2!1sen!2s' },
+        {   id: '2', title: 'Corporate Office',text2:'(Sheikh Zayed Road)', mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231243.27272402786!2d54.933691359125035!3d25.095898317003144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa159458e32e2331%3A0x2e059d8abcaf280a!2sEmpire%20Developments%20Corporate%20Office!5e0!3m2!1sen!2s!4v1785147257670!5m2!1sen!2s' },
       ];
       
    
@@ -25,11 +24,10 @@ const mapcontact = () => {
                   className='md:py-8 relative h-[30px] md:h-[50px] flex flex-col  items-center  justify-center rounded-button w-full'
                   style={{
                     cursor: 'pointer',
-             
                   
-                  borderRight:'1px solid white',
-                  borderLeft:'1px solid white',
-background: activeFeature === feature.id ? 'white' : 'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)',
+                  // borderRight:'1px solid white',
+                  // borderLeft:'1px solid white',
+background: activeFeature === feature.id ?  'linear-gradient(90deg, #CCAB64 0%, #FAECC9 100%)':'white' ,
                     color: activeFeature === feature.id ? 'black' : 'black',
                     display: 'flex',
                     flexDirection: 'column',
@@ -44,21 +42,20 @@ background: activeFeature === feature.id ? 'white' : 'linear-gradient(90deg, #CC
               ))}
             </div>
       <div className='flex items-center justify-center w-full relative'>
-            <div className='h-[200px] md:h-[350px] lg:h-[500px] w-[90%] md:w-[70%] relative'>
-              {features.map((feature) =>
-                feature.id === activeFeature ? (
-                  <Image
-                    key={feature.id}
-                    src={feature.image}
-                    alt={feature.title}
-                    width={470} height={470}
-                    className='!w-full !h-full !object-cover '
-      
-                    style={{ width: '100%', height: '400px', objectFit: 'cover',borderBottomLeftRadius:'20px',borderBottomRightRadius:'20px'}}
-                  />
-                ) : null
-              )}
-        
+            <div className='h-[200px] md:h-[350px] lg:h-[500px] w-[90%] md:w-[70%] relative overflow-hidden' style={{borderBottomLeftRadius:'20px',borderBottomRightRadius:'20px'}}>
+              {features.map((feature) => (
+                <iframe
+                  key={feature.id}
+                  src={feature.mapSrc}
+                  title={feature.title}
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-200 ${
+                    feature.id === activeFeature ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                  }`}
+                  style={{ border: 0 }}
+                />
+              ))}
             </div>
             </div>
           </div>
