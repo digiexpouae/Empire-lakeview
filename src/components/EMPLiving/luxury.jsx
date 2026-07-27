@@ -53,29 +53,30 @@ export default function FeaturesSection() {
 
 
       {/* Active Feature Image */}
-      <div className='h-[400px] md:h-[600px] w-full'>
-        {features.map((feature) =>
-          feature.id === activeFeature ? (
-            <Image
-              key={feature.id}
-              src={feature.image}
-              alt={feature.title}
-              width={1000}
-              height={600}
-              className='!w-full !h-full object-cover'
-              loading='lazy'
-            />
-          ) : null
-        )}
-      </div>
-
-      {/* Bottom Gradient */}
-      <div
-        className='absolute left-0 right-0 bottom-0 w-full h-[150px] md:h-[350px] z-[999]'
+      <div className='h-[400px] md:h-[600px] w-full relative'>
+        {features.map((feature) => (
+          <Image
+            key={feature.id}
+            src={feature.image}
+            alt={feature.title}
+            width={1000}
+            height={600}
+            priority={feature.id === 'pools'}
+            className={`!w-full !h-full object-cover absolute inset-0 transition-opacity duration-200 ${
+              feature.id === activeFeature ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+            }`}
+          />
+        ))}
+          <div
+        className='absolute inset-0   z-[999]'
         style={{
           background: 'linear-gradient(180deg, rgba(0, 46, 60, 0) 50%, #0E1527 97%)'
         }}
       ></div>
+      </div>
+
+      {/* Bottom Gradient */}
+    
     </div>
   );
 }
