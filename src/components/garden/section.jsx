@@ -61,7 +61,7 @@ export default function PropertyShowcase() {
   className="rounded-lg"
 >
   <source
-    src="/assets/Empire Garden Teaser 02 Hor.mp4"
+    src="/assets/Empire-Garden-video.mp4"
     type="video/mp4"
   />
   Your browser does not support the video tag.
