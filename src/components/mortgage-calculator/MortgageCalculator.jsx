@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 
 const MortgageCalculator = ({ className }) => {
-  const [propertyPrice, setPropertyPrice] = useState(1000);
+  const [propertyPrice, setPropertyPrice] = useState(550000);
   const [downPaymentPercentage, setDownPaymentPercentage] = useState(20);
   const [loanTerm, setLoanTerm] = useState(25);
-  const [interestRate, setInterestRate] = useState(5);
+  const [interestRate, setInterestRate] = useState(0);
 
   const [downPaymentAmount, setDownPaymentAmount] = useState(propertyPrice * (downPaymentPercentage / 100));
 
@@ -13,10 +13,12 @@ const MortgageCalculator = ({ className }) => {
     setDownPaymentAmount(propertyPrice * (downPaymentPercentage / 100));
   }, [propertyPrice, downPaymentPercentage]);
 
-  const loanAmount = propertyPrice - downPaymentAmount;
+  const loanAmount =  downPaymentAmount;
   const monthlyInterestRate = interestRate / 100 / 12;
   const numberOfPayments = loanTerm * 12;
-  const monthlyPayment = loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+  const monthlyPayment = monthlyInterestRate === 0
+    ? loanAmount / numberOfPayments
+    : loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
   const totalInterest = (monthlyPayment * numberOfPayments) - loanAmount;
   const totalPayment = loanAmount + totalInterest;
 
@@ -25,7 +27,7 @@ const MortgageCalculator = ({ className }) => {
     { name: 'Interest', value: totalInterest },
   ];
 
-  const COLORS = ['#4A5568', '#CCAB64'];
+  const COLORS = ['#CCAB64','#4A5568'];
 
 
 
@@ -110,7 +112,7 @@ const MortgageCalculator = ({ className }) => {
                         <Cell
                           key={`cell-${index}`}
                           fill={COLORS[index % COLORS.length]}
-                          stroke={index === 1 ? '#CCAB64' : '#4A5568'}
+                          stroke={index === 1 ? '#4A5568':'#CCAB64'}
                           strokeWidth={2}
                         />
                       ))}
