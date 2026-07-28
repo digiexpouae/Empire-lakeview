@@ -23,16 +23,16 @@ useEffect(() => {
 
     const totalSlides = images.length;
     const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
-    const scrollLength = Math.max(window.innerHeight, 800) * (totalSlides / (isTouchDevice ? 1 : 2));
-
+const scrollLengthDesktop = Math.max(window.innerHeight, 800) * (totalSlides / 2);
+    const scrollLengthMobile = Math.max(window.innerHeight, 800) * (totalSlides * 2);
     // Force Swiper to show slide 0 on init
     swiperInstance.slideTo(0, 0);
 
     ScrollTrigger.create({
       trigger: wrapper.current,
       start: 'center center',
-      end: `+=${scrollLength}`,
-      scrub: 2,
+     end: `+=${isTouchDevice ? scrollLengthMobile : scrollLengthDesktop}`,
+      scrub: isTouchDevice?1:2,
       pin: true,
       pinSpacing: true,
       anticipatePin:1,
