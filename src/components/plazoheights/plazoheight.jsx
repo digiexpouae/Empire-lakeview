@@ -33,7 +33,7 @@ const plazoheights = () => {
     <>
 <div className='w-full md:block hidden relative md:h-screen h-[500px]'>
         <Header className='nav-menu absolute z-50'/>
-            <Heroslider overlay={true} bottom={' object-cover md:!h-[550px]   !bottom-[-15%] !h-[350px] !w-[100%] '}  className2={' !top-[23%] md:!top-4  '} className1={'right-0 left-[unset] top-[13%]    text-[10px]  '} main_im={Hero}  main={true} className3={'lg:bottom-[5%]'} texttwo={'Plazzo'} textthree={'Heights'}/>
+            <Heroslider overlay={true} bottom={' object-cover !h-[550px] xxl:!h-[850px]   !bottom-[-15%] xxl:!bottom-[-5%] !w-[100%] '}  className2={' !top-[23%] md:!top-4  '} className1={'right-0 left-[unset] top-[13%]    text-[10px]  '} main_im={Hero}  main={true} className3={'lg:bottom-[5%]'} texttwo={'Plazzo'} textthree={'Heights'}/>
       <Image  priority src={back} className='left-0 right-0 bottom-0 top-0 w-full h-[100%]   !object-cover '/>
           </div>
 

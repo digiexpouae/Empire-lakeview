@@ -3,6 +3,9 @@
 
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xxl: 1440px;
+}
 
 :root {
   --font-poppins: 'Poppins', sans-serif;

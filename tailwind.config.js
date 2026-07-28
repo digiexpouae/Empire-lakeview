@@ -12,6 +12,9 @@ module.exports = {
       boxShadow: {
         'white': '0px 4px 6px rgba(255, 255, 255, 0.4)',
       },
+      screens: {
+        'xxl': '1520px',
+      },
     },
   },
   plugins: [],
