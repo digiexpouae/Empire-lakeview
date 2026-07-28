@@ -89,7 +89,12 @@ const Section = ({ images,btn }) => {
              </div>
           </div>
 
-          <div className="absolute lg:bottom-10 md:bottom-2  bottom-[10%] right-5">
+          <div className="absolute flex gap-8 lg:bottom-10 md:bottom-2  bottom-[10%] right-5">
+            <div className="flex items-center justify-start gap-2 mb-1 text-white/80 animate-pulse md:hidden">
+              <span className="text-[8px]">&#8592;</span>
+              <span className="text-[9px] tracking-wide">Swipe</span>
+              <span className="text-[8px]">&#8594;</span>
+            </div>
             <Slider images={images} onSlideChange={setCurrentImage} wrapper={wrapper}/>
           </div>
         </div>
