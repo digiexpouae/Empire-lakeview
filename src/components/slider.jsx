@@ -22,7 +22,7 @@ useEffect(() => {
     if (!swiperInstance || !wrapper?.current) return;
 
     const totalSlides = images.length;
-    const scrollLength = Math.max(window.innerHeight, 700) * (totalSlides / 2);
+    const scrollLength = Math.max(window.innerHeight, 800) * (totalSlides / 2);
 
     // Force Swiper to show slide 0 on init
     swiperInstance.slideTo(0, 0);

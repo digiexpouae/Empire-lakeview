@@ -15,9 +15,9 @@ const sectiontwo = () => {
             <div className='h-[150px] md:h-[300px] w-[49%]'><Image src={im2} className='!w-full !h-full' /> </div>
         </div>
         <div className='flex  items-center w-full justify-center overflow-hidden relative '>
-            <div className=' md:h-[300px] w-[30%] h-[150px] absolute  left-[-10px] md:left-[-80px]'><Image src={im3} className='!w-full !h-full  !object-cover object-left' /> </div>
+            <div className=' md:h-[300px] w-[30%] h-[150px] absolute  left-[-10px] md:left-[-80px]'><Image src={'/assets/bed-room-3-res.webp'}  width={300} height={150} className='!w-full !h-full  !object-cover object-right' /> </div>
             <div className='md:h-[300px] w-[48%] h-[150px] '><Image src={im4} className='!w-full !h-full  !object-cover' /> </div>
-            <div className='  md:h-[300px] w-[30%] h-[150px] absolute right-[-10px] md:right-[-80px]'><Image src={im5} className='!w-full !h-full  !object-cover object-left' /> </div>
+            <div className='  md:h-[300px] w-[30%] h-[150px] absolute right-[-10px] md:right-[-80px]'><Image src={'/assets/bed-room-2-res.webp'} width={300} height={150} className='!w-full !h-full  !object-cover object-right' /> </div>
         </div>
       
     </div>
