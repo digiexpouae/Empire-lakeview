@@ -61,7 +61,7 @@ const empire = () => {
       {/* Mobile only: plain div with header and mobile image, covers full screen */}
       <div className="block md:hidden w-full h-screen relative">
           <Header className="nav-menu absolute z-50" />
-          <Image src={mob} className="object-cover w-full h-full" alt="Lakeviews Mobile" fill />
+          <Image src={'/assets/Empire-Residence-mobile.webp'} className="object-cover w-full h-full" alt="Lakeviews Mobile" fill />
         </div>
 
        <div className='bg-[#0E1527]'>

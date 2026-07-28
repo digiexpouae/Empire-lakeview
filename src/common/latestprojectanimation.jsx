@@ -31,7 +31,7 @@ const LatestProjectAnimation=({containerRef})=>{
     location: 'DUBAI',
     description:
       'In the heart of Dubai Science Park, Empire Livings stands as a 14-floor statement of prestige. Its graceful architecture, elegant interiors, and serene ambiance create an address where every moment feels elevated, and every detail reflects uncompromising luxury.',
-    image: '/assets/slider/living.png',
+    image: '/assets/Empire-Living.webp',
     href: '/EmpireLivings',
   },
   {
@@ -39,7 +39,7 @@ const LatestProjectAnimation=({containerRef})=>{
     location: 'JVC',
     description:
       'In the heart of Arjan, Empire Estates offers a rare blend of refined living and resort-inspired elegance. Thoughtfully designed residences, graceful architecture, and serene outdoor spaces come together to create an address where city life meets the calm and beauty of a private retreat.',
-    image: '/assets/slider/estate.png',
+    image: '/assets/Emppire-Estate.webp',
     href: '/EmpireEstates',
   },
   {
@@ -47,82 +47,11 @@ const LatestProjectAnimation=({containerRef})=>{
     location: 'JVC',
     description:
       'Located in the heart of Dubailand, Empire Gardens presents a sophisticated lifestyle surrounded by greenery and open spaces. Meticulously crafted residences, timeless architecture, and serene outdoor settings offer a harmonious escape where modern living feels effortlessly calm.',
-    image: '/assets/gardens/sl.jpg',
+    image: '/assets/Empire-Garrden.webp',
     href: '/EmpireEstates',
   },
 ];
-// useGSAP(() => {
-//   if (typeof window === "undefined") return;
 
-//   import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
-//     gsap.registerPlugin(ScrollTrigger);
-//     ScrollTrigger.normalizeScroll(true);
-
-//     const createAnimation = () => {
-//       const containerWidth =
-//         containerRef.current?.querySelector(".container")?.offsetWidth || 0;
-//       const sliderWidth = sliderRef.current?.scrollWidth || 0;
-//       return sliderWidth - containerWidth;
-//     };
-
-//     const cards = gsap.utils.toArray(".project-card");
-
-//     ScrollTrigger.matchMedia({
-//       // Desktop (>= 1280px)
-//       "(min-width: 1280px)": () => {
-//         const distanceToSlide = createAnimation();
-
-//         gsap.to(sliderRef.current, {
-//           x: -distanceToSlide,
-//           ease: "none",
-//           scrollTrigger: {
-//             trigger: containerRef.current,
-//             start: "top top",
-//             scrub: true,
-//             pin: true,
-//             invalidateOnRefresh: true,
-//             // snap: 1 / (cards.length - 1),
-//           },
-//         });
-//       },
-
-//       // Tablet (768px – 1279px)
-//       "(min-width: 768px) and (max-width: 1279px)": () => {
-//         const distanceToSlide = createAnimation();
-
-//         gsap.to(sliderRef.current, {
-//           x: -distanceToSlide,
-//           ease: "none",
-//           scrollTrigger: {
-//             trigger: containerRef.current,
-//             start: "top top",
-//             scrub: true,
-//             pin: true,
-//             invalidateOnRefresh: true,
-//           },
-//         });
-//       },
-
-//       // Mobile (< 768px) — also moves horizontally
-//       "(max-width: 767px)": () => {
-//         const distanceToSlide = createAnimation();
-
-//         gsap.to(sliderRef.current, {
-//           x: -distanceToSlide,
-//           ease: "none",
-//           scrollTrigger: {
-//             trigger: containerRef.current,
-//             start: "top top",
-//             scrub: true,
-//             pin: true, // 👈 pinning also works on mobile
-//             invalidateOnRefresh: true,
-//           },
-//         });
-//       },
-//     });
-//   });
-// }, []);
-  
         return(
   <> 
    <div  className="relative h-auto w-full z-10 container  overflow-hidden">
@@ -150,7 +79,7 @@ const LatestProjectAnimation=({containerRef})=>{
 
             <div 
               key={index}
-              className="project-card bg-white rounded-2xl p-4 md:p-6 w-[85vw] md:w-[580px] h-auto max-h-[80vh] shrink-0 shadow-xl flex flex-col"
+              className="project-card bg-white rounded-2xl p-4 md:p-6 w-[85vw] md:w-[580px]  shrink-0 shadow-xl flex flex-col"
             >
               <div className="flex flex-col item h-full">
                 {/* Header with Logo and Button */}
@@ -180,7 +109,7 @@ const LatestProjectAnimation=({containerRef})=>{
                 </div>
 
                 {/* Project Image */}
-                <div className="w-full h-[180px] relative rounded-xl overflow-hidden bg-gray-50 mt-auto">
+                <div className="w-full aspect-[16/8] relative rounded-xl overflow-hidden bg-gray-50 mt-auto">
                   <Image
                     src={project.image}
                     alt={project.location}
